@@ -12,6 +12,7 @@ export default new GraphQLObjectType({
           return flight.arrival;
         },
       },
+
       departure: {
         type: new GraphQLNonNull(Departure),
         resolve(flight) {

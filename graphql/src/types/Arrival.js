@@ -7,7 +7,7 @@ export default new GraphQLObjectType({
       id: {
         type: new GraphQLNonNull(GraphQLID),
         resolve(arrival) {
-          return arrival.id;
+          return JSON.stringify(arrival); // FIXME: vrátit skutečná data
         },
       },
     };

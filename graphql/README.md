@@ -3,3 +3,8 @@
 ```
 yarn run start
 ```
+
+## Run tests
+```
+yarn run tests
+```

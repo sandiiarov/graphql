@@ -2,23 +2,27 @@
   "env": {
     "test": {
       "presets": [
-        "es2015",
-        "stage-0",
+        "env",
         "flow"
       ]
     },
     "development": {
       "presets": [
         [
-          "es2015",
+          "env",
           {
-            "modules": false
+            "modules": false,
+            "exclude": [
+              "transform-regenerator",
+              "transform-async-to-generator"
+            ]
           }
         ],
-        "stage-0"
-      ],
-      "comments": true,
-      "sourceMaps": false
+        "flow"
+      ]
     }
-  }
+  },
+  "plugins": [
+    "fast-async"
+  ]
 }
