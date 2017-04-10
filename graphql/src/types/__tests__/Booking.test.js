@@ -1,4 +1,4 @@
-import Booking from '../../src/types/Booking';
+import Booking from '../Booking';
 
 describe('arrival field', () => {
   const arrival = Booking.getFields().arrival;

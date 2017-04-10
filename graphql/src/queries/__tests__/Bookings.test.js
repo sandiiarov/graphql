@@ -1,5 +1,5 @@
 import { graphql } from 'graphql';
-import schema from '../../src/Schema';
+import schema from '../../Schema';
 
 describe('arrival query', () => {
   it('should return valid id field', async () => {
