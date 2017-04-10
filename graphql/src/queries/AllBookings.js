@@ -1,3 +1,5 @@
+// @flow
+
 import { GraphQLNonNull, GraphQLList } from 'graphql';
 import Booking from './../types/Booking';
 import callBookingApi from '../services/Booking';

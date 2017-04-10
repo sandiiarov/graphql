@@ -7,19 +7,20 @@
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-core": "^6.24.1",
+    "babel-eslint": "^7.2.1",
     "babel-loader": "^6.4.1",
     "babel-preset-env": "^1.3.3",
     "babel-preset-flow": "^6.23.0",
-    "chai": "^3.5.0",
     "eslint": "^3.19.0",
     "eslint-config-airbnb-base": "^11.1.3",
     "eslint-config-prettier": "^1.6.0",
+    "eslint-plugin-flowtype": "^2.30.4",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-prettier": "^2.0.1",
     "fast-async": "^6.2.2",
     "flow-bin": "^0.43.1",
+    "jest": "^19.0.2",
     "json-loader": "^0.5.4",
-    "mocha": "^3.2.0",
     "prettier": "^0.22.0",
     "webpack": "^2.3.3"
   },
@@ -28,6 +29,6 @@
     "start": "yarn run build && micro dist/endpoint.js",
     "build": "webpack",
     "watch": "webpack --watch",
-    "tests": "NODE_ENV=test yarn run babel-node ./node_modules/.bin/_mocha --check-leaks --full-trace -- 'tests/**/*.js'"
+    "tests": "jest"
   }
 }

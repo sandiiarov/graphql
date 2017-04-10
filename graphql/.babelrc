@@ -2,26 +2,28 @@
   "env": {
     "test": {
       "presets": [
-        "env",
-        "flow"
-      ]
-    },
-    "development": {
-      "presets": [
         [
           "env",
           {
-            "modules": false,
-            "exclude": [
-              "transform-regenerator",
-              "transform-async-to-generator"
-            ]
+            "modules": "commonjs", // https://facebook.github.io/jest/docs/webpack.html#using-with-webpack-2
           }
-        ],
-        "flow"
+        ]
       ]
     }
   },
+  "presets": [
+    [
+      "env",
+      {
+        "modules": false,
+        "exclude": [
+          "transform-regenerator",
+          "transform-async-to-generator"
+        ]
+      }
+    ],
+    "flow"
+  ],
   "plugins": [
     "fast-async"
   ]

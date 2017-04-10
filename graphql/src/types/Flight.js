@@ -1,6 +1,16 @@
+// @flow
+
 import { GraphQLObjectType, GraphQLNonNull } from 'graphql';
 import Arrival from './Arrival';
 import Departure from './Departure';
+
+import type { ArrivalType } from './Arrival';
+import type { DepartureType } from './Departure';
+
+export type FlightType = {
+  arrival: ArrivalType,
+  departure: DepartureType,
+};
 
 export default new GraphQLObjectType({
   name: 'Flight',
@@ -8,14 +18,14 @@ export default new GraphQLObjectType({
     return {
       arrival: {
         type: new GraphQLNonNull(Arrival),
-        resolve(flight) {
+        resolve(flight: FlightType): ArrivalType {
           return flight.arrival;
         },
       },
 
       departure: {
         type: new GraphQLNonNull(Departure),
-        resolve(flight) {
+        resolve(flight: FlightType): DepartureType {
           return flight.departure;
         },
       },
