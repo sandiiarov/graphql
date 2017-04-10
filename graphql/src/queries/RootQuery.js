@@ -1,12 +1,14 @@
+// @flow
+
 import { GraphQLObjectType } from 'graphql';
-import Flight from './Flight';
+import AllBookings from './AllBookings';
 
 export default new GraphQLObjectType({
   name: 'Query',
   description: 'Root Query',
   fields() {
     return {
-      flight: Flight,
+      allBookings: AllBookings,
     };
   },
 });

@@ -1,4 +1,10 @@
+// @flow
+
 import { GraphQLObjectType, GraphQLNonNull, GraphQLID } from 'graphql';
+
+export type ArrivalType = {
+  departure: string,
+};
 
 export default new GraphQLObjectType({
   name: 'Arrival',
@@ -6,9 +12,7 @@ export default new GraphQLObjectType({
     return {
       id: {
         type: new GraphQLNonNull(GraphQLID),
-        resolve(arrival) {
-          return arrival.id;
-        },
+        resolve: (arrival: ArrivalType): string => JSON.stringify(arrival), // FIXME: vrátit skutečná data
       },
     };
   },

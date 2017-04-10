@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`arrival query should return valid id field 1`] = `
+Object {
+  "data": Object {
+    "allBookings": Array [
+      Object {
+        "arrival": Object {
+          "id": "{\\"where\\":{\\"code\\":\\"CDG\\",\\"name\\":\\"Paris\\"},\\"when\\":0}",
+        },
+      },
+      Object {
+        "arrival": Object {
+          "id": "{\\"where\\":{\\"code\\":\\"DXB\\",\\"name\\":\\"Dubai\\"},\\"when\\":0}",
+        },
+      },
+      Object {
+        "arrival": Object {
+          "id": "{\\"where\\":{\\"code\\":\\"KUF\\",\\"name\\":\\"Samara\\"},\\"when\\":0}",
+        },
+      },
+    ],
+  },
+}
+`;
+
+exports[`departure query should return valid id field 1`] = `
+Object {
+  "data": Object {
+    "allBookings": Array [
+      Object {
+        "departure": Object {
+          "id": "{\\"where\\":{\\"code\\":\\"LGW\\",\\"name\\":\\"London\\"},\\"when\\":0}",
+        },
+      },
+      Object {
+        "departure": Object {
+          "id": "{\\"where\\":{\\"code\\":\\"STN\\",\\"name\\":\\"London\\"},\\"when\\":0}",
+        },
+      },
+      Object {
+        "departure": Object {
+          "id": "{\\"where\\":{\\"code\\":\\"PRG\\",\\"name\\":\\"Prague\\"},\\"when\\":0}",
+        },
+      },
+    ],
+  },
+}
+`;

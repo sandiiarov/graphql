@@ -1,15 +1,19 @@
 {
   "env": {
-    "node": true
+    "node": true,
+    "jest": true,
   },
   "extends": [
     "airbnb-base",
     "prettier",
     "prettier/react",
+    "plugin:flowtype/recommended",
   ],
+  "parser": "babel-eslint",
   "plugins": [
     "import",
     "prettier",
+    "flowtype",
   ],
   "rules": {
     "no-console": 0, # Console needed for serverless debugging.
@@ -24,7 +28,7 @@
         "printWidth": 80,
         "singleQuote": true,
         "tabWidth": 2,
-        "trailingComma": "all"
+        "trailingComma": "all",
       }
     ]
   }

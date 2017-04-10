@@ -15,12 +15,16 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js?$/,
+        test: /\.js$/,
         loader: 'babel-loader',
         query: {
           babelrc: true,
         },
         include: path.join(__dirname, 'src'),
+      },
+      {
+        test: /\.json$/,
+        loader: 'json-loader',
       },
     ],
   },
