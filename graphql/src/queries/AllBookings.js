@@ -6,7 +6,5 @@ import callBookingApi from '../services/Booking';
 
 export default {
   type: new GraphQLList(new GraphQLNonNull(Booking)),
-  resolve() {
-    return callBookingApi();
-  },
+  resolve: () => callBookingApi(),
 };

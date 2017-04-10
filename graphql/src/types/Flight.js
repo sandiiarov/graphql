@@ -18,16 +18,12 @@ export default new GraphQLObjectType({
     return {
       arrival: {
         type: new GraphQLNonNull(Arrival),
-        resolve(flight: FlightType): ArrivalType {
-          return flight.arrival;
-        },
+        resolve: ({ arrival }: FlightType): ArrivalType => arrival,
       },
 
       departure: {
         type: new GraphQLNonNull(Departure),
-        resolve(flight: FlightType): DepartureType {
-          return flight.departure;
-        },
+        resolve: ({ departure }: FlightType): DepartureType => departure,
       },
     };
   },

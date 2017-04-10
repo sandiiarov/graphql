@@ -12,9 +12,7 @@ export default new GraphQLObjectType({
     return {
       id: {
         type: new GraphQLNonNull(GraphQLID),
-        resolve(arrival: ArrivalType): string {
-          return JSON.stringify(arrival); // FIXME: vrátit skutečná data
-        },
+        resolve: (arrival: ArrivalType): string => JSON.stringify(arrival), // FIXME: vrátit skutečná data
       },
     };
   },

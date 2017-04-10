@@ -8,22 +8,23 @@ import Flight from './Flight';
 import type { ArrivalType } from './Arrival';
 import type { DepartureType } from './Departure';
 
+export type BookingType = {
+  arrival: ArrivalType,
+  departure: DepartureType,
+};
+
 export default new GraphQLObjectType({
   name: 'Booking',
   fields() {
     return {
       arrival: {
         type: new GraphQLNonNull(Arrival),
-        resolve(booking): ArrivalType {
-          return booking.arrival;
-        },
+        resolve: ({ arrival }: BookingType): ArrivalType => arrival,
       },
 
       departure: {
         type: new GraphQLNonNull(Departure),
-        resolve(booking): DepartureType {
-          return booking.departure;
-        },
+        resolve: ({ departure }: BookingType): DepartureType => departure,
       },
 
       flights: {
