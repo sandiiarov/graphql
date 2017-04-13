@@ -14,17 +14,15 @@ export type FlightType = {
 
 export default new GraphQLObjectType({
   name: 'Flight',
-  fields() {
-    return {
-      arrival: {
-        type: new GraphQLNonNull(Arrival),
-        resolve: ({ arrival }: FlightType): ArrivalType => arrival,
-      },
+  fields: {
+    arrival: {
+      type: new GraphQLNonNull(Arrival),
+      resolve: ({ arrival }: FlightType): ArrivalType => arrival,
+    },
 
-      departure: {
-        type: new GraphQLNonNull(Departure),
-        resolve: ({ departure }: FlightType): DepartureType => departure,
-      },
-    };
+    departure: {
+      type: new GraphQLNonNull(Departure),
+      resolve: ({ departure }: FlightType): DepartureType => departure,
+    },
   },
 });

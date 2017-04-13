@@ -23,24 +23,25 @@ export type BookingType = {
 
 export default new GraphQLObjectType({
   name: 'Booking',
-  fields() {
-    return {
-      id: {
-        type: new GraphQLNonNull(GraphQLID),
-        resolve: ({ bid }: BookingType): number => bid,
-      },
+  fields: {
+    id: {
+      type: new GraphQLNonNull(GraphQLID),
+      resolve: ({ bid }: BookingType): number => bid,
+    },
 
-      arrival: {
-        type: new GraphQLNonNull(Arrival),
-      },
+    arrival: {
+      type: new GraphQLNonNull(Arrival),
+      resolve: ({ arrival }: BookingType): ArrivalType => arrival,
+    },
 
-      departure: {
-        type: new GraphQLNonNull(Departure),
-      },
+    departure: {
+      type: new GraphQLNonNull(Departure),
+      resolve: ({ departure }: BookingType): DepartureType => departure,
+    },
 
-      flights: {
-        type: new GraphQLNonNull(new GraphQLList(new GraphQLNonNull(Flight))),
-      },
-    };
+    flights: {
+      type: new GraphQLNonNull(new GraphQLList(new GraphQLNonNull(Flight))),
+      resolve: ({ flights }: BookingType): FlightType => flights,
+    },
   },
 });

@@ -11,12 +11,10 @@ export type DepartureType = {
 
 export default new GraphQLObjectType({
   name: 'Departure',
-  fields() {
-    return {
-      airport: {
-        type: new GraphQLNonNull(Airport),
-        resolve: (departure: DepartureType): AirportType => departure.where,
-      },
-    };
+  fields: {
+    airport: {
+      type: new GraphQLNonNull(Airport),
+      resolve: ({ where }: DepartureType): AirportType => where,
+    },
   },
 });
