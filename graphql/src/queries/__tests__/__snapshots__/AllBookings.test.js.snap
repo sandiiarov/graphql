@@ -1,0 +1,110 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`arrival query should return valid id field 1`] = `
+Object {
+  "data": Object {
+    "allBookings": Array [
+      Object {
+        "arrival": Object {
+          "id": "{\\"where\\":{\\"code\\":\\"CDG\\",\\"name\\":\\"Paris\\"},\\"when\\":0}",
+        },
+      },
+      Object {
+        "arrival": Object {
+          "id": "{\\"where\\":{\\"code\\":\\"DXB\\",\\"name\\":\\"Dubai\\"},\\"when\\":0}",
+        },
+      },
+      Object {
+        "arrival": Object {
+          "id": "{\\"where\\":{\\"code\\":\\"KUF\\",\\"name\\":\\"Samara\\"},\\"when\\":0}",
+        },
+      },
+    ],
+  },
+}
+`;
+
+exports[`departure query should return valid id field 1`] = `
+Object {
+  "data": Object {
+    "allBookings": Array [
+      Object {
+        "departure": Object {
+          "id": "{\\"where\\":{\\"code\\":\\"LGW\\",\\"name\\":\\"London\\"},\\"when\\":0}",
+        },
+      },
+      Object {
+        "departure": Object {
+          "id": "{\\"where\\":{\\"code\\":\\"STN\\",\\"name\\":\\"London\\"},\\"when\\":0}",
+        },
+      },
+      Object {
+        "departure": Object {
+          "id": "{\\"where\\":{\\"code\\":\\"PRG\\",\\"name\\":\\"Prague\\"},\\"when\\":0}",
+        },
+      },
+    ],
+  },
+}
+`;
+
+exports[`flights query should return valid id field 1`] = `
+Object {
+  "data": Object {
+    "allBookings": Array [
+      Object {
+        "flights": Array [
+          Object {
+            "arrival": Object {
+              "id": "{\\"when\\":{\\"utc\\":1504992600,\\"local\\":1504999800},\\"where\\":{\\"city_id\\":\\"paris_fr\\",\\"country\\":\\"FR\\",\\"code\\":\\"CDG\\",\\"name\\":\\"Paris\\"}}",
+            },
+            "departure": Object {
+              "id": "{\\"when\\":{\\"utc\\":1504987800,\\"local\\":1504991400},\\"where\\":{\\"city_id\\":\\"london_gb\\",\\"country\\":\\"GB\\",\\"code\\":\\"LGW\\",\\"name\\":\\"London\\"}}",
+            },
+          },
+        ],
+      },
+      Object {
+        "flights": Array [
+          Object {
+            "arrival": Object {
+              "id": "{\\"when\\":{\\"utc\\":1504947600,\\"local\\":1504954800},\\"where\\":{\\"city_id\\":\\"prague_cz\\",\\"country\\":\\"CZ\\",\\"code\\":\\"PRG\\",\\"name\\":\\"Prague\\"}}",
+            },
+            "departure": Object {
+              "id": "{\\"when\\":{\\"utc\\":1504940700,\\"local\\":1504944300},\\"where\\":{\\"city_id\\":\\"london_gb\\",\\"country\\":\\"GB\\",\\"code\\":\\"STN\\",\\"name\\":\\"London\\"}}",
+            },
+          },
+          Object {
+            "arrival": Object {
+              "id": "{\\"when\\":{\\"utc\\":1504970100,\\"local\\":1504980900},\\"where\\":{\\"city_id\\":\\"kiev_ua\\",\\"country\\":\\"UA\\",\\"code\\":\\"KBP\\",\\"name\\":\\"Kiev\\"}}",
+            },
+            "departure": Object {
+              "id": "{\\"when\\":{\\"utc\\":1504962000,\\"local\\":1504969200},\\"where\\":{\\"city_id\\":\\"prague_cz\\",\\"country\\":\\"CZ\\",\\"code\\":\\"PRG\\",\\"name\\":\\"Prague\\"}}",
+            },
+          },
+          Object {
+            "arrival": Object {
+              "id": "{\\"when\\":{\\"utc\\":1504994400,\\"local\\":1505008800},\\"where\\":{\\"city_id\\":\\"dubai_ae\\",\\"country\\":\\"AE\\",\\"code\\":\\"DXB\\",\\"name\\":\\"Dubai\\"}}",
+            },
+            "departure": Object {
+              "id": "{\\"when\\":{\\"utc\\":1504975800,\\"local\\":1504986600},\\"where\\":{\\"city_id\\":\\"kiev_ua\\",\\"country\\":\\"UA\\",\\"code\\":\\"KBP\\",\\"name\\":\\"Kiev\\"}}",
+            },
+          },
+        ],
+      },
+      Object {
+        "flights": Array [
+          Object {
+            "arrival": Object {
+              "id": "{\\"when\\":{\\"utc\\":1503099600,\\"local\\":1503114000},\\"where\\":{\\"city_id\\":\\"samara_ru\\",\\"country\\":\\"RU\\",\\"code\\":\\"KUF\\",\\"name\\":\\"Samara\\"}}",
+            },
+            "departure": Object {
+              "id": "{\\"when\\":{\\"utc\\":1503086700,\\"local\\":1503093900},\\"where\\":{\\"city_id\\":\\"prague_cz\\",\\"country\\":\\"CZ\\",\\"code\\":\\"PRG\\",\\"name\\":\\"Prague\\"}}",
+            },
+          },
+        ],
+      },
+    ],
+  },
+}
+`;
