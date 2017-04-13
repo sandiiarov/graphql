@@ -4,7 +4,7 @@ import { GraphQLObjectType } from 'graphql';
 import AllBookings from './AllBookings';
 
 export default new GraphQLObjectType({
-  name: 'Query',
+  name: 'RootQuery',
   description: 'Root Query',
   fields() {
     return {

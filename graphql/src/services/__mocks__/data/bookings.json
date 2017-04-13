@@ -33,11 +33,11 @@
       4095455,
       4095456
     ],
-    "credits_payment": 0,
+    "credits_payment": 0.0,
     "bags": 0,
     "bid": 2707251,
     "transfer_ids": [],
-    "card_payment": 69,
+    "card_payment": 69.0,
     "segments": null,
     "passengers": [
       {
@@ -84,7 +84,7 @@
       },
       "when": 0
     },
-    "booking_token": "GamFTRHoBQ/v6QB8IrykhuGglDtGWxUFRVNsUQAg/ZpAsAG2Oqe2XPJISBND8WVXgo5DZRAIYNiKixd3TRfLXLHGOBVDNZ85k4qWBOxjqWc1fM/4eZLzZov2mfgi6+6LCjNG2T8YnXsIdPWzWxQWV3Rao3y+8VsgO3WJxNKzNliu5rU9sbO7tjyA3K0iDC4QBC/k6Xg59t6elZs8l29NR/NODhA+jFr6ZPjWzDWHRpuMnEeWEsSNY7Ffpw352VLeROBltX4IzHLPly15sLoJbnX1g7B1MGT/TKNudpPT0jsCzcMQ8pz2P8efRYuvderzhbE9O4CT6xxba2GLZ8v5Zie4mOOSB6nrRfFinHBjz7M=",
+    "booking_token": "GamFTRHoBQ\/v6QB8IrykhuGglDtGWxUFRVNsUQAg\/ZpAsAG2Oqe2XPJISBND8WVXgo5DZRAIYNiKixd3TRfLXLHGOBVDNZ85k4qWBOxjqWc1fM\/4eZLzZov2mfgi6+6LCjNG2T8YnXsIdPWzWxQWV3Rao3y+8VsgO3WJxNKzNliu5rU9sbO7tjyA3K0iDC4QBC\/k6Xg59t6elZs8l29NR\/NODhA+jFr6ZPjWzDWHRpuMnEeWEsSNY7Ffpw352VLeROBltX4IzHLPly15sLoJbnX1g7B1MGT\/TKNudpPT0jsCzcMQ8pz2P8efRYuvderzhbE9O4CT6xxba2GLZ8v5Zie4mOOSB6nrRfFinHBjz7M=",
     "created": 1490858935,
     "original_currency": "USD",
     "flights": [
@@ -137,7 +137,7 @@
     "grace_period_fee": null,
     "sandbox": 1,
     "original_flight_price": null,
-    "price": 69,
+    "price": 69.0,
     "flight_ids": [
       "315289498"
     ]
@@ -177,11 +177,11 @@
     "passenger_ids": [
       4095425
     ],
-    "credits_payment": 0,
+    "credits_payment": 0.0,
     "bags": 0,
     "bid": 2707229,
     "transfer_ids": [],
-    "card_payment": 193,
+    "card_payment": 193.0,
     "segments": null,
     "passengers": [
       {
@@ -210,7 +210,7 @@
       },
       "when": 0
     },
-    "booking_token": "GamFTRHoBQ/v6QB8IrykhpoVGKB0KA6sVANbFz24Dyu3VGSgdrTrERd1E37H1zyFrInpKaRGGoSFmckySMp2qKdHf3F9cVQ1SFS3k7OLxL9unHQL7JQBoAUGBErMIvLdWb5lISkp2YP5eM3kH5pZveJb8ZSy13iMfCej/eFT27Fk6ONF3mbqdyHwEnSq6gh+UcNV0qCjL2bE0ZoUnKQDXSwQ4u79WNlgBsExQPgkPsx/WLtJftxOt7eRQWCxUE2+7Mvrdh4i2Ol4l8BDs30ZupHxIgHB9i0r6aVJipFP9O0ekoOJU79pz5P0k6M7xxdd5wEeEu1hFid4Jw1actidYXaP5HNVkLYIVNjnYRl9c2LX8Vi6m1kAAlkXbw+KIwmS//cO2bSPhz4FzLFtTcjzu8hRfX7IAIu68Az7joQeGgGkp2p3HxzlV80PtnC2v14e",
+    "booking_token": "GamFTRHoBQ\/v6QB8IrykhpoVGKB0KA6sVANbFz24Dyu3VGSgdrTrERd1E37H1zyFrInpKaRGGoSFmckySMp2qKdHf3F9cVQ1SFS3k7OLxL9unHQL7JQBoAUGBErMIvLdWb5lISkp2YP5eM3kH5pZveJb8ZSy13iMfCej\/eFT27Fk6ONF3mbqdyHwEnSq6gh+UcNV0qCjL2bE0ZoUnKQDXSwQ4u79WNlgBsExQPgkPsx\/WLtJftxOt7eRQWCxUE2+7Mvrdh4i2Ol4l8BDs30ZupHxIgHB9i0r6aVJipFP9O0ekoOJU79pz5P0k6M7xxdd5wEeEu1hFid4Jw1actidYXaP5HNVkLYIVNjnYRl9c2LX8Vi6m1kAAlkXbw+KIwmS\/\/cO2bSPhz4FzLFtTcjzu8hRfX7IAIu68Az7joQeGgGkp2p3HxzlV80PtnC2v14e",
     "created": 1490858750,
     "original_currency": "USD",
     "flights": [
@@ -341,7 +341,7 @@
     "grace_period_fee": null,
     "sandbox": 1,
     "original_flight_price": null,
-    "price": 193,
+    "price": 193.0,
     "flight_ids": [
       "313527121",
       "SP990384_1477709",
@@ -381,11 +381,11 @@
     "passenger_ids": [
       4095416
     ],
-    "credits_payment": 0,
+    "credits_payment": 0.0,
     "bags": 0,
     "bid": 2707224,
     "transfer_ids": [],
-    "card_payment": 151,
+    "card_payment": 151.0,
     "segments": null,
     "passengers": [
       {
@@ -414,7 +414,7 @@
       },
       "when": 0
     },
-    "booking_token": "GamFTRHoBQ/v6QB8IrykhpoVGKB0KA6sVANbFz24Dyu3VGSgdrTrERd1E37H1zyFiOanJ+QMT9f7JgO0u7SK/NdilS+YYcBbGx2yAvIFTXoiHpzbtW2RN0wSZZDGJAdLHbD050HJ137LZIDk4gZyLlvuUWPu8LqJ94a+AFaZWZjBMeFCiNmaaDvRHeV7UpjlCiefvaO1z7U9lnFGjzLwc/Wyp9rq7bY/FvnChVB0XHBZaJOdklXpBK1rLwN2FHIxbcAopoqp5GzxknkF5XNDRv9W1Ks+Q7ZqZBJfARDxgwuvw83O9FCkF1waQ7rHBHslKaZRkYPq5WhpegLYEjOpgEcbZYBxpjkKb7cIjYg6wQTWj9uJ5bF7dU8mKTaezk7K",
+    "booking_token": "GamFTRHoBQ\/v6QB8IrykhpoVGKB0KA6sVANbFz24Dyu3VGSgdrTrERd1E37H1zyFiOanJ+QMT9f7JgO0u7SK\/NdilS+YYcBbGx2yAvIFTXoiHpzbtW2RN0wSZZDGJAdLHbD050HJ137LZIDk4gZyLlvuUWPu8LqJ94a+AFaZWZjBMeFCiNmaaDvRHeV7UpjlCiefvaO1z7U9lnFGjzLwc\/Wyp9rq7bY\/FvnChVB0XHBZaJOdklXpBK1rLwN2FHIxbcAopoqp5GzxknkF5XNDRv9W1Ks+Q7ZqZBJfARDxgwuvw83O9FCkF1waQ7rHBHslKaZRkYPq5WhpegLYEjOpgEcbZYBxpjkKb7cIjYg6wQTWj9uJ5bF7dU8mKTaezk7K",
     "created": 1490858664,
     "original_currency": "USD",
     "flights": [
@@ -467,7 +467,7 @@
     "grace_period_fee": null,
     "sandbox": 1,
     "original_flight_price": null,
-    "price": 151,
+    "price": 151.0,
     "flight_ids": [
       "SP990379_1477702"
     ]

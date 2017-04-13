@@ -1,17 +1,13 @@
 const path = require('path');
-const webpack = require('webpack');
+const nodeExternals = require('webpack-node-externals');
 
 module.exports = {
-  devtool: 'inline-source-map',
+  devtool: 'eval', // FIXME: not ready for production
   entry: ['./src/index'],
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'endpoint.js',
   },
-  plugins: [
-    new webpack.NamedModulesPlugin(),
-    new webpack.NoEmitOnErrorsPlugin(),
-  ],
   module: {
     rules: [
       {
@@ -28,4 +24,6 @@ module.exports = {
       },
     ],
   },
+  target: 'node', // important in order not to bundle built-in modules like path, fs, etc.
+  externals: [nodeExternals()], // in order to ignore all modules in node_modules folder
 };
