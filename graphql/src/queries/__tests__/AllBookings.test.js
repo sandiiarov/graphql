@@ -14,8 +14,7 @@ describe('id query', () => {
         id
       }
     }`;
-    const result = await graphql(schema, idsQuery);
-    expect(result).toMatchSnapshot();
+    expect(await executeQuery(idsQuery)).toMatchSnapshot();
   });
 });
 

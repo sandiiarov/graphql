@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`arrival query should return valid id field 1`] = `
+Object {
+  "data": Object {
+    "booking": Object {
+      "arrival": Object {
+        "airport": Object {
+          "city": "Paris",
+          "code": "CDG",
+        },
+      },
+      "departure": Object {
+        "airport": Object {
+          "city": "London",
+          "code": "LGW",
+        },
+      },
+      "flights": Array [
+        Object {
+          "arrival": Object {
+            "airport": Object {
+              "city": "Paris",
+              "code": "CDG",
+            },
+          },
+          "departure": Object {
+            "airport": Object {
+              "city": "London",
+              "code": "LGW",
+            },
+          },
+        },
+      ],
+    },
+  },
+}
+`;
