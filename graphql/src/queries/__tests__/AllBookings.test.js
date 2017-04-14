@@ -10,6 +10,18 @@ describe('all bookings query', () => {
   });
 });
 
+describe('id query', () => {
+  it('should return IDs of bookings', async () => {
+    const idsQuery = `{
+      allBookings {
+        id
+      }
+    }`;
+    const result = await graphql(schema, idsQuery);
+    expect(result).toMatchSnapshot();
+  });
+});
+
 describe('arrival query', () => {
   it('should return valid id field', async () => {
     const arrivalQuery = `{
