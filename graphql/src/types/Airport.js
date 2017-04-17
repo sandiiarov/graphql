@@ -10,14 +10,14 @@ export type AirportType = {
 export default new GraphQLObjectType({
   name: 'Airport',
   fields: {
+    city: {
+      type: new GraphQLNonNull(GraphQLString),
+      resolve: (airport: AirportType): string => airport.name,
+    },
+
     code: {
       type: new GraphQLNonNull(GraphQLString),
       resolve: (airport: AirportType): string => airport.code,
-    },
-
-    name: {
-      type: new GraphQLNonNull(GraphQLString),
-      resolve: (airport: AirportType): string => airport.name,
     },
   },
 });

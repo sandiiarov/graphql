@@ -7,24 +7,24 @@ Object {
       Object {
         "arrival": Object {
           "airport": Object {
+            "city": "Paris",
             "code": "CDG",
-            "name": "Paris",
           },
         },
       },
       Object {
         "arrival": Object {
           "airport": Object {
+            "city": "Dubai",
             "code": "DXB",
-            "name": "Dubai",
           },
         },
       },
       Object {
         "arrival": Object {
           "airport": Object {
+            "city": "Samara",
             "code": "KUF",
-            "name": "Samara",
           },
         },
       },
@@ -40,24 +40,24 @@ Object {
       Object {
         "departure": Object {
           "airport": Object {
+            "city": "London",
             "code": "LGW",
-            "name": "London",
           },
         },
       },
       Object {
         "departure": Object {
           "airport": Object {
+            "city": "London",
             "code": "STN",
-            "name": "London",
           },
         },
       },
       Object {
         "departure": Object {
           "airport": Object {
+            "city": "Prague",
             "code": "PRG",
-            "name": "Prague",
           },
         },
       },
@@ -75,14 +75,14 @@ Object {
           Object {
             "arrival": Object {
               "airport": Object {
+                "city": "Paris",
                 "code": "CDG",
-                "name": "Paris",
               },
             },
             "departure": Object {
               "airport": Object {
+                "city": "London",
                 "code": "LGW",
-                "name": "London",
               },
             },
           },
@@ -93,42 +93,42 @@ Object {
           Object {
             "arrival": Object {
               "airport": Object {
+                "city": "Prague",
                 "code": "PRG",
-                "name": "Prague",
               },
             },
             "departure": Object {
               "airport": Object {
+                "city": "London",
                 "code": "STN",
-                "name": "London",
               },
             },
           },
           Object {
             "arrival": Object {
               "airport": Object {
+                "city": "Kiev",
                 "code": "KBP",
-                "name": "Kiev",
               },
             },
             "departure": Object {
               "airport": Object {
+                "city": "Prague",
                 "code": "PRG",
-                "name": "Prague",
               },
             },
           },
           Object {
             "arrival": Object {
               "airport": Object {
+                "city": "Dubai",
                 "code": "DXB",
-                "name": "Dubai",
               },
             },
             "departure": Object {
               "airport": Object {
+                "city": "Kiev",
                 "code": "KBP",
-                "name": "Kiev",
               },
             },
           },
@@ -139,14 +139,14 @@ Object {
           Object {
             "arrival": Object {
               "airport": Object {
+                "city": "Samara",
                 "code": "KUF",
-                "name": "Samara",
               },
             },
             "departure": Object {
               "airport": Object {
+                "city": "Prague",
                 "code": "PRG",
-                "name": "Prague",
               },
             },
           },
