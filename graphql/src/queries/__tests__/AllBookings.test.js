@@ -1,8 +1,5 @@
-import { graphql } from 'graphql';
-import schema from '../../Schema';
+import { executeQuery } from '../../services/TestingTools';
 import AllBookings from '../AllBookings';
-
-jest.mock('../../services/HttpRequest');
 
 describe('all bookings query', () => {
   it('should be list of non-null booking types', () => {
@@ -31,8 +28,7 @@ describe('arrival query', () => {
         }
       }
     }`;
-    const result = await graphql(schema, arrivalQuery);
-    expect(result).toMatchSnapshot();
+    expect(await executeQuery(arrivalQuery)).toMatchSnapshot();
   });
 });
 
@@ -45,14 +41,13 @@ describe('departure query', () => {
         }
       }
     }`;
-    const result = await graphql(schema, departureQuery);
-    expect(result).toMatchSnapshot();
+    expect(await executeQuery(departureQuery)).toMatchSnapshot();
   });
 });
 
 describe('flights query', () => {
   it('should return valid id field', async () => {
-    const departureQuery = `{
+    const flightsQuery = `{
       allBookings {
         flights {
           arrival {
@@ -64,7 +59,6 @@ describe('flights query', () => {
         }
       }
     }`;
-    const result = await graphql(schema, departureQuery);
-    expect(result).toMatchSnapshot();
+    expect(await executeQuery(flightsQuery)).toMatchSnapshot();
   });
 });
