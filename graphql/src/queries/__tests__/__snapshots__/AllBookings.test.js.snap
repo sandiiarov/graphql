@@ -6,17 +6,26 @@ Object {
     "allBookings": Array [
       Object {
         "arrival": Object {
-          "id": "{\\"where\\":{\\"code\\":\\"CDG\\",\\"name\\":\\"Paris\\"},\\"when\\":0}",
+          "airport": Object {
+            "city": "Paris",
+            "code": "CDG",
+          },
         },
       },
       Object {
         "arrival": Object {
-          "id": "{\\"where\\":{\\"code\\":\\"DXB\\",\\"name\\":\\"Dubai\\"},\\"when\\":0}",
+          "airport": Object {
+            "city": "Dubai",
+            "code": "DXB",
+          },
         },
       },
       Object {
         "arrival": Object {
-          "id": "{\\"where\\":{\\"code\\":\\"KUF\\",\\"name\\":\\"Samara\\"},\\"when\\":0}",
+          "airport": Object {
+            "city": "Samara",
+            "code": "KUF",
+          },
         },
       },
     ],
@@ -30,17 +39,26 @@ Object {
     "allBookings": Array [
       Object {
         "departure": Object {
-          "id": "{\\"where\\":{\\"code\\":\\"LGW\\",\\"name\\":\\"London\\"},\\"when\\":0}",
+          "airport": Object {
+            "city": "London",
+            "code": "LGW",
+          },
         },
       },
       Object {
         "departure": Object {
-          "id": "{\\"where\\":{\\"code\\":\\"STN\\",\\"name\\":\\"London\\"},\\"when\\":0}",
+          "airport": Object {
+            "city": "London",
+            "code": "STN",
+          },
         },
       },
       Object {
         "departure": Object {
-          "id": "{\\"where\\":{\\"code\\":\\"PRG\\",\\"name\\":\\"Prague\\"},\\"when\\":0}",
+          "airport": Object {
+            "city": "Prague",
+            "code": "PRG",
+          },
         },
       },
     ],
@@ -56,10 +74,16 @@ Object {
         "flights": Array [
           Object {
             "arrival": Object {
-              "id": "{\\"when\\":{\\"utc\\":1504992600,\\"local\\":1504999800},\\"where\\":{\\"city_id\\":\\"paris_fr\\",\\"country\\":\\"FR\\",\\"code\\":\\"CDG\\",\\"name\\":\\"Paris\\"}}",
+              "airport": Object {
+                "city": "Paris",
+                "code": "CDG",
+              },
             },
             "departure": Object {
-              "id": "{\\"when\\":{\\"utc\\":1504987800,\\"local\\":1504991400},\\"where\\":{\\"city_id\\":\\"london_gb\\",\\"country\\":\\"GB\\",\\"code\\":\\"LGW\\",\\"name\\":\\"London\\"}}",
+              "airport": Object {
+                "city": "London",
+                "code": "LGW",
+              },
             },
           },
         ],
@@ -68,26 +92,44 @@ Object {
         "flights": Array [
           Object {
             "arrival": Object {
-              "id": "{\\"when\\":{\\"utc\\":1504947600,\\"local\\":1504954800},\\"where\\":{\\"city_id\\":\\"prague_cz\\",\\"country\\":\\"CZ\\",\\"code\\":\\"PRG\\",\\"name\\":\\"Prague\\"}}",
+              "airport": Object {
+                "city": "Prague",
+                "code": "PRG",
+              },
             },
             "departure": Object {
-              "id": "{\\"when\\":{\\"utc\\":1504940700,\\"local\\":1504944300},\\"where\\":{\\"city_id\\":\\"london_gb\\",\\"country\\":\\"GB\\",\\"code\\":\\"STN\\",\\"name\\":\\"London\\"}}",
+              "airport": Object {
+                "city": "London",
+                "code": "STN",
+              },
             },
           },
           Object {
             "arrival": Object {
-              "id": "{\\"when\\":{\\"utc\\":1504970100,\\"local\\":1504980900},\\"where\\":{\\"city_id\\":\\"kiev_ua\\",\\"country\\":\\"UA\\",\\"code\\":\\"KBP\\",\\"name\\":\\"Kiev\\"}}",
+              "airport": Object {
+                "city": "Kiev",
+                "code": "KBP",
+              },
             },
             "departure": Object {
-              "id": "{\\"when\\":{\\"utc\\":1504962000,\\"local\\":1504969200},\\"where\\":{\\"city_id\\":\\"prague_cz\\",\\"country\\":\\"CZ\\",\\"code\\":\\"PRG\\",\\"name\\":\\"Prague\\"}}",
+              "airport": Object {
+                "city": "Prague",
+                "code": "PRG",
+              },
             },
           },
           Object {
             "arrival": Object {
-              "id": "{\\"when\\":{\\"utc\\":1504994400,\\"local\\":1505008800},\\"where\\":{\\"city_id\\":\\"dubai_ae\\",\\"country\\":\\"AE\\",\\"code\\":\\"DXB\\",\\"name\\":\\"Dubai\\"}}",
+              "airport": Object {
+                "city": "Dubai",
+                "code": "DXB",
+              },
             },
             "departure": Object {
-              "id": "{\\"when\\":{\\"utc\\":1504975800,\\"local\\":1504986600},\\"where\\":{\\"city_id\\":\\"kiev_ua\\",\\"country\\":\\"UA\\",\\"code\\":\\"KBP\\",\\"name\\":\\"Kiev\\"}}",
+              "airport": Object {
+                "city": "Kiev",
+                "code": "KBP",
+              },
             },
           },
         ],
@@ -96,10 +138,16 @@ Object {
         "flights": Array [
           Object {
             "arrival": Object {
-              "id": "{\\"when\\":{\\"utc\\":1503099600,\\"local\\":1503114000},\\"where\\":{\\"city_id\\":\\"samara_ru\\",\\"country\\":\\"RU\\",\\"code\\":\\"KUF\\",\\"name\\":\\"Samara\\"}}",
+              "airport": Object {
+                "city": "Samara",
+                "code": "KUF",
+              },
             },
             "departure": Object {
-              "id": "{\\"when\\":{\\"utc\\":1503086700,\\"local\\":1503093900},\\"where\\":{\\"city_id\\":\\"prague_cz\\",\\"country\\":\\"CZ\\",\\"code\\":\\"PRG\\",\\"name\\":\\"Prague\\"}}",
+              "airport": Object {
+                "city": "Prague",
+                "code": "PRG",
+              },
             },
           },
         ],

@@ -1,19 +1,21 @@
 // @flow
 
-import { GraphQLObjectType, GraphQLNonNull, GraphQLID } from 'graphql';
+import { GraphQLObjectType, GraphQLNonNull } from 'graphql';
+import Airport from './Airport';
+
+import type { AirportType } from './Airport';
 
 export type DepartureType = {
-  departure: string,
+  where: AirportType,
 };
 
 export default new GraphQLObjectType({
   name: 'Departure',
   fields() {
     return {
-      id: {
-        type: new GraphQLNonNull(GraphQLID),
-        resolve: (departure: DepartureType): string =>
-          JSON.stringify(departure), // FIXME: vrátit skutečná data
+      airport: {
+        type: new GraphQLNonNull(Airport),
+        resolve: (departure: DepartureType): AirportType => departure.where,
       },
     };
   },
