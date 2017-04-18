@@ -156,3 +156,21 @@ Object {
   },
 }
 `;
+
+exports[`id query should return IDs of bookings 1`] = `
+Object {
+  "data": Object {
+    "allBookings": Array [
+      Object {
+        "id": "2707251",
+      },
+      Object {
+        "id": "2707229",
+      },
+      Object {
+        "id": "2707224",
+      },
+    ],
+  },
+}
+`;
