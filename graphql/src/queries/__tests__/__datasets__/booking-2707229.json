@@ -1,0 +1,379 @@
+{
+  "original_price": 208.69,
+  "grade": {
+    "id": "D",
+    "time": 240
+  },
+  "additional_contacts": [],
+  "cancel_requested": null,
+  "blocked": false,
+  "additional_bags_prices": {
+    "1": 82.5
+  },
+  "segments": null,
+  "flights": [
+    {
+      "arrival": {
+        "when": {
+          "utc": 1504947600,
+          "local": 1504954800
+        },
+        "where": {
+          "city_id": "prague_cz",
+          "country": "CZ",
+          "code": "PRG",
+          "name": "Prague",
+          "gate": null
+        }
+      },
+      "bags_recheck_required": false,
+      "return": 0,
+      "flight_no": 1013,
+      "ticket_available_at": "2017-09-05",
+      "reservation_number": "chat",
+      "id": "313527121",
+      "guarantee": false,
+      "departure": {
+        "when": {
+          "utc": 1504940700,
+          "local": 1504944300
+        },
+        "where": {
+          "city_id": "london_gb",
+          "country": "GB",
+          "code": "STN",
+          "name": "London",
+          "gate": null
+        }
+      },
+      "airline": {
+        "checkin": 4,
+        "iata": "FR",
+        "doing_online_checkin": 1,
+        "name": "Ryanair"
+      },
+      "operating_airline": {
+        "iata": "FR",
+        "name": "Ryanair"
+      }
+    },
+    {
+      "arrival": {
+        "when": {
+          "utc": 1504970100,
+          "local": 1504980900
+        },
+        "where": {
+          "city_id": "kiev_ua",
+          "country": "UA",
+          "code": "KBP",
+          "name": "Kiev",
+          "gate": null
+        }
+      },
+      "bags_recheck_required": true,
+      "return": 0,
+      "flight_no": 808,
+      "ticket_available_at": "2017-09-07",
+      "reservation_number": "bot",
+      "id": "SP990384_1477709",
+      "guarantee": true,
+      "departure": {
+        "when": {
+          "utc": 1504962000,
+          "local": 1504969200
+        },
+        "where": {
+          "city_id": "prague_cz",
+          "country": "CZ",
+          "code": "PRG",
+          "name": "Prague",
+          "gate": null
+        }
+      },
+      "airline": {
+        "checkin": 2,
+        "iata": "PS",
+        "doing_online_checkin": 1,
+        "name": "Ukraine International Airlines"
+      },
+      "operating_airline": {
+        "iata": "PS",
+        "name": "Ukraine International Airlines"
+      }
+    },
+    {
+      "arrival": {
+        "when": {
+          "utc": 1504994400,
+          "local": 1505008800
+        },
+        "where": {
+          "city_id": "dubai_ae",
+          "country": "AE",
+          "code": "DXB",
+          "name": "Dubai",
+          "gate": null
+        }
+      },
+      "bags_recheck_required": false,
+      "return": 0,
+      "flight_no": 373,
+      "ticket_available_at": "2017-09-07",
+      "reservation_number": "ko",
+      "id": "SP990384_1477710",
+      "guarantee": false,
+      "departure": {
+        "when": {
+          "utc": 1504975800,
+          "local": 1504986600
+        },
+        "where": {
+          "city_id": "kiev_ua",
+          "country": "UA",
+          "code": "KBP",
+          "name": "Kiev",
+          "gate": null
+        }
+      },
+      "airline": {
+        "checkin": 2,
+        "iata": "PS",
+        "doing_online_checkin": 1,
+        "name": "Ukraine International Airlines"
+      },
+      "operating_airline": {
+        "iata": "PS",
+        "name": "Ukraine International Airlines"
+      }
+    }
+  ],
+  "grace_period_fee": null,
+  "original_flight_price": null,
+  "flight_ids": [
+    "313527121",
+    "SP990384_1477709",
+    "SP990384_1477710"
+  ],
+  "original_currency": "USD",
+  "bid": 2707229,
+  "bags_restrictions": {
+    "holds": {},
+    "hands": {}
+  },
+  "podio_status": 32,
+  "card_payment": 193.0,
+  "prices": [
+    "49.0",
+    "60.85",
+    "60.85"
+  ],
+  "pending_additional_services": [],
+  "transfer_ids": [],
+  "booking_token": "GamFTRHoBQ\/v6QB8IrykhpoVGKB0KA6sVANbFz24Dyu3VGSgdrTrERd1E37H1zyFrInpKaRGGoSFmckySMp2qKdHf3F9cVQ1SFS3k7OLxL9unHQL7JQBoAUGBErMIvLdWb5lISkp2YP5eM3kH5pZveJb8ZSy13iMfCej\/eFT27Fk6ONF3mbqdyHwEnSq6gh+UcNV0qCjL2bE0ZoUnKQDXSwQ4u79WNlgBsExQPgkPsx\/WLtJftxOt7eRQWCxUE2+7Mvrdh4i2Ol4l8BDs30ZupHxIgHB9i0r6aVJipFP9O0ekoOJU79pz5P0k6M7xxdd5wEeEu1hFid4Jw1actidYXaP5HNVkLYIVNjnYRl9c2LX8Vi6m1kAAlkXbw+KIwmS\/\/cO2bSPhz4FzLFtTcjzu8hRfX7IAIu68Az7joQeGgGkp2p3HxzlV80PtnC2v14e",
+  "checkin_deadline": 1504713600,
+  "pending_refunds": [],
+  "bag_params": {
+    "hand2_note": "",
+    "hand_length": 55,
+    "hold_height": 81,
+    "hand2_width": null,
+    "hold_weight": 15,
+    "hand_note": "",
+    "hold_length": 119,
+    "hand2_length": null,
+    "note": "",
+    "hand_height": 20,
+    "hand2_weight": null,
+    "hand2_height": null,
+    "hand_width": 40,
+    "hold_width": 119,
+    "hand_weight": 7
+  },
+  "auth_token": "900c31b3-cc55-49b0-83ef-c7daac71a170",
+  "currency": "EUR",
+  "bags": 0,
+  "pending_flight_changes": [],
+  "additional_bookings": {
+    "details": [
+      {
+        "category": "bags",
+        "bags": 1,
+        "booked": 1491482392,
+        "payment_gate": "zooz",
+        "price": 82.5,
+        "payment_expiration": 1491485092,
+        "comment": "",
+        "payment_currency": "EUR",
+        "payment_token_created": 1491482392,
+        "credits_payment_amount": 0.0,
+        "payment_price": 82.5,
+        "final_status": "expired",
+        "data": {
+          "ordered_by": "pax"
+        },
+        "payment_token": "LHBWY6WGYOZATYPIEJFFIHJCSA",
+        "abid": 151447
+      },
+      {
+        "category": "bags",
+        "bags": 1,
+        "booked": 1491386662,
+        "payment_gate": "zooz",
+        "price": 82.5,
+        "payment_expiration": 1491389363,
+        "comment": "",
+        "payment_currency": "CZK",
+        "payment_token_created": 1491386663,
+        "credits_payment_amount": 0.0,
+        "payment_price": 2241.0,
+        "final_status": "expired",
+        "data": {
+          "ordered_by": "pax"
+        },
+        "payment_token": "OTXBKGBAKVIMJ24SWV4IRAO2VY",
+        "abid": 150853
+      }
+    ],
+    "paid": {
+      "bags": 0,
+      "total": 0
+    }
+  },
+  "config": {
+    "allowed_to_change": {
+      "bags": 36,
+      "seating": null,
+      "insurance_change": 48,
+      "flights": 48,
+      "other": 4,
+      "insurance_add": 24,
+      "extras": null
+    },
+    "allowed_to_change_segments": true
+  },
+  "arrival": {
+    "where": {
+      "code": "DXB",
+      "name": "Dubai"
+    },
+    "when": 0
+  },
+  "insurance_price": {
+    "travel_plus": 34.37,
+    "skysilver": 18.37,
+    "skygold": 34.37,
+    "travel_basic": 18.37
+  },
+  "pending_requests": [],
+  "price": 193.0,
+  "credits_payment": 0.0,
+  "blockers": [],
+  "document_options": {
+    "checkin_date": 1504685100,
+    "airport_checkin_price": 70,
+    "document_need": 2
+  },
+  "passenger_ids": [
+    4095425
+  ],
+  "transfers": [],
+  "refund_options": [],
+  "passengers": [
+    {
+      "category": "adults",
+      "bags": 0,
+      "insurance_price": null,
+      "firstname": "TEST",
+      "travel_document": {
+        "cardno": "12345678XY",
+        "expiration": 1608768000
+      },
+      "lastname": "TEST",
+      "pkpass": null,
+      "title": "mr",
+      "hand_bags": {},
+      "birthday": "1985-01-01",
+      "contact_passenger": true,
+      "nationality": "gb",
+      "id": 4095425,
+      "insurance_type": "none"
+    }
+  ],
+  "assets": {
+    "eticket": "https:\/\/skypicker-mailing.s3.amazonaws.com\/2707\/1490859027_E-ticket_passenger_99e1026e1e028f02dd0b3229657be5b8.pdf?v=1490859027",
+    "additional": [],
+    "en_confirmation_link": "https:\/\/skypicker-mailing.s3.amazonaws.com\/2707\/1490859109_2707229_confirmation_99e1026e1e028f02dd0b3229657be5b8.html",
+    "invoice": null,
+    "boardingPass": {
+      "313527121": null,
+      "SP990384_1477709": null,
+      "all": null,
+      "SP990384_1477710": null
+    },
+    "insurance": null,
+    "transfer_ticket": null
+  },
+  "created": 1490858750,
+  "route": [
+    "STN",
+    "DXB"
+  ],
+  "departure": {
+    "where": {
+      "code": "STN",
+      "name": "London"
+    },
+    "when": 0
+  },
+  "sandbox": 1,
+  "contact": {
+    "phone": "+44 000",
+    "pid": 4095425,
+    "email": "kiwicomtester@gmail.com"
+  },
+  "status": "confirmed",
+  "flights_history": {},
+  "travel_info": {
+    "4095425": {
+      "0": {
+        "visa": [
+          {
+            "info": "<div class=\"content\"><p>\nVisa required. \n<\/p>\n<h3>Visa issuance:<\/h3>\n<p>\n<\/p><p>\nHolders of normal British passports endorsed \"British Citizen\" can obtain a visa on arrival for a max. stay of 30 days. Free of charge. \n<\/p>\n<p>\nE-visas can be obtained via <a target=\"_blank\" href=\"http:\/\/www.ednrd.ae\/\">www.ednrd.ae<\/a> . Airlines can check the validity of an e-visa at the same site by clicking on \"Query DNRD APP\". \n<\/p>\n\n<h3>Additional information:<\/h3>\n<p>\nExtension of stay possible for additional 30 days, for holders of British or Hong Kong (SAR China) passports, provided extension request is submitted at least 2 days prior to the expiry date of the visa issued on arrival. Fee: AED 600.-.\n<\/p>\n<\/div>",
+            "status": "notice",
+            "timestamp": 1452171914,
+            "country": "AE"
+          }
+        ],
+        "health": [
+          {
+            "info": "<div class=\"content\">This information is for guide purposes only. Other health organisations may recommend alternative precautions.<br \/><br \/><p>\nVaccinations not required.\n<\/p>\n<\/div>",
+            "status": "ok",
+            "timestamp": 1446669632,
+            "country": "CZ"
+          },
+          {
+            "info": "<div class=\"content\">This information is for guide purposes only. Other health organisations may recommend alternative precautions.<br \/><br \/><p>\nVaccinations not required.\n<\/p>\n<\/div>",
+            "status": "ok",
+            "timestamp": 1452171914,
+            "country": "AE"
+          }
+        ],
+        "passport": [
+          {
+            "info": "<div class=\"content\"><p>\nPassport required.\n<\/p>\n<h3>Document validity rules:<\/h3>\n<p>\nBritish passports with nationality of ?British Citizen\" shown on the bio-data page must be valid on arrival. \n<\/p>\n<h3>Important:<\/h3>\n<p>\nBritish passports with nationality of  \"British Citizen\" shown on the bio-data page that have been extended 12 months by an extension stamp contained within the passport are accepted. \n<\/p>\n<\/div>",
+            "status": "notice",
+            "timestamp": 1446669632,
+            "country": "CZ"
+          },
+          {
+            "info": "<div class=\"content\"><p>\nPassport required.\n<\/p>\n<h3>Document validity rules:<\/h3>\n<p>\nPassports and\/or passport replacing documents of visitors must be valid for:<br \/>- at least 3 months from the date of entry, for visits of up to 3 months; or<br \/>- at least 6 months from the date of entry, for visits exceeding 3 months. \n<\/p>\n<h3>Entry and Transit restrictions apply:<\/h3>\n<p>\nPassengers with a hand-written passport are not allowed to enter at Dubai (DXB).\n<\/p>\n<h3>Additional information:<\/h3>\n<p>\nPassengers with dual nationality must present the same passport at immigration upon entry and departure. \n<\/p>\n<h3>Important:<\/h3>\n<p>\nBritish passports with nationality of  \"British Citizen\" shown on the bio-data page that have been extended 12 months by an extension stamp contained within the passport are accepted. \n<\/p>\n<\/div>",
+            "status": "notice",
+            "timestamp": 1452171914,
+            "country": "AE"
+          }
+        ]
+      }
+    }
+  }
+}

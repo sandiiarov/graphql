@@ -18,6 +18,7 @@ import type { FlightType } from './Flight';
 
 export type BookingType = {
   arrival: ArrivalType,
+  auth_token: string,
   bid: number,
   departure: DepartureType,
   flights: Array<FlightType>,

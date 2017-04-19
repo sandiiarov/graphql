@@ -10,6 +10,11 @@ const request = async function request(
   if (process.env.NODE_ENV === 'test') {
     throw new Error('HttpRequest should never be called in test environment.');
   }
+  if (typeof absoluteApiUrl !== 'string') {
+    throw new Error(
+      `Relative API URL should be typeof 'string', '${typeof absoluteApiUrl}' given.`,
+    );
+  }
 
   const urlObject = url.parse(absoluteApiUrl, true);
   if (token !== null && token !== undefined) {
@@ -19,10 +24,13 @@ const request = async function request(
     urlObject.query.token = token;
   }
 
+  console.log(url.format(urlObject));
   const response = await fetch(url.format(urlObject));
 
   if (response.status !== 200) {
-    throw new Error(`${response.status}: ${response.statusText}`);
+    throw new Error(
+      `Proxied error ${response.status}: ${response.statusText} (${url.format(urlObject)})`,
+    );
   }
   return response.json();
 };
