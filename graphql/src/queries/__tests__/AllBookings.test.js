@@ -14,13 +14,12 @@ describe('id query', () => {
         id
       }
     }`;
-    const result = await graphql(schema, idsQuery);
-    expect(result).toMatchSnapshot();
+    expect(await executeQuery(idsQuery)).toMatchSnapshot();
   });
 });
 
 describe('arrival query', () => {
-  it('should return valid id field', async () => {
+  it('should return valid arrival field', async () => {
     const arrivalQuery = `{
       allBookings {
         arrival {
@@ -33,7 +32,7 @@ describe('arrival query', () => {
 });
 
 describe('departure query', () => {
-  it('should return valid id field', async () => {
+  it('should return valid departure field', async () => {
     const departureQuery = `{
       allBookings {
         departure {
@@ -46,7 +45,7 @@ describe('departure query', () => {
 });
 
 describe('flights query', () => {
-  it('should return valid id field', async () => {
+  it('should return valid flights field', async () => {
     const flightsQuery = `{
       allBookings {
         flights {
