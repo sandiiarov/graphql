@@ -12,12 +12,12 @@ export default new GraphQLObjectType({
   fields: {
     city: {
       type: new GraphQLNonNull(GraphQLString),
-      resolve: (airport: AirportType): string => airport.name,
+      resolve: ({ name }: AirportType): string => name,
     },
 
     code: {
       type: new GraphQLNonNull(GraphQLString),
-      resolve: (airport: AirportType): string => airport.code,
+      resolve: ({ code }: AirportType): string => code,
     },
   },
 });
