@@ -24,6 +24,7 @@ describe('arrival query', () => {
       allBookings {
         arrival {
           airport { city, code }
+          time, localTime
         }
       }
     }`;
@@ -37,6 +38,7 @@ describe('departure query', () => {
       allBookings {
         departure {
           airport { city, code }
+          time, localTime
         }
       }
     }`;
@@ -51,9 +53,11 @@ describe('flights query', () => {
         flights {
           arrival {
             airport { city, code }
+            time, localTime
           }
           departure {
             airport { city, code }
+            time, localTime
           }
         }
       }
