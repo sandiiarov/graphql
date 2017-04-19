@@ -1,0 +1,143 @@
+{
+  "arrival": {
+    "where": {
+      "code": "CDG",
+      "name": "Paris"
+    },
+    "when": 0
+  },
+  "original_price": 74.61,
+  "bag_params": {},
+  "grade": {
+    "id": "A",
+    "time": 30
+  },
+  "route": [
+    "LGW",
+    "CDG"
+  ],
+  "auth_token": "b206db64-718f-4608-babb-0b8abe6e1b9d",
+  "bags_restrictions": {
+    "holds": {},
+    "hands": {}
+  },
+  "podio_status": 32,
+  "currency": "EUR",
+  "booked_at": "skypicker",
+  "prices": [
+    "30.0"
+  ],
+  "cancel_requested": null,
+  "passenger_ids": [
+    4095455,
+    4095456
+  ],
+  "credits_payment": 0.0,
+  "bags": 0,
+  "bid": 2707251,
+  "transfer_ids": [],
+  "card_payment": 69.0,
+  "segments": null,
+  "passengers": [
+    {
+      "category": "adults",
+      "bags": 0,
+      "insurance_price": null,
+      "firstname": "chatbot",
+      "travel_document": {
+        "cardno": null,
+        "expiration": null
+      },
+      "lastname": "test",
+      "title": "mr",
+      "hand_bags": {},
+      "birthday": "1985-01-01",
+      "contact_passenger": false,
+      "nationality": "us",
+      "id": 4095455,
+      "insurance_type": "none"
+    },
+    {
+      "category": "adults",
+      "bags": 0,
+      "insurance_price": null,
+      "firstname": "TEST",
+      "travel_document": {
+        "cardno": null,
+        "expiration": null
+      },
+      "lastname": "TEST",
+      "title": "mr",
+      "hand_bags": {},
+      "birthday": "1985-01-01",
+      "contact_passenger": true,
+      "nationality": "us",
+      "id": 4095456,
+      "insurance_type": "none"
+    }
+  ],
+  "departure": {
+    "where": {
+      "code": "LGW",
+      "name": "London"
+    },
+    "when": 0
+  },
+  "booking_token": "GamFTRHoBQ\/v6QB8IrykhuGglDtGWxUFRVNsUQAg\/ZpAsAG2Oqe2XPJISBND8WVXgo5DZRAIYNiKixd3TRfLXLHGOBVDNZ85k4qWBOxjqWc1fM\/4eZLzZov2mfgi6+6LCjNG2T8YnXsIdPWzWxQWV3Rao3y+8VsgO3WJxNKzNliu5rU9sbO7tjyA3K0iDC4QBC\/k6Xg59t6elZs8l29NR\/NODhA+jFr6ZPjWzDWHRpuMnEeWEsSNY7Ffpw352VLeROBltX4IzHLPly15sLoJbnX1g7B1MGT\/TKNudpPT0jsCzcMQ8pz2P8efRYuvderzhbE9O4CT6xxba2GLZ8v5Zie4mOOSB6nrRfFinHBjz7M=",
+  "created": 1490858935,
+  "original_currency": "USD",
+  "flights": [
+    {
+      "arrival": {
+        "when": {
+          "utc": 1504992600,
+          "local": 1504999800
+        },
+        "where": {
+          "city_id": "paris_fr",
+          "country": "FR",
+          "code": "CDG",
+          "name": "Paris"
+        }
+      },
+      "bags_recheck_required": false,
+      "extras": "VY",
+      "return": 0,
+      "airline": {
+        "checkin": 7,
+        "iata": "VY",
+        "doing_online_checkin": 1,
+        "name": "Vueling"
+      },
+      "flight_no": 8773,
+      "guarantee": false,
+      "reservation_number": "chat",
+      "id": "315289498",
+      "departure": {
+        "when": {
+          "utc": 1504987800,
+          "local": 1504991400
+        },
+        "where": {
+          "city_id": "london_gb",
+          "country": "GB",
+          "code": "LGW",
+          "name": "London"
+        }
+      }
+    }
+  ],
+  "contact": {
+    "phone": "+1 000",
+    "pid": 4095456,
+    "email": "kiwicomtester@gmail.com"
+  },
+  "status": "confirmed",
+  "grace_period_fee": null,
+  "sandbox": 1,
+  "original_flight_price": null,
+  "price": 69.0,
+  "flight_ids": [
+    "315289498"
+  ]
+}

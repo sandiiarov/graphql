@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`arrival query should return valid id field 1`] = `
+exports[`arrival query should return valid arrival field 1`] = `
 Object {
   "data": Object {
     "allBookings": Array [
@@ -33,7 +33,7 @@ Object {
 }
 `;
 
-exports[`departure query should return valid id field 1`] = `
+exports[`departure query should return valid departure field 1`] = `
 Object {
   "data": Object {
     "allBookings": Array [
@@ -66,7 +66,7 @@ Object {
 }
 `;
 
-exports[`flights query should return valid id field 1`] = `
+exports[`flights query should return valid flights field 1`] = `
 Object {
   "data": Object {
     "allBookings": Array [
