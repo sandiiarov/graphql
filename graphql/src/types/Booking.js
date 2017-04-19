@@ -18,7 +18,7 @@ export type BookingType = {
   arrival: ArrivalType,
   bid: number,
   departure: DepartureType,
-  flights: FlightType,
+  flights: Array<FlightType>,
 };
 
 export default new GraphQLObjectType({
@@ -41,7 +41,7 @@ export default new GraphQLObjectType({
 
     flights: {
       type: new GraphQLNonNull(new GraphQLList(new GraphQLNonNull(Flight))),
-      resolve: ({ flights }: BookingType): FlightType => flights,
+      resolve: ({ flights }: BookingType): Array<FlightType> => flights,
     },
   },
 });
