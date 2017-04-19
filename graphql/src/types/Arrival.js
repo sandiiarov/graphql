@@ -7,6 +7,7 @@ import Airport from './Airport';
 import type { AirportType } from './Airport';
 
 export type ArrivalType = {
+  when: 0 | Object, // zero if doesn't exist
   where: AirportType,
 };
 
