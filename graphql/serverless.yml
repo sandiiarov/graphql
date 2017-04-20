@@ -1,0 +1,27 @@
+service: graphql-proxy
+
+provider:
+  name: aws
+  profile: testing
+  runtime: nodejs6.10
+
+# you can overwrite defaults here
+#  stage: dev
+#  region: us-east-1
+
+package:
+  exclude:
+    - ./**
+  include:
+    - dist/lambda.js
+    - node_modules/**
+
+functions:
+  api:
+    handler: dist/lambda.graphql
+    events:
+      - http:
+          path: /
+          method: POST
+          cors: true # needed for GraphiQL
+          integration: lambda-proxy

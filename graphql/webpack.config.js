@@ -2,11 +2,13 @@ const path = require('path');
 const nodeExternals = require('webpack-node-externals');
 
 module.exports = {
-  devtool: 'eval', // FIXME: not ready for production
-  entry: ['./src/index'],
+  entry: {
+    endpoint: ['./src/index'],
+    lambda: ['./src/lambda'],
+  },
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: 'endpoint.js',
+    filename: '[name].js',
   },
   module: {
     rules: [
