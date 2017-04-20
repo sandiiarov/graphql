@@ -10,6 +10,8 @@ Object {
             "city": "Paris",
             "code": "CDG",
           },
+          "localTime": null,
+          "time": null,
         },
       },
       Object {
@@ -18,6 +20,8 @@ Object {
             "city": "Dubai",
             "code": "DXB",
           },
+          "localTime": null,
+          "time": null,
         },
       },
       Object {
@@ -26,6 +30,8 @@ Object {
             "city": "Samara",
             "code": "KUF",
           },
+          "localTime": null,
+          "time": null,
         },
       },
     ],
@@ -43,6 +49,8 @@ Object {
             "city": "London",
             "code": "LGW",
           },
+          "localTime": null,
+          "time": null,
         },
       },
       Object {
@@ -51,6 +59,8 @@ Object {
             "city": "London",
             "code": "STN",
           },
+          "localTime": null,
+          "time": null,
         },
       },
       Object {
@@ -59,6 +69,8 @@ Object {
             "city": "Prague",
             "code": "PRG",
           },
+          "localTime": null,
+          "time": null,
         },
       },
     ],
@@ -78,12 +90,16 @@ Object {
                 "city": "Paris",
                 "code": "CDG",
               },
+              "localTime": "2017-09-09T23:30:00.000Z",
+              "time": "2017-09-09T21:30:00.000Z",
             },
             "departure": Object {
               "airport": Object {
                 "city": "London",
                 "code": "LGW",
               },
+              "localTime": "2017-09-09T21:10:00.000Z",
+              "time": "2017-09-09T20:10:00.000Z",
             },
           },
         ],
@@ -96,12 +112,16 @@ Object {
                 "city": "Prague",
                 "code": "PRG",
               },
+              "localTime": "2017-09-09T11:00:00.000Z",
+              "time": "2017-09-09T09:00:00.000Z",
             },
             "departure": Object {
               "airport": Object {
                 "city": "London",
                 "code": "STN",
               },
+              "localTime": "2017-09-09T08:05:00.000Z",
+              "time": "2017-09-09T07:05:00.000Z",
             },
           },
           Object {
@@ -110,12 +130,16 @@ Object {
                 "city": "Kiev",
                 "code": "KBP",
               },
+              "localTime": "2017-09-09T18:15:00.000Z",
+              "time": "2017-09-09T15:15:00.000Z",
             },
             "departure": Object {
               "airport": Object {
                 "city": "Prague",
                 "code": "PRG",
               },
+              "localTime": "2017-09-09T15:00:00.000Z",
+              "time": "2017-09-09T13:00:00.000Z",
             },
           },
           Object {
@@ -124,12 +148,16 @@ Object {
                 "city": "Dubai",
                 "code": "DXB",
               },
+              "localTime": "2017-09-10T02:00:00.000Z",
+              "time": "2017-09-09T22:00:00.000Z",
             },
             "departure": Object {
               "airport": Object {
                 "city": "Kiev",
                 "code": "KBP",
               },
+              "localTime": "2017-09-09T19:50:00.000Z",
+              "time": "2017-09-09T16:50:00.000Z",
             },
           },
         ],
@@ -142,12 +170,16 @@ Object {
                 "city": "Samara",
                 "code": "KUF",
               },
+              "localTime": "2017-08-19T03:40:00.000Z",
+              "time": "2017-08-18T23:40:00.000Z",
             },
             "departure": Object {
               "airport": Object {
                 "city": "Prague",
                 "code": "PRG",
               },
+              "localTime": "2017-08-18T22:05:00.000Z",
+              "time": "2017-08-18T20:05:00.000Z",
             },
           },
         ],
