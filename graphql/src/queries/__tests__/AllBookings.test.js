@@ -12,6 +12,7 @@ describe('id query', () => {
     const idsQuery = `{
       allBookings {
         id
+        databaseId
       }
     }`;
     expect(await executeQuery(idsQuery)).toMatchSnapshot();

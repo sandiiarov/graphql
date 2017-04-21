@@ -1,14 +1,16 @@
 // @flow
 
 import {
-  GraphQLObjectType,
-  GraphQLNonNull,
-  GraphQLList,
   GraphQLID,
+  GraphQLInt,
+  GraphQLList,
+  GraphQLNonNull,
+  GraphQLObjectType,
 } from 'graphql';
 import Arrival from './Arrival';
 import Departure from './Departure';
 import Flight from './Flight';
+import { toGlobalId } from '../services/OpaqueIdentifier';
 
 import type { ArrivalType } from './Arrival';
 import type { DepartureType } from './Departure';
@@ -26,6 +28,11 @@ export default new GraphQLObjectType({
   fields: {
     id: {
       type: new GraphQLNonNull(GraphQLID),
+      resolve: ({ bid }: BookingType): string => toGlobalId('booking', bid),
+    },
+
+    databaseId: {
+      type: new GraphQLNonNull(GraphQLInt),
       resolve: ({ bid }: BookingType): number => bid,
     },
 
