@@ -194,13 +194,16 @@ Object {
   "data": Object {
     "allBookings": Array [
       Object {
-        "id": "2707251",
+        "databaseId": 2707251,
+        "id": "Ym9va2luZzoyNzA3MjUx",
       },
       Object {
-        "id": "2707229",
+        "databaseId": 2707229,
+        "id": "Ym9va2luZzoyNzA3MjI5",
       },
       Object {
-        "id": "2707224",
+        "databaseId": 2707224,
+        "id": "Ym9va2luZzoyNzA3MjI0",
       },
     ],
   },
