@@ -24,7 +24,7 @@ const createErrorResponse = error => ({
   }),
 });
 
-exports.graphql = (event, context, callback) => {
+exports.graphql = async (event, context, callback) => {
   let body = null;
 
   try {
@@ -49,7 +49,17 @@ exports.graphql = (event, context, callback) => {
 
   const token = event.headers.authorization || event.headers.Authorization;
   const variables = body.variables || null;
-  graphql(schema, body.query, null, createContext(token), variables)
-    .then(response => callback(null, createSuccessResponse(response)))
-    .catch(error => callback(null, createErrorResponse(error)));
+
+  try {
+    const response = await graphql(
+      schema,
+      body.query,
+      null,
+      createContext(token),
+      variables,
+    );
+    callback(null, createSuccessResponse(response));
+  } catch (error) {
+    callback(null, createErrorResponse(error));
+  }
 };
