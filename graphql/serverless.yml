@@ -2,12 +2,10 @@ service: graphql-proxy
 
 provider:
   name: aws
-  profile: testing
+  profile: staging
   runtime: nodejs6.10
-
-# you can overwrite defaults here
-#  stage: dev
-#  region: us-east-1
+  stage: dev
+  region: eu-west-1 # EU (Ireland)
 
 package:
   exclude:
