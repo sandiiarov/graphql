@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should return baggage parameters 1`] = `
+Object {
+  "data": Object {
+    "booking": Object {
+      "allowedBaggage": Object {
+        "cabin": Array [
+          Object {
+            "height": 20,
+            "length": 55,
+            "note": null,
+            "weight": 10,
+            "width": 40,
+          },
+        ],
+        "checked": Array [
+          Object {
+            "height": 79,
+            "length": 250,
+            "note": "max 180cm (length + width + height)",
+            "weight": 23,
+            "width": 112,
+          },
+        ],
+      },
+    },
+  },
+}
+`;

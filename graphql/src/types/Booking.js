@@ -9,14 +9,16 @@ import {
 } from 'graphql';
 
 import GraphQLRouteStop from './RouteStop';
+import GraphQLAllowedBaggage from './AllowedBaggage';
 import GraphQLLeg from './Leg';
 import { toGlobalId } from '../services/OpaqueIdentifier';
 
 import type {
-  BookingType,
-  LegType,
   ArrivalType,
+  AllowedBaggageType,
+  BookingType,
   DepartureType,
+  LegType,
 } from '../Entities';
 
 export default new GraphQLObjectType({
@@ -30,6 +32,12 @@ export default new GraphQLObjectType({
     databaseId: {
       type: new GraphQLNonNull(GraphQLInt),
       resolve: ({ id }: BookingType): number => id,
+    },
+
+    allowedBaggage: {
+      type: new GraphQLNonNull(GraphQLAllowedBaggage),
+      resolve: ({ allowedBaggage }: BookingType): AllowedBaggageType =>
+        allowedBaggage,
     },
 
     arrival: {

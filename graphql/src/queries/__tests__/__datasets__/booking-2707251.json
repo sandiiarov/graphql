@@ -1,4 +1,181 @@
 {
+  "original_price": 74.61,
+  "grade": {
+    "id": "A",
+    "time": 30
+  },
+  "additional_contacts": [],
+  "cancel_requested": null,
+  "blocked": false,
+  "additional_bags_prices": {
+    "1": 23.65,
+    "2": 47.3
+  },
+  "segments": null,
+  "flights": [
+    {
+      "arrival": {
+        "when": {
+          "utc": 1504992600,
+          "local": 1504999800
+        },
+        "where": {
+          "city_id": "paris_fr",
+          "country": "FR",
+          "code": "CDG",
+          "name": "Paris"
+        }
+      },
+      "bags_recheck_required": false,
+      "return": 0,
+      "flight_no": 8773,
+      "ticket_available_at": "2017-09-02",
+      "reservation_number": "chat",
+      "id": "315289498",
+      "guarantee": false,
+      "departure": {
+        "when": {
+          "utc": 1504987800,
+          "local": 1504991400
+        },
+        "where": {
+          "city_id": "london_gb",
+          "country": "GB",
+          "code": "LGW",
+          "name": "London"
+        }
+      },
+      "airline": {
+        "checkin": 7,
+        "iata": "VY",
+        "doing_online_checkin": 1,
+        "name": "Vueling"
+      },
+      "operating_airline": {
+        "iata": "VY",
+        "name": "Vueling"
+      }
+    }
+  ],
+  "grace_period_fee": null,
+  "original_flight_price": null,
+  "flight_ids": [
+    "315289498"
+  ],
+  "original_currency": "USD",
+  "bid": 2707251,
+  "bags_restrictions": {
+    "holds": {},
+    "hands": {}
+  },
+  "podio_status": 32,
+  "card_payment": 69,
+  "prices": [
+    "30.0"
+  ],
+  "pending_additional_services": [],
+  "transfer_ids": [],
+  "booking_token": "GamFTRHoBQ/v6QB8IrykhuGglDtGWxUFRVNsUQAg/ZpAsAG2Oqe2XPJISBND8WVXgo5DZRAIYNiKixd3TRfLXLHGOBVDNZ85k4qWBOxjqWc1fM/4eZLzZov2mfgi6+6LCjNG2T8YnXsIdPWzWxQWV3Rao3y+8VsgO3WJxNKzNliu5rU9sbO7tjyA3K0iDC4QBC/k6Xg59t6elZs8l29NR/NODhA+jFr6ZPjWzDWHRpuMnEeWEsSNY7Ffpw352VLeROBltX4IzHLPly15sLoJbnX1g7B1MGT/TKNudpPT0jsCzcMQ8pz2P8efRYuvderzhbE9O4CT6xxba2GLZ8v5Zie4mOOSB6nrRfFinHBjz7M=",
+  "checkin_deadline": 1504728000,
+  "pending_refunds": [],
+  "bag_params": {
+    "hand2_note": "",
+    "hand_length": 55,
+    "hold_height": 79,
+    "hand2_width": null,
+    "hold_weight": 23,
+    "hand_note": "",
+    "hold_length": 250,
+    "hand2_length": null,
+    "note": "max 180cm (length + width + height)",
+    "hand_height": 20,
+    "hand2_weight": null,
+    "hand2_height": null,
+    "hand_width": 40,
+    "hold_width": 112,
+    "hand_weight": 10
+  },
+  "auth_token": "b206db64-718f-4608-babb-0b8abe6e1b9d",
+  "currency": "EUR",
+  "bags": 0,
+  "pending_flight_changes": [],
+  "additional_bookings": {
+    "details": [
+      {
+        "category": "bags",
+        "bags": 1,
+        "booked": 1491930532,
+        "payment_gate": "zooz",
+        "price": 23.65,
+        "payment_expiration": 1491933233,
+        "comment": "",
+        "payment_currency": "EUR",
+        "payment_token_created": 1491930533,
+        "credits_payment_amount": 0,
+        "payment_price": 23.65,
+        "final_status": "expired",
+        "data": {
+          "ordered_by": "pax"
+        },
+        "payment_token": "K53DB52ZEIATNS4U3PJOJZALAU",
+        "abid": 153678
+      },
+      {
+        "category": "bags",
+        "bags": 2,
+        "booked": 1491484404,
+        "payment_gate": "zooz",
+        "price": 47.3,
+        "payment_expiration": 1491487104,
+        "comment": "",
+        "payment_currency": "EUR",
+        "payment_token_created": 1491484404,
+        "credits_payment_amount": 0,
+        "payment_price": 47.3,
+        "final_status": "expired",
+        "data": {
+          "ordered_by": "pax"
+        },
+        "payment_token": "W2VQJ33VRWSAZJDIQI7MJV37XA",
+        "abid": 151459
+      },
+      {
+        "category": "bags",
+        "bags": 1,
+        "booked": 1491392536,
+        "payment_gate": "zooz",
+        "price": 23.65,
+        "payment_expiration": 1491395237,
+        "comment": "",
+        "payment_currency": "CZK",
+        "payment_token_created": 1491392537,
+        "credits_payment_amount": 0,
+        "payment_price": 642,
+        "final_status": "expired",
+        "data": {
+          "ordered_by": "pax"
+        },
+        "payment_token": "AL73CTV7Y6AM3NPXGD4RLTL3CQ",
+        "abid": 150895
+      }
+    ],
+    "paid": {
+      "bags": 0,
+      "total": 0
+    }
+  },
+  "config": {
+    "allowed_to_change": {
+      "bags": 36,
+      "seating": null,
+      "insurance_change": 48,
+      "flights": 48,
+      "other": 4,
+      "insurance_add": 24,
+      "extras": null
+    },
+    "allowed_to_change_segments": true
+  },
   "arrival": {
     "where": {
       "code": "CDG",
@@ -6,38 +183,27 @@
     },
     "when": 0
   },
-  "original_price": 74.61,
-  "bag_params": {},
-  "grade": {
-    "id": "A",
-    "time": 30
+  "insurance_price": {
+    "travel_plus": 29.14,
+    "skysilver": 13.14,
+    "skygold": 29.14,
+    "travel_basic": 13.14
   },
-  "route": [
-    "LGW",
-    "CDG"
-  ],
-  "auth_token": "b206db64-718f-4608-babb-0b8abe6e1b9d",
-  "bags_restrictions": {
-    "holds": {},
-    "hands": {}
+  "pending_requests": [],
+  "price": 69,
+  "credits_payment": 0,
+  "blockers": [],
+  "document_options": {
+    "checkin_date": 1504386600,
+    "airport_checkin_price": 0,
+    "document_need": 1
   },
-  "podio_status": 32,
-  "currency": "EUR",
-  "booked_at": "skypicker",
-  "prices": [
-    "30.0"
-  ],
-  "cancel_requested": null,
   "passenger_ids": [
     4095455,
     4095456
   ],
-  "credits_payment": 0.0,
-  "bags": 0,
-  "bid": 2707251,
-  "transfer_ids": [],
-  "card_payment": 69.0,
-  "segments": null,
+  "transfers": [],
+  "refund_options": [],
   "passengers": [
     {
       "category": "adults",
@@ -49,6 +215,7 @@
         "expiration": null
       },
       "lastname": "test",
+      "pkpass": null,
       "title": "mr",
       "hand_bags": {},
       "birthday": "1985-01-01",
@@ -67,6 +234,7 @@
         "expiration": null
       },
       "lastname": "TEST",
+      "pkpass": null,
       "title": "mr",
       "hand_bags": {},
       "birthday": "1985-01-01",
@@ -76,6 +244,23 @@
       "insurance_type": "none"
     }
   ],
+  "assets": {
+    "eticket": "https://skypicker-mailing.s3.amazonaws.com/2707/1490859068_E-ticket_passenger_and_1_more_e826fc3275a65a5db8808279d8fc7f8f.pdf?v=1490859069",
+    "additional": [],
+    "en_confirmation_link": "https://skypicker-mailing.s3.amazonaws.com/2707/1490859157_2707251_confirmation_e826fc3275a65a5db8808279d8fc7f8f.html",
+    "invoice": null,
+    "boardingPass": {
+      "315289498": null,
+      "all": null
+    },
+    "insurance": null,
+    "transfer_ticket": null
+  },
+  "created": 1490858935,
+  "route": [
+    "LGW",
+    "CDG"
+  ],
   "departure": {
     "where": {
       "code": "LGW",
@@ -83,61 +268,70 @@
     },
     "when": 0
   },
-  "booking_token": "GamFTRHoBQ\/v6QB8IrykhuGglDtGWxUFRVNsUQAg\/ZpAsAG2Oqe2XPJISBND8WVXgo5DZRAIYNiKixd3TRfLXLHGOBVDNZ85k4qWBOxjqWc1fM\/4eZLzZov2mfgi6+6LCjNG2T8YnXsIdPWzWxQWV3Rao3y+8VsgO3WJxNKzNliu5rU9sbO7tjyA3K0iDC4QBC\/k6Xg59t6elZs8l29NR\/NODhA+jFr6ZPjWzDWHRpuMnEeWEsSNY7Ffpw352VLeROBltX4IzHLPly15sLoJbnX1g7B1MGT\/TKNudpPT0jsCzcMQ8pz2P8efRYuvderzhbE9O4CT6xxba2GLZ8v5Zie4mOOSB6nrRfFinHBjz7M=",
-  "created": 1490858935,
-  "original_currency": "USD",
-  "flights": [
-    {
-      "arrival": {
-        "when": {
-          "utc": 1504992600,
-          "local": 1504999800
-        },
-        "where": {
-          "city_id": "paris_fr",
-          "country": "FR",
-          "code": "CDG",
-          "name": "Paris"
-        }
-      },
-      "bags_recheck_required": false,
-      "extras": "VY",
-      "return": 0,
-      "airline": {
-        "checkin": 7,
-        "iata": "VY",
-        "doing_online_checkin": 1,
-        "name": "Vueling"
-      },
-      "flight_no": 8773,
-      "guarantee": false,
-      "reservation_number": "chat",
-      "id": "315289498",
-      "departure": {
-        "when": {
-          "utc": 1504987800,
-          "local": 1504991400
-        },
-        "where": {
-          "city_id": "london_gb",
-          "country": "GB",
-          "code": "LGW",
-          "name": "London"
-        }
-      }
-    }
-  ],
+  "sandbox": 1,
   "contact": {
     "phone": "+1 000",
     "pid": 4095456,
     "email": "kiwicomtester@gmail.com"
   },
   "status": "confirmed",
-  "grace_period_fee": null,
-  "sandbox": 1,
-  "original_flight_price": null,
-  "price": 69.0,
-  "flight_ids": [
-    "315289498"
-  ]
+  "flights_history": {},
+  "travel_info": {
+    "4095455": {
+      "0": {
+        "visa": [
+          {
+            "status": "critical",
+            "timestamp": 1447710495,
+            "info": "<div class=\"content\"><p>\n</p><p>Visa required.</p>\n\n<h3>Additional information:</h3>\n<p>\n</p><p>\n</p><p>Schengen visa is also valid for French Guiana, French West Indies and Reunion, provided endorsed \"Also valid for French territories being in observation of the respective French territories\".</p>\n\n<p>\nVisitors are required to hold proof of sufficient funds to cover their stay and documents required for their next destination. \n</p>\n\n</div>",
+            "country": "FR"
+          }
+        ],
+        "health": [
+          {
+            "status": "ok",
+            "timestamp": 1447710495,
+            "info": "<div class=\"content\">This information is for guide purposes only. Other health organisations may recommend alternative precautions.<br /><br /><p>\nVaccinations not required. \n</p>\n</div>",
+            "country": "FR"
+          }
+        ],
+        "passport": [
+          {
+            "status": "critical",
+            "timestamp": 1447710495,
+            "info": "<div class=\"content\"><p>\n</p><p>Passport required.</p>\n\n<h3>Document validity rules:</h3>\n<p>\nPassports and other documents accepted for entry must be valid for a minimum of 3 months beyond the period of intended stay. \n</p>\n<h3>The following regulations apply to children/minors:</h3>\n<p>\nAlien minors up to/including 17 years of age can be included in parent's passport, provided travelling with their parents.<br />\n</p>\n<h3>Important:</h3>\n<p>\nPassports and/or passport replacing documents issued more than 10 years prior to date of travel are not accepted. \n</p>\n</div>",
+            "country": "FR"
+          }
+        ]
+      }
+    },
+    "4095456": {
+      "0": {
+        "visa": [
+          {
+            "status": "critical",
+            "timestamp": 1447710495,
+            "info": "<div class=\"content\"><p>\n</p><p>Visa required.</p>\n\n<h3>Additional information:</h3>\n<p>\n</p><p>\n</p><p>Schengen visa is also valid for French Guiana, French West Indies and Reunion, provided endorsed \"Also valid for French territories being in observation of the respective French territories\".</p>\n\n<p>\nVisitors are required to hold proof of sufficient funds to cover their stay and documents required for their next destination. \n</p>\n\n</div>",
+            "country": "FR"
+          }
+        ],
+        "health": [
+          {
+            "status": "ok",
+            "timestamp": 1447710495,
+            "info": "<div class=\"content\">This information is for guide purposes only. Other health organisations may recommend alternative precautions.<br /><br /><p>\nVaccinations not required. \n</p>\n</div>",
+            "country": "FR"
+          }
+        ],
+        "passport": [
+          {
+            "status": "critical",
+            "timestamp": 1447710495,
+            "info": "<div class=\"content\"><p>\n</p><p>Passport required.</p>\n\n<h3>Document validity rules:</h3>\n<p>\nPassports and other documents accepted for entry must be valid for a minimum of 3 months beyond the period of intended stay. \n</p>\n<h3>The following regulations apply to children/minors:</h3>\n<p>\nAlien minors up to/including 17 years of age can be included in parent's passport, provided travelling with their parents.<br />\n</p>\n<h3>Important:</h3>\n<p>\nPassports and/or passport replacing documents issued more than 10 years prior to date of travel are not accepted. \n</p>\n</div>",
+            "country": "FR"
+          }
+        ]
+      }
+    }
+  }
 }
