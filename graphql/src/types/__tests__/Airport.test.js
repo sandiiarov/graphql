@@ -1,3 +1,5 @@
+// @flow
+
 import Airport from '../Airport';
 
 describe('city field', () => {

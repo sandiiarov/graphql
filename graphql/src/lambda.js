@@ -1,3 +1,5 @@
+// @flow
+
 import { graphql } from 'graphql';
 import schema from './Schema';
 import { createContext } from './services/GraphqlContext';
@@ -24,7 +26,11 @@ const createErrorResponse = error => ({
   }),
 });
 
-exports.graphql = async (event, context, callback) => {
+exports.graphql = async (
+  event: Object,
+  context: ?Object,
+  callback: (error: null, success: string | Object) => void,
+) => {
   let body = null;
 
   try {

@@ -1,5 +1,3 @@
-// @flow
-
 import graphqlHTTP from 'express-graphql';
 import Schema from './Schema';
 import { createContext } from './services/GraphqlContext';
