@@ -31,7 +31,7 @@ it('should throw error when parsing invalid JSON', () => {
   graphql(event, null, (error, response) => {
     expect(error).toBe(null);
     expect(response).toEqual({
-      statusCode: 500,
+      statusCode: 400,
       headers,
       body: JSON.stringify({
         errors: [
@@ -51,7 +51,7 @@ it('should throw error when parsing body without query field', () => {
   graphql(event, null, (error, response) => {
     expect(error).toBe(null);
     expect(response).toEqual({
-      statusCode: 500,
+      statusCode: 400,
       headers,
       body: JSON.stringify({
         errors: [

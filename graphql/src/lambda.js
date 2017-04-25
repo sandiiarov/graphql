@@ -10,8 +10,8 @@ const createSuccessResponse = rawBody => ({
   body: JSON.stringify(rawBody),
 });
 
-const createErrorResponse = error => ({
-  statusCode: 500,
+const createErrorResponse = (error, code) => ({
+  statusCode: code || 400,
   headers: {
     'Access-Control-Allow-Origin': '*', // Required for CORS
   },
@@ -60,6 +60,6 @@ exports.graphql = async (event, context, callback) => {
     );
     callback(null, createSuccessResponse(response));
   } catch (error) {
-    callback(null, createErrorResponse(error));
+    callback(null, createErrorResponse(error.message, 500));
   }
 };
