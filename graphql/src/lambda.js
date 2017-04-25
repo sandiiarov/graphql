@@ -10,8 +10,8 @@ const createSuccessResponse = rawBody => ({
   body: JSON.stringify(rawBody),
 });
 
-const createErrorResponse = (error, code) => ({
-  statusCode: code || 400,
+const createErrorResponse = (error, code = 400) => ({
+  statusCode: code,
   headers: {
     'Access-Control-Allow-Origin': '*', // Required for CORS
   },
