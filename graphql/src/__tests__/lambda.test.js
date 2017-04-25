@@ -1,3 +1,5 @@
+// @flow
+
 import { graphql } from '../lambda';
 import event from './lambdaProxyEvent.json';
 

@@ -1,3 +1,5 @@
+// @flow
+
 import { executeQuery } from '../../services/TestingTools';
 import AllBookings from '../AllBookings';
 

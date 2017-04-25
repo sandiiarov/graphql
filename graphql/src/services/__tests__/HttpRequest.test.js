@@ -1,3 +1,5 @@
+// @flow
+
 import request from '../HttpRequest';
 
 jest.mock('node-fetch');
