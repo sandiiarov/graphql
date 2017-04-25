@@ -7,6 +7,13 @@ describe('id field', () => {
   });
 });
 
+describe('databaseId field', () => {
+  const databaseId = Booking.getFields().databaseId;
+  it('should be non-null Int type', () => {
+    expect(databaseId.type.toString()).toBe('Int!');
+  });
+});
+
 describe('arrival field', () => {
   const arrival = Booking.getFields().arrival;
   it('should be non-null Arrival type', () => {
