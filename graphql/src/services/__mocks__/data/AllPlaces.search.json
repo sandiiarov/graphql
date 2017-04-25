@@ -1,0 +1,15 @@
+[
+  {
+    "zoomLevelThreshold": 7,
+    "numberOfAirports": 1,
+    "sp_score": null,
+    "value": "Burma",
+    "rank": 8,
+    "parentId": "naypyitaw_mm",
+    "lat": 19.374,
+    "lng": 96.121,
+    "type": 0,
+    "id": "NYT",
+    "population": null
+  }
+]

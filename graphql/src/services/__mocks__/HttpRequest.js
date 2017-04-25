@@ -1,9 +1,14 @@
 // @flow
 
-/* eslint-disable global-require */
+import config from '../../../config/application';
+
+/* eslint-disable */
 const mocksMap = {
-  '/users/self/bookings': require('./data/bookings.json'),
-  '/users/self/bookings/2707251': require('./data/booking-2707251.json'),
+  [config.restApiEndpoint.allBookings]: require('./data/bookings.json'),
+  [config.restApiEndpoint.allBookings + '/2707251']: require('./data/booking-2707251.json'),
+  [config.restApiEndpoint.allPlaces()]: require('./data/AllPlaces.json'),
+  [config.restApiEndpoint.allPlaces({ term: 'nyt' })]: require('./data/AllPlaces.search.json'),
+  [config.restApiEndpoint.allPlaces({ term: 'cc' })]: [], // empty array
 };
 /* eslint-enable */
 
