@@ -1,3 +1,5 @@
+// @flow
+
 import Booking from '../Booking';
 
 describe('id field', () => {

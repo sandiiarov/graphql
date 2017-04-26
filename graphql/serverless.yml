@@ -1,0 +1,25 @@
+service: graphql-proxy
+
+provider:
+  name: aws
+  profile: staging
+  runtime: nodejs6.10
+  stage: dev
+  region: eu-west-1 # EU (Ireland)
+
+package:
+  exclude:
+    - ./**
+  include:
+    - dist/lambda.js
+    - node_modules/**
+
+functions:
+  api:
+    handler: dist/lambda.graphql
+    events:
+      - http:
+          path: /
+          method: POST
+          cors: true # needed for GraphiQL
+          integration: lambda-proxy
