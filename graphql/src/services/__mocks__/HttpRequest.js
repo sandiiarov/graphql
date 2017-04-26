@@ -8,7 +8,7 @@ const mocksMap = {
   [config.restApiEndpoint.allBookings + '/2707251']: require('./data/booking-2707251.json'),
   [config.restApiEndpoint.allPlaces()]: require('./data/AllPlaces.json'),
   [config.restApiEndpoint.allPlaces({ term: 'nyt' })]: require('./data/AllPlaces.search.json'),
-  [config.restApiEndpoint.allPlaces({ term: 'cc' })]: [], // empty array
+  [config.restApiEndpoint.allPlaces({ term: 'unknown place' })]: [], // empty array
 };
 /* eslint-enable */
 

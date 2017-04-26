@@ -24,7 +24,7 @@ describe('all places search query', () => {
 
   it('should return array even though there is no result available', async () => {
     const placesQuery = `{
-      allPlaces(search: "cc") {
+      allPlaces(search: "unknown place") {
         id
       }
     }`;
