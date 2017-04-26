@@ -5,15 +5,23 @@ import url from 'url';
 export default {
   restApiEndpoint: {
     allBookings: 'https://booking-api.skypicker.com/api/v0.1/users/self/bookings',
-    allPlaces: (query: null | Object = null) => {
-      const urlObject = url.parse('https://api.skypicker.com/places', true);
-      if (query !== null) {
-        urlObject.query = filterParameters(query);
-      }
-      return url.format(urlObject);
-    },
+    allFlights: (queryParameters: null | Object = null) =>
+      queryWithParameters('https://api.skypicker.com/flights', queryParameters),
+    allPlaces: (queryParameters: null | Object = null) =>
+      queryWithParameters('https://api.skypicker.com/places', queryParameters),
   },
 };
+
+function queryWithParameters(
+  absoluteUrl: string,
+  queryParameters: null | Object = null,
+) {
+  const urlObject = url.parse(absoluteUrl, true);
+  if (queryParameters !== null) {
+    urlObject.query = filterParameters(queryParameters);
+  }
+  return url.format(urlObject);
+}
 
 function filterParameters(parameters: Object) {
   const filteredParameters = parameters;
