@@ -1,3 +1,5 @@
+// @flow
+
 import Arrival from '../Arrival';
 
 describe('airport field', () => {
