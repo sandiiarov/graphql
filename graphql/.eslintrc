@@ -43,5 +43,11 @@
     "promise/avoid-new": "off",
     "promise/prefer-await-to-then": "error",
     "promise/prefer-await-to-callbacks": "off",
+    "flowtype/require-valid-file-annotation": [
+      "warn",
+      "always", {
+        "annotationStyle": "line"
+      }
+    ]
   }
 }

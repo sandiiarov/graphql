@@ -1,3 +1,5 @@
+// @flow
+
 import { graphql } from 'graphql';
 import schema from '../Schema';
 import { createContext } from '../services/GraphqlContext';

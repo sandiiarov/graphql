@@ -1,3 +1,5 @@
+// @flow
+
 import { toGlobalId, fromGlobalId } from '../OpaqueIdentifier';
 
 describe('Function toGlobalId', () => {
