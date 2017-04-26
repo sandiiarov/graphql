@@ -1,3 +1,5 @@
+// @flow
+
 import { graphql } from 'graphql';
 import schema from './Schema';
 import { createContext } from './services/GraphqlContext';
@@ -10,8 +12,8 @@ const createSuccessResponse = rawBody => ({
   body: JSON.stringify(rawBody),
 });
 
-const createErrorResponse = error => ({
-  statusCode: 500,
+const createErrorResponse = (error, code = 400) => ({
+  statusCode: code,
   headers: {
     'Access-Control-Allow-Origin': '*', // Required for CORS
   },
@@ -24,7 +26,11 @@ const createErrorResponse = error => ({
   }),
 });
 
-exports.graphql = async (event, context, callback) => {
+exports.graphql = async (
+  event: Object,
+  context: ?Object,
+  callback: (error: null, success: string | Object) => void,
+) => {
   let body = null;
 
   try {
@@ -60,6 +66,6 @@ exports.graphql = async (event, context, callback) => {
     );
     callback(null, createSuccessResponse(response));
   } catch (error) {
-    callback(null, createErrorResponse(error));
+    callback(null, createErrorResponse(error.message, 500));
   }
 };

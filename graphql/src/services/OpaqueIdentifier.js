@@ -21,7 +21,7 @@ function required() {
  * This function is taken from Relay.
  */
 export function toGlobalId(
-  type: string,
+  type: ?string,
   id: string | number = required(),
 ): Base64String {
   return base64([type, id].join(':'));
