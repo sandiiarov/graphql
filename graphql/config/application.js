@@ -9,12 +9,13 @@ export default {
       queryWithParameters('https://api.skypicker.com/flights', queryParameters),
     allPlaces: (queryParameters: null | Object = null) =>
       queryWithParameters('https://api.skypicker.com/places', queryParameters),
+    login: 'https://auth.skypicker.com/v1/user.login',
   },
 };
 
 function queryWithParameters(
   absoluteUrl: string,
-  queryParameters: null | Object = null,
+  queryParameters: null | Object = null
 ) {
   const urlObject = url.parse(absoluteUrl, true);
   if (queryParameters !== null) {
