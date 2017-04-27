@@ -2,16 +2,16 @@
 
 import Flight from '../Flight';
 
+const fields = Flight.getFields();
+
 describe('arrival field', () => {
-  const arrival = Flight.getFields().arrival;
   it('should be non-null Arrival type', () => {
-    expect(arrival.type.toString()).toBe('Arrival!');
+    expect(fields.arrival.type.toString()).toBe('Arrival!');
   });
 });
 
 describe('departure field', () => {
-  const departure = Flight.getFields().departure;
   it('should be non-null Departure string', () => {
-    expect(departure.type.toString()).toBe('Departure!');
+    expect(fields.departure.type.toString()).toBe('Departure!');
   });
 });

@@ -1,3 +1,5 @@
+// @flow
+
 import Place from '../Place';
 
 const fields = Place.getFields();

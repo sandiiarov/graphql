@@ -1,3 +1,5 @@
+// @flow
+
 import Location from '../Location';
 
 const fields = Location.getFields();

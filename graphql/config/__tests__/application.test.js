@@ -1,3 +1,5 @@
+// @flow
+
 import config from '../application';
 
 const baseUrl = 'https://api.skypicker.com/places';

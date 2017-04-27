@@ -4,6 +4,7 @@ import { GraphQLObjectType } from 'graphql';
 
 import AllBookings from './AllBookings';
 import Booking from './Booking';
+import AllFlights from './AllFlights';
 import AllPlaces from './AllPlaces';
 
 export default new GraphQLObjectType({
@@ -12,6 +13,7 @@ export default new GraphQLObjectType({
   fields: {
     allBookings: AllBookings,
     booking: Booking,
+    allFlights: AllFlights,
     allPlaces: AllPlaces,
   },
 });
