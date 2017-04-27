@@ -4,9 +4,10 @@ import { GraphQLNonNull, GraphQLList } from 'graphql';
 import GraphQLBooking from '../types/Booking';
 import request from '../services/HttpRequest';
 import config from '../../config/application';
+import { sanitizeApiResponse } from './Booking';
 
 import type { GraphqlContextType } from '../services/GraphqlContext';
-import type { BookingType } from '../types/Booking';
+import type { BookingType } from '../Entities';
 
 export default {
   type: new GraphQLList(new GraphQLNonNull(GraphQLBooking)),
@@ -25,6 +26,8 @@ export default {
         config.restApiEndpoint.singleBooking(booking.bid, booking.auth_token),
       ));
 
-    return Promise.all(bookingPromises);
+    const allBookings = await Promise.all(bookingPromises);
+    return allBookings.map((booking): BookingType =>
+      sanitizeApiResponse(booking)); // Warning: responses from all bookings and single booking endpoints are not exactly the same
   },
 };

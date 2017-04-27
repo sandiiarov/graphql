@@ -2,37 +2,24 @@
 
 import Booking from '../Booking';
 
-describe('id field', () => {
-  const id = Booking.getFields().id;
-  it('should be non-null ID type', () => {
-    expect(id.type.toString()).toBe('ID!');
-  });
+const fields = Booking.getFields();
+
+it('Field "id" should be non-null ID type', () => {
+  expect(fields.id.type.toString()).toBe('ID!');
 });
 
-describe('databaseId field', () => {
-  const databaseId = Booking.getFields().databaseId;
-  it('should be non-null Int type', () => {
-    expect(databaseId.type.toString()).toBe('Int!');
-  });
+it('Field "databaseId" should be non-null Int type', () => {
+  expect(fields.databaseId.type.toString()).toBe('Int!');
 });
 
-describe('arrival field', () => {
-  const arrival = Booking.getFields().arrival;
-  it('should be non-null Arrival type', () => {
-    expect(arrival.type.toString()).toBe('Arrival!');
-  });
+it('Field "arrival" should be non-null Arrival type', () => {
+  expect(fields.arrival.type.toString()).toBe('Arrival!');
 });
 
-describe('departure field', () => {
-  const departure = Booking.getFields().departure;
-  it('should be non-null Departure type', () => {
-    expect(departure.type.toString()).toBe('Departure!');
-  });
+it('Field "departure" should be non-null Departure type', () => {
+  expect(fields.departure.type.toString()).toBe('Departure!');
 });
 
-describe('flights field', () => {
-  const flights = Booking.getFields().flights;
-  it('should be non-null list of non-null Flight types', () => {
-    expect(flights.type.toString()).toBe('[Flight!]!');
-  });
+it('Field "flights" should be non-null list of non-null Flight types', () => {
+  expect(fields.legs.type.toString()).toBe('[Leg!]!');
 });

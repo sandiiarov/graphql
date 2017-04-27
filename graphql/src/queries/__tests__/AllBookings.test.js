@@ -50,10 +50,10 @@ describe('departure query', () => {
 });
 
 describe('flights query', () => {
-  it('should return valid flights field', async () => {
+  it('should return valid legs field', async () => {
     const flightsQuery = `{
       allBookings {
-        flights {
+        legs {
           arrival {
             airport { city, code }
             time, localTime

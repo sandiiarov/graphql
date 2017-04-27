@@ -16,7 +16,7 @@ Object {
           "code": "LGW",
         },
       },
-      "flights": Array [
+      "legs": Array [
         Object {
           "arrival": Object {
             "airport": Object {

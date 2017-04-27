@@ -19,7 +19,7 @@ describe('single booking query', () => {
         departure {
           airport { city, code }
         }
-        flights {
+        legs {
           arrival {
             airport { city, code }
           }
