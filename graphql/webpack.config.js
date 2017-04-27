@@ -20,7 +20,7 @@ module.exports = {
         query: {
           babelrc: true,
         },
-        include: path.join(__dirname, 'src'),
+        include: [path.join(__dirname, 'config'), path.join(__dirname, 'src')],
       },
       {
         test: /\.json$/,
