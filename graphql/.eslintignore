@@ -1,5 +1,6 @@
 # /node_modules/* and /bower_components/* are ignored by default
 
+config/stub/*
 coverage/*
 dist/*
 flow-typed/*
