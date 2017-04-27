@@ -9,14 +9,20 @@ const mocksMap = {
   [config.restApiEndpoint.allPlaces()]: require('./data/AllPlaces.json'),
   [config.restApiEndpoint.allPlaces({ term: 'nyt' })]: require('./data/AllPlaces.search.json'),
   [config.restApiEndpoint.allPlaces({ term: 'unknown place' })]: [], // empty array
+  [config.restApiEndpoint.allFlights({
+    flyFrom: 'PRG',
+    to: 'MEX',
+    dateFrom: '08/08/2017',
+    dateTo: '08/09/2017',
+  })]: require('./data/AllFlights.json'),
 };
 /* eslint-enable */
 
-export default function request(relativeApiUrl: string): Promise<string> {
-  if (mocksMap[relativeApiUrl] !== undefined) {
+export default function request(absoluteApiUrl: string): Promise<string> {
+  if (mocksMap[absoluteApiUrl] !== undefined) {
     return new Promise(resolve => {
-      resolve(mocksMap[relativeApiUrl]);
+      resolve(mocksMap[absoluteApiUrl]);
     });
   }
-  throw new Error(`Data mock not found for path: ${relativeApiUrl}`);
+  throw new Error(`Data mock not found for path: ${absoluteApiUrl}`);
 }
