@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`all places query should return array of places 1`] = `
+Object {
+  "data": Object {
+    "allPlaces": Array [
+      Object {
+        "id": "cGxhY2U6YWwtaG9jaWVtYQ==",
+        "location": Object {
+          "latitude": 35.2493,
+          "longitude": -3.93711,
+        },
+        "name": "Al Hociema",
+        "numberOfAirports": 1,
+        "population": 1234,
+      },
+      Object {
+        "id": "cGxhY2U6YWwtYWhzYQ==",
+        "location": Object {
+          "latitude": 25.28531,
+          "longitude": 49.48519,
+        },
+        "name": "Al-Ahsa",
+        "numberOfAirports": 2,
+        "population": null,
+      },
+      Object {
+        "id": "cGxhY2U6YWwtam91Zg==",
+        "location": Object {
+          "latitude": null,
+          "longitude": null,
+        },
+        "name": "Al-Jouf",
+        "numberOfAirports": 1,
+        "population": null,
+      },
+    ],
+  },
+}
+`;
