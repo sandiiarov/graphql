@@ -4,9 +4,10 @@ import { GraphQLNonNull, GraphQLString } from 'graphql';
 import request from '../services/HttpRequest';
 import config from '../../config/application';
 import fetch from 'node-fetch';
+import GraphQLLogin from '../types/Login';
 
 export default {
-  type: new GraphQLNonNull(GraphQLString),
+  type: new GraphQLNonNull(GraphQLLogin),
   args: {
     email: {
       type: new GraphQLNonNull(GraphQLString),
@@ -29,7 +30,6 @@ export default {
       headers,
       method: 'POST',
     });
-    const data = await res.json();
-    return data.token;
+    return await res.json();
   },
 };
