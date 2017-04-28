@@ -1,9 +1,8 @@
 // @flow
 
 import { GraphQLNonNull, GraphQLString } from 'graphql';
-import request from '../services/HttpRequest';
-import config from '../../config/application';
 import fetch from 'node-fetch';
+import config from '../../config/application';
 import GraphQLLogin from '../types/Login';
 
 export default {
@@ -30,6 +29,9 @@ export default {
       headers,
       method: 'POST',
     });
-    return await res.json();
+    const data = await res.json();
+    data.userId = data.user_id;
+    delete data.user_id;
+    return data;
   },
 };

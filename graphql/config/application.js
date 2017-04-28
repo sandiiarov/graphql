@@ -22,7 +22,7 @@ export default {
 
 function queryWithParameters(
   absoluteUrl: string,
-  queryParameters: null | Object = null
+  queryParameters: null | Object = null,
 ) {
   const urlObject = url.parse(absoluteUrl, true);
   if (queryParameters !== null) {
