@@ -4,7 +4,7 @@ import { GraphQLObjectType, GraphQLNonNull, GraphQLString } from 'graphql';
 
 export type LoginType = {
   token: string,
-  user_id: string,
+  userId: string,
 };
 
 export default new GraphQLObjectType({
@@ -17,7 +17,7 @@ export default new GraphQLObjectType({
 
     userId: {
       type: new GraphQLNonNull(GraphQLString),
-      resolve: ({ user_id }: LoginType): string => user_id,
+      resolve: ({ userId }: LoginType): string => userId,
     },
   },
 });
