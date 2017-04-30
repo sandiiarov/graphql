@@ -1,6 +1,6 @@
 // @flow
 
-import request from '../HttpRequest';
+import request, { post } from '../HttpRequest';
 
 jest.mock('node-fetch');
 
@@ -44,5 +44,21 @@ describe('network request in production', () => {
         'Proxied error 500: Status Text (https://path/to/api?status=500)',
       );
     }
+  });
+});
+
+describe('POST request', () => {
+  it('should throw exception in test environment', async () => {
+    // waiting for Jest v20 to support async expect().toThrow()
+    // https://github.com/facebook/jest/pull/3068
+    let message;
+    try {
+      await post('https://path/to/api', {});
+    } catch (error) {
+      message = error.message;
+    }
+    expect(message).toBe(
+      'HttpRequest should never be called in test environment.',
+    );
   });
 });

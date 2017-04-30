@@ -1,9 +1,9 @@
 // @flow
 
 import { GraphQLNonNull, GraphQLString } from 'graphql';
-import fetch from 'node-fetch';
 import config from '../../config/application';
 import GraphQLLogin from '../types/Login';
+import { post } from '../services/HttpRequest';
 
 export default {
   type: new GraphQLNonNull(GraphQLLogin),
@@ -16,20 +16,15 @@ export default {
     },
   },
   resolve: async (_: mixed, args: Object) => {
-    const body = JSON.stringify({
+    const payload = {
       login: args.email,
       password: args.password,
-    });
+    };
     const headers = {
       Authorization: 'Basic ***REMOVED***',
-      'Content-Type': 'application/json',
     };
-    const res = await fetch(config.restApiEndpoint.login, {
-      body,
-      headers,
-      method: 'POST',
-    });
-    const data = await res.json();
+    const data = await post(config.restApiEndpoint.login, payload, headers);
+
     data.userId = data.user_id;
     delete data.user_id;
     return data;
