@@ -1,6 +1,11 @@
 // @flow
 
-import chalk from 'chalk';
+import chalkNode from 'chalk';
+
+let chalk = chalkNode;
+function forceColorSupport(enabled: boolean = true) {
+  chalk = new chalkNode.constructor({ enabled });
+}
 
 function formatMessage(message: string | Object): string | Object {
   let newMessage = message;
@@ -28,4 +33,5 @@ export default {
   info,
   warning,
   error,
+  forceColorSupport,
 };
