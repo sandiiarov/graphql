@@ -3,8 +3,8 @@
 import chalkNode from 'chalk';
 
 let chalk = chalkNode;
-function forceColorSupport(enabled: boolean = true) {
-  chalk = new chalkNode.constructor({ enabled });
+if (process.env.NODE_ENV === 'test') {
+  chalk = new chalkNode.constructor({ enabled: true });
 }
 
 function formatMessage(message: string | Object): string | Object {
@@ -33,5 +33,4 @@ export default {
   info,
   warning,
   error,
-  forceColorSupport,
 };
