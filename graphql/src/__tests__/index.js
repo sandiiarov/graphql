@@ -77,8 +77,8 @@ it('handles syntax errors correctly', async () => {
             2,
           ),
         );
-        expect(console.error).toHaveBeenCalled();
-        expect(console.error.mock.calls).toMatchSnapshot();
+        expect(console.error).toHaveBeenCalled(); // eslint-disable-line no-console
+        expect(console.error.mock.calls).toMatchSnapshot(); // eslint-disable-line no-console
         tested = true;
       },
     },

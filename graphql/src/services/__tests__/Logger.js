@@ -6,12 +6,10 @@ beforeEach(() => {
   jest.spyOn(console, 'log').mockImplementation(() => {});
   jest.spyOn(console, 'warn').mockImplementation(() => {});
   jest.spyOn(console, 'error').mockImplementation(() => {});
-  Logger.forceColorSupport(true);
 });
 
 afterEach(() => {
   jest.resetAllMocks();
-  Logger.forceColorSupport(false);
 });
 
 /* eslint-disable no-console */
