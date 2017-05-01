@@ -5,6 +5,7 @@
   },
   "extends": [
     "airbnb-base",
+    "eslint:recommended",
     "prettier",
     "prettier/react",
     "plugin:flowtype/recommended",
@@ -17,10 +18,8 @@
     "flowtype",
   ],
   "rules": {
-    "no-console": 0, # Console needed for serverless debugging.
     "no-use-before-define": 0, # I like the logic going from highlevel to lowlevel.
     "no-shadow": 0, # Shadowing is a nice language feature. Naming is hard.
-    "no-nested-ternary": 0, # Helps brevity of the code.
     "import/prefer-default-export": 0, # Keep imports of helper functions consistent.
     "prettier/prettier": [
       "error",

@@ -40,7 +40,9 @@ describe('network request in production', () => {
     try {
       await request('https://path/to/api?status=500');
     } catch (error) {
-      expect(error.message).toBe('500: Status Text');
+      expect(error.message).toBe(
+        'Proxied error 500: Status Text (https://path/to/api?status=500)',
+      );
     }
   });
 });
