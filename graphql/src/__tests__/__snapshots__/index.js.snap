@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`handles syntax errors correctly 1`] = `
+Array [
+  Array [
+    [GraphQLError: Syntax Error GraphQL request (1:2) Expected Name, found <EOF>
+
+1: {
+    ^
+],
+  ],
+]
+`;
