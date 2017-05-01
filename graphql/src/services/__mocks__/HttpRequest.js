@@ -3,12 +3,20 @@
 import config from '../../../config/application';
 
 /* eslint-disable */
-const mocksMapRegexp = {
-  [config.restApiEndpoint.allBookings + '/2707251']: require('../../queries/__tests__/__datasets__/booking-2707251.json'),
-  [config.restApiEndpoint.allBookings + '/2707251\\?simple_token=[0-9a-f-]{36}']: require('../../queries/__tests__/__datasets__/booking-2707251.json'),
-  [config.restApiEndpoint.allBookings + '/2707229\\?simple_token=[0-9a-f-]{36}']: require('../../queries/__tests__/__datasets__/booking-2707229.json'),
-  [config.restApiEndpoint.allBookings + '/2707224\\?simple_token=[0-9a-f-]{36}']: require('../../queries/__tests__/__datasets__/booking-2707224.json'),
-};
+const mocksRegexpMap = [
+  {
+    test: config.restApiEndpoint.allBookings + '/2707251(\\?simple_token=[0-9a-f-]{36})?',
+    data: require('../../queries/__tests__/__datasets__/booking-2707251.json'),
+  },
+  {
+    test: config.restApiEndpoint.allBookings + '/2707229\\?simple_token=[0-9a-f-]{36}',
+    data: require('../../queries/__tests__/__datasets__/booking-2707229.json'),
+  },
+  {
+    test: config.restApiEndpoint.allBookings + '/2707224\\?simple_token=[0-9a-f-]{36}',
+    data: require('../../queries/__tests__/__datasets__/booking-2707224.json'),
+  },
+];
 
 const mocksMap = {
   [config.restApiEndpoint.allBookings]: require('../../queries/__tests__/__datasets__/AllBookings.json'),
@@ -25,14 +33,14 @@ const mocksMap = {
 /* eslint-enable */
 
 export default function request(absoluteApiUrl: string): Promise<Object> {
-  const mockMapKeys = Object.keys(mocksMapRegexp);
-  for (let iterator = 0; iterator < mockMapKeys.length; iterator += 1) {
-    const regexp = new RegExp(`^${mockMapKeys[iterator]}$`);
-    if (regexp.test(absoluteApiUrl)) {
-      return new Promise(resolve => {
-        resolve(mocksMapRegexp[mockMapKeys[iterator]]);
-      });
-    }
+  const element = mocksRegexpMap.find(element => {
+    const regexp = new RegExp(`^${element.test}$`);
+    return regexp.test(absoluteApiUrl);
+  });
+  if (element !== undefined) {
+    return new Promise(resolve => {
+      resolve(element.data);
+    });
   }
 
   if (mocksMap[absoluteApiUrl] !== undefined) {
