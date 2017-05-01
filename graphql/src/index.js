@@ -1,9 +1,10 @@
 import graphqlHTTP from 'express-graphql';
 import Schema from './Schema';
 import { createContext } from './services/GraphqlContext';
+import Logger from './services/Logger';
 
 process.on('unhandledRejection', reason => {
-  console.error(reason);
+  Logger.error(reason);
 });
 
 exports.default = (request: Object, response: Object) => {
@@ -15,7 +16,7 @@ exports.default = (request: Object, response: Object) => {
     graphiql: true,
     context: createContext(token),
     formatError(error) {
-      console.error(error);
+      Logger.error(`${error.name}: ${error.message}`);
       return error;
     },
   })(request, response);

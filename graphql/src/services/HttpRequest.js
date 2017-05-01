@@ -2,6 +2,7 @@
 
 import url from 'url';
 import fetch from 'node-fetch';
+import Logger from '../services/Logger';
 
 const request = async function request(
   absoluteApiUrl: string,
@@ -24,7 +25,7 @@ const request = async function request(
     urlObject.query.token = token;
   }
 
-  console.log(url.format(urlObject));
+  Logger.info(url.format(urlObject));
   const response = await fetch(url.format(urlObject));
 
   if (response.status !== 200) {
