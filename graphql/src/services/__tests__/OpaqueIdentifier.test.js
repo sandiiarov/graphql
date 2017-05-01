@@ -15,6 +15,10 @@ describe('Function toGlobalId', () => {
 });
 
 describe('Function fromGlobalId', () => {
+  it('throws exception if called without parameters', () => {
+    expect(() => fromGlobalId()).toThrow('Missing required parameter.');
+  });
+
   it('returns correct value object from base64 string', () => {
     expect(fromGlobalId('dHlwZToyMQ==')).toEqual({
       id: '21',
