@@ -62,3 +62,19 @@ describe('POST request', () => {
     );
   });
 });
+
+describe('POST request', () => {
+  it('should throw exception in test environment', async () => {
+    // waiting for Jest v20 to support async expect().toThrow()
+    // https://github.com/facebook/jest/pull/3068
+    let message;
+    try {
+      await post('https://path/to/api', {});
+    } catch (error) {
+      message = error.message;
+    }
+    expect(message).toBe(
+      'HttpRequest should never be called in test environment.',
+    );
+  });
+});
