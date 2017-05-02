@@ -6,6 +6,7 @@ provider:
   runtime: nodejs6.10
   stage: dev
   region: eu-west-1 # EU (Ireland)
+  timeout: 20 # The default is 6
 
 package:
   exclude:
