@@ -4,12 +4,7 @@ import { GraphQLObjectType, GraphQLNonNull } from 'graphql';
 import { GraphQLDateTime } from 'graphql-iso-date';
 import Airport from './Airport';
 
-import type { AirportType } from './Airport';
-
-export type DepartureType = {
-  when: 0 | Object, // zero if doesn't exist
-  where: AirportType,
-};
+import type { AirportType, DepartureType } from '../Entities';
 
 export default new GraphQLObjectType({
   name: 'Departure',
@@ -21,14 +16,14 @@ export default new GraphQLObjectType({
 
     time: {
       type: GraphQLDateTime,
-      resolve: ({ when }: DepartureType): ?Date =>
-        when === 0 ? null : new Date(when.utc * 1000),
+      resolve: ({ when }: DepartureType): null | Date =>
+        when === null ? null : when.utc,
     },
 
     localTime: {
       type: GraphQLDateTime,
-      resolve: ({ when }: DepartureType): ?Date =>
-        when === 0 ? null : new Date(when.local * 1000),
+      resolve: ({ when }: DepartureType): null | Date =>
+        when === null ? null : when.local,
     },
   },
 });

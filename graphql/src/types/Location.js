@@ -2,10 +2,7 @@
 
 import { GraphQLObjectType, GraphQLFloat } from 'graphql';
 
-export type LocationType = {
-  latitude: number,
-  longitude: number,
-};
+import type { LocationType } from '../Entities';
 
 export default new GraphQLObjectType({
   name: 'Location',

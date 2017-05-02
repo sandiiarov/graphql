@@ -10,16 +10,7 @@ import {
 import { toGlobalId } from '../services/OpaqueIdentifier';
 import GraphQLLocation from './Location';
 
-import type { LocationType } from './Location';
-
-export type PlaceType = {
-  id: string,
-  lat: number,
-  lng: number,
-  numberOfAirports: number,
-  population: number,
-  value: string,
-};
+import type { LocationType, PlaceType } from '../Entities';
 
 export default new GraphQLObjectType({
   name: 'Place',
@@ -31,15 +22,12 @@ export default new GraphQLObjectType({
 
     location: {
       type: new GraphQLNonNull(GraphQLLocation),
-      resolve: (place: PlaceType): LocationType => ({
-        latitude: place.lat,
-        longitude: place.lng,
-      }),
+      resolve: ({ location }: PlaceType): LocationType => location,
     },
 
     name: {
       type: new GraphQLNonNull(GraphQLString),
-      resolve: ({ value }: PlaceType): string => value,
+      resolve: ({ name }: PlaceType): string => name,
     },
 
     numberOfAirports: {
@@ -49,7 +37,7 @@ export default new GraphQLObjectType({
 
     population: {
       type: GraphQLInt,
-      resolve: ({ population }: PlaceType): number => population,
+      resolve: ({ population }: PlaceType): null | number => population,
     },
   },
 });

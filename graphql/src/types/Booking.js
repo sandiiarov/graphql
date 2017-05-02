@@ -7,49 +7,45 @@ import {
   GraphQLNonNull,
   GraphQLObjectType,
 } from 'graphql';
-import Arrival from './Arrival';
-import Departure from './Departure';
-import Flight from './Flight';
+
+import GraphQLArrival from './Arrival';
+import GraphQLDeparture from './Departure';
+import GraphQLLeg from './Leg';
 import { toGlobalId } from '../services/OpaqueIdentifier';
 
-import type { ArrivalType } from './Arrival';
-import type { DepartureType } from './Departure';
-import type { FlightType } from './Flight';
-
-export type BookingType = {
-  arrival: ArrivalType,
-  auth_token: string,
-  bid: number,
-  departure: DepartureType,
-  flights: Array<FlightType>,
-};
+import type {
+  BookingType,
+  LegType,
+  ArrivalType,
+  DepartureType,
+} from '../Entities';
 
 export default new GraphQLObjectType({
   name: 'Booking',
   fields: {
     id: {
       type: new GraphQLNonNull(GraphQLID),
-      resolve: ({ bid }: BookingType): string => toGlobalId('booking', bid),
+      resolve: ({ id }: BookingType): string => toGlobalId('booking', id),
     },
 
     databaseId: {
       type: new GraphQLNonNull(GraphQLInt),
-      resolve: ({ bid }: BookingType): number => bid,
+      resolve: ({ id }: BookingType): number => id,
     },
 
     arrival: {
-      type: new GraphQLNonNull(Arrival),
+      type: new GraphQLNonNull(GraphQLArrival),
       resolve: ({ arrival }: BookingType): ArrivalType => arrival,
     },
 
     departure: {
-      type: new GraphQLNonNull(Departure),
+      type: new GraphQLNonNull(GraphQLDeparture),
       resolve: ({ departure }: BookingType): DepartureType => departure,
     },
 
-    flights: {
-      type: new GraphQLNonNull(new GraphQLList(new GraphQLNonNull(Flight))),
-      resolve: ({ flights }: BookingType): Array<FlightType> => flights,
+    legs: {
+      type: new GraphQLNonNull(new GraphQLList(new GraphQLNonNull(GraphQLLeg))),
+      resolve: ({ legs }: BookingType): Array<LegType> => legs,
     },
   },
 });
