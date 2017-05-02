@@ -49,7 +49,8 @@ export async function post(
 
   const body = JSON.stringify(payload);
   const headers = {
-    'Content-Type': requestHeaders['Content-Type'] || 'application/json',
+    'Content-Type': 'application/json',
+    ...requestHeaders,
   };
   const response = await fetch(absoluteApiUrl, {
     body,
