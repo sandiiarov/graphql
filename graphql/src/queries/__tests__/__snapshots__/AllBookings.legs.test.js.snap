@@ -1,84 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`arrival query should return valid arrival field 1`] = `
-Object {
-  "data": Object {
-    "allBookings": Array [
-      Object {
-        "arrival": Object {
-          "airport": Object {
-            "city": "Paris",
-            "code": "CDG",
-          },
-          "localTime": null,
-          "time": null,
-        },
-      },
-      Object {
-        "arrival": Object {
-          "airport": Object {
-            "city": "Dubai",
-            "code": "DXB",
-          },
-          "localTime": null,
-          "time": null,
-        },
-      },
-      Object {
-        "arrival": Object {
-          "airport": Object {
-            "city": "Samara",
-            "code": "KUF",
-          },
-          "localTime": null,
-          "time": null,
-        },
-      },
-    ],
-  },
-}
-`;
-
-exports[`departure query should return valid departure field 1`] = `
-Object {
-  "data": Object {
-    "allBookings": Array [
-      Object {
-        "departure": Object {
-          "airport": Object {
-            "city": "London",
-            "code": "LGW",
-          },
-          "localTime": null,
-          "time": null,
-        },
-      },
-      Object {
-        "departure": Object {
-          "airport": Object {
-            "city": "London",
-            "code": "STN",
-          },
-          "localTime": null,
-          "time": null,
-        },
-      },
-      Object {
-        "departure": Object {
-          "airport": Object {
-            "city": "Prague",
-            "code": "PRG",
-          },
-          "localTime": null,
-          "time": null,
-        },
-      },
-    ],
-  },
-}
-`;
-
-exports[`flights query should return valid legs field 1`] = `
+exports[`flights query with legs should return valid array of flight legs 1`] = `
 Object {
   "data": Object {
     "allBookings": Array [
@@ -101,6 +23,8 @@ Object {
               "localTime": "2017-09-09T21:10:00.000Z",
               "time": "2017-09-09T20:10:00.000Z",
             },
+            "id": "bGVnOjMxNTI4OTQ5OA==",
+            "recheckRequired": false,
           },
         ],
       },
@@ -123,6 +47,8 @@ Object {
               "localTime": "2017-09-09T08:05:00.000Z",
               "time": "2017-09-09T07:05:00.000Z",
             },
+            "id": "bGVnOjMxMzUyNzEyMQ==",
+            "recheckRequired": false,
           },
           Object {
             "arrival": Object {
@@ -141,6 +67,8 @@ Object {
               "localTime": "2017-09-09T15:00:00.000Z",
               "time": "2017-09-09T13:00:00.000Z",
             },
+            "id": "bGVnOlNQOTkwMzg0XzE0Nzc3MDk=",
+            "recheckRequired": true,
           },
           Object {
             "arrival": Object {
@@ -159,6 +87,8 @@ Object {
               "localTime": "2017-09-09T19:50:00.000Z",
               "time": "2017-09-09T16:50:00.000Z",
             },
+            "id": "bGVnOlNQOTkwMzg0XzE0Nzc3MTA=",
+            "recheckRequired": false,
           },
         ],
       },
@@ -181,29 +111,10 @@ Object {
               "localTime": "2017-08-18T22:05:00.000Z",
               "time": "2017-08-18T20:05:00.000Z",
             },
+            "id": "bGVnOlNQOTkwMzc5XzE0Nzc3MDI=",
+            "recheckRequired": false,
           },
         ],
-      },
-    ],
-  },
-}
-`;
-
-exports[`id query should return IDs of bookings 1`] = `
-Object {
-  "data": Object {
-    "allBookings": Array [
-      Object {
-        "databaseId": 2707251,
-        "id": "Ym9va2luZzoyNzA3MjUx",
-      },
-      Object {
-        "databaseId": 2707229,
-        "id": "Ym9va2luZzoyNzA3MjI5",
-      },
-      Object {
-        "databaseId": 2707224,
-        "id": "Ym9va2luZzoyNzA3MjI0",
       },
     ],
   },

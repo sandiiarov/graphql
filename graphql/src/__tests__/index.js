@@ -25,17 +25,13 @@ it('should return response from API', async () => {
       setHeader: () => {}, // just a mock
       end: data => {
         expect(data).toEqual(
-          JSON.stringify(
-            {
-              data: {
-                __type: {
-                  kind: 'OBJECT',
-                },
+          JSON.stringify({
+            data: {
+              __type: {
+                kind: 'OBJECT',
               },
             },
-            null,
-            2,
-          ),
+          }),
         );
         tested = true;
       },
@@ -59,23 +55,19 @@ it('handles syntax errors correctly', async () => {
       setHeader: () => {}, // just a mock
       end: data => {
         expect(data).toEqual(
-          JSON.stringify(
-            {
-              errors: [
-                {
-                  message: 'Syntax Error GraphQL request (1:2) Expected Name, found <EOF>\n\n1: {\n    ^\n',
-                  locations: [
-                    {
-                      line: 1,
-                      column: 2,
-                    },
-                  ],
-                },
-              ],
-            },
-            null,
-            2,
-          ),
+          JSON.stringify({
+            errors: [
+              {
+                message: 'Syntax Error GraphQL request (1:2) Expected Name, found <EOF>\n\n1: {\n    ^\n',
+                locations: [
+                  {
+                    line: 1,
+                    column: 2,
+                  },
+                ],
+              },
+            ],
+          }),
         );
         expect(console.error).toHaveBeenCalled(); // eslint-disable-line no-console
         expect(console.error.mock.calls).toMatchSnapshot(); // eslint-disable-line no-console

@@ -20,3 +20,15 @@ describe('time fields returns nullable DateTime types', () => {
     expect(departureFields.time.type.toString()).toBe('DateTime');
   });
 });
+
+describe('time fields are able to handle null input values', () => {
+  const departureFields = Departure.getFields();
+
+  it('for local time', () => {
+    expect(departureFields.localTime.resolve({ when: null })).toBe(null);
+  });
+
+  it('for global time', () => {
+    expect(departureFields.time.resolve({ when: null })).toBe(null);
+  });
+});

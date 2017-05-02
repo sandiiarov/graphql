@@ -14,7 +14,7 @@ exports.default = (request: Object, response: Object) => {
 
   return graphqlHTTP({
     schema: Schema,
-    pretty: true,
+    pretty: false,
     graphiql: true,
     context: createContext(token),
     formatError(error) {

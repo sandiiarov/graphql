@@ -2,10 +2,7 @@
 
 import { GraphQLObjectType, GraphQLNonNull, GraphQLString } from 'graphql';
 
-export type AirportType = {
-  code: string,
-  name: string,
-};
+import type { AirportType } from '../Entities';
 
 export default new GraphQLObjectType({
   name: 'Airport',
