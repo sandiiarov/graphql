@@ -22,11 +22,9 @@ it('prints info message', () => {
 });
 
 it('prints multiline info message', () => {
-  Logger.info(
-    `multiline
+  Logger.info(`multiline
 info
-message`,
-  );
+message`);
 
   expect(console.log).toHaveBeenCalled();
   expect(console.log.mock.calls).toMatchSnapshot();
