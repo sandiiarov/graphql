@@ -1,12 +1,12 @@
 // @flow
 
 import graphqlHTTP from 'express-graphql';
+import cors from 'micro-cors';
+import type { IncomingMessage, ServerResponse } from 'http';
+
 import Schema from './Schema';
 import { createContext } from './services/GraphqlContext';
 import Logger from './services/Logger';
-import cors from 'micro-cors';
-
-import type { IncomingMessage, ServerResponse } from 'http';
 
 process.on('unhandledRejection', reason => {
   Logger.error(reason);
