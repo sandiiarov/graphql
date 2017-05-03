@@ -24,10 +24,12 @@ export default {
     const bookingPromises = response.map((booking): Promise<BookingType> =>
       request(
         config.restApiEndpoint.singleBooking(booking.bid, booking.auth_token),
-      ));
+      ),
+    );
 
     const allBookings = await Promise.all(bookingPromises);
-    return allBookings.map((booking): BookingType =>
-      sanitizeApiResponse(booking)); // Warning: responses from all bookings and single booking endpoints are not exactly the same
+    return allBookings.map(
+      (booking): BookingType => sanitizeApiResponse(booking), // Warning: responses from all bookings and single booking endpoints are not exactly the same
+    );
   },
 };
