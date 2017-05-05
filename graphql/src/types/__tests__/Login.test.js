@@ -2,16 +2,12 @@
 
 import Login from '../Login';
 
-describe('token field', () => {
-  const token = Login.getFields().token;
-  it('should be non-null string', () => {
-    expect(token.type.toString()).toBe('String!');
-  });
+const fields = Login.getFields();
+
+it('Field "token" should be non-null string', () => {
+  expect(fields.token.type.toString()).toBe('String!');
 });
 
-describe('userId field', () => {
-  const userId = Login.getFields().userId;
-  it('should be non-null string', () => {
-    expect(userId.type.toString()).toBe('String!');
-  });
+it('Field "userId" should be non-null string', () => {
+  expect(fields.userId.type.toString()).toBe('ID!');
 });
