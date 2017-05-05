@@ -25,6 +25,7 @@
     "flow"
   ],
   "plugins": [
-    "fast-async"
+    "fast-async",
+    "transform-object-rest-spread"
   ]
 }

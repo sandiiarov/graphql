@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GET request in production resolves URL with token 1`] = `
+Object {
+  "options": Object {
+    "method": "GET",
+  },
+  "url": "https://path/to/api?token=t%2Fok%22en",
+}
+`;
+
+exports[`GET request in production resolves URL without token 1`] = `
+Object {
+  "options": Object {
+    "method": "GET",
+  },
+  "url": "https://path/to/api",
+}
+`;
+
+exports[`POST request in production adds default content type header 1`] = `
+Object {
+  "options": Object {
+    "body": "{}",
+    "headers": Object {
+      "Content-Type": "application/json",
+    },
+    "method": "POST",
+  },
+  "url": "https://path/to/api",
+}
+`;
+
+exports[`POST request in production stringify payload 1`] = `
+Object {
+  "options": Object {
+    "body": "{\\"email\\":\\"john@example.com\\",\\"password\\":123456}",
+    "headers": Object {
+      "Content-Type": "application/json",
+    },
+    "method": "POST",
+  },
+  "url": "https://path/to/api",
+}
+`;
+
+exports[`POST request in production supports custom content type header 1`] = `
+Object {
+  "options": Object {
+    "body": "{}",
+    "headers": Object {
+      "Content-Type": "application/soap+xml",
+    },
+    "method": "POST",
+  },
+  "url": "https://path/to/api",
+}
+`;
+
+exports[`POST request in production supports custom headers 1`] = `
+Object {
+  "options": Object {
+    "body": "{}",
+    "headers": Object {
+      "Content-Type": "application/soap+xml",
+      "X-Custom-A": "Value A",
+      "X-Custom-B": "Value B",
+    },
+    "method": "POST",
+  },
+  "url": "https://path/to/api",
+}
+`;

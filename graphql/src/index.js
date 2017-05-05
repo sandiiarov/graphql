@@ -1,6 +1,9 @@
 // @flow
 
 import graphqlHTTP from 'express-graphql';
+import cors from 'micro-cors';
+import type { IncomingMessage, ServerResponse } from 'http';
+
 import Schema from './Schema';
 import { createContext } from './services/GraphqlContext';
 import Logger from './services/Logger';
@@ -9,7 +12,7 @@ process.on('unhandledRejection', reason => {
   Logger.error(reason);
 });
 
-exports.default = (request: Object, response: Object) => {
+const handler = (request: IncomingMessage, response: ServerResponse) => {
   const token = request.headers.authorization || null;
 
   return graphqlHTTP({
@@ -23,3 +26,5 @@ exports.default = (request: Object, response: Object) => {
     },
   })(request, response);
 };
+
+exports.default = cors({ allowMethods: ['GET', 'POST'] })(handler);

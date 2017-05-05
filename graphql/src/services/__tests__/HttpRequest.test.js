@@ -1,6 +1,6 @@
 // @flow
 
-import request from '../HttpRequest';
+import request, { post } from '../HttpRequest';
 
 jest.mock('node-fetch');
 
@@ -8,41 +8,119 @@ afterEach(() => {
   process.env.NODE_ENV = 'test';
 });
 
-describe('network request', () => {
+describe('GET request', () => {
   it('should throw exception in test environment', async () => {
+    let message;
     try {
+      // waiting for Jest v20 to support async expect().toThrow()
+      // https://github.com/facebook/jest/pull/3068
       await request('https://path/to/api');
     } catch (error) {
-      expect(error.message).toBe(
-        'HttpRequest should never be called in test environment.',
-      );
+      message = error.message;
     }
+    expect(message).toBe(
+      'HttpRequest should never be called in test environment.',
+    );
   });
 });
 
-describe('network request in production', () => {
-  it('resolves URL with token', async () => {
+describe('GET request in production', () => {
+  beforeEach(() => {
     process.env.NODE_ENV = 'production';
-    expect(await request('https://path/to/api', 't/ok"en')).toEqual({
-      url: 'https://path/to/api?token=t%2Fok%22en',
-    });
+  });
+
+  it('resolves URL with token', async () => {
+    expect(await request('https://path/to/api', 't/ok"en')).toMatchSnapshot();
   });
 
   it('resolves URL without token', async () => {
-    process.env.NODE_ENV = 'production';
-    expect(await request('https://path/to/api')).toEqual({
-      url: 'https://path/to/api',
-    });
+    expect(await request('https://path/to/api')).toMatchSnapshot();
   });
 
   it('throws exception during invalid return status code', async () => {
-    process.env.NODE_ENV = 'production';
+    let message;
     try {
+      // waiting for Jest v20 to support async expect().toThrow()
+      // https://github.com/facebook/jest/pull/3068
       await request('https://path/to/api?status=500');
     } catch (error) {
-      expect(error.message).toBe(
-        'Proxied error 500: Status Text (https://path/to/api?status=500)',
-      );
+      message = error.message;
     }
+    expect(message).toBe(
+      'Proxied error 500: Status Text (https://path/to/api?status=500)',
+    );
+  });
+});
+
+describe('POST request', () => {
+  it('should throw exception in test environment', async () => {
+    let message;
+    try {
+      // waiting for Jest v20 to support async expect().toThrow()
+      // https://github.com/facebook/jest/pull/3068
+      await post('https://path/to/api', {});
+    } catch (error) {
+      message = error.message;
+    }
+    expect(message).toBe(
+      'HttpRequest should never be called in test environment.',
+    );
+  });
+});
+
+describe('POST request in production', () => {
+  beforeEach(() => {
+    process.env.NODE_ENV = 'production';
+  });
+
+  it('throws exception during invalid return status code', async () => {
+    let message;
+    try {
+      // waiting for Jest v20 to support async expect().toThrow()
+      // https://github.com/facebook/jest/pull/3068
+      await request('https://path/to/api?status=500');
+    } catch (error) {
+      message = error.message;
+    }
+    expect(message).toBe(
+      'Proxied error 500: Status Text (https://path/to/api?status=500)',
+    );
+  });
+
+  it('adds default content type header', async () => {
+    expect(await post('https://path/to/api', {})).toMatchSnapshot();
+  });
+
+  it('supports custom content type header', async () => {
+    expect(
+      await post(
+        'https://path/to/api',
+        {},
+        { 'Content-Type': 'application/soap+xml' },
+      ),
+    ).toMatchSnapshot();
+  });
+
+  it('supports custom headers', async () => {
+    expect(
+      await post(
+        'https://path/to/api',
+        {},
+        {
+          'Content-Type': 'application/soap+xml',
+          'X-Custom-A': 'Value A',
+          'X-Custom-B': 'Value B',
+        },
+      ),
+    ).toMatchSnapshot();
+  });
+
+  it('stringify payload', async () => {
+    expect(
+      await post('https://path/to/api', {
+        email: 'john@example.com',
+        password: 123456,
+      }),
+    ).toMatchSnapshot();
   });
 });
