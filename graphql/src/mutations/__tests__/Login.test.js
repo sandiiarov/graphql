@@ -5,8 +5,8 @@ import Login from '../Login';
 
 jest.mock('../../services/HttpRequest');
 
-describe('single booking query', () => {
-  it('should be of Booking type', () => {
+describe('login query', () => {
+  it('should be of Login type', () => {
     expect(Login.type.toString()).toBe('Login!');
   });
 
