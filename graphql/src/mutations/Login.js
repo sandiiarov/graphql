@@ -4,6 +4,7 @@ import { GraphQLNonNull, GraphQLString } from 'graphql';
 import config from '../../config/application';
 import GraphQLLogin from '../types/Login';
 import { post } from '../services/HttpRequest';
+import type { LoginType } from '../Entities';
 
 export default {
   type: new GraphQLNonNull(GraphQLLogin),
@@ -15,7 +16,7 @@ export default {
       type: new GraphQLNonNull(GraphQLString),
     },
   },
-  resolve: async (_: mixed, args: Object) => {
+  resolve: async (_: mixed, args: Object): Promise<LoginType> => {
     const payload = {
       login: args.email,
       password: args.password,

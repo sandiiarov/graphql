@@ -1,11 +1,7 @@
 // @flow
 
 import { GraphQLObjectType, GraphQLNonNull, GraphQLString } from 'graphql';
-
-export type LoginType = {
-  token: string,
-  userId: string,
-};
+import type { LoginType } from '../Entities';
 
 export default new GraphQLObjectType({
   name: 'Login',

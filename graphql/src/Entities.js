@@ -59,3 +59,8 @@ export type PlaceType = {
   population: null | number,
   name: string,
 };
+
+export type LoginType = {
+  token: string,
+  userId: string,
+};
