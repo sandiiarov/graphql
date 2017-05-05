@@ -21,7 +21,7 @@ export default {
       password: args.password,
     };
     const headers = {
-      Authorization: 'Basic ***REMOVED***',
+      Authorization: `Basic ${config.auth.basicToken}`,
     };
     const data = await post(config.restApiEndpoint.login, payload, headers);
 
