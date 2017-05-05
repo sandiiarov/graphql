@@ -12,10 +12,7 @@ process.on('unhandledRejection', reason => {
   Logger.error(reason);
 });
 
-const handler = (
-  request: IncomingMessage | Object, // Object because of unit tests
-  response: ServerResponse | Object,
-) => {
+const handler = (request: IncomingMessage, response: ServerResponse) => {
   const token = request.headers.authorization || null;
 
   return graphqlHTTP({

@@ -50,3 +50,12 @@ export default function request(absoluteApiUrl: string): Promise<Object> {
   }
   throw new Error(`Data mock not found for path: ${absoluteApiUrl}`);
 }
+
+export async function post(): Promise<Object> { // it now supports only login query
+  return new Promise(resolve => {
+    resolve({
+      user_id: 21,
+      token: 't0k3n',
+    });
+  });
+}

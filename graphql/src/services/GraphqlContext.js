@@ -1,10 +1,10 @@
 // @flow
 
 export type GraphqlContextType = {
-  apiToken: ?string,
+  apiToken: null | string,
 };
 
-export function createContext(token: ?string): GraphqlContextType {
+export function createContext(token: null | string): GraphqlContextType {
   return {
     apiToken: token,
   };
