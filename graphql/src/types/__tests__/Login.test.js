@@ -11,3 +11,7 @@ it('Field "token" should be non-null string', () => {
 it('Field "userId" should be non-null string', () => {
   expect(fields.userId.type.toString()).toBe('ID!');
 });
+
+it('Field "identity" should be Identity', () => {
+  expect(fields.identity.type.toString()).toBe('Identity');
+});

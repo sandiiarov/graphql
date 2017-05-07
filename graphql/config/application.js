@@ -17,9 +17,11 @@ export default {
     allPlaces: (queryParameters: null | Object = null) =>
       queryWithParameters('https://api.skypicker.com/places', queryParameters),
     login: 'https://auth.skypicker.com/v1/user.login',
+    identity: 'https://auth.skypicker.com/v1/user.get',
   },
   auth: {
     basicToken: '***REMOVED***',
+    digest: '***REMOVED***',
   },
 };
 

@@ -64,3 +64,12 @@ export type LoginType = {
   token: string,
   userId: string,
 };
+
+export type IdentityType = {
+  email: string,
+  emailVerified: boolean,
+  firstName: string,
+  lastName: string,
+  login: string,
+  userId: string,
+};

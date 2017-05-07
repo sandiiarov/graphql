@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should have fields defined 1`] = `
+Object {
+  "databaseId": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "databaseId",
+    "resolve": [Function],
+    "type": "String!",
+  },
+  "email": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "email",
+    "resolve": [Function],
+    "type": "String!",
+  },
+  "emailVerified": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "emailVerified",
+    "resolve": [Function],
+    "type": "Boolean!",
+  },
+  "firstName": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "firstName",
+    "resolve": [Function],
+    "type": "String",
+  },
+  "id": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "id",
+    "resolve": [Function],
+    "type": "ID!",
+  },
+  "lastName": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "lastName",
+    "resolve": [Function],
+    "type": "String",
+  },
+  "login": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "login",
+    "resolve": [Function],
+    "type": "String",
+  },
+}
+`;
