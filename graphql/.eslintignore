@@ -1,6 +1,7 @@
 # /node_modules/* and /bower_components/* are ignored by default
 
 config/stub/*
+config/webpack.*.js
 coverage/*
 dist/*
 flow-typed/*
