@@ -13,7 +13,6 @@ package:
     - ./**
   include:
     - dist/lambda.js
-    - node_modules/**
 
 functions:
   api:
