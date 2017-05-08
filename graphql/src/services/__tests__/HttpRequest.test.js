@@ -4,7 +4,12 @@ import request, { post } from '../HttpRequest';
 
 jest.mock('node-fetch');
 
+beforeEach(() => {
+  jest.spyOn(console, 'log').mockImplementation(() => {});
+});
+
 afterEach(() => {
+  jest.resetAllMocks();
   process.env.NODE_ENV = 'test';
 });
 
