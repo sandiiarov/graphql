@@ -16,12 +16,12 @@ it('Field "id" should use opaque identifiers', () => {
   expect(fields.id.resolve({ id: 1 })).toBe('bGVnOjE='); // leg:1
 });
 
-it('Field "arrival" should be non-null Arrival type', () => {
-  expect(fields.arrival.type.toString()).toBe('Arrival!');
+it('Field "arrival" should be non-null RouteStop type', () => {
+  expect(fields.arrival.type.toString()).toBe('RouteStop!');
 });
 
-it('Field "Departure" should be non-null ID type', () => {
-  expect(fields.departure.type.toString()).toBe('Departure!');
+it('Field "Departure" should be non-null RouteStop type', () => {
+  expect(fields.departure.type.toString()).toBe('RouteStop!');
 });
 
 it('Field "recheckRequired" should be non-null Boolean type', () => {

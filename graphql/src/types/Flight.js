@@ -1,8 +1,7 @@
 // @flow
 
 import { GraphQLObjectType, GraphQLNonNull, GraphQLList } from 'graphql';
-import GraphQLArrival from './Arrival';
-import GraphQLDeparture from './Departure';
+import GraphQLRouteStop from './RouteStop';
 import GraphQLLeg from './Leg';
 
 import type {
@@ -16,12 +15,12 @@ export default new GraphQLObjectType({
   name: 'Flight',
   fields: {
     arrival: {
-      type: new GraphQLNonNull(GraphQLArrival),
+      type: new GraphQLNonNull(GraphQLRouteStop),
       resolve: ({ arrival }: FlightType): ArrivalType => arrival,
     },
 
     departure: {
-      type: new GraphQLNonNull(GraphQLDeparture),
+      type: new GraphQLNonNull(GraphQLRouteStop),
       resolve: ({ departure }: FlightType): DepartureType => departure,
     },
 

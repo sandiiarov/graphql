@@ -7,7 +7,7 @@ import Airport from './Airport';
 import type { AirportType, ArrivalType } from '../Entities';
 
 export default new GraphQLObjectType({
-  name: 'Arrival',
+  name: 'RouteStop',
   fields: {
     airport: {
       type: new GraphQLNonNull(Airport),
