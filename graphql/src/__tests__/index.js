@@ -11,7 +11,8 @@ afterEach(() => {
 });
 
 it('should return response from API', async () => {
-  let tested = false;
+  expect.assertions(1);
+
   await index.default(
     {
       method: 'POST',
@@ -33,15 +34,14 @@ it('should return response from API', async () => {
             },
           }),
         );
-        tested = true;
       },
     },
   );
-  expect(tested).toBe(true);
 });
 
 it('handles syntax errors correctly', async () => {
-  let tested = false;
+  expect.assertions(3);
+
   await index.default(
     {
       method: 'POST',
@@ -71,9 +71,7 @@ it('handles syntax errors correctly', async () => {
         );
         expect(console.error).toHaveBeenCalled(); // eslint-disable-line no-console
         expect(console.error.mock.calls).toMatchSnapshot(); // eslint-disable-line no-console
-        tested = true;
       },
     },
   );
-  expect(tested).toBe(true);
 });

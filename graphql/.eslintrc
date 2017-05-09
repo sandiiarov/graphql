@@ -9,10 +9,12 @@
     "prettier",
     "prettier/react",
     "plugin:flowtype/recommended",
+    "plugin:jest/recommended",
   ],
   "parser": "babel-eslint",
   "plugins": [
     "import",
+    "jest",
     "prettier",
     "promise",
     "flowtype",

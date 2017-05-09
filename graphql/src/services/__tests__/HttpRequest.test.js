@@ -16,16 +16,8 @@ afterEach(() => {
 
 describe('GET request', () => {
   it('should throw exception in test environment', async () => {
-    let message;
-    try {
-      // waiting for Jest v20 to support async expect().toThrow()
-      // https://github.com/facebook/jest/pull/3068
-      await request('https://path/to/api');
-    } catch (error) {
-      message = error.message;
-    }
-    expect(message).toBe(
-      'HttpRequest should never be called in test environment.',
+    await expect(request('https://path/to/api')).rejects.toEqual(
+      new Error('HttpRequest should never be called in test environment.'),
     );
   });
 });
@@ -47,8 +39,6 @@ describe('GET request in production', () => {
     expect.assertions(4);
 
     try {
-      // waiting for Jest v20 to support async expect().toThrow()
-      // https://github.com/facebook/jest/pull/3068
       await request('https://path/to/api?status=500');
     } catch (error) {
       expect(error).toBeInstanceOf(ProxiedError);
@@ -61,16 +51,8 @@ describe('GET request in production', () => {
 
 describe('POST request', () => {
   it('should throw exception in test environment', async () => {
-    let message;
-    try {
-      // waiting for Jest v20 to support async expect().toThrow()
-      // https://github.com/facebook/jest/pull/3068
-      await post('https://path/to/api', {});
-    } catch (error) {
-      message = error.message;
-    }
-    expect(message).toBe(
-      'HttpRequest should never be called in test environment.',
+    await expect(post('https://path/to/api', {})).rejects.toEqual(
+      new Error('HttpRequest should never be called in test environment.'),
     );
   });
 });
@@ -84,8 +66,6 @@ describe('POST request in production', () => {
     expect.assertions(4);
 
     try {
-      // waiting for Jest v20 to support async expect().toThrow()
-      // https://github.com/facebook/jest/pull/3068
       await request('https://path/to/api?status=500');
     } catch (error) {
       expect(error).toBeInstanceOf(ProxiedError);
