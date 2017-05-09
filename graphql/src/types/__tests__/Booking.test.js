@@ -12,12 +12,12 @@ it('Field "databaseId" should be non-null Int type', () => {
   expect(fields.databaseId.type.toString()).toBe('Int!');
 });
 
-it('Field "arrival" should be non-null Arrival type', () => {
-  expect(fields.arrival.type.toString()).toBe('Arrival!');
+it('Field "arrival" should be non-null RouteStop type', () => {
+  expect(fields.arrival.type.toString()).toBe('RouteStop!');
 });
 
-it('Field "departure" should be non-null Departure type', () => {
-  expect(fields.departure.type.toString()).toBe('Departure!');
+it('Field "departure" should be non-null RouteStop type', () => {
+  expect(fields.departure.type.toString()).toBe('RouteStop!');
 });
 
 it('Field "flights" should be non-null list of non-null Flight types', () => {

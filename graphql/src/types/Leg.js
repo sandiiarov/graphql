@@ -7,8 +7,7 @@ import {
   GraphQLBoolean,
 } from 'graphql';
 import { toGlobalId } from '../services/OpaqueIdentifier';
-import GraphQLArrival from './Arrival';
-import GraphQLDeparture from './Departure';
+import GraphQLRouteStop from './RouteStop';
 
 import type { ArrivalType, DepartureType, LegType } from '../Entities';
 
@@ -22,12 +21,12 @@ export default new GraphQLObjectType({
     },
 
     arrival: {
-      type: new GraphQLNonNull(GraphQLArrival),
+      type: new GraphQLNonNull(GraphQLRouteStop),
       resolve: ({ arrival }: LegType): ArrivalType => arrival,
     },
 
     departure: {
-      type: new GraphQLNonNull(GraphQLDeparture),
+      type: new GraphQLNonNull(GraphQLRouteStop),
       resolve: ({ departure }: LegType): DepartureType => departure,
     },
 

@@ -8,8 +8,7 @@ import {
   GraphQLObjectType,
 } from 'graphql';
 
-import GraphQLArrival from './Arrival';
-import GraphQLDeparture from './Departure';
+import GraphQLRouteStop from './RouteStop';
 import GraphQLLeg from './Leg';
 import { toGlobalId } from '../services/OpaqueIdentifier';
 
@@ -34,12 +33,12 @@ export default new GraphQLObjectType({
     },
 
     arrival: {
-      type: new GraphQLNonNull(GraphQLArrival),
+      type: new GraphQLNonNull(GraphQLRouteStop),
       resolve: ({ arrival }: BookingType): ArrivalType => arrival,
     },
 
     departure: {
-      type: new GraphQLNonNull(GraphQLDeparture),
+      type: new GraphQLNonNull(GraphQLRouteStop),
       resolve: ({ departure }: BookingType): DepartureType => departure,
     },
 
