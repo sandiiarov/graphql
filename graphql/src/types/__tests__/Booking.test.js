@@ -4,8 +4,14 @@ import Booking from '../Booking';
 
 const fields = Booking.getFields();
 
-it('Field "id" should be non-null ID type', () => {
-  expect(fields.id.type.toString()).toBe('ID!');
+describe('Field "id"', () => {
+  it('should be non-null ID type', () => {
+    expect(fields.id.type.toString()).toBe('ID!');
+  });
+
+  it('should use opaque identifier', () => {
+    expect(fields.id.resolve({ id: 1 })).toBe('Ym9va2luZzox'); // booking:1
+  });
 });
 
 it('Field "databaseId" should be non-null Int type', () => {
