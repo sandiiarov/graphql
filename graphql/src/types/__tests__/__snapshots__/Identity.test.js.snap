@@ -11,6 +11,7 @@ Object {
   },
   "email": Object {
     "args": Array [],
+    "description": "Raw input by user, use \\"login\\" if you want normalized email",
     "isDeprecated": false,
     "name": "email",
     "resolve": [Function],
@@ -46,10 +47,11 @@ Object {
   },
   "login": Object {
     "args": Array [],
+    "description": "Use this in API calls. It is email but normalized",
     "isDeprecated": false,
     "name": "login",
     "resolve": [Function],
-    "type": "String",
+    "type": "String!",
   },
 }
 `;
