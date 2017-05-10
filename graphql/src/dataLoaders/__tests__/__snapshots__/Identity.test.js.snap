@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Identity dataloader should load user 1`] = `
+Object {
+  "email": "kiwicomtester@gmail.com",
+  "emailVerified": true,
+  "firstName": "Kiwicom",
+  "lastName": "Tester",
+  "login": "kiwicomtester@gmail.com",
+  "userId": "S5TSY0NusVOsQRTyRpMe_G",
+}
+`;

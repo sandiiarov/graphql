@@ -1,16 +1,23 @@
 // @flow
 
+import DataLoader from 'dataloader';
 import { post } from '../services/HttpRequest';
 import Config from '../../config/application';
 import type { IdentityType } from '../Entities';
 
-export default function createInstance(
+export default function createInstance(accessToken?: string) {
+  return new DataLoader((ids: Array<string>) => {
+    return batchLoad(accessToken)(ids);
+  });
+}
+
+function batchLoad(
   accessToken?: string,
 ): Array<string> => Promise<Array<Object>> {
-  const token = accessToken; // otherwise Flow screams fetch could be called with undefined token
-  if (typeof token !== 'string') {
-    throw new Error('Undefined access token');
+  if (typeof accessToken !== 'string') {
+    return () => Promise.reject(new Error('Undefined access token'));
   }
+  const token = accessToken; // otherwise Flow screams fetch could be called with undefined token
   return ids => Promise.all(ids.map(userId => fetch(userId, token)));
 }
 

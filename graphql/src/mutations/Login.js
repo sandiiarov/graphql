@@ -1,11 +1,10 @@
 // @flow
 
 import { GraphQLNonNull, GraphQLString } from 'graphql';
-import DataLoader from 'dataloader';
 import { post } from '../services/HttpRequest';
 import config from '../../config/application';
 import GraphQLUser from '../types/User';
-import IdentityLoader from '../dataLoaders/Identity';
+import createIdentityLoader from '../dataLoaders/Identity';
 import type { GraphqlContextType } from '../services/GraphqlContext';
 import type { LoginType } from '../Entities';
 
@@ -34,10 +33,7 @@ export default {
     const data = await post(config.restApiEndpoint.login, payload, headers);
 
     // now we have access token, let's rewrite IdentityLoader
-    const identityLoader = new DataLoader((ids: Array<string>) => {
-      return IdentityLoader(data.token)(ids);
-    });
-    context.dataLoader.identity = identityLoader;
+    context.dataLoader.identity = createIdentityLoader(data.token);
 
     data.userId = data.user_id;
     delete data.user_id;
