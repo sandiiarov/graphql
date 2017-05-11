@@ -1,6 +1,7 @@
 // @flow
 
 import request, { post } from '../HttpRequest';
+import { ProxiedError } from '../errors/ProxiedError';
 
 jest.mock('node-fetch');
 
@@ -43,17 +44,18 @@ describe('GET request in production', () => {
   });
 
   it('throws exception during invalid return status code', async () => {
-    let message;
+    expect.assertions(4);
+
     try {
       // waiting for Jest v20 to support async expect().toThrow()
       // https://github.com/facebook/jest/pull/3068
       await request('https://path/to/api?status=500');
     } catch (error) {
-      message = error.message;
+      expect(error).toBeInstanceOf(ProxiedError);
+      expect(error.message).toBe('Status Text');
+      expect(error.originStatusCode).toBe(500);
+      expect(error.originUrl).toBe('https://path/to/api?status=500');
     }
-    expect(message).toBe(
-      'Proxied error 500: Status Text (https://path/to/api?status=500)',
-    );
   });
 });
 
@@ -79,17 +81,18 @@ describe('POST request in production', () => {
   });
 
   it('throws exception during invalid return status code', async () => {
-    let message;
+    expect.assertions(4);
+
     try {
       // waiting for Jest v20 to support async expect().toThrow()
       // https://github.com/facebook/jest/pull/3068
       await request('https://path/to/api?status=500');
     } catch (error) {
-      message = error.message;
+      expect(error).toBeInstanceOf(ProxiedError);
+      expect(error.message).toBe('Status Text');
+      expect(error.originStatusCode).toBe(500);
+      expect(error.originUrl).toBe('https://path/to/api?status=500');
     }
-    expect(message).toBe(
-      'Proxied error 500: Status Text (https://path/to/api?status=500)',
-    );
   });
 
   it('adds default content type header', async () => {

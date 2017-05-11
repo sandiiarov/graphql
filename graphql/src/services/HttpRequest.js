@@ -3,6 +3,7 @@
 import url from 'url';
 import fetch from 'node-fetch';
 import Logger from '../services/Logger';
+import { ProxiedError } from './errors/ProxiedError';
 
 export default function request(
   absoluteApiUrl: string,
@@ -56,9 +57,7 @@ async function fetchJson(
   const response = await fetch(url, reqOptions);
 
   if (response.status !== 200) {
-    throw new Error(
-      `Proxied error ${response.status}: ${response.statusText} (${url})`,
-    );
+    throw new ProxiedError(response.statusText, response.status, url);
   }
   return response.json();
 }
