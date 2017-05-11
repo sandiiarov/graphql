@@ -26,7 +26,7 @@ async function fetch(
   accessToken: string,
 ): Promise<IdentityType> {
   const payload = {
-    user: 'self',
+    user: userId,
   };
   const token = new Buffer(`${Config.auth.digest}:${accessToken}`).toString(
     'base64',
