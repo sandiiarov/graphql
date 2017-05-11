@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should have fields defined 1`] = `
+Object {
+  "identity": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "identity",
+    "resolve": [Function],
+    "type": "Identity",
+  },
+  "isLoggedIn": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "isLoggedIn",
+    "resolve": [Function],
+    "type": "Boolean!",
+  },
+  "token": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "token",
+    "resolve": [Function],
+    "type": "String!",
+  },
+}
+`;
