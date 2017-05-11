@@ -36,7 +36,7 @@ const mocksMap = {
     dateTo: '08/09/2017',
   })]: require(`../../queries/__tests__/__datasets__/AllFlights.json`),
   [config.restApiEndpoint
-    .identity]: require('../../dataloaders/__tests__/__datasets__/user.get.json'),
+    .identity]: require('../../dataLoaders/__tests__/__datasets__/user.get.json'),
   [config.restApiEndpoint.login]: {
     user_id: 21,
     token: 't0k3n',
