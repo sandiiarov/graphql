@@ -26,7 +26,7 @@ export default new GraphQLObjectType({
 
     email: {
       type: new GraphQLNonNull(GraphQLString),
-      description: 'Raw input by user, use "login" if you want normalized email',
+      description: 'Raw input by user, use "login" if you want normalized email.',
       resolve: ({ email }: IdentityType): string => email,
     },
 
@@ -47,7 +47,7 @@ export default new GraphQLObjectType({
 
     login: {
       type: new GraphQLNonNull(GraphQLString),
-      description: 'Use this in API calls. It is email but normalized',
+      description: 'Use this in API calls. It is email but normalized.',
       resolve: ({ login }: IdentityType): string => login,
     },
   },
