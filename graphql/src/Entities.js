@@ -68,8 +68,8 @@ export type LoginType = {
 export type IdentityType = {
   email: string,
   emailVerified: boolean,
-  firstName: string,
-  lastName: string,
+  firstName: null | string,
+  lastName: null | string,
   login: string,
   userId: string,
 };

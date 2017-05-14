@@ -31,6 +31,14 @@ Object {
     "resolve": [Function],
     "type": "String",
   },
+  "fullName": Object {
+    "args": Array [],
+    "description": "Concatenation of first and last name with fallback to the login field.",
+    "isDeprecated": false,
+    "name": "fullName",
+    "resolve": [Function],
+    "type": "String!",
+  },
   "id": Object {
     "args": Array [],
     "isDeprecated": false,

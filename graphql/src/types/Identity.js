@@ -37,12 +37,23 @@ export default new GraphQLObjectType({
 
     firstName: {
       type: GraphQLString,
-      resolve: ({ firstName }: IdentityType): string => firstName,
+      resolve: ({ firstName }: IdentityType) => firstName,
     },
 
     lastName: {
       type: GraphQLString,
-      resolve: ({ lastName }: IdentityType): string => lastName,
+      resolve: ({ lastName }: IdentityType) => lastName,
+    },
+
+    fullName: {
+      type: new GraphQLNonNull(GraphQLString),
+      description: 'Concatenation of first and last name with fallback to the login field.',
+      resolve: ({ firstName, lastName, login }: IdentityType): string => {
+        if (firstName === null && lastName === null) {
+          return login;
+        }
+        return [firstName, lastName].filter(word => word !== null).join(' ');
+      },
     },
 
     login: {
