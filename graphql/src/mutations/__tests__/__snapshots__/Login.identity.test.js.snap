@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`login query should return valid identity 1`] = `
+Object {
+  "data": Object {
+    "login": Object {
+      "identity": Object {
+        "databaseId": "S5TSY0NusVOsQRTyRpMe_G",
+        "email": "kiwicomtester@gmail.com",
+        "emailVerified": true,
+        "firstName": "Kiwicom",
+        "id": "aWRlbnRpdHk6UzVUU1kwTnVzVk9zUVJUeVJwTWVfRw==",
+        "lastName": "Tester",
+        "login": "kiwicomtester@gmail.com",
+      },
+    },
+  },
+}
+`;
