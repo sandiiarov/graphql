@@ -1,6 +1,6 @@
 // @flow
 
-import { executeQuery } from '../../services/TestingTools';
+import { graphql } from '../../services/TestingTools';
 import AllFlights from '../AllFlights';
 
 describe('all flights query', () => {
@@ -36,9 +36,7 @@ describe('all flights query', () => {
         dateTo: '2017-09-08',
       },
     };
-    expect(
-      await executeQuery(allFlightsSearchQuery, variables),
-    ).toMatchSnapshot();
+    expect(await graphql(allFlightsSearchQuery, variables)).toMatchSnapshot();
   });
 
   it('should return error if invalid date format is passed', async () => {
@@ -58,9 +56,7 @@ describe('all flights query', () => {
         dateTo: '2017-09-08',
       },
     };
-    expect(
-      await executeQuery(allFlightsSearchQuery, variables),
-    ).toMatchSnapshot();
+    expect(await graphql(allFlightsSearchQuery, variables)).toMatchSnapshot();
   });
 
   it('should return error if dateFrom is after dateTo', async () => {
@@ -80,8 +76,6 @@ describe('all flights query', () => {
         dateTo: '2017-09-08',
       },
     };
-    expect(
-      await executeQuery(allFlightsSearchQuery, variables),
-    ).toMatchSnapshot();
+    expect(await graphql(allFlightsSearchQuery, variables)).toMatchSnapshot();
   });
 });

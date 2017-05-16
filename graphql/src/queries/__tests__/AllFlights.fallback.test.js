@@ -1,6 +1,6 @@
 // @flow
 
-import { executeQuery } from '../../services/TestingTools';
+import { graphql } from '../../services/TestingTools';
 
 describe('all flights location fallback', () => {
   it('should return legs data by using locations fallback', async () => {
@@ -23,8 +23,6 @@ describe('all flights location fallback', () => {
         dateTo: '2017-09-08',
       },
     };
-    expect(
-      await executeQuery(allFlightsSearchQuery, variables),
-    ).toMatchSnapshot();
+    expect(await graphql(allFlightsSearchQuery, variables)).toMatchSnapshot();
   });
 });

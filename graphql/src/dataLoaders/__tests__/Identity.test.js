@@ -1,8 +1,16 @@
 // @flow
 
+import { RestApiMock } from '../../services/TestingTools';
 import createInstance from '../Identity';
+import config from '../../../config/application';
+import userMockData
+  from '../../dataLoaders/__tests__/__datasets__/user.get.json';
 
-jest.mock('../../services/HttpRequest');
+beforeEach(() => {
+  RestApiMock.onPost(config.restApiEndpoint.identity).replyWithData(
+    userMockData,
+  );
+});
 
 describe('Identity dataloader', () => {
   it('should throw error without access token', async () => {

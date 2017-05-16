@@ -40,7 +40,9 @@ async function fetchJson(
   options?: Object = {},
 ): Promise<Object> {
   if (process.env.NODE_ENV === 'test') {
-    throw new Error('HttpRequest should never be called in test environment.');
+    throw new Error(
+      `HttpRequest should never be called in test environment. Have you forgotten to mock "${url}" with fake data response?`,
+    );
   }
   if (typeof url !== 'string') {
     throw new Error(

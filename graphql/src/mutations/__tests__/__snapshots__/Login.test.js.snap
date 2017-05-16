@@ -4,6 +4,9 @@ exports[`login query should return valid fields 1`] = `
 Object {
   "data": Object {
     "login": Object {
+      "identity": Object {
+        "databaseId": "S5TSY0NusVOsQRTyRpMe_G",
+      },
       "isLoggedIn": true,
       "token": "t0k3n",
     },

@@ -5,6 +5,8 @@ import { post } from '../services/HttpRequest';
 import config from '../../config/application';
 import GraphQLUser from '../types/User';
 import { createContext } from '../services/GraphqlContext';
+import { ProxiedError } from '../services/errors/ProxiedError';
+
 import type { GraphqlContextType } from '../services/GraphqlContext';
 import type { LoginType } from '../Entities';
 
@@ -32,12 +34,21 @@ export default {
     };
     const data = await post(config.restApiEndpoint.login, payload, headers);
 
+    if (data.error_code !== undefined) {
+      throw new ProxiedError(
+        data.message ? data.message : 'Login has not been successful.',
+        data.error_code,
+        config.restApiEndpoint.login,
+      );
+    }
+
     // now we have access token, let's rewrite IdentityLoader
     const authContext = createContext(data.token);
     context.dataLoader = authContext.dataLoader;
 
-    data.userId = data.user_id;
-    delete data.user_id;
-    return data;
+    return {
+      token: data.token,
+      userId: data.user_id,
+    };
   },
 };

@@ -9,8 +9,13 @@
           "env",
           {
             "modules": "commonjs", // https://facebook.github.io/jest/docs/webpack.html#using-with-webpack-2
+            "exclude": [
+              "transform-regenerator",
+              "transform-async-to-generator"
+            ]
           }
-        ]
+        ],
+        "flow"
       ]
     }
   },

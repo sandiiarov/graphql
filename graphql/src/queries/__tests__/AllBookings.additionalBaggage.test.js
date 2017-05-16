@@ -1,6 +1,6 @@
 // @flow
 
-import { executeQuery } from '../../services/TestingTools';
+import { graphql } from '../../services/TestingTools';
 
 describe('flights query with legs', () => {
   it('should return valid array of flight legs', async () => {
@@ -18,6 +18,6 @@ describe('flights query with legs', () => {
         }
       }
     }`;
-    expect(await executeQuery(additionalBaggageQuery)).toMatchSnapshot();
+    expect(await graphql(additionalBaggageQuery)).toMatchSnapshot();
   });
 });
