@@ -2,7 +2,11 @@
 
 import { ProxiedError } from '../ProxiedError';
 
-const error = new ProxiedError('custom message', 123, 'http://a.b');
+let error;
+
+beforeEach(() => {
+  error = new ProxiedError('custom message', '123', 'http://a.b');
+});
 
 it('is throwable', () => {
   expect(() => {
