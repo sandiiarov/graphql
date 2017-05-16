@@ -7,6 +7,7 @@ jest.mock('node-fetch');
 
 beforeEach(() => {
   jest.spyOn(console, 'log').mockImplementation(() => {});
+  process.env.NODE_ENV = 'production';
 });
 
 afterEach(() => {
@@ -16,6 +17,7 @@ afterEach(() => {
 
 describe('GET request', () => {
   it('should throw exception in test environment', async () => {
+    process.env.NODE_ENV = 'test';
     await expect(request('https://path/to/api')).rejects.toEqual(
       new Error('HttpRequest should never be called in test environment.'),
     );
@@ -23,10 +25,6 @@ describe('GET request', () => {
 });
 
 describe('GET request in production', () => {
-  beforeEach(() => {
-    process.env.NODE_ENV = 'production';
-  });
-
   it('resolves URL with token', async () => {
     expect(await request('https://path/to/api', 't/ok"en')).toMatchSnapshot();
   });
@@ -51,6 +49,7 @@ describe('GET request in production', () => {
 
 describe('POST request', () => {
   it('should throw exception in test environment', async () => {
+    process.env.NODE_ENV = 'test';
     await expect(post('https://path/to/api', {})).rejects.toEqual(
       new Error('HttpRequest should never be called in test environment.'),
     );
@@ -58,15 +57,11 @@ describe('POST request', () => {
 });
 
 describe('POST request in production', () => {
-  beforeEach(() => {
-    process.env.NODE_ENV = 'production';
-  });
-
   it('throws exception during invalid return status code', async () => {
     expect.assertions(4);
 
     try {
-      await request('https://path/to/api?status=500');
+      await post('https://path/to/api?status=500', {});
     } catch (error) {
       expect(error).toBeInstanceOf(ProxiedError);
       expect(error.message).toBe('Status Text');
