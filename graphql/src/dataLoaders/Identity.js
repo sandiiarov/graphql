@@ -35,7 +35,6 @@ async function fetch(
     Authorization: `Basic: ${token}`,
   };
 
-  // TODO: create postWithAuth(url, token, payload) in HttpRequest
   const data = await post(Config.restApiEndpoint.identity, payload, headers);
   if (!data.length) {
     throw new Error(`User not found (userId: ${userId})`);

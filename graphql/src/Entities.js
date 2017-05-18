@@ -33,6 +33,7 @@ export type FlightType = {
 
 export type BookingType = {
   id: number,
+  allowedBaggage: AllowedBaggageType,
   arrival: ArrivalType,
   departure: DepartureType,
   legs: Array<LegType>,
@@ -58,6 +59,19 @@ export type PlaceType = {
   numberOfAirports: number,
   population: null | number,
   name: string,
+};
+
+export type AllowedBaggageType = {
+  cabin: Array<BaggageType>,
+  checked: Array<BaggageType>,
+};
+
+export type BaggageType = {
+  height: null | number,
+  length: null | number,
+  width: null | number,
+  weight: null | number,
+  note: null | string,
 };
 
 export type LoginType = {

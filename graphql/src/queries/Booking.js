@@ -29,8 +29,36 @@ export default {
 };
 
 export function sanitizeApiResponse(singleBooking: Object): BookingType {
+  const { bag_params } = singleBooking;
   return {
     id: singleBooking.bid,
+    allowedBaggage: {
+      cabin: [
+        {
+          height: bag_params.hand_height,
+          length: bag_params.hand_length,
+          width: bag_params.hand_width,
+          weight: bag_params.hand_weight,
+          note: bag_params.hand_note === '' ? null : bag_params.hand_note,
+        },
+        {
+          height: bag_params.hand2_height,
+          length: bag_params.hand2_length,
+          width: bag_params.hand2_width,
+          weight: bag_params.hand2_weight,
+          note: bag_params.hand2_note === '' ? null : bag_params.hand2_note,
+        },
+      ],
+      checked: [
+        {
+          height: bag_params.hold_height,
+          length: bag_params.hold_length,
+          width: bag_params.hold_width,
+          weight: bag_params.hold_weight,
+          note: bag_params.note === '' ? null : bag_params.note,
+        },
+      ],
+    },
     arrival: {
       when: singleBooking.arrival.when === 0
         ? null

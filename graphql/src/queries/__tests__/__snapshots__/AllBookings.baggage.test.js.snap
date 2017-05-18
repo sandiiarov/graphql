@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should return baggage parameters 1`] = `
+Object {
+  "data": Object {
+    "allBookings": Array [
+      Object {
+        "allowedBaggage": Object {
+          "cabin": Array [
+            Object {
+              "height": 20,
+              "length": 55,
+              "note": null,
+              "weight": 10,
+              "width": 40,
+            },
+          ],
+          "checked": Array [
+            Object {
+              "height": 79,
+              "length": 250,
+              "note": "max 180cm (length + width + height)",
+              "weight": 23,
+              "width": 112,
+            },
+          ],
+        },
+        "databaseId": 2707251,
+      },
+      Object {
+        "allowedBaggage": Object {
+          "cabin": Array [
+            Object {
+              "height": 20,
+              "length": 55,
+              "note": null,
+              "weight": 7,
+              "width": 40,
+            },
+          ],
+          "checked": Array [
+            Object {
+              "height": 81,
+              "length": 119,
+              "note": null,
+              "weight": 15,
+              "width": 119,
+            },
+          ],
+        },
+        "databaseId": 2707229,
+      },
+      Object {
+        "allowedBaggage": Object {
+          "cabin": Array [
+            Object {
+              "height": 25,
+              "length": 55,
+              "note": null,
+              "weight": 8,
+              "width": 45,
+            },
+          ],
+          "checked": Array [
+            Object {
+              "height": 40,
+              "length": 100,
+              "note": null,
+              "weight": 23,
+              "width": 59,
+            },
+          ],
+        },
+        "databaseId": 2707224,
+      },
+    ],
+  },
+}
+`;

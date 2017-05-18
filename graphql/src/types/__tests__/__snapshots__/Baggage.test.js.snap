@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AllowedBaggage type should have valid fields 1`] = `
+Object {
+  "height": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "height",
+    "resolve": [Function],
+    "type": "Int",
+  },
+  "length": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "length",
+    "resolve": [Function],
+    "type": "Int",
+  },
+  "note": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "note",
+    "resolve": [Function],
+    "type": "String",
+  },
+  "weight": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "weight",
+    "resolve": [Function],
+    "type": "Int",
+  },
+  "width": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "width",
+    "resolve": [Function],
+    "type": "Int",
+  },
+}
+`;
