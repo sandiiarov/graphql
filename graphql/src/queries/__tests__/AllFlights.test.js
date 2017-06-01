@@ -56,4 +56,26 @@ describe('all flights query', () => {
       await executeQuery(allFlightsSearchQuery, variables),
     ).toMatchSnapshot();
   });
+
+  it('should return error if dateFrom is after dateTo', async () => {
+    const allFlightsSearchQuery = `
+    query ($input: FlightsSearchInput!) {
+      allFlights(search: $input) {
+        arrival {
+          time
+        }
+      }
+    }`;
+    const variables = {
+      input: {
+        from: 'PRG',
+        to: 'MEX',
+        dateFrom: '2018-08-08',
+        dateTo: '2017-09-08',
+      },
+    };
+    expect(
+      await executeQuery(allFlightsSearchQuery, variables),
+    ).toMatchSnapshot();
+  });
 });
