@@ -1,5 +1,6 @@
 // @flow
 
+import compareAsc from 'date-fns/compare_asc';
 import { GraphQLNonNull, GraphQLList } from 'graphql';
 import dateFns from 'date-fns';
 import request from '../services/HttpRequest';
@@ -17,6 +18,8 @@ export default {
     },
   },
   resolve: async (_: mixed, args: Object): Promise<Array<FlightType>> => {
+    validateArgs(args);
+
     const allFlights = await request(
       config.restApiEndpoint.allFlights({
         flyFrom: args.search.from,
@@ -80,4 +83,13 @@ function sanitizeApiResponse(singleFlight: Object): FlightType {
       airline: leg.airline,
     })),
   };
+}
+
+function validateArgs(args) {
+  // Validate dateFrom starts before dateTo
+  const dateFrom = new Date(args.search.dateFrom);
+  const dateTo = new Date(args.search.dateTo);
+  if (compareAsc(dateFrom, dateTo) > 0) {
+    throw new Error(`DateFrom should start before dateTo`);
+  }
 }
