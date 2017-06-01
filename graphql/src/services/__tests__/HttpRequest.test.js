@@ -40,9 +40,12 @@ describe('GET request in production', () => {
       await request('https://path/to/api?status=500');
     } catch (error) {
       expect(error).toBeInstanceOf(ProxiedError);
-      expect(error.message).toBe('Status Text');
-      expect(error.originStatusCode).toBe(500);
-      expect(error.originUrl).toBe('https://path/to/api?status=500');
+      expect(error).toHaveProperty('message', 'Status Text');
+      expect(error).toHaveProperty('originStatusCode', 500);
+      expect(error).toHaveProperty(
+        'originUrl',
+        'https://path/to/api?status=500',
+      );
     }
   });
 });
@@ -64,9 +67,12 @@ describe('POST request in production', () => {
       await post('https://path/to/api?status=500', {});
     } catch (error) {
       expect(error).toBeInstanceOf(ProxiedError);
-      expect(error.message).toBe('Status Text');
-      expect(error.originStatusCode).toBe(500);
-      expect(error.originUrl).toBe('https://path/to/api?status=500');
+      expect(error).toHaveProperty('message', 'Status Text');
+      expect(error).toHaveProperty('originStatusCode', 500);
+      expect(error).toHaveProperty(
+        'originUrl',
+        'https://path/to/api?status=500',
+      );
     }
   });
 

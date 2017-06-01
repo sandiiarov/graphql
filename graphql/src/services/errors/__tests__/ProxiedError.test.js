@@ -15,9 +15,9 @@ it('is throwable', () => {
 });
 
 it('works with origin status code', () => {
-  expect(error.originStatusCode).toBe(123);
+  expect(error).toHaveProperty('originStatusCode', 123);
 });
 
 it('works with origin URL', () => {
-  expect(error.originUrl).toBe('http://a.b');
+  expect(error).toHaveProperty('originUrl', 'http://a.b');
 });
