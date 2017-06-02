@@ -31,12 +31,16 @@ export type FlightType = {
   legs: Array<LegType>,
 };
 
-export type BookingType = {
+export type BookingsItemType = {
   id: number,
-  allowedBaggage: AllowedBaggageType,
   arrival: ArrivalType,
   departure: DepartureType,
   legs: Array<LegType>,
+  authToken: string,
+};
+
+export type BookingType = BookingsItemType & {
+  allowedBaggage: AllowedBaggageType,
 };
 
 export type LegType = {

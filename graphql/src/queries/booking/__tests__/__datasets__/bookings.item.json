@@ -1,0 +1,149 @@
+{
+  "arrival": {
+    "where": {
+      "code": "GDN",
+      "name": "Gdansk"
+    },
+    "when": 0
+  },
+  "original_price": 1082,
+  "bag_params": {},
+  "grade": {
+    "id": "D",
+    "time": 240
+  },
+  "route": ["RZE", "GDN"],
+  "auth_token": "b9cb406d-f797-434c-bc21-a0612b92f201",
+  "bags_restrictions": {
+    "holds": {},
+    "hands": {}
+  },
+  "podio_status": 32,
+  "currency": "EUR",
+  "booked_at": "skypicker",
+  "prices": ["18.22", "18.22"],
+  "cancel_requested": null,
+  "passenger_ids": [4492972],
+  "credits_payment": 0,
+  "bags": 0,
+  "bid": 2968389,
+  "transfer_ids": [],
+  "card_payment": 40.01,
+  "segments": null,
+  "passengers": [{
+    "category": "adults",
+    "bags": 0,
+    "insurance_price": null,
+    "firstname": "TEST",
+    "travel_document": {
+      "cardno": "12345678XY",
+      "expiration": 1608768000
+    },
+    "lastname": "TEST",
+    "title": "mr",
+    "hand_bags": {},
+    "birthday": "1985-01-01",
+    "contact_passenger": true,
+    "nationality": "us",
+    "id": 4492972,
+    "insurance_type": "none"
+  }],
+  "departure": {
+    "where": {
+      "code": "RZE",
+      "name": "Rzeszow"
+    },
+    "when": 0
+  },
+  "booking_token": "GamFTRHoBQ/v6QB8IrykhpoVGKB0KA6sVANbFz24DyvBiPzeDs1nYSgEpo3cZW9c+DmtUxMNTBc/ftiNNfRUObD0hFHyKo0JUoVJwAxc4Zg+d68o0V2R166Mz2V6rDvEn84+gh/t/0OL6B1KKlCwLI6Ijh+NqKZP21PU4ZThma4VriJ3ioc1QqqA19rPB2c4Fntk1Bfdjc6FH5jkfNw0CORftgM+guFB9VDCWp5XEKKe9TI6BXU+jpQnWHWRf9YZWbYEH4JIsdhQct2eKstFi+rHLx7RpTGe9o0cS4ucLwDYU4eXlXtmT7xUFIC5Bh4nuxZXjC973p9p/gLXNbMfkuYZclb3VWQ/TSMGTQs5qf+eBeyNn3LCMAQ3WQ8F7OyFDd/UnYJ+3RisBL5fpMaNpnuXqVnXXbaaer6rtIwd/f7B3hOG0G8RhCDnovUgyWhdp9QRiJKtbzn7Mm7xphkMeK1YnG6UXBs9dJe88H98Tth+DlwpJP3qlili6NYbEDGk",
+  "created": 1493836919,
+  "original_currency": "CZK",
+  "flights": [{
+    "arrival": {
+      "when": {
+        "utc": 1505116500,
+        "local": 1505123700
+      },
+      "where": {
+        "city_id": "warsaw_pl",
+        "country": "PL",
+        "code": "WAW",
+        "name": "Warsaw"
+      }
+    },
+    "bags_recheck_required": false,
+    "extras": "LO",
+    "return": 0,
+    "airline": {
+      "checkin": 0,
+      "iata": "LO",
+      "doing_online_checkin": null,
+      "name": "LOT Polish Airlines"
+    },
+    "flight_no": 3806,
+    "guarantee": false,
+    "reservation_number": "test",
+    "id": "SP1123103_1678073",
+    "departure": {
+      "when": {
+        "utc": 1505113500,
+        "local": 1505120700
+      },
+      "where": {
+        "city_id": "rzeszow_pl",
+        "country": "PL",
+        "code": "RZE",
+        "name": "Rzeszow"
+      }
+    }
+  }, {
+    "arrival": {
+      "when": {
+        "utc": 1505122800,
+        "local": 1505130000
+      },
+      "where": {
+        "city_id": "gdansk_pl",
+        "country": "PL",
+        "code": "GDN",
+        "name": "Gdansk"
+      }
+    },
+    "bags_recheck_required": false,
+    "extras": "LO",
+    "return": 0,
+    "airline": {
+      "checkin": 0,
+      "iata": "LO",
+      "doing_online_checkin": null,
+      "name": "LOT Polish Airlines"
+    },
+    "flight_no": 3835,
+    "guarantee": false,
+    "reservation_number": "test",
+    "id": "SP1123103_1678074",
+    "departure": {
+      "when": {
+        "utc": 1505119500,
+        "local": 1505126700
+      },
+      "where": {
+        "city_id": "warsaw_pl",
+        "country": "PL",
+        "code": "WAW",
+        "name": "Warsaw"
+      }
+    }
+  }],
+  "contact": {
+    "phone": "+1 000",
+    "pid": 4492972,
+    "email": "tony@kiwi.com"
+  },
+  "status": "confirmed",
+  "grace_period_fee": null,
+  "sandbox": 1,
+  "original_flight_price": null,
+  "price": 40.01,
+  "flight_ids": ["SP1123103_1678074", "SP1123103_1678073"]
+}

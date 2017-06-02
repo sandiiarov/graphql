@@ -2,20 +2,27 @@
 
 import DataLoader from 'dataloader';
 import createIdentityLoader from '../dataLoaders/Identity';
-import type { IdentityType } from '../Entities';
+import createBookingLoader from '../dataLoaders/Booking';
+import BookingsLoader from '../dataLoaders/Bookings';
+import type { IdentityType, BookingType } from '../Entities';
 
 export type GraphqlContextType = {
-  apiToken: null | string,
+  apiToken: ?string,
   dataLoader: {
+    booking: DataLoader<number | string, BookingType>,
+    bookings: BookingsLoader,
     identity: DataLoader<string, IdentityType>,
   },
 };
 
-export function createContext(token: null | string): GraphqlContextType {
+export function createContext(token: ?string): GraphqlContextType {
+  const bookings = new BookingsLoader(token);
   return {
     apiToken: token,
     dataLoader: {
-      identity: createIdentityLoader(),
+      booking: createBookingLoader(token, bookings),
+      bookings: bookings,
+      identity: createIdentityLoader(token),
     },
   };
 }
