@@ -8,8 +8,15 @@ import {
 } from 'graphql';
 import { toGlobalId } from '../services/OpaqueIdentifier';
 import GraphQLRouteStop from './RouteStop';
+import GraphQLAirline from './Airline';
+import { createAirline } from '../dataLoaders/Airline';
 
-import type { ArrivalType, DepartureType, LegType } from '../Entities';
+import type {
+  ArrivalType,
+  DepartureType,
+  LegType,
+  AirlineType,
+} from '../Entities';
 
 export default new GraphQLObjectType({
   name: 'Leg',
@@ -18,6 +25,11 @@ export default new GraphQLObjectType({
     id: {
       type: new GraphQLNonNull(GraphQLID),
       resolve: ({ id }: LegType): string => toGlobalId('leg', id),
+    },
+
+    airline: {
+      type: GraphQLAirline,
+      resolve: ({ airline }: LegType): AirlineType => createAirline(airline),
     },
 
     arrival: {

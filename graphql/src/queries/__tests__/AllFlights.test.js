@@ -20,6 +20,12 @@ describe('all flights query', () => {
           airport { city, code }
           time, localTime
         }
+        airlines {
+          name
+          code
+          logoUrl
+          isLowCost
+        }
       }
     }`;
     const variables = {

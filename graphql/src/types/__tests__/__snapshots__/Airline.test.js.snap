@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Airline type should have valid fields 1`] = `
+Object {
+  "code": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "code",
+    "resolve": [Function],
+    "type": "String",
+  },
+  "isLowCost": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "isLowCost",
+    "resolve": [Function],
+    "type": "Boolean",
+  },
+  "logoUrl": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "logoUrl",
+    "resolve": [Function],
+    "type": "String",
+  },
+  "name": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "name",
+    "resolve": [Function],
+    "type": "String",
+  },
+}
+`;

@@ -169,7 +169,8 @@
           "aTime": 1504874700
         }
       ],
-      "distance": 9933.1
+      "distance": 9933.1,
+      "airlines": ["OK", "DY", "UA"]
     },
     {
       "mapIdfrom": "prague",
@@ -320,7 +321,8 @@
           "aTime": 1504848600
         }
       ],
-      "distance": 9933.1
+      "distance": 9933.1,
+      "airlines": ["OK", "DY", "UA", "UA"]
     },
     {
       "mapIdfrom": "prague",
@@ -446,7 +448,8 @@
           "aTime": 1504874700
         }
       ],
-      "distance": 9933.1
+      "distance": 9933.1,
+      "airlines": ["SK", "DY", "UA"]
     }
   ],
   "ref_tasks": {},

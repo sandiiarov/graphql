@@ -1,10 +1,14 @@
 // @flow
 
+import _ from 'lodash';
 import { GraphQLObjectType, GraphQLNonNull, GraphQLList } from 'graphql';
 import GraphQLRouteStop from './RouteStop';
 import GraphQLLeg from './Leg';
+import GraphQLAirline from './Airline';
+import { createAirline } from '../dataLoaders/Airline';
 
 import type {
+  AirlineType,
   ArrivalType,
   FlightType,
   DepartureType,
@@ -14,6 +18,12 @@ import type {
 export default new GraphQLObjectType({
   name: 'Flight',
   fields: {
+    airlines: {
+      type: new GraphQLList(GraphQLAirline),
+      resolve: ({ airlines }: FlightType): Array<AirlineType> =>
+        _.uniq(airlines).map(airlineCode => createAirline(airlineCode)),
+    },
+
     arrival: {
       type: new GraphQLNonNull(GraphQLRouteStop),
       resolve: ({ arrival }: FlightType): ArrivalType => arrival,

@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Leg type should have valid fields 1`] = `
+Object {
+  "airline": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "airline",
+    "resolve": [Function],
+    "type": "Airline",
+  },
+  "arrival": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "arrival",
+    "resolve": [Function],
+    "type": "RouteStop!",
+  },
+  "departure": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "departure",
+    "resolve": [Function],
+    "type": "RouteStop!",
+  },
+  "id": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "id",
+    "resolve": [Function],
+    "type": "ID!",
+  },
+  "recheckRequired": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "recheckRequired",
+    "resolve": [Function],
+    "type": "Boolean!",
+  },
+}
+`;

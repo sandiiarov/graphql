@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Flight type should have valid fields 1`] = `
+Object {
+  "airlines": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "airlines",
+    "resolve": [Function],
+    "type": "[Airline]",
+  },
+  "arrival": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "arrival",
+    "resolve": [Function],
+    "type": "RouteStop!",
+  },
+  "departure": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "departure",
+    "resolve": [Function],
+    "type": "RouteStop!",
+  },
+  "legs": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "legs",
+    "resolve": [Function],
+    "type": "[Leg!]!",
+  },
+}
+`;

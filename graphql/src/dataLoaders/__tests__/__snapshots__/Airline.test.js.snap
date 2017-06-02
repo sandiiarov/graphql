@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Airline creation should create airline object 1`] = `
+Object {
+  "code": "OK",
+  "isLowCost": false,
+  "logoUrl": "https://images.kiwi.com/airlines/64/OK.png",
+  "name": "Czech Airlines",
+}
+`;

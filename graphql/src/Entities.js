@@ -29,6 +29,7 @@ export type FlightType = {
   arrival: ArrivalType,
   departure: DepartureType,
   legs: Array<LegType>,
+  airlines: Array<string>,
 };
 
 export type BookingsItemType = {
@@ -90,4 +91,11 @@ export type IdentityType = {
   lastName: null | string,
   login: string,
   userId: string,
+};
+
+export type AirlineType = {
+  name: string,
+  logoUrl: string,
+  code: string,
+  isLowCost: boolean,
 };

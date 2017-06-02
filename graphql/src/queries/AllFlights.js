@@ -7,7 +7,6 @@ import request from '../services/HttpRequest';
 import config from '../../config/application';
 import GraphQLFlight from '../types/Flight';
 import FlightsSearchInput from '../types/FlightsSearchInput';
-
 import type { FlightType, LegType } from '../Entities';
 
 export default {
@@ -82,6 +81,7 @@ function sanitizeApiResponse(singleFlight: Object): FlightType {
       },
       airline: leg.airline,
     })),
+    airlines: singleFlight.airlines,
   };
 }
 
