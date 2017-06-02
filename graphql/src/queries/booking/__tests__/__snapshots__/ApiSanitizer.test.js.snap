@@ -1,0 +1,178 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Sanitize detail should work 1`] = `
+Object {
+  "arrival": Object {
+    "when": null,
+    "where": Object {
+      "code": "GDN",
+      "name": "Gdansk",
+    },
+  },
+  "authToken": "b9cb406d-f797-434c-bc21-a0612b92f201",
+  "departure": Object {
+    "when": null,
+    "where": Object {
+      "code": "RZE",
+      "name": "Rzeszow",
+    },
+  },
+  "id": 2968389,
+  "legs": Array [
+    Object {
+      "airline": "LO",
+      "arrival": Object {
+        "when": Object {
+          "local": 2017-09-11T09:55:00.000Z,
+          "utc": 2017-09-11T07:55:00.000Z,
+        },
+        "where": Object {
+          "code": "WAW",
+          "name": "Warsaw",
+        },
+      },
+      "departure": Object {
+        "when": Object {
+          "local": 2017-09-11T09:05:00.000Z,
+          "utc": 2017-09-11T07:05:00.000Z,
+        },
+        "where": Object {
+          "code": "RZE",
+          "name": "Rzeszow",
+        },
+      },
+      "flightNo": 3806,
+      "id": "SP1123103_1678073",
+      "recheckRequired": false,
+    },
+    Object {
+      "airline": "LO",
+      "arrival": Object {
+        "when": Object {
+          "local": 2017-09-11T11:40:00.000Z,
+          "utc": 2017-09-11T09:40:00.000Z,
+        },
+        "where": Object {
+          "code": "GDN",
+          "name": "Gdansk",
+        },
+      },
+      "departure": Object {
+        "when": Object {
+          "local": 2017-09-11T10:45:00.000Z,
+          "utc": 2017-09-11T08:45:00.000Z,
+        },
+        "where": Object {
+          "code": "WAW",
+          "name": "Warsaw",
+        },
+      },
+      "flightNo": 3835,
+      "id": "SP1123103_1678074",
+      "recheckRequired": false,
+    },
+  ],
+}
+`;
+
+exports[`Sanitize list item should work 1`] = `
+Object {
+  "allowedBaggage": Object {
+    "cabin": Array [
+      Object {
+        "height": 20,
+        "length": 55,
+        "note": null,
+        "weight": 8,
+        "width": 44,
+      },
+      Object {
+        "height": null,
+        "length": null,
+        "note": null,
+        "weight": null,
+        "width": null,
+      },
+    ],
+    "checked": Array [
+      Object {
+        "height": 81,
+        "length": 119,
+        "note": null,
+        "weight": 23,
+        "width": 119,
+      },
+    ],
+  },
+  "arrival": Object {
+    "when": null,
+    "where": Object {
+      "code": "GDN",
+      "name": "Gdansk",
+    },
+  },
+  "authToken": "b9cb406d-f797-434c-bc21-a0612b92f201",
+  "departure": Object {
+    "when": null,
+    "where": Object {
+      "code": "RZE",
+      "name": "Rzeszow",
+    },
+  },
+  "id": 2968389,
+  "legs": Array [
+    Object {
+      "airline": "LO",
+      "arrival": Object {
+        "when": Object {
+          "local": 2017-09-11T09:55:00.000Z,
+          "utc": 2017-09-11T07:55:00.000Z,
+        },
+        "where": Object {
+          "code": "WAW",
+          "name": "Warsaw",
+        },
+      },
+      "departure": Object {
+        "when": Object {
+          "local": 2017-09-11T09:05:00.000Z,
+          "utc": 2017-09-11T07:05:00.000Z,
+        },
+        "where": Object {
+          "code": "RZE",
+          "name": "Rzeszow",
+        },
+      },
+      "flightNo": 3806,
+      "id": "SP1123103_1678073",
+      "recheckRequired": false,
+    },
+    Object {
+      "airline": "LO",
+      "arrival": Object {
+        "when": Object {
+          "local": 2017-09-11T11:40:00.000Z,
+          "utc": 2017-09-11T09:40:00.000Z,
+        },
+        "where": Object {
+          "code": "GDN",
+          "name": "Gdansk",
+        },
+      },
+      "departure": Object {
+        "when": Object {
+          "local": 2017-09-11T10:45:00.000Z,
+          "utc": 2017-09-11T08:45:00.000Z,
+        },
+        "where": Object {
+          "code": "WAW",
+          "name": "Warsaw",
+        },
+      },
+      "flightNo": 3835,
+      "id": "SP1123103_1678074",
+      "recheckRequired": false,
+    },
+  ],
+}
+`;

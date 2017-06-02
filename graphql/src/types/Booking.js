@@ -20,6 +20,7 @@ import type {
   DepartureType,
   LegType,
 } from '../Entities';
+import type { GraphqlContextType } from '../services/GraphqlContext';
 
 export default new GraphQLObjectType({
   name: 'Booking',
@@ -36,8 +37,14 @@ export default new GraphQLObjectType({
 
     allowedBaggage: {
       type: new GraphQLNonNull(GraphQLAllowedBaggage),
-      resolve: ({ allowedBaggage }: BookingType): AllowedBaggageType =>
-        allowedBaggage,
+      resolve: async (
+        { id }: BookingType,
+        params: Object,
+        { dataLoader }: GraphqlContextType,
+      ): Promise<AllowedBaggageType> => {
+        const { allowedBaggage } = await dataLoader.booking.load(id);
+        return allowedBaggage;
+      },
     },
 
     arrival: {

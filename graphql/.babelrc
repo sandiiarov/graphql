@@ -1,6 +1,9 @@
 {
   "env": {
     "test": {
+      "plugins": [
+        "transform-class-properties"
+      ],
       "presets": [
         [
           "env",
@@ -26,6 +29,7 @@
   ],
   "plugins": [
     "fast-async",
-    "transform-object-rest-spread"
+    "transform-object-rest-spread",
+    "transform-class-properties"
   ]
 }

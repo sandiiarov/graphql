@@ -4,7 +4,7 @@ import { GraphQLNonNull, GraphQLString } from 'graphql';
 import { post } from '../services/HttpRequest';
 import config from '../../config/application';
 import GraphQLUser from '../types/User';
-import createIdentityLoader from '../dataLoaders/Identity';
+import { createContext } from '../services/GraphqlContext';
 import type { GraphqlContextType } from '../services/GraphqlContext';
 import type { LoginType } from '../Entities';
 
@@ -33,7 +33,8 @@ export default {
     const data = await post(config.restApiEndpoint.login, payload, headers);
 
     // now we have access token, let's rewrite IdentityLoader
-    context.dataLoader.identity = createIdentityLoader(data.token);
+    const authContext = createContext(data.token);
+    context.dataLoader = authContext.dataLoader;
 
     data.userId = data.user_id;
     delete data.user_id;

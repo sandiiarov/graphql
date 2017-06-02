@@ -1,0 +1,296 @@
+{
+  "original_price": 1082,
+  "grade": {
+    "id": "D",
+    "time": 240
+  },
+  "additional_contacts": [],
+  "cancel_requested": null,
+  "blocked": false,
+  "pending_flight_changes": [],
+  "segments": null,
+  "additional_bags_prices": {},
+  "flights": [{
+    "arrival": {
+      "when": {
+        "utc": 1505116500,
+        "local": 1505123700
+      },
+      "where": {
+        "city_id": "warsaw_pl",
+        "country": "PL",
+        "code": "WAW",
+        "name": "Warsaw",
+        "gate": null
+      }
+    },
+    "bags_recheck_required": false,
+    "return": 0,
+    "flight_no": 3806,
+    "ticket_available_at": null,
+    "reservation_number": "test",
+    "id": "SP1123103_1678073",
+    "guarantee": false,
+    "departure": {
+      "when": {
+        "utc": 1505113500,
+        "local": 1505120700
+      },
+      "where": {
+        "city_id": "rzeszow_pl",
+        "country": "PL",
+        "code": "RZE",
+        "name": "Rzeszow",
+        "gate": null
+      }
+    },
+    "airline": {
+      "checkin": 0,
+      "iata": "LO",
+      "doing_online_checkin": null,
+      "name": "LOT Polish Airlines"
+    },
+    "vehicle": {
+      "model": "DHC-8-400 Dash 8Q",
+      "seats": 78,
+      "type": "DH4",
+      "meal": [],
+      "manufacturer": "De Havilland Canada"
+    },
+    "operating_airline": {
+      "iata": "LO",
+      "name": "LOT Polish Airlines"
+    }
+  }, {
+    "arrival": {
+      "when": {
+        "utc": 1505122800,
+        "local": 1505130000
+      },
+      "where": {
+        "city_id": "gdansk_pl",
+        "country": "PL",
+        "code": "GDN",
+        "name": "Gdansk",
+        "gate": null
+      }
+    },
+    "bags_recheck_required": false,
+    "return": 0,
+    "flight_no": 3835,
+    "ticket_available_at": null,
+    "reservation_number": "test",
+    "id": "SP1123103_1678074",
+    "guarantee": false,
+    "departure": {
+      "when": {
+        "utc": 1505119500,
+        "local": 1505126700
+      },
+      "where": {
+        "city_id": "warsaw_pl",
+        "country": "PL",
+        "code": "WAW",
+        "name": "Warsaw",
+        "gate": null
+      }
+    },
+    "airline": {
+      "checkin": 0,
+      "iata": "LO",
+      "doing_online_checkin": null,
+      "name": "LOT Polish Airlines"
+    },
+    "vehicle": {
+      "model": "DHC-8-400 Dash 8Q",
+      "seats": 78,
+      "type": "DH4",
+      "meal": [],
+      "manufacturer": "De Havilland Canada"
+    },
+    "operating_airline": {
+      "iata": "LO",
+      "name": "LOT Polish Airlines"
+    }
+  }],
+  "grace_period_fee": null,
+  "original_flight_price": null,
+  "flight_ids": ["SP1123103_1678074", "SP1123103_1678073"],
+  "original_currency": "CZK",
+  "bid": 2968389,
+  "bags_restrictions": {
+    "holds": {},
+    "hands": {}
+  },
+  "podio_status": 32,
+  "card_payment": 40.01,
+  "prices": ["18.22", "18.22"],
+  "pending_additional_services": [],
+  "transfer_ids": [],
+  "booking_token": "GamFTRHoBQ/v6QB8IrykhpoVGKB0KA6sVANbFz24DyvBiPzeDs1nYSgEpo3cZW9c+DmtUxMNTBc/ftiNNfRUObD0hFHyKo0JUoVJwAxc4Zg+d68o0V2R166Mz2V6rDvEn84+gh/t/0OL6B1KKlCwLI6Ijh+NqKZP21PU4ZThma4VriJ3ioc1QqqA19rPB2c4Fntk1Bfdjc6FH5jkfNw0CORftgM+guFB9VDCWp5XEKKe9TI6BXU+jpQnWHWRf9YZWbYEH4JIsdhQct2eKstFi+rHLx7RpTGe9o0cS4ucLwDYU4eXlXtmT7xUFIC5Bh4nuxZXjC973p9p/gLXNbMfkuYZclb3VWQ/TSMGTQs5qf+eBeyNn3LCMAQ3WQ8F7OyFDd/UnYJ+3RisBL5fpMaNpnuXqVnXXbaaer6rtIwd/f7B3hOG0G8RhCDnovUgyWhdp9QRiJKtbzn7Mm7xphkMeK1YnG6UXBs9dJe88H98Tth+DlwpJP3qlili6NYbEDGk",
+  "checkin_deadline": 1504857600,
+  "pending_refunds": [],
+  "bag_params": {
+    "hand2_note": "",
+    "hand_length": 55,
+    "hold_height": 81,
+    "hand2_width": null,
+    "hold_weight": 23,
+    "hand_note": "",
+    "hold_length": 119,
+    "hand2_length": null,
+    "note": "",
+    "hand_height": 20,
+    "hand2_weight": null,
+    "hand2_height": null,
+    "hand_width": 44,
+    "hold_width": 119,
+    "hand_weight": 8
+  },
+  "auth_token": "b9cb406d-f797-434c-bc21-a0612b92f201",
+  "currency": "EUR",
+  "bags": 0,
+  "additional_bookings": {
+    "details": [{
+      "category": "bags",
+      "bags": 1,
+      "booked": 1493907823,
+      "payment_gate": "zooz",
+      "price": 0,
+      "payment_expiration": 1493910524,
+      "comment": "",
+      "payment_currency": "EUR",
+      "payment_token_created": 1493907824,
+      "credits_payment_amount": 0,
+      "payment_price": 0,
+      "final_status": "closed",
+      "data": {
+        "ordered_by": "pax"
+      },
+      "payment_token": null,
+      "abid": 165396
+    }],
+    "paid": {
+      "bags": 1,
+      "total": 0
+    }
+  },
+  "config": {
+    "allowed_to_change": {
+      "bags": 36,
+      "seating": null,
+      "insurance_change": 48,
+      "flights": 48,
+      "other": 4,
+      "insurance_add": 24,
+      "extras": null
+    },
+    "allowed_to_change_segments": true
+  },
+  "arrival": {
+    "where": {
+      "code": "GDN",
+      "name": "Gdansk"
+    },
+    "when": 0
+  },
+  "insurance_price": {
+    "travel_plus": 29.32,
+    "skysilver": 13.32,
+    "skygold": 29.32,
+    "travel_basic": 13.32
+  },
+  "pending_requests": [],
+  "price": 40.01,
+  "credits_payment": 0,
+  "blockers": [],
+  "document_options": {
+    "checkin_date": 1504861500,
+    "airport_checkin_price": 0,
+    "document_need": 2
+  },
+  "passenger_ids": [4492972],
+  "transfers": [],
+  "refund_options": [],
+  "passengers": [{
+    "category": "adults",
+    "bags": 0,
+    "insurance_price": null,
+    "firstname": "TEST",
+    "travel_document": {
+      "cardno": "12345678XY",
+      "expiration": 1608768000
+    },
+    "lastname": "TEST",
+    "pkpass": null,
+    "title": "mr",
+    "hand_bags": {},
+    "birthday": "1985-01-01",
+    "contact_passenger": true,
+    "nationality": "us",
+    "id": 4492972,
+    "insurance_type": "none"
+  }],
+  "assets": {
+    "eticket": "https://skypicker-mailing.s3.amazonaws.com/2968/1493837026_E-ticket_passenger_8394a1c13f8dcdce559085cfbbb6cc00.pdf?v=1493837026",
+    "additional": [{
+      "abid": 165396,
+      "invoice": "https://booking-api.skypicker.com/invoices/invoice_2017_9cb3a599107d4329_2968389_165396.pdf"
+    }],
+    "en_confirmation_link": "https://skypicker-mailing.s3.amazonaws.com/2968/1493837115_2968389_confirmation_8394a1c13f8dcdce559085cfbbb6cc00.html",
+    "invoice": "https://booking.skypicker.com/api/v0.1/get_file/2968389?file_id=337020126&simple_token=b9cb406d-f797-434c-bc21-a0612b92f201",
+    "boardingPass": {
+      "SP1123103_1678074": null,
+      "all": null,
+      "SP1123103_1678073": null
+    },
+    "insurance": null,
+    "transfer_ticket": null
+  },
+  "created": 1493836919,
+  "route": ["RZE", "GDN"],
+  "departure": {
+    "where": {
+      "code": "RZE",
+      "name": "Rzeszow"
+    },
+    "when": 0
+  },
+  "sandbox": 1,
+  "contact": {
+    "phone": "+1 000",
+    "pid": 4492972,
+    "email": "tony@kiwi.com"
+  },
+  "status": "confirmed",
+  "flights_history": {},
+  "travel_info": {
+    "4492972": {
+      "0": {
+        "visa": [{
+          "info": "<div class=\"content\"><p>\nVisa required.  \n</p>\n<h3>The following are exempt from holding a visa:</h3>\n<p>\nNationals of USA for a maximum stay of 90 days.  \n</p><p>\nThe max. stay is granted within 180 days.\n</p>\n\n</div>",
+          "status": "critical",
+          "country": "PL",
+          "timestamp": 1447264497
+        }, {
+          "info": "<div class=\"content\"><p><b>The passenger is arriving on a domestic or common border area flight and no immigration regulations apply for this segment.  See Entry Requirements for previous segment.</b></p></div>",
+          "status": "ok",
+          "country": "PL",
+          "timestamp": 1447264497
+        }],
+        "health": [{
+          "info": "<div class=\"content\">This information is for guide purposes only. Other health organisations may recommend alternative precautions.<br /><br /><p>\nVaccinations not required.\n</p>\n</div>",
+          "status": "ok",
+          "country": "PL",
+          "timestamp": 1447264497
+        }],
+        "passport": [{
+          "info": "<div class=\"content\"><p>\nPassport required. \n</p>\n<h3>Document validity rules:</h3>\n<p>\nPassports and other documents accepted for entry must be valid for a minimum of 3 months beyond the period of intended stay. \n</p>\n<h3>Important:</h3>\n<p>\nPassports and/or passport replacing documents issued more than 10 years prior to date of travel are not accepted. \n</p>\n</div>",
+          "status": "critical",
+          "country": "PL",
+          "timestamp": 1447264497
+        }]
+      }
+    }
+  }
+}

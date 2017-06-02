@@ -5,14 +5,14 @@ import { post } from '../services/HttpRequest';
 import Config from '../../config/application';
 import type { IdentityType } from '../Entities';
 
-export default function createInstance(accessToken?: string) {
+export default function createInstance(accessToken: ?string) {
   return new DataLoader((ids: Array<string>) => {
     return batchLoad(accessToken)(ids);
   });
 }
 
 function batchLoad(
-  accessToken?: string,
+  accessToken: ?string,
 ): Array<string> => Promise<Array<Object>> {
   if (typeof accessToken !== 'string') {
     return () => Promise.reject(new Error('Undefined access token'));
