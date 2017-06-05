@@ -15,12 +15,12 @@ type TimeVariantsType = {
 };
 
 export type DepartureType = {
-  when: null | TimeVariantsType, // null if doesn't exist
+  when: ?TimeVariantsType, // null if doesn't exist
   where: AirportType,
 };
 
 export type ArrivalType = {
-  when: null | TimeVariantsType, // null if doesn't exist
+  when: ?TimeVariantsType, // null if doesn't exist
   where: AirportType,
 };
 
@@ -62,7 +62,7 @@ export type PlaceType = {
   id: string,
   location: LocationType,
   numberOfAirports: number,
-  population: null | number,
+  population: ?number,
   name: string,
 };
 
@@ -72,11 +72,11 @@ export type AllowedBaggageType = {
 };
 
 export type BaggageType = {
-  height: null | number,
-  length: null | number,
-  width: null | number,
-  weight: null | number,
-  note: null | string,
+  height: ?number,
+  length: ?number,
+  width: ?number,
+  weight: ?number,
+  note: ?string,
 };
 
 export type LoginType = {
@@ -87,8 +87,8 @@ export type LoginType = {
 export type IdentityType = {
   email: string,
   emailVerified: boolean,
-  firstName: null | string,
-  lastName: null | string,
+  firstName: ?string,
+  lastName: ?string,
   login: string,
   userId: string,
 };
