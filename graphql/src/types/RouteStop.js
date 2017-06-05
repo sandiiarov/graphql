@@ -16,14 +16,14 @@ export default new GraphQLObjectType({
 
     time: {
       type: GraphQLDateTime,
-      resolve: ({ when }: ArrivalType): null | Date =>
-        when === null ? null : when.utc,
+      resolve: ({ when }: ArrivalType): ?Date =>
+        when == null ? null : when.utc, // intentional ==, can be null or undefined
     },
 
     localTime: {
       type: GraphQLDateTime,
-      resolve: ({ when }: ArrivalType): null | Date =>
-        when === null ? null : when.local,
+      resolve: ({ when }: ArrivalType): ?Date =>
+        when == null ? null : when.local, // intentional ==, can be null or undefined
     },
   },
 });

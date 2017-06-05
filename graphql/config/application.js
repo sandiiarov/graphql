@@ -12,9 +12,9 @@ export default {
           simple_token: simpleToken,
         },
       ),
-    allFlights: (queryParameters: null | Object = null) =>
+    allFlights: (queryParameters: ?Object = null) =>
       queryWithParameters('https://api.skypicker.com/flights', queryParameters),
-    allPlaces: (queryParameters: null | Object = null) =>
+    allPlaces: (queryParameters: ?Object = null) =>
       queryWithParameters('https://api.skypicker.com/places', queryParameters),
     login: 'https://auth.skypicker.com/v1/user.login',
     identity: 'https://auth.skypicker.com/v1/user.get',
@@ -27,10 +27,11 @@ export default {
 
 function queryWithParameters(
   absoluteUrl: string,
-  queryParameters: null | Object = null,
+  queryParameters: ?Object = null,
 ) {
   const urlObject = url.parse(absoluteUrl, true);
-  if (queryParameters !== null) {
+  // intentional ==, can be null or undefined
+  if (queryParameters != null) {
     urlObject.query = filterParameters(queryParameters);
   }
   return url.format(urlObject);

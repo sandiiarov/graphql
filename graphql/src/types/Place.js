@@ -37,7 +37,7 @@ export default new GraphQLObjectType({
 
     population: {
       type: GraphQLInt,
-      resolve: ({ population }: PlaceType): null | number => population,
+      resolve: ({ population }: PlaceType): ?number => population,
     },
   },
 });
