@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Airport type should have valid fields 1`] = `
+Object {
+  "city": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "city",
+    "resolve": [Function],
+    "type": "String!",
+  },
+  "code": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "code",
+    "resolve": [Function],
+    "type": "String!",
+  },
+}
+`;

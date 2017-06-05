@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FlightsSearchInput type should have valid fields 1`] = `
+Object {
+  "dateFrom": Object {
+    "name": "dateFrom",
+    "type": "Date!",
+  },
+  "dateTo": Object {
+    "name": "dateTo",
+    "type": "Date!",
+  },
+  "from": Object {
+    "name": "from",
+    "type": "String!",
+  },
+  "to": Object {
+    "name": "to",
+    "type": "String!",
+  },
+}
+`;
