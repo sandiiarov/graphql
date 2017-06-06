@@ -23,6 +23,20 @@ Object {
     "resolve": [Function],
     "type": "RouteStop!",
   },
+  "duration": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "duration",
+    "resolve": [Function],
+    "type": "Int",
+  },
+  "flightNumber": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "flightNumber",
+    "resolve": [Function],
+    "type": "Int",
+  },
   "id": Object {
     "args": Array [],
     "isDeprecated": false,

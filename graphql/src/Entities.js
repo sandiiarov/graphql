@@ -26,10 +26,10 @@ export type ArrivalType = {
 
 export type FlightType = {
   id: string,
+  airlines: Array<string>,
   arrival: ArrivalType,
   departure: DepartureType,
   legs: Array<LegType>,
-  airlines: Array<string>,
 };
 
 export type BookingsItemType = {

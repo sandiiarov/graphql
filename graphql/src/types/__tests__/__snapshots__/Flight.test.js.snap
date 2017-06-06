@@ -23,6 +23,13 @@ Object {
     "resolve": [Function],
     "type": "RouteStop!",
   },
+  "duration": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "duration",
+    "resolve": [Function],
+    "type": "Int",
+  },
   "legs": Object {
     "args": Array [],
     "isDeprecated": false,
