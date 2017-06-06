@@ -5,11 +5,13 @@ import {
   GraphQLNonNull,
   GraphQLID,
   GraphQLBoolean,
+  GraphQLInt,
 } from 'graphql';
 import { toGlobalId } from '../services/OpaqueIdentifier';
 import GraphQLRouteStop from './RouteStop';
 import GraphQLAirline from './Airline';
 import { createAirline } from '../dataLoaders/Airline';
+import { flightDurationInMinutes } from '../services/GraphqlResolvers';
 
 import type {
   ArrivalType,
@@ -40,6 +42,17 @@ export default new GraphQLObjectType({
     departure: {
       type: new GraphQLNonNull(GraphQLRouteStop),
       resolve: ({ departure }: LegType): DepartureType => departure,
+    },
+
+    duration: {
+      type: GraphQLInt,
+      resolve: ({ departure, arrival }: LegType): ?number =>
+        flightDurationInMinutes(departure, arrival),
+    },
+
+    flightNumber: {
+      type: GraphQLInt,
+      resolve: ({ flightNo }: LegType): number => flightNo,
     },
 
     recheckRequired: {
