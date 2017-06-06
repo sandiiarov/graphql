@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RouteStop type should have valid fields 1`] = `
+Object {
+  "airport": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "airport",
+    "resolve": [Function],
+    "type": "Airport!",
+  },
+  "localTime": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "localTime",
+    "resolve": [Function],
+    "type": "DateTime",
+  },
+  "time": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "time",
+    "resolve": [Function],
+    "type": "DateTime",
+  },
+}
+`;

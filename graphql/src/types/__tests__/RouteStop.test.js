@@ -2,23 +2,8 @@
 
 import GraphQLRouteStop from '../RouteStop';
 
-describe('airport field', () => {
-  const airport = GraphQLRouteStop.getFields().airport;
-  it('should be non-null Airport type', () => {
-    expect(airport.type.toString()).toBe('Airport!');
-  });
-});
-
-describe('time fields returns nullable DateTime types', () => {
-  const routeStopFields = GraphQLRouteStop.getFields();
-
-  it('for local time', () => {
-    expect(routeStopFields.localTime.type.toString()).toBe('DateTime');
-  });
-
-  it('for global time', () => {
-    expect(routeStopFields.time.type.toString()).toBe('DateTime');
-  });
+it('RouteStop type should have valid fields', () => {
+  expect(GraphQLRouteStop.getFields()).toMatchSnapshot();
 });
 
 describe('time fields are able to handle null input values', () => {

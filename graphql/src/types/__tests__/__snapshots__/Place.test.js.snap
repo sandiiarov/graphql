@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Place type should have valid fields 1`] = `
+Object {
+  "id": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "id",
+    "resolve": [Function],
+    "type": "ID!",
+  },
+  "location": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "location",
+    "resolve": [Function],
+    "type": "Location!",
+  },
+  "name": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "name",
+    "resolve": [Function],
+    "type": "String!",
+  },
+  "numberOfAirports": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "numberOfAirports",
+    "resolve": [Function],
+    "type": "Int!",
+  },
+  "population": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "population",
+    "resolve": [Function],
+    "type": "Int",
+  },
+}
+`;
