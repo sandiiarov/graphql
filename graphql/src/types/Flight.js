@@ -10,7 +10,7 @@ import {
 import GraphQLRouteStop from './RouteStop';
 import GraphQLLeg from './Leg';
 import GraphQLAirline from './Airline';
-import { createAirline } from '../dataLoaders/Airline';
+import type { GraphqlContextType } from '../services/GraphqlContext';
 import { flightDurationInMinutes } from '../services/GraphqlResolvers';
 
 import type {
@@ -26,8 +26,14 @@ export default new GraphQLObjectType({
   fields: {
     airlines: {
       type: new GraphQLList(GraphQLAirline),
-      resolve: ({ airlines }: FlightType): Array<AirlineType> =>
-        _.uniq(airlines).map(airlineCode => createAirline(airlineCode)),
+      resolve: async (
+        { airlines }: FlightType,
+        args: Object,
+        { dataLoader }: GraphqlContextType,
+      ): Promise<Array<?AirlineType>> =>
+        _.uniq(airlines).map(airlineCode =>
+          dataLoader.airline.load(airlineCode),
+        ),
     },
 
     arrival: {

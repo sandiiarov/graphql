@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Airline creation should create airline object 1`] = `
+exports[`Airline dataloader should load airlines 1`] = `
 Object {
   "code": "OK",
   "isLowCost": false,
@@ -8,3 +8,5 @@ Object {
   "name": "Czech Airlines",
 }
 `;
+
+exports[`Airline dataloader should load null for unknown airline 1`] = `null`;

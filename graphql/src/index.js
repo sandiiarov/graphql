@@ -23,7 +23,7 @@ const handler = (request: IncomingMessage, response: ServerResponse) => {
     graphiql: true,
     context: createContext(token),
     formatError(error) {
-      Logger.error(`${error.name}: ${error.message}`);
+      let errorMessage = `${error.name}: ${error.message}`;
 
       const originalError = error.originalError;
       if (originalError instanceof ProxiedError) {
@@ -31,8 +31,10 @@ const handler = (request: IncomingMessage, response: ServerResponse) => {
           statusCode: originalError.originStatusCode,
           url: originalError.originUrl,
         };
+        errorMessage += ` ${originalError.originUrl}`;
       }
 
+      Logger.error(errorMessage);
       return error;
     },
   })(request, response);

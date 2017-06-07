@@ -50,7 +50,7 @@ export type LegType = {
   flightNo: number,
   departure: DepartureType,
   arrival: ArrivalType,
-  airline: string, // type
+  airlineCode: string,
 };
 
 export type LocationType = {

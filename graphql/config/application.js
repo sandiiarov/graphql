@@ -18,6 +18,7 @@ export default {
       queryWithParameters('https://api.skypicker.com/places', queryParameters),
     login: 'https://auth.skypicker.com/v1/user.login',
     identity: 'https://auth.skypicker.com/v1/user.get',
+    airlines: 'https://api.skypicker.com/airlines?v=2',
   },
   auth: {
     basicToken: '***REMOVED***',

@@ -79,7 +79,7 @@ function sanitizeApiResponse(singleFlight: Object): FlightType {
           name: leg.cityTo,
         },
       },
-      airline: leg.airline,
+      airlineCode: leg.airline,
     })),
     airlines: singleFlight.airlines,
   };
