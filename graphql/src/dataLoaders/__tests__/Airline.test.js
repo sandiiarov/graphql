@@ -1,9 +1,19 @@
 // @flow
 
-import { createAirline } from '../Airline';
+import createAirlineLoader from '../Airline';
 
-describe('Airline creation', () => {
-  it('should create airline object', () => {
-    expect(createAirline('OK')).toMatchSnapshot();
+jest.mock('../../services/HttpRequest');
+
+describe('Airline dataloader', () => {
+  it('should load airlines', async () => {
+    const airlineLoader = createAirlineLoader();
+    const airline = await airlineLoader.load('OK');
+    expect(airline).toMatchSnapshot();
+  });
+
+  it('should load null for unknown airline', async () => {
+    const airlineLoader = createAirlineLoader();
+    const airline = await airlineLoader.load('NONE');
+    expect(airline).toMatchSnapshot();
   });
 });

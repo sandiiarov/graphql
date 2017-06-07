@@ -41,6 +41,7 @@ const mocksMap = {
     user_id: 21,
     token: 't0k3n',
   },
+  [config.restApiEndpoint.airlines]: require('../../dataLoaders/__tests__/__datasets__/airlines.json'),
 };
 /* eslint-enable */
 

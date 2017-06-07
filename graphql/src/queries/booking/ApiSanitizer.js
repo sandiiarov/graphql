@@ -13,7 +13,7 @@ export function sanitizeListItem(apiData: Object): BookingsItemType {
       flightNo: flight.flight_no,
       departure: parseRouteEndpoint(flight.departure),
       arrival: parseRouteEndpoint(flight.arrival),
-      airline: flight.airline.iata,
+      airlineCode: flight.airline.iata,
     })),
     authToken: apiData.auth_token,
   };

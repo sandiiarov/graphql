@@ -10,7 +10,7 @@ import {
 import { toGlobalId } from '../services/OpaqueIdentifier';
 import GraphQLRouteStop from './RouteStop';
 import GraphQLAirline from './Airline';
-import { createAirline } from '../dataLoaders/Airline';
+import type { GraphqlContextType } from '../services/GraphqlContext';
 import { flightDurationInMinutes } from '../services/GraphqlResolvers';
 
 import type {
@@ -31,7 +31,11 @@ export default new GraphQLObjectType({
 
     airline: {
       type: GraphQLAirline,
-      resolve: ({ airline }: LegType): AirlineType => createAirline(airline),
+      resolve: async (
+        { airlineCode }: LegType,
+        args: Object,
+        { dataLoader }: GraphqlContextType,
+      ): Promise<?AirlineType> => dataLoader.airline.load(airlineCode),
     },
 
     arrival: {
