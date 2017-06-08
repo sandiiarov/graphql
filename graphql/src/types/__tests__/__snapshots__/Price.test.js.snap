@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Price type should have valid fields 1`] = `
+Object {
+  "amount": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "amount",
+    "resolve": [Function],
+    "type": "Float",
+  },
+  "currency": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "currency",
+    "resolve": [Function],
+    "type": "String",
+  },
+}
+`;

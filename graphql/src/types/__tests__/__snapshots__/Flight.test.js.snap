@@ -37,5 +37,12 @@ Object {
     "resolve": [Function],
     "type": "[Leg!]!",
   },
+  "price": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "price",
+    "resolve": [Function],
+    "type": "Price",
+  },
 }
 `;

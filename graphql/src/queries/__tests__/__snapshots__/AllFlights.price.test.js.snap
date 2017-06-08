@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`all flights query should return flight prices 1`] = `
+Object {
+  "data": Object {
+    "allFlights": Array [
+      Object {
+        "price": Object {
+          "amount": 282,
+          "currency": "EUR",
+        },
+      },
+      Object {
+        "price": Object {
+          "amount": 285,
+          "currency": "EUR",
+        },
+      },
+      Object {
+        "price": Object {
+          "amount": 287,
+          "currency": "EUR",
+        },
+      },
+    ],
+  },
+}
+`;

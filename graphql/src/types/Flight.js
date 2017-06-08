@@ -10,6 +10,7 @@ import {
 import GraphQLRouteStop from './RouteStop';
 import GraphQLLeg from './Leg';
 import GraphQLAirline from './Airline';
+import GraphQLPrice from './Price';
 import type { GraphqlContextType } from '../services/GraphqlContext';
 import { flightDurationInMinutes } from '../services/GraphqlResolvers';
 
@@ -19,6 +20,7 @@ import type {
   FlightType,
   DepartureType,
   LegType,
+  PriceType,
 } from '../Entities';
 
 export default new GraphQLObjectType({
@@ -55,6 +57,11 @@ export default new GraphQLObjectType({
     legs: {
       type: new GraphQLNonNull(new GraphQLList(new GraphQLNonNull(GraphQLLeg))),
       resolve: ({ legs }: FlightType): Array<LegType> => legs,
+    },
+
+    price: {
+      type: GraphQLPrice,
+      resolve: ({ price }: FlightType): PriceType => price,
     },
   },
 });
