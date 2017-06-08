@@ -9,7 +9,9 @@ import config from '../../config/application';
 import GraphQLFlight from '../types/Flight';
 import FlightsSearchInput from '../types/FlightsSearchInput';
 import FlightsOptionsInput from '../types/FlightsOptionsInput';
-import type { FlightType, LegType } from '../Entities';
+import type { FlightType } from '../Entities';
+import { fetchFlightsFallback } from './allFlights/Fallback';
+import { sanitizeApiResponse } from './allFlights/ApiSanitizer';
 
 export default {
   type: new GraphQLNonNull(new GraphQLList(new GraphQLNonNull(GraphQLFlight))),
@@ -38,7 +40,7 @@ export default {
     );
 
     if (allFlights._results === 0) {
-      allFlights = await fallBack(args);
+      allFlights = await fetchFlightsFallback(args);
     }
 
     const flightsMetadata = {
@@ -50,112 +52,7 @@ export default {
   },
 };
 
-async function fallBack(args: Object) {
-  const { from, to } = await fetchLocationIds(args.search.from, args.search.to);
-
-  return request(
-    config.restApiEndpoint.allFlights({
-      flyFrom: from,
-      to: to,
-      dateFrom: dateFns.format(new Date(args.search.dateFrom), 'DD/MM/YYYY'),
-      dateTo: dateFns.format(new Date(args.search.dateTo), 'DD/MM/YYYY'),
-    }),
-  );
-}
-
-async function fetchLocationIds(from: string, to: string) {
-  const [locationsFrom, locationsTo] = await Promise.all([
-    // Location from
-    request(
-      config.restApiEndpoint.allLocations({
-        term: from,
-      }),
-    ),
-    // Location to
-    request(
-      config.restApiEndpoint.allLocations({
-        term: to,
-      }),
-    ),
-  ]);
-
-  if (locationsFrom.locations.length === 0) {
-    throw new Error(`Origin '${from}' has not been found.`);
-  } else if (locationsTo.locations.length === 0) {
-    throw new Error(`Destination '${to}' has not been found.`);
-  }
-
-  return {
-    from: locationsFrom.locations[0].id,
-    to: locationsTo.locations[0].id,
-  };
-}
-
-type FlightsMetadataType = {
-  currency: string,
-};
-
-function sanitizeApiResponse(
-  singleFlight: Object,
-  flightsMetadata: FlightsMetadataType,
-): FlightType {
-  return {
-    id: singleFlight.id,
-    airlines: singleFlight.airlines,
-    arrival: {
-      when: {
-        utc: new Date(singleFlight.aTimeUTC * 1000),
-        local: new Date(singleFlight.aTime * 1000),
-      },
-      where: {
-        code: singleFlight.flyTo,
-        cityName: singleFlight.cityTo,
-      },
-    },
-    departure: {
-      when: {
-        utc: new Date(singleFlight.dTimeUTC * 1000),
-        local: new Date(singleFlight.dTime * 1000),
-      },
-      where: {
-        code: singleFlight.flyFrom,
-        cityName: singleFlight.cityFrom,
-      },
-    },
-    legs: singleFlight.route.map((leg): LegType => ({
-      id: leg.id,
-      recheckRequired: leg.bags_recheck_required,
-      flightNo: leg.flight_no,
-      departure: {
-        when: {
-          utc: new Date(leg.dTimeUTC * 1000),
-          local: new Date(leg.dTime * 1000),
-        },
-        where: {
-          code: leg.flyFrom,
-          cityName: leg.cityFrom,
-        },
-      },
-      arrival: {
-        when: {
-          utc: new Date(leg.aTimeUTC * 1000),
-          local: new Date(leg.aTime * 1000),
-        },
-        where: {
-          code: leg.flyTo,
-          cityName: leg.cityTo,
-        },
-      },
-      airlineCode: leg.airline,
-    })),
-    price: {
-      amount: singleFlight.price,
-      currency: flightsMetadata.currency,
-    },
-  };
-}
-
-function validateArgs(args) {
+function validateArgs(args: Object) {
   // Validate dateFrom starts before dateTo
   const dateFrom = new Date(args.search.dateFrom);
   const dateTo = new Date(args.search.dateTo);
