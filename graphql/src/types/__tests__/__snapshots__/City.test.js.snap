@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`City type should have valid fields 1`] = `
+Object {
+  "name": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "name",
+    "resolve": [Function],
+    "type": "String",
+  },
+}
+`;

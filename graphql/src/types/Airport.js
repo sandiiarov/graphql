@@ -2,14 +2,17 @@
 
 import { GraphQLObjectType, GraphQLNonNull, GraphQLString } from 'graphql';
 
-import type { AirportType } from '../Entities';
+import type { AirportType, CityType } from '../Entities';
+import GraphQLCity from './City';
 
 export default new GraphQLObjectType({
   name: 'Airport',
   fields: {
     city: {
-      type: new GraphQLNonNull(GraphQLString),
-      resolve: ({ name }: AirportType): string => name,
+      type: GraphQLCity,
+      resolve: ({ cityName }: AirportType): CityType => ({
+        name: cityName,
+      }),
     },
 
     code: {

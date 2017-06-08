@@ -6,7 +6,7 @@
 
 export type AirportType = {
   code: string,
-  name: string,
+  cityName: string,
 };
 
 type TimeVariantsType = {
@@ -99,6 +99,10 @@ export type AirlineType = {
   logoUrl: string,
   code: string,
   isLowCost: boolean,
+};
+
+export type CityType = {
+  name: string,
 };
 
 export type PriceType = {

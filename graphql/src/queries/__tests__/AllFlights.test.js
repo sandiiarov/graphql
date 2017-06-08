@@ -13,11 +13,11 @@ describe('all flights query', () => {
     query ($input: FlightsSearchInput!) {
       allFlights(search: $input) {
         arrival {
-          airport { city, code }
+          airport { city { name }, code }
           time, localTime
         }
         departure {
-          airport { city, code }
+          airport { city { name }, code }
           time, localTime
         }
         airlines {

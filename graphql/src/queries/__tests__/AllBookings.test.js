@@ -26,7 +26,7 @@ describe('arrival query', () => {
     const arrivalQuery = `{
       allBookings {
         arrival {
-          airport { city, code }
+          airport { city { name }, code }
           time, localTime
         }
       }
@@ -40,7 +40,7 @@ describe('departure query', () => {
     const departureQuery = `{
       allBookings {
         departure {
-          airport { city, code }
+          airport { city { name }, code }
           time, localTime
         }
       }
@@ -55,11 +55,11 @@ describe('flights query', () => {
       allBookings {
         legs {
           arrival {
-            airport { city, code }
+            airport { city { name }, code }
             time, localTime
           }
           departure {
-            airport { city, code }
+            airport { city { name }, code }
             time, localTime
           }
         }

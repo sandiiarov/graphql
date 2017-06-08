@@ -55,7 +55,7 @@ function sanitizeApiResponse(
       },
       where: {
         code: singleFlight.flyTo,
-        name: singleFlight.cityTo,
+        cityName: singleFlight.cityTo,
       },
     },
     departure: {
@@ -65,7 +65,7 @@ function sanitizeApiResponse(
       },
       where: {
         code: singleFlight.flyFrom,
-        name: singleFlight.cityFrom,
+        cityName: singleFlight.cityFrom,
       },
     },
     legs: singleFlight.route.map((leg): LegType => ({
@@ -79,7 +79,7 @@ function sanitizeApiResponse(
         },
         where: {
           code: leg.flyFrom,
-          name: leg.cityFrom,
+          cityName: leg.cityFrom,
         },
       },
       arrival: {
@@ -89,7 +89,7 @@ function sanitizeApiResponse(
         },
         where: {
           code: leg.flyTo,
-          name: leg.cityTo,
+          cityName: leg.cityTo,
         },
       },
       airlineCode: leg.airline,

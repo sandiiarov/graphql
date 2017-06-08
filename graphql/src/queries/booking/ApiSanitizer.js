@@ -67,7 +67,7 @@ function parseRouteEndpoint(data: Object): Object {
     when: parseWhen(data.when),
     where: {
       code: data.where.code,
-      name: data.where.name,
+      cityName: data.where.name,
     },
   };
 }

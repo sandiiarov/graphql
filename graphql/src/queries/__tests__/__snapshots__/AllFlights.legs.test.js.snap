@@ -9,7 +9,9 @@ Object {
           Object {
             "arrival": Object {
               "airport": Object {
-                "city": "Stockholm",
+                "city": Object {
+                  "name": "Stockholm",
+                },
                 "code": "ARN",
               },
               "localTime": "2017-09-06T13:40:00.000Z",
@@ -17,7 +19,9 @@ Object {
             },
             "departure": Object {
               "airport": Object {
-                "city": "Prague",
+                "city": Object {
+                  "name": "Prague",
+                },
                 "code": "PRG",
               },
               "localTime": "2017-09-06T11:40:00.000Z",
@@ -29,7 +33,9 @@ Object {
           Object {
             "arrival": Object {
               "airport": Object {
-                "city": "Los Angeles",
+                "city": Object {
+                  "name": "Los Angeles",
+                },
                 "code": "LAX",
               },
               "localTime": "2017-09-07T13:45:00.000Z",
@@ -37,7 +43,9 @@ Object {
             },
             "departure": Object {
               "airport": Object {
-                "city": "Stockholm",
+                "city": Object {
+                  "name": "Stockholm",
+                },
                 "code": "ARN",
               },
               "localTime": "2017-09-07T11:45:00.000Z",
@@ -49,7 +57,9 @@ Object {
           Object {
             "arrival": Object {
               "airport": Object {
-                "city": "Mexico City",
+                "city": Object {
+                  "name": "Mexico City",
+                },
                 "code": "MEX",
               },
               "localTime": "2017-09-08T12:45:00.000Z",
@@ -57,7 +67,9 @@ Object {
             },
             "departure": Object {
               "airport": Object {
-                "city": "Los Angeles",
+                "city": Object {
+                  "name": "Los Angeles",
+                },
                 "code": "LAX",
               },
               "localTime": "2017-09-08T07:00:00.000Z",
@@ -73,7 +85,9 @@ Object {
           Object {
             "arrival": Object {
               "airport": Object {
-                "city": "Stockholm",
+                "city": Object {
+                  "name": "Stockholm",
+                },
                 "code": "ARN",
               },
               "localTime": "2017-09-06T13:40:00.000Z",
@@ -81,7 +95,9 @@ Object {
             },
             "departure": Object {
               "airport": Object {
-                "city": "Prague",
+                "city": Object {
+                  "name": "Prague",
+                },
                 "code": "PRG",
               },
               "localTime": "2017-09-06T11:40:00.000Z",
@@ -93,7 +109,9 @@ Object {
           Object {
             "arrival": Object {
               "airport": Object {
-                "city": "Los Angeles",
+                "city": Object {
+                  "name": "Los Angeles",
+                },
                 "code": "LAX",
               },
               "localTime": "2017-09-07T13:45:00.000Z",
@@ -101,7 +119,9 @@ Object {
             },
             "departure": Object {
               "airport": Object {
-                "city": "Stockholm",
+                "city": Object {
+                  "name": "Stockholm",
+                },
                 "code": "ARN",
               },
               "localTime": "2017-09-07T11:45:00.000Z",
@@ -113,7 +133,9 @@ Object {
           Object {
             "arrival": Object {
               "airport": Object {
-                "city": "San Francisco",
+                "city": Object {
+                  "name": "San Francisco",
+                },
                 "code": "SFO",
               },
               "localTime": "2017-09-07T20:50:00.000Z",
@@ -121,7 +143,9 @@ Object {
             },
             "departure": Object {
               "airport": Object {
-                "city": "Los Angeles",
+                "city": Object {
+                  "name": "Los Angeles",
+                },
                 "code": "LAX",
               },
               "localTime": "2017-09-07T19:30:00.000Z",
@@ -133,7 +157,9 @@ Object {
           Object {
             "arrival": Object {
               "airport": Object {
-                "city": "Mexico City",
+                "city": Object {
+                  "name": "Mexico City",
+                },
                 "code": "MEX",
               },
               "localTime": "2017-09-08T05:30:00.000Z",
@@ -141,7 +167,9 @@ Object {
             },
             "departure": Object {
               "airport": Object {
-                "city": "San Francisco",
+                "city": Object {
+                  "name": "San Francisco",
+                },
                 "code": "SFO",
               },
               "localTime": "2017-09-07T23:15:00.000Z",
@@ -157,7 +185,9 @@ Object {
           Object {
             "arrival": Object {
               "airport": Object {
-                "city": "Stockholm",
+                "city": Object {
+                  "name": "Stockholm",
+                },
                 "code": "ARN",
               },
               "localTime": "2017-09-06T15:55:00.000Z",
@@ -165,7 +195,9 @@ Object {
             },
             "departure": Object {
               "airport": Object {
-                "city": "Prague",
+                "city": Object {
+                  "name": "Prague",
+                },
                 "code": "PRG",
               },
               "localTime": "2017-09-06T14:05:00.000Z",
@@ -177,7 +209,9 @@ Object {
           Object {
             "arrival": Object {
               "airport": Object {
-                "city": "Los Angeles",
+                "city": Object {
+                  "name": "Los Angeles",
+                },
                 "code": "LAX",
               },
               "localTime": "2017-09-07T13:45:00.000Z",
@@ -185,7 +219,9 @@ Object {
             },
             "departure": Object {
               "airport": Object {
-                "city": "Stockholm",
+                "city": Object {
+                  "name": "Stockholm",
+                },
                 "code": "ARN",
               },
               "localTime": "2017-09-07T11:45:00.000Z",
@@ -197,7 +233,9 @@ Object {
           Object {
             "arrival": Object {
               "airport": Object {
-                "city": "Mexico City",
+                "city": Object {
+                  "name": "Mexico City",
+                },
                 "code": "MEX",
               },
               "localTime": "2017-09-08T12:45:00.000Z",
@@ -205,7 +243,9 @@ Object {
             },
             "departure": Object {
               "airport": Object {
-                "city": "Los Angeles",
+                "city": Object {
+                  "name": "Los Angeles",
+                },
                 "code": "LAX",
               },
               "localTime": "2017-09-08T07:00:00.000Z",

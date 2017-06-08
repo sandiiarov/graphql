@@ -12,17 +12,17 @@ describe('single booking query', () => {
     const arrivalQuery = `{
       booking(id: 2707251) {
         arrival {
-          airport { city, code }
+          airport { city { name }, code }
         }
         departure {
-          airport { city, code }
+          airport { city { name }, code }
         }
         legs {
           arrival {
-            airport { city, code }
+            airport { city { name }, code }
           }
           departure {
-            airport { city, code }
+            airport { city { name }, code }
           }
         }
       }

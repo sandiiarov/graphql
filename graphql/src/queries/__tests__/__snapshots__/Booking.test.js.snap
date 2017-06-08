@@ -6,13 +6,17 @@ Object {
     "booking": Object {
       "arrival": Object {
         "airport": Object {
-          "city": "Paris",
+          "city": Object {
+            "name": "Paris",
+          },
           "code": "CDG",
         },
       },
       "departure": Object {
         "airport": Object {
-          "city": "London",
+          "city": Object {
+            "name": "London",
+          },
           "code": "LGW",
         },
       },
@@ -20,13 +24,17 @@ Object {
         Object {
           "arrival": Object {
             "airport": Object {
-              "city": "Paris",
+              "city": Object {
+                "name": "Paris",
+              },
               "code": "CDG",
             },
           },
           "departure": Object {
             "airport": Object {
-              "city": "London",
+              "city": Object {
+                "name": "London",
+              },
               "code": "LGW",
             },
           },

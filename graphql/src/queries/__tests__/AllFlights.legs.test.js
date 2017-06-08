@@ -12,13 +12,13 @@ describe('all flights query with legs', () => {
           recheckRequired
           arrival {
             airport {
-              city, code
+              city { name }, code
             }
             time, localTime
           }
           departure {
             airport {
-              city, code
+              city { name }, code
             }
             time, localTime
           }
