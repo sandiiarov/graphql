@@ -7,7 +7,7 @@ Object {
     "isDeprecated": false,
     "name": "city",
     "resolve": [Function],
-    "type": "String!",
+    "type": "City",
   },
   "code": Object {
     "args": Array [],

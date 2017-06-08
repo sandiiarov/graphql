@@ -27,7 +27,9 @@ Object {
         ],
         "arrival": Object {
           "airport": Object {
-            "city": "Mexico City",
+            "city": Object {
+              "name": "Mexico City",
+            },
             "code": "MEX",
           },
           "localTime": "2017-09-08T12:45:00.000Z",
@@ -35,7 +37,9 @@ Object {
         },
         "departure": Object {
           "airport": Object {
-            "city": "Prague",
+            "city": Object {
+              "name": "Prague",
+            },
             "code": "PRG",
           },
           "localTime": "2017-09-06T11:40:00.000Z",
@@ -65,7 +69,9 @@ Object {
         ],
         "arrival": Object {
           "airport": Object {
-            "city": "Mexico City",
+            "city": Object {
+              "name": "Mexico City",
+            },
             "code": "MEX",
           },
           "localTime": "2017-09-08T05:30:00.000Z",
@@ -73,7 +79,9 @@ Object {
         },
         "departure": Object {
           "airport": Object {
-            "city": "Prague",
+            "city": Object {
+              "name": "Prague",
+            },
             "code": "PRG",
           },
           "localTime": "2017-09-06T11:40:00.000Z",
@@ -103,7 +111,9 @@ Object {
         ],
         "arrival": Object {
           "airport": Object {
-            "city": "Mexico City",
+            "city": Object {
+              "name": "Mexico City",
+            },
             "code": "MEX",
           },
           "localTime": "2017-09-08T12:45:00.000Z",
@@ -111,7 +121,9 @@ Object {
         },
         "departure": Object {
           "airport": Object {
-            "city": "Prague",
+            "city": Object {
+              "name": "Prague",
+            },
             "code": "PRG",
           },
           "localTime": "2017-09-06T14:05:00.000Z",

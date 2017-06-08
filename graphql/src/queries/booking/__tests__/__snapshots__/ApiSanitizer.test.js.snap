@@ -5,16 +5,16 @@ Object {
   "arrival": Object {
     "when": null,
     "where": Object {
+      "cityName": "Gdansk",
       "code": "GDN",
-      "name": "Gdansk",
     },
   },
   "authToken": "b9cb406d-f797-434c-bc21-a0612b92f201",
   "departure": Object {
     "when": null,
     "where": Object {
+      "cityName": "Rzeszow",
       "code": "RZE",
-      "name": "Rzeszow",
     },
   },
   "id": 2968389,
@@ -27,8 +27,8 @@ Object {
           "utc": 2017-09-11T07:55:00.000Z,
         },
         "where": Object {
+          "cityName": "Warsaw",
           "code": "WAW",
-          "name": "Warsaw",
         },
       },
       "departure": Object {
@@ -37,8 +37,8 @@ Object {
           "utc": 2017-09-11T07:05:00.000Z,
         },
         "where": Object {
+          "cityName": "Rzeszow",
           "code": "RZE",
-          "name": "Rzeszow",
         },
       },
       "flightNo": 3806,
@@ -53,8 +53,8 @@ Object {
           "utc": 2017-09-11T09:40:00.000Z,
         },
         "where": Object {
+          "cityName": "Gdansk",
           "code": "GDN",
-          "name": "Gdansk",
         },
       },
       "departure": Object {
@@ -63,8 +63,8 @@ Object {
           "utc": 2017-09-11T08:45:00.000Z,
         },
         "where": Object {
+          "cityName": "Warsaw",
           "code": "WAW",
-          "name": "Warsaw",
         },
       },
       "flightNo": 3835,
@@ -107,16 +107,16 @@ Object {
   "arrival": Object {
     "when": null,
     "where": Object {
+      "cityName": "Gdansk",
       "code": "GDN",
-      "name": "Gdansk",
     },
   },
   "authToken": "b9cb406d-f797-434c-bc21-a0612b92f201",
   "departure": Object {
     "when": null,
     "where": Object {
+      "cityName": "Rzeszow",
       "code": "RZE",
-      "name": "Rzeszow",
     },
   },
   "id": 2968389,
@@ -129,8 +129,8 @@ Object {
           "utc": 2017-09-11T07:55:00.000Z,
         },
         "where": Object {
+          "cityName": "Warsaw",
           "code": "WAW",
-          "name": "Warsaw",
         },
       },
       "departure": Object {
@@ -139,8 +139,8 @@ Object {
           "utc": 2017-09-11T07:05:00.000Z,
         },
         "where": Object {
+          "cityName": "Rzeszow",
           "code": "RZE",
-          "name": "Rzeszow",
         },
       },
       "flightNo": 3806,
@@ -155,8 +155,8 @@ Object {
           "utc": 2017-09-11T09:40:00.000Z,
         },
         "where": Object {
+          "cityName": "Gdansk",
           "code": "GDN",
-          "name": "Gdansk",
         },
       },
       "departure": Object {
@@ -165,8 +165,8 @@ Object {
           "utc": 2017-09-11T08:45:00.000Z,
         },
         "where": Object {
+          "cityName": "Warsaw",
           "code": "WAW",
-          "name": "Warsaw",
         },
       },
       "flightNo": 3835,
