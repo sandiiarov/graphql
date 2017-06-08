@@ -1,0 +1,128 @@
+{
+  "locations": [
+    {
+      "id": "MEX",
+      "name": "Mexico City International",
+      "slug": "mexico-city-international-mexico-city-mexico",
+      "alternative_names": [],
+      "rank": 1,
+      "timezone": "America\/Mexico_City",
+      "city": {
+        "id": "mexico-city_mx",
+        "name": "Mexico City",
+        "slug": "mexico-city-mexico",
+        "subdivision": null,
+        "autonomous_territory": null,
+        "country": {
+          "id": "MX",
+          "name": "Mexico",
+          "slug": "mexico"
+        }
+      },
+      "location": {
+        "lat": 19.4363889,
+        "lon": -99.072222
+      },
+      "type": "airport"
+    },
+    {
+      "id": "mexico-city_mx",
+      "name": "Mexico City",
+      "slug": "mexico-city-mexico",
+      "code": "MEX",
+      "alternative_names": [],
+      "rank": 3,
+      "timezone": "America\/Mexico_City",
+      "population": null,
+      "airports": 2,
+      "subdivision": null,
+      "autonomous_territory": null,
+      "country": {
+        "id": "MX",
+        "name": "Mexico",
+        "slug": "mexico"
+      },
+      "location": {
+        "lat": 19.2464696,
+        "lon": -99.1013498
+      },
+      "type": "city"
+    },
+    {
+      "id": "MX",
+      "name": "Mexico",
+      "slug": "mexico",
+      "alternative_names": [],
+      "rank": 127,
+      "type": "country"
+    },
+    {
+      "id": "NM_US",
+      "name": "New Mexico",
+      "slug": "new-mexico-united-states",
+      "code": "NM",
+      "alternative_names": [],
+      "rank": 127,
+      "country": {
+        "id": "US",
+        "name": "United States",
+        "slug": "united-states"
+      },
+      "type": "subdivision"
+    },
+    {
+      "id": "MXL",
+      "name": "Mexicali International",
+      "slug": "mexicali-international-mexicali-mexico",
+      "alternative_names": [],
+      "rank": 22,
+      "timezone": "America\/Tijuana",
+      "city": {
+        "id": "mexicali_mx",
+        "name": "Mexicali",
+        "slug": "mexicali-mexico",
+        "subdivision": null,
+        "autonomous_territory": null,
+        "country": {
+          "id": "MX",
+          "name": "Mexico",
+          "slug": "mexico"
+        }
+      },
+      "location": {
+        "lat": 32.6305556,
+        "lon": -115.24167
+      },
+      "type": "airport"
+    },
+    {
+      "id": "mexicali_mx",
+      "name": "Mexicali",
+      "slug": "mexicali-mexico",
+      "code": "MXL",
+      "alternative_names": [],
+      "rank": 47,
+      "timezone": "America\/Tijuana",
+      "population": null,
+      "airports": 1,
+      "subdivision": null,
+      "autonomous_territory": null,
+      "country": {
+        "id": "MX",
+        "name": "Mexico",
+        "slug": "mexico"
+      },
+      "location": {
+        "lat": 32.6245389,
+        "lon": -115.4522623
+      },
+      "type": "city"
+    }
+  ],
+  "meta": {
+    "locale": {
+      "code": "en-US",
+      "status": "Locale not specified, using default."
+    }
+  }
+}

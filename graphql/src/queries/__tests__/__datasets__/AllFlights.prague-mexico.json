@@ -1,0 +1,23 @@
+{
+  "search_params": {
+    "to_type": "airport",
+    "flyFrom_type": "airport",
+    "seats": {
+      "infants": 0,
+      "passengers": 1,
+      "adults": 1,
+      "children": 0
+    }
+  },
+  "_results": 0,
+  "connections": [],
+  "currency": "EUR",
+  "currency_rate": 1.0,
+  "all_stopover_airports": [],
+  "data": [],
+  "ref_tasks": {},
+  "refresh": [],
+  "del": 0,
+  "all_airlines": [],
+  "time": 1
+}
