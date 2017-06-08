@@ -28,13 +28,26 @@ export default {
       }),
     );
 
-    return allFlights.data.map(flight => sanitizeApiResponse(flight));
+    const flightsMetadata = {
+      currency: allFlights.currency,
+    };
+    return allFlights.data.map(flight =>
+      sanitizeApiResponse(flight, flightsMetadata),
+    );
   },
 };
 
-function sanitizeApiResponse(singleFlight: Object): FlightType {
+type FlightsMetadataType = {
+  currency: string,
+};
+
+function sanitizeApiResponse(
+  singleFlight: Object,
+  flightsMetadata: FlightsMetadataType,
+): FlightType {
   return {
     id: singleFlight.id,
+    airlines: singleFlight.airlines,
     arrival: {
       when: {
         utc: new Date(singleFlight.aTimeUTC * 1000),
@@ -81,7 +94,10 @@ function sanitizeApiResponse(singleFlight: Object): FlightType {
       },
       airlineCode: leg.airline,
     })),
-    airlines: singleFlight.airlines,
+    price: {
+      amount: singleFlight.price,
+      currency: flightsMetadata.currency,
+    },
   };
 }
 
