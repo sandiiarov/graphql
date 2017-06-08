@@ -7,12 +7,6 @@ Object {
       Object {
         "airlines": Array [
           Object {
-            "code": "OK",
-            "isLowCost": false,
-            "logoUrl": "https://images.kiwi.com/airlines/64/OK.png",
-            "name": "Czech Airlines",
-          },
-          Object {
             "code": "DY",
             "isLowCost": true,
             "logoUrl": "https://images.kiwi.com/airlines/64/DY.png",
@@ -32,8 +26,8 @@ Object {
             },
             "code": "MEX",
           },
-          "localTime": "2017-09-08T12:45:00.000Z",
-          "time": "2017-09-08T17:45:00.000Z",
+          "localTime": "2017-09-01T21:50:00.000Z",
+          "time": "2017-09-02T02:50:00.000Z",
         },
         "departure": Object {
           "airport": Object {
@@ -42,8 +36,8 @@ Object {
             },
             "code": "PRG",
           },
-          "localTime": "2017-09-06T11:40:00.000Z",
-          "time": "2017-09-06T09:40:00.000Z",
+          "localTime": "2017-08-30T21:55:00.000Z",
+          "time": "2017-08-30T19:55:00.000Z",
         },
       },
       Object {
@@ -61,10 +55,10 @@ Object {
             "name": "Norwegian",
           },
           Object {
-            "code": "UA",
-            "isLowCost": false,
-            "logoUrl": "https://images.kiwi.com/airlines/64/UA.png",
-            "name": "United Airlines",
+            "code": "4O",
+            "isLowCost": true,
+            "logoUrl": "https://images.kiwi.com/airlines/64/4O.png",
+            "name": "Interjet (ABC Aerolineas)",
           },
         ],
         "arrival": Object {
@@ -74,8 +68,8 @@ Object {
             },
             "code": "MEX",
           },
-          "localTime": "2017-09-08T05:30:00.000Z",
-          "time": "2017-09-08T10:30:00.000Z",
+          "localTime": "2017-09-08T16:05:00.000Z",
+          "time": "2017-09-08T21:05:00.000Z",
         },
         "departure": Object {
           "airport": Object {
@@ -91,22 +85,16 @@ Object {
       Object {
         "airlines": Array [
           Object {
-            "code": "SK",
-            "isLowCost": false,
-            "logoUrl": "https://images.kiwi.com/airlines/64/SK.png",
-            "name": "SAS",
-          },
-          Object {
             "code": "DY",
             "isLowCost": true,
             "logoUrl": "https://images.kiwi.com/airlines/64/DY.png",
             "name": "Norwegian",
           },
           Object {
-            "code": "UA",
-            "isLowCost": false,
-            "logoUrl": "https://images.kiwi.com/airlines/64/UA.png",
-            "name": "United Airlines",
+            "code": "4O",
+            "isLowCost": true,
+            "logoUrl": "https://images.kiwi.com/airlines/64/4O.png",
+            "name": "Interjet (ABC Aerolineas)",
           },
         ],
         "arrival": Object {
@@ -116,8 +104,8 @@ Object {
             },
             "code": "MEX",
           },
-          "localTime": "2017-09-08T12:45:00.000Z",
-          "time": "2017-09-08T17:45:00.000Z",
+          "localTime": "2017-09-08T16:05:00.000Z",
+          "time": "2017-09-08T21:05:00.000Z",
         },
         "departure": Object {
           "airport": Object {
@@ -126,8 +114,8 @@ Object {
             },
             "code": "PRG",
           },
-          "localTime": "2017-09-06T14:05:00.000Z",
-          "time": "2017-09-06T12:05:00.000Z",
+          "localTime": "2017-09-06T12:25:00.000Z",
+          "time": "2017-09-06T10:25:00.000Z",
         },
       },
     ],

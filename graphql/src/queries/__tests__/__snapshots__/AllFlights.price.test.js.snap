@@ -6,19 +6,19 @@ Object {
     "allFlights": Array [
       Object {
         "price": Object {
-          "amount": 282,
+          "amount": 277,
           "currency": "EUR",
         },
       },
       Object {
         "price": Object {
-          "amount": 285,
+          "amount": 294,
           "currency": "EUR",
         },
       },
       Object {
         "price": Object {
-          "amount": 287,
+          "amount": 300,
           "currency": "EUR",
         },
       },
