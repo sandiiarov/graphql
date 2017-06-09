@@ -54,14 +54,14 @@ export type LegType = {
   airlineCode: string,
 };
 
-export type LocationType = {
+export type CoordinatesType = {
   latitude: number,
   longitude: number,
 };
 
 export type PlaceType = {
   id: string,
-  location: LocationType,
+  location: CoordinatesType,
   numberOfAirports: number,
   population: ?number,
   name: string,
@@ -108,4 +108,24 @@ export type CityType = {
 export type PriceType = {
   amount: number,
   currency: string,
+};
+
+export type LocationType = {
+  locationId: string,
+  name: string,
+  code: string,
+  slug: string,
+  timezone: string,
+  location: CoordinatesType,
+  type: string,
+  city: ?LocationAreaType,
+  subdivision: ?LocationAreaType,
+  country: ?LocationAreaType,
+};
+
+export type LocationAreaType = {
+  locationId: string,
+  name: string,
+  slug: string,
+  code: string,
 };

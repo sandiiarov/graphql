@@ -14,7 +14,7 @@ Object {
     "isDeprecated": false,
     "name": "location",
     "resolve": [Function],
-    "type": "Location!",
+    "type": "Coordinates!",
   },
   "name": Object {
     "args": Array [],

@@ -22,6 +22,7 @@ export default {
     );
     return response.map((place): PlaceType => sanitizeApiResponse(place));
   },
+  deprecationReason: 'Places are no longer supported. Use allLocations instead.',
 };
 
 function sanitizeApiResponse(singlePlace: Object): PlaceType {

@@ -8,9 +8,9 @@ import {
   GraphQLInt,
 } from 'graphql';
 import { toGlobalId } from '../services/OpaqueIdentifier';
-import GraphQLLocation from './Location';
+import GraphQLCoordinates from './Coordinates';
 
-import type { LocationType, PlaceType } from '../Entities';
+import type { CoordinatesType, PlaceType } from '../Entities';
 
 export default new GraphQLObjectType({
   name: 'Place',
@@ -21,8 +21,8 @@ export default new GraphQLObjectType({
     },
 
     location: {
-      type: new GraphQLNonNull(GraphQLLocation),
-      resolve: ({ location }: PlaceType): LocationType => location,
+      type: new GraphQLNonNull(GraphQLCoordinates),
+      resolve: ({ location }: PlaceType): CoordinatesType => location,
     },
 
     name: {

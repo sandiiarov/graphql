@@ -42,6 +42,7 @@ const mocksMap = {
     token: 't0k3n',
   },
   [config.restApiEndpoint.airlines]: require('../../dataLoaders/__tests__/__datasets__/airlines.json'),
+  [config.restApiEndpoint.allLocations({ term: 'Prague'})]: require('../../queries/__tests__/__datasets__/AllLocations.prague.json'),
 };
 /* eslint-enable */
 
