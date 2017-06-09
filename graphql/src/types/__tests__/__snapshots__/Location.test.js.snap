@@ -2,19 +2,75 @@
 
 exports[`Location type should have valid fields 1`] = `
 Object {
-  "latitude": Object {
+  "city": Object {
     "args": Array [],
     "isDeprecated": false,
-    "name": "latitude",
+    "name": "city",
     "resolve": [Function],
-    "type": "Float",
+    "type": "LocationArea",
   },
-  "longitude": Object {
+  "code": Object {
     "args": Array [],
     "isDeprecated": false,
-    "name": "longitude",
+    "name": "code",
     "resolve": [Function],
-    "type": "Float",
+    "type": "String",
+  },
+  "country": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "country",
+    "resolve": [Function],
+    "type": "LocationArea",
+  },
+  "location": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "location",
+    "resolve": [Function],
+    "type": "Coordinates",
+  },
+  "locationId": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "locationId",
+    "resolve": [Function],
+    "type": "String",
+  },
+  "name": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "name",
+    "resolve": [Function],
+    "type": "String",
+  },
+  "slug": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "slug",
+    "resolve": [Function],
+    "type": "String",
+  },
+  "subdivision": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "subdivision",
+    "resolve": [Function],
+    "type": "LocationArea",
+  },
+  "timezone": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "timezone",
+    "resolve": [Function],
+    "type": "String",
+  },
+  "type": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "type",
+    "resolve": [Function],
+    "type": "String",
   },
 }
 `;

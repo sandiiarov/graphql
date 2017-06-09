@@ -1,0 +1,58 @@
+{
+  "locations": [
+    {
+      "id": "prague_cz",
+      "name": "Prague",
+      "slug": "prague-czech-republic",
+      "code": "PRG",
+      "alternative_names": [],
+      "rank": 1,
+      "timezone": "Europe\/Prague",
+      "population": null,
+      "airports": 2,
+      "subdivision": null,
+      "autonomous_territory": null,
+      "country": {
+        "id": "CZ",
+        "name": "Czech Republic",
+        "slug": "czech-republic"
+      },
+      "location": {
+        "lat": 50.0755381,
+        "lon": 14.4378005
+      },
+      "type": "city"
+    },
+    {
+      "id": "PRG",
+      "name": "V\u00e1clav Havel Airport Prague",
+      "slug": "vaclav-havel-airport-prague-prague-czech-republic",
+      "alternative_names": [],
+      "rank": 0,
+      "timezone": "Europe\/Prague",
+      "city": {
+        "id": "prague_cz",
+        "name": "Prague",
+        "slug": "prague-czech-republic",
+        "subdivision": null,
+        "autonomous_territory": null,
+        "country": {
+          "id": "CZ",
+          "name": "Czech Republic",
+          "slug": "czech-republic"
+        }
+      },
+      "location": {
+        "lat": 50.1008333,
+        "lon": 14.26
+      },
+      "type": "airport"
+    }
+  ],
+  "meta": {
+    "locale": {
+      "code": "en-US",
+      "status": "Unknown locale 'cs_CZ', using default."
+    }
+  }
+}
