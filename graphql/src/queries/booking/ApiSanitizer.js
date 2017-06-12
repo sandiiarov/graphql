@@ -15,6 +15,10 @@ export function sanitizeListItem(apiData: Object): BookingsItemType {
       arrival: parseRouteEndpoint(flight.arrival),
       airlineCode: flight.airline.iata,
     })),
+    price: {
+      amount: apiData.original_price,
+      currency: apiData.original_currency,
+    },
     authToken: apiData.auth_token,
   };
 }
