@@ -10,12 +10,12 @@ Object {
             "arrival": Object {
               "airport": Object {
                 "city": Object {
-                  "name": "Stockholm",
+                  "name": "Oslo",
                 },
-                "code": "ARN",
+                "code": "OSL",
               },
-              "localTime": "2017-09-06T13:40:00.000Z",
-              "time": "2017-09-06T11:40:00.000Z",
+              "localTime": "2017-08-30T23:55:00.000Z",
+              "time": "2017-08-30T21:55:00.000Z",
             },
             "departure": Object {
               "airport": Object {
@@ -24,34 +24,58 @@ Object {
                 },
                 "code": "PRG",
               },
-              "localTime": "2017-09-06T11:40:00.000Z",
-              "time": "2017-09-06T09:40:00.000Z",
+              "localTime": "2017-08-30T21:55:00.000Z",
+              "time": "2017-08-30T19:55:00.000Z",
             },
-            "id": "bGVnOkVKMTU3NDYxODM1M18zMDc5MzkyNjQ=",
+            "id": "bGVnOjMxMzIyNTIxMA==",
             "recheckRequired": false,
           },
           Object {
             "arrival": Object {
               "airport": Object {
                 "city": Object {
-                  "name": "Los Angeles",
+                  "name": "Orlando",
                 },
-                "code": "LAX",
+                "code": "MCO",
               },
-              "localTime": "2017-09-07T13:45:00.000Z",
-              "time": "2017-09-07T20:45:00.000Z",
+              "localTime": "2017-08-31T21:05:00.000Z",
+              "time": "2017-09-01T01:05:00.000Z",
             },
             "departure": Object {
               "airport": Object {
                 "city": Object {
-                  "name": "Stockholm",
+                  "name": "Oslo",
                 },
-                "code": "ARN",
+                "code": "OSL",
               },
-              "localTime": "2017-09-07T11:45:00.000Z",
-              "time": "2017-09-07T09:45:00.000Z",
+              "localTime": "2017-08-31T17:30:00.000Z",
+              "time": "2017-08-31T15:30:00.000Z",
             },
-            "id": "bGVnOjMxNDMxNjI0MA==",
+            "id": "bGVnOjMxMzM1NzM5Ng==",
+            "recheckRequired": true,
+          },
+          Object {
+            "arrival": Object {
+              "airport": Object {
+                "city": Object {
+                  "name": "Houston",
+                },
+                "code": "IAH",
+              },
+              "localTime": "2017-09-01T08:14:00.000Z",
+              "time": "2017-09-01T13:14:00.000Z",
+            },
+            "departure": Object {
+              "airport": Object {
+                "city": Object {
+                  "name": "Orlando",
+                },
+                "code": "MCO",
+              },
+              "localTime": "2017-09-01T06:50:00.000Z",
+              "time": "2017-09-01T10:50:00.000Z",
+            },
+            "id": "bGVnOkVKMjkyODU2MjA4OV80MjE4MDIzODg=",
             "recheckRequired": true,
           },
           Object {
@@ -62,21 +86,21 @@ Object {
                 },
                 "code": "MEX",
               },
-              "localTime": "2017-09-08T12:45:00.000Z",
-              "time": "2017-09-08T17:45:00.000Z",
+              "localTime": "2017-09-01T21:50:00.000Z",
+              "time": "2017-09-02T02:50:00.000Z",
             },
             "departure": Object {
               "airport": Object {
                 "city": Object {
-                  "name": "Los Angeles",
+                  "name": "Houston",
                 },
-                "code": "LAX",
+                "code": "IAH",
               },
-              "localTime": "2017-09-08T07:00:00.000Z",
-              "time": "2017-09-08T14:00:00.000Z",
+              "localTime": "2017-09-01T19:35:00.000Z",
+              "time": "2017-09-02T00:35:00.000Z",
             },
-            "id": "bGVnOkVEMzE1MTA0Njg1OV81MDc0MTM1OTE=",
-            "recheckRequired": true,
+            "id": "bGVnOkVKMjkyODU2MjA4OV8zNTk1MTM3NjU=",
+            "recheckRequired": false,
           },
         ],
       },
@@ -134,12 +158,12 @@ Object {
             "arrival": Object {
               "airport": Object {
                 "city": Object {
-                  "name": "San Francisco",
+                  "name": "Mexico City",
                 },
-                "code": "SFO",
+                "code": "MEX",
               },
-              "localTime": "2017-09-07T20:50:00.000Z",
-              "time": "2017-09-08T03:50:00.000Z",
+              "localTime": "2017-09-08T16:05:00.000Z",
+              "time": "2017-09-08T21:05:00.000Z",
             },
             "departure": Object {
               "airport": Object {
@@ -148,35 +172,11 @@ Object {
                 },
                 "code": "LAX",
               },
-              "localTime": "2017-09-07T19:30:00.000Z",
-              "time": "2017-09-08T02:30:00.000Z",
+              "localTime": "2017-09-08T10:05:00.000Z",
+              "time": "2017-09-08T17:05:00.000Z",
             },
-            "id": "bGVnOkVCMzE2NDIyMTM3OF80NjU0MTU0NTg=",
+            "id": "bGVnOjMxNjMyODg2OA==",
             "recheckRequired": true,
-          },
-          Object {
-            "arrival": Object {
-              "airport": Object {
-                "city": Object {
-                  "name": "Mexico City",
-                },
-                "code": "MEX",
-              },
-              "localTime": "2017-09-08T05:30:00.000Z",
-              "time": "2017-09-08T10:30:00.000Z",
-            },
-            "departure": Object {
-              "airport": Object {
-                "city": Object {
-                  "name": "San Francisco",
-                },
-                "code": "SFO",
-              },
-              "localTime": "2017-09-07T23:15:00.000Z",
-              "time": "2017-09-08T06:15:00.000Z",
-            },
-            "id": "bGVnOkVCMzE2NDIyMTM3OF80OTE2NjYyNTg=",
-            "recheckRequired": false,
           },
         ],
       },
@@ -190,8 +190,8 @@ Object {
                 },
                 "code": "ARN",
               },
-              "localTime": "2017-09-06T15:55:00.000Z",
-              "time": "2017-09-06T13:55:00.000Z",
+              "localTime": "2017-09-06T14:20:00.000Z",
+              "time": "2017-09-06T12:20:00.000Z",
             },
             "departure": Object {
               "airport": Object {
@@ -200,10 +200,10 @@ Object {
                 },
                 "code": "PRG",
               },
-              "localTime": "2017-09-06T14:05:00.000Z",
-              "time": "2017-09-06T12:05:00.000Z",
+              "localTime": "2017-09-06T12:25:00.000Z",
+              "time": "2017-09-06T10:25:00.000Z",
             },
-            "id": "bGVnOkVKMTU3NDYxODMyMl8zMzk2ODc4NTg=",
+            "id": "bGVnOjMyMTMzNzkwMw==",
             "recheckRequired": false,
           },
           Object {
@@ -238,8 +238,8 @@ Object {
                 },
                 "code": "MEX",
               },
-              "localTime": "2017-09-08T12:45:00.000Z",
-              "time": "2017-09-08T17:45:00.000Z",
+              "localTime": "2017-09-08T16:05:00.000Z",
+              "time": "2017-09-08T21:05:00.000Z",
             },
             "departure": Object {
               "airport": Object {
@@ -248,10 +248,10 @@ Object {
                 },
                 "code": "LAX",
               },
-              "localTime": "2017-09-08T07:00:00.000Z",
-              "time": "2017-09-08T14:00:00.000Z",
+              "localTime": "2017-09-08T10:05:00.000Z",
+              "time": "2017-09-08T17:05:00.000Z",
             },
-            "id": "bGVnOkVEMzE1MTA0Njg1OV81MDc0MTM1OTE=",
+            "id": "bGVnOjMxNjMyODg2OA==",
             "recheckRequired": true,
           },
         ],

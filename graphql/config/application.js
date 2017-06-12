@@ -13,7 +13,10 @@ export default {
         },
       ),
     allFlights: (queryParameters: ?Object = null) =>
-      queryWithParameters('https://api.skypicker.com/flights', queryParameters),
+      queryWithParameters('https://api.skypicker.com/flights', {
+        ...queryParameters,
+        v: 3,
+      }),
     allPlaces: (queryParameters: ?Object = null) =>
       queryWithParameters('https://api.skypicker.com/places', queryParameters),
     login: 'https://auth.skypicker.com/v1/user.login',
