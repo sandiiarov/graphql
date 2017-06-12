@@ -72,6 +72,10 @@ Object {
       "recheckRequired": false,
     },
   ],
+  "price": Object {
+    "amount": 1082,
+    "currency": "CZK",
+  },
 }
 `;
 
@@ -174,5 +178,9 @@ Object {
       "recheckRequired": false,
     },
   ],
+  "price": Object {
+    "amount": 1082,
+    "currency": "CZK",
+  },
 }
 `;
