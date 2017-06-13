@@ -10,8 +10,8 @@ import GraphQLFlight from '../types/Flight';
 import FlightsSearchInput from '../types/FlightsSearchInput';
 import FlightsOptionsInput from '../types/FlightsOptionsInput';
 import type { FlightType } from '../Entities';
-import { fetchFlightsFallback } from './allFlights/Fallback';
-import { sanitizeApiResponse } from './allFlights/ApiSanitizer';
+import { fetchFlightsFallback } from './flight/Fallback';
+import { sanitizeApiResponse } from './flight/ApiSanitizer';
 
 export default {
   type: new GraphQLNonNull(new GraphQLList(new GraphQLNonNull(GraphQLFlight))),
