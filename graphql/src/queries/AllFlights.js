@@ -43,11 +43,8 @@ export default {
       allFlights = await fetchFlightsFallback(args);
     }
 
-    const flightsMetadata = {
-      currency: allFlights.currency,
-    };
     return allFlights.data.map(flight =>
-      sanitizeApiResponse(flight, flightsMetadata),
+      sanitizeApiResponse(flight, allFlights.currency),
     );
   },
 };

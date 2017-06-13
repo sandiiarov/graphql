@@ -2,13 +2,9 @@
 
 import type { FlightType, LegType } from '../../Entities';
 
-export type FlightsMetadataType = {
-  currency: string,
-};
-
 export function sanitizeApiResponse(
   flight: Object,
-  flightsMetadata: FlightsMetadataType,
+  currency: string,
 ): FlightType {
   return {
     id: flight.id,
@@ -61,7 +57,7 @@ export function sanitizeApiResponse(
     })),
     price: {
       amount: flight.price,
-      currency: flightsMetadata.currency,
+      currency: currency,
     },
   };
 }
