@@ -10,7 +10,7 @@ import GraphQLFlight from '../types/Flight';
 import FlightsSearchInput from '../types/FlightsSearchInput';
 import FlightsOptionsInput from '../types/FlightsOptionsInput';
 import type { FlightType } from '../Entities';
-import { fetchFlightsFallback } from './flight/Fallback';
+import { fetchLocationsIds } from './flight/Fallback';
 import { sanitizeApiResponse } from './flight/ApiSanitizer';
 
 export default {
@@ -29,18 +29,15 @@ export default {
   ): Promise<Array<FlightType>> => {
     validateArgs(args);
 
-    let allFlights = await request(
-      config.restApiEndpoint.allFlights({
-        flyFrom: args.search.from,
-        to: args.search.to,
-        dateFrom: dateFns.format(new Date(args.search.dateFrom), 'DD/MM/YYYY'),
-        dateTo: dateFns.format(new Date(args.search.dateTo), 'DD/MM/YYYY'),
-        curr: _.get(args, 'options.currency'),
-      }),
-    );
+    let allFlights = await requestFlights(args);
 
+    // Use location fallback when flights returns no results
     if (allFlights._results === 0) {
-      allFlights = await fetchFlightsFallback(args);
+      const { from, to } = await fetchLocationsIds(
+        args.search.from,
+        args.search.to,
+      );
+      allFlights = await requestFlights(args, from, to);
     }
 
     return allFlights.data.map(flight =>
@@ -56,4 +53,20 @@ function validateArgs(args: Object) {
   if (compareAsc(dateFrom, dateTo) > 0) {
     throw new Error(`DateFrom should start before dateTo`);
   }
+}
+
+function requestFlights(
+  args: Object,
+  from: ?string,
+  to: ?string,
+): Promise<Object> {
+  return request(
+    config.restApiEndpoint.allFlights({
+      flyFrom: from || args.search.from,
+      to: to || args.search.to,
+      dateFrom: dateFns.format(new Date(args.search.dateFrom), 'DD/MM/YYYY'),
+      dateTo: dateFns.format(new Date(args.search.dateTo), 'DD/MM/YYYY'),
+      curr: _.get(args, 'options.currency'),
+    }),
+  );
 }

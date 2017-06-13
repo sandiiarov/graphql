@@ -1,6 +1,5 @@
 // @flow
 
-import dateFns from 'date-fns';
 import config from '../../../config/application';
 import request from '../../services/HttpRequest';
 
@@ -9,20 +8,7 @@ import request from '../../services/HttpRequest';
  * (v3 allows to use codes ony) fetch locations with from-to values
  * and use first location in new AllFlights request.
  */
-export async function fetchFlightsFallback(args: Object) {
-  const { from, to } = await fetchLocationIds(args.search.from, args.search.to);
-
-  return request(
-    config.restApiEndpoint.allFlights({
-      flyFrom: from,
-      to: to,
-      dateFrom: dateFns.format(new Date(args.search.dateFrom), 'DD/MM/YYYY'),
-      dateTo: dateFns.format(new Date(args.search.dateTo), 'DD/MM/YYYY'),
-    }),
-  );
-}
-
-async function fetchLocationIds(from: string, to: string) {
+export async function fetchLocationsIds(from: string, to: string) {
   const [locationsFrom, locationsTo] = await Promise.all([
     // Location from
     request(
