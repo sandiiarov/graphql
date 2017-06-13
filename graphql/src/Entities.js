@@ -68,7 +68,13 @@ export type PlaceType = {
   name: string,
 };
 
+export type AdditionalBaggageInfoType = {
+  price: PriceType,
+  quantity: number,
+};
+
 export type AllowedBaggageType = {
+  additionalBaggage: Array<AdditionalBaggageInfoType>,
   cabin: Array<BaggageType>,
   checked: Array<BaggageType>,
 };

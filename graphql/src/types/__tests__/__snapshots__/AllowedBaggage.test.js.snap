@@ -2,6 +2,13 @@
 
 exports[`AllowedBaggage type should have valid fields 1`] = `
 Object {
+  "additionalBaggage": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "additionalBaggage",
+    "resolve": [Function],
+    "type": "[AdditionalBaggage]",
+  },
   "cabin": Object {
     "args": Array [],
     "isDeprecated": false,
