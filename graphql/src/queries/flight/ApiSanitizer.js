@@ -7,33 +7,33 @@ export type FlightsMetadataType = {
 };
 
 export function sanitizeApiResponse(
-  singleFlight: Object,
+  flight: Object,
   flightsMetadata: FlightsMetadataType,
 ): FlightType {
   return {
-    id: singleFlight.id,
-    airlines: singleFlight.airlines,
+    id: flight.id,
+    airlines: flight.airlines,
     arrival: {
       when: {
-        utc: new Date(singleFlight.aTimeUTC * 1000),
-        local: new Date(singleFlight.aTime * 1000),
+        utc: new Date(flight.aTimeUTC * 1000),
+        local: new Date(flight.aTime * 1000),
       },
       where: {
-        code: singleFlight.flyTo,
-        cityName: singleFlight.cityTo,
+        code: flight.flyTo,
+        cityName: flight.cityTo,
       },
     },
     departure: {
       when: {
-        utc: new Date(singleFlight.dTimeUTC * 1000),
-        local: new Date(singleFlight.dTime * 1000),
+        utc: new Date(flight.dTimeUTC * 1000),
+        local: new Date(flight.dTime * 1000),
       },
       where: {
-        code: singleFlight.flyFrom,
-        cityName: singleFlight.cityFrom,
+        code: flight.flyFrom,
+        cityName: flight.cityFrom,
       },
     },
-    legs: singleFlight.route.map((leg): LegType => ({
+    legs: flight.route.map((leg): LegType => ({
       id: leg.id,
       recheckRequired: leg.bags_recheck_required,
       flightNo: leg.flight_no,
@@ -60,7 +60,7 @@ export function sanitizeApiResponse(
       airlineCode: leg.airline,
     })),
     price: {
-      amount: singleFlight.price,
+      amount: flight.price,
       currency: flightsMetadata.currency,
     },
   };
