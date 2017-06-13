@@ -5,7 +5,7 @@ import AllBookings from '../AllBookings';
 
 describe('all bookings query', () => {
   it('should be list of non-null booking types', () => {
-    expect(AllBookings.type.toString()).toBe('[Booking!]');
+    expect(AllBookings.type.toString()).toBe('[Booking]');
   });
 });
 

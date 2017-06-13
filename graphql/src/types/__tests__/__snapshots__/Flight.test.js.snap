@@ -14,14 +14,14 @@ Object {
     "isDeprecated": false,
     "name": "arrival",
     "resolve": [Function],
-    "type": "RouteStop!",
+    "type": "RouteStop",
   },
   "departure": Object {
     "args": Array [],
     "isDeprecated": false,
     "name": "departure",
     "resolve": [Function],
-    "type": "RouteStop!",
+    "type": "RouteStop",
   },
   "duration": Object {
     "args": Array [],
@@ -35,7 +35,7 @@ Object {
     "isDeprecated": false,
     "name": "legs",
     "resolve": [Function],
-    "type": "[Leg!]!",
+    "type": "[Leg]",
   },
   "price": Object {
     "args": Array [],

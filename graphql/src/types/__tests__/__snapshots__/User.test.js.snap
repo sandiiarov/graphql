@@ -14,14 +14,14 @@ Object {
     "isDeprecated": false,
     "name": "isLoggedIn",
     "resolve": [Function],
-    "type": "Boolean!",
+    "type": "Boolean",
   },
   "token": Object {
     "args": Array [],
     "isDeprecated": false,
     "name": "token",
     "resolve": [Function],
-    "type": "String!",
+    "type": "String",
   },
 }
 `;

@@ -1,7 +1,7 @@
 // @flow
 
 import _ from 'lodash';
-import { GraphQLObjectType, GraphQLNonNull, GraphQLList } from 'graphql';
+import { GraphQLObjectType, GraphQLList } from 'graphql';
 import GraphQLBaggage from './Baggage';
 import GraphQLAdditionalBaggage from './AdditionalBaggage';
 
@@ -23,14 +23,14 @@ export default new GraphQLObjectType({
     },
 
     cabin: {
-      type: new GraphQLNonNull(new GraphQLList(GraphQLBaggage)), // carry-on
+      type: new GraphQLList(GraphQLBaggage), // carry-on
       resolve: ({ cabin }: AllowedBaggageType): Array<BaggageType> => {
         return cabin.filter(bag => isNotCompletelyNullable(bag));
       },
     },
 
     checked: {
-      type: new GraphQLNonNull(new GraphQLList(GraphQLBaggage)),
+      type: new GraphQLList(GraphQLBaggage),
       resolve: ({ checked }: AllowedBaggageType): Array<BaggageType> => {
         return checked.filter(bag => isNotCompletelyNullable(bag));
       },

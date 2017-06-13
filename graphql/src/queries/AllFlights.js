@@ -12,7 +12,7 @@ import FlightsOptionsInput from '../types/FlightsOptionsInput';
 import type { FlightType, LegType } from '../Entities';
 
 export default {
-  type: new GraphQLNonNull(new GraphQLList(new GraphQLNonNull(GraphQLFlight))),
+  type: new GraphQLList(GraphQLFlight),
   args: {
     search: {
       type: new GraphQLNonNull(FlightsSearchInput),

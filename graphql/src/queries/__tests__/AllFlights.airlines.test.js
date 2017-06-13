@@ -1,13 +1,8 @@
 // @flow
 
 import { executeQuery } from '../../services/TestingTools';
-import AllFlights from '../AllFlights';
 
 describe('all flights query', () => {
-  it('should be non-null list of non-null Flight types', () => {
-    expect(AllFlights.type.toString()).toBe('[Flight!]!');
-  });
-
   it('should return array of flights', async () => {
     const allFlightsSearchQuery = `
     query ($input: FlightsSearchInput!) {

@@ -1,6 +1,6 @@
 // @flow
 
-import { GraphQLObjectType, GraphQLNonNull, GraphQLString } from 'graphql';
+import { GraphQLObjectType, GraphQLString } from 'graphql';
 
 import type { AirportType, CityType } from '../Entities';
 import GraphQLCity from './City';
@@ -16,7 +16,7 @@ export default new GraphQLObjectType({
     },
 
     code: {
-      type: new GraphQLNonNull(GraphQLString),
+      type: GraphQLString,
       resolve: ({ code }: AirportType): string => code,
     },
   },

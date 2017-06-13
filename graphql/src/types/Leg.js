@@ -2,7 +2,6 @@
 
 import {
   GraphQLObjectType,
-  GraphQLNonNull,
   GraphQLID,
   GraphQLBoolean,
   GraphQLInt,
@@ -25,7 +24,7 @@ export default new GraphQLObjectType({
   description: 'Leg is the operation of an aircraft from one scheduled departure station to its next scheduled arrival station.',
   fields: {
     id: {
-      type: new GraphQLNonNull(GraphQLID),
+      type: GraphQLID,
       resolve: ({ id }: LegType): string => toGlobalId('leg', id),
     },
 
@@ -39,12 +38,12 @@ export default new GraphQLObjectType({
     },
 
     arrival: {
-      type: new GraphQLNonNull(GraphQLRouteStop),
+      type: GraphQLRouteStop,
       resolve: ({ arrival }: LegType): ArrivalType => arrival,
     },
 
     departure: {
-      type: new GraphQLNonNull(GraphQLRouteStop),
+      type: GraphQLRouteStop,
       resolve: ({ departure }: LegType): DepartureType => departure,
     },
 
@@ -60,7 +59,7 @@ export default new GraphQLObjectType({
     },
 
     recheckRequired: {
-      type: new GraphQLNonNull(GraphQLBoolean),
+      type: GraphQLBoolean,
       resolve: ({ recheckRequired }): boolean => recheckRequired,
     },
   },

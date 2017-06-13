@@ -1,6 +1,6 @@
 // @flow
 
-import { GraphQLObjectType, GraphQLNonNull } from 'graphql';
+import { GraphQLObjectType } from 'graphql';
 import { GraphQLDateTime } from 'graphql-iso-date';
 import Airport from './Airport';
 
@@ -10,7 +10,7 @@ export default new GraphQLObjectType({
   name: 'RouteStop',
   fields: {
     airport: {
-      type: new GraphQLNonNull(Airport),
+      type: Airport,
       resolve: ({ where }: ArrivalType): AirportType => where,
     },
 

@@ -2,7 +2,6 @@
 
 import {
   GraphQLID,
-  GraphQLNonNull,
   GraphQLObjectType,
   GraphQLString,
   GraphQLBoolean,
@@ -14,24 +13,24 @@ export default new GraphQLObjectType({
   name: 'Identity',
   fields: {
     id: {
-      type: new GraphQLNonNull(GraphQLID),
+      type: GraphQLID,
       resolve: ({ userId }: IdentityType): string =>
         toGlobalId('identity', userId),
     },
 
     databaseId: {
-      type: new GraphQLNonNull(GraphQLString),
+      type: GraphQLString,
       resolve: ({ userId }: IdentityType): string => userId,
     },
 
     email: {
-      type: new GraphQLNonNull(GraphQLString),
+      type: GraphQLString,
       description: 'Raw input by user, use "login" if you want normalized email.',
       resolve: ({ email }: IdentityType): string => email,
     },
 
     emailVerified: {
-      type: new GraphQLNonNull(GraphQLBoolean),
+      type: GraphQLBoolean,
       resolve: ({ emailVerified }: IdentityType): boolean => emailVerified,
     },
 
@@ -46,7 +45,7 @@ export default new GraphQLObjectType({
     },
 
     fullName: {
-      type: new GraphQLNonNull(GraphQLString),
+      type: GraphQLString,
       description: 'Concatenation of first and last name with fallback to the login field.',
       resolve: ({ firstName, lastName, login }: IdentityType): string => {
         if (firstName === null && lastName === null) {
@@ -57,7 +56,7 @@ export default new GraphQLObjectType({
     },
 
     login: {
-      type: new GraphQLNonNull(GraphQLString),
+      type: GraphQLString,
       description: 'Use this in API calls. It is email but normalized.',
       resolve: ({ login }: IdentityType): string => login,
     },

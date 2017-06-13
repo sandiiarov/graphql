@@ -1,12 +1,7 @@
 // @flow
 
 import _ from 'lodash';
-import {
-  GraphQLObjectType,
-  GraphQLNonNull,
-  GraphQLList,
-  GraphQLInt,
-} from 'graphql';
+import { GraphQLObjectType, GraphQLList, GraphQLInt } from 'graphql';
 import GraphQLRouteStop from './RouteStop';
 import GraphQLLeg from './Leg';
 import GraphQLAirline from './Airline';
@@ -39,12 +34,12 @@ export default new GraphQLObjectType({
     },
 
     arrival: {
-      type: new GraphQLNonNull(GraphQLRouteStop),
+      type: GraphQLRouteStop,
       resolve: ({ arrival }: FlightType): ArrivalType => arrival,
     },
 
     departure: {
-      type: new GraphQLNonNull(GraphQLRouteStop),
+      type: GraphQLRouteStop,
       resolve: ({ departure }: FlightType): DepartureType => departure,
     },
 
@@ -55,7 +50,7 @@ export default new GraphQLObjectType({
     },
 
     legs: {
-      type: new GraphQLNonNull(new GraphQLList(new GraphQLNonNull(GraphQLLeg))),
+      type: new GraphQLList(GraphQLLeg),
       resolve: ({ legs }: FlightType): Array<LegType> => legs,
     },
 

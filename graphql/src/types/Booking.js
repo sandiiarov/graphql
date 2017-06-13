@@ -1,12 +1,6 @@
 // @flow
 
-import {
-  GraphQLID,
-  GraphQLInt,
-  GraphQLList,
-  GraphQLNonNull,
-  GraphQLObjectType,
-} from 'graphql';
+import { GraphQLID, GraphQLInt, GraphQLList, GraphQLObjectType } from 'graphql';
 
 import GraphQLRouteStop from './RouteStop';
 import GraphQLAllowedBaggage from './AllowedBaggage';
@@ -26,17 +20,17 @@ export default new GraphQLObjectType({
   name: 'Booking',
   fields: {
     id: {
-      type: new GraphQLNonNull(GraphQLID),
+      type: GraphQLID,
       resolve: ({ id }: BookingType): string => toGlobalId('booking', id),
     },
 
     databaseId: {
-      type: new GraphQLNonNull(GraphQLInt),
+      type: GraphQLInt,
       resolve: ({ id }: BookingType): number => id,
     },
 
     allowedBaggage: {
-      type: new GraphQLNonNull(GraphQLAllowedBaggage),
+      type: GraphQLAllowedBaggage,
       resolve: async (
         { id }: BookingType,
         params: Object,
@@ -48,17 +42,17 @@ export default new GraphQLObjectType({
     },
 
     arrival: {
-      type: new GraphQLNonNull(GraphQLRouteStop),
+      type: GraphQLRouteStop,
       resolve: ({ arrival }: BookingType): ArrivalType => arrival,
     },
 
     departure: {
-      type: new GraphQLNonNull(GraphQLRouteStop),
+      type: GraphQLRouteStop,
       resolve: ({ departure }: BookingType): DepartureType => departure,
     },
 
     legs: {
-      type: new GraphQLNonNull(new GraphQLList(new GraphQLNonNull(GraphQLLeg))),
+      type: new GraphQLList(GraphQLLeg),
       resolve: ({ legs }: BookingType): Array<LegType> => legs,
     },
   },

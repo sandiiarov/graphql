@@ -9,7 +9,7 @@ import type { GraphqlContextType } from '../services/GraphqlContext';
 import type { LoginType } from '../Entities';
 
 export default {
-  type: new GraphQLNonNull(GraphQLUser),
+  type: GraphQLUser,
   args: {
     email: {
       type: new GraphQLNonNull(GraphQLString),

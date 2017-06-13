@@ -14,7 +14,7 @@ Object {
     "isDeprecated": false,
     "name": "code",
     "resolve": [Function],
-    "type": "String!",
+    "type": "String",
   },
 }
 `;
