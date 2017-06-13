@@ -8,30 +8,20 @@ import request from '../../services/HttpRequest';
  * (v3 allows to use codes ony) fetch locations with from-to values
  * and use first location in new AllFlights request.
  */
-export async function fetchLocationsIds(from: string, to: string) {
-  const [locationsFrom, locationsTo] = await Promise.all([
-    // Location from
-    request(
-      config.restApiEndpoint.allLocations({
-        term: from,
-      }),
-    ),
-    // Location to
-    request(
-      config.restApiEndpoint.allLocations({
-        term: to,
-      }),
-    ),
-  ]);
+export function fetchLocationsIds(from: string, to: string) {
+  return Promise.all([fetchLocation(from), fetchLocation(to)]);
+}
 
-  if (locationsFrom.locations.length === 0) {
-    throw new Error(`Origin '${from}' has not been found.`);
-  } else if (locationsTo.locations.length === 0) {
-    throw new Error(`Destination '${to}' has not been found.`);
-  }
-
-  return {
-    from: locationsFrom.locations[0].id,
-    to: locationsTo.locations[0].id,
-  };
+function fetchLocation(location: string): Promise<string> {
+  return request(
+    config.restApiEndpoint.allLocations({
+      term: location,
+    }),
+    // eslint-disable-next-line promise/prefer-await-to-then
+  ).then(locations => {
+    if (locations.locations.length === 0) {
+      throw new Error(`Location '${location}' has not been found.`);
+    }
+    return locations.locations[0].id;
+  });
 }

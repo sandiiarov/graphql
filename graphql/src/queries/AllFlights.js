@@ -33,7 +33,7 @@ export default {
 
     // Use location fallback when flights returns no results
     if (allFlights._results === 0) {
-      const { from, to } = await fetchLocationsIds(
+      const [from, to] = await fetchLocationsIds(
         args.search.from,
         args.search.to,
       );
