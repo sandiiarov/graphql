@@ -10,7 +10,7 @@ import GraphQLFlight from '../types/Flight';
 import FlightsSearchInput from '../types/FlightsSearchInput';
 import FlightsOptionsInput from '../types/FlightsOptionsInput';
 import type { FlightType } from '../Entities';
-import { fetchLocationsIds } from './flight/Fallback';
+import { fetchLocation } from './location/LocationLoader';
 import { sanitizeApiResponse } from './flight/ApiSanitizer';
 
 export default {
@@ -33,11 +33,7 @@ export default {
 
     // Use location fallback when flights returns no results
     if (allFlights._results === 0) {
-      const [from, to] = await fetchLocationsIds(
-        args.search.from,
-        args.search.to,
-      );
-      allFlights = await requestFlights(args, from, to);
+      allFlights = await useLocationsFallback(args);
     }
 
     return allFlights.data.map(flight =>
@@ -69,4 +65,12 @@ function requestFlights(
       curr: _.get(args, 'options.currency'),
     }),
   );
+}
+
+async function useLocationsFallback(args: Object): Promise<Object> {
+  const [from, to] = await Promise.all([
+    fetchLocation(args.search.from),
+    fetchLocation(args.search.to),
+  ]);
+  return requestFlights(args, from.id, to.id);
 }

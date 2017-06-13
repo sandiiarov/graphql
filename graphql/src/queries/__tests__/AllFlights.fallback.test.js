@@ -1,6 +1,6 @@
 // @flow
 
-import { executeQuery } from '../../../services/TestingTools';
+import { executeQuery } from '../../services/TestingTools';
 
 describe('all flights location fallback', () => {
   it('should return legs data by using locations fallback', async () => {
