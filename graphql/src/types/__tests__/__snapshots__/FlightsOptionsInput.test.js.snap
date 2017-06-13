@@ -4,7 +4,7 @@ exports[`FlightsOptionsInput type should have valid fields 1`] = `
 Object {
   "currency": Object {
     "name": "currency",
-    "type": "String",
+    "type": "Currency",
   },
 }
 `;
