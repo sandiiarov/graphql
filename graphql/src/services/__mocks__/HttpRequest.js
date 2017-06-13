@@ -24,11 +24,6 @@ const mocksRegexpMap = [
 const mocksMap = {
   [config.restApiEndpoint
     .allBookings]: require('../../queries/__tests__/__datasets__/AllBookings.json'),
-  [config.restApiEndpoint.allPlaces()]: require('../../queries/__tests__/__datasets__/AllPlaces.json'),
-  [config.restApiEndpoint.allPlaces({
-    term: 'nyt',
-  })]: require('../../queries/__tests__/__datasets__/AllPlaces.search.json'),
-  [config.restApiEndpoint.allPlaces({ term: 'unknown place' })]: [], // empty array
   [config.restApiEndpoint.allFlights({
     flyFrom: 'PRG',
     to: 'MEX',
@@ -50,6 +45,7 @@ const mocksMap = {
   },
   [config.restApiEndpoint.airlines]: require('../../dataLoaders/__tests__/__datasets__/airlines.json'),
   [config.restApiEndpoint.allLocations({ term: 'Prague'})]: require('../../queries/__tests__/__datasets__/AllLocations.prague.json'),
+  [config.restApiEndpoint.allLocations({ term: 'unknown place'})]: [], // empty array
 };
 /* eslint-enable */
 

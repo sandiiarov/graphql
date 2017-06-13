@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`all locations query should return empty array 1`] = `
+Object {
+  "data": Object {
+    "allLocations": Array [],
+  },
+}
+`;
