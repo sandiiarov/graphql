@@ -3,57 +3,65 @@
 exports[`flights query with legs should return valid array of flight legs 1`] = `
 Object {
   "data": Object {
-    "allBookings": Array [
-      Object {
-        "allowedBaggage": Object {
-          "additionalBaggage": Array [
-            Object {
-              "price": Object {
-                "amount": 23.65,
-                "currency": "EUR",
-              },
-              "quantity": 1,
+    "allBookings": Object {
+      "edges": Array [
+        Object {
+          "node": Object {
+            "allowedBaggage": Object {
+              "additionalBaggage": Array [
+                Object {
+                  "price": Object {
+                    "amount": 23.65,
+                    "currency": "EUR",
+                  },
+                  "quantity": 1,
+                },
+                Object {
+                  "price": Object {
+                    "amount": 47.3,
+                    "currency": "EUR",
+                  },
+                  "quantity": 2,
+                },
+              ],
             },
-            Object {
-              "price": Object {
-                "amount": 47.3,
-                "currency": "EUR",
-              },
-              "quantity": 2,
-            },
-          ],
+            "databaseId": 2707251,
+          },
         },
-        "databaseId": 2707251,
-      },
-      Object {
-        "allowedBaggage": Object {
-          "additionalBaggage": Array [
-            Object {
-              "price": Object {
-                "amount": 82.5,
-                "currency": "EUR",
-              },
-              "quantity": 1,
+        Object {
+          "node": Object {
+            "allowedBaggage": Object {
+              "additionalBaggage": Array [
+                Object {
+                  "price": Object {
+                    "amount": 82.5,
+                    "currency": "EUR",
+                  },
+                  "quantity": 1,
+                },
+              ],
             },
-          ],
+            "databaseId": 2707229,
+          },
         },
-        "databaseId": 2707229,
-      },
-      Object {
-        "allowedBaggage": Object {
-          "additionalBaggage": Array [
-            Object {
-              "price": Object {
-                "amount": 27.5,
-                "currency": "EUR",
-              },
-              "quantity": 1,
+        Object {
+          "node": Object {
+            "allowedBaggage": Object {
+              "additionalBaggage": Array [
+                Object {
+                  "price": Object {
+                    "amount": 27.5,
+                    "currency": "EUR",
+                  },
+                  "quantity": 1,
+                },
+              ],
             },
-          ],
+            "databaseId": 2707224,
+          },
         },
-        "databaseId": 2707224,
-      },
-    ],
+      ],
+    },
   },
 }
 `;

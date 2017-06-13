@@ -7,11 +7,15 @@ describe('all flights query', () => {
     const allFlightsSearchQuery = `
     query ($input: FlightsSearchInput!) {
       allFlights(search: $input) {
-        airlines {
-          name
-          code
-          logoUrl
-          isLowCost
+        edges {
+          node {
+            airlines {
+              name
+              code
+              logoUrl
+              isLowCost
+            }
+          }
         }
       }
     }`;

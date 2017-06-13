@@ -3,26 +3,34 @@
 exports[`all flights query should return flight prices 1`] = `
 Object {
   "data": Object {
-    "allFlights": Array [
-      Object {
-        "price": Object {
-          "amount": 277,
-          "currency": "EUR",
+    "allFlights": Object {
+      "edges": Array [
+        Object {
+          "node": Object {
+            "price": Object {
+              "amount": 277,
+              "currency": "EUR",
+            },
+          },
         },
-      },
-      Object {
-        "price": Object {
-          "amount": 294,
-          "currency": "EUR",
+        Object {
+          "node": Object {
+            "price": Object {
+              "amount": 294,
+              "currency": "EUR",
+            },
+          },
         },
-      },
-      Object {
-        "price": Object {
-          "amount": 300,
-          "currency": "EUR",
+        Object {
+          "node": Object {
+            "price": Object {
+              "amount": 300,
+              "currency": "EUR",
+            },
+          },
         },
-      },
-    ],
+      ],
+    },
   },
 }
 `;
@@ -30,26 +38,34 @@ Object {
 exports[`all flights query should return flight prices in different currency 1`] = `
 Object {
   "data": Object {
-    "allFlights": Array [
-      Object {
-        "price": Object {
-          "amount": 8606,
-          "currency": "CZK",
+    "allFlights": Object {
+      "edges": Array [
+        Object {
+          "node": Object {
+            "price": Object {
+              "amount": 8606,
+              "currency": "CZK",
+            },
+          },
         },
-      },
-      Object {
-        "price": Object {
-          "amount": 8616,
-          "currency": "CZK",
+        Object {
+          "node": Object {
+            "price": Object {
+              "amount": 8616,
+              "currency": "CZK",
+            },
+          },
         },
-      },
-      Object {
-        "price": Object {
-          "amount": 8622,
-          "currency": "CZK",
+        Object {
+          "node": Object {
+            "price": Object {
+              "amount": 8622,
+              "currency": "CZK",
+            },
+          },
         },
-      },
-    ],
+      ],
+    },
   },
 }
 `;

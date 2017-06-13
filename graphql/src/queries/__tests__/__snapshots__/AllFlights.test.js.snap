@@ -3,122 +3,130 @@
 exports[`all flights query should return array of flights 1`] = `
 Object {
   "data": Object {
-    "allFlights": Array [
-      Object {
-        "airlines": Array [
-          Object {
-            "code": "DY",
-            "isLowCost": true,
-            "logoUrl": "https://images.kiwi.com/airlines/64/DY.png",
-            "name": "Norwegian",
-          },
-          Object {
-            "code": "UA",
-            "isLowCost": false,
-            "logoUrl": "https://images.kiwi.com/airlines/64/UA.png",
-            "name": "United Airlines",
-          },
-        ],
-        "arrival": Object {
-          "airport": Object {
-            "city": Object {
-              "name": "Mexico City",
+    "allFlights": Object {
+      "edges": Array [
+        Object {
+          "node": Object {
+            "airlines": Array [
+              Object {
+                "code": "DY",
+                "isLowCost": true,
+                "logoUrl": "https://images.kiwi.com/airlines/64/DY.png",
+                "name": "Norwegian",
+              },
+              Object {
+                "code": "UA",
+                "isLowCost": false,
+                "logoUrl": "https://images.kiwi.com/airlines/64/UA.png",
+                "name": "United Airlines",
+              },
+            ],
+            "arrival": Object {
+              "airport": Object {
+                "city": Object {
+                  "name": "Mexico City",
+                },
+                "code": "MEX",
+              },
+              "localTime": "2017-09-01T21:50:00.000Z",
+              "time": "2017-09-02T02:50:00.000Z",
             },
-            "code": "MEX",
-          },
-          "localTime": "2017-09-01T21:50:00.000Z",
-          "time": "2017-09-02T02:50:00.000Z",
-        },
-        "departure": Object {
-          "airport": Object {
-            "city": Object {
-              "name": "Prague",
+            "departure": Object {
+              "airport": Object {
+                "city": Object {
+                  "name": "Prague",
+                },
+                "code": "PRG",
+              },
+              "localTime": "2017-08-30T21:55:00.000Z",
+              "time": "2017-08-30T19:55:00.000Z",
             },
-            "code": "PRG",
           },
-          "localTime": "2017-08-30T21:55:00.000Z",
-          "time": "2017-08-30T19:55:00.000Z",
         },
-      },
-      Object {
-        "airlines": Array [
-          Object {
-            "code": "OK",
-            "isLowCost": false,
-            "logoUrl": "https://images.kiwi.com/airlines/64/OK.png",
-            "name": "Czech Airlines",
-          },
-          Object {
-            "code": "DY",
-            "isLowCost": true,
-            "logoUrl": "https://images.kiwi.com/airlines/64/DY.png",
-            "name": "Norwegian",
-          },
-          Object {
-            "code": "4O",
-            "isLowCost": true,
-            "logoUrl": "https://images.kiwi.com/airlines/64/4O.png",
-            "name": "Interjet (ABC Aerolineas)",
-          },
-        ],
-        "arrival": Object {
-          "airport": Object {
-            "city": Object {
-              "name": "Mexico City",
+        Object {
+          "node": Object {
+            "airlines": Array [
+              Object {
+                "code": "OK",
+                "isLowCost": false,
+                "logoUrl": "https://images.kiwi.com/airlines/64/OK.png",
+                "name": "Czech Airlines",
+              },
+              Object {
+                "code": "DY",
+                "isLowCost": true,
+                "logoUrl": "https://images.kiwi.com/airlines/64/DY.png",
+                "name": "Norwegian",
+              },
+              Object {
+                "code": "4O",
+                "isLowCost": true,
+                "logoUrl": "https://images.kiwi.com/airlines/64/4O.png",
+                "name": "Interjet (ABC Aerolineas)",
+              },
+            ],
+            "arrival": Object {
+              "airport": Object {
+                "city": Object {
+                  "name": "Mexico City",
+                },
+                "code": "MEX",
+              },
+              "localTime": "2017-09-08T16:05:00.000Z",
+              "time": "2017-09-08T21:05:00.000Z",
             },
-            "code": "MEX",
-          },
-          "localTime": "2017-09-08T16:05:00.000Z",
-          "time": "2017-09-08T21:05:00.000Z",
-        },
-        "departure": Object {
-          "airport": Object {
-            "city": Object {
-              "name": "Prague",
+            "departure": Object {
+              "airport": Object {
+                "city": Object {
+                  "name": "Prague",
+                },
+                "code": "PRG",
+              },
+              "localTime": "2017-09-06T11:40:00.000Z",
+              "time": "2017-09-06T09:40:00.000Z",
             },
-            "code": "PRG",
           },
-          "localTime": "2017-09-06T11:40:00.000Z",
-          "time": "2017-09-06T09:40:00.000Z",
         },
-      },
-      Object {
-        "airlines": Array [
-          Object {
-            "code": "DY",
-            "isLowCost": true,
-            "logoUrl": "https://images.kiwi.com/airlines/64/DY.png",
-            "name": "Norwegian",
-          },
-          Object {
-            "code": "4O",
-            "isLowCost": true,
-            "logoUrl": "https://images.kiwi.com/airlines/64/4O.png",
-            "name": "Interjet (ABC Aerolineas)",
-          },
-        ],
-        "arrival": Object {
-          "airport": Object {
-            "city": Object {
-              "name": "Mexico City",
+        Object {
+          "node": Object {
+            "airlines": Array [
+              Object {
+                "code": "DY",
+                "isLowCost": true,
+                "logoUrl": "https://images.kiwi.com/airlines/64/DY.png",
+                "name": "Norwegian",
+              },
+              Object {
+                "code": "4O",
+                "isLowCost": true,
+                "logoUrl": "https://images.kiwi.com/airlines/64/4O.png",
+                "name": "Interjet (ABC Aerolineas)",
+              },
+            ],
+            "arrival": Object {
+              "airport": Object {
+                "city": Object {
+                  "name": "Mexico City",
+                },
+                "code": "MEX",
+              },
+              "localTime": "2017-09-08T16:05:00.000Z",
+              "time": "2017-09-08T21:05:00.000Z",
             },
-            "code": "MEX",
-          },
-          "localTime": "2017-09-08T16:05:00.000Z",
-          "time": "2017-09-08T21:05:00.000Z",
-        },
-        "departure": Object {
-          "airport": Object {
-            "city": Object {
-              "name": "Prague",
+            "departure": Object {
+              "airport": Object {
+                "city": Object {
+                  "name": "Prague",
+                },
+                "code": "PRG",
+              },
+              "localTime": "2017-09-06T12:25:00.000Z",
+              "time": "2017-09-06T10:25:00.000Z",
             },
-            "code": "PRG",
           },
-          "localTime": "2017-09-06T12:25:00.000Z",
-          "time": "2017-09-06T10:25:00.000Z",
         },
-      },
-    ],
+      ],
+    },
   },
 }
 `;

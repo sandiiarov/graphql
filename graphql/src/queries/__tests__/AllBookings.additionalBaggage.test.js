@@ -6,14 +6,18 @@ describe('flights query with legs', () => {
   it('should return valid array of flight legs', async () => {
     const additionalBaggageQuery = `{
       allBookings {
-        databaseId 
-        allowedBaggage {
-          additionalBaggage {
-            price {
-              amount
-              currency
+        edges {
+          node {
+            databaseId 
+            allowedBaggage {
+              additionalBaggage {
+                price {
+                  amount
+                  currency
+                }
+                quantity
+              }
             }
-            quantity
           }
         }
       }

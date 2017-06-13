@@ -3,190 +3,198 @@
 exports[`all flights location fallback should return legs data by using locations fallback 1`] = `
 Object {
   "data": Object {
-    "allFlights": Array [
-      Object {
-        "legs": Array [
-          Object {
-            "arrival": Object {
-              "airport": Object {
-                "city": Object {
-                  "name": "Oslo",
+    "allFlights": Object {
+      "edges": Array [
+        Object {
+          "node": Object {
+            "legs": Array [
+              Object {
+                "arrival": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "Oslo",
+                    },
+                  },
                 },
-              },
-            },
-            "departure": Object {
-              "airport": Object {
-                "city": Object {
-                  "name": "Prague",
+                "departure": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "Prague",
+                    },
+                  },
                 },
+                "id": "bGVnOjMxMzIyNTIxMA==",
               },
-            },
-            "id": "bGVnOjMxMzIyNTIxMA==",
+              Object {
+                "arrival": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "Orlando",
+                    },
+                  },
+                },
+                "departure": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "Oslo",
+                    },
+                  },
+                },
+                "id": "bGVnOjMxMzM1NzM5Ng==",
+              },
+              Object {
+                "arrival": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "Houston",
+                    },
+                  },
+                },
+                "departure": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "Orlando",
+                    },
+                  },
+                },
+                "id": "bGVnOkVKMjkyODU2MjA4OV80MjE4MDIzODg=",
+              },
+              Object {
+                "arrival": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "Mexico City",
+                    },
+                  },
+                },
+                "departure": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "Houston",
+                    },
+                  },
+                },
+                "id": "bGVnOkVKMjkyODU2MjA4OV8zNTk1MTM3NjU=",
+              },
+            ],
           },
-          Object {
-            "arrival": Object {
-              "airport": Object {
-                "city": Object {
-                  "name": "Orlando",
+        },
+        Object {
+          "node": Object {
+            "legs": Array [
+              Object {
+                "arrival": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "Stockholm",
+                    },
+                  },
                 },
-              },
-            },
-            "departure": Object {
-              "airport": Object {
-                "city": Object {
-                  "name": "Oslo",
+                "departure": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "Prague",
+                    },
+                  },
                 },
+                "id": "bGVnOkVKMTU3NDYxODM1M18zMDc5MzkyNjQ=",
               },
-            },
-            "id": "bGVnOjMxMzM1NzM5Ng==",
+              Object {
+                "arrival": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "Los Angeles",
+                    },
+                  },
+                },
+                "departure": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "Stockholm",
+                    },
+                  },
+                },
+                "id": "bGVnOjMxNDMxNjI0MA==",
+              },
+              Object {
+                "arrival": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "Mexico City",
+                    },
+                  },
+                },
+                "departure": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "Los Angeles",
+                    },
+                  },
+                },
+                "id": "bGVnOjMxNjMyODg2OA==",
+              },
+            ],
           },
-          Object {
-            "arrival": Object {
-              "airport": Object {
-                "city": Object {
-                  "name": "Houston",
+        },
+        Object {
+          "node": Object {
+            "legs": Array [
+              Object {
+                "arrival": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "Stockholm",
+                    },
+                  },
                 },
-              },
-            },
-            "departure": Object {
-              "airport": Object {
-                "city": Object {
-                  "name": "Orlando",
+                "departure": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "Prague",
+                    },
+                  },
                 },
+                "id": "bGVnOjMyMTMzNzkwMw==",
               },
-            },
-            "id": "bGVnOkVKMjkyODU2MjA4OV80MjE4MDIzODg=",
+              Object {
+                "arrival": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "Los Angeles",
+                    },
+                  },
+                },
+                "departure": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "Stockholm",
+                    },
+                  },
+                },
+                "id": "bGVnOjMxNDMxNjI0MA==",
+              },
+              Object {
+                "arrival": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "Mexico City",
+                    },
+                  },
+                },
+                "departure": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "Los Angeles",
+                    },
+                  },
+                },
+                "id": "bGVnOjMxNjMyODg2OA==",
+              },
+            ],
           },
-          Object {
-            "arrival": Object {
-              "airport": Object {
-                "city": Object {
-                  "name": "Mexico City",
-                },
-              },
-            },
-            "departure": Object {
-              "airport": Object {
-                "city": Object {
-                  "name": "Houston",
-                },
-              },
-            },
-            "id": "bGVnOkVKMjkyODU2MjA4OV8zNTk1MTM3NjU=",
-          },
-        ],
-      },
-      Object {
-        "legs": Array [
-          Object {
-            "arrival": Object {
-              "airport": Object {
-                "city": Object {
-                  "name": "Stockholm",
-                },
-              },
-            },
-            "departure": Object {
-              "airport": Object {
-                "city": Object {
-                  "name": "Prague",
-                },
-              },
-            },
-            "id": "bGVnOkVKMTU3NDYxODM1M18zMDc5MzkyNjQ=",
-          },
-          Object {
-            "arrival": Object {
-              "airport": Object {
-                "city": Object {
-                  "name": "Los Angeles",
-                },
-              },
-            },
-            "departure": Object {
-              "airport": Object {
-                "city": Object {
-                  "name": "Stockholm",
-                },
-              },
-            },
-            "id": "bGVnOjMxNDMxNjI0MA==",
-          },
-          Object {
-            "arrival": Object {
-              "airport": Object {
-                "city": Object {
-                  "name": "Mexico City",
-                },
-              },
-            },
-            "departure": Object {
-              "airport": Object {
-                "city": Object {
-                  "name": "Los Angeles",
-                },
-              },
-            },
-            "id": "bGVnOjMxNjMyODg2OA==",
-          },
-        ],
-      },
-      Object {
-        "legs": Array [
-          Object {
-            "arrival": Object {
-              "airport": Object {
-                "city": Object {
-                  "name": "Stockholm",
-                },
-              },
-            },
-            "departure": Object {
-              "airport": Object {
-                "city": Object {
-                  "name": "Prague",
-                },
-              },
-            },
-            "id": "bGVnOjMyMTMzNzkwMw==",
-          },
-          Object {
-            "arrival": Object {
-              "airport": Object {
-                "city": Object {
-                  "name": "Los Angeles",
-                },
-              },
-            },
-            "departure": Object {
-              "airport": Object {
-                "city": Object {
-                  "name": "Stockholm",
-                },
-              },
-            },
-            "id": "bGVnOjMxNDMxNjI0MA==",
-          },
-          Object {
-            "arrival": Object {
-              "airport": Object {
-                "city": Object {
-                  "name": "Mexico City",
-                },
-              },
-            },
-            "departure": Object {
-              "airport": Object {
-                "city": Object {
-                  "name": "Los Angeles",
-                },
-              },
-            },
-            "id": "bGVnOjMxNjMyODg2OA==",
-          },
-        ],
-      },
-    ],
+        },
+      ],
+    },
   },
 }
 `;

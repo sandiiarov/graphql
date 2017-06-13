@@ -6,7 +6,11 @@ describe('all locations query', () => {
   it('should return empty array', async () => {
     const query = `{
       allLocations(term: "unknown place") {
-        locationId
+        edges {
+          node {
+            locationId
+          }
+        }
       }
     }`;
     expect(await executeQuery(query)).toMatchSnapshot();

@@ -1,6 +1,11 @@
 // @flow
 
-import { GraphQLList, GraphQLString, GraphQLNonNull } from 'graphql';
+import { GraphQLString, GraphQLNonNull } from 'graphql';
+import {
+  connectionArgs,
+  connectionDefinitions,
+  connectionFromArray,
+} from 'graphql-relay';
 import _ from 'lodash';
 import GraphQLLocation from '../types/Location';
 import request from '../services/HttpRequest';
@@ -8,25 +13,30 @@ import config from '../../config/application';
 
 import type { LocationType, LocationAreaType } from '../Entities';
 
+const { connectionType: AllLocationsConnection } = connectionDefinitions({
+  nodeType: GraphQLLocation,
+});
+
 export default {
-  type: new GraphQLList(GraphQLLocation),
+  type: AllLocationsConnection,
   args: {
+    ...connectionArgs,
     term: {
       type: new GraphQLNonNull(GraphQLString),
     },
   },
-  resolve: async (
-    _: any,
-    args: { term: string },
-  ): Promise<Array<LocationType>> => {
+  resolve: async (ancestor: mixed, args: Object) => {
     const response = await request(
       config.restApiEndpoint.allLocations({
         term: args.term,
       }),
     );
     return Array.isArray(response.locations)
-      ? response.locations.map((location): LocationType =>
-          sanitizeApiResponse(location),
+      ? connectionFromArray(
+          response.locations.map((location): LocationType =>
+            sanitizeApiResponse(location),
+          ),
+          args,
         )
       : [];
   },

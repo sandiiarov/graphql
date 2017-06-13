@@ -3,7 +3,9 @@
 exports[`all locations query should return empty array 1`] = `
 Object {
   "data": Object {
-    "allLocations": Array [],
+    "allLocations": Object {
+      "edges": null,
+    },
   },
 }
 `;
