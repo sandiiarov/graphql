@@ -29,6 +29,10 @@ export function sanitizeDetail(apiData: Object): BookingType {
   return {
     ...common,
     allowedBaggage: {
+      additionalBaggage: parseAdditionalBaggage(
+        apiData.additional_bags_prices,
+        apiData.currency,
+      ),
       cabin: [
         {
           height: bag_params.hand_height,
@@ -56,6 +60,23 @@ export function sanitizeDetail(apiData: Object): BookingType {
       ],
     },
   };
+}
+
+function parseAdditionalBaggage(
+  additionalBagsPrices: Object,
+  currency: string,
+) {
+  const additionalBaggage = [];
+  for (const quantity in additionalBagsPrices) {
+    additionalBaggage.push({
+      price: {
+        amount: additionalBagsPrices[quantity],
+        currency: currency,
+      },
+      quantity: Number(quantity),
+    });
+  }
+  return additionalBaggage;
 }
 
 function parseWhen(data: Object | number): ?Object {

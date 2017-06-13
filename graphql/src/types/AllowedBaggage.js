@@ -3,12 +3,25 @@
 import _ from 'lodash';
 import { GraphQLObjectType, GraphQLNonNull, GraphQLList } from 'graphql';
 import GraphQLBaggage from './Baggage';
+import GraphQLAdditionalBaggage from './AdditionalBaggage';
 
-import type { AllowedBaggageType, BaggageType } from '../Entities';
+import type {
+  AllowedBaggageType,
+  BaggageType,
+  AdditionalBaggageInfoType,
+} from '../Entities';
 
 export default new GraphQLObjectType({
   name: 'AllowedBaggage',
   fields: {
+    additionalBaggage: {
+      type: new GraphQLList(GraphQLAdditionalBaggage),
+      resolve: ({
+        additionalBaggage,
+      }: AllowedBaggageType): Array<AdditionalBaggageInfoType> =>
+        additionalBaggage,
+    },
+
     cabin: {
       type: new GraphQLNonNull(new GraphQLList(GraphQLBaggage)), // carry-on
       resolve: ({ cabin }: AllowedBaggageType): Array<BaggageType> => {

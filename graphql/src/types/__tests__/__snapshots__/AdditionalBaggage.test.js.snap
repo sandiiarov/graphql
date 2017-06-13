@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AdditionalBaggage type should have valid fields 1`] = `
+Object {
+  "price": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "price",
+    "resolve": [Function],
+    "type": "Price",
+  },
+  "quantity": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "quantity",
+    "resolve": [Function],
+    "type": "Int",
+  },
+}
+`;

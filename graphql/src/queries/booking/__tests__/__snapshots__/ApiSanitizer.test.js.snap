@@ -82,6 +82,7 @@ Object {
 exports[`Sanitize list item should work 1`] = `
 Object {
   "allowedBaggage": Object {
+    "additionalBaggage": Array [],
     "cabin": Array [
       Object {
         "height": 20,
