@@ -17,8 +17,6 @@ export default {
         ...queryParameters,
         v: 3,
       }),
-    allPlaces: (queryParameters: ?Object = null) =>
-      queryWithParameters('https://api.skypicker.com/places', queryParameters),
     login: 'https://auth.skypicker.com/v1/user.login',
     identity: 'https://auth.skypicker.com/v1/user.get',
     airlines: 'https://api.skypicker.com/airlines?v=2',

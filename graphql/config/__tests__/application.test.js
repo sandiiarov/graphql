@@ -2,21 +2,25 @@
 
 import config from '../application';
 
-const baseUrl = 'https://api.skypicker.com/places';
+const baseUrl = 'https://locations.skypicker.com/';
 
 describe('All places REST API endpoint', () => {
   it('should return URL without parameters', () => {
-    expect(config.restApiEndpoint.allPlaces()).toBe(baseUrl);
+    expect(
+      config.restApiEndpoint.allLocations({
+        term: 'test',
+      }),
+    ).toBe(`${baseUrl}?term=test`);
   });
 
   it('should filter empty parameters', () => {
     expect(
-      config.restApiEndpoint.allPlaces({
+      config.restApiEndpoint.allLocations({
         a: undefined,
         b: null,
-        c: 'text',
+        term: 'text',
         d: '',
       }),
-    ).toBe(`${baseUrl}?c=text`);
+    ).toBe(`${baseUrl}?term=text`);
   });
 });

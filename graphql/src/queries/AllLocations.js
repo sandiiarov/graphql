@@ -24,9 +24,11 @@ export default {
         term: args.term,
       }),
     );
-    return response.locations.map((location): LocationType =>
-      sanitizeApiResponse(location),
-    );
+    return Array.isArray(response.locations)
+      ? response.locations.map((location): LocationType =>
+          sanitizeApiResponse(location),
+        )
+      : [];
   },
 };
 
