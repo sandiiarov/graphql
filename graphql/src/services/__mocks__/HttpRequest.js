@@ -35,6 +35,13 @@ const mocksMap = {
     dateFrom: '08/08/2017',
     dateTo: '08/09/2017',
   })]: require(`../../queries/__tests__/__datasets__/AllFlights.json`),
+  [config.restApiEndpoint.allFlights({
+    flyFrom: 'PRG',
+    to: 'MEX',
+    dateFrom: '08/08/2017',
+    dateTo: '08/09/2017',
+    curr: 'CZK',
+  })]: require(`../../queries/__tests__/__datasets__/AllFlights.czk.json`),
   [config.restApiEndpoint
     .identity]: require('../../dataLoaders/__tests__/__datasets__/user.get.json'),
   [config.restApiEndpoint.login]: {

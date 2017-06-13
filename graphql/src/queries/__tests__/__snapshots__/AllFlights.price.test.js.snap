@@ -26,3 +26,30 @@ Object {
   },
 }
 `;
+
+exports[`all flights query should return flight prices in different currency 1`] = `
+Object {
+  "data": Object {
+    "allFlights": Array [
+      Object {
+        "price": Object {
+          "amount": 8606,
+          "currency": "CZK",
+        },
+      },
+      Object {
+        "price": Object {
+          "amount": 8616,
+          "currency": "CZK",
+        },
+      },
+      Object {
+        "price": Object {
+          "amount": 8622,
+          "currency": "CZK",
+        },
+      },
+    ],
+  },
+}
+`;
