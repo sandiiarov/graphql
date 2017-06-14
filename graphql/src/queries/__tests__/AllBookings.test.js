@@ -1,6 +1,6 @@
 // @flow
 
-import { executeQuery } from '../../services/TestingTools';
+import { graphql } from '../../services/TestingTools';
 import AllBookings from '../AllBookings';
 
 describe('all bookings query', () => {
@@ -17,7 +17,7 @@ describe('id query', () => {
         databaseId
       }
     }`;
-    expect(await executeQuery(idsQuery)).toMatchSnapshot();
+    expect(await graphql(idsQuery)).toMatchSnapshot();
   });
 });
 
@@ -31,7 +31,7 @@ describe('arrival query', () => {
         }
       }
     }`;
-    expect(await executeQuery(arrivalQuery)).toMatchSnapshot();
+    expect(await graphql(arrivalQuery)).toMatchSnapshot();
   });
 });
 
@@ -45,7 +45,7 @@ describe('departure query', () => {
         }
       }
     }`;
-    expect(await executeQuery(departureQuery)).toMatchSnapshot();
+    expect(await graphql(departureQuery)).toMatchSnapshot();
   });
 });
 
@@ -65,6 +65,6 @@ describe('flights query', () => {
         }
       }
     }`;
-    expect(await executeQuery(flightsQuery)).toMatchSnapshot();
+    expect(await graphql(flightsQuery)).toMatchSnapshot();
   });
 });

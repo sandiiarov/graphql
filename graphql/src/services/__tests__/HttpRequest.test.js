@@ -19,7 +19,9 @@ describe('GET request', () => {
   it('should throw exception in test environment', async () => {
     process.env.NODE_ENV = 'test';
     await expect(request('https://path/to/api')).rejects.toEqual(
-      new Error('HttpRequest should never be called in test environment.'),
+      new Error(
+        'HttpRequest should never be called in test environment. Have you forgotten to mock "https://path/to/api" with fake data response?',
+      ),
     );
   });
 });
@@ -54,7 +56,9 @@ describe('POST request', () => {
   it('should throw exception in test environment', async () => {
     process.env.NODE_ENV = 'test';
     await expect(post('https://path/to/api', {})).rejects.toEqual(
-      new Error('HttpRequest should never be called in test environment.'),
+      new Error(
+        'HttpRequest should never be called in test environment. Have you forgotten to mock "https://path/to/api" with fake data response?',
+      ),
     );
   });
 });

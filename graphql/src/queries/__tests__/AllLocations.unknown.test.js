@@ -1,6 +1,6 @@
 // @flow
 
-import { executeQuery } from '../../services/TestingTools';
+import { graphql } from '../../services/TestingTools';
 
 describe('all locations query', () => {
   it('should return empty array', async () => {
@@ -9,6 +9,6 @@ describe('all locations query', () => {
         locationId
       }
     }`;
-    expect(await executeQuery(query)).toMatchSnapshot();
+    expect(await graphql(query)).toMatchSnapshot();
   });
 });

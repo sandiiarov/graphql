@@ -1,6 +1,6 @@
 // @flow
 
-import { executeQuery } from '../../services/TestingTools';
+import { graphql } from '../../services/TestingTools';
 import AllLocations from '../AllLocations';
 
 describe('all locations query', () => {
@@ -23,6 +23,6 @@ describe('all locations query', () => {
         country { locationId, name, slug, code }
       }
     }`;
-    expect(await executeQuery(query)).toMatchSnapshot();
+    expect(await graphql(query)).toMatchSnapshot();
   });
 });

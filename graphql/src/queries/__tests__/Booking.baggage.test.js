@@ -1,6 +1,6 @@
 // @flow
 
-import { executeQuery } from '../../services/TestingTools';
+import { graphql } from '../../services/TestingTools';
 
 it('should return baggage parameters', async () => {
   const baggageQuery = `{
@@ -11,5 +11,5 @@ it('should return baggage parameters', async () => {
         }
       }
     }`;
-  expect(await executeQuery(baggageQuery)).toMatchSnapshot();
+  expect(await graphql(baggageQuery)).toMatchSnapshot();
 });

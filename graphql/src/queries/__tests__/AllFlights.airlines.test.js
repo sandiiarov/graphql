@@ -1,6 +1,6 @@
 // @flow
 
-import { executeQuery } from '../../services/TestingTools';
+import { graphql } from '../../services/TestingTools';
 
 describe('all flights query', () => {
   it('should return array of flights', async () => {
@@ -23,8 +23,6 @@ describe('all flights query', () => {
         dateTo: '2017-09-08',
       },
     };
-    expect(
-      await executeQuery(allFlightsSearchQuery, variables),
-    ).toMatchSnapshot();
+    expect(await graphql(allFlightsSearchQuery, variables)).toMatchSnapshot();
   });
 });

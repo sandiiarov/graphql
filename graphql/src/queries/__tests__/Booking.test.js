@@ -1,6 +1,6 @@
 // @flow
 
-import { executeQuery } from '../../services/TestingTools';
+import { graphql } from '../../services/TestingTools';
 import Booking from '../Booking';
 
 describe('single booking query', () => {
@@ -27,6 +27,6 @@ describe('single booking query', () => {
         }
       }
     }`;
-    expect(await executeQuery(arrivalQuery)).toMatchSnapshot();
+    expect(await graphql(arrivalQuery)).toMatchSnapshot();
   });
 });
