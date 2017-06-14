@@ -7,7 +7,7 @@ Object {
     "isDeprecated": false,
     "name": "databaseId",
     "resolve": [Function],
-    "type": "String!",
+    "type": "String",
   },
   "email": Object {
     "args": Array [],
@@ -15,14 +15,14 @@ Object {
     "isDeprecated": false,
     "name": "email",
     "resolve": [Function],
-    "type": "String!",
+    "type": "String",
   },
   "emailVerified": Object {
     "args": Array [],
     "isDeprecated": false,
     "name": "emailVerified",
     "resolve": [Function],
-    "type": "Boolean!",
+    "type": "Boolean",
   },
   "firstName": Object {
     "args": Array [],
@@ -37,14 +37,14 @@ Object {
     "isDeprecated": false,
     "name": "fullName",
     "resolve": [Function],
-    "type": "String!",
+    "type": "String",
   },
   "id": Object {
     "args": Array [],
     "isDeprecated": false,
     "name": "id",
     "resolve": [Function],
-    "type": "ID!",
+    "type": "ID",
   },
   "lastName": Object {
     "args": Array [],
@@ -59,7 +59,7 @@ Object {
     "isDeprecated": false,
     "name": "login",
     "resolve": [Function],
-    "type": "String!",
+    "type": "String",
   },
 }
 `;

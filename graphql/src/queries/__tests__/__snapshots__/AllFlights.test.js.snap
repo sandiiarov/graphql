@@ -125,7 +125,9 @@ Object {
 
 exports[`all flights query should return error if dateFrom is after dateTo 1`] = `
 Object {
-  "data": null,
+  "data": Object {
+    "allFlights": null,
+  },
   "errors": Array [
     [GraphQLError: DateFrom should start before dateTo],
   ],

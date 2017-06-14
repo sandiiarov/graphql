@@ -14,14 +14,14 @@ Object {
     "isDeprecated": false,
     "name": "arrival",
     "resolve": [Function],
-    "type": "RouteStop!",
+    "type": "RouteStop",
   },
   "departure": Object {
     "args": Array [],
     "isDeprecated": false,
     "name": "departure",
     "resolve": [Function],
-    "type": "RouteStop!",
+    "type": "RouteStop",
   },
   "duration": Object {
     "args": Array [],
@@ -42,14 +42,14 @@ Object {
     "isDeprecated": false,
     "name": "id",
     "resolve": [Function],
-    "type": "ID!",
+    "type": "ID",
   },
   "recheckRequired": Object {
     "args": Array [],
     "isDeprecated": false,
     "name": "recheckRequired",
     "resolve": [Function],
-    "type": "Boolean!",
+    "type": "Boolean",
   },
 }
 `;

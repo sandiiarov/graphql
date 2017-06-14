@@ -1,11 +1,6 @@
 // @flow
 
-import {
-  GraphQLBoolean,
-  GraphQLNonNull,
-  GraphQLObjectType,
-  GraphQLString,
-} from 'graphql';
+import { GraphQLBoolean, GraphQLObjectType, GraphQLString } from 'graphql';
 import type { LoginType, IdentityType } from '../Entities';
 import type { GraphqlContextType } from '../services/GraphqlContext';
 import Identity from './Identity';
@@ -14,12 +9,12 @@ export default new GraphQLObjectType({
   name: 'User',
   fields: {
     token: {
-      type: new GraphQLNonNull(GraphQLString),
+      type: GraphQLString,
       resolve: ({ token }: LoginType): string => token,
     },
 
     isLoggedIn: {
-      type: new GraphQLNonNull(GraphQLBoolean),
+      type: GraphQLBoolean,
       resolve: ({ token }: LoginType): boolean => typeof token === 'string',
     },
 
