@@ -6,10 +6,6 @@ const appDirectory = path.resolve(__dirname, '..');
 
 module.exports = {
   context: appDirectory,
-  entry: {
-    endpoint: './src/index.js',
-    lambda: './src/lambda.js',
-  },
   output: {
     path: path.resolve(appDirectory, 'dist'),
     filename: '[name].js',

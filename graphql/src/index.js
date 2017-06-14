@@ -1,43 +1,15 @@
 // @flow
 
-import graphqlHTTP from 'express-graphql';
-import cors from 'micro-cors';
+import http from 'http';
+import app from './devServer';
 
-import type { IncomingMessage, ServerResponse } from 'http';
+const server = http.createServer(app).listen(3000);
+let currentApp = app;
 
-import Schema from './Schema';
-import { createContext } from './services/GraphqlContext';
-import Logger from './services/Logger';
-import { ProxiedError } from './services/errors/ProxiedError';
-
-process.on('unhandledRejection', reason => {
-  Logger.error(reason);
-});
-
-const handler = (request: IncomingMessage, response: ServerResponse) => {
-  const token = request.headers.authorization || null;
-
-  return graphqlHTTP({
-    schema: Schema,
-    pretty: false,
-    graphiql: true,
-    context: createContext(token),
-    formatError(error) {
-      let errorMessage = `${error.name}: ${error.message}`;
-
-      const originalError = error.originalError;
-      if (originalError instanceof ProxiedError) {
-        error._proxy = {
-          statusCode: originalError.originStatusCode,
-          url: originalError.originUrl,
-        };
-        errorMessage += ` ${originalError.originUrl}`;
-      }
-
-      Logger.error(errorMessage);
-      return error;
-    },
-  })(request, response);
-};
-
-exports.default = cors({ allowMethods: ['GET', 'POST'] })(handler);
+if (module.hot) {
+  module.hot.accept('./devServer', () => {
+    server.removeListener('request', currentApp);
+    server.on('request', app);
+    currentApp = app;
+  });
+}

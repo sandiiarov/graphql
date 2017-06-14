@@ -25,6 +25,14 @@
     "no-shadow": 0, # Shadowing is a nice language feature. Naming is hard.
     "no-warning-comments": "error",
     "import/prefer-default-export": 0, # Keep imports of helper functions consistent.
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": [
+          "**/devServer.js"
+        ]
+      }
+    ],
     "kiwi-graphql/only-nullable-fields": "error",
     "prettier/prettier": [
       "error",
