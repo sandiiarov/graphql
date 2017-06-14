@@ -37,6 +37,18 @@ const mocksMap = {
     dateTo: '08/09/2017',
     curr: 'CZK',
   })]: require(`../../queries/__tests__/__datasets__/AllFlights.czk.json`),
+  [config.restApiEndpoint.allFlights({
+    flyFrom: 'Prague',
+    to: 'Mexico',
+    dateFrom: '08/08/2017',
+    dateTo: '08/09/2017',
+  })]: require(`../../queries/__tests__/__datasets__/AllFlights.prague-mexico.json`),
+  [config.restApiEndpoint.allFlights({
+    flyFrom: 'prague_cz',
+    to: 'MEX',
+    dateFrom: '08/08/2017',
+    dateTo: '08/09/2017',
+  })]: require(`../../queries/__tests__/__datasets__/AllFlights.json`),
   [config.restApiEndpoint
     .identity]: require('../../dataLoaders/__tests__/__datasets__/user.get.json'),
   [config.restApiEndpoint.login]: {
@@ -46,6 +58,10 @@ const mocksMap = {
   [config.restApiEndpoint.airlines]: require('../../dataLoaders/__tests__/__datasets__/airlines.json'),
   [config.restApiEndpoint.allLocations({ term: 'Prague'})]: require('../../queries/__tests__/__datasets__/AllLocations.prague.json'),
   [config.restApiEndpoint.allLocations({ term: 'unknown place'})]: [], // empty array
+  [config.restApiEndpoint.allLocations({ term: 'Prague'})]:
+    require('../../queries/__tests__/__datasets__/AllLocations.prague.json'),
+  [config.restApiEndpoint.allLocations({ term: 'Mexico'})]:
+    require('../../queries/__tests__/__datasets__/AllLocations.mexico.json'),
 };
 /* eslint-enable */
 

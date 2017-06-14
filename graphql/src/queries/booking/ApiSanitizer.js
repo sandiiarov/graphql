@@ -1,18 +1,26 @@
 // @flow
 
 import type { BookingsItemType, BookingType, LegType } from '../../Entities';
+import { sanitizeRoute } from '../flight/RouteSanitizer';
+
+const routePropsMap = {
+  utc: 'when.utc',
+  local: 'when.local',
+  code: 'where.code',
+  cityName: 'where.name',
+};
 
 export function sanitizeListItem(apiData: Object): BookingsItemType {
   return {
     id: parseInt(apiData.bid),
-    arrival: parseRouteEndpoint(apiData.arrival),
-    departure: parseRouteEndpoint(apiData.departure),
+    arrival: sanitizeRoute(apiData.arrival, routePropsMap),
+    departure: sanitizeRoute(apiData.departure, routePropsMap),
     legs: apiData.flights.map((flight): LegType => ({
       id: flight.id,
       recheckRequired: flight.bags_recheck_required,
       flightNo: flight.flight_no,
-      departure: parseRouteEndpoint(flight.departure),
-      arrival: parseRouteEndpoint(flight.arrival),
+      departure: sanitizeRoute(flight.departure, routePropsMap),
+      arrival: sanitizeRoute(flight.arrival, routePropsMap),
       airlineCode: flight.airline.iata,
     })),
     price: {
@@ -77,22 +85,4 @@ function parseAdditionalBaggage(
     });
   }
   return additionalBaggage;
-}
-
-function parseWhen(data: Object | number): ?Object {
-  if (typeof data === 'number') return null;
-  return {
-    utc: new Date(data.utc * 1000),
-    local: new Date(data.local * 1000),
-  };
-}
-
-function parseRouteEndpoint(data: Object): Object {
-  return {
-    when: parseWhen(data.when),
-    where: {
-      code: data.where.code,
-      cityName: data.where.name,
-    },
-  };
 }
