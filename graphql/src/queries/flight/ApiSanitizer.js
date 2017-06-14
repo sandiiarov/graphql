@@ -1,6 +1,21 @@
 // @flow
 
 import type { FlightType, LegType } from '../../Entities';
+import { sanitizeRoute } from './RouteSanitizer';
+
+const arrivalPropsMap = {
+  utc: 'aTimeUTC',
+  local: 'aTime',
+  code: 'flyTo',
+  cityName: 'cityTo',
+};
+
+const departurePropsMap = {
+  utc: 'dTimeUTC',
+  local: 'dTime',
+  code: 'flyFrom',
+  cityName: 'cityFrom',
+};
 
 export function sanitizeApiResponse(
   flight: Object,
@@ -9,50 +24,14 @@ export function sanitizeApiResponse(
   return {
     id: flight.id,
     airlines: flight.airlines,
-    arrival: {
-      when: {
-        utc: new Date(flight.aTimeUTC * 1000),
-        local: new Date(flight.aTime * 1000),
-      },
-      where: {
-        code: flight.flyTo,
-        cityName: flight.cityTo,
-      },
-    },
-    departure: {
-      when: {
-        utc: new Date(flight.dTimeUTC * 1000),
-        local: new Date(flight.dTime * 1000),
-      },
-      where: {
-        code: flight.flyFrom,
-        cityName: flight.cityFrom,
-      },
-    },
+    arrival: sanitizeRoute(flight, arrivalPropsMap),
+    departure: sanitizeRoute(flight, departurePropsMap),
     legs: flight.route.map((leg): LegType => ({
       id: leg.id,
       recheckRequired: leg.bags_recheck_required,
       flightNo: leg.flight_no,
-      departure: {
-        when: {
-          utc: new Date(leg.dTimeUTC * 1000),
-          local: new Date(leg.dTime * 1000),
-        },
-        where: {
-          code: leg.flyFrom,
-          cityName: leg.cityFrom,
-        },
-      },
-      arrival: {
-        when: {
-          utc: new Date(leg.aTimeUTC * 1000),
-          local: new Date(leg.aTime * 1000),
-        },
-        where: {
-          code: leg.flyTo,
-          cityName: leg.cityTo,
-        },
-      },
+      departure: sanitizeRoute(leg, departurePropsMap),
+      arrival: sanitizeRoute(leg, arrivalPropsMap),
       airlineCode: leg.airline,
     })),
     price: {
