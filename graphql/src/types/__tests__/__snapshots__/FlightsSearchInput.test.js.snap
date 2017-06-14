@@ -12,11 +12,11 @@ Object {
   },
   "from": Object {
     "name": "from",
-    "type": "String!",
+    "type": "[LocationInput!]!",
   },
   "to": Object {
     "name": "to",
-    "type": "String!",
+    "type": "[LocationInput!]!",
   },
 }
 `;

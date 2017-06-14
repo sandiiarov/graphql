@@ -16,8 +16,12 @@ describe('all flights query', () => {
     }`;
     const variables = {
       input: {
-        from: 'PRG',
-        to: 'MEX',
+        from: {
+          location: 'PRG',
+        },
+        to: {
+          location: 'MEX',
+        },
         dateFrom: '2017-08-08',
         dateTo: '2017-09-08',
       },
@@ -38,8 +42,12 @@ describe('all flights query', () => {
     }`;
     const variables = {
       input: {
-        from: 'PRG',
-        to: 'MEX',
+        from: {
+          location: 'PRG',
+        },
+        to: {
+          location: 'MEX',
+        },
         dateFrom: '2017-08-08',
         dateTo: '2017-09-08',
       },

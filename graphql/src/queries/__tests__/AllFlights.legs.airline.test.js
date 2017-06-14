@@ -23,8 +23,12 @@ describe('all flights query with legs airline', () => {
     }`;
     const variables = {
       input: {
-        from: 'PRG',
-        to: 'MEX',
+        from: {
+          location: 'PRG',
+        },
+        to: {
+          location: 'MEX',
+        },
         dateFrom: '2017-08-08',
         dateTo: '2017-09-08',
       },

@@ -2,8 +2,8 @@
 
 import { graphql } from '../../services/TestingTools';
 
-describe('all flights query with legs', () => {
-  it('should return array of flight legs', async () => {
+describe('all flights radius', () => {
+  it('should return legs data for radius search', async () => {
     const allFlightsSearchQuery = `
     query ($input: FlightsSearchInput!) {
       allFlights(search: $input) {
@@ -11,19 +11,8 @@ describe('all flights query with legs', () => {
           node {
             legs {
               id
-              recheckRequired
-              arrival {
-                airport {
-                  city { name }, code
-                }
-                time, localTime
-              }
-              departure {
-                airport {
-                  city { name }, code
-                }
-                time, localTime
-              }
+              departure { airport { city { name } } }
+              arrival { airport { city { name } } }
             }
           }
         }
@@ -31,11 +20,21 @@ describe('all flights query with legs', () => {
     }`;
     const variables = {
       input: {
-        from: {
-          location: 'PRG',
-        },
+        from: [
+          {
+            location: 'Prague',
+          },
+          {
+            // Frankfurt
+            radius: {
+              lat: 50.11,
+              lng: 8.68,
+              radius: 10,
+            },
+          },
+        ],
         to: {
-          location: 'MEX',
+          location: 'Mexico',
         },
         dateFrom: '2017-08-08',
         dateTo: '2017-09-08',

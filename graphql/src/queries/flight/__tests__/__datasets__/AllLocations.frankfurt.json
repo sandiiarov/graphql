@@ -1,0 +1,83 @@
+{
+  "locations": [
+    {
+      "id": "frankfurt_de",
+      "name": "Frankfurt",
+      "slug": "frankfurt-germany",
+      "code": "FRA",
+      "alternative_names": [],
+      "rank": 0,
+      "timezone": "Europe\/Berlin",
+      "population": null,
+      "airports": 3,
+      "subdivision": null,
+      "autonomous_territory": null,
+      "country": {
+        "id": "DE",
+        "name": "Germany",
+        "slug": "germany"
+      },
+      "location": {
+        "lat": 50.1109221,
+        "lon": 8.6821267
+      },
+      "type": "city"
+    },
+    {
+      "id": "FRA",
+      "name": "Frankfurt",
+      "slug": "frankfurt-frankfurt-germany",
+      "alternative_names": [],
+      "rank": 0,
+      "timezone": "Europe\/Berlin",
+      "city": {
+        "id": "frankfurt_de",
+        "name": "Frankfurt",
+        "slug": "frankfurt-germany",
+        "subdivision": null,
+        "autonomous_territory": null,
+        "country": {
+          "id": "DE",
+          "name": "Germany",
+          "slug": "germany"
+        }
+      },
+      "location": {
+        "lat": 50.0330556,
+        "lon": 8.57055556
+      },
+      "type": "airport"
+    },
+    {
+      "id": "HHN",
+      "name": "Frankfurt\u2013Hahn",
+      "slug": "frankfurt-hahn-frankfurt-germany",
+      "alternative_names": [],
+      "rank": 4,
+      "timezone": "Europe\/Berlin",
+      "city": {
+        "id": "frankfurt_de",
+        "name": "Frankfurt",
+        "slug": "frankfurt-germany",
+        "subdivision": null,
+        "autonomous_territory": null,
+        "country": {
+          "id": "DE",
+          "name": "Germany",
+          "slug": "germany"
+        }
+      },
+      "location": {
+        "lat": 49.9486111,
+        "lon": 7.26388889
+      },
+      "type": "airport"
+    }
+  ],
+  "meta": {
+    "locale": {
+      "code": "en-US",
+      "status": "Locale not specified, using default."
+    }
+  }
+}
