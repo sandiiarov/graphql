@@ -32,7 +32,7 @@ export default {
     let allFlights = await requestFlights(args);
 
     // Use location fallback when flights returns no results
-    if (allFlights._results === 0) {
+    if (!allFlights.data.length) {
       allFlights = await useLocationsFallback(args);
     }
 
