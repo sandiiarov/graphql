@@ -3,140 +3,148 @@
 exports[`flights query with legs should return valid array of flight legs 1`] = `
 Object {
   "data": Object {
-    "allBookings": Array [
-      Object {
-        "legs": Array [
-          Object {
-            "arrival": Object {
-              "airport": Object {
-                "city": Object {
-                  "name": "Paris",
+    "allBookings": Object {
+      "edges": Array [
+        Object {
+          "node": Object {
+            "legs": Array [
+              Object {
+                "arrival": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "Paris",
+                    },
+                    "code": "CDG",
+                  },
+                  "localTime": "2017-09-09T23:30:00.000Z",
+                  "time": "2017-09-09T21:30:00.000Z",
                 },
-                "code": "CDG",
-              },
-              "localTime": "2017-09-09T23:30:00.000Z",
-              "time": "2017-09-09T21:30:00.000Z",
-            },
-            "departure": Object {
-              "airport": Object {
-                "city": Object {
-                  "name": "London",
+                "departure": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "London",
+                    },
+                    "code": "LGW",
+                  },
+                  "localTime": "2017-09-09T21:10:00.000Z",
+                  "time": "2017-09-09T20:10:00.000Z",
                 },
-                "code": "LGW",
+                "id": "bGVnOjMxNTI4OTQ5OA==",
+                "recheckRequired": false,
               },
-              "localTime": "2017-09-09T21:10:00.000Z",
-              "time": "2017-09-09T20:10:00.000Z",
-            },
-            "id": "bGVnOjMxNTI4OTQ5OA==",
-            "recheckRequired": false,
+            ],
           },
-        ],
-      },
-      Object {
-        "legs": Array [
-          Object {
-            "arrival": Object {
-              "airport": Object {
-                "city": Object {
-                  "name": "Prague",
+        },
+        Object {
+          "node": Object {
+            "legs": Array [
+              Object {
+                "arrival": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "Prague",
+                    },
+                    "code": "PRG",
+                  },
+                  "localTime": "2017-09-09T11:00:00.000Z",
+                  "time": "2017-09-09T09:00:00.000Z",
                 },
-                "code": "PRG",
-              },
-              "localTime": "2017-09-09T11:00:00.000Z",
-              "time": "2017-09-09T09:00:00.000Z",
-            },
-            "departure": Object {
-              "airport": Object {
-                "city": Object {
-                  "name": "London",
+                "departure": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "London",
+                    },
+                    "code": "STN",
+                  },
+                  "localTime": "2017-09-09T08:05:00.000Z",
+                  "time": "2017-09-09T07:05:00.000Z",
                 },
-                "code": "STN",
+                "id": "bGVnOjMxMzUyNzEyMQ==",
+                "recheckRequired": false,
               },
-              "localTime": "2017-09-09T08:05:00.000Z",
-              "time": "2017-09-09T07:05:00.000Z",
-            },
-            "id": "bGVnOjMxMzUyNzEyMQ==",
-            "recheckRequired": false,
+              Object {
+                "arrival": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "Kiev",
+                    },
+                    "code": "KBP",
+                  },
+                  "localTime": "2017-09-09T18:15:00.000Z",
+                  "time": "2017-09-09T15:15:00.000Z",
+                },
+                "departure": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "Prague",
+                    },
+                    "code": "PRG",
+                  },
+                  "localTime": "2017-09-09T15:00:00.000Z",
+                  "time": "2017-09-09T13:00:00.000Z",
+                },
+                "id": "bGVnOlNQOTkwMzg0XzE0Nzc3MDk=",
+                "recheckRequired": true,
+              },
+              Object {
+                "arrival": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "Dubai",
+                    },
+                    "code": "DXB",
+                  },
+                  "localTime": "2017-09-10T02:00:00.000Z",
+                  "time": "2017-09-09T22:00:00.000Z",
+                },
+                "departure": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "Kiev",
+                    },
+                    "code": "KBP",
+                  },
+                  "localTime": "2017-09-09T19:50:00.000Z",
+                  "time": "2017-09-09T16:50:00.000Z",
+                },
+                "id": "bGVnOlNQOTkwMzg0XzE0Nzc3MTA=",
+                "recheckRequired": false,
+              },
+            ],
           },
-          Object {
-            "arrival": Object {
-              "airport": Object {
-                "city": Object {
-                  "name": "Kiev",
+        },
+        Object {
+          "node": Object {
+            "legs": Array [
+              Object {
+                "arrival": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "Samara",
+                    },
+                    "code": "KUF",
+                  },
+                  "localTime": "2017-08-19T03:40:00.000Z",
+                  "time": "2017-08-18T23:40:00.000Z",
                 },
-                "code": "KBP",
-              },
-              "localTime": "2017-09-09T18:15:00.000Z",
-              "time": "2017-09-09T15:15:00.000Z",
-            },
-            "departure": Object {
-              "airport": Object {
-                "city": Object {
-                  "name": "Prague",
+                "departure": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "Prague",
+                    },
+                    "code": "PRG",
+                  },
+                  "localTime": "2017-08-18T22:05:00.000Z",
+                  "time": "2017-08-18T20:05:00.000Z",
                 },
-                "code": "PRG",
+                "id": "bGVnOlNQOTkwMzc5XzE0Nzc3MDI=",
+                "recheckRequired": false,
               },
-              "localTime": "2017-09-09T15:00:00.000Z",
-              "time": "2017-09-09T13:00:00.000Z",
-            },
-            "id": "bGVnOlNQOTkwMzg0XzE0Nzc3MDk=",
-            "recheckRequired": true,
+            ],
           },
-          Object {
-            "arrival": Object {
-              "airport": Object {
-                "city": Object {
-                  "name": "Dubai",
-                },
-                "code": "DXB",
-              },
-              "localTime": "2017-09-10T02:00:00.000Z",
-              "time": "2017-09-09T22:00:00.000Z",
-            },
-            "departure": Object {
-              "airport": Object {
-                "city": Object {
-                  "name": "Kiev",
-                },
-                "code": "KBP",
-              },
-              "localTime": "2017-09-09T19:50:00.000Z",
-              "time": "2017-09-09T16:50:00.000Z",
-            },
-            "id": "bGVnOlNQOTkwMzg0XzE0Nzc3MTA=",
-            "recheckRequired": false,
-          },
-        ],
-      },
-      Object {
-        "legs": Array [
-          Object {
-            "arrival": Object {
-              "airport": Object {
-                "city": Object {
-                  "name": "Samara",
-                },
-                "code": "KUF",
-              },
-              "localTime": "2017-08-19T03:40:00.000Z",
-              "time": "2017-08-18T23:40:00.000Z",
-            },
-            "departure": Object {
-              "airport": Object {
-                "city": Object {
-                  "name": "Prague",
-                },
-                "code": "PRG",
-              },
-              "localTime": "2017-08-18T22:05:00.000Z",
-              "time": "2017-08-18T20:05:00.000Z",
-            },
-            "id": "bGVnOlNQOTkwMzc5XzE0Nzc3MDI=",
-            "recheckRequired": false,
-          },
-        ],
-      },
-    ],
+        },
+      ],
+    },
   },
 }
 `;

@@ -3,100 +3,10 @@
 exports[`arrival query should return valid arrival field 1`] = `
 Object {
   "data": Object {
-    "allBookings": Array [
-      Object {
-        "arrival": Object {
-          "airport": Object {
-            "city": Object {
-              "name": "Paris",
-            },
-            "code": "CDG",
-          },
-          "localTime": null,
-          "time": null,
-        },
-      },
-      Object {
-        "arrival": Object {
-          "airport": Object {
-            "city": Object {
-              "name": "Dubai",
-            },
-            "code": "DXB",
-          },
-          "localTime": null,
-          "time": null,
-        },
-      },
-      Object {
-        "arrival": Object {
-          "airport": Object {
-            "city": Object {
-              "name": "Samara",
-            },
-            "code": "KUF",
-          },
-          "localTime": null,
-          "time": null,
-        },
-      },
-    ],
-  },
-}
-`;
-
-exports[`departure query should return valid departure field 1`] = `
-Object {
-  "data": Object {
-    "allBookings": Array [
-      Object {
-        "departure": Object {
-          "airport": Object {
-            "city": Object {
-              "name": "London",
-            },
-            "code": "LGW",
-          },
-          "localTime": null,
-          "time": null,
-        },
-      },
-      Object {
-        "departure": Object {
-          "airport": Object {
-            "city": Object {
-              "name": "London",
-            },
-            "code": "STN",
-          },
-          "localTime": null,
-          "time": null,
-        },
-      },
-      Object {
-        "departure": Object {
-          "airport": Object {
-            "city": Object {
-              "name": "Prague",
-            },
-            "code": "PRG",
-          },
-          "localTime": null,
-          "time": null,
-        },
-      },
-    ],
-  },
-}
-`;
-
-exports[`flights query should return valid legs field 1`] = `
-Object {
-  "data": Object {
-    "allBookings": Array [
-      Object {
-        "legs": Array [
-          Object {
+    "allBookings": Object {
+      "edges": Array [
+        Object {
+          "node": Object {
             "arrival": Object {
               "airport": Object {
                 "city": Object {
@@ -104,69 +14,13 @@ Object {
                 },
                 "code": "CDG",
               },
-              "localTime": "2017-09-09T23:30:00.000Z",
-              "time": "2017-09-09T21:30:00.000Z",
-            },
-            "departure": Object {
-              "airport": Object {
-                "city": Object {
-                  "name": "London",
-                },
-                "code": "LGW",
-              },
-              "localTime": "2017-09-09T21:10:00.000Z",
-              "time": "2017-09-09T20:10:00.000Z",
+              "localTime": null,
+              "time": null,
             },
           },
-        ],
-      },
-      Object {
-        "legs": Array [
-          Object {
-            "arrival": Object {
-              "airport": Object {
-                "city": Object {
-                  "name": "Prague",
-                },
-                "code": "PRG",
-              },
-              "localTime": "2017-09-09T11:00:00.000Z",
-              "time": "2017-09-09T09:00:00.000Z",
-            },
-            "departure": Object {
-              "airport": Object {
-                "city": Object {
-                  "name": "London",
-                },
-                "code": "STN",
-              },
-              "localTime": "2017-09-09T08:05:00.000Z",
-              "time": "2017-09-09T07:05:00.000Z",
-            },
-          },
-          Object {
-            "arrival": Object {
-              "airport": Object {
-                "city": Object {
-                  "name": "Kiev",
-                },
-                "code": "KBP",
-              },
-              "localTime": "2017-09-09T18:15:00.000Z",
-              "time": "2017-09-09T15:15:00.000Z",
-            },
-            "departure": Object {
-              "airport": Object {
-                "city": Object {
-                  "name": "Prague",
-                },
-                "code": "PRG",
-              },
-              "localTime": "2017-09-09T15:00:00.000Z",
-              "time": "2017-09-09T13:00:00.000Z",
-            },
-          },
-          Object {
+        },
+        Object {
+          "node": Object {
             "arrival": Object {
               "airport": Object {
                 "city": Object {
@@ -174,25 +28,13 @@ Object {
                 },
                 "code": "DXB",
               },
-              "localTime": "2017-09-10T02:00:00.000Z",
-              "time": "2017-09-09T22:00:00.000Z",
-            },
-            "departure": Object {
-              "airport": Object {
-                "city": Object {
-                  "name": "Kiev",
-                },
-                "code": "KBP",
-              },
-              "localTime": "2017-09-09T19:50:00.000Z",
-              "time": "2017-09-09T16:50:00.000Z",
+              "localTime": null,
+              "time": null,
             },
           },
-        ],
-      },
-      Object {
-        "legs": Array [
-          Object {
+        },
+        Object {
+          "node": Object {
             "arrival": Object {
               "airport": Object {
                 "city": Object {
@@ -200,9 +42,52 @@ Object {
                 },
                 "code": "KUF",
               },
-              "localTime": "2017-08-19T03:40:00.000Z",
-              "time": "2017-08-18T23:40:00.000Z",
+              "localTime": null,
+              "time": null,
             },
+          },
+        },
+      ],
+    },
+  },
+}
+`;
+
+exports[`departure query should return valid departure field 1`] = `
+Object {
+  "data": Object {
+    "allBookings": Object {
+      "edges": Array [
+        Object {
+          "node": Object {
+            "departure": Object {
+              "airport": Object {
+                "city": Object {
+                  "name": "London",
+                },
+                "code": "LGW",
+              },
+              "localTime": null,
+              "time": null,
+            },
+          },
+        },
+        Object {
+          "node": Object {
+            "departure": Object {
+              "airport": Object {
+                "city": Object {
+                  "name": "London",
+                },
+                "code": "STN",
+              },
+              "localTime": null,
+              "time": null,
+            },
+          },
+        },
+        Object {
+          "node": Object {
             "departure": Object {
               "airport": Object {
                 "city": Object {
@@ -210,13 +95,152 @@ Object {
                 },
                 "code": "PRG",
               },
-              "localTime": "2017-08-18T22:05:00.000Z",
-              "time": "2017-08-18T20:05:00.000Z",
+              "localTime": null,
+              "time": null,
             },
           },
-        ],
-      },
-    ],
+        },
+      ],
+    },
+  },
+}
+`;
+
+exports[`flights query should return valid legs field 1`] = `
+Object {
+  "data": Object {
+    "allBookings": Object {
+      "edges": Array [
+        Object {
+          "node": Object {
+            "legs": Array [
+              Object {
+                "arrival": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "Paris",
+                    },
+                    "code": "CDG",
+                  },
+                  "localTime": "2017-09-09T23:30:00.000Z",
+                  "time": "2017-09-09T21:30:00.000Z",
+                },
+                "departure": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "London",
+                    },
+                    "code": "LGW",
+                  },
+                  "localTime": "2017-09-09T21:10:00.000Z",
+                  "time": "2017-09-09T20:10:00.000Z",
+                },
+              },
+            ],
+          },
+        },
+        Object {
+          "node": Object {
+            "legs": Array [
+              Object {
+                "arrival": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "Prague",
+                    },
+                    "code": "PRG",
+                  },
+                  "localTime": "2017-09-09T11:00:00.000Z",
+                  "time": "2017-09-09T09:00:00.000Z",
+                },
+                "departure": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "London",
+                    },
+                    "code": "STN",
+                  },
+                  "localTime": "2017-09-09T08:05:00.000Z",
+                  "time": "2017-09-09T07:05:00.000Z",
+                },
+              },
+              Object {
+                "arrival": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "Kiev",
+                    },
+                    "code": "KBP",
+                  },
+                  "localTime": "2017-09-09T18:15:00.000Z",
+                  "time": "2017-09-09T15:15:00.000Z",
+                },
+                "departure": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "Prague",
+                    },
+                    "code": "PRG",
+                  },
+                  "localTime": "2017-09-09T15:00:00.000Z",
+                  "time": "2017-09-09T13:00:00.000Z",
+                },
+              },
+              Object {
+                "arrival": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "Dubai",
+                    },
+                    "code": "DXB",
+                  },
+                  "localTime": "2017-09-10T02:00:00.000Z",
+                  "time": "2017-09-09T22:00:00.000Z",
+                },
+                "departure": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "Kiev",
+                    },
+                    "code": "KBP",
+                  },
+                  "localTime": "2017-09-09T19:50:00.000Z",
+                  "time": "2017-09-09T16:50:00.000Z",
+                },
+              },
+            ],
+          },
+        },
+        Object {
+          "node": Object {
+            "legs": Array [
+              Object {
+                "arrival": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "Samara",
+                    },
+                    "code": "KUF",
+                  },
+                  "localTime": "2017-08-19T03:40:00.000Z",
+                  "time": "2017-08-18T23:40:00.000Z",
+                },
+                "departure": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "Prague",
+                    },
+                    "code": "PRG",
+                  },
+                  "localTime": "2017-08-18T22:05:00.000Z",
+                  "time": "2017-08-18T20:05:00.000Z",
+                },
+              },
+            ],
+          },
+        },
+      ],
+    },
   },
 }
 `;
@@ -224,20 +248,28 @@ Object {
 exports[`id query should return IDs of bookings 1`] = `
 Object {
   "data": Object {
-    "allBookings": Array [
-      Object {
-        "databaseId": 2707251,
-        "id": "Ym9va2luZzoyNzA3MjUx",
-      },
-      Object {
-        "databaseId": 2707229,
-        "id": "Ym9va2luZzoyNzA3MjI5",
-      },
-      Object {
-        "databaseId": 2707224,
-        "id": "Ym9va2luZzoyNzA3MjI0",
-      },
-    ],
+    "allBookings": Object {
+      "edges": Array [
+        Object {
+          "node": Object {
+            "databaseId": 2707251,
+            "id": "Ym9va2luZzoyNzA3MjUx",
+          },
+        },
+        Object {
+          "node": Object {
+            "databaseId": 2707229,
+            "id": "Ym9va2luZzoyNzA3MjI5",
+          },
+        },
+        Object {
+          "node": Object {
+            "databaseId": 2707224,
+            "id": "Ym9va2luZzoyNzA3MjI0",
+          },
+        },
+      ],
+    },
   },
 }
 `;

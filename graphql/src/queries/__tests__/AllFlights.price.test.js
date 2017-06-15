@@ -7,9 +7,10 @@ describe('all flights query', () => {
     const allFlightsSearchQuery = `
     query ($input: FlightsSearchInput!) {
       allFlights(search: $input) {
-        price {
-          amount
-          currency
+        edges {
+          node {
+            price { amount, currency }
+          }
         }
       }
     }`;
@@ -28,7 +29,11 @@ describe('all flights query', () => {
     const allFlightsSearchQuery = `
     query ($input: FlightsSearchInput!, $options: FlightsOptionsInput) {
       allFlights(search: $input, options: $options) {
-        price { amount, currency }
+        edges {
+          node {
+            price { amount, currency }
+          }
+        }
       }
     }`;
     const variables = {

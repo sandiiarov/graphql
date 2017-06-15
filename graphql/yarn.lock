@@ -2038,6 +2038,10 @@ graphql-iso-date@^3.1.1:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/graphql-iso-date/-/graphql-iso-date-3.1.1.tgz#38dc4d50af1e8072ba61be3b7fe2d7accc0458bc"
 
+graphql-relay@^0.5.2:
+  version "0.5.2"
+  resolved "https://registry.yarnpkg.com/graphql-relay/-/graphql-relay-0.5.2.tgz#40ff714efd60c2cd89e0bcc79e2afa6d87fa8673"
+
 graphql@^0.9.6:
   version "0.9.6"
   resolved "https://registry.yarnpkg.com/graphql/-/graphql-0.9.6.tgz#514421e9d225c29dfc8fd305459abae58815ef2c"

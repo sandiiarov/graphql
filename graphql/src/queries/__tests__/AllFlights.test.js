@@ -5,26 +5,30 @@ import AllFlights from '../AllFlights';
 
 describe('all flights query', () => {
   it('should be non-null list of non-null Flight types', () => {
-    expect(AllFlights.type.toString()).toBe('[Flight]');
+    expect(AllFlights.type.toString()).toBe('FlightConnection');
   });
 
   it('should return array of flights', async () => {
     const allFlightsSearchQuery = `
     query ($input: FlightsSearchInput!) {
       allFlights(search: $input) {
-        arrival {
-          airport { city { name }, code }
-          time, localTime
-        }
-        departure {
-          airport { city { name }, code }
-          time, localTime
-        }
-        airlines {
-          name
-          code
-          logoUrl
-          isLowCost
+        edges {
+          node {
+            arrival {
+              airport { city { name }, code }
+              time, localTime
+            }
+            departure {
+              airport { city { name }, code }
+              time, localTime
+            }
+            airlines {
+              name
+              code
+              logoUrl
+              isLowCost
+            }
+          }
         }
       }
     }`;
@@ -43,8 +47,12 @@ describe('all flights query', () => {
     const allFlightsSearchQuery = `
     query ($input: FlightsSearchInput!) {
       allFlights(search: $input) {
-        arrival {
-          time
+        edges {
+          node {
+            arrival {
+              time
+            }
+          }
         }
       }
     }`;
@@ -63,8 +71,12 @@ describe('all flights query', () => {
     const allFlightsSearchQuery = `
     query ($input: FlightsSearchInput!) {
       allFlights(search: $input) {
-        arrival {
-          time
+        edges {
+          node {
+            arrival {
+              time
+            }
+          }
         }
       }
     }`;

@@ -5,7 +5,7 @@ import AllBookings from '../AllBookings';
 
 describe('all bookings query', () => {
   it('should be list of non-null booking types', () => {
-    expect(AllBookings.type.toString()).toBe('[Booking]');
+    expect(AllBookings.type.toString()).toBe('BookingConnection');
   });
 });
 
@@ -13,8 +13,12 @@ describe('id query', () => {
   it('should return IDs of bookings', async () => {
     const idsQuery = `{
       allBookings {
-        id
-        databaseId
+        edges {
+          node {
+            id
+            databaseId
+          }
+        }
       }
     }`;
     expect(await graphql(idsQuery)).toMatchSnapshot();
@@ -25,9 +29,13 @@ describe('arrival query', () => {
   it('should return valid arrival field', async () => {
     const arrivalQuery = `{
       allBookings {
-        arrival {
-          airport { city { name }, code }
-          time, localTime
+        edges {
+          node {
+            arrival {
+              airport { city { name }, code }
+              time, localTime
+            }
+          }
         }
       }
     }`;
@@ -39,9 +47,13 @@ describe('departure query', () => {
   it('should return valid departure field', async () => {
     const departureQuery = `{
       allBookings {
-        departure {
-          airport { city { name }, code }
-          time, localTime
+        edges {
+          node {
+            departure {
+              airport { city { name }, code }
+              time, localTime
+            }
+          }
         }
       }
     }`;
@@ -53,14 +65,18 @@ describe('flights query', () => {
   it('should return valid legs field', async () => {
     const flightsQuery = `{
       allBookings {
-        legs {
-          arrival {
-            airport { city { name }, code }
-            time, localTime
-          }
-          departure {
-            airport { city { name }, code }
-            time, localTime
+        edges {
+          node {
+            legs {
+              arrival {
+                airport { city { name }, code }
+                time, localTime
+              }
+              departure {
+                airport { city { name }, code }
+                time, localTime
+              }
+            }
           }
         }
       }

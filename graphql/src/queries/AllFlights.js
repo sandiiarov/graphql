@@ -1,7 +1,12 @@
 // @flow
 
 import compareAsc from 'date-fns/compare_asc';
-import { GraphQLNonNull, GraphQLList } from 'graphql';
+import { GraphQLNonNull } from 'graphql';
+import {
+  connectionArgs,
+  connectionDefinitions,
+  connectionFromArray,
+} from 'graphql-relay';
 import dateFns from 'date-fns';
 import _ from 'lodash';
 import request from '../services/HttpRequest';
@@ -9,13 +14,17 @@ import config from '../../config/application';
 import GraphQLFlight from '../types/Flight';
 import FlightsSearchInput from '../types/FlightsSearchInput';
 import FlightsOptionsInput from '../types/FlightsOptionsInput';
-import type { FlightType } from '../Entities';
 import { fetchLocation } from './location/LocationLoader';
 import { sanitizeApiResponse } from './flight/ApiSanitizer';
 
+const { connectionType: AllFlightsConnection } = connectionDefinitions({
+  nodeType: GraphQLFlight,
+});
+
 export default {
-  type: new GraphQLList(GraphQLFlight),
+  type: AllFlightsConnection,
   args: {
+    ...connectionArgs,
     search: {
       type: new GraphQLNonNull(FlightsSearchInput),
     },
@@ -23,10 +32,7 @@ export default {
       type: FlightsOptionsInput,
     },
   },
-  resolve: async (
-    ancestor: mixed,
-    args: Object,
-  ): Promise<Array<FlightType>> => {
+  resolve: async (ancestor: mixed, args: Object) => {
     validateArgs(args);
 
     let allFlights = await requestFlights(args);
@@ -36,8 +42,11 @@ export default {
       allFlights = await useLocationsFallback(args);
     }
 
-    return allFlights.data.map(flight =>
-      sanitizeApiResponse(flight, allFlights.currency),
+    return connectionFromArray(
+      allFlights.data.map(flight =>
+        sanitizeApiResponse(flight, allFlights.currency),
+      ),
+      args,
     );
   },
 };

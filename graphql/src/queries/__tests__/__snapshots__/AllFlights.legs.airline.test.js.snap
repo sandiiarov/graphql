@@ -3,100 +3,108 @@
 exports[`all flights query with legs airline should return array of flight legs with airline 1`] = `
 Object {
   "data": Object {
-    "allFlights": Array [
-      Object {
-        "legs": Array [
-          Object {
-            "airline": Object {
-              "code": "DY",
-              "isLowCost": true,
-              "logoUrl": "https://images.kiwi.com/airlines/64/DY.png",
-              "name": "Norwegian",
-            },
+    "allFlights": Object {
+      "edges": Array [
+        Object {
+          "node": Object {
+            "legs": Array [
+              Object {
+                "airline": Object {
+                  "code": "DY",
+                  "isLowCost": true,
+                  "logoUrl": "https://images.kiwi.com/airlines/64/DY.png",
+                  "name": "Norwegian",
+                },
+              },
+              Object {
+                "airline": Object {
+                  "code": "DY",
+                  "isLowCost": true,
+                  "logoUrl": "https://images.kiwi.com/airlines/64/DY.png",
+                  "name": "Norwegian",
+                },
+              },
+              Object {
+                "airline": Object {
+                  "code": "UA",
+                  "isLowCost": false,
+                  "logoUrl": "https://images.kiwi.com/airlines/64/UA.png",
+                  "name": "United Airlines",
+                },
+              },
+              Object {
+                "airline": Object {
+                  "code": "UA",
+                  "isLowCost": false,
+                  "logoUrl": "https://images.kiwi.com/airlines/64/UA.png",
+                  "name": "United Airlines",
+                },
+              },
+            ],
           },
-          Object {
-            "airline": Object {
-              "code": "DY",
-              "isLowCost": true,
-              "logoUrl": "https://images.kiwi.com/airlines/64/DY.png",
-              "name": "Norwegian",
-            },
+        },
+        Object {
+          "node": Object {
+            "legs": Array [
+              Object {
+                "airline": Object {
+                  "code": "OK",
+                  "isLowCost": false,
+                  "logoUrl": "https://images.kiwi.com/airlines/64/OK.png",
+                  "name": "Czech Airlines",
+                },
+              },
+              Object {
+                "airline": Object {
+                  "code": "DY",
+                  "isLowCost": true,
+                  "logoUrl": "https://images.kiwi.com/airlines/64/DY.png",
+                  "name": "Norwegian",
+                },
+              },
+              Object {
+                "airline": Object {
+                  "code": "4O",
+                  "isLowCost": true,
+                  "logoUrl": "https://images.kiwi.com/airlines/64/4O.png",
+                  "name": "Interjet (ABC Aerolineas)",
+                },
+              },
+            ],
           },
-          Object {
-            "airline": Object {
-              "code": "UA",
-              "isLowCost": false,
-              "logoUrl": "https://images.kiwi.com/airlines/64/UA.png",
-              "name": "United Airlines",
-            },
+        },
+        Object {
+          "node": Object {
+            "legs": Array [
+              Object {
+                "airline": Object {
+                  "code": "DY",
+                  "isLowCost": true,
+                  "logoUrl": "https://images.kiwi.com/airlines/64/DY.png",
+                  "name": "Norwegian",
+                },
+              },
+              Object {
+                "airline": Object {
+                  "code": "DY",
+                  "isLowCost": true,
+                  "logoUrl": "https://images.kiwi.com/airlines/64/DY.png",
+                  "name": "Norwegian",
+                },
+              },
+              Object {
+                "airline": Object {
+                  "code": "4O",
+                  "isLowCost": true,
+                  "logoUrl": "https://images.kiwi.com/airlines/64/4O.png",
+                  "name": "Interjet (ABC Aerolineas)",
+                },
+              },
+            ],
           },
-          Object {
-            "airline": Object {
-              "code": "UA",
-              "isLowCost": false,
-              "logoUrl": "https://images.kiwi.com/airlines/64/UA.png",
-              "name": "United Airlines",
-            },
-          },
-        ],
-      },
-      Object {
-        "legs": Array [
-          Object {
-            "airline": Object {
-              "code": "OK",
-              "isLowCost": false,
-              "logoUrl": "https://images.kiwi.com/airlines/64/OK.png",
-              "name": "Czech Airlines",
-            },
-          },
-          Object {
-            "airline": Object {
-              "code": "DY",
-              "isLowCost": true,
-              "logoUrl": "https://images.kiwi.com/airlines/64/DY.png",
-              "name": "Norwegian",
-            },
-          },
-          Object {
-            "airline": Object {
-              "code": "4O",
-              "isLowCost": true,
-              "logoUrl": "https://images.kiwi.com/airlines/64/4O.png",
-              "name": "Interjet (ABC Aerolineas)",
-            },
-          },
-        ],
-      },
-      Object {
-        "legs": Array [
-          Object {
-            "airline": Object {
-              "code": "DY",
-              "isLowCost": true,
-              "logoUrl": "https://images.kiwi.com/airlines/64/DY.png",
-              "name": "Norwegian",
-            },
-          },
-          Object {
-            "airline": Object {
-              "code": "DY",
-              "isLowCost": true,
-              "logoUrl": "https://images.kiwi.com/airlines/64/DY.png",
-              "name": "Norwegian",
-            },
-          },
-          Object {
-            "airline": Object {
-              "code": "4O",
-              "isLowCost": true,
-              "logoUrl": "https://images.kiwi.com/airlines/64/4O.png",
-              "name": "Interjet (ABC Aerolineas)",
-            },
-          },
-        ],
-      },
-    ],
+        },
+      ],
+    },
   },
 }
 `;

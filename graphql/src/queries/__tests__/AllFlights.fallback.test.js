@@ -7,10 +7,14 @@ describe('all flights location fallback', () => {
     const allFlightsSearchQuery = `
     query ($input: FlightsSearchInput!) {
       allFlights(search: $input) {
-        legs {
-          id
-          departure { airport { city { name } } }
-          arrival { airport { city { name } } }
+        edges {
+          node {
+            legs {
+              id
+              departure { airport { city { name } } }
+              arrival { airport { city { name } } }
+            }
+          }
         }
       }
     }`;

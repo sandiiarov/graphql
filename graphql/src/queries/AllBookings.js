@@ -1,16 +1,24 @@
 // @flow
 
-import { GraphQLList } from 'graphql';
+import {
+  connectionArgs,
+  connectionDefinitions,
+  connectionFromPromisedArray,
+} from 'graphql-relay';
 import GraphQLBooking from '../types/Booking';
 
 import type { GraphqlContextType } from '../services/GraphqlContext';
-import type { BookingsItemType } from '../Entities';
+
+const { connectionType: AllBookingsConnection } = connectionDefinitions({
+  nodeType: GraphQLBooking,
+});
 
 export default {
-  type: new GraphQLList(GraphQLBooking),
+  type: AllBookingsConnection,
+  args: connectionArgs,
   resolve: async (
     ancestor: mixed,
     args: Object,
     { dataLoader }: GraphqlContextType,
-  ): Promise<Array<BookingsItemType>> => dataLoader.bookings.load(),
+  ) => connectionFromPromisedArray(dataLoader.bookings.load(), args),
 };

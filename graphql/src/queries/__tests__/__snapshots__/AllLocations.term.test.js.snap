@@ -3,48 +3,54 @@
 exports[`all locations query should return locations 1`] = `
 Object {
   "data": Object {
-    "allLocations": Array [
-      Object {
-        "city": null,
-        "code": "PRG",
-        "country": Object {
-          "code": null,
-          "locationId": "CZ",
-          "name": "Czech Republic",
-          "slug": "czech-republic",
+    "allLocations": Object {
+      "edges": Array [
+        Object {
+          "node": Object {
+            "city": null,
+            "code": "PRG",
+            "country": Object {
+              "code": null,
+              "locationId": "CZ",
+              "name": "Czech Republic",
+              "slug": "czech-republic",
+            },
+            "location": Object {
+              "latitude": 50.0755381,
+              "longitude": 14.4378005,
+            },
+            "locationId": "prague_cz",
+            "name": "Prague",
+            "slug": "prague-czech-republic",
+            "subdivision": null,
+            "timezone": "Europe/Prague",
+            "type": "city",
+          },
         },
-        "location": Object {
-          "latitude": 50.0755381,
-          "longitude": 14.4378005,
+        Object {
+          "node": Object {
+            "city": Object {
+              "code": null,
+              "locationId": "prague_cz",
+              "name": "Prague",
+              "slug": "prague-czech-republic",
+            },
+            "code": null,
+            "country": null,
+            "location": Object {
+              "latitude": 50.1008333,
+              "longitude": 14.26,
+            },
+            "locationId": "PRG",
+            "name": "Václav Havel Airport Prague",
+            "slug": "vaclav-havel-airport-prague-prague-czech-republic",
+            "subdivision": null,
+            "timezone": "Europe/Prague",
+            "type": "airport",
+          },
         },
-        "locationId": "prague_cz",
-        "name": "Prague",
-        "slug": "prague-czech-republic",
-        "subdivision": null,
-        "timezone": "Europe/Prague",
-        "type": "city",
-      },
-      Object {
-        "city": Object {
-          "code": null,
-          "locationId": "prague_cz",
-          "name": "Prague",
-          "slug": "prague-czech-republic",
-        },
-        "code": null,
-        "country": null,
-        "location": Object {
-          "latitude": 50.1008333,
-          "longitude": 14.26,
-        },
-        "locationId": "PRG",
-        "name": "Václav Havel Airport Prague",
-        "slug": "vaclav-havel-airport-prague-prague-czech-republic",
-        "subdivision": null,
-        "timezone": "Europe/Prague",
-        "type": "airport",
-      },
-    ],
+      ],
+    },
   },
 }
 `;
