@@ -10,7 +10,7 @@ import { toGlobalId } from '../services/OpaqueIdentifier';
 import GraphQLRouteStop from './RouteStop';
 import GraphQLAirline from './Airline';
 import type { GraphqlContextType } from '../services/GraphqlContext';
-import { flightDurationInMinutes } from '../services/GraphqlResolvers';
+import FlightDurationInMinutes from '../resolvers/FlightDuration';
 
 import type {
   ArrivalType,
@@ -50,7 +50,7 @@ export default new GraphQLObjectType({
     duration: {
       type: GraphQLInt,
       resolve: ({ departure, arrival }: LegType): ?number =>
-        flightDurationInMinutes(departure, arrival),
+        FlightDurationInMinutes(departure, arrival),
     },
 
     flightNumber: {
