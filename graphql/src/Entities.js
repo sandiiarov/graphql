@@ -60,14 +60,6 @@ export type CoordinatesType = {
   longitude: number,
 };
 
-export type PlaceType = {
-  id: string,
-  location: CoordinatesType,
-  numberOfAirports: number,
-  population: ?number,
-  name: string,
-};
-
 export type AdditionalBaggageInfoType = {
   price: PriceType,
   quantity: number,
