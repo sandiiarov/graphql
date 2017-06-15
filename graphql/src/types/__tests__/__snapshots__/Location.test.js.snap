@@ -9,13 +9,6 @@ Object {
     "resolve": [Function],
     "type": "LocationArea",
   },
-  "code": Object {
-    "args": Array [],
-    "isDeprecated": false,
-    "name": "code",
-    "resolve": [Function],
-    "type": "String",
-  },
   "country": Object {
     "args": Array [],
     "isDeprecated": false,

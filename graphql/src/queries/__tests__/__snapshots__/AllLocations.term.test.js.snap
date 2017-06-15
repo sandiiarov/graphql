@@ -8,9 +8,7 @@ Object {
         Object {
           "node": Object {
             "city": null,
-            "code": "PRG",
             "country": Object {
-              "code": null,
               "locationId": "CZ",
               "name": "Czech Republic",
               "slug": "czech-republic",
@@ -30,12 +28,10 @@ Object {
         Object {
           "node": Object {
             "city": Object {
-              "code": null,
               "locationId": "prague_cz",
               "name": "Prague",
               "slug": "prague-czech-republic",
             },
-            "code": null,
             "country": null,
             "location": Object {
               "latitude": 50.1008333,

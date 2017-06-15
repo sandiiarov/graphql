@@ -46,7 +46,6 @@ function sanitizeApiResponse(location: Object): LocationType {
   return {
     locationId: location.id,
     name: location.name,
-    code: location.code,
     slug: location.slug,
     timezone: location.timezone,
     location: {
@@ -66,7 +65,6 @@ function sanitizeLocationArea(area: null | Object): ?LocationAreaType {
         locationId: area.id,
         name: area.name,
         slug: area.slug,
-        code: area.code,
       }
     : null;
 }

@@ -120,7 +120,6 @@ export type PriceType = {
 export type LocationType = {
   locationId: string,
   name: string,
-  code: string,
   slug: string,
   timezone: string,
   location: CoordinatesType,
@@ -134,5 +133,4 @@ export type LocationAreaType = {
   locationId: string,
   name: string,
   slug: string,
-  code: string,
 };

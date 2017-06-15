@@ -23,11 +23,6 @@ export default new GraphQLObjectType({
       resolve: ({ name }: LocationType): string => name,
     },
 
-    code: {
-      type: GraphQLString,
-      resolve: ({ code }: LocationType): string => code,
-    },
-
     slug: {
       type: GraphQLString,
       resolve: ({ slug }: LocationType): string => slug,
