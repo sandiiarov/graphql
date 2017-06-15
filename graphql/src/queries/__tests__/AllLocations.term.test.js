@@ -15,14 +15,13 @@ describe('all locations query', () => {
           node {
             locationId
             name
-            code
             slug
             timezone
             location { latitude, longitude }
             type
-            city { locationId, name, slug, code }
-            subdivision { locationId, name, slug, code }
-            country { locationId, name, slug, code }
+            city { locationId, name, slug }
+            subdivision { locationId, name, slug }
+            country { locationId, name, slug }
           }
         }
       }
