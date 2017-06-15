@@ -8,6 +8,7 @@
 
 [options]
 module.name_mapper='^express-graphql$' -> '<PROJECT_ROOT>/config/stub/GeneralStub.js'
+module.name_mapper='^start-server-webpack-plugin$' -> '<PROJECT_ROOT>/config/stub/GeneralStub.js'
 module.name_mapper='^graphql-iso-date$' -> '<PROJECT_ROOT>/config/stub/GeneralStub.js'
 
 suppress_comment= \\(.\\|\n\\)*\\$FlowAllowMockMagic
