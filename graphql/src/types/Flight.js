@@ -7,7 +7,7 @@ import GraphQLLeg from './Leg';
 import GraphQLAirline from './Airline';
 import GraphQLPrice from './Price';
 import type { GraphqlContextType } from '../services/GraphqlContext';
-import { flightDurationInMinutes } from '../services/GraphqlResolvers';
+import FlightDurationInMinutes from '../resolvers/FlightDuration';
 
 import type {
   AirlineType,
@@ -46,7 +46,7 @@ export default new GraphQLObjectType({
     duration: {
       type: GraphQLInt,
       resolve: ({ departure, arrival }: FlightType): ?number =>
-        flightDurationInMinutes(departure, arrival),
+        FlightDurationInMinutes(departure, arrival),
     },
 
     legs: {
