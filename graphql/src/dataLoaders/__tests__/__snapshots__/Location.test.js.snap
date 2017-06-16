@@ -10,8 +10,8 @@ Array [
     },
     "country": null,
     "location": Object {
-      "latitude": 50.1008333,
-      "longitude": 14.26,
+      "lat": 50.1008333,
+      "lng": 14.26,
     },
     "locationId": "PRG",
     "name": "Václav Havel Airport Prague",
@@ -28,8 +28,8 @@ Array [
     },
     "country": null,
     "location": Object {
-      "latitude": 49.1513889,
-      "longitude": 16.6944444,
+      "lat": 49.1513889,
+      "lng": 16.6944444,
     },
     "locationId": "BRQ",
     "name": "Brno–Tuřany",
@@ -50,8 +50,8 @@ Object {
   },
   "country": null,
   "location": Object {
-    "latitude": 50.1008333,
-    "longitude": 14.26,
+    "lat": 50.1008333,
+    "lng": 14.26,
   },
   "locationId": "PRG",
   "name": "Václav Havel Airport Prague",

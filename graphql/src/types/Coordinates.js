@@ -9,12 +9,12 @@ export default new GraphQLObjectType({
   fields: {
     lat: {
       type: GraphQLFloat,
-      resolve: ({ latitude }: CoordinatesType): number => latitude,
+      resolve: ({ lat }: CoordinatesType): number => lat,
     },
 
     lng: {
       type: GraphQLFloat,
-      resolve: ({ longitude }: CoordinatesType): number => longitude,
+      resolve: ({ lng }: CoordinatesType): number => lng,
     },
   },
 });

@@ -8,8 +8,10 @@ import {
 } from 'graphql-relay';
 import GraphQLLocation from '../types/Location';
 import GraphQLRadius from '../types/RadiusInput';
+import GraphQLArea from '../types/AreaInput';
 
 import type { GraphqlContextType } from '../services/GraphqlContext';
+import type { AreaType } from '../Entities';
 
 const { connectionType: AllLocationsConnection } = connectionDefinitions({
   nodeType: GraphQLLocation,
@@ -23,6 +25,9 @@ export default {
     },
     radius: {
       type: GraphQLRadius,
+    },
+    area: {
+      type: GraphQLArea,
     },
     ...connectionArgs,
   },
@@ -38,11 +43,29 @@ export default {
       response = await context.dataLoader.locationSuggestions.loadByRadius(
         args.radius,
       );
+    } else if (args.area) {
+      validateArea(args.area);
+      response = await context.dataLoader.locationSuggestions.loadByArea(
+        args.area,
+      );
     } else {
       throw new Error(
-        `You must specify 'search' or 'radius' argument to find locations.`,
+        `You must specify 'search', 'radius' or 'area' argument to find locations.`,
       );
     }
     return connectionFromArray(response, args);
   },
 };
+
+function validateArea({ topLeft, bottomRight }: AreaType) {
+  if (topLeft.lat <= bottomRight.lat) {
+    throw new Error(
+      `Top left latitude of the area should be greater than bottom right latitude.`,
+    );
+  }
+  if (topLeft.lng >= bottomRight.lng) {
+    throw new Error(
+      `Top left longitude of the area should be lower than bottom right longitude.`,
+    );
+  }
+}

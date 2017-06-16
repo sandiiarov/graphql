@@ -6,7 +6,7 @@ Object {
     "allLocations": null,
   },
   "errors": Array [
-    [GraphQLError: You must specify 'search' or 'radius' argument to find locations.],
+    [GraphQLError: You must specify 'search', 'radius' or 'area' argument to find locations.],
   ],
 }
 `;

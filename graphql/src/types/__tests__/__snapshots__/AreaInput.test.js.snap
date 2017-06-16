@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AreaInput type should have valid fields 1`] = `
+Object {
+  "bottomRight": Object {
+    "name": "bottomRight",
+    "type": "CoordinatesInput!",
+  },
+  "topLeft": Object {
+    "name": "topLeft",
+    "type": "CoordinatesInput!",
+  },
+}
+`;
