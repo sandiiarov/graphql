@@ -131,10 +131,12 @@ export type LocationInputType = {
   location: string,
 };
 
+export type RadiusType = {
+  lat: number,
+  lng: number,
+  radius: number,
+};
+
 export type RadiusInputType = {
-  radius: {
-    lat: number,
-    lng: number,
-    radius: number,
-  },
+  radius: RadiusType,
 };

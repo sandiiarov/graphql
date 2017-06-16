@@ -4,16 +4,16 @@ exports[`RadiusInput type should have valid fields 1`] = `
 Object {
   "lat": Object {
     "name": "lat",
-    "type": "Float",
+    "type": "Float!",
   },
   "lng": Object {
     "name": "lng",
-    "type": "Float",
+    "type": "Float!",
   },
   "radius": Object {
     "description": "Distance in kilometers",
     "name": "radius",
-    "type": "Int",
+    "type": "Int!",
   },
 }
 `;

@@ -5,23 +5,34 @@ import DataLoader from 'dataloader';
 import config from '../../config/application';
 import request from '../services/HttpRequest';
 
-import type { LocationType, LocationAreaType } from '../Entities';
+import type { LocationType, LocationAreaType, RadiusType } from '../Entities';
 
 export default class LocationSuggestionsDataloader {
-  dataLoader: DataLoader<string, LocationType[]>;
+  dataLoader: DataLoader<Object, LocationType[]>;
 
   constructor() {
-    this.dataLoader = new DataLoader((locationKeys: string[]) => {
-      return this.batchGetLocations(locationKeys);
+    this.dataLoader = new DataLoader((urlParamsBatch: Object[]) => {
+      return this.batchGetLocations(urlParamsBatch);
     });
   }
 
   async load(locationKey: string): Promise<LocationType[]> {
-    return this.dataLoader.load(locationKey);
+    return this.dataLoader.load({ term: locationKey });
   }
 
   async loadMany(locationKeys: string[]): Promise<Array<LocationType[]>> {
-    return this.dataLoader.loadMany(locationKeys);
+    return this.dataLoader.loadMany(
+      locationKeys.map(location => ({ term: location })),
+    );
+  }
+
+  async loadByRadius(radius: RadiusType) {
+    return this.dataLoader.load({
+      type: 'radius',
+      lat: radius.lat,
+      lon: radius.lng,
+      radius: radius.radius,
+    });
   }
 
   /**
@@ -39,26 +50,20 @@ export default class LocationSuggestionsDataloader {
    * @private
    */
   async batchGetLocations(
-    locationKeys: string[],
-  ): Promise<Array<Array<LocationType> | Error>> {
+    urlParameters: Object[],
+  ): Promise<Array<LocationType[] | Error>> {
     const promisesStack = [];
 
-    locationKeys.forEach(locationKey => {
+    urlParameters.forEach(parameters => {
       promisesStack.push(
-        request(
-          config.restApiEndpoint.allLocations({
-            term: locationKey,
-          }),
-        ),
+        request(config.restApiEndpoint.allLocations(parameters)),
       );
     });
 
     const responseArray = await Promise.all(promisesStack);
-    return responseArray.map((response, index) => {
+    return responseArray.map(response => {
       if (response.locations.length === 0) {
-        return new Error(
-          `Location '${locationKeys[index]}' has not been found.`,
-        );
+        return new Error(`Location has not been found.`);
       }
       return response.locations.map((location): LocationType =>
         sanitizeApiResponse(location),

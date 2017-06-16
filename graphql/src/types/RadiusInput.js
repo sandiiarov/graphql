@@ -1,18 +1,23 @@
 // @flow
 
-import { GraphQLInputObjectType, GraphQLFloat, GraphQLInt } from 'graphql';
+import {
+  GraphQLInputObjectType,
+  GraphQLFloat,
+  GraphQLInt,
+  GraphQLNonNull,
+} from 'graphql';
 
 export default new GraphQLInputObjectType({
   name: 'RadiusInput',
   fields: {
     lat: {
-      type: GraphQLFloat,
+      type: new GraphQLNonNull(GraphQLFloat),
     },
     lng: {
-      type: GraphQLFloat,
+      type: new GraphQLNonNull(GraphQLFloat),
     },
     radius: {
-      type: GraphQLInt,
+      type: new GraphQLNonNull(GraphQLInt),
       description: 'Distance in kilometers',
     },
   },
