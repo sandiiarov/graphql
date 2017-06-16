@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`all locations query should return successful searches - changed order 1`] = `
+Object {
+  "data": Object {
+    "A": null,
+    "B": Object {
+      "edges": Array [
+        Object {
+          "node": Object {
+            "name": "Prague",
+          },
+        },
+        Object {
+          "node": Object {
+            "name": "Václav Havel Airport Prague",
+          },
+        },
+      ],
+    },
+  },
+  "errors": Array [
+    [GraphQLError: Location 'unknown place' has not been found.],
+  ],
+}
+`;
+
+exports[`all locations query should return successful searches 1`] = `
+Object {
+  "data": Object {
+    "A": Object {
+      "edges": Array [
+        Object {
+          "node": Object {
+            "name": "Prague",
+          },
+        },
+        Object {
+          "node": Object {
+            "name": "Václav Havel Airport Prague",
+          },
+        },
+      ],
+    },
+    "B": null,
+  },
+  "errors": Array [
+    [GraphQLError: Location 'unknown place' has not been found.],
+  ],
+}
+`;

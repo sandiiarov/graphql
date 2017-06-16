@@ -1,11 +1,11 @@
 ## Run GraphQL server
 
 ```
-yarn run start
+yarn start
 ```
 
 ## Run tests
 ```
-yarn run tests
-yarn run tests -- --watch
+yarn run test
+yarn run test-ci
 ```

@@ -57,7 +57,7 @@ const mocksMap = {
   })]: require(`../../queries/__tests__/__datasets__/AllFlights.json`),
   [config.restApiEndpoint.airlines]: require('../../dataLoaders/__tests__/__datasets__/airlines.json'),
   [config.restApiEndpoint.allLocations({ term: 'Prague'})]: require('../../queries/__tests__/__datasets__/AllLocations.prague.json'),
-  [config.restApiEndpoint.allLocations({ term: 'unknown place'})]: [], // empty array
+  [config.restApiEndpoint.allLocations({ term: 'unknown place'})]: require('../../queries/__tests__/__datasets__/AllLocations.unknown.json'),
   [config.restApiEndpoint.allLocations({ term: 'Prague'})]:
     require('../../queries/__tests__/__datasets__/AllLocations.prague.json'),
   [config.restApiEndpoint.allLocations({ term: 'Mexico'})]:

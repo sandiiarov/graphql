@@ -3,7 +3,7 @@
 import { graphql } from '../../services/TestingTools';
 
 describe('all locations query', () => {
-  it('should return empty array', async () => {
+  it('should return null edges', async () => {
     const query = `{
       allLocations(search: "unknown place") {
         edges {
