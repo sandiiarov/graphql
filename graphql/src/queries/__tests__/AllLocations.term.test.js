@@ -10,7 +10,7 @@ describe('all locations query', () => {
 
   it('should return locations', async () => {
     const query = `{
-      allLocations(term: "Prague") {
+      allLocations(search: "Prague") {
         edges {
           node {
             locationId

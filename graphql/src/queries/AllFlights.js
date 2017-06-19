@@ -24,13 +24,13 @@ const { connectionType: AllFlightsConnection } = connectionDefinitions({
 export default {
   type: AllFlightsConnection,
   args: {
-    ...connectionArgs,
     search: {
       type: new GraphQLNonNull(FlightsSearchInput),
     },
     options: {
       type: FlightsOptionsInput,
     },
+    ...connectionArgs,
   },
   resolve: async (ancestor: mixed, args: Object) => {
     validateArgs(args);
