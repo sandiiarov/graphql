@@ -2,7 +2,6 @@ service: graphql-proxy
 
 provider:
   name: aws
-  profile: staging
   runtime: nodejs6.10
   stage: dev
   region: eu-west-1 # EU (Ireland)
