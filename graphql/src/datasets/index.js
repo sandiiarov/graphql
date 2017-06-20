@@ -10,7 +10,9 @@ module.exports.Booking = {
 module.exports.Location = {
   unknown: require('./location/unknown.json'),
   prague: require('./location/prague.json'),
+  pragueCsCZ: require('./location/prague-cs-CZ.json'),
   mexico: require('./location/mexico.json'),
+  mexCsCZ: require('./location/mex-cs-CZ.json'),
   frankfurt: require('./location/frankfurt.json'),
 };
 
@@ -18,6 +20,7 @@ module.exports.Flight = {
   prgMex: require('./flight/prg-mex.json'),
   prgMexCzk: require('./flight/prg-mex-czk.json'),
   prgFraMex: require('./flight/prg,fra-mex.json'),
+  prgMexCsCZ: require('./flight/prg-mex-cs-CZ.json'),
   noResults: require('./flight/no-results.json'),
   prgMexFrom7To10Days: require('./flight/prg-mex-from-7-to-10-days.json'),
 };

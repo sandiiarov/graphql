@@ -12,6 +12,10 @@ import type {
   Location,
 } from '../types/Location';
 
+type Options = {
+  locale?: string,
+};
+
 export default class LocationSuggestionsDataloader {
   dataLoader: DataLoader<Object, Location[]>;
 
@@ -26,32 +30,43 @@ export default class LocationSuggestionsDataloader {
     );
   }
 
-  async load(locationKey: string): Promise<Location[]> {
-    return this.dataLoader.load({ term: locationKey });
+  async load(locationKey: string, options: ?Options): Promise<Location[]> {
+    return this.dataLoader.load({
+      term: locationKey,
+      locale: options ? options.locale : null,
+    });
   }
 
-  async loadMany(locationKeys: string[]): Promise<Array<Location[]>> {
+  async loadMany(
+    locationKeys: string[],
+    options: ?Options,
+  ): Promise<Array<Location[]>> {
     return this.dataLoader.loadMany(
-      locationKeys.map(location => ({ term: location })),
+      locationKeys.map(location => ({
+        term: location,
+        locale: options ? options.locale : null,
+      })),
     );
   }
 
-  async loadByRadius(radius: Radius) {
+  async loadByRadius(radius: Radius, options: ?Options): Promise<Location[]> {
     return this.dataLoader.load({
       type: 'radius',
       lat: radius.lat,
       lon: radius.lng,
       radius: radius.radius,
+      locale: options ? options.locale : null,
     });
   }
 
-  async loadByArea(area: Rectangle) {
+  async loadByArea(area: Rectangle, options: ?Options): Promise<Location[]> {
     return this.dataLoader.load({
       type: 'box',
       high_lat: area.topLeft.lat,
       low_lon: area.topLeft.lng,
       low_lat: area.bottomRight.lat,
       high_lon: area.bottomRight.lng,
+      locale: options ? options.locale : null,
     });
   }
 

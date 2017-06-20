@@ -7,5 +7,9 @@ Object {
     "name": "currency",
     "type": "Currency",
   },
+  "locale": Object {
+    "name": "locale",
+    "type": "Locale",
+  },
 }
 `;

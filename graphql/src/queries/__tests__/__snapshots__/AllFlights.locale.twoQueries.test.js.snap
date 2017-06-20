@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AllFlights locale  should request flights and locations with proper locale 1`] = `
+Object {
+  "data": Object {
+    "allFlights": Object {
+      "edges": Array [
+        Object {
+          "cursor": "YXJyYXljb25uZWN0aW9uOjA=",
+          "node": Object {
+            "departure": Object {
+              "airport": Object {
+                "city": null,
+                "name": "Prague",
+              },
+            },
+          },
+        },
+        Object {
+          "cursor": "YXJyYXljb25uZWN0aW9uOjE=",
+          "node": Object {
+            "departure": Object {
+              "airport": Object {
+                "city": null,
+                "name": "Prague",
+              },
+            },
+          },
+        },
+        Object {
+          "cursor": "YXJyYXljb25uZWN0aW9uOjI=",
+          "node": Object {
+            "departure": Object {
+              "airport": Object {
+                "city": null,
+                "name": "Prague",
+              },
+            },
+          },
+        },
+      ],
+    },
+    "flights2": Object {
+      "edges": Array [
+        Object {
+          "cursor": "YXJyYXljb25uZWN0aW9uOjA=",
+          "node": Object {
+            "departure": Object {
+              "airport": Object {
+                "city": Object {
+                  "name": "Mexico City",
+                },
+                "name": "Mexico City International",
+              },
+            },
+          },
+        },
+        Object {
+          "cursor": "YXJyYXljb25uZWN0aW9uOjE=",
+          "node": Object {
+            "departure": Object {
+              "airport": Object {
+                "city": Object {
+                  "name": "Mexico City",
+                },
+                "name": "Mexico City International",
+              },
+            },
+          },
+        },
+        Object {
+          "cursor": "YXJyYXljb25uZWN0aW9uOjI=",
+          "node": Object {
+            "departure": Object {
+              "airport": Object {
+                "city": Object {
+                  "name": "Mexico City",
+                },
+                "name": "Mexico City International",
+              },
+            },
+          },
+        },
+      ],
+    },
+  },
+}
+`;

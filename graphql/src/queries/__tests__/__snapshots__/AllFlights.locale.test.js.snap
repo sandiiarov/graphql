@@ -1,0 +1,119 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`all flights query should return flight in czech language 1`] = `
+Object {
+  "data": Object {
+    "allFlights": Object {
+      "edges": Array [
+        Object {
+          "node": Object {
+            "arrival": Object {
+              "airport": Object {
+                "city": Object {
+                  "name": "Ciudad de México",
+                },
+              },
+            },
+            "departure": Object {
+              "airport": Object {
+                "city": null,
+              },
+            },
+          },
+        },
+        Object {
+          "node": Object {
+            "arrival": Object {
+              "airport": Object {
+                "city": Object {
+                  "name": "Ciudad de México",
+                },
+              },
+            },
+            "departure": Object {
+              "airport": Object {
+                "city": null,
+              },
+            },
+          },
+        },
+        Object {
+          "node": Object {
+            "arrival": Object {
+              "airport": Object {
+                "city": Object {
+                  "name": "Ciudad de México",
+                },
+              },
+            },
+            "departure": Object {
+              "airport": Object {
+                "city": null,
+              },
+            },
+          },
+        },
+      ],
+    },
+  },
+}
+`;
+
+exports[`all flights query should return flight in czech language with location fallback 1`] = `
+Object {
+  "data": Object {
+    "allFlights": Object {
+      "edges": Array [
+        Object {
+          "node": Object {
+            "arrival": Object {
+              "airport": Object {
+                "city": Object {
+                  "name": "Ciudad de México",
+                },
+              },
+            },
+            "departure": Object {
+              "airport": Object {
+                "city": null,
+              },
+            },
+          },
+        },
+        Object {
+          "node": Object {
+            "arrival": Object {
+              "airport": Object {
+                "city": Object {
+                  "name": "Ciudad de México",
+                },
+              },
+            },
+            "departure": Object {
+              "airport": Object {
+                "city": null,
+              },
+            },
+          },
+        },
+        Object {
+          "node": Object {
+            "arrival": Object {
+              "airport": Object {
+                "city": Object {
+                  "name": "Ciudad de México",
+                },
+              },
+            },
+            "departure": Object {
+              "airport": Object {
+                "city": null,
+              },
+            },
+          },
+        },
+      ],
+    },
+  },
+}
+`;

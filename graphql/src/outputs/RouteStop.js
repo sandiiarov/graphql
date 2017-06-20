@@ -1,6 +1,7 @@
 // @flow
 
 import { GraphQLObjectType } from 'graphql';
+import type { GraphQLResolveInfo } from 'graphql';
 import { GraphQLDateTime } from 'graphql-iso-date';
 import Location from './Location';
 
@@ -16,8 +17,12 @@ export default new GraphQLObjectType({
       resolve: (
         { where }: DepartureArrival,
         args: Object,
-        context: GraphqlContextType,
-      ): Promise<LocationType> => context.dataLoader.location.load(where.code),
+        { dataLoader, options }: GraphqlContextType,
+        { path }: GraphQLResolveInfo,
+      ): Promise<LocationType> => {
+        const queryOptions = options.getOptions(path);
+        return dataLoader.location.load(where.code, queryOptions);
+      },
     },
 
     time: {

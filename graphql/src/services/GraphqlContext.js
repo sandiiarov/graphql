@@ -7,6 +7,7 @@ import createAirlineLoader from '../dataLoaders/Airline';
 import BookingsLoader from '../dataLoaders/Bookings';
 import LocationSuggestions from '../dataLoaders/LocationSuggestions';
 import Location from '../dataLoaders/Location';
+import OptionsStorage from './context/OptionsStorage';
 
 import type { Booking } from '../types/Booking';
 import type { Identity } from '../types/User';
@@ -22,6 +23,7 @@ export type GraphqlContextType = {
     location: Location,
     locationSuggestions: LocationSuggestions,
   },
+  options: OptionsStorage,
 };
 
 export function createContext(token: ?string): GraphqlContextType {
@@ -37,5 +39,6 @@ export function createContext(token: ?string): GraphqlContextType {
       location: new Location(locationSuggestions),
       locationSuggestions: locationSuggestions,
     },
+    options: new OptionsStorage(),
   };
 }

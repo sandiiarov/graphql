@@ -1,6 +1,7 @@
 // @flow
 
 import { GraphQLString } from 'graphql';
+import type { GraphQLResolveInfo } from 'graphql';
 import {
   connectionArgs,
   connectionDefinitions,
@@ -9,6 +10,7 @@ import {
 import GraphQLLocation from '../outputs/Location';
 import GraphQLRadius from '../inputs/RadiusInput';
 import GraphQLArea from '../inputs/AreaInput';
+import LocationsOptionsInput from '../inputs/LocationsOptions';
 
 import type { GraphqlContextType } from '../services/GraphqlContext';
 import type { Rectangle } from '../types/Location';
@@ -33,24 +35,37 @@ export default {
       type: GraphQLArea,
       description: 'Search location by area.',
     },
+    options: {
+      type: LocationsOptionsInput,
+    },
     ...connectionArgs,
   },
   resolve: async (
     ancestor: mixed,
     args: Object,
     context: GraphqlContextType,
+    { path }: GraphQLResolveInfo,
   ) => {
+    if (path) {
+      context.options.setOptions(path.key, args.options);
+    }
+
     let response;
     if (args.search) {
-      response = await context.dataLoader.locationSuggestions.load(args.search);
+      response = await context.dataLoader.locationSuggestions.load(
+        args.search,
+        args.options,
+      );
     } else if (args.radius) {
       response = await context.dataLoader.locationSuggestions.loadByRadius(
         args.radius,
+        args.options,
       );
     } else if (args.area) {
       validateArea(args.area);
       response = await context.dataLoader.locationSuggestions.loadByArea(
         args.area,
+        args.options,
       );
     } else {
       throw new Error(
