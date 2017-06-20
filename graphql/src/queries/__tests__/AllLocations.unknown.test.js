@@ -5,7 +5,7 @@ import { graphql } from '../../services/TestingTools';
 describe('all locations query', () => {
   it('should return empty array', async () => {
     const query = `{
-      allLocations(term: "unknown place") {
+      allLocations(search: "unknown place") {
         edges {
           node {
             locationId

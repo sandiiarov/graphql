@@ -20,15 +20,15 @@ const { connectionType: AllLocationsConnection } = connectionDefinitions({
 export default {
   type: AllLocationsConnection,
   args: {
-    ...connectionArgs,
-    term: {
+    search: {
       type: new GraphQLNonNull(GraphQLString),
     },
+    ...connectionArgs,
   },
   resolve: async (ancestor: mixed, args: Object) => {
     const response = await request(
       config.restApiEndpoint.allLocations({
-        term: args.term,
+        term: args.search,
       }),
     );
     return Array.isArray(response.locations)
