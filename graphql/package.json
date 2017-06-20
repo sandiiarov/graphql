@@ -45,8 +45,8 @@
     "start": "rm -f dist/hot/* && webpack --config config/webpack.development.js",
     "build:prod": "webpack --config config/webpack.production.js",
     "lint": "eslint .",
-    "test": "yarn run typecheck && yarn run lint && jest",
-    "test-ci": "yarn run test -- --ci --color --config=jest.json",
+    "test": "jest --setupTestFrameworkScriptFile=./config/setupTests.js",
+    "test-ci": "yarn run typecheck && yarn run lint && yarn run test -- --ci --color --config=jest.json",
     "typecheck": "flow check --color=always"
   }
 }
