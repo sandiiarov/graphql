@@ -1,7 +1,13 @@
 // @flow
 
-import { graphql } from '../../services/TestingTools';
+import { bookings } from '../../datasets';
+import { graphql, RestApiMock } from '../../services/TestingTools';
 import AllBookings from '../AllBookings';
+import config from '../../../config/application';
+
+beforeEach(() => {
+  RestApiMock.onGet(config.restApiEndpoint.allBookings).replyWithData(bookings);
+});
 
 describe('all bookings query', () => {
   it('should be list of non-null booking types', () => {
