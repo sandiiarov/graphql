@@ -1,0 +1,189 @@
+{
+  "locations": [
+    {
+      "id": "BRQ",
+      "name": "Brno\u2013Tu\u0159any",
+      "slug": "brno-turany-brno-czech-republic",
+      "alternative_names": [],
+      "rank": 13,
+      "timezone": "Europe\/Prague",
+      "city": {
+        "id": "brno_cz",
+        "name": "Brno",
+        "slug": "brno-czech-republic",
+        "subdivision": null,
+        "autonomous_territory": null,
+        "country": {
+          "id": "CZ",
+          "name": "Czech Republic",
+          "slug": "czech-republic"
+        }
+      },
+      "location": {
+        "lat": 49.1513889,
+        "lon": 16.6944444
+      },
+      "type": "airport"
+    },
+    {
+      "id": "brno_cz",
+      "name": "Brno",
+      "slug": "brno-czech-republic",
+      "code": "BRQ",
+      "alternative_names": [],
+      "rank": 18,
+      "timezone": "Europe\/Prague",
+      "population": null,
+      "airports": 2,
+      "subdivision": null,
+      "autonomous_territory": null,
+      "country": {
+        "id": "CZ",
+        "name": "Czech Republic",
+        "slug": "czech-republic"
+      },
+      "location": {
+        "lat": 49.1950602,
+        "lon": 16.6068371
+      },
+      "type": "city"
+    },
+    {
+      "id": "brussels_be",
+      "name": "Brussels",
+      "slug": "brussels-belgium",
+      "code": "BRU",
+      "alternative_names": [],
+      "rank": 1,
+      "timezone": "Europe\/Brussels",
+      "population": null,
+      "airports": 3,
+      "subdivision": null,
+      "autonomous_territory": null,
+      "country": {
+        "id": "BE",
+        "name": "Belgium",
+        "slug": "belgium"
+      },
+      "location": {
+        "lat": 50.8503463,
+        "lon": 4.3517211
+      },
+      "type": "city"
+    },
+    {
+      "id": "BRU",
+      "name": "Brussels",
+      "slug": "brussels-brussels-belgium",
+      "alternative_names": [],
+      "rank": 1,
+      "timezone": "Europe\/Brussels",
+      "city": {
+        "id": "brussels_be",
+        "name": "Brussels",
+        "slug": "brussels-belgium",
+        "subdivision": null,
+        "autonomous_territory": null,
+        "country": {
+          "id": "BE",
+          "name": "Belgium",
+          "slug": "belgium"
+        }
+      },
+      "location": {
+        "lat": 50.9013889,
+        "lon": 4.48444444
+      },
+      "type": "airport"
+    },
+    {
+      "id": "BNE",
+      "name": "Brisbane",
+      "slug": "brisbane-brisbane-queensland-australia",
+      "alternative_names": [],
+      "rank": 3,
+      "timezone": "Australia\/Brisbane",
+      "city": {
+        "id": "brisbane_ql_au",
+        "name": "Brisbane",
+        "slug": "brisbane-queensland-australia",
+        "subdivision": {
+          "id": "QL_AU",
+          "name": "Queensland",
+          "slug": "queensland-australia",
+          "code": "QLD"
+        },
+        "autonomous_territory": null,
+        "country": {
+          "id": "AU",
+          "name": "Australia",
+          "slug": "australia"
+        }
+      },
+      "location": {
+        "lat": -27.384167,
+        "lon": 153.1175
+      },
+      "type": "airport"
+    },
+    {
+      "id": "brisbane_ql_au",
+      "name": "Brisbane",
+      "slug": "brisbane-queensland-australia",
+      "code": "BNE",
+      "alternative_names": [],
+      "rank": 4,
+      "timezone": "Australia\/Brisbane",
+      "population": null,
+      "airports": 1,
+      "subdivision": {
+        "id": "QL_AU",
+        "name": "Queensland",
+        "slug": "queensland-australia",
+        "code": "QLD"
+      },
+      "autonomous_territory": null,
+      "country": {
+        "id": "AU",
+        "name": "Australia",
+        "slug": "australia"
+      },
+      "location": {
+        "lat": -27.4697707,
+        "lon": 153.0251235
+      },
+      "type": "city"
+    },
+    {
+      "id": "BRE",
+      "name": "Bremen",
+      "slug": "bremen-bremen-germany",
+      "alternative_names": [],
+      "rank": 6,
+      "timezone": "Europe\/Berlin",
+      "city": {
+        "id": "bremen_de",
+        "name": "Bremen",
+        "slug": "bremen-germany",
+        "subdivision": null,
+        "autonomous_territory": null,
+        "country": {
+          "id": "DE",
+          "name": "Germany",
+          "slug": "germany"
+        }
+      },
+      "location": {
+        "lat": 53.0475,
+        "lon": 8.78666667
+      },
+      "type": "airport"
+    }
+  ],
+  "meta": {
+    "locale": {
+      "code": "en-US",
+      "status": "Locale not specified, using default."
+    }
+  }
+}

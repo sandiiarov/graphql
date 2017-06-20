@@ -1,0 +1,158 @@
+{
+  "locations": [
+    {
+      "id": "PRG",
+      "name": "V\u00e1clav Havel Airport Prague",
+      "slug": "vaclav-havel-airport-prague-prague-czech-republic",
+      "alternative_names": [],
+      "rank": 1,
+      "timezone": "Europe\/Prague",
+      "city": {
+        "id": "prague_cz",
+        "name": "Prague",
+        "slug": "prague-czech-republic",
+        "subdivision": null,
+        "autonomous_territory": null,
+        "country": {
+          "id": "CZ",
+          "name": "Czech Republic",
+          "slug": "czech-republic"
+        }
+      },
+      "location": {
+        "lat": 50.1008333,
+        "lon": 14.26
+      },
+      "type": "airport"
+    },
+    {
+      "id": "prague_cz",
+      "name": "Prague",
+      "slug": "prague-czech-republic",
+      "code": "PRG",
+      "alternative_names": [],
+      "rank": 1,
+      "timezone": "Europe\/Prague",
+      "population": null,
+      "airports": 2,
+      "subdivision": null,
+      "autonomous_territory": null,
+      "country": {
+        "id": "CZ",
+        "name": "Czech Republic",
+        "slug": "czech-republic"
+      },
+      "location": {
+        "lat": 50.0755381,
+        "lon": 14.4378005
+      },
+      "type": "city"
+    },
+    {
+      "id": "MED",
+      "name": "Prince Mohammad bin Abdulaziz",
+      "slug": "prince-mohammad-bin-abdulaziz-medina-saudi-arabia",
+      "alternative_names": [],
+      "rank": 9,
+      "timezone": "Asia\/Riyadh",
+      "city": {
+        "id": "medina_sa",
+        "name": "Medina",
+        "slug": "medina-saudi-arabia",
+        "subdivision": null,
+        "autonomous_territory": null,
+        "country": {
+          "id": "SA",
+          "name": "Saudi Arabia",
+          "slug": "saudi-arabia"
+        }
+      },
+      "location": {
+        "lat": 24.5533333,
+        "lon": 39.705
+      },
+      "type": "airport"
+    },
+    {
+      "id": "PRN",
+      "name": "Pristina International",
+      "slug": "pristina-international-pristina-unknown-region",
+      "alternative_names": [],
+      "rank": 11,
+      "timezone": "Europe\/Belgrade",
+      "city": {
+        "id": "pristina_xk",
+        "name": "Pristina",
+        "slug": "pristina-unknown-region",
+        "subdivision": null,
+        "autonomous_territory": null,
+        "country": {
+          "id": "XK",
+          "name": "Kosovo",
+          "slug": "kosovo"
+        }
+      },
+      "location": {
+        "lat": 42.5727778,
+        "lon": 21.0358333
+      },
+      "type": "airport"
+    },
+    {
+      "id": "ELQ",
+      "name": "Prince Nayef bin Abdulaziz Regional",
+      "slug": "prince-nayef-bin-abdulaziz-regional-gassim-saudi-arabia",
+      "alternative_names": [],
+      "rank": 12,
+      "timezone": "Asia\/Riyadh",
+      "city": {
+        "id": "gassim_sa",
+        "name": "Gassim",
+        "slug": "gassim-saudi-arabia",
+        "subdivision": null,
+        "autonomous_territory": null,
+        "country": {
+          "id": "SA",
+          "name": "Saudi Arabia",
+          "slug": "saudi-arabia"
+        }
+      },
+      "location": {
+        "lat": 26.3027778,
+        "lon": 43.7738889
+      },
+      "type": "airport"
+    },
+    {
+      "id": "BCN",
+      "name": "Barcelona\u2013El Prat",
+      "slug": "barcelona-el-prat-barcelona-spain",
+      "alternative_names": [],
+      "rank": 0,
+      "timezone": "Europe\/Madrid",
+      "city": {
+        "id": "barcelona_es",
+        "name": "Barcelona",
+        "slug": "barcelona-spain",
+        "subdivision": null,
+        "autonomous_territory": null,
+        "country": {
+          "id": "ES",
+          "name": "Spain",
+          "slug": "spain"
+        }
+      },
+      "location": {
+        "lat": 41.2969444,
+        "lon": 2.07833333
+      },
+      "type": "airport"
+    }
+  ],
+  "meta": {
+    "locale": {
+      "code": "en-US",
+      "status": "Locale not specified, using default."
+    }
+  }
+}

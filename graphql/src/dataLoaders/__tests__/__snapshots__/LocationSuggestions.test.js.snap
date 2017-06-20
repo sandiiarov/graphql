@@ -1,0 +1,361 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`returns PRG and BRQ suggestions 1`] = `
+Array [
+  Array [
+    Object {
+      "city": Object {
+        "locationId": "prague_cz",
+        "name": "Prague",
+        "slug": "prague-czech-republic",
+      },
+      "country": null,
+      "location": Object {
+        "latitude": 50.1008333,
+        "longitude": 14.26,
+      },
+      "locationId": "PRG",
+      "name": "Václav Havel Airport Prague",
+      "slug": "vaclav-havel-airport-prague-prague-czech-republic",
+      "subdivision": null,
+      "timezone": "Europe/Prague",
+      "type": "airport",
+    },
+    Object {
+      "city": null,
+      "country": Object {
+        "locationId": "CZ",
+        "name": "Czech Republic",
+        "slug": "czech-republic",
+      },
+      "location": Object {
+        "latitude": 50.0755381,
+        "longitude": 14.4378005,
+      },
+      "locationId": "prague_cz",
+      "name": "Prague",
+      "slug": "prague-czech-republic",
+      "subdivision": null,
+      "timezone": "Europe/Prague",
+      "type": "city",
+    },
+    Object {
+      "city": Object {
+        "locationId": "medina_sa",
+        "name": "Medina",
+        "slug": "medina-saudi-arabia",
+      },
+      "country": null,
+      "location": Object {
+        "latitude": 24.5533333,
+        "longitude": 39.705,
+      },
+      "locationId": "MED",
+      "name": "Prince Mohammad bin Abdulaziz",
+      "slug": "prince-mohammad-bin-abdulaziz-medina-saudi-arabia",
+      "subdivision": null,
+      "timezone": "Asia/Riyadh",
+      "type": "airport",
+    },
+    Object {
+      "city": Object {
+        "locationId": "pristina_xk",
+        "name": "Pristina",
+        "slug": "pristina-unknown-region",
+      },
+      "country": null,
+      "location": Object {
+        "latitude": 42.5727778,
+        "longitude": 21.0358333,
+      },
+      "locationId": "PRN",
+      "name": "Pristina International",
+      "slug": "pristina-international-pristina-unknown-region",
+      "subdivision": null,
+      "timezone": "Europe/Belgrade",
+      "type": "airport",
+    },
+    Object {
+      "city": Object {
+        "locationId": "gassim_sa",
+        "name": "Gassim",
+        "slug": "gassim-saudi-arabia",
+      },
+      "country": null,
+      "location": Object {
+        "latitude": 26.3027778,
+        "longitude": 43.7738889,
+      },
+      "locationId": "ELQ",
+      "name": "Prince Nayef bin Abdulaziz Regional",
+      "slug": "prince-nayef-bin-abdulaziz-regional-gassim-saudi-arabia",
+      "subdivision": null,
+      "timezone": "Asia/Riyadh",
+      "type": "airport",
+    },
+    Object {
+      "city": Object {
+        "locationId": "barcelona_es",
+        "name": "Barcelona",
+        "slug": "barcelona-spain",
+      },
+      "country": null,
+      "location": Object {
+        "latitude": 41.2969444,
+        "longitude": 2.07833333,
+      },
+      "locationId": "BCN",
+      "name": "Barcelona–El Prat",
+      "slug": "barcelona-el-prat-barcelona-spain",
+      "subdivision": null,
+      "timezone": "Europe/Madrid",
+      "type": "airport",
+    },
+  ],
+  Array [
+    Object {
+      "city": Object {
+        "locationId": "brno_cz",
+        "name": "Brno",
+        "slug": "brno-czech-republic",
+      },
+      "country": null,
+      "location": Object {
+        "latitude": 49.1513889,
+        "longitude": 16.6944444,
+      },
+      "locationId": "BRQ",
+      "name": "Brno–Tuřany",
+      "slug": "brno-turany-brno-czech-republic",
+      "subdivision": null,
+      "timezone": "Europe/Prague",
+      "type": "airport",
+    },
+    Object {
+      "city": null,
+      "country": Object {
+        "locationId": "CZ",
+        "name": "Czech Republic",
+        "slug": "czech-republic",
+      },
+      "location": Object {
+        "latitude": 49.1950602,
+        "longitude": 16.6068371,
+      },
+      "locationId": "brno_cz",
+      "name": "Brno",
+      "slug": "brno-czech-republic",
+      "subdivision": null,
+      "timezone": "Europe/Prague",
+      "type": "city",
+    },
+    Object {
+      "city": null,
+      "country": Object {
+        "locationId": "BE",
+        "name": "Belgium",
+        "slug": "belgium",
+      },
+      "location": Object {
+        "latitude": 50.8503463,
+        "longitude": 4.3517211,
+      },
+      "locationId": "brussels_be",
+      "name": "Brussels",
+      "slug": "brussels-belgium",
+      "subdivision": null,
+      "timezone": "Europe/Brussels",
+      "type": "city",
+    },
+    Object {
+      "city": Object {
+        "locationId": "brussels_be",
+        "name": "Brussels",
+        "slug": "brussels-belgium",
+      },
+      "country": null,
+      "location": Object {
+        "latitude": 50.9013889,
+        "longitude": 4.48444444,
+      },
+      "locationId": "BRU",
+      "name": "Brussels",
+      "slug": "brussels-brussels-belgium",
+      "subdivision": null,
+      "timezone": "Europe/Brussels",
+      "type": "airport",
+    },
+    Object {
+      "city": Object {
+        "locationId": "brisbane_ql_au",
+        "name": "Brisbane",
+        "slug": "brisbane-queensland-australia",
+      },
+      "country": null,
+      "location": Object {
+        "latitude": -27.384167,
+        "longitude": 153.1175,
+      },
+      "locationId": "BNE",
+      "name": "Brisbane",
+      "slug": "brisbane-brisbane-queensland-australia",
+      "subdivision": null,
+      "timezone": "Australia/Brisbane",
+      "type": "airport",
+    },
+    Object {
+      "city": null,
+      "country": Object {
+        "locationId": "AU",
+        "name": "Australia",
+        "slug": "australia",
+      },
+      "location": Object {
+        "latitude": -27.4697707,
+        "longitude": 153.0251235,
+      },
+      "locationId": "brisbane_ql_au",
+      "name": "Brisbane",
+      "slug": "brisbane-queensland-australia",
+      "subdivision": Object {
+        "locationId": "QL_AU",
+        "name": "Queensland",
+        "slug": "queensland-australia",
+      },
+      "timezone": "Australia/Brisbane",
+      "type": "city",
+    },
+    Object {
+      "city": Object {
+        "locationId": "bremen_de",
+        "name": "Bremen",
+        "slug": "bremen-germany",
+      },
+      "country": null,
+      "location": Object {
+        "latitude": 53.0475,
+        "longitude": 8.78666667,
+      },
+      "locationId": "BRE",
+      "name": "Bremen",
+      "slug": "bremen-bremen-germany",
+      "subdivision": null,
+      "timezone": "Europe/Berlin",
+      "type": "airport",
+    },
+  ],
+]
+`;
+
+exports[`returns PRG suggestions 1`] = `
+Array [
+  Object {
+    "city": Object {
+      "locationId": "prague_cz",
+      "name": "Prague",
+      "slug": "prague-czech-republic",
+    },
+    "country": null,
+    "location": Object {
+      "latitude": 50.1008333,
+      "longitude": 14.26,
+    },
+    "locationId": "PRG",
+    "name": "Václav Havel Airport Prague",
+    "slug": "vaclav-havel-airport-prague-prague-czech-republic",
+    "subdivision": null,
+    "timezone": "Europe/Prague",
+    "type": "airport",
+  },
+  Object {
+    "city": null,
+    "country": Object {
+      "locationId": "CZ",
+      "name": "Czech Republic",
+      "slug": "czech-republic",
+    },
+    "location": Object {
+      "latitude": 50.0755381,
+      "longitude": 14.4378005,
+    },
+    "locationId": "prague_cz",
+    "name": "Prague",
+    "slug": "prague-czech-republic",
+    "subdivision": null,
+    "timezone": "Europe/Prague",
+    "type": "city",
+  },
+  Object {
+    "city": Object {
+      "locationId": "medina_sa",
+      "name": "Medina",
+      "slug": "medina-saudi-arabia",
+    },
+    "country": null,
+    "location": Object {
+      "latitude": 24.5533333,
+      "longitude": 39.705,
+    },
+    "locationId": "MED",
+    "name": "Prince Mohammad bin Abdulaziz",
+    "slug": "prince-mohammad-bin-abdulaziz-medina-saudi-arabia",
+    "subdivision": null,
+    "timezone": "Asia/Riyadh",
+    "type": "airport",
+  },
+  Object {
+    "city": Object {
+      "locationId": "pristina_xk",
+      "name": "Pristina",
+      "slug": "pristina-unknown-region",
+    },
+    "country": null,
+    "location": Object {
+      "latitude": 42.5727778,
+      "longitude": 21.0358333,
+    },
+    "locationId": "PRN",
+    "name": "Pristina International",
+    "slug": "pristina-international-pristina-unknown-region",
+    "subdivision": null,
+    "timezone": "Europe/Belgrade",
+    "type": "airport",
+  },
+  Object {
+    "city": Object {
+      "locationId": "gassim_sa",
+      "name": "Gassim",
+      "slug": "gassim-saudi-arabia",
+    },
+    "country": null,
+    "location": Object {
+      "latitude": 26.3027778,
+      "longitude": 43.7738889,
+    },
+    "locationId": "ELQ",
+    "name": "Prince Nayef bin Abdulaziz Regional",
+    "slug": "prince-nayef-bin-abdulaziz-regional-gassim-saudi-arabia",
+    "subdivision": null,
+    "timezone": "Asia/Riyadh",
+    "type": "airport",
+  },
+  Object {
+    "city": Object {
+      "locationId": "barcelona_es",
+      "name": "Barcelona",
+      "slug": "barcelona-spain",
+    },
+    "country": null,
+    "location": Object {
+      "latitude": 41.2969444,
+      "longitude": 2.07833333,
+    },
+    "locationId": "BCN",
+    "name": "Barcelona–El Prat",
+    "slug": "barcelona-el-prat-barcelona-spain",
+    "subdivision": null,
+    "timezone": "Europe/Madrid",
+    "type": "airport",
+  },
+]
+`;

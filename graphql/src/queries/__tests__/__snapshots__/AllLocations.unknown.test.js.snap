@@ -1,11 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`all locations query should return empty array 1`] = `
+exports[`all locations query should return null edges 1`] = `
 Object {
   "data": Object {
-    "allLocations": Object {
-      "edges": null,
-    },
+    "allLocations": null,
   },
+  "errors": Array [
+    [GraphQLError: Location 'unknown place' has not been found.],
+  ],
 }
 `;

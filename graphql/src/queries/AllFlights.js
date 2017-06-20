@@ -14,8 +14,10 @@ import config from '../../config/application';
 import GraphQLFlight from '../types/Flight';
 import FlightsSearchInput from '../types/FlightsSearchInput';
 import FlightsOptionsInput from '../types/FlightsOptionsInput';
-import { fetchLocation } from './location/LocationLoader';
 import { sanitizeApiResponse } from './flight/ApiSanitizer';
+import LocationDataLoader from '../dataLoaders/Location';
+
+import type { GraphqlContextType } from '../services/GraphqlContext';
 
 const { connectionType: AllFlightsConnection } = connectionDefinitions({
   nodeType: GraphQLFlight,
@@ -32,14 +34,21 @@ export default {
     },
     ...connectionArgs,
   },
-  resolve: async (ancestor: mixed, args: Object) => {
+  resolve: async (
+    ancestor: mixed,
+    args: Object,
+    context: GraphqlContextType,
+  ) => {
     validateArgs(args);
 
     let allFlights = await requestFlights(args);
 
     // Use location fallback when flights returns no results
     if (!allFlights.data.length) {
-      allFlights = await useLocationsFallback(args);
+      allFlights = await useLocationsFallback(
+        args,
+        context.dataLoader.location,
+      );
     }
 
     return connectionFromArray(
@@ -76,10 +85,14 @@ function requestFlights(
   );
 }
 
-async function useLocationsFallback(args: Object): Promise<Object> {
-  const [from, to] = await Promise.all([
-    fetchLocation(args.search.from),
-    fetchLocation(args.search.to),
+async function useLocationsFallback(
+  args: Object,
+  dataLoader: LocationDataLoader,
+): Promise<Object> {
+  const [from, to] = await dataLoader.loadMany([
+    args.search.from,
+    args.search.to,
   ]);
-  return requestFlights(args, from.id, to.id);
+
+  return requestFlights(args, from.locationId, to.locationId);
 }
