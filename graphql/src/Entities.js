@@ -126,3 +126,15 @@ export type LocationAreaType = {
   name: string,
   slug: string,
 };
+
+export type LocationInputType = {
+  location: string,
+};
+
+export type RadiusInputType = {
+  radius: {
+    lat: number,
+    lng: number,
+    radius: number,
+  },
+};

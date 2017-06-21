@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RadiusInput type should have valid fields 1`] = `
+Object {
+  "lat": Object {
+    "name": "lat",
+    "type": "Float",
+  },
+  "lng": Object {
+    "name": "lng",
+    "type": "Float",
+  },
+  "radius": Object {
+    "description": "Distance in kilometers",
+    "name": "radius",
+    "type": "Int",
+  },
+}
+`;

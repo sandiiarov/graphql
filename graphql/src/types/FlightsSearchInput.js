@@ -1,16 +1,21 @@
 // @flow
 
-import { GraphQLInputObjectType, GraphQLNonNull, GraphQLString } from 'graphql';
+import { GraphQLInputObjectType, GraphQLNonNull, GraphQLList } from 'graphql';
 import { GraphQLDate } from 'graphql-iso-date';
+import GraphQLLocation from './LocationInput';
 
 export default new GraphQLInputObjectType({
   name: 'FlightsSearchInput',
   fields: {
     from: {
-      type: new GraphQLNonNull(GraphQLString),
+      type: new GraphQLNonNull(
+        new GraphQLList(new GraphQLNonNull(GraphQLLocation)),
+      ),
     },
     to: {
-      type: new GraphQLNonNull(GraphQLString),
+      type: new GraphQLNonNull(
+        new GraphQLList(new GraphQLNonNull(GraphQLLocation)),
+      ),
     },
     dateFrom: {
       type: new GraphQLNonNull(GraphQLDate),
