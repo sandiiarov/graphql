@@ -7,17 +7,17 @@ Object {
       "arrival": Object {
         "airport": Object {
           "city": Object {
-            "name": "Paris",
+            "name": "Mocked City Name",
           },
-          "code": "CDG",
+          "locationId": "MOCKED",
         },
       },
       "departure": Object {
         "airport": Object {
           "city": Object {
-            "name": "London",
+            "name": "Mocked City Name",
           },
-          "code": "LGW",
+          "locationId": "MOCKED",
         },
       },
       "legs": Array [
@@ -25,17 +25,17 @@ Object {
           "arrival": Object {
             "airport": Object {
               "city": Object {
-                "name": "Paris",
+                "name": "Mocked City Name",
               },
-              "code": "CDG",
+              "locationId": "MOCKED",
             },
           },
           "departure": Object {
             "airport": Object {
               "city": Object {
-                "name": "London",
+                "name": "Mocked City Name",
               },
-              "code": "LGW",
+              "locationId": "MOCKED",
             },
           },
         },

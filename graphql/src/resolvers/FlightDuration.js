@@ -3,11 +3,11 @@
 import _ from 'lodash';
 import differenceInMinutes from 'date-fns/difference_in_minutes';
 
-import type { ArrivalType, DepartureType } from '../Entities';
+import type { DepartureArrivalType } from '../Entities';
 
 export default function getFlightDurationInMinutes(
-  departure: DepartureType,
-  arrival: ArrivalType,
+  departure: DepartureArrivalType,
+  arrival: DepartureArrivalType,
 ): ?number {
   const departureTime = _.get(departure, 'when.utc');
   const arrivalTime = _.get(arrival, 'when.utc');

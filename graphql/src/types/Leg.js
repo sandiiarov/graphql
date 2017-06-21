@@ -12,12 +12,7 @@ import GraphQLAirline from './Airline';
 import type { GraphqlContextType } from '../services/GraphqlContext';
 import FlightDurationInMinutes from '../resolvers/FlightDuration';
 
-import type {
-  ArrivalType,
-  DepartureType,
-  LegType,
-  AirlineType,
-} from '../Entities';
+import type { DepartureArrivalType, LegType, AirlineType } from '../Entities';
 
 export default new GraphQLObjectType({
   name: 'Leg',
@@ -39,12 +34,12 @@ export default new GraphQLObjectType({
 
     arrival: {
       type: GraphQLRouteStop,
-      resolve: ({ arrival }: LegType): ArrivalType => arrival,
+      resolve: ({ arrival }: LegType): DepartureArrivalType => arrival,
     },
 
     departure: {
       type: GraphQLRouteStop,
-      resolve: ({ departure }: LegType): DepartureType => departure,
+      resolve: ({ departure }: LegType): DepartureArrivalType => departure,
     },
 
     duration: {

@@ -10,9 +10,9 @@ Object {
             "arrival": Object {
               "airport": Object {
                 "city": Object {
-                  "name": "Paris",
+                  "name": "Mocked City Name",
                 },
-                "code": "CDG",
+                "locationId": "MOCKED",
               },
               "localTime": null,
               "time": null,
@@ -24,9 +24,9 @@ Object {
             "arrival": Object {
               "airport": Object {
                 "city": Object {
-                  "name": "Dubai",
+                  "name": "Mocked City Name",
                 },
-                "code": "DXB",
+                "locationId": "MOCKED",
               },
               "localTime": null,
               "time": null,
@@ -38,9 +38,9 @@ Object {
             "arrival": Object {
               "airport": Object {
                 "city": Object {
-                  "name": "Samara",
+                  "name": "Mocked City Name",
                 },
-                "code": "KUF",
+                "locationId": "MOCKED",
               },
               "localTime": null,
               "time": null,
@@ -63,9 +63,9 @@ Object {
             "departure": Object {
               "airport": Object {
                 "city": Object {
-                  "name": "London",
+                  "name": "Mocked City Name",
                 },
-                "code": "LGW",
+                "locationId": "MOCKED",
               },
               "localTime": null,
               "time": null,
@@ -77,9 +77,9 @@ Object {
             "departure": Object {
               "airport": Object {
                 "city": Object {
-                  "name": "London",
+                  "name": "Mocked City Name",
                 },
-                "code": "STN",
+                "locationId": "MOCKED",
               },
               "localTime": null,
               "time": null,
@@ -91,9 +91,9 @@ Object {
             "departure": Object {
               "airport": Object {
                 "city": Object {
-                  "name": "Prague",
+                  "name": "Mocked City Name",
                 },
-                "code": "PRG",
+                "locationId": "MOCKED",
               },
               "localTime": null,
               "time": null,
@@ -118,9 +118,9 @@ Object {
                 "arrival": Object {
                   "airport": Object {
                     "city": Object {
-                      "name": "Paris",
+                      "name": "Mocked City Name",
                     },
-                    "code": "CDG",
+                    "locationId": "MOCKED",
                   },
                   "localTime": "2017-09-09T23:30:00.000Z",
                   "time": "2017-09-09T21:30:00.000Z",
@@ -128,9 +128,9 @@ Object {
                 "departure": Object {
                   "airport": Object {
                     "city": Object {
-                      "name": "London",
+                      "name": "Mocked City Name",
                     },
-                    "code": "LGW",
+                    "locationId": "MOCKED",
                   },
                   "localTime": "2017-09-09T21:10:00.000Z",
                   "time": "2017-09-09T20:10:00.000Z",
@@ -146,9 +146,9 @@ Object {
                 "arrival": Object {
                   "airport": Object {
                     "city": Object {
-                      "name": "Prague",
+                      "name": "Mocked City Name",
                     },
-                    "code": "PRG",
+                    "locationId": "MOCKED",
                   },
                   "localTime": "2017-09-09T11:00:00.000Z",
                   "time": "2017-09-09T09:00:00.000Z",
@@ -156,9 +156,9 @@ Object {
                 "departure": Object {
                   "airport": Object {
                     "city": Object {
-                      "name": "London",
+                      "name": "Mocked City Name",
                     },
-                    "code": "STN",
+                    "locationId": "MOCKED",
                   },
                   "localTime": "2017-09-09T08:05:00.000Z",
                   "time": "2017-09-09T07:05:00.000Z",
@@ -168,9 +168,9 @@ Object {
                 "arrival": Object {
                   "airport": Object {
                     "city": Object {
-                      "name": "Kiev",
+                      "name": "Mocked City Name",
                     },
-                    "code": "KBP",
+                    "locationId": "MOCKED",
                   },
                   "localTime": "2017-09-09T18:15:00.000Z",
                   "time": "2017-09-09T15:15:00.000Z",
@@ -178,9 +178,9 @@ Object {
                 "departure": Object {
                   "airport": Object {
                     "city": Object {
-                      "name": "Prague",
+                      "name": "Mocked City Name",
                     },
-                    "code": "PRG",
+                    "locationId": "MOCKED",
                   },
                   "localTime": "2017-09-09T15:00:00.000Z",
                   "time": "2017-09-09T13:00:00.000Z",
@@ -190,9 +190,9 @@ Object {
                 "arrival": Object {
                   "airport": Object {
                     "city": Object {
-                      "name": "Dubai",
+                      "name": "Mocked City Name",
                     },
-                    "code": "DXB",
+                    "locationId": "MOCKED",
                   },
                   "localTime": "2017-09-10T02:00:00.000Z",
                   "time": "2017-09-09T22:00:00.000Z",
@@ -200,9 +200,9 @@ Object {
                 "departure": Object {
                   "airport": Object {
                     "city": Object {
-                      "name": "Kiev",
+                      "name": "Mocked City Name",
                     },
-                    "code": "KBP",
+                    "locationId": "MOCKED",
                   },
                   "localTime": "2017-09-09T19:50:00.000Z",
                   "time": "2017-09-09T16:50:00.000Z",
@@ -218,9 +218,9 @@ Object {
                 "arrival": Object {
                   "airport": Object {
                     "city": Object {
-                      "name": "Samara",
+                      "name": "Mocked City Name",
                     },
-                    "code": "KUF",
+                    "locationId": "MOCKED",
                   },
                   "localTime": "2017-08-19T03:40:00.000Z",
                   "time": "2017-08-18T23:40:00.000Z",
@@ -228,9 +228,9 @@ Object {
                 "departure": Object {
                   "airport": Object {
                     "city": Object {
-                      "name": "Prague",
+                      "name": "Mocked City Name",
                     },
-                    "code": "PRG",
+                    "locationId": "MOCKED",
                   },
                   "localTime": "2017-08-18T22:05:00.000Z",
                   "time": "2017-08-18T20:05:00.000Z",

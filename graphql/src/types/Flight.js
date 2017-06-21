@@ -11,9 +11,8 @@ import FlightDurationInMinutes from '../resolvers/FlightDuration';
 
 import type {
   AirlineType,
-  ArrivalType,
+  DepartureArrivalType,
   FlightType,
-  DepartureType,
   LegType,
   PriceType,
 } from '../Entities';
@@ -35,12 +34,12 @@ export default new GraphQLObjectType({
 
     arrival: {
       type: GraphQLRouteStop,
-      resolve: ({ arrival }: FlightType): ArrivalType => arrival,
+      resolve: ({ arrival }: FlightType): DepartureArrivalType => arrival,
     },
 
     departure: {
       type: GraphQLRouteStop,
-      resolve: ({ departure }: FlightType): DepartureType => departure,
+      resolve: ({ departure }: FlightType): DepartureArrivalType => departure,
     },
 
     duration: {

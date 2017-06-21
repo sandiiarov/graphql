@@ -2,27 +2,32 @@
 
 import { GraphQLObjectType } from 'graphql';
 import { GraphQLDateTime } from 'graphql-iso-date';
-import Airport from './Airport';
+import Location from './Location';
 
-import type { AirportType, ArrivalType } from '../Entities';
+import type { DepartureArrivalType, LocationType } from '../Entities';
+import type { GraphqlContextType } from '../services/GraphqlContext';
 
 export default new GraphQLObjectType({
   name: 'RouteStop',
   fields: {
     airport: {
-      type: Airport,
-      resolve: ({ where }: ArrivalType): AirportType => where,
+      type: Location,
+      resolve: (
+        { where }: DepartureArrivalType,
+        args: Object,
+        context: GraphqlContextType,
+      ): Promise<LocationType> => context.dataLoader.location.load(where.code),
     },
 
     time: {
       type: GraphQLDateTime,
-      resolve: ({ when }: ArrivalType): ?Date =>
+      resolve: ({ when }: DepartureArrivalType): ?Date =>
         when == null ? null : when.utc, // intentional ==, can be null or undefined
     },
 
     localTime: {
       type: GraphQLDateTime,
-      resolve: ({ when }: ArrivalType): ?Date =>
+      resolve: ({ when }: DepartureArrivalType): ?Date =>
         when == null ? null : when.local, // intentional ==, can be null or undefined
     },
   },

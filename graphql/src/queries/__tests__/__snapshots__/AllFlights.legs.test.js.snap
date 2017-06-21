@@ -12,9 +12,9 @@ Object {
                 "arrival": Object {
                   "airport": Object {
                     "city": Object {
-                      "name": "Oslo",
+                      "name": "Mocked City Name",
                     },
-                    "code": "OSL",
+                    "locationId": "MOCKED",
                   },
                   "localTime": "2017-08-30T23:55:00.000Z",
                   "time": "2017-08-30T21:55:00.000Z",
@@ -22,9 +22,9 @@ Object {
                 "departure": Object {
                   "airport": Object {
                     "city": Object {
-                      "name": "Prague",
+                      "name": "Mocked City Name",
                     },
-                    "code": "PRG",
+                    "locationId": "MOCKED",
                   },
                   "localTime": "2017-08-30T21:55:00.000Z",
                   "time": "2017-08-30T19:55:00.000Z",
@@ -38,9 +38,9 @@ Object {
                 "arrival": Object {
                   "airport": Object {
                     "city": Object {
-                      "name": "Orlando",
+                      "name": "Mocked City Name",
                     },
-                    "code": "MCO",
+                    "locationId": "MOCKED",
                   },
                   "localTime": "2017-08-31T21:05:00.000Z",
                   "time": "2017-09-01T01:05:00.000Z",
@@ -48,9 +48,9 @@ Object {
                 "departure": Object {
                   "airport": Object {
                     "city": Object {
-                      "name": "Oslo",
+                      "name": "Mocked City Name",
                     },
-                    "code": "OSL",
+                    "locationId": "MOCKED",
                   },
                   "localTime": "2017-08-31T17:30:00.000Z",
                   "time": "2017-08-31T15:30:00.000Z",
@@ -64,9 +64,9 @@ Object {
                 "arrival": Object {
                   "airport": Object {
                     "city": Object {
-                      "name": "Houston",
+                      "name": "Mocked City Name",
                     },
-                    "code": "IAH",
+                    "locationId": "MOCKED",
                   },
                   "localTime": "2017-09-01T08:14:00.000Z",
                   "time": "2017-09-01T13:14:00.000Z",
@@ -74,9 +74,9 @@ Object {
                 "departure": Object {
                   "airport": Object {
                     "city": Object {
-                      "name": "Orlando",
+                      "name": "Mocked City Name",
                     },
-                    "code": "MCO",
+                    "locationId": "MOCKED",
                   },
                   "localTime": "2017-09-01T06:50:00.000Z",
                   "time": "2017-09-01T10:50:00.000Z",
@@ -90,9 +90,9 @@ Object {
                 "arrival": Object {
                   "airport": Object {
                     "city": Object {
-                      "name": "Mexico City",
+                      "name": "Mocked City Name",
                     },
-                    "code": "MEX",
+                    "locationId": "MOCKED",
                   },
                   "localTime": "2017-09-01T21:50:00.000Z",
                   "time": "2017-09-02T02:50:00.000Z",
@@ -100,9 +100,9 @@ Object {
                 "departure": Object {
                   "airport": Object {
                     "city": Object {
-                      "name": "Houston",
+                      "name": "Mocked City Name",
                     },
-                    "code": "IAH",
+                    "locationId": "MOCKED",
                   },
                   "localTime": "2017-09-01T19:35:00.000Z",
                   "time": "2017-09-02T00:35:00.000Z",
@@ -122,9 +122,9 @@ Object {
                 "arrival": Object {
                   "airport": Object {
                     "city": Object {
-                      "name": "Stockholm",
+                      "name": "Mocked City Name",
                     },
-                    "code": "ARN",
+                    "locationId": "MOCKED",
                   },
                   "localTime": "2017-09-06T13:40:00.000Z",
                   "time": "2017-09-06T11:40:00.000Z",
@@ -132,9 +132,9 @@ Object {
                 "departure": Object {
                   "airport": Object {
                     "city": Object {
-                      "name": "Prague",
+                      "name": "Mocked City Name",
                     },
-                    "code": "PRG",
+                    "locationId": "MOCKED",
                   },
                   "localTime": "2017-09-06T11:40:00.000Z",
                   "time": "2017-09-06T09:40:00.000Z",
@@ -148,9 +148,9 @@ Object {
                 "arrival": Object {
                   "airport": Object {
                     "city": Object {
-                      "name": "Los Angeles",
+                      "name": "Mocked City Name",
                     },
-                    "code": "LAX",
+                    "locationId": "MOCKED",
                   },
                   "localTime": "2017-09-07T13:45:00.000Z",
                   "time": "2017-09-07T20:45:00.000Z",
@@ -158,9 +158,9 @@ Object {
                 "departure": Object {
                   "airport": Object {
                     "city": Object {
-                      "name": "Stockholm",
+                      "name": "Mocked City Name",
                     },
-                    "code": "ARN",
+                    "locationId": "MOCKED",
                   },
                   "localTime": "2017-09-07T11:45:00.000Z",
                   "time": "2017-09-07T09:45:00.000Z",
@@ -174,9 +174,9 @@ Object {
                 "arrival": Object {
                   "airport": Object {
                     "city": Object {
-                      "name": "Mexico City",
+                      "name": "Mocked City Name",
                     },
-                    "code": "MEX",
+                    "locationId": "MOCKED",
                   },
                   "localTime": "2017-09-08T16:05:00.000Z",
                   "time": "2017-09-08T21:05:00.000Z",
@@ -184,9 +184,9 @@ Object {
                 "departure": Object {
                   "airport": Object {
                     "city": Object {
-                      "name": "Los Angeles",
+                      "name": "Mocked City Name",
                     },
-                    "code": "LAX",
+                    "locationId": "MOCKED",
                   },
                   "localTime": "2017-09-08T10:05:00.000Z",
                   "time": "2017-09-08T17:05:00.000Z",
@@ -206,9 +206,9 @@ Object {
                 "arrival": Object {
                   "airport": Object {
                     "city": Object {
-                      "name": "Stockholm",
+                      "name": "Mocked City Name",
                     },
-                    "code": "ARN",
+                    "locationId": "MOCKED",
                   },
                   "localTime": "2017-09-06T14:20:00.000Z",
                   "time": "2017-09-06T12:20:00.000Z",
@@ -216,9 +216,9 @@ Object {
                 "departure": Object {
                   "airport": Object {
                     "city": Object {
-                      "name": "Prague",
+                      "name": "Mocked City Name",
                     },
-                    "code": "PRG",
+                    "locationId": "MOCKED",
                   },
                   "localTime": "2017-09-06T12:25:00.000Z",
                   "time": "2017-09-06T10:25:00.000Z",
@@ -232,9 +232,9 @@ Object {
                 "arrival": Object {
                   "airport": Object {
                     "city": Object {
-                      "name": "Los Angeles",
+                      "name": "Mocked City Name",
                     },
-                    "code": "LAX",
+                    "locationId": "MOCKED",
                   },
                   "localTime": "2017-09-07T13:45:00.000Z",
                   "time": "2017-09-07T20:45:00.000Z",
@@ -242,9 +242,9 @@ Object {
                 "departure": Object {
                   "airport": Object {
                     "city": Object {
-                      "name": "Stockholm",
+                      "name": "Mocked City Name",
                     },
-                    "code": "ARN",
+                    "locationId": "MOCKED",
                   },
                   "localTime": "2017-09-07T11:45:00.000Z",
                   "time": "2017-09-07T09:45:00.000Z",
@@ -258,9 +258,9 @@ Object {
                 "arrival": Object {
                   "airport": Object {
                     "city": Object {
-                      "name": "Mexico City",
+                      "name": "Mocked City Name",
                     },
-                    "code": "MEX",
+                    "locationId": "MOCKED",
                   },
                   "localTime": "2017-09-08T16:05:00.000Z",
                   "time": "2017-09-08T21:05:00.000Z",
@@ -268,9 +268,9 @@ Object {
                 "departure": Object {
                   "airport": Object {
                     "city": Object {
-                      "name": "Los Angeles",
+                      "name": "Mocked City Name",
                     },
-                    "code": "LAX",
+                    "locationId": "MOCKED",
                   },
                   "localTime": "2017-09-08T10:05:00.000Z",
                   "time": "2017-09-08T17:05:00.000Z",
