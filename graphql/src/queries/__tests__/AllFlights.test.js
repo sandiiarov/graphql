@@ -41,6 +41,7 @@ describe('all flights query', () => {
               logoUrl
               isLowCost
             }
+            duration
           }
         }
       }

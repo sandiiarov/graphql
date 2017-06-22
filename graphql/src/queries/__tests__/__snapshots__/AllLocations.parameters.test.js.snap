@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`all locations query should return error for no argument 1`] = `
+Object {
+  "data": Object {
+    "allLocations": null,
+  },
+  "errors": Array [
+    [GraphQLError: You must specify 'search' or 'radius' argument to find locations.],
+  ],
+}
+`;

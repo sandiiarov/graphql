@@ -7,12 +7,12 @@ import type { CoordinatesType } from '../Entities';
 export default new GraphQLObjectType({
   name: 'Coordinates',
   fields: {
-    latitude: {
+    lat: {
       type: GraphQLFloat,
       resolve: ({ latitude }: CoordinatesType): number => latitude,
     },
 
-    longitude: {
+    lng: {
       type: GraphQLFloat,
       resolve: ({ longitude }: CoordinatesType): number => longitude,
     },

@@ -1,18 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Coordinates type should have valid fields 1`] = `
+exports[`Coordinates have valid fields 1`] = `
 Object {
-  "latitude": Object {
+  "lat": Object {
     "args": Array [],
     "isDeprecated": false,
-    "name": "latitude",
+    "name": "lat",
     "resolve": [Function],
     "type": "Float",
   },
-  "longitude": Object {
+  "lng": Object {
     "args": Array [],
     "isDeprecated": false,
-    "name": "longitude",
+    "name": "lng",
     "resolve": [Function],
     "type": "Float",
   },
