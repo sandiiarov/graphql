@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`all locations query should return locations by radius 1`] = `
+Object {
+  "data": Object {
+    "allLocations": Object {
+      "edges": Array [
+        Object {
+          "node": Object {
+            "locationId": "prague_cz",
+            "name": "Prague",
+          },
+        },
+        Object {
+          "node": Object {
+            "locationId": "PRG",
+            "name": "Václav Havel Airport Prague",
+          },
+        },
+      ],
+    },
+  },
+}
+`;

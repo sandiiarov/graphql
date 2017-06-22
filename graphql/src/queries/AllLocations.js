@@ -1,12 +1,13 @@
 // @flow
 
-import { GraphQLString, GraphQLNonNull } from 'graphql';
+import { GraphQLString } from 'graphql';
 import {
   connectionArgs,
   connectionDefinitions,
   connectionFromArray,
 } from 'graphql-relay';
 import GraphQLLocation from '../types/Location';
+import GraphQLRadius from '../types/RadiusInput';
 
 import type { GraphqlContextType } from '../services/GraphqlContext';
 
@@ -18,7 +19,10 @@ export default {
   type: AllLocationsConnection,
   args: {
     search: {
-      type: new GraphQLNonNull(GraphQLString),
+      type: GraphQLString,
+    },
+    radius: {
+      type: GraphQLRadius,
     },
     ...connectionArgs,
   },
@@ -27,9 +31,18 @@ export default {
     args: Object,
     context: GraphqlContextType,
   ) => {
-    const response = await context.dataLoader.locationSuggestions.load(
-      args.search,
-    );
+    let response;
+    if (args.search) {
+      response = await context.dataLoader.locationSuggestions.load(args.search);
+    } else if (args.radius) {
+      response = await context.dataLoader.locationSuggestions.loadByRadius(
+        args.radius,
+      );
+    } else {
+      throw new Error(
+        `You must specify 'search' or 'radius' argument to find locations.`,
+      );
+    }
     return connectionFromArray(response, args);
   },
 };

@@ -20,7 +20,7 @@ export default {
     login: 'https://auth.skypicker.com/v1/user.login',
     identity: 'https://auth.skypicker.com/v1/user.get',
     airlines: 'https://api.skypicker.com/airlines?v=2',
-    allLocations: (queryParameters: { term: string }) =>
+    allLocations: (queryParameters: Object) =>
       queryWithParameters('https://locations.skypicker.com', queryParameters),
   },
   auth: {

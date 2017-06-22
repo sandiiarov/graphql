@@ -6,7 +6,7 @@ Object {
     "allLocations": null,
   },
   "errors": Array [
-    [GraphQLError: Location 'unknown place' has not been found.],
+    [GraphQLError: Location has not been found.],
   ],
 }
 `;

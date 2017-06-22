@@ -21,13 +21,6 @@ describe('all locations query', () => {
           node {
             locationId
             name
-            slug
-            timezone
-            location { latitude, longitude }
-            type
-            city { locationId, name, slug }
-            subdivision { locationId, name, slug }
-            country { locationId, name, slug }
           }
         }
       }

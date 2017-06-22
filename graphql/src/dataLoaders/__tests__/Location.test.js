@@ -45,7 +45,5 @@ it('throws error when accessing unknown location', async () => {
   const dataloader = new Location(new LocationSuggestions());
   await expect(
     dataloader.loadMany(['this location does not exist']),
-  ).rejects.toEqual(
-    new Error("Location 'this location does not exist' has not been found."),
-  );
+  ).rejects.toEqual(new Error('Location has not been found.'));
 });
