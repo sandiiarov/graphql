@@ -1,8 +1,11 @@
 // @flow
 
+import { RestApiMock } from '../../services/TestingTools';
+import config from '../../../config/application';
+import { Airline } from '../../datasets';
 import createAirlineLoader from '../Airline';
 
-jest.mock('../../services/HttpRequest');
+RestApiMock.onGet(config.restApiEndpoint.airlines).replyWithData(Airline.all);
 
 describe('Airline dataloader', () => {
   it('should load airlines', async () => {

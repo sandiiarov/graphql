@@ -1,12 +1,14 @@
 // @flow
 
-import { bookings } from '../../datasets';
+import { Booking } from '../../datasets';
 import { graphql, RestApiMock } from '../../services/TestingTools';
 import AllBookings from '../AllBookings';
 import config from '../../../config/application';
 
 beforeEach(() => {
-  RestApiMock.onGet(config.restApiEndpoint.allBookings).replyWithData(bookings);
+  RestApiMock.onGet(config.restApiEndpoint.allBookings).replyWithData(
+    Booking.all,
+  );
 });
 
 describe('all bookings query', () => {
