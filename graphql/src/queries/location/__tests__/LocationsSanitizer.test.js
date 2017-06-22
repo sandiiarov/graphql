@@ -6,12 +6,15 @@ import LocationDataLoader from '../../../dataLoaders/Location';
 import LocationSuggestionsDataloader
   from '../../../dataLoaders/LocationSuggestions';
 import config from '../../../../config/application';
-import locationPrague
-  from '../../flight/__tests__/__datasets__/AllLocations.prague.json';
+import { Location } from '../../../datasets';
 
 RestApiMock.onGet(
   config.restApiEndpoint.allLocations({ term: 'Prague' }),
-).replyWithData(locationPrague);
+).replyWithData(Location.prague);
+
+RestApiMock.onGet(
+  config.restApiEndpoint.allLocations({ term: 'Mexico' }),
+).replyWithData(Location.mexico);
 
 describe('Stringify location inputs', () => {
   it('should return location ids and radius as a string', async () => {

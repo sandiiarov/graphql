@@ -1,6 +1,12 @@
 // @flow
 
-import { graphql } from '../../services/TestingTools';
+import { graphql, RestApiMock } from '../../services/TestingTools';
+import config from '../../../config/application';
+import { Location } from '../../datasets';
+
+RestApiMock.onGet(
+  config.restApiEndpoint.allLocations({ term: 'unknown place' }),
+).replyWithData(Location.unknown);
 
 describe('all locations query', () => {
   it('should return null edges', async () => {
