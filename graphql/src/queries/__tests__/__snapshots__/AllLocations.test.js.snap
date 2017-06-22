@@ -1,12 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`all locations query should return error for no argument 1`] = `
+exports[`all locations query should return locations 1`] = `
 Object {
   "data": Object {
-    "allLocations": null,
+    "allLocations": Object {
+      "edges": Array [
+        Object {
+          "node": Object {
+            "city": null,
+            "country": Object {
+              "locationId": "CZ",
+              "name": "Czech Republic",
+              "slug": "czech-republic",
+            },
+            "location": Object {
+              "lat": 50.0755381,
+              "lng": 14.4378005,
+            },
+            "locationId": "prague_cz",
+            "name": "Prague",
+            "slug": "prague-czech-republic",
+            "subdivision": null,
+            "timezone": "Europe/Prague",
+            "type": "city",
+          },
+        },
+      ],
+    },
   },
-  "errors": Array [
-    [GraphQLError: You must specify 'search' or 'radius' argument to find locations.],
-  ],
 }
 `;

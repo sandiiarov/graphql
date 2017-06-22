@@ -22,7 +22,6 @@ describe('all flights query with legs', () => {
           node {
             legs {
               id
-              recheckRequired
               arrival {
                 airport {
                   city { name }, code
@@ -35,6 +34,9 @@ describe('all flights query with legs', () => {
                 }
                 time, localTime
               }
+              duration
+              flightNumber
+              recheckRequired
             }
           }
         }
