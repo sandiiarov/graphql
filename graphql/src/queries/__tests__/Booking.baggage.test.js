@@ -11,10 +11,10 @@ beforeEach(() => {
     Booking.all,
   );
   RestApiMock.onGet(
-    `${allBookings}/2707251?simple_token=b206db64-718f-4608-babb-0b8abe6e1b9d`,
+    `${allBookings}/2707251\\?simple_token=[0-9a-f-]{36}`,
   ).replyWithData(Booking[2707251]);
   RestApiMock.onGet(
-    `${allBookings}/2707229?simple_token=900c31b3-cc55-49b0-83ef-c7daac71a170`,
+    `${allBookings}/2707229\\?simple_token=[0-9a-f-]{36}`,
   ).replyWithData(Booking[2707229]);
 });
 
