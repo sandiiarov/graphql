@@ -16,6 +16,7 @@ export default new GraphQLObjectType({
   fields: {
     additionalBaggage: {
       type: new GraphQLList(GraphQLAdditionalBaggage),
+      description: 'Extra and overweight baggage.',
       resolve: ({
         additionalBaggage,
       }: AllowedBaggageType): Array<AdditionalBaggageInfoType> =>
@@ -24,6 +25,7 @@ export default new GraphQLObjectType({
 
     cabin: {
       type: new GraphQLList(GraphQLBaggage), // carry-on
+      description: 'Small carry-on luggage.',
       resolve: ({ cabin }: AllowedBaggageType): Array<BaggageType> => {
         return cabin.filter(bag => isNotCompletelyNullable(bag));
       },
@@ -31,6 +33,7 @@ export default new GraphQLObjectType({
 
     checked: {
       type: new GraphQLList(GraphQLBaggage),
+      description: 'Baggage checked online.',
       resolve: ({ checked }: AllowedBaggageType): Array<BaggageType> => {
         return checked.filter(bag => isNotCompletelyNullable(bag));
       },

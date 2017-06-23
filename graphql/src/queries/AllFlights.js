@@ -26,6 +26,7 @@ const { connectionType: AllFlightsConnection } = connectionDefinitions({
 
 export default {
   type: AllFlightsConnection,
+  description: 'Search for scheduled flights.',
   args: {
     search: {
       type: new GraphQLNonNull(FlightsSearchInput),

@@ -19,15 +19,19 @@ const { connectionType: AllLocationsConnection } = connectionDefinitions({
 
 export default {
   type: AllLocationsConnection,
+  description: 'Search for airports, cities, countries.',
   args: {
     search: {
       type: GraphQLString,
+      description: 'Search location by name.',
     },
     radius: {
       type: GraphQLRadius,
+      description: 'Search location by radius.',
     },
     area: {
       type: GraphQLArea,
+      description: 'Search location by area.',
     },
     ...connectionArgs,
   },

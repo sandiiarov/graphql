@@ -7,10 +7,12 @@ export default new GraphQLInputObjectType({
   fields: {
     lat: {
       type: new GraphQLNonNull(GraphQLFloat),
+      description: 'Latitude.',
     },
 
     lng: {
       type: new GraphQLNonNull(GraphQLFloat),
+      description: 'Longitude.',
     },
   },
 });

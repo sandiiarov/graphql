@@ -15,6 +15,7 @@ const { connectionType: AllBookingsConnection } = connectionDefinitions({
 
 export default {
   type: AllBookingsConnection,
+  description: 'Search for your flight bookings.',
   args: connectionArgs,
   resolve: async (
     ancestor: mixed,

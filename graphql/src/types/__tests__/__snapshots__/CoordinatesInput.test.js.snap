@@ -3,10 +3,12 @@
 exports[`CoordinatesInput type should have valid fields 1`] = `
 Object {
   "lat": Object {
+    "description": "Latitude.",
     "name": "lat",
     "type": "Float!",
   },
   "lng": Object {
+    "description": "Longitude.",
     "name": "lng",
     "type": "Float!",
   },

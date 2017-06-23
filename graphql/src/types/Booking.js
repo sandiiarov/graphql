@@ -25,6 +25,8 @@ export default new GraphQLObjectType({
 
     databaseId: {
       type: GraphQLInt,
+      description: 'Internal database ID.',
+      deprecationReason: 'Use id field instead.',
       resolve: ({ id }: BookingType): number => id,
     },
 
@@ -52,6 +54,7 @@ export default new GraphQLObjectType({
 
     legs: {
       type: new GraphQLList(GraphQLLeg),
+      description: 'Flight segments, e.g. stopover, change of aircraft, etc.',
       resolve: ({ legs }: BookingType): Array<LegType> => legs,
     },
   },

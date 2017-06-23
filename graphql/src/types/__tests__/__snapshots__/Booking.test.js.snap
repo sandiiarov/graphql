@@ -18,7 +18,9 @@ Object {
   },
   "databaseId": Object {
     "args": Array [],
-    "isDeprecated": false,
+    "deprecationReason": "Use id field instead.",
+    "description": "Internal database ID.",
+    "isDeprecated": true,
     "name": "databaseId",
     "resolve": [Function],
     "type": "Int",
@@ -39,6 +41,7 @@ Object {
   },
   "legs": Object {
     "args": Array [],
+    "description": "Flight segments, e.g. stopover, change of aircraft, etc.",
     "isDeprecated": false,
     "name": "legs",
     "resolve": [Function],

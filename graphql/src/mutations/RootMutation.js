@@ -6,7 +6,7 @@ import Login from './Login';
 
 export default new GraphQLObjectType({
   name: 'RootMutation',
-  description: 'Root Mutation',
+  description: 'Root Mutation.',
   fields: {
     login: Login,
   },

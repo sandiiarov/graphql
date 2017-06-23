@@ -11,6 +11,7 @@ Object {
   },
   "currency": Object {
     "args": Array [],
+    "description": "An ISO-4217 currency code.",
     "isDeprecated": false,
     "name": "currency",
     "resolve": [Function],

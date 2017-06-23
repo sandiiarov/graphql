@@ -8,6 +8,7 @@ export default new GraphQLInputObjectType({
   fields: {
     currency: {
       type: GraphQLCurrency,
+      description: 'An ISO-4217 currency code.',
     },
   },
 });

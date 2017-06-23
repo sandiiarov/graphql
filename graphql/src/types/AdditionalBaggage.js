@@ -15,6 +15,7 @@ export default new GraphQLObjectType({
 
     quantity: {
       type: GraphQLInt,
+      description: 'Number of baggage.',
       resolve: ({ quantity }: AdditionalBaggageInfoType): number => quantity,
     },
   },
