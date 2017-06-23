@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`all locations query should return error for reversed latitude 1`] = `
+Object {
+  "data": Object {
+    "allLocations": null,
+  },
+  "errors": Array [
+    [GraphQLError: Top left latitude of the area should be greater than bottom right latitude.],
+  ],
+}
+`;
+
+exports[`all locations query should return error for reversed longitude 1`] = `
+Object {
+  "data": Object {
+    "allLocations": null,
+  },
+  "errors": Array [
+    [GraphQLError: Top left longitude of the area should be lower than bottom right longitude.],
+  ],
+}
+`;
+
+exports[`all locations query should return locations by area 1`] = `
+Object {
+  "data": Object {
+    "allLocations": Object {
+      "edges": Array [
+        Object {
+          "node": Object {
+            "locationId": "prague_cz",
+            "name": "Prague",
+          },
+        },
+        Object {
+          "node": Object {
+            "locationId": "PRG",
+            "name": "Václav Havel Airport Prague",
+          },
+        },
+      ],
+    },
+  },
+}
+`;

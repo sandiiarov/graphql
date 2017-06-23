@@ -5,7 +5,12 @@ import DataLoader from 'dataloader';
 import config from '../../config/application';
 import request from '../services/HttpRequest';
 
-import type { LocationType, LocationAreaType, RadiusType } from '../Entities';
+import type {
+  LocationType,
+  LocationAreaType,
+  RadiusType,
+  AreaType,
+} from '../Entities';
 
 export default class LocationSuggestionsDataloader {
   dataLoader: DataLoader<Object, LocationType[]>;
@@ -32,6 +37,16 @@ export default class LocationSuggestionsDataloader {
       lat: radius.lat,
       lon: radius.lng,
       radius: radius.radius,
+    });
+  }
+
+  async loadByArea(area: AreaType) {
+    return this.dataLoader.load({
+      type: 'box',
+      high_lat: area.topLeft.lat,
+      low_lon: area.topLeft.lng,
+      low_lat: area.bottomRight.lat,
+      high_lon: area.bottomRight.lng,
     });
   }
 
@@ -79,8 +94,8 @@ function sanitizeApiResponse(location: Object): LocationType {
     slug: location.slug,
     timezone: location.timezone,
     location: {
-      latitude: _.get(location, 'location.lat', null),
-      longitude: _.get(location, 'location.lon', null),
+      lat: _.get(location, 'location.lat', null),
+      lng: _.get(location, 'location.lon', null),
     },
     type: location.type,
     city: sanitizeLocationArea(location.city),

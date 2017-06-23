@@ -56,8 +56,8 @@ export type LegType = {
 };
 
 export type CoordinatesType = {
-  latitude: number,
-  longitude: number,
+  lat: number,
+  lng: number,
 };
 
 export type AdditionalBaggageInfoType = {
@@ -139,4 +139,9 @@ export type RadiusType = {
 
 export type RadiusInputType = {
   radius: RadiusType,
+};
+
+export type AreaType = {
+  topLeft: CoordinatesType,
+  bottomRight: CoordinatesType,
 };
