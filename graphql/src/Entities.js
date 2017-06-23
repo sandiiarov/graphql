@@ -4,39 +4,32 @@
  * With these types you can work in GraphQL resolvers.
  */
 
-export type AirportType = {
-  code: string,
-  cityName: string,
-};
-
 type TimeVariantsType = {
   utc: Date, // UTC +0
   local: Date, // UTC != 0
 };
 
-export type DepartureType = {
+export type DepartureArrivalType = {
   when: ?TimeVariantsType, // null if doesn't exist
-  where: AirportType,
-};
-
-export type ArrivalType = {
-  when: ?TimeVariantsType, // null if doesn't exist
-  where: AirportType,
+  where: {
+    code: string,
+    cityName: string,
+  },
 };
 
 export type FlightType = {
   id: string,
   airlines: Array<string>,
-  arrival: ArrivalType,
-  departure: DepartureType,
+  arrival: DepartureArrivalType,
+  departure: DepartureArrivalType,
   legs: Array<LegType>,
   price: PriceType,
 };
 
 export type BookingsItemType = {
   id: number,
-  arrival: ArrivalType,
-  departure: DepartureType,
+  arrival: DepartureArrivalType,
+  departure: DepartureArrivalType,
   legs: Array<LegType>,
   price: PriceType,
   authToken: string,
@@ -50,8 +43,8 @@ export type LegType = {
   id: string,
   recheckRequired: boolean,
   flightNo: number,
-  departure: DepartureType,
-  arrival: ArrivalType,
+  departure: DepartureArrivalType,
+  arrival: DepartureArrivalType,
   airlineCode: string,
 };
 
@@ -98,10 +91,6 @@ export type AirlineType = {
   logoUrl: string,
   code: string,
   isLowCost: boolean,
-};
-
-export type CityType = {
-  name: string,
 };
 
 export type PriceType = {

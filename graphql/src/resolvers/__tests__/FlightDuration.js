@@ -1,13 +1,13 @@
 // @flow
 
 import FlightDurationInMinutes from '../FlightDuration';
-import type { ArrivalType, DepartureType } from '../../Entities';
+import type { DepartureArrivalType } from '../../Entities';
 
-let departure: DepartureType;
-let arrival: ArrivalType;
+let departure: DepartureArrivalType;
+let arrival: DepartureArrivalType;
 
-let nullDeparture: DepartureType;
-let nullArrival: ArrivalType;
+let nullDeparture: DepartureArrivalType;
+let nullArrival: DepartureArrivalType;
 
 beforeEach(() => {
   nullDeparture = {

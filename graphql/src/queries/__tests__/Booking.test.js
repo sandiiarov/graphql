@@ -9,6 +9,23 @@ beforeEach(() => {
   RestApiMock.onGet(config.restApiEndpoint.allBookings).replyWithData(
     BookingDataset.all,
   );
+
+  ['CDG', 'LGW'].forEach(iata => {
+    RestApiMock.onGet(
+      config.restApiEndpoint.allLocations({
+        term: iata,
+      }),
+    ).replyWithData({
+      locations: [
+        {
+          id: 'MOCKED',
+          city: {
+            name: 'Mocked City Name',
+          },
+        },
+      ],
+    });
+  });
 });
 
 describe('single booking query', () => {
@@ -20,17 +37,17 @@ describe('single booking query', () => {
     const arrivalQuery = `{
       booking(id: 2707251) {
         arrival {
-          airport { city { name }, code }
+          airport { city { name }, locationId }
         }
         departure {
-          airport { city { name }, code }
+          airport { city { name }, locationId }
         }
         legs {
           arrival {
-            airport { city { name }, code }
+            airport { city { name }, locationId }
           }
           departure {
-            airport { city { name }, code }
+            airport { city { name }, locationId }
           }
         }
       }

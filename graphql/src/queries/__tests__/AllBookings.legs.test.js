@@ -8,6 +8,23 @@ beforeEach(() => {
   RestApiMock.onGet(config.restApiEndpoint.allBookings).replyWithData(
     Booking.all,
   );
+
+  ['CDG', 'PRG', 'LGW', 'STN', 'KBP', 'DXB', 'KUF'].forEach(iata => {
+    RestApiMock.onGet(
+      config.restApiEndpoint.allLocations({
+        term: iata,
+      }),
+    ).replyWithData({
+      locations: [
+        {
+          id: 'MOCKED',
+          city: {
+            name: 'Mocked City Name',
+          },
+        },
+      ],
+    });
+  });
 });
 
 describe('flights query with legs', () => {
@@ -21,13 +38,13 @@ describe('flights query with legs', () => {
               recheckRequired
               arrival {
                 airport {
-                  city { name }, code
+                  city { name }, locationId
                 }
                 time, localTime
               }
               departure {
                 airport {
-                  city { name }, code
+                  city { name }, locationId
                 }
                 time, localTime
               }

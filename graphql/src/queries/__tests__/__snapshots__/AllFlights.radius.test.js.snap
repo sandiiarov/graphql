@@ -12,14 +12,14 @@ Object {
                 "arrival": Object {
                   "airport": Object {
                     "city": Object {
-                      "name": "Milan",
+                      "name": "Mocked City Name",
                     },
                   },
                 },
                 "departure": Object {
                   "airport": Object {
                     "city": Object {
-                      "name": "Prague",
+                      "name": "Mocked City Name",
                     },
                   },
                 },
@@ -29,14 +29,14 @@ Object {
                 "arrival": Object {
                   "airport": Object {
                     "city": Object {
-                      "name": "Brussels",
+                      "name": "Mocked City Name",
                     },
                   },
                 },
                 "departure": Object {
                   "airport": Object {
                     "city": Object {
-                      "name": "Milan",
+                      "name": "Mocked City Name",
                     },
                   },
                 },
@@ -46,14 +46,14 @@ Object {
                 "arrival": Object {
                   "airport": Object {
                     "city": Object {
-                      "name": "Cancún",
+                      "name": "Mocked City Name",
                     },
                   },
                 },
                 "departure": Object {
                   "airport": Object {
                     "city": Object {
-                      "name": "Brussels",
+                      "name": "Mocked City Name",
                     },
                   },
                 },
@@ -63,14 +63,14 @@ Object {
                 "arrival": Object {
                   "airport": Object {
                     "city": Object {
-                      "name": "Mexico City",
+                      "name": "Mocked City Name",
                     },
                   },
                 },
                 "departure": Object {
                   "airport": Object {
                     "city": Object {
-                      "name": "Cancún",
+                      "name": "Mocked City Name",
                     },
                   },
                 },
@@ -86,14 +86,14 @@ Object {
                 "arrival": Object {
                   "airport": Object {
                     "city": Object {
-                      "name": "Milan",
+                      "name": "Mocked City Name",
                     },
                   },
                 },
                 "departure": Object {
                   "airport": Object {
                     "city": Object {
-                      "name": "Frankfurt",
+                      "name": "Mocked City Name",
                     },
                   },
                 },
@@ -103,14 +103,14 @@ Object {
                 "arrival": Object {
                   "airport": Object {
                     "city": Object {
-                      "name": "Brussels",
+                      "name": "Mocked City Name",
                     },
                   },
                 },
                 "departure": Object {
                   "airport": Object {
                     "city": Object {
-                      "name": "Milan",
+                      "name": "Mocked City Name",
                     },
                   },
                 },
@@ -120,14 +120,14 @@ Object {
                 "arrival": Object {
                   "airport": Object {
                     "city": Object {
-                      "name": "Cancún",
+                      "name": "Mocked City Name",
                     },
                   },
                 },
                 "departure": Object {
                   "airport": Object {
                     "city": Object {
-                      "name": "Brussels",
+                      "name": "Mocked City Name",
                     },
                   },
                 },
@@ -137,14 +137,14 @@ Object {
                 "arrival": Object {
                   "airport": Object {
                     "city": Object {
-                      "name": "Mexico City",
+                      "name": "Mocked City Name",
                     },
                   },
                 },
                 "departure": Object {
                   "airport": Object {
                     "city": Object {
-                      "name": "Cancún",
+                      "name": "Mocked City Name",
                     },
                   },
                 },
@@ -160,14 +160,14 @@ Object {
                 "arrival": Object {
                   "airport": Object {
                     "city": Object {
-                      "name": "London",
+                      "name": "Mocked City Name",
                     },
                   },
                 },
                 "departure": Object {
                   "airport": Object {
                     "city": Object {
-                      "name": "Frankfurt",
+                      "name": "Mocked City Name",
                     },
                   },
                 },
@@ -177,14 +177,14 @@ Object {
                 "arrival": Object {
                   "airport": Object {
                     "city": Object {
-                      "name": "Brussels",
+                      "name": "Mocked City Name",
                     },
                   },
                 },
                 "departure": Object {
                   "airport": Object {
                     "city": Object {
-                      "name": "London",
+                      "name": "Mocked City Name",
                     },
                   },
                 },
@@ -194,14 +194,14 @@ Object {
                 "arrival": Object {
                   "airport": Object {
                     "city": Object {
-                      "name": "Cancún",
+                      "name": "Mocked City Name",
                     },
                   },
                 },
                 "departure": Object {
                   "airport": Object {
                     "city": Object {
-                      "name": "Brussels",
+                      "name": "Mocked City Name",
                     },
                   },
                 },
@@ -211,14 +211,14 @@ Object {
                 "arrival": Object {
                   "airport": Object {
                     "city": Object {
-                      "name": "Mexico City",
+                      "name": "Mocked City Name",
                     },
                   },
                 },
                 "departure": Object {
                   "airport": Object {
                     "city": Object {
-                      "name": "Cancún",
+                      "name": "Mocked City Name",
                     },
                   },
                 },

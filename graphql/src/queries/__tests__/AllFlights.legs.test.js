@@ -4,14 +4,33 @@ import { graphql, RestApiMock } from '../../services/TestingTools';
 import config from '../../../config/application';
 import { Flight } from '../../datasets';
 
-RestApiMock.onGet(
-  config.restApiEndpoint.allFlights({
-    flyFrom: 'PRG',
-    to: 'MEX',
-    dateFrom: '08/08/2017',
-    dateTo: '08/09/2017',
-  }),
-).replyWithData(Flight.prgMex);
+beforeEach(() => {
+  RestApiMock.onGet(
+    config.restApiEndpoint.allFlights({
+      flyFrom: 'PRG',
+      to: 'MEX',
+      dateFrom: '08/08/2017',
+      dateTo: '08/09/2017',
+    }),
+  ).replyWithData(Flight.prgMex);
+
+  ['OSL', 'PRG', 'MCO', 'IAH', 'MEX', 'ARN', 'LAX'].forEach(iata => {
+    RestApiMock.onGet(
+      config.restApiEndpoint.allLocations({
+        term: iata,
+      }),
+    ).replyWithData({
+      locations: [
+        {
+          id: 'MOCKED',
+          city: {
+            name: 'Mocked City Name',
+          },
+        },
+      ],
+    });
+  });
+});
 
 describe('all flights query with legs', () => {
   it('should return array of flight legs', async () => {
@@ -24,13 +43,13 @@ describe('all flights query with legs', () => {
               id
               arrival {
                 airport {
-                  city { name }, code
+                  city { name }, locationId
                 }
                 time, localTime
               }
               departure {
                 airport {
-                  city { name }, code
+                  city { name }, locationId
                 }
                 time, localTime
               }

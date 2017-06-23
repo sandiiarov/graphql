@@ -1,20 +1,39 @@
 // @flow
 
 import { graphql, RestApiMock } from '../../services/TestingTools';
-import AllFlights from '../AllFlights';
 import config from '../../../config/application';
+import AllFlights from '../AllFlights';
 import { Airline, Flight } from '../../datasets';
 
-RestApiMock.onGet(
-  config.restApiEndpoint.allFlights({
-    flyFrom: 'PRG',
-    to: 'MEX',
-    dateFrom: '08/08/2017',
-    dateTo: '08/09/2017',
-  }),
-).replyWithData(Flight.prgMex);
+beforeEach(() => {
+  RestApiMock.onGet(config.restApiEndpoint.airlines).replyWithData(Airline.all);
 
-RestApiMock.onGet(config.restApiEndpoint.airlines).replyWithData(Airline.all);
+  RestApiMock.onGet(
+    config.restApiEndpoint.allFlights({
+      flyFrom: 'PRG',
+      to: 'MEX',
+      dateFrom: '08/08/2017',
+      dateTo: '08/09/2017',
+    }),
+  ).replyWithData(Flight.prgMex);
+
+  ['MEX', 'PRG'].forEach(iata => {
+    RestApiMock.onGet(
+      config.restApiEndpoint.allLocations({
+        term: iata,
+      }),
+    ).replyWithData({
+      locations: [
+        {
+          id: 'MOCKED',
+          city: {
+            name: 'Mocked City Name',
+          },
+        },
+      ],
+    });
+  });
+});
 
 describe('all flights query', () => {
   it('should be non-null list of non-null Flight types', () => {
@@ -23,17 +42,26 @@ describe('all flights query', () => {
 
   it('should return array of flights', async () => {
     const allFlightsSearchQuery = `
+    fragment Location on RouteStop {
+      airport {
+        locationId
+        city {
+          name
+        }
+      }
+      time
+      localTime
+    }
+
     query ($input: FlightsSearchInput!) {
       allFlights(search: $input) {
         edges {
           node {
             arrival {
-              airport { city { name }, code }
-              time, localTime
+              ...Location
             }
             departure {
-              airport { city { name }, code }
-              time, localTime
+              ...Location
             }
             airlines {
               name

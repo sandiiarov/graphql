@@ -8,10 +8,9 @@ import GraphQLLeg from './Leg';
 import { toGlobalId } from '../services/OpaqueIdentifier';
 
 import type {
-  ArrivalType,
+  DepartureArrivalType,
   AllowedBaggageType,
   BookingType,
-  DepartureType,
   LegType,
 } from '../Entities';
 import type { GraphqlContextType } from '../services/GraphqlContext';
@@ -43,12 +42,12 @@ export default new GraphQLObjectType({
 
     arrival: {
       type: GraphQLRouteStop,
-      resolve: ({ arrival }: BookingType): ArrivalType => arrival,
+      resolve: ({ arrival }: BookingType): DepartureArrivalType => arrival,
     },
 
     departure: {
       type: GraphQLRouteStop,
-      resolve: ({ departure }: BookingType): DepartureType => departure,
+      resolve: ({ departure }: BookingType): DepartureArrivalType => departure,
     },
 
     legs: {
