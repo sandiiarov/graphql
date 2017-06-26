@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`All flights passengers should return flights for more passengers 1`] = `
+Object {
+  "data": Object {
+    "allFlights": Object {
+      "edges": Array [
+        Object {
+          "node": Object {
+            "arrival": Object {
+              "time": "2017-09-02T02:50:00.000Z",
+            },
+            "departure": Object {
+              "time": "2017-08-30T19:55:00.000Z",
+            },
+          },
+        },
+        Object {
+          "node": Object {
+            "arrival": Object {
+              "time": "2017-09-08T21:05:00.000Z",
+            },
+            "departure": Object {
+              "time": "2017-09-06T09:40:00.000Z",
+            },
+          },
+        },
+        Object {
+          "node": Object {
+            "arrival": Object {
+              "time": "2017-09-08T21:05:00.000Z",
+            },
+            "departure": Object {
+              "time": "2017-09-06T10:25:00.000Z",
+            },
+          },
+        },
+      ],
+    },
+  },
+}
+`;
