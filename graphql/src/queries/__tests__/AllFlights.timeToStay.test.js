@@ -2,31 +2,43 @@
 
 import { graphql, RestApiMock } from '../../services/TestingTools';
 import config from '../../../config/application';
-import { Airline, Flight } from '../../datasets';
+import { Flight } from '../../datasets';
 
 RestApiMock.onGet(
   config.restApiEndpoint.allFlights({
     flyFrom: 'PRG',
     to: 'MEX',
     dateFrom: '08/08/2017',
-    dateTo: '08/09/2017',
+    daysInDestinationFrom: 7,
+    daysInDestinationTo: 10,
   }),
-).replyWithData(Flight.prgMex);
+).replyWithData(Flight.prgMexFrom7To10Days);
 
-RestApiMock.onGet(config.restApiEndpoint.airlines).replyWithData(Airline.all);
+['PRG', 'LHR', 'ORD', 'IAH', 'MEX'].forEach(iata => {
+  RestApiMock.onGet(
+    config.restApiEndpoint.allLocations({ term: iata }),
+  ).replyWithData({
+    locations: [
+      {
+        id: 'MOCKED',
+        city: {
+          name: iata,
+        },
+      },
+    ],
+  });
+});
 
 describe('all flights query', () => {
-  it('should return array of flights', async () => {
+  it('should return flights with 7-10 days spend in destination', async () => {
     const allFlightsSearchQuery = `
     query ($input: FlightsSearchInput!) {
       allFlights(search: $input) {
         edges {
           node {
-            airlines {
-              name
-              code
-              logoUrl
-              isLowCost
+            legs {
+              departure { time, airport { city { name } } }
+              arrival { time, airport { city { name } } }
             }
           }
         }
@@ -44,7 +56,10 @@ describe('all flights query', () => {
           exact: '2017-08-08',
         },
         dateTo: {
-          exact: '2017-09-08',
+          timeToStay: {
+            from: 7,
+            to: 10,
+          },
         },
       },
     };

@@ -1,6 +1,5 @@
 // @flow
 
-import compareAsc from 'date-fns/compare_asc';
 import { GraphQLNonNull } from 'graphql';
 import {
   connectionArgs,
@@ -8,7 +7,6 @@ import {
   connectionFromArray,
 } from 'graphql-relay';
 import dateFns from 'date-fns';
-import _ from 'lodash';
 import request from '../services/HttpRequest';
 import config from '../../config/application';
 import GraphQLFlight from '../types/Flight';
@@ -17,6 +15,7 @@ import FlightsOptionsInput from '../types/FlightsOptionsInput';
 import { formatString } from './location/ArgumentSanitizer';
 import { sanitizeApiResponse } from './flight/ApiSanitizer';
 import { sanitizeLocationsForRequest } from './location/LocationsSanitizer';
+import { validateDates } from '../resolvers/FlightDatesValidator';
 
 import type { GraphqlContextType } from '../services/GraphqlContext';
 
@@ -41,19 +40,15 @@ export default {
     args: Object,
     context: GraphqlContextType,
   ) => {
-    const { from, to, dateFrom, dateTo, passengers } = args.search;
-    const currency = _.get(args, 'options.currency');
-
+    const { from, to, dateFrom, dateTo } = args.search;
     validateDates(dateFrom, dateTo);
 
-    let allFlights = await requestFlights(
-      from.map(location => formatString(location)).toString(),
-      to.map(location => formatString(location)).toString(),
-      new Date(dateFrom),
-      new Date(dateTo),
-      passengers,
-      currency,
-    );
+    let allFlights = await requestFlights({
+      ...args.search,
+      from: from.map(location => formatString(location)).toString(),
+      to: to.map(location => formatString(location)).toString(),
+      options: args.options,
+    });
 
     // Use location fallback when flights returns no results
     if (!allFlights.data.length) {
@@ -63,14 +58,12 @@ export default {
         context.dataLoader.location,
       );
 
-      allFlights = await requestFlights(
-        fromLocations.toString(),
-        toLocations.toString(),
-        new Date(dateFrom),
-        new Date(dateTo),
-        passengers,
-        currency,
-      );
+      allFlights = await requestFlights({
+        ...args.search,
+        from: fromLocations.toString(),
+        to: toLocations.toString(),
+        options: args.options,
+      });
     }
 
     return connectionFromArray(
@@ -82,28 +75,20 @@ export default {
   },
 };
 
-function validateDates(start: Date, end: Date) {
-  // Validate dateFrom starts before dateTo
-  if (compareAsc(start, end) > 0) {
-    throw new Error(`DateFrom should start before dateTo`);
-  }
-}
+function requestFlights(search): Promise<Object> {
+  const { from, to, dateFrom, dateTo, options, passengers } = search;
 
-function requestFlights(
-  from: string,
-  to: string,
-  dateFrom: Date,
-  dateTo: Date,
-  passengers: ?{ adults: number },
-  currency?: string,
-): Promise<Object> {
   return request(
     config.restApiEndpoint.allFlights({
       flyFrom: from,
       to: to,
-      dateFrom: dateFns.format(dateFrom, 'DD/MM/YYYY'),
-      dateTo: dateFns.format(dateTo, 'DD/MM/YYYY'),
-      curr: currency,
+      dateFrom: dateFrom.exact
+        ? dateFns.format(dateFrom.exact, 'DD/MM/YYYY')
+        : null,
+      dateTo: dateTo.exact ? dateFns.format(dateTo.exact, 'DD/MM/YYYY') : null,
+      daysInDestinationFrom: dateTo.timeToStay ? dateTo.timeToStay.from : null,
+      daysInDestinationTo: dateTo.timeToStay ? dateTo.timeToStay.to : null,
+      curr: options ? options.currency : null,
       adults: passengers ? passengers.adults : null,
     }),
   );

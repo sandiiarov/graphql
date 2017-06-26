@@ -1,0 +1,390 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`all flights query should return flights with 7-10 days spend in destination 1`] = `
+Object {
+  "data": Object {
+    "allFlights": Object {
+      "edges": Array [
+        Object {
+          "node": Object {
+            "legs": Array [
+              Object {
+                "arrival": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "LHR",
+                    },
+                  },
+                  "time": "2017-09-05T13:50:00.000Z",
+                },
+                "departure": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "PRG",
+                    },
+                  },
+                  "time": "2017-09-05T11:40:00.000Z",
+                },
+              },
+              Object {
+                "arrival": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "ORD",
+                    },
+                  },
+                  "time": "2017-09-06T01:05:00.000Z",
+                },
+                "departure": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "LHR",
+                    },
+                  },
+                  "time": "2017-09-05T16:15:00.000Z",
+                },
+              },
+              Object {
+                "arrival": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "IAH",
+                    },
+                  },
+                  "time": "2017-09-06T13:10:00.000Z",
+                },
+                "departure": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "ORD",
+                    },
+                  },
+                  "time": "2017-09-06T10:30:00.000Z",
+                },
+              },
+              Object {
+                "arrival": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "MEX",
+                    },
+                  },
+                  "time": "2017-09-06T16:15:00.000Z",
+                },
+                "departure": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "IAH",
+                    },
+                  },
+                  "time": "2017-09-06T14:00:00.000Z",
+                },
+              },
+              Object {
+                "arrival": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "ORD",
+                    },
+                  },
+                  "time": "2017-09-14T00:05:00.000Z",
+                },
+                "departure": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "MEX",
+                    },
+                  },
+                  "time": "2017-09-13T19:50:00.000Z",
+                },
+              },
+              Object {
+                "arrival": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "LHR",
+                    },
+                  },
+                  "time": "2017-09-14T11:05:00.000Z",
+                },
+                "departure": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "ORD",
+                    },
+                  },
+                  "time": "2017-09-14T03:30:00.000Z",
+                },
+              },
+              Object {
+                "arrival": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "PRG",
+                    },
+                  },
+                  "time": "2017-09-14T14:30:00.000Z",
+                },
+                "departure": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "LHR",
+                    },
+                  },
+                  "time": "2017-09-14T12:25:00.000Z",
+                },
+              },
+            ],
+          },
+        },
+        Object {
+          "node": Object {
+            "legs": Array [
+              Object {
+                "arrival": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "LHR",
+                    },
+                  },
+                  "time": "2017-08-24T13:50:00.000Z",
+                },
+                "departure": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "PRG",
+                    },
+                  },
+                  "time": "2017-08-24T11:40:00.000Z",
+                },
+              },
+              Object {
+                "arrival": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "ORD",
+                    },
+                  },
+                  "time": "2017-08-25T01:05:00.000Z",
+                },
+                "departure": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "LHR",
+                    },
+                  },
+                  "time": "2017-08-24T16:15:00.000Z",
+                },
+              },
+              Object {
+                "arrival": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "IAH",
+                    },
+                  },
+                  "time": "2017-08-25T13:02:00.000Z",
+                },
+                "departure": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "ORD",
+                    },
+                  },
+                  "time": "2017-08-25T10:30:00.000Z",
+                },
+              },
+              Object {
+                "arrival": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "MEX",
+                    },
+                  },
+                  "time": "2017-08-25T16:15:00.000Z",
+                },
+                "departure": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "IAH",
+                    },
+                  },
+                  "time": "2017-08-25T14:00:00.000Z",
+                },
+              },
+              Object {
+                "arrival": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "ORD",
+                    },
+                  },
+                  "time": "2017-09-03T00:05:00.000Z",
+                },
+                "departure": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "MEX",
+                    },
+                  },
+                  "time": "2017-09-02T19:50:00.000Z",
+                },
+              },
+              Object {
+                "arrival": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "LHR",
+                    },
+                  },
+                  "time": "2017-09-03T11:05:00.000Z",
+                },
+                "departure": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "ORD",
+                    },
+                  },
+                  "time": "2017-09-03T03:30:00.000Z",
+                },
+              },
+              Object {
+                "arrival": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "PRG",
+                    },
+                  },
+                  "time": "2017-09-03T17:35:00.000Z",
+                },
+                "departure": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "LHR",
+                    },
+                  },
+                  "time": "2017-09-03T15:35:00.000Z",
+                },
+              },
+            ],
+          },
+        },
+        Object {
+          "node": Object {
+            "legs": Array [
+              Object {
+                "arrival": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "LHR",
+                    },
+                  },
+                  "time": "2017-08-30T07:00:00.000Z",
+                },
+                "departure": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "PRG",
+                    },
+                  },
+                  "time": "2017-08-30T04:50:00.000Z",
+                },
+              },
+              Object {
+                "arrival": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "ORD",
+                    },
+                  },
+                  "time": "2017-08-30T18:25:00.000Z",
+                },
+                "departure": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "LHR",
+                    },
+                  },
+                  "time": "2017-08-30T09:50:00.000Z",
+                },
+              },
+              Object {
+                "arrival": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "MEX",
+                    },
+                  },
+                  "time": "2017-08-31T04:25:00.000Z",
+                },
+                "departure": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "ORD",
+                    },
+                  },
+                  "time": "2017-08-31T00:20:00.000Z",
+                },
+              },
+              Object {
+                "arrival": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "ORD",
+                    },
+                  },
+                  "time": "2017-09-07T00:05:00.000Z",
+                },
+                "departure": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "MEX",
+                    },
+                  },
+                  "time": "2017-09-06T19:50:00.000Z",
+                },
+              },
+              Object {
+                "arrival": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "LHR",
+                    },
+                  },
+                  "time": "2017-09-07T11:05:00.000Z",
+                },
+                "departure": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "ORD",
+                    },
+                  },
+                  "time": "2017-09-07T03:30:00.000Z",
+                },
+              },
+              Object {
+                "arrival": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "PRG",
+                    },
+                  },
+                  "time": "2017-09-07T14:30:00.000Z",
+                },
+                "departure": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "LHR",
+                    },
+                  },
+                  "time": "2017-09-07T12:25:00.000Z",
+                },
+              },
+            ],
+          },
+        },
+      ],
+    },
+  },
+}
+`;

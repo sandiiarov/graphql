@@ -4,11 +4,11 @@ exports[`FlightsSearchInput type should have valid fields 1`] = `
 Object {
   "dateFrom": Object {
     "name": "dateFrom",
-    "type": "Date!",
+    "type": "DateFromInput!",
   },
   "dateTo": Object {
     "name": "dateTo",
-    "type": "Date!",
+    "type": "DateToInput!",
   },
   "from": Object {
     "name": "from",
