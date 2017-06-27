@@ -5,6 +5,13 @@ export default function request(absoluteApiUrl: string): Promise<Object> {
   if (mockResponse !== undefined) {
     return Promise.resolve(mockResponse);
   }
+
+  const patterns = Object.keys(stackOfMockResponses.GET);
+  const mockResponseRegex = matchRegex(absoluteApiUrl, patterns);
+  if (mockResponseRegex !== undefined) {
+    return Promise.resolve(stackOfMockResponses.GET[mockResponseRegex]);
+  }
+
   throw new Error(`Data mock not found for path: ${absoluteApiUrl}`);
 }
 
@@ -13,6 +20,13 @@ export async function post(absoluteApiUrl: string): Promise<Object> {
   if (mockResponse !== undefined) {
     return Promise.resolve(mockResponse);
   }
+
+  const patterns = Object.keys(stackOfMockResponses.POST);
+  const mockResponseRegex = matchRegex(absoluteApiUrl, patterns);
+  if (mockResponseRegex !== undefined) {
+    return Promise.resolve(stackOfMockResponses.POST[mockResponseRegex]);
+  }
+
   throw new Error(`Data mock not found for path: ${absoluteApiUrl}`);
 }
 
@@ -29,4 +43,11 @@ export function __setMockData(
   mockData: Object,
 ) {
   stackOfMockResponses[httpMethod][absoluteUrl] = mockData;
+}
+
+function matchRegex(url: string, patterns: string[]): ?string {
+  return patterns.find(pattern => {
+    const regexp = new RegExp(`^${pattern}$`);
+    return regexp.test(url);
+  });
 }
