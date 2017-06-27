@@ -25,6 +25,7 @@ Object {
   },
   "duration": Object {
     "args": Array [],
+    "description": "Leg duration in minutes.",
     "isDeprecated": false,
     "name": "duration",
     "resolve": [Function],

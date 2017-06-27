@@ -4,6 +4,7 @@ exports[`Coordinates have valid fields 1`] = `
 Object {
   "lat": Object {
     "args": Array [],
+    "description": "Latitude.",
     "isDeprecated": false,
     "name": "lat",
     "resolve": [Function],
@@ -11,6 +12,7 @@ Object {
   },
   "lng": Object {
     "args": Array [],
+    "description": "Longitude.",
     "isDeprecated": false,
     "name": "lng",
     "resolve": [Function],

@@ -20,6 +20,8 @@ export default new GraphQLObjectType({
 
     databaseId: {
       type: GraphQLString,
+      description: 'Internal database ID.',
+      deprecationReason: 'Use id field instead.',
       resolve: ({ userId }: IdentityType): string => userId,
     },
 

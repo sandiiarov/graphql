@@ -11,6 +11,7 @@ Object {
   },
   "quantity": Object {
     "args": Array [],
+    "description": "Number of baggage.",
     "isDeprecated": false,
     "name": "quantity",
     "resolve": [Function],

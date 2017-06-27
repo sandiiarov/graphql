@@ -14,6 +14,7 @@ export default new GraphQLObjectType({
 
     code: {
       type: GraphQLString,
+      description: '2-letter IATA code of airline.',
       resolve: ({ code }: AirlineType): string => code,
     },
 
@@ -24,6 +25,7 @@ export default new GraphQLObjectType({
 
     isLowCost: {
       type: GraphQLBoolean,
+      description: 'Airline is low cost carrier.',
       resolve: ({ isLowCost }: AirlineType): boolean => isLowCost,
     },
   },

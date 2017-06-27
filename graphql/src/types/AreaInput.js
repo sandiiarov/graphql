@@ -8,9 +8,11 @@ export default new GraphQLInputObjectType({
   fields: {
     topLeft: {
       type: new GraphQLNonNull(GraphQLCoordinates),
+      description: 'Top left coordinates of the area.',
     },
     bottomRight: {
       type: new GraphQLNonNull(GraphQLCoordinates),
+      description: 'Bottom right coordinates of the area.',
     },
   },
 });

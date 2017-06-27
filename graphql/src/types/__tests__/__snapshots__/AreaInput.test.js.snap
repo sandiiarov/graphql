@@ -3,10 +3,12 @@
 exports[`AreaInput type should have valid fields 1`] = `
 Object {
   "bottomRight": Object {
+    "description": "Bottom right coordinates of the area.",
     "name": "bottomRight",
     "type": "CoordinatesInput!",
   },
   "topLeft": Object {
+    "description": "Top left coordinates of the area.",
     "name": "topLeft",
     "type": "CoordinatesInput!",
   },

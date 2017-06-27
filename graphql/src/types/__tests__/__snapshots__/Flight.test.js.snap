@@ -4,6 +4,7 @@ exports[`Flight type should have valid fields 1`] = `
 Object {
   "airlines": Object {
     "args": Array [],
+    "description": "List of all Airlines involved.",
     "isDeprecated": false,
     "name": "airlines",
     "resolve": [Function],
@@ -25,6 +26,7 @@ Object {
   },
   "duration": Object {
     "args": Array [],
+    "description": "Flight duration in minutes.",
     "isDeprecated": false,
     "name": "duration",
     "resolve": [Function],
@@ -32,6 +34,7 @@ Object {
   },
   "legs": Object {
     "args": Array [],
+    "description": "Flight segments, e.g. stopover, change of aircraft, etc.",
     "isDeprecated": false,
     "name": "legs",
     "resolve": [Function],
@@ -39,6 +42,7 @@ Object {
   },
   "price": Object {
     "args": Array [],
+    "description": "Total flight price.",
     "isDeprecated": false,
     "name": "price",
     "resolve": [Function],

@@ -15,6 +15,7 @@ export default new GraphQLObjectType({
   fields: {
     locationId: {
       type: GraphQLString,
+      description: '3-letter IATA code of airport or internal city code.',
       resolve: ({ locationId }: LocationType): string => locationId,
     },
 
@@ -40,6 +41,7 @@ export default new GraphQLObjectType({
 
     type: {
       type: GraphQLString,
+      description: 'Airport, city or country.',
       resolve: ({ type }: LocationType): string => type,
     },
 

@@ -25,6 +25,7 @@ Object {
   },
   "locationId": Object {
     "args": Array [],
+    "description": "3-letter IATA code of airport or internal city code.",
     "isDeprecated": false,
     "name": "locationId",
     "resolve": [Function],
@@ -60,6 +61,7 @@ Object {
   },
   "type": Object {
     "args": Array [],
+    "description": "Airport, city or country.",
     "isDeprecated": false,
     "name": "type",
     "resolve": [Function],

@@ -3,6 +3,7 @@
 exports[`FlightsOptionsInput type should have valid fields 1`] = `
 Object {
   "currency": Object {
+    "description": "An ISO-4217 currency code.",
     "name": "currency",
     "type": "Currency",
   },

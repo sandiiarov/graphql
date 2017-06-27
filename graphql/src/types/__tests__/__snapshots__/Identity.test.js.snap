@@ -4,7 +4,9 @@ exports[`should have fields defined 1`] = `
 Object {
   "databaseId": Object {
     "args": Array [],
-    "isDeprecated": false,
+    "deprecationReason": "Use id field instead.",
+    "description": "Internal database ID.",
+    "isDeprecated": true,
     "name": "databaseId",
     "resolve": [Function],
     "type": "String",

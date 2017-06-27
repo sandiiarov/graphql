@@ -1,7 +1,7 @@
 // @flow
 
 import _ from 'lodash';
-import { GraphQLObjectType, GraphQLList, GraphQLInt } from 'graphql';
+import { GraphQLInt, GraphQLList, GraphQLObjectType } from 'graphql';
 import GraphQLRouteStop from './RouteStop';
 import GraphQLLeg from './Leg';
 import GraphQLAirline from './Airline';
@@ -22,6 +22,7 @@ export default new GraphQLObjectType({
   fields: {
     airlines: {
       type: new GraphQLList(GraphQLAirline),
+      description: 'List of all Airlines involved.',
       resolve: async (
         { airlines }: FlightType,
         args: Object,
@@ -44,17 +45,20 @@ export default new GraphQLObjectType({
 
     duration: {
       type: GraphQLInt,
+      description: 'Flight duration in minutes.',
       resolve: ({ departure, arrival }: FlightType): ?number =>
         FlightDurationInMinutes(departure, arrival),
     },
 
     legs: {
       type: new GraphQLList(GraphQLLeg),
+      description: 'Flight segments, e.g. stopover, change of aircraft, etc.',
       resolve: ({ legs }: FlightType): Array<LegType> => legs,
     },
 
     price: {
       type: GraphQLPrice,
+      description: 'Total flight price.',
       resolve: ({ price }: FlightType): PriceType => price,
     },
   },

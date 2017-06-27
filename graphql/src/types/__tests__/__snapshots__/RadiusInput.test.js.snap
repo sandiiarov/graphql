@@ -3,15 +3,17 @@
 exports[`RadiusInput type should have valid fields 1`] = `
 Object {
   "lat": Object {
+    "description": "Latitude of the center of the circle.",
     "name": "lat",
     "type": "Float!",
   },
   "lng": Object {
+    "description": "Longitude of the center of the circle.",
     "name": "lng",
     "type": "Float!",
   },
   "radius": Object {
-    "description": "Distance in kilometers",
+    "description": "Distance in kilometers.",
     "name": "radius",
     "type": "Int!",
   },

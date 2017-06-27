@@ -44,6 +44,7 @@ export default new GraphQLObjectType({
 
     duration: {
       type: GraphQLInt,
+      description: 'Leg duration in minutes.',
       resolve: ({ departure, arrival }: LegType): ?number =>
         FlightDurationInMinutes(departure, arrival),
     },

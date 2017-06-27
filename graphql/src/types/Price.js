@@ -14,6 +14,7 @@ export default new GraphQLObjectType({
 
     currency: {
       type: GraphQLString,
+      description: 'An ISO-4217 currency code.',
       resolve: ({ currency }: PriceType): string => currency,
     },
   },
