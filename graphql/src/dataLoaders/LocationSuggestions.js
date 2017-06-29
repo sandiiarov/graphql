@@ -3,7 +3,7 @@
 import _ from 'lodash';
 import DataLoader from 'dataloader';
 import config from '../../config/application';
-import request from '../services/HttpRequest';
+import { get } from '../services/HttpRequest';
 
 import type {
   Radius,
@@ -21,8 +21,8 @@ export default class LocationSuggestionsDataloader {
 
   constructor() {
     this.dataLoader = new DataLoader(
-      (urlParamsBatch: Object[]) => {
-        return this.batchGetLocations(urlParamsBatch);
+      (urlParameters: Object[]) => {
+        return this.batchGetLocations(urlParameters);
       },
       {
         cacheKeyFn: key => JSON.stringify(key),
@@ -90,9 +90,7 @@ export default class LocationSuggestionsDataloader {
     const promisesStack = [];
 
     urlParameters.forEach(parameters => {
-      promisesStack.push(
-        request(config.restApiEndpoint.allLocations(parameters)),
-      );
+      promisesStack.push(get(config.restApiEndpoint.allLocations(parameters)));
     });
 
     const responseArray = await Promise.all(promisesStack);

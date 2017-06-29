@@ -48,6 +48,11 @@ function filterParameters(parameters: Object) {
     const val = parameters[key];
     if (val === null || val === undefined || val === '') {
       delete filteredParameters[key];
+      return;
+    }
+
+    if (Array.isArray(val)) {
+      filteredParameters[key] = val.toString();
     }
   });
   return filteredParameters;

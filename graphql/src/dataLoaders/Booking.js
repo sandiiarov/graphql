@@ -1,7 +1,7 @@
 // @flow
 
 import DataLoader from 'dataloader';
-import request from '../services/HttpRequest';
+import { get } from '../services/HttpRequest';
 import Config from '../../config/application';
 import { sanitizeDetail } from '../queries/booking/ApiSanitizer';
 
@@ -33,9 +33,7 @@ function batchLoad(
 
 async function fetch(bid, bookingsLoader): Promise<Booking> {
   const { authToken } = await bookingsLoader.loadItem(bid);
-  const data = await request(
-    Config.restApiEndpoint.singleBooking(bid, authToken),
-  );
+  const data = await get(Config.restApiEndpoint.singleBooking(bid, authToken));
 
   return sanitizeDetail(data);
 }
