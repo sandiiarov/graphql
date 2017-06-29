@@ -41,7 +41,7 @@ export default {
     args: Object,
     context: GraphqlContextType,
   ) => {
-    const { from, to, dateFrom, dateTo } = args.search;
+    const { from, to, dateFrom, dateTo, passengers } = args.search;
     const currency = _.get(args, 'options.currency');
 
     validateDates(dateFrom, dateTo);
@@ -51,6 +51,7 @@ export default {
       to.map(location => formatString(location)).toString(),
       new Date(dateFrom),
       new Date(dateTo),
+      passengers,
       currency,
     );
 
@@ -67,6 +68,7 @@ export default {
         toLocations.toString(),
         new Date(dateFrom),
         new Date(dateTo),
+        passengers,
         currency,
       );
     }
@@ -92,6 +94,7 @@ function requestFlights(
   to: string,
   dateFrom: Date,
   dateTo: Date,
+  passengers: ?{ adults: number },
   currency?: string,
 ): Promise<Object> {
   return request(
@@ -101,6 +104,7 @@ function requestFlights(
       dateFrom: dateFns.format(dateFrom, 'DD/MM/YYYY'),
       dateTo: dateFns.format(dateTo, 'DD/MM/YYYY'),
       curr: currency,
+      adults: passengers ? passengers.adults : null,
     }),
   );
 }

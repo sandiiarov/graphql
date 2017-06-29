@@ -3,6 +3,7 @@
 import { GraphQLInputObjectType, GraphQLNonNull, GraphQLList } from 'graphql';
 import { GraphQLDate } from 'graphql-iso-date';
 import GraphQLLocation from './LocationInput';
+import PassengersInput from './PassengersInput';
 
 export default new GraphQLInputObjectType({
   name: 'FlightsSearchInput',
@@ -22,6 +23,9 @@ export default new GraphQLInputObjectType({
     },
     dateTo: {
       type: new GraphQLNonNull(GraphQLDate),
+    },
+    passengers: {
+      type: PassengersInput,
     },
   },
 });
