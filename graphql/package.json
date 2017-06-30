@@ -44,6 +44,7 @@
   "scripts": {
     "start": "rm -f dist/hot/* && webpack --config config/webpack.development.js",
     "build:prod": "webpack --config config/webpack.production.js",
+    "debug": "webpack --config config/webpack.debug.js",
     "lint": "eslint .",
     "test": "jest --setupTestFrameworkScriptFile=./config/setupTests.js",
     "test-ci": "yarn run typecheck && yarn run lint && yarn run test -- --ci --color --config=jest.json",
