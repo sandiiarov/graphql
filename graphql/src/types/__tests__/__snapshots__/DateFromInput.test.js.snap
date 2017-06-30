@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DateFromInput have valid fields 1`] = `
+Object {
+  "anytime": Object {
+    "name": "anytime",
+    "type": "Boolean",
+  },
+  "exact": Object {
+    "name": "exact",
+    "type": "Date",
+  },
+  "range": Object {
+    "name": "range",
+    "type": "DateRangeInput",
+  },
+}
+`;

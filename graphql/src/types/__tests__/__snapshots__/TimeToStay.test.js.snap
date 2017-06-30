@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TimeToStay have valid fields 1`] = `
+Object {
+  "from": Object {
+    "description": "Number of minimum nights to stay in destination.",
+    "name": "from",
+    "type": "Int!",
+  },
+  "to": Object {
+    "description": "Number of maximum nights to stay in destination.",
+    "name": "to",
+    "type": "Int!",
+  },
+}
+`;

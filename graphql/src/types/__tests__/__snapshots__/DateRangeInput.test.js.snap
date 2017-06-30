@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DateRangeInput have valid fields 1`] = `
+Object {
+  "from": Object {
+    "name": "from",
+    "type": "Date",
+  },
+  "to": Object {
+    "name": "to",
+    "type": "Date",
+  },
+}
+`;

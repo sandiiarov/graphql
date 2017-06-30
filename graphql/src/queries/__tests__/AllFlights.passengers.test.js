@@ -37,8 +37,12 @@ describe('All flights passengers', () => {
         to: {
           location: 'MEX',
         },
-        dateFrom: '2017-08-08',
-        dateTo: '2017-09-08',
+        dateFrom: {
+          exact: '2017-08-08',
+        },
+        dateTo: {
+          exact: '2017-09-08',
+        },
         passengers: {
           adults: 2,
         },
