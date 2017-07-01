@@ -13,7 +13,7 @@ export default function createInstance(accessToken: ?string) {
 
 function batchLoad(
   accessToken: ?string,
-): Array<string> => Promise<Array<Object>> {
+): (Array<string>) => Promise<Array<Object>> {
   if (typeof accessToken !== 'string') {
     return () => Promise.reject(new Error('Undefined access token'));
   }

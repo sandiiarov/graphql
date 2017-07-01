@@ -3,8 +3,7 @@
 import { RestApiMock } from '../../services/TestingTools';
 import createInstance from '../Identity';
 import config from '../../../config/application';
-import userMockData
-  from '../../dataLoaders/__tests__/__datasets__/user.get.json';
+import userMockData from '../../dataLoaders/__tests__/__datasets__/user.get.json';
 
 beforeEach(() => {
   RestApiMock.onPost(config.restApiEndpoint.identity).replyWithData(

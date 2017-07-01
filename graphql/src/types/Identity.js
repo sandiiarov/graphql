@@ -27,7 +27,8 @@ export default new GraphQLObjectType({
 
     email: {
       type: GraphQLString,
-      description: 'Raw input by user, use "login" if you want normalized email.',
+      description:
+        'Raw input by user, use "login" if you want normalized email.',
       resolve: ({ email }: IdentityType): string => email,
     },
 
@@ -48,7 +49,8 @@ export default new GraphQLObjectType({
 
     fullName: {
       type: GraphQLString,
-      description: 'Concatenation of first and last name with fallback to the login field.',
+      description:
+        'Concatenation of first and last name with fallback to the login field.',
       resolve: ({ firstName, lastName, login }: IdentityType): string => {
         if (firstName === null && lastName === null) {
           return login;

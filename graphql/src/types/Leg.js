@@ -16,7 +16,8 @@ import type { DepartureArrivalType, LegType, AirlineType } from '../Entities';
 
 export default new GraphQLObjectType({
   name: 'Leg',
-  description: 'Leg is the operation of an aircraft from one scheduled departure station to its next scheduled arrival station.',
+  description:
+    'Leg is the operation of an aircraft from one scheduled departure station to its next scheduled arrival station.',
   fields: {
     id: {
       type: GraphQLID,

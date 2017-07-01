@@ -2,8 +2,7 @@
 
 import { graphql, RestApiMock } from '../../services/TestingTools';
 import config from '../../../config/application';
-import userMockData
-  from '../../dataLoaders/__tests__/__datasets__/user.get.json';
+import userMockData from '../../dataLoaders/__tests__/__datasets__/user.get.json';
 
 beforeEach(() => {
   RestApiMock.onPost(config.restApiEndpoint.login).replyWithData({

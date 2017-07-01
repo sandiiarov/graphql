@@ -23,7 +23,7 @@ export default function createInstance(
 function batchLoad(
   accessToken: ?string,
   bookingsLoader: BookingsLoader,
-): Array<number | string> => Promise<Array<Object>> {
+): (Array<number | string>) => Promise<Array<Object>> {
   if (typeof accessToken !== 'string') {
     return () => Promise.reject(new Error('Undefined access token'));
   }
