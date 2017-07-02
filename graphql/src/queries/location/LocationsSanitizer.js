@@ -1,12 +1,13 @@
 // @flow
 
-import type { LocationInputType, RadiusInputType } from '../../Entities';
 import { formatString } from './ArgumentSanitizer';
 import LocationDataLoader from '../../dataLoaders/Location';
 
+import type { LocationVariants } from '../../types/Location';
+
 export async function sanitizeLocationsForRequest(
-  from: Array<LocationInputType | RadiusInputType>,
-  to: Array<LocationInputType | RadiusInputType>,
+  from: Array<LocationVariants>,
+  to: Array<LocationVariants>,
   locationDataLoader: LocationDataLoader,
 ) {
   const locations = [];
@@ -25,7 +26,7 @@ export async function sanitizeLocationsForRequest(
 }
 
 function sanitizeForRequest(
-  location: LocationInputType | RadiusInputType,
+  location: LocationVariants,
   locationDataLoader: LocationDataLoader,
 ) {
   return typeof location.location === 'string'

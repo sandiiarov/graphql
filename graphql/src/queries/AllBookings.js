@@ -5,7 +5,7 @@ import {
   connectionDefinitions,
   connectionFromPromisedArray,
 } from 'graphql-relay';
-import GraphQLBooking from '../types/Booking';
+import GraphQLBooking from '../outputs/Booking';
 
 import type { GraphqlContextType } from '../services/GraphqlContext';
 

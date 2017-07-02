@@ -3,7 +3,8 @@
 import DataLoader from 'dataloader';
 import { post } from '../services/HttpRequest';
 import Config from '../../config/application';
-import type { IdentityType } from '../Entities';
+
+import type { Identity } from '../types/User';
 
 export default function createInstance(accessToken: ?string) {
   return new DataLoader((ids: Array<string>) => {
@@ -13,7 +14,7 @@ export default function createInstance(accessToken: ?string) {
 
 function batchLoad(
   accessToken: ?string,
-): (Array<string>) => Promise<Array<Object>> {
+): (Array<string>) => Promise<Array<Identity | Error>> {
   if (typeof accessToken !== 'string') {
     return () => Promise.reject(new Error('Undefined access token'));
   }
@@ -21,10 +22,7 @@ function batchLoad(
   return ids => Promise.all(ids.map(userId => fetch(userId, token)));
 }
 
-async function fetch(
-  userId: string,
-  accessToken: string,
-): Promise<IdentityType> {
+async function fetch(userId: string, accessToken: string): Promise<Identity> {
   const payload = {
     user: userId,
   };
@@ -43,7 +41,7 @@ async function fetch(
   return sanitizeData(data[0]);
 }
 
-function sanitizeData(data: Object): IdentityType {
+function sanitizeData(data: Object): Identity {
   const userData = {
     email: data.email,
     emailVerified: data.email_verified,

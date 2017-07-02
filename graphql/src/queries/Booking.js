@@ -1,10 +1,10 @@
 // @flow
 
 import { GraphQLID, GraphQLNonNull } from 'graphql';
-import GraphQLBooking from '../types/Booking';
+import GraphQLBooking from '../outputs/Booking';
 
 import type { GraphqlContextType } from '../services/GraphqlContext';
-import type { BookingsItemType } from '../Entities';
+import type { BookingsItem } from '../types/Booking';
 
 export default {
   type: GraphQLBooking, // may be null (doesn't exist)
@@ -18,5 +18,5 @@ export default {
     ancestor: mixed,
     { id }: Object,
     { dataLoader }: GraphqlContextType,
-  ): Promise<BookingsItemType> => dataLoader.bookings.loadItem(id),
+  ): Promise<BookingsItem> => dataLoader.bookings.loadItem(id),
 };

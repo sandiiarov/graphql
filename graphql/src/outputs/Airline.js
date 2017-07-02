@@ -2,31 +2,31 @@
 
 import { GraphQLObjectType, GraphQLString, GraphQLBoolean } from 'graphql';
 
-import type { AirlineType } from '../Entities';
+import type { Airline } from '../types/Flight';
 
 export default new GraphQLObjectType({
   name: 'Airline',
   fields: {
     name: {
       type: GraphQLString,
-      resolve: ({ name }: AirlineType): string => name,
+      resolve: ({ name }: Airline): string => name,
     },
 
     code: {
       type: GraphQLString,
       description: '2-letter IATA code of airline.',
-      resolve: ({ code }: AirlineType): string => code,
+      resolve: ({ code }: Airline): string => code,
     },
 
     logoUrl: {
       type: GraphQLString,
-      resolve: ({ logoUrl }: AirlineType): string => logoUrl,
+      resolve: ({ logoUrl }: Airline): string => logoUrl,
     },
 
     isLowCost: {
       type: GraphQLBoolean,
       description: 'Airline is low cost carrier.',
-      resolve: ({ isLowCost }: AirlineType): boolean => isLowCost,
+      resolve: ({ isLowCost }: Airline): boolean => isLowCost,
     },
   },
 });

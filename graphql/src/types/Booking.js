@@ -1,61 +1,18 @@
 // @flow
 
-import { GraphQLID, GraphQLInt, GraphQLList, GraphQLObjectType } from 'graphql';
+import type { DepartureArrival, Leg } from './Flight';
+import type { Price } from './Price';
+import type { AllowedBaggage } from './Baggage';
 
-import GraphQLRouteStop from './RouteStop';
-import GraphQLAllowedBaggage from './AllowedBaggage';
-import GraphQLLeg from './Leg';
-import { toGlobalId } from '../services/OpaqueIdentifier';
+export type BookingsItem = {
+  id: number,
+  arrival: DepartureArrival,
+  departure: DepartureArrival,
+  legs: Array<Leg>,
+  price: Price,
+  authToken: string,
+};
 
-import type {
-  DepartureArrivalType,
-  AllowedBaggageType,
-  BookingType,
-  LegType,
-} from '../Entities';
-import type { GraphqlContextType } from '../services/GraphqlContext';
-
-export default new GraphQLObjectType({
-  name: 'Booking',
-  fields: {
-    id: {
-      type: GraphQLID,
-      resolve: ({ id }: BookingType): string => toGlobalId('booking', id),
-    },
-
-    databaseId: {
-      type: GraphQLInt,
-      description: 'Internal database ID.',
-      deprecationReason: 'Use id field instead.',
-      resolve: ({ id }: BookingType): number => id,
-    },
-
-    allowedBaggage: {
-      type: GraphQLAllowedBaggage,
-      resolve: async (
-        { id }: BookingType,
-        params: Object,
-        { dataLoader }: GraphqlContextType,
-      ): Promise<AllowedBaggageType> => {
-        const { allowedBaggage } = await dataLoader.booking.load(id);
-        return allowedBaggage;
-      },
-    },
-
-    arrival: {
-      type: GraphQLRouteStop,
-      resolve: ({ arrival }: BookingType): DepartureArrivalType => arrival,
-    },
-
-    departure: {
-      type: GraphQLRouteStop,
-      resolve: ({ departure }: BookingType): DepartureArrivalType => departure,
-    },
-
-    legs: {
-      type: new GraphQLList(GraphQLLeg),
-      description: 'Flight segments, e.g. stopover, change of aircraft, etc.',
-      resolve: ({ legs }: BookingType): Array<LegType> => legs,
-    },
-  },
-});
+export type Booking = BookingsItem & {
+  allowedBaggage: AllowedBaggage,
+};

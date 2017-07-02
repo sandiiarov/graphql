@@ -12,7 +12,7 @@ import GraphQLAirline from './Airline';
 import type { GraphqlContextType } from '../services/GraphqlContext';
 import FlightDurationInMinutes from '../resolvers/FlightDuration';
 
-import type { DepartureArrivalType, LegType, AirlineType } from '../Entities';
+import type { DepartureArrival, Leg } from '../types/Flight';
 
 export default new GraphQLObjectType({
   name: 'Leg',
@@ -21,38 +21,38 @@ export default new GraphQLObjectType({
   fields: {
     id: {
       type: GraphQLID,
-      resolve: ({ id }: LegType): string => toGlobalId('leg', id),
+      resolve: ({ id }: Leg): string => toGlobalId('leg', id),
     },
 
     airline: {
       type: GraphQLAirline,
       resolve: async (
-        { airlineCode }: LegType,
+        { airlineCode }: Leg,
         args: Object,
         { dataLoader }: GraphqlContextType,
-      ): Promise<?AirlineType> => dataLoader.airline.load(airlineCode),
+      ) => dataLoader.airline.load(airlineCode),
     },
 
     arrival: {
       type: GraphQLRouteStop,
-      resolve: ({ arrival }: LegType): DepartureArrivalType => arrival,
+      resolve: ({ arrival }: Leg): DepartureArrival => arrival,
     },
 
     departure: {
       type: GraphQLRouteStop,
-      resolve: ({ departure }: LegType): DepartureArrivalType => departure,
+      resolve: ({ departure }: Leg): DepartureArrival => departure,
     },
 
     duration: {
       type: GraphQLInt,
       description: 'Leg duration in minutes.',
-      resolve: ({ departure, arrival }: LegType): ?number =>
+      resolve: ({ departure, arrival }: Leg): ?number =>
         FlightDurationInMinutes(departure, arrival),
     },
 
     flightNumber: {
       type: GraphQLInt,
-      resolve: ({ flightNo }: LegType): number => flightNo,
+      resolve: ({ flightNo }: Leg): number => flightNo,
     },
 
     recheckRequired: {

@@ -1,64 +1,45 @@
 // @flow
 
-import { GraphQLObjectType, GraphQLString } from 'graphql';
+export type Coordinates = {|
+  lat: number,
+  lng: number,
+|};
 
-import GraphQLCoordinates from '../types/Coordinates';
-import GraphQLLocationArea from '../types/LocationArea';
-import type {
-  CoordinatesType,
-  LocationType,
-  LocationAreaType,
-} from '../Entities';
+export type Radius = {|
+  lat: number,
+  lng: number,
+  radius: number,
+|};
 
-export default new GraphQLObjectType({
-  name: 'Location',
-  fields: {
-    locationId: {
-      type: GraphQLString,
-      description: '3-letter IATA code of airport or internal city code.',
-      resolve: ({ locationId }: LocationType): string => locationId,
-    },
+export type Rectangle = {|
+  topLeft: Coordinates,
+  bottomRight: Coordinates,
+|};
 
-    name: {
-      type: GraphQLString,
-      resolve: ({ name }: LocationType): string => name,
-    },
+export type ExactLocation = {|
+  location: string,
+|};
 
-    slug: {
-      type: GraphQLString,
-      resolve: ({ slug }: LocationType): string => slug,
-    },
+export type RadiusLocation = {|
+  radius: Radius,
+|};
 
-    timezone: {
-      type: GraphQLString,
-      resolve: ({ timezone }: LocationType): string => timezone,
-    },
+export type LocationVariants = ExactLocation | RadiusLocation;
 
-    location: {
-      type: GraphQLCoordinates,
-      resolve: ({ location }: LocationType): CoordinatesType => location,
-    },
+export type Location = {|
+  locationId: string,
+  name: string,
+  slug: string,
+  timezone: string,
+  location: Coordinates,
+  type: string,
+  city: ?LocationArea,
+  subdivision: ?LocationArea,
+  country: ?LocationArea,
+|};
 
-    type: {
-      type: GraphQLString,
-      description: 'Airport, city or country.',
-      resolve: ({ type }: LocationType): string => type,
-    },
-
-    city: {
-      type: GraphQLLocationArea,
-      resolve: ({ city }: LocationType): ?LocationAreaType => city,
-    },
-
-    subdivision: {
-      type: GraphQLLocationArea,
-      resolve: ({ subdivision }: LocationType): ?LocationAreaType =>
-        subdivision,
-    },
-
-    country: {
-      type: GraphQLLocationArea,
-      resolve: ({ country }: LocationType): ?LocationAreaType => country,
-    },
-  },
-});
+export type LocationArea = {|
+  locationId: string,
+  name: string,
+  slug: string,
+|};

@@ -1,35 +1,22 @@
 // @flow
 
-import { GraphQLObjectType, GraphQLInt, GraphQLString } from 'graphql';
+import type { Price } from './Price';
 
-import type { BaggageType } from '../Entities';
+export type AdditionalBaggageInfo = {|
+  price: Price,
+  quantity: number,
+|};
 
-export default new GraphQLObjectType({
-  name: 'Baggage',
-  fields: {
-    height: {
-      type: GraphQLInt,
-      resolve: ({ height }: BaggageType) => height,
-    },
+export type AllowedBaggage = {|
+  additionalBaggage: Array<AdditionalBaggageInfo>,
+  cabin: Array<Baggage>,
+  checked: Array<Baggage>,
+|};
 
-    length: {
-      type: GraphQLInt,
-      resolve: ({ length }: BaggageType) => length,
-    },
-
-    width: {
-      type: GraphQLInt,
-      resolve: ({ width }: BaggageType) => width,
-    },
-
-    weight: {
-      type: GraphQLInt,
-      resolve: ({ weight }: BaggageType) => weight,
-    },
-
-    note: {
-      type: GraphQLString,
-      resolve: ({ note }: BaggageType) => note,
-    },
-  },
-});
+export type Baggage = {|
+  height: ?number,
+  length: ?number,
+  width: ?number,
+  weight: ?number,
+  note: ?string,
+|};

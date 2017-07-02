@@ -6,14 +6,14 @@ import config from '../../config/application';
 import request from '../services/HttpRequest';
 
 import type {
-  LocationType,
-  LocationAreaType,
-  RadiusType,
-  AreaType,
-} from '../Entities';
+  Radius,
+  Rectangle,
+  LocationArea,
+  Location,
+} from '../types/Location';
 
 export default class LocationSuggestionsDataloader {
-  dataLoader: DataLoader<Object, LocationType[]>;
+  dataLoader: DataLoader<Object, Location[]>;
 
   constructor() {
     this.dataLoader = new DataLoader(
@@ -26,17 +26,17 @@ export default class LocationSuggestionsDataloader {
     );
   }
 
-  async load(locationKey: string): Promise<LocationType[]> {
+  async load(locationKey: string): Promise<Location[]> {
     return this.dataLoader.load({ term: locationKey });
   }
 
-  async loadMany(locationKeys: string[]): Promise<Array<LocationType[]>> {
+  async loadMany(locationKeys: string[]): Promise<Array<Location[]>> {
     return this.dataLoader.loadMany(
       locationKeys.map(location => ({ term: location })),
     );
   }
 
-  async loadByRadius(radius: RadiusType) {
+  async loadByRadius(radius: Radius) {
     return this.dataLoader.load({
       type: 'radius',
       lat: radius.lat,
@@ -45,7 +45,7 @@ export default class LocationSuggestionsDataloader {
     });
   }
 
-  async loadByArea(area: AreaType) {
+  async loadByArea(area: Rectangle) {
     return this.dataLoader.load({
       type: 'box',
       high_lat: area.topLeft.lat,
@@ -71,7 +71,7 @@ export default class LocationSuggestionsDataloader {
    */
   async batchGetLocations(
     urlParameters: Object[],
-  ): Promise<Array<LocationType[] | Error>> {
+  ): Promise<Array<Location[] | Error>> {
     const promisesStack = [];
 
     urlParameters.forEach(parameters => {
@@ -85,14 +85,14 @@ export default class LocationSuggestionsDataloader {
       if (response.locations.length === 0) {
         return new Error(`Location has not been found.`);
       }
-      return response.locations.map((location): LocationType =>
+      return response.locations.map((location): Location =>
         sanitizeApiResponse(location),
       );
     });
   }
 }
 
-function sanitizeApiResponse(location: Object): LocationType {
+function sanitizeApiResponse(location: Object): Location {
   return {
     locationId: location.id,
     name: location.name,
@@ -109,7 +109,7 @@ function sanitizeApiResponse(location: Object): LocationType {
   };
 }
 
-function sanitizeLocationArea(area: null | Object): ?LocationAreaType {
+function sanitizeLocationArea(area: null | Object): ?LocationArea {
   return area
     ? {
         locationId: area.id,

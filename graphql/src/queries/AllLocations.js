@@ -6,12 +6,12 @@ import {
   connectionDefinitions,
   connectionFromArray,
 } from 'graphql-relay';
-import GraphQLLocation from '../types/Location';
-import GraphQLRadius from '../types/RadiusInput';
-import GraphQLArea from '../types/AreaInput';
+import GraphQLLocation from '../outputs/Location';
+import GraphQLRadius from '../inputs/RadiusInput';
+import GraphQLArea from '../inputs/AreaInput';
 
 import type { GraphqlContextType } from '../services/GraphqlContext';
-import type { AreaType } from '../Entities';
+import type { Rectangle } from '../types/Location';
 
 const { connectionType: AllLocationsConnection } = connectionDefinitions({
   nodeType: GraphQLLocation,
@@ -61,7 +61,7 @@ export default {
   },
 };
 
-function validateArea({ topLeft, bottomRight }: AreaType) {
+function validateArea({ topLeft, bottomRight }: Rectangle) {
   if (topLeft.lat <= bottomRight.lat) {
     throw new Error(
       `Top left latitude of the area should be greater than bottom right latitude.`,

@@ -1,6 +1,6 @@
 // @flow
 
-import type { FlightType, LegType } from '../../Entities';
+import type { Flight, Leg } from '../../types/Flight';
 import { sanitizeRoute } from './RouteSanitizer';
 
 const arrivalPropsMap = {
@@ -17,16 +17,13 @@ const departurePropsMap = {
   cityName: 'cityFrom',
 };
 
-export function sanitizeApiResponse(
-  flight: Object,
-  currency: string,
-): FlightType {
+export function sanitizeApiResponse(flight: Object, currency: string): Flight {
   return {
     id: flight.id,
     airlines: flight.airlines,
     arrival: sanitizeRoute(flight, arrivalPropsMap),
     departure: sanitizeRoute(flight, departurePropsMap),
-    legs: flight.route.map((leg): LegType => ({
+    legs: flight.route.map((leg): Leg => ({
       id: leg.id,
       recheckRequired: leg.bags_recheck_required,
       flightNo: leg.flight_no,
