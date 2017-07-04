@@ -4,7 +4,8 @@ import url from 'url';
 
 export default {
   restApiEndpoint: {
-    allBookings: 'https://booking-api.skypicker.com/api/v0.1/users/self/bookings',
+    allBookings:
+      'https://booking-api.skypicker.com/api/v0.1/users/self/bookings',
     singleBooking: (bookingId: number, simpleToken: string) =>
       queryWithParameters(
         `https://booking-api.skypicker.com/api/v0.1/users/self/bookings/${bookingId}`,

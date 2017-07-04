@@ -3,8 +3,7 @@
 import { RestApiMock } from '../../../services/TestingTools';
 import { sanitizeLocationsForRequest } from '../LocationsSanitizer';
 import LocationDataLoader from '../../../dataLoaders/Location';
-import LocationSuggestionsDataloader
-  from '../../../dataLoaders/LocationSuggestions';
+import LocationSuggestionsDataloader from '../../../dataLoaders/LocationSuggestions';
 import config from '../../../../config/application';
 import { Location } from '../../../datasets';
 

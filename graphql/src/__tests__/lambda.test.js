@@ -38,7 +38,8 @@ it('should throw error when parsing invalid JSON', () => {
       body: JSON.stringify({
         errors: [
           {
-            message: 'Request body should contain only valid JSON in the following format: {"query":"{__schema{types{name}}}"}',
+            message:
+              'Request body should contain only valid JSON in the following format: {"query":"{__schema{types{name}}}"}',
           },
         ],
       }),
