@@ -2,20 +2,7 @@
   "env": {
     "test": {
       "plugins": [
-        "transform-class-properties"
-      ],
-      "presets": [
-        [
-          "env",
-          {
-            "modules": "commonjs", // https://facebook.github.io/jest/docs/webpack.html#using-with-webpack-2
-            "exclude": [
-              "transform-regenerator",
-              "transform-async-to-generator"
-            ]
-          }
-        ],
-        "flow"
+        "transform-es2015-modules-commonjs" // https://facebook.github.io/jest/docs/webpack.html#using-with-webpack-2
       ]
     }
   },
@@ -27,7 +14,10 @@
         "exclude": [
           "transform-regenerator",
           "transform-async-to-generator"
-        ]
+        ],
+        "targets": {
+          "node": "6.10.2"
+        }
       }
     ],
     "flow"
