@@ -16,9 +16,14 @@ export default class LocationSuggestionsDataloader {
   dataLoader: DataLoader<Object, LocationType[]>;
 
   constructor() {
-    this.dataLoader = new DataLoader((urlParamsBatch: Object[]) => {
-      return this.batchGetLocations(urlParamsBatch);
-    });
+    this.dataLoader = new DataLoader(
+      (urlParamsBatch: Object[]) => {
+        return this.batchGetLocations(urlParamsBatch);
+      },
+      {
+        cacheKeyFn: key => JSON.stringify(key),
+      },
+    );
   }
 
   async load(locationKey: string): Promise<LocationType[]> {
