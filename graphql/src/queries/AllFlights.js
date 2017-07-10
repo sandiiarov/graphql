@@ -39,7 +39,7 @@ export default {
     context: GraphqlContextType,
     { path }: GraphQLResolveInfo,
   ) => {
-    const { from, to, dateFrom, dateTo } = args.search;
+    const { from, to, dateFrom, dateTo, passengers } = args.search;
     validateDates(dateFrom, dateTo);
     if (path) {
       context.options.setOptions(path.key, args.options);
@@ -63,7 +63,11 @@ export default {
 
     return connectionFromArray(
       allFlights.data.map(flight =>
-        sanitizeApiResponse(flight, allFlights.currency),
+        sanitizeApiResponse(
+          flight,
+          allFlights.currency,
+          passengers ? passengers.adults : 1,
+        ),
       ),
       args,
     );

@@ -17,6 +17,14 @@ Object {
     "resolve": [Function],
     "type": "RouteStop",
   },
+  "bookingUrl": Object {
+    "args": Array [],
+    "description": "URL to the Kiwi.com for booking the flight.",
+    "isDeprecated": false,
+    "name": "bookingUrl",
+    "resolve": [Function],
+    "type": "String",
+  },
   "departure": Object {
     "args": Array [],
     "isDeprecated": false,

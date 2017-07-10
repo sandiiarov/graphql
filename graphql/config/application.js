@@ -23,6 +23,7 @@ export default {
     airlines: 'https://api.skypicker.com/airlines?v=2',
     allLocations: (queryParameters: Object) =>
       queryWithParameters('https://locations.skypicker.com', queryParameters),
+    rates: 'https://api.skypicker.com/rates',
   },
   auth: {
     basicToken: '***REMOVED***',
