@@ -1,0 +1,177 @@
+{
+  "locations": [
+    {
+      "id": "prague_cz",
+      "name": "Praha",
+      "slug": "praha-ceska-republika",
+      "code": "PRG",
+      "alternative_names": [],
+      "rank": 1,
+      "timezone": "Europe\/Prague",
+      "population": null,
+      "airports": 2,
+      "subdivision": null,
+      "autonomous_territory": null,
+      "country": {
+        "id": "CZ",
+        "name": "\u010cesk\u00e1 republika",
+        "slug": "ceska-republika"
+      },
+      "location": {
+        "lat": 50.0755381,
+        "lon": 14.4378005
+      },
+      "type": "city"
+    },
+    {
+      "id": "PRG",
+      "name": "Leti\u0161t\u011b V\u00e1clava Havla Praha",
+      "slug": "letiste-vaclava-havla-praha-praha-ceska-republika",
+      "alternative_names": [],
+      "rank": 1,
+      "timezone": "Europe\/Prague",
+      "city": {
+        "id": "prague_cz",
+        "name": "Praha",
+        "slug": "praha-ceska-republika",
+        "subdivision": null,
+        "autonomous_territory": null,
+        "country": {
+          "id": "CZ",
+          "name": "\u010cesk\u00e1 republika",
+          "slug": "ceska-republika"
+        }
+      },
+      "location": {
+        "lat": 50.1008333,
+        "lon": 14.26
+      },
+      "type": "airport"
+    },
+    {
+      "id": "praya_id",
+      "name": "Praya, Lombok",
+      "slug": "praya-indonesia",
+      "code": "LOP",
+      "alternative_names": [],
+      "rank": 21,
+      "timezone": "Asia\/Makassar",
+      "population": null,
+      "airports": 1,
+      "subdivision": null,
+      "autonomous_territory": null,
+      "country": {
+        "id": "ID",
+        "name": "Indon\u00e9sie",
+        "slug": "indonesie"
+      },
+      "location": {
+        "lat": -8.6837074,
+        "lon": 116.2895173
+      },
+      "type": "city"
+    },
+    {
+      "id": "LPQ",
+      "name": "Luang Prabang International Airport",
+      "slug": "luang-prabang-international-airport-luang-prabang-laos",
+      "alternative_names": [],
+      "rank": 17,
+      "timezone": "Asia\/Vientiane",
+      "city": {
+        "id": "luang-prabang_la",
+        "name": "Luang Prabang",
+        "slug": "luang-prabang-laos",
+        "subdivision": null,
+        "autonomous_territory": null,
+        "country": {
+          "id": "LA",
+          "name": "Laos",
+          "slug": "laos"
+        }
+      },
+      "location": {
+        "lat": 19.8977778,
+        "lon": 102.160833
+      },
+      "type": "airport"
+    },
+    {
+      "id": "praia_cv",
+      "name": "Praia",
+      "slug": "praia-kapverdy",
+      "code": "RAI",
+      "alternative_names": [],
+      "rank": 33,
+      "timezone": "Atlantic\/Cape_Verde",
+      "population": null,
+      "airports": 1,
+      "subdivision": null,
+      "autonomous_territory": null,
+      "country": {
+        "id": "CV",
+        "name": "Kapverdy",
+        "slug": "kapverdy"
+      },
+      "location": {
+        "lat": 14.93305,
+        "lon": -23.5133267
+      },
+      "type": "city"
+    },
+    {
+      "id": "luang-prabang_la",
+      "name": "Luang Prabang",
+      "slug": "luang-prabang-laos",
+      "code": "LPQ",
+      "alternative_names": [],
+      "rank": 24,
+      "timezone": "Asia\/Vientiane",
+      "population": null,
+      "airports": 1,
+      "subdivision": null,
+      "autonomous_territory": null,
+      "country": {
+        "id": "LA",
+        "name": "Laos",
+        "slug": "laos"
+      },
+      "location": {
+        "lat": 19.8833959,
+        "lon": 102.1346874
+      },
+      "type": "city"
+    },
+    {
+      "id": "PAT",
+      "name": "Jay Prakash Narayan International Airport",
+      "slug": "jay-prakash-narayan-international-airport-patna-indie",
+      "alternative_names": [],
+      "rank": 31,
+      "timezone": "Asia\/Calcutta",
+      "city": {
+        "id": "patna_in",
+        "name": "Patna",
+        "slug": "patna-indie",
+        "subdivision": null,
+        "autonomous_territory": null,
+        "country": {
+          "id": "IN",
+          "name": "Indie",
+          "slug": "indie"
+        }
+      },
+      "location": {
+        "lat": 25.5913889,
+        "lon": 85.0880556
+      },
+      "type": "airport"
+    }
+  ],
+  "meta": {
+    "locale": {
+      "code": "cs-CZ",
+      "status": "OK"
+    }
+  }
+}

@@ -4,6 +4,10 @@ import LocationSuggestions from './LocationSuggestions';
 
 import type { Location } from '../types/Location';
 
+type Options = {
+  locale?: string,
+};
+
 export default class LocationDataLoader {
   locationSuggestionsDataLoader: LocationSuggestions;
 
@@ -11,9 +15,10 @@ export default class LocationDataLoader {
     this.locationSuggestionsDataLoader = dataloader;
   }
 
-  async load(locationKey: string): Promise<Location> {
+  async load(locationKey: string, options: ?Options): Promise<Location> {
     const possibleValues = await this.locationSuggestionsDataLoader.load(
       locationKey,
+      options,
     );
     return possibleValues[0];
   }

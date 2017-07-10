@@ -1,0 +1,261 @@
+{
+  "locations": [
+    {
+      "id": "MEX",
+      "name": "Aeropuerto Internacional de la Ciudad de M\u00e9xico",
+      "slug": "aeropuerto-internacional-de-la-ciudad-de-mexico-ciudad-de-mexico-mexiko",
+      "alternative_names": [],
+      "rank": 1,
+      "timezone": "America\/Mexico_City",
+      "city": {
+        "id": "mexico-city_mx",
+        "name": "Ciudad de M\u00e9xico",
+        "slug": "ciudad-de-mexico-mexiko",
+        "subdivision": null,
+        "autonomous_territory": null,
+        "country": {
+          "id": "MX",
+          "name": "Mexiko",
+          "slug": "mexiko"
+        }
+      },
+      "location": {
+        "lat": 19.4363889,
+        "lon": -99.072222
+      },
+      "type": "airport"
+    },
+    {
+      "id": "mexico-city_mx",
+      "name": "Ciudad de M\u00e9xico",
+      "slug": "ciudad-de-mexico-mexiko",
+      "code": "MEX",
+      "alternative_names": [],
+      "rank": 1,
+      "timezone": "America\/Mexico_City",
+      "population": null,
+      "airports": 2,
+      "subdivision": null,
+      "autonomous_territory": null,
+      "country": {
+        "id": "MX",
+        "name": "Mexiko",
+        "slug": "mexiko"
+      },
+      "location": {
+        "lat": 19.2464696,
+        "lon": -99.1013498
+      },
+      "type": "city"
+    },
+    {
+      "id": "MXL",
+      "name": "Aeropuerto Internacional General Rodolfo Sanchez Taboada - Mexicali",
+      "slug": "aeropuerto-internacional-general-rodolfo-sanchez-taboada-mexicali-mexicali-mexiko",
+      "alternative_names": [],
+      "rank": 34,
+      "timezone": "America\/Tijuana",
+      "city": {
+        "id": "mexicali_mx",
+        "name": "Mexicali",
+        "slug": "mexicali-mexiko",
+        "subdivision": null,
+        "autonomous_territory": null,
+        "country": {
+          "id": "MX",
+          "name": "Mexiko",
+          "slug": "mexiko"
+        }
+      },
+      "location": {
+        "lat": 32.6305556,
+        "lon": -115.24167
+      },
+      "type": "airport"
+    },
+    {
+      "id": "mexicali_mx",
+      "name": "Mexicali",
+      "slug": "mexicali-mexiko",
+      "code": "MXL",
+      "alternative_names": [],
+      "rank": 48,
+      "timezone": "America\/Tijuana",
+      "population": null,
+      "airports": 1,
+      "subdivision": null,
+      "autonomous_territory": null,
+      "country": {
+        "id": "MX",
+        "name": "Mexiko",
+        "slug": "mexiko"
+      },
+      "location": {
+        "lat": 32.6245389,
+        "lon": -115.4522623
+      },
+      "type": "city"
+    },
+    {
+      "id": "MX",
+      "name": "Mexiko",
+      "slug": "mexiko",
+      "alternative_names": [],
+      "rank": 127,
+      "type": "country"
+    },
+    {
+      "id": "NM_US",
+      "name": "New Mexico",
+      "slug": "new-mexico-spojene-staty-americke",
+      "code": "NM",
+      "alternative_names": [],
+      "rank": 127,
+      "country": {
+        "id": "US",
+        "name": "Spojen\u00e9 st\u00e1ty",
+        "slug": "spojene-staty-americke"
+      },
+      "type": "subdivision"
+    },
+    {
+      "id": "DXB",
+      "name": "Mezin\u00e1rodn\u00ed leti\u0161t\u011b Dubaj",
+      "slug": "mtr-dby-ldwly-dubai-spojene-arabske-emiraty-1",
+      "alternative_names": [
+        "\u0645\u0637\u0627\u0631 \u062f\u0628\u064a \u0627\u0644\u062f\u0648\u0644\u064a"
+      ],
+      "rank": 0,
+      "timezone": "Asia\/Dubai",
+      "city": {
+        "id": "dubai_ae",
+        "name": "Dubaj",
+        "slug": "dubai-spojene-arabske-emiraty",
+        "subdivision": null,
+        "autonomous_territory": null,
+        "country": {
+          "id": "AE",
+          "name": "Spojen\u00e9 arabsk\u00e9 emir\u00e1ty",
+          "slug": "spojene-arabske-emiraty"
+        }
+      },
+      "location": {
+        "lat": 25.2527778,
+        "lon": 55.3644444
+      },
+      "type": "airport"
+    },
+    {
+      "id": "melbourne_vi_au",
+      "name": "Melbourne",
+      "slug": "melbourne-victoria-australie",
+      "code": "MEL",
+      "alternative_names": [],
+      "rank": 1,
+      "timezone": "Australia\/Hobart",
+      "population": null,
+      "airports": 3,
+      "subdivision": {
+        "id": "VI_AU",
+        "name": "Victoria",
+        "slug": "victoria-australie",
+        "code": "VIC"
+      },
+      "autonomous_territory": null,
+      "country": {
+        "id": "AU",
+        "name": "Austr\u00e1lie",
+        "slug": "australie"
+      },
+      "location": {
+        "lat": -37.8136276,
+        "lon": 144.9630576
+      },
+      "type": "city"
+    },
+    {
+      "id": "MEL",
+      "name": "Melbourne Airport",
+      "slug": "melbourne-airport-melbourne-victoria-australie",
+      "alternative_names": [],
+      "rank": 1,
+      "timezone": "Australia\/Hobart",
+      "city": {
+        "id": "melbourne_vi_au",
+        "name": "Melbourne",
+        "slug": "melbourne-victoria-australie",
+        "subdivision": {
+          "id": "VI_AU",
+          "name": "Victoria",
+          "slug": "victoria-australie",
+          "code": "VIC"
+        },
+        "autonomous_territory": null,
+        "country": {
+          "id": "AU",
+          "name": "Austr\u00e1lie",
+          "slug": "australie"
+        }
+      },
+      "location": {
+        "lat": -37.673333,
+        "lon": 144.843333
+      },
+      "type": "airport"
+    },
+    {
+      "id": "BEG",
+      "name": "Me\u0111unarodni aerodrom Nikola Tesla Beograd",
+      "slug": "medunarodni-aerodrom-nikola-tesla-beograd-beograd-srbsko",
+      "alternative_names": [],
+      "rank": 6,
+      "timezone": "Europe\/Belgrade",
+      "city": {
+        "id": "belgrade_rs",
+        "name": "Beograd",
+        "slug": "beograd-srbsko",
+        "subdivision": null,
+        "autonomous_territory": null,
+        "country": {
+          "id": "RS",
+          "name": "Srbsko",
+          "slug": "srbsko"
+        }
+      },
+      "location": {
+        "lat": 44.8183333,
+        "lon": 20.3091667
+      },
+      "type": "airport"
+    },
+    {
+      "id": "medellin_co",
+      "name": "Medell\u00edn",
+      "slug": "medellin-kolumbie",
+      "code": "MDE",
+      "alternative_names": [],
+      "rank": 7,
+      "timezone": "America\/Bogota",
+      "population": null,
+      "airports": 2,
+      "subdivision": null,
+      "autonomous_territory": null,
+      "country": {
+        "id": "CO",
+        "name": "Kolumbie",
+        "slug": "kolumbie"
+      },
+      "location": {
+        "lat": 6.244203,
+        "lon": -75.5812119
+      },
+      "type": "city"
+    }
+  ],
+  "meta": {
+    "locale": {
+      "code": "cs-CZ",
+      "status": "OK"
+    }
+  }
+}

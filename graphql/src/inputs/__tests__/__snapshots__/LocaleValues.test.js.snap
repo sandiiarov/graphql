@@ -1,0 +1,204 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LocaleValues should be properly generated from LocaleMap 1`] = `
+Object {
+  "ar_AE": Object {
+    "value": "ar-AE",
+  },
+  "ar_BH": Object {
+    "value": "ar-BH",
+  },
+  "ar_JO": Object {
+    "value": "ar-JO",
+  },
+  "ar_KW": Object {
+    "value": "ar-KW",
+  },
+  "ar_OM": Object {
+    "value": "ar-OM",
+  },
+  "ar_QA": Object {
+    "value": "ar-QA",
+  },
+  "ar_SA": Object {
+    "value": "ar-SA",
+  },
+  "bg_BG": Object {
+    "value": "bg-BG",
+  },
+  "ca_ES": Object {
+    "value": "ca-ES",
+  },
+  "cs_CZ": Object {
+    "value": "cs-CZ",
+  },
+  "da_DK": Object {
+    "value": "da-DK",
+  },
+  "de_AT": Object {
+    "value": "de-AT",
+  },
+  "de_CH": Object {
+    "value": "de-CH",
+  },
+  "de_DE": Object {
+    "value": "de-DE",
+  },
+  "el_GR": Object {
+    "value": "el-GR",
+  },
+  "en_AU": Object {
+    "value": "en-AU",
+  },
+  "en_CA": Object {
+    "value": "en-CA",
+  },
+  "en_EE": Object {
+    "value": "en-EE",
+  },
+  "en_GB": Object {
+    "value": "en-GB",
+  },
+  "en_HK": Object {
+    "value": "en-HK",
+  },
+  "en_IE": Object {
+    "value": "en-IE",
+  },
+  "en_IN": Object {
+    "value": "en-IN",
+  },
+  "en_MY": Object {
+    "value": "en-MY",
+  },
+  "en_NZ": Object {
+    "value": "en-NZ",
+  },
+  "en_PH": Object {
+    "value": "en-PH",
+  },
+  "en_SG": Object {
+    "value": "en-SG",
+  },
+  "en_US": Object {
+    "value": "en-US",
+  },
+  "en_ZA": Object {
+    "value": "en-ZA",
+  },
+  "es_AR": Object {
+    "value": "es-AR",
+  },
+  "es_CL": Object {
+    "value": "es-CL",
+  },
+  "es_CO": Object {
+    "value": "es-CO",
+  },
+  "es_EC": Object {
+    "value": "es-EC",
+  },
+  "es_ES": Object {
+    "value": "es-ES",
+  },
+  "es_MX": Object {
+    "value": "es-MX",
+  },
+  "es_PE": Object {
+    "value": "es-PE",
+  },
+  "fi_FI": Object {
+    "value": "fi-FI",
+  },
+  "fr_BE": Object {
+    "value": "fr-BE",
+  },
+  "fr_CA": Object {
+    "value": "fr-CA",
+  },
+  "fr_FR": Object {
+    "value": "fr-FR",
+  },
+  "he_IL": Object {
+    "value": "he-IL",
+  },
+  "hr_HR": Object {
+    "value": "hr-HR",
+  },
+  "hu_HU": Object {
+    "value": "hu-HU",
+  },
+  "id_ID": Object {
+    "value": "id-ID",
+  },
+  "is_IS": Object {
+    "value": "is-IS",
+  },
+  "it_IT": Object {
+    "value": "it-IT",
+  },
+  "ja_JP": Object {
+    "value": "ja-JP",
+  },
+  "ko_KR": Object {
+    "value": "ko-KR",
+  },
+  "lt_LT": Object {
+    "value": "lt-LT",
+  },
+  "nl_NL": Object {
+    "value": "nl-NL",
+  },
+  "no_NO": Object {
+    "value": "no-NO",
+  },
+  "pl_PL": Object {
+    "value": "pl-PL",
+  },
+  "pt_BR": Object {
+    "value": "pt-BR",
+  },
+  "pt_PT": Object {
+    "value": "pt-PT",
+  },
+  "ro_RO": Object {
+    "value": "ro-RO",
+  },
+  "ru_BY": Object {
+    "value": "ru-BY",
+  },
+  "ru_KZ": Object {
+    "value": "ru-KZ",
+  },
+  "ru_RU": Object {
+    "value": "ru-RU",
+  },
+  "sk_SK": Object {
+    "value": "sk-SK",
+  },
+  "sr_RS": Object {
+    "value": "sr-RS",
+  },
+  "sv_SE": Object {
+    "value": "sv-SE",
+  },
+  "th_TH": Object {
+    "value": "th-TH",
+  },
+  "tr_TR": Object {
+    "value": "tr-TR",
+  },
+  "uk_UA": Object {
+    "value": "uk-UA",
+  },
+  "vi_VN": Object {
+    "value": "vi-VN",
+  },
+  "zh_CN": Object {
+    "value": "zh-CN",
+  },
+  "zh_TW": Object {
+    "value": "zh-TW",
+  },
+}
+`;

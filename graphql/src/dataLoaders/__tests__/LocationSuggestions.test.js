@@ -7,6 +7,7 @@ import options from '../../../config/application';
 import locationsJsonPRG from './__datasets__/locations-prg.json';
 import locationsJsonBRQ from './__datasets__/locations-brq.json';
 import locationsJsonUnknown from './__datasets__/locations-unknown.json';
+import { Location } from '../../datasets';
 
 beforeEach(() => {
   RestApiMock.onGet(
@@ -26,11 +27,30 @@ beforeEach(() => {
       term: 'this location does not exist',
     }),
   ).replyWithData(locationsJsonUnknown);
+
+  RestApiMock.onGet(
+    options.restApiEndpoint.allLocations({
+      term: 'PRG',
+      locale: 'cs-CZ',
+    }),
+  ).replyWithData(Location.pragueCsCZ);
 });
 
 it('returns PRG suggestions', async () => {
   const dataloader = new LocationSuggestions();
   const result = await dataloader.load('PRG');
+  expect(result).toMatchSnapshot();
+});
+
+it('returns PRG suggestions in cs-CZ', async () => {
+  const dataloader = new LocationSuggestions();
+  const result = await dataloader.load('PRG', { locale: 'cs-CZ' });
+  expect(result).toMatchSnapshot();
+});
+
+it('returns many PRG suggestions in cs-CZ', async () => {
+  const dataloader = new LocationSuggestions();
+  const result = await dataloader.loadMany(['PRG', 'PRG'], { locale: 'cs-CZ' });
   expect(result).toMatchSnapshot();
 });
 

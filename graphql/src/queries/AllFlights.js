@@ -1,6 +1,7 @@
 // @flow
 
 import { GraphQLNonNull } from 'graphql';
+import type { GraphQLResolveInfo } from 'graphql';
 import {
   connectionArgs,
   connectionDefinitions,
@@ -16,6 +17,7 @@ import { formatString } from './location/ArgumentSanitizer';
 import { sanitizeApiResponse } from './flight/ApiSanitizer';
 import { sanitizeLocationsForRequest } from './location/LocationsSanitizer';
 import { validateDates } from '../resolvers/FlightDatesValidator';
+import localeMap from '../inputs/LocaleMap';
 
 import type { GraphqlContextType } from '../services/GraphqlContext';
 
@@ -39,9 +41,13 @@ export default {
     ancestor: mixed,
     args: Object,
     context: GraphqlContextType,
+    { path }: GraphQLResolveInfo,
   ) => {
     const { from, to, dateFrom, dateTo } = args.search;
     validateDates(dateFrom, dateTo);
+    if (path) {
+      context.options.setOptions(path.key, args.options);
+    }
 
     let allFlights = await requestFlights({
       ...args.search,
@@ -56,6 +62,7 @@ export default {
         from,
         to,
         context.dataLoader.location,
+        args.options,
       );
 
       allFlights = await requestFlights({
@@ -90,6 +97,7 @@ function requestFlights(search): Promise<Object> {
       daysInDestinationTo: dateTo.timeToStay ? dateTo.timeToStay.to : null,
       curr: options ? options.currency : null,
       adults: passengers ? passengers.adults : null,
+      locale: options && options.locale ? localeMap[options.locale] : null,
     }),
   );
 }
