@@ -2,22 +2,22 @@
 
 import { GraphQLObjectType, GraphQLString } from 'graphql';
 
-import type { LocationAreaType } from '../Entities';
+import type { LocationArea } from '../types/Location';
 
 export default new GraphQLObjectType({
   name: 'LocationArea',
   fields: {
     locationId: {
       type: GraphQLString,
-      resolve: ({ locationId }: LocationAreaType): string => locationId,
+      resolve: ({ locationId }: LocationArea): string => locationId,
     },
     name: {
       type: GraphQLString,
-      resolve: ({ name }: LocationAreaType): string => name,
+      resolve: ({ name }: LocationArea): string => name,
     },
     slug: {
       type: GraphQLString,
-      resolve: ({ slug }: LocationAreaType): string => slug,
+      resolve: ({ slug }: LocationArea): string => slug,
     },
   },
 });

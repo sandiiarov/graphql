@@ -1,15 +1,14 @@
 // @flow
 
 import _ from 'lodash';
-import type { LocationInputType, RadiusInputType } from '../../Entities';
+
+import type { LocationVariants } from '../../types/Location';
 
 /**
  * Format location object into string that is accepted by flights REST API
  * @see http://docs.skypickerpublicapi.apiary.io/#reference/flights/flights/get
  */
-export function formatString(
-  location: LocationInputType | RadiusInputType,
-): string {
+export function formatString(location: LocationVariants): string {
   if (typeof location.location === 'string') {
     return location.location;
   } else {

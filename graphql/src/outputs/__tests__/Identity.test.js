@@ -2,7 +2,7 @@
 
 import Identity from '../Identity';
 
-import type { IdentityType } from '../../Entities';
+import type { Identity as IdentityType } from '../../types/User';
 
 const fields = Identity.getFields();
 

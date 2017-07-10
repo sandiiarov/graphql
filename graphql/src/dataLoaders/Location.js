@@ -2,7 +2,7 @@
 
 import LocationSuggestions from './LocationSuggestions';
 
-import type { LocationType } from '../Entities';
+import type { Location } from '../types/Location';
 
 export default class LocationDataLoader {
   locationSuggestionsDataLoader: LocationSuggestions;
@@ -11,14 +11,14 @@ export default class LocationDataLoader {
     this.locationSuggestionsDataLoader = dataloader;
   }
 
-  async load(locationKey: string): Promise<LocationType> {
+  async load(locationKey: string): Promise<Location> {
     const possibleValues = await this.locationSuggestionsDataLoader.load(
       locationKey,
     );
     return possibleValues[0];
   }
 
-  async loadMany(locationKeys: string[]): Promise<LocationType[]> {
+  async loadMany(locationKeys: string[]): Promise<Location[]> {
     const allLocations = await this.locationSuggestionsDataLoader.loadMany(
       locationKeys,
     );

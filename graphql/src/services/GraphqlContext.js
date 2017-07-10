@@ -8,15 +8,17 @@ import BookingsLoader from '../dataLoaders/Bookings';
 import LocationSuggestions from '../dataLoaders/LocationSuggestions';
 import Location from '../dataLoaders/Location';
 
-import type { IdentityType, BookingType, AirlineType } from '../Entities';
+import type { Booking } from '../types/Booking';
+import type { Identity } from '../types/User';
+import type { Airline } from '../types/Flight';
 
 export type GraphqlContextType = {
   apiToken: ?string,
   dataLoader: {
-    airline: DataLoader<string, ?AirlineType>,
-    booking: DataLoader<number | string, BookingType>,
+    airline: DataLoader<string, ?Airline | Error>,
+    booking: DataLoader<number | string, Booking>,
     bookings: BookingsLoader,
-    identity: DataLoader<string, IdentityType>,
+    identity: DataLoader<string, Identity | Error>,
     location: Location,
     locationSuggestions: LocationSuggestions,
   },

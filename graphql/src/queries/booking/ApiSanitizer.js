@@ -1,7 +1,9 @@
 // @flow
 
-import type { BookingsItemType, BookingType, LegType } from '../../Entities';
 import { sanitizeRoute } from '../flight/RouteSanitizer';
+
+import type { BookingsItem, Booking } from '../../types/Booking';
+import type { Leg } from '../../types/Flight';
 
 const routePropsMap = {
   utc: 'when.utc',
@@ -10,12 +12,12 @@ const routePropsMap = {
   cityName: 'where.name',
 };
 
-export function sanitizeListItem(apiData: Object): BookingsItemType {
+export function sanitizeListItem(apiData: Object): BookingsItem {
   return {
     id: parseInt(apiData.bid),
     arrival: sanitizeRoute(apiData.arrival, routePropsMap),
     departure: sanitizeRoute(apiData.departure, routePropsMap),
-    legs: apiData.flights.map((flight): LegType => ({
+    legs: apiData.flights.map((flight): Leg => ({
       id: flight.id,
       recheckRequired: flight.bags_recheck_required,
       flightNo: flight.flight_no,
@@ -31,7 +33,7 @@ export function sanitizeListItem(apiData: Object): BookingsItemType {
   };
 }
 
-export function sanitizeDetail(apiData: Object): BookingType {
+export function sanitizeDetail(apiData: Object): Booking {
   const common = sanitizeListItem(apiData);
   const { bag_params } = apiData;
   return {

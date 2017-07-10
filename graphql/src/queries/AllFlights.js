@@ -9,9 +9,9 @@ import {
 import dateFns from 'date-fns';
 import request from '../services/HttpRequest';
 import config from '../../config/application';
-import GraphQLFlight from '../types/Flight';
-import FlightsSearchInput from '../types/FlightsSearchInput';
-import FlightsOptionsInput from '../types/FlightsOptionsInput';
+import GraphQLFlight from '../outputs/Flight';
+import FlightsSearchInput from '../inputs/FlightsSearchInput';
+import FlightsOptionsInput from '../inputs/FlightsOptionsInput';
 import { formatString } from './location/ArgumentSanitizer';
 import { sanitizeApiResponse } from './flight/ApiSanitizer';
 import { sanitizeLocationsForRequest } from './location/LocationsSanitizer';

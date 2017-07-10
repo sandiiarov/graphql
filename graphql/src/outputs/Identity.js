@@ -7,51 +7,51 @@ import {
   GraphQLBoolean,
 } from 'graphql';
 import { toGlobalId } from '../services/OpaqueIdentifier';
-import type { IdentityType } from '../Entities';
+
+import type { Identity } from '../types/User';
 
 export default new GraphQLObjectType({
   name: 'Identity',
   fields: {
     id: {
       type: GraphQLID,
-      resolve: ({ userId }: IdentityType): string =>
-        toGlobalId('identity', userId),
+      resolve: ({ userId }: Identity): string => toGlobalId('identity', userId),
     },
 
     databaseId: {
       type: GraphQLString,
       description: 'Internal database ID.',
       deprecationReason: 'Use id field instead.',
-      resolve: ({ userId }: IdentityType): string => userId,
+      resolve: ({ userId }: Identity): string => userId,
     },
 
     email: {
       type: GraphQLString,
       description:
         'Raw input by user, use "login" if you want normalized email.',
-      resolve: ({ email }: IdentityType): string => email,
+      resolve: ({ email }: Identity): string => email,
     },
 
     emailVerified: {
       type: GraphQLBoolean,
-      resolve: ({ emailVerified }: IdentityType): boolean => emailVerified,
+      resolve: ({ emailVerified }: Identity): boolean => emailVerified,
     },
 
     firstName: {
       type: GraphQLString,
-      resolve: ({ firstName }: IdentityType) => firstName,
+      resolve: ({ firstName }: Identity) => firstName,
     },
 
     lastName: {
       type: GraphQLString,
-      resolve: ({ lastName }: IdentityType) => lastName,
+      resolve: ({ lastName }: Identity) => lastName,
     },
 
     fullName: {
       type: GraphQLString,
       description:
         'Concatenation of first and last name with fallback to the login field.',
-      resolve: ({ firstName, lastName, login }: IdentityType): string => {
+      resolve: ({ firstName, lastName, login }: Identity): string => {
         if (firstName === null && lastName === null) {
           return login;
         }
@@ -62,7 +62,7 @@ export default new GraphQLObjectType({
     login: {
       type: GraphQLString,
       description: 'Use this in API calls. It is email but normalized.',
-      resolve: ({ login }: IdentityType): string => login,
+      resolve: ({ login }: Identity): string => login,
     },
   },
 });

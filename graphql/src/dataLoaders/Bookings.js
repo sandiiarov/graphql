@@ -3,7 +3,8 @@
 import request from '../services/HttpRequest';
 import Config from '../../config/application';
 import { sanitizeListItem } from '../queries/booking/ApiSanitizer';
-import type { BookingsItemType } from '../Entities';
+
+import type { BookingsItem } from '../types/Booking';
 
 // This is only "semi-dataloader" that will probably not be needed once there
 // will be batch API endpoint for Booking details.
@@ -12,14 +13,14 @@ import type { BookingsItemType } from '../Entities';
 
 export default class DataLoader {
   accessToken: ?string;
-  bookings: ?Array<BookingsItemType>;
+  bookings: ?Array<BookingsItem>;
 
   constructor(accessToken: ?string) {
     this.accessToken = accessToken;
     this.bookings = null;
   }
 
-  async load(): Promise<Array<BookingsItemType>> {
+  async load(): Promise<BookingsItem[]> {
     if (typeof this.accessToken !== 'string') {
       throw new Error('Undefined access token');
     }
@@ -29,7 +30,7 @@ export default class DataLoader {
     return Promise.resolve(this.bookings);
   }
 
-  async loadItem(id: number | string): Promise<BookingsItemType> {
+  async loadItem(id: number | string): Promise<BookingsItem> {
     const bid = parseInt(id);
     const bookings = await this.load();
     const booking = bookings.find(b => b.id === bid);
@@ -40,7 +41,7 @@ export default class DataLoader {
   }
 }
 
-async function fetch(accessToken: string): Promise<Array<BookingsItemType>> {
+async function fetch(accessToken: string): Promise<BookingsItem[]> {
   const response = await request(
     Config.restApiEndpoint.allBookings,
     accessToken,

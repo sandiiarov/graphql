@@ -1,9 +1,10 @@
 // @flow
 
 import Dataloader from 'dataloader';
-import type { AirlineType } from '../Entities';
 import request from '../services/HttpRequest';
 import Config from '../../config/application';
+
+import type { Airline as AirlineType } from '../types/Flight';
 
 let airlinesCache = null;
 
@@ -20,7 +21,7 @@ export default function createAirlineLoader() {
   );
 }
 
-async function batchLoad(airlinesCodes): Promise<Array<?Object>> {
+async function batchLoad(airlinesCodes): Promise<Array<?AirlineType | Error>> {
   const airlines = await fetchAirlines();
   return airlinesCodes.map(airlineCode => {
     const airline = airlines[airlineCode];

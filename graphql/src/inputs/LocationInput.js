@@ -1,7 +1,7 @@
 // @flow
 
 import { GraphQLInputObjectType, GraphQLString } from 'graphql';
-import GraphQLRadius from '../types/RadiusInput';
+import GraphQLRadius from './RadiusInput';
 
 export default new GraphQLInputObjectType({
   name: 'LocationInput',

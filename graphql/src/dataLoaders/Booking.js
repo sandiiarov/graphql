@@ -4,7 +4,8 @@ import DataLoader from 'dataloader';
 import request from '../services/HttpRequest';
 import Config from '../../config/application';
 import { sanitizeDetail } from '../queries/booking/ApiSanitizer';
-import type { BookingType } from '../Entities';
+
+import type { Booking } from '../types/Booking';
 import type BookingsLoader from '../dataLoaders/Bookings';
 
 export default function createInstance(
@@ -30,7 +31,7 @@ function batchLoad(
   return ids => Promise.all(ids.map(id => fetch(parseInt(id), bookingsLoader)));
 }
 
-async function fetch(bid, bookingsLoader): Promise<BookingType> {
+async function fetch(bid, bookingsLoader): Promise<Booking> {
   const { authToken } = await bookingsLoader.loadItem(bid);
   const data = await request(
     Config.restApiEndpoint.singleBooking(bid, authToken),

@@ -2,7 +2,7 @@
 
 import { GraphQLObjectType, GraphQLFloat } from 'graphql';
 
-import type { CoordinatesType } from '../Entities';
+import type { Coordinates } from '../types/Location';
 
 export default new GraphQLObjectType({
   name: 'Coordinates',
@@ -10,13 +10,13 @@ export default new GraphQLObjectType({
     lat: {
       type: GraphQLFloat,
       description: 'Latitude.',
-      resolve: ({ lat }: CoordinatesType): number => lat,
+      resolve: ({ lat }: Coordinates): number => lat,
     },
 
     lng: {
       type: GraphQLFloat,
       description: 'Longitude.',
-      resolve: ({ lng }: CoordinatesType): number => lng,
+      resolve: ({ lng }: Coordinates): number => lng,
     },
   },
 });

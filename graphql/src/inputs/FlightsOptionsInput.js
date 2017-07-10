@@ -1,7 +1,7 @@
 // @flow
 
 import { GraphQLInputObjectType } from 'graphql';
-import GraphQLCurrency from '../types/Currency';
+import GraphQLCurrency from '../outputs/Currency';
 
 export default new GraphQLInputObjectType({
   name: 'FlightsOptionsInput',

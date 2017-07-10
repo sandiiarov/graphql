@@ -1,7 +1,7 @@
 // @flow
 
 import compareAsc from 'date-fns/compare_asc';
-import type { DateFromType, DateToType } from '../Entities';
+import type { DateFromType, DateToType } from '../types/DateTime';
 
 export function validateDates(start: DateFromType, end: DateToType) {
   if (typeof start.exact === 'object') {

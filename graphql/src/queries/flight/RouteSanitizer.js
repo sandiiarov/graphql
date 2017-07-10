@@ -1,7 +1,7 @@
 // @flow
 
 import _ from 'lodash';
-import type { DepartureArrivalType } from '../../Entities';
+import type { DepartureArrival } from '../../types/Flight';
 
 type propsMap = {
   utc: string,
@@ -13,7 +13,7 @@ type propsMap = {
 export function sanitizeRoute(
   data: Object,
   propsMap: propsMap,
-): DepartureArrivalType {
+): DepartureArrival {
   const utc = _.get(data, propsMap.utc);
   const local = _.get(data, propsMap.local);
   return {

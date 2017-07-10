@@ -1,13 +1,13 @@
 // @flow
 
 import FlightDurationInMinutes from '../FlightDuration';
-import type { DepartureArrivalType } from '../../Entities';
+import type { DepartureArrival } from '../../types/Flight';
 
-let departure: DepartureArrivalType;
-let arrival: DepartureArrivalType;
+let departure: DepartureArrival;
+let arrival: DepartureArrival;
 
-let nullDeparture: DepartureArrivalType;
-let nullArrival: DepartureArrivalType;
+let nullDeparture: DepartureArrival;
+let nullArrival: DepartureArrival;
 
 beforeEach(() => {
   nullDeparture = {
@@ -21,18 +21,24 @@ beforeEach(() => {
   nullArrival = nullDeparture;
 
   departure = {
-    ...nullDeparture,
     when: {
       local: new Date(), // not used
       utc: new Date('2017-12-29T13:20:00.000Z'),
     },
+    where: {
+      code: 'string',
+      cityName: 'string',
+    },
   };
 
   arrival = {
-    ...nullArrival,
     when: {
       local: new Date(), // not used
       utc: new Date('2017-12-29T14:45:00.000Z'),
+    },
+    where: {
+      code: 'string',
+      cityName: 'string',
     },
   };
 });
