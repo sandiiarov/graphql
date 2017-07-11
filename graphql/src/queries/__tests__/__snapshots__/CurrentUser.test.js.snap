@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`current user query should return valid fields 1`] = `
+Object {
+  "data": Object {
+    "currentUser": Object {
+      "email": "kiwicomtester@gmail.com",
+      "emailVerified": true,
+      "firstName": "Kiwicom",
+      "fullName": "Kiwicom Tester",
+      "id": "aWRlbnRpdHk6UzVUU1kwTnVzVk9zUVJUeVJwTWVfRw==",
+      "lastName": "Tester",
+      "login": "kiwicomtester@gmail.com",
+    },
+  },
+}
+`;

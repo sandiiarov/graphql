@@ -28,3 +28,7 @@ module.exports.Flight = {
 module.exports.Airline = {
   all: require('./airline/airlines.json'),
 };
+
+module.exports.Identity = {
+  currentUser: require('./identity/currentUser.json'),
+};

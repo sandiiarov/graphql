@@ -32,7 +32,6 @@ async function fetch(userId: string, accessToken: string): Promise<Identity> {
   const headers = {
     Authorization: `Basic: ${token}`,
   };
-
   const data = await post(Config.restApiEndpoint.identity, payload, headers);
   if (!data.length) {
     throw new Error(`User not found (userId: ${userId})`);
