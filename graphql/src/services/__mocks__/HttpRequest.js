@@ -1,6 +1,6 @@
 // @flow
 
-export default function request(absoluteApiUrl: string): Promise<Object> {
+export async function get(absoluteApiUrl: string): Promise<Object> {
   const mockResponse = stackOfMockResponses.GET[absoluteApiUrl];
   if (mockResponse !== undefined) {
     return Promise.resolve(mockResponse);

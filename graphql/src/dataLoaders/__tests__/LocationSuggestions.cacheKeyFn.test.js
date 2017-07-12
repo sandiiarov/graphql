@@ -12,12 +12,14 @@ beforeEach(() => {
 });
 
 jest.mock('../../services/HttpRequest', () => {
-  return url => {
+  const HttpRequest = jest.genMockFromModule('../../services/HttpRequest');
+  HttpRequest.get = url => {
     mockCalledURLs.push(url);
     return {
       locations: ['mocked'],
     };
   };
+  return HttpRequest;
 });
 
 it('calls scalar AAA only once', async () => {

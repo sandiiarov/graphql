@@ -1,6 +1,6 @@
 // @flow
 
-import request from '../services/HttpRequest';
+import { get } from '../services/HttpRequest';
 import Config from '../../config/application';
 import { sanitizeListItem } from '../queries/booking/ApiSanitizer';
 
@@ -42,10 +42,7 @@ export default class DataLoader {
 }
 
 async function fetch(accessToken: string): Promise<BookingsItem[]> {
-  const response = await request(
-    Config.restApiEndpoint.allBookings,
-    accessToken,
-  );
+  const response = await get(Config.restApiEndpoint.allBookings, accessToken);
 
   return response.map(booking => sanitizeListItem(booking));
 }

@@ -1,7 +1,7 @@
 // @flow
 
 import Dataloader from 'dataloader';
-import request from '../services/HttpRequest';
+import { get } from '../services/HttpRequest';
 import Config from '../../config/application';
 
 import type { Airline as AirlineType } from '../types/Flight';
@@ -31,7 +31,7 @@ async function batchLoad(airlinesCodes): Promise<Array<?AirlineType | Error>> {
 
 async function fetchAirlines() {
   if (!airlinesCache) {
-    airlinesCache = request(Config.restApiEndpoint.airlines)
+    airlinesCache = get(Config.restApiEndpoint.airlines)
       // eslint-disable-next-line promise/prefer-await-to-then
       .then(airlines => {
         const cache: { [key: string]: Airline } = {};

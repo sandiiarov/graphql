@@ -1,6 +1,6 @@
 // @flow
 
-import request, { post } from '../HttpRequest';
+import { get, post } from '../HttpRequest';
 import { ProxiedError } from '../errors/ProxiedError';
 
 jest.mock('node-fetch');
@@ -18,7 +18,7 @@ afterEach(() => {
 describe('GET request', () => {
   it('should throw exception in test environment', async () => {
     process.env.NODE_ENV = 'test';
-    await expect(request('https://path/to/api')).rejects.toBeError(
+    await expect(get('https://path/to/api')).rejects.toBeError(
       'HttpRequest should never be called in test environment. Have you forgotten to mock "https://path/to/api" with fake data response?',
     );
   });
@@ -26,18 +26,18 @@ describe('GET request', () => {
 
 describe('GET request in production', () => {
   it('resolves URL with token', async () => {
-    expect(await request('https://path/to/api', 't/ok"en')).toMatchSnapshot();
+    expect(await get('https://path/to/api', 't/ok"en')).toMatchSnapshot();
   });
 
   it('resolves URL without token', async () => {
-    expect(await request('https://path/to/api')).toMatchSnapshot();
+    expect(await get('https://path/to/api')).toMatchSnapshot();
   });
 
   it('throws exception during invalid return status code', async () => {
     expect.assertions(4);
 
     try {
-      await request('https://path/to/api?status=500');
+      await get('https://path/to/api?status=500');
     } catch (error) {
       expect(error).toBeInstanceOf(ProxiedError);
       expect(error).toHaveProperty('message', 'Status Text');

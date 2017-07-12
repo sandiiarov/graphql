@@ -5,7 +5,7 @@ import fetch from 'node-fetch';
 import Logger from '../services/Logger';
 import { ProxiedError } from './errors/ProxiedError';
 
-export default function request(
+export async function get(
   absoluteApiUrl: string,
   token: ?string,
 ): Promise<Object> {

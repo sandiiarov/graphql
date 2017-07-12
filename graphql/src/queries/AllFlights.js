@@ -2,22 +2,18 @@
 
 import { GraphQLNonNull } from 'graphql';
 import type { GraphQLResolveInfo } from 'graphql';
+
 import {
   connectionArgs,
   connectionDefinitions,
   connectionFromArray,
 } from 'graphql-relay';
-import dateFns from 'date-fns';
-import request from '../services/HttpRequest';
-import config from '../../config/application';
+import _ from 'lodash';
 import GraphQLFlight from '../outputs/Flight';
 import FlightsSearchInput from '../inputs/FlightsSearchInput';
 import FlightsOptionsInput from '../inputs/FlightsOptionsInput';
-import { formatString } from './location/ArgumentSanitizer';
 import { sanitizeApiResponse } from './flight/ApiSanitizer';
-import { sanitizeLocationsForRequest } from './location/LocationsSanitizer';
 import { validateDates } from '../resolvers/FlightDatesValidator';
-import localeMap from '../inputs/LocaleMap';
 
 import type { GraphqlContextType } from '../services/GraphqlContext';
 
@@ -49,29 +45,21 @@ export default {
       context.options.setOptions(path.key, args.options);
     }
 
-    let allFlights = await requestFlights({
-      ...args.search,
-      from: from.map(location => formatString(location)).toString(),
-      to: to.map(location => formatString(location)).toString(),
-      options: args.options,
+    const currency = _.get(args, 'options.currency');
+    const locale = _.get(args, 'options.locale');
+    const adults = _.get(args, 'search.passengers.adults');
+
+    const allFlights = await context.dataLoader.flight.load({
+      from,
+      to,
+      dateFrom: dateFrom.exact ? new Date(dateFrom.exact) : null,
+      dateTo: dateTo.exact ? new Date(dateTo.exact) : null,
+      daysInDestinationFrom: dateTo.timeToStay ? dateTo.timeToStay.from : null,
+      daysInDestinationTo: dateTo.timeToStay ? dateTo.timeToStay.to : null,
+      currency: currency ? currency : null,
+      adults: adults ? adults : null,
+      locale: locale ? locale : null,
     });
-
-    // Use location fallback when flights returns no results
-    if (!allFlights.data.length) {
-      const [fromLocations, toLocations] = await sanitizeLocationsForRequest(
-        from,
-        to,
-        context.dataLoader.location,
-        args.options,
-      );
-
-      allFlights = await requestFlights({
-        ...args.search,
-        from: fromLocations.toString(),
-        to: toLocations.toString(),
-        options: args.options,
-      });
-    }
 
     return connectionFromArray(
       allFlights.data.map(flight =>
@@ -81,23 +69,3 @@ export default {
     );
   },
 };
-
-function requestFlights(search): Promise<Object> {
-  const { from, to, dateFrom, dateTo, options, passengers } = search;
-
-  return request(
-    config.restApiEndpoint.allFlights({
-      flyFrom: from,
-      to: to,
-      dateFrom: dateFrom.exact
-        ? dateFns.format(dateFrom.exact, 'DD/MM/YYYY')
-        : null,
-      dateTo: dateTo.exact ? dateFns.format(dateTo.exact, 'DD/MM/YYYY') : null,
-      daysInDestinationFrom: dateTo.timeToStay ? dateTo.timeToStay.from : null,
-      daysInDestinationTo: dateTo.timeToStay ? dateTo.timeToStay.to : null,
-      curr: options ? options.currency : null,
-      adults: passengers ? passengers.adults : null,
-      locale: options && options.locale ? localeMap[options.locale] : null,
-    }),
-  );
-}
