@@ -17,7 +17,11 @@ const departurePropsMap = {
   cityName: 'cityFrom',
 };
 
-export function sanitizeApiResponse(flight: Object, currency: string): Flight {
+export function sanitizeApiResponse(
+  flight: Object,
+  currency: string,
+  passengers: number,
+): Flight {
   return {
     id: flight.id,
     airlines: flight.airlines,
@@ -35,5 +39,7 @@ export function sanitizeApiResponse(flight: Object, currency: string): Flight {
       amount: flight.price,
       currency: currency,
     },
+    bookingToken: flight.booking_token,
+    passengers: passengers,
   };
 }

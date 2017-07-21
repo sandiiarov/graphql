@@ -7,7 +7,7 @@ import _ from 'lodash';
 import { get } from '../services/HttpRequest';
 import config from '../../config/application';
 import LocationDataLoader from '../dataLoaders/Location';
-import localeMap from '../inputs/LocaleMap';
+import LocaleMap from '../inputs/LocaleMap';
 
 import type { Flight } from '../types/Flight';
 import type { LocationVariants, RadiusLocation } from '../types/Location';
@@ -103,7 +103,7 @@ export default class FlightDataloader {
       parameters.adults = adults;
     }
     if (locale !== null) {
-      parameters.locale = localeMap[locale];
+      parameters.locale = LocaleMap[locale];
     }
 
     const firstTry = await get(config.restApiEndpoint.allFlights(parameters));

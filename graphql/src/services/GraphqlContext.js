@@ -4,6 +4,7 @@ import DataLoader from 'dataloader';
 import createIdentityLoader from '../dataLoaders/Identity';
 import createBookingLoader from '../dataLoaders/Booking';
 import createAirlineLoader from '../dataLoaders/Airline';
+import createRatesLoader from '../dataLoaders/Rates';
 import BookingsLoader from '../dataLoaders/Bookings';
 import LocationSuggestionsLoader from '../dataLoaders/LocationSuggestions';
 import LocationLoader from '../dataLoaders/Location';
@@ -24,6 +25,7 @@ export type GraphqlContextType = {|
     identity: DataLoader<string, Identity | Error>,
     location: LocationLoader,
     locationSuggestions: LocationSuggestionsLoader,
+    rates: DataLoader<string, ?number | Error>,
   |},
   options: OptionsStorage,
 |};
@@ -43,6 +45,7 @@ export function createContext(token: ?string): GraphqlContextType {
       identity: createIdentityLoader(token),
       location: location,
       locationSuggestions: locationSuggestions,
+      rates: createRatesLoader(),
     },
     options: new OptionsStorage(),
   };

@@ -21,6 +21,8 @@ export type Flight = {|
   departure: DepartureArrival,
   legs: Array<Leg>,
   price: Price,
+  bookingToken: string,
+  passengers: number,
 |};
 
 export type Leg = {|
