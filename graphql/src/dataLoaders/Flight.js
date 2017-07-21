@@ -17,8 +17,6 @@ type QueryParameters = {|
   to: Array<LocationVariants>,
   dateFrom: null | Date,
   dateTo: null | Date,
-  daysInDestinationFrom: null | number,
-  daysInDestinationTo: null | number,
   currency: null | string,
   adults: null | number,
   locale: null | string,
@@ -73,8 +71,6 @@ export default class FlightDataloader {
       to,
       dateFrom,
       dateTo,
-      daysInDestinationFrom,
-      daysInDestinationTo,
       currency,
       adults,
       locale,
@@ -90,12 +86,6 @@ export default class FlightDataloader {
         dateTo: dateFns.format(dateTo, 'DD/MM/YYYY'),
       }),
     };
-    if (daysInDestinationFrom !== null) {
-      parameters.daysInDestinationFrom = daysInDestinationFrom;
-    }
-    if (daysInDestinationTo !== null) {
-      parameters.daysInDestinationTo = daysInDestinationTo;
-    }
     if (currency !== null) {
       parameters.curr = currency;
     }

@@ -52,8 +52,8 @@ describe('All Flights booking URL', () => {
       input: {
         from: { location: 'PRG' },
         to: { location: 'MEX' },
-        dateFrom: { exact: '2017-08-08' },
-        dateTo: { exact: '2017-09-08' },
+        dateFrom: '2017-08-08',
+        dateTo: '2017-09-08',
       },
     };
     expect(await graphql(allFlightsSearchQuery, variables)).toMatchSnapshot();
@@ -75,8 +75,8 @@ describe('All Flights booking URL', () => {
       input: {
         from: { location: 'PRG' },
         to: { location: 'MEX' },
-        dateFrom: { exact: '2017-08-08' },
-        dateTo: { exact: '2017-09-08' },
+        dateFrom: '2017-08-08',
+        dateTo: '2017-09-08',
         passengers: { adults: 3 },
       },
     };
@@ -99,8 +99,8 @@ describe('All Flights booking URL', () => {
       input: {
         from: { location: 'PRG' },
         to: { location: 'MEX' },
-        dateFrom: { exact: '2017-08-08' },
-        dateTo: { exact: '2017-09-08' },
+        dateFrom: '2017-08-08',
+        dateTo: '2017-09-08',
       },
       options: {
         locale: 'cs_CZ',
