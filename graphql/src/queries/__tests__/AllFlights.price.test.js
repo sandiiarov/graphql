@@ -43,12 +43,8 @@ describe('all flights query', () => {
         to: {
           location: 'MEX',
         },
-        dateFrom: {
-          exact: '2017-08-08',
-        },
-        dateTo: {
-          exact: '2017-09-08',
-        },
+        dateFrom: '2017-08-08',
+        dateTo: '2017-09-08',
       },
     };
     expect(await graphql(allFlightsSearchQuery, variables)).toMatchSnapshot();
@@ -73,12 +69,8 @@ describe('all flights query', () => {
         to: {
           location: 'MEX',
         },
-        dateFrom: {
-          exact: '2017-08-08',
-        },
-        dateTo: {
-          exact: '2017-09-08',
-        },
+        dateFrom: '2017-08-08',
+        dateTo: '2017-09-08',
       },
       options: {
         currency: 'CZK',

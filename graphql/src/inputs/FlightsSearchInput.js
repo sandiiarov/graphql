@@ -1,10 +1,8 @@
 // @flow
 
 import { GraphQLInputObjectType, GraphQLNonNull, GraphQLList } from 'graphql';
-
+import { GraphQLDate } from 'graphql-iso-date';
 import GraphQLLocation from './LocationInput';
-import GraphQLDateFrom from './DateFromInput';
-import GraphQLDateTo from './DateToInput';
 import PassengersInput from './PassengersInput';
 
 export default new GraphQLInputObjectType({
@@ -21,10 +19,10 @@ export default new GraphQLInputObjectType({
       ),
     },
     dateFrom: {
-      type: new GraphQLNonNull(GraphQLDateFrom),
+      type: new GraphQLNonNull(GraphQLDate),
     },
     dateTo: {
-      type: new GraphQLNonNull(GraphQLDateTo),
+      type: new GraphQLNonNull(GraphQLDate),
     },
     passengers: {
       type: PassengersInput,

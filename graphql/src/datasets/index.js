@@ -22,7 +22,6 @@ module.exports.Flight = {
   prgFraMex: require('./flight/prg,fra-mex.json'),
   prgMexCsCZ: require('./flight/prg-mex-cs-CZ.json'),
   noResults: require('./flight/no-results.json'),
-  prgMexFrom7To10Days: require('./flight/prg-mex-from-7-to-10-days.json'),
 };
 
 module.exports.Airline = {

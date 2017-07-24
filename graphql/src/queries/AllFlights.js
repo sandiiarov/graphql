@@ -52,10 +52,8 @@ export default {
     const allFlights = await context.dataLoader.flight.load({
       from,
       to,
-      dateFrom: dateFrom.exact ? new Date(dateFrom.exact) : null,
-      dateTo: dateTo.exact ? new Date(dateTo.exact) : null,
-      daysInDestinationFrom: dateTo.timeToStay ? dateTo.timeToStay.from : null,
-      daysInDestinationTo: dateTo.timeToStay ? dateTo.timeToStay.to : null,
+      dateFrom: new Date(dateFrom),
+      dateTo: new Date(dateTo),
       currency: currency ? currency : null,
       adults: adults ? adults : null,
       locale: locale ? locale : null,
