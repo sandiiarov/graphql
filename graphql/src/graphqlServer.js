@@ -3,30 +3,49 @@
 import express from 'express';
 import graphqlHTTP from 'express-graphql';
 import cors from 'cors';
+import OpticsAgent from 'optics-agent';
+import type { $Request, $Response } from 'express';
 
 import Schema from './Schema';
 import { createContext } from './services/GraphqlContext';
 import Logger from './services/Logger';
 import { ProxiedError } from './services/errors/ProxiedError';
 
+require('dotenv').config();
+
 process.on('unhandledRejection', reason => {
   Logger.error(reason);
 });
 
 const app = express();
+app.use(cors({ methods: ['GET', 'POST'] }));
 
-app.use(
-  cors({
-    methods: ['GET', 'POST'],
-  }),
+const useOptics = !!(
+  process.env.NODE_ENV !== 'test' && process.env.OPTICS_API_KEY
 );
 
-app.use('/', (request, response) => {
-  graphqlHTTP({
-    schema: Schema,
+if (useOptics) {
+  OpticsAgent.instrumentSchema(Schema);
+  app.use(OpticsAgent.middleware());
+}
+
+app.use('/', (request: $Request, response: $Response) => {
+  const token = request.header('authorization') || null;
+  const context = createContext(token);
+  if (useOptics) {
+    context.opticsContext = OpticsAgent.context(request);
+  }
+  return createGraphqlServer(Schema, context)(request, response);
+});
+
+export default app;
+
+function createGraphqlServer(schema, context) {
+  return graphqlHTTP({
+    schema: schema,
     pretty: false,
     graphiql: true,
-    context: createContext(request.header('authorization') || null),
+    context: context,
     formatError(error) {
       let errorMessage = `${error.name}: ${error.message}`;
 
@@ -42,7 +61,5 @@ app.use('/', (request, response) => {
       Logger.error(errorMessage);
       return error;
     },
-  })(request, response);
-});
-
-export default app;
+  });
+}

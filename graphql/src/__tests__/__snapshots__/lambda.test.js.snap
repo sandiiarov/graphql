@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should return valid response 1`] = `
+Object {
+  "body": Object {
+    "data": Object {
+      "__schema": Object {
+        "queryType": Object {
+          "name": "RootQuery",
+        },
+      },
+    },
+  },
+  "headers": Object {
+    "access-control-allow-origin": "*",
+    "connection": "close",
+    "content-length": "56",
+    "content-type": "application/json; charset=utf-8",
+    "x-powered-by": "Express",
+  },
+  "statusCode": 200,
+}
+`;
+
+exports[`should throw error when parsing body without query field 1`] = `
+Object {
+  "body": Object {
+    "errors": Array [
+      Object {
+        "message": "Must provide query string.",
+      },
+    ],
+  },
+  "headers": Object {
+    "access-control-allow-origin": "*",
+    "connection": "close",
+    "content-length": "53",
+    "content-type": "application/json; charset=utf-8",
+    "x-powered-by": "Express",
+  },
+  "statusCode": 400,
+}
+`;
+
+exports[`should throw error when parsing invalid JSON 1`] = `
+Object {
+  "body": Object {
+    "errors": Array [
+      Object {
+        "locations": Array [
+          Object {
+            "column": 14,
+            "line": 1,
+          },
+        ],
+        "message": "Syntax Error GraphQL request (1:14) Expected Name, found <EOF>
+
+1: {invalid json
+                ^
+",
+      },
+    ],
+  },
+  "headers": Object {
+    "access-control-allow-origin": "*",
+    "connection": "close",
+    "content-length": "167",
+    "content-type": "application/json; charset=utf-8",
+    "x-powered-by": "Express",
+  },
+  "statusCode": 400,
+}
+`;

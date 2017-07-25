@@ -1,68 +1,41 @@
 // @flow
 
-import { graphql } from '../lambda';
-import event from './lambdaProxyEvent.json';
+import request from 'supertest';
+import server from '../graphqlServer';
 
-const headers = {
-  'Access-Control-Allow-Origin': '*',
-};
-
-it('should return valid response', () => {
-  graphql(event, null, (error, response) => {
-    expect(error).toBe(null);
-    expect(response).toEqual({
-      statusCode: 200,
-      headers,
-      body: JSON.stringify({
-        data: {
-          __schema: {
-            queryType: {
-              name: 'RootQuery',
-            },
-          },
-        },
-      }),
-    });
-  });
+beforeEach(() => {
+  jest.spyOn(console, 'error').mockImplementation(() => {});
 });
 
-it('should throw error when parsing invalid JSON', () => {
-  const event = {
-    body: '{invalid json',
-  };
-  graphql(event, null, (error, response) => {
-    expect(error).toBe(null);
-    expect(response).toEqual({
-      statusCode: 400,
-      headers,
-      body: JSON.stringify({
-        errors: [
-          {
-            message:
-              'Request body should contain only valid JSON in the following format: {"query":"{__schema{types{name}}}"}',
-          },
-        ],
-      }),
-    });
-  });
+afterEach(() => {
+  jest.resetAllMocks();
 });
 
-it('should throw error when parsing body without query field', () => {
-  const event = {
-    body: '{}',
-  };
-  graphql(event, null, (error, response) => {
-    expect(error).toBe(null);
-    expect(response).toEqual({
-      statusCode: 400,
-      headers,
-      body: JSON.stringify({
-        errors: [
-          {
-            message: 'Requested body doesn\'t contain "query" field.',
-          },
-        ],
-      }),
-    });
+it('should return valid response', async () => {
+  const response = await request(server).post('/').send({
+    query: '{__schema{queryType{name}}}',
   });
+  expect(cleanResponse(response)).toMatchSnapshot();
 });
+
+it('should throw error when parsing invalid JSON', async () => {
+  const response = await request(server)
+    .post('/')
+    .send({ query: '{invalid json' });
+  expect(cleanResponse(response)).toMatchSnapshot();
+});
+
+it('should throw error when parsing body without query field', async () => {
+  const response = await request(server).post('/').send({});
+  expect(cleanResponse(response)).toMatchSnapshot();
+});
+
+function cleanResponse(response: {
+  statusCode: Number,
+  headers: Object,
+  body: Object,
+}) {
+  const { statusCode, headers, body } = response;
+  const { date, etag, ...cleanedHeaders } = headers;
+  return { statusCode, headers: cleanedHeaders, body };
+}
