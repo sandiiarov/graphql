@@ -16,6 +16,8 @@ package:
 functions:
   api:
     handler: dist/lambda.graphql
+    environment:
+      OPTICS_API_KEY: ${env:OPTICS_API_KEY}
     events:
       - http:
           path: /

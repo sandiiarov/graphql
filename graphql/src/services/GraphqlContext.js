@@ -28,6 +28,7 @@ export type GraphqlContextType = {|
     rates: DataLoader<string, ?number | Error>,
   |},
   options: OptionsStorage,
+  opticsContext?: Object,
 |};
 
 export function createContext(token: ?string): GraphqlContextType {
