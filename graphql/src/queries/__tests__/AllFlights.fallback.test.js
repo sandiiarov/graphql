@@ -111,8 +111,10 @@ describe('all flights location fallback', () => {
         to: {
           location: 'Mexico',
         },
-        dateFrom: '2017-08-08',
-        dateTo: '2017-09-08',
+        date: {
+          from: '2017-08-08',
+          to: '2017-09-08',
+        },
       },
     };
     expect(await graphql(allFlightsSearchQuery, variables)).toMatchSnapshot();
@@ -140,8 +142,10 @@ describe('all flights location fallback', () => {
         to: {
           location: 'Mexico',
         },
-        dateFrom: '2017-08-08',
-        dateTo: '2017-09-08',
+        date: {
+          from: '2017-08-08',
+          to: '2017-09-08',
+        },
       },
     };
     expect(await graphql(allFlightsSearchQuery, variables)).toMatchSnapshot();

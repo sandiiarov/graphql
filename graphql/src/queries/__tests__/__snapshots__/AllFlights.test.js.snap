@@ -140,7 +140,7 @@ Object {
     "allFlights": null,
   },
   "errors": Array [
-    [GraphQLError: DateFrom should start before dateTo],
+    [GraphQLError: Date 'from' in the range should start before date 'to'.],
   ],
 }
 `;
@@ -148,8 +148,8 @@ Object {
 exports[`all flights query should return error if invalid date format is passed 1`] = `
 Object {
   "errors": Array [
-    [GraphQLError: Variable "$input" got invalid value {"from":{"location":"PRG"},"to":{"location":"MEX"},"dateFrom":"08/08/2017","dateTo":"2017-09-08"}.
-In field "dateFrom": Expected type "Date", found "08/08/2017": Date cannot represent an invalid date-string 08/08/2017.],
+    [GraphQLError: Variable "$input" got invalid value {"from":{"location":"PRG"},"to":{"location":"MEX"},"date":{"from":"08/08/2017","to":"2017-09-08"}}.
+In field "date": In field "from": Expected type "Date", found "08/08/2017": Date cannot represent an invalid date-string 08/08/2017.],
   ],
 }
 `;

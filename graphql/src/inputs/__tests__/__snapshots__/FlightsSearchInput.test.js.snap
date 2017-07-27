@@ -2,15 +2,13 @@
 
 exports[`FlightsSearchInput type should have valid fields 1`] = `
 Object {
-  "dateFrom": Object {
-    "name": "dateFrom",
-    "type": "Date!",
-  },
-  "dateTo": Object {
-    "name": "dateTo",
-    "type": "Date!",
+  "date": Object {
+    "description": "When do you want to leave?",
+    "name": "date",
+    "type": "DateInput!",
   },
   "from": Object {
+    "description": "From where you want to fly?",
     "name": "from",
     "type": "[LocationInput!]!",
   },
@@ -18,7 +16,13 @@ Object {
     "name": "passengers",
     "type": "PassengersInput",
   },
+  "returnDate": Object {
+    "description": "When do you want to return?",
+    "name": "returnDate",
+    "type": "DateInput",
+  },
   "to": Object {
+    "description": "To where you want to fly?",
     "name": "to",
     "type": "[LocationInput!]!",
   },

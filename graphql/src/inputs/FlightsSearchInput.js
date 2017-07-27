@@ -1,9 +1,9 @@
 // @flow
 
 import { GraphQLInputObjectType, GraphQLNonNull, GraphQLList } from 'graphql';
-import { GraphQLDate } from 'graphql-iso-date';
 import GraphQLLocation from './LocationInput';
 import PassengersInput from './PassengersInput';
+import DateInput from './DateInput';
 
 export default new GraphQLInputObjectType({
   name: 'FlightsSearchInput',
@@ -12,17 +12,21 @@ export default new GraphQLInputObjectType({
       type: new GraphQLNonNull(
         new GraphQLList(new GraphQLNonNull(GraphQLLocation)),
       ),
+      description: 'From where you want to fly?',
     },
     to: {
       type: new GraphQLNonNull(
         new GraphQLList(new GraphQLNonNull(GraphQLLocation)),
       ),
+      description: 'To where you want to fly?',
     },
-    dateFrom: {
-      type: new GraphQLNonNull(GraphQLDate),
+    date: {
+      type: new GraphQLNonNull(DateInput),
+      description: 'When do you want to leave?',
     },
-    dateTo: {
-      type: new GraphQLNonNull(GraphQLDate),
+    returnDate: {
+      type: DateInput,
+      description: 'When do you want to return?',
     },
     passengers: {
       type: PassengersInput,

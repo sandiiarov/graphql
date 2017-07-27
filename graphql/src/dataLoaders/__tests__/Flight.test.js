@@ -29,6 +29,9 @@ it('calls the same URL only once', async () => {
     to: [{ location: 'BRQ' }],
     dateFrom: new Date('2020-12-30'),
     dateTo: new Date('2020-12-30'),
+    returnFrom: new Date('2020-12-30'),
+    returnTo: new Date('2020-12-30'),
+    typeFlight: 'return',
     currency: null,
     adults: null,
     locale: null,
@@ -41,6 +44,9 @@ it('calls the same URL only once', async () => {
     to: [{ location: 'LON' }],
     dateFrom: new Date('2020-12-30'),
     dateTo: new Date('2020-12-30'),
+    returnFrom: new Date('2020-12-30'),
+    returnTo: new Date('2020-12-30'),
+    typeFlight: 'return',
     currency: null,
     adults: null,
     locale: null,
@@ -53,6 +59,9 @@ it('calls the same URL only once', async () => {
     to: [{ location: 'BRQ' }],
     dateFrom: new Date('2020-12-30'),
     dateTo: new Date('2020-12-30'),
+    returnFrom: new Date('2020-12-30'),
+    returnTo: new Date('2020-12-30'),
+    typeFlight: 'return',
     currency: null,
     adults: null,
     locale: null,
@@ -60,7 +69,23 @@ it('calls the same URL only once', async () => {
   });
 
   expect(mockCalledEndpoints).toEqual([
-    'https://api.skypicker.com/flights?flyFrom=PRG&to=BRQ&dateFrom=30%2F12%2F2020&dateTo=30%2F12%2F2020&v=3',
-    'https://api.skypicker.com/flights?flyFrom=PRG&to=LON&dateFrom=30%2F12%2F2020&dateTo=30%2F12%2F2020&v=3',
+    'https://api.skypicker.com/flights?' +
+      'flyFrom=PRG&' +
+      'to=BRQ&' +
+      'dateFrom=30%2F12%2F2020&' +
+      'dateTo=30%2F12%2F2020&' +
+      'returnFrom=30%2F12%2F2020&' +
+      'returnTo=30%2F12%2F2020&' +
+      'typeFlight=return&' +
+      'v=3',
+    'https://api.skypicker.com/flights?' +
+      'flyFrom=PRG&' +
+      'to=LON&' +
+      'dateFrom=30%2F12%2F2020&' +
+      'dateTo=30%2F12%2F2020&' +
+      'returnFrom=30%2F12%2F2020&' +
+      'returnTo=30%2F12%2F2020&' +
+      'typeFlight=return&' +
+      'v=3',
   ]);
 });
