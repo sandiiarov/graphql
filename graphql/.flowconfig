@@ -4,7 +4,7 @@
 [include]
 
 [libs]
-./flow-typed
+./config/flow-typed
 
 [options]
 module.name_mapper='^express-graphql$' -> '<PROJECT_ROOT>/config/stub/GeneralStub.js'
