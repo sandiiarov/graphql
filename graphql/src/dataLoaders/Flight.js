@@ -12,6 +12,10 @@ import LocaleMap from '../inputs/LocaleMap';
 import type { Flight } from '../types/Flight';
 import type { LocationVariants, RadiusLocation } from '../types/Location';
 
+type Filters = {|
+  maxStopovers: null | number,
+|};
+
 type QueryParameters = {|
   from: Array<LocationVariants>,
   to: Array<LocationVariants>,
@@ -20,6 +24,7 @@ type QueryParameters = {|
   currency: null | string,
   adults: null | number,
   locale: null | string,
+  filters: null | Filters,
 |};
 
 type BackendAPIResponse = {|
@@ -74,6 +79,7 @@ export default class FlightDataloader {
       currency,
       adults,
       locale,
+      filters,
     } = searchParameters;
     // see: https://github.com/tc39/proposal-object-rest-spread/issues/45
     const parameters = {
@@ -94,6 +100,9 @@ export default class FlightDataloader {
     }
     if (locale !== null) {
       parameters.locale = LocaleMap[locale];
+    }
+    if (filters && filters.maxStopovers !== null) {
+      parameters.maxStopovers = filters.maxStopovers;
     }
 
     const firstTry = await get(config.restApiEndpoint.allFlights(parameters));
