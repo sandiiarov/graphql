@@ -1,7 +1,7 @@
 // @flow
 
 import { RestApiMock } from '../../services/TestingTools';
-import createInstance from '../Identity';
+import IdentityDataloader from '../Identity';
 import config from '../../../config/application';
 import userMockData from '../../dataLoaders/__tests__/__datasets__/user.get.json';
 
@@ -15,7 +15,7 @@ describe('Identity dataloader', () => {
   it('should throw error without access token', async () => {
     let message;
     try {
-      const identityLoader = createInstance();
+      const identityLoader = new IdentityDataloader();
       await identityLoader.load('some_id');
     } catch (err) {
       message = err.message;
@@ -26,7 +26,7 @@ describe('Identity dataloader', () => {
   it('should load user', async () => {
     let message;
     try {
-      const identityLoader = createInstance('accessToken');
+      const identityLoader = new IdentityDataloader('accessToken');
       const identity = await identityLoader.load('test_user');
       expect(identity).toMatchSnapshot();
     } catch (err) {
