@@ -2,6 +2,6 @@
 
 config/stub/*
 config/webpack.*.js
+config/flow-typed/*
 coverage/*
 dist/*
-flow-typed/*
