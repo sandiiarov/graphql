@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`all flights filters should return direct flights 1`] = `
+Object {
+  "data": Object {
+    "allFlights": Object {
+      "edges": Array [
+        Object {
+          "node": Object {
+            "arrival": Object {
+              "airport": Object {
+                "city": Object {
+                  "name": "Mexico City",
+                },
+              },
+            },
+            "departure": Object {
+              "airport": Object {
+                "city": null,
+              },
+            },
+          },
+        },
+        Object {
+          "node": Object {
+            "arrival": Object {
+              "airport": Object {
+                "city": Object {
+                  "name": "Mexico City",
+                },
+              },
+            },
+            "departure": Object {
+              "airport": Object {
+                "city": null,
+              },
+            },
+          },
+        },
+        Object {
+          "node": Object {
+            "arrival": Object {
+              "airport": Object {
+                "city": Object {
+                  "name": "Mexico City",
+                },
+              },
+            },
+            "departure": Object {
+              "airport": Object {
+                "city": null,
+              },
+            },
+          },
+        },
+      ],
+    },
+  },
+}
+`;

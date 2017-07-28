@@ -32,6 +32,7 @@ it('calls the same URL only once', async () => {
     currency: null,
     adults: null,
     locale: null,
+    filters: null,
   });
 
   // second call (different)
@@ -43,6 +44,7 @@ it('calls the same URL only once', async () => {
     currency: null,
     adults: null,
     locale: null,
+    filters: null,
   });
 
   // third call (same as the first one)
@@ -54,6 +56,7 @@ it('calls the same URL only once', async () => {
     currency: null,
     adults: null,
     locale: null,
+    filters: null,
   });
 
   expect(mockCalledEndpoints).toEqual([

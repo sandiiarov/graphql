@@ -12,6 +12,7 @@ import _ from 'lodash';
 import GraphQLFlight from '../outputs/Flight';
 import FlightsSearchInput from '../inputs/FlightsSearchInput';
 import FlightsOptionsInput from '../inputs/FlightsOptionsInput';
+import FlightsFiltersInput from '../inputs/FlightsFiltersInput';
 import { sanitizeApiResponse } from './flight/ApiSanitizer';
 import { validateDates } from '../resolvers/FlightDatesValidator';
 
@@ -30,6 +31,9 @@ export default {
     },
     options: {
       type: FlightsOptionsInput,
+    },
+    filters: {
+      type: FlightsFiltersInput,
     },
     ...connectionArgs,
   },
@@ -57,6 +61,9 @@ export default {
       currency: currency ? currency : null,
       adults: adults ? adults : null,
       locale: locale ? locale : null,
+      filters: {
+        maxStopovers: _.get(args, 'filters.maxStopovers'),
+      },
     });
 
     return connectionFromArray(
