@@ -1,0 +1,178 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`all flights filters should return flight with max duration 1`] = `
+Object {
+  "data": Object {
+    "allFlights": Object {
+      "edges": Array [
+        Object {
+          "node": Object {
+            "arrival": Object {
+              "airport": Object {
+                "city": Object {
+                  "name": "Mexico City",
+                },
+              },
+            },
+            "departure": Object {
+              "airport": Object {
+                "city": null,
+              },
+            },
+          },
+        },
+        Object {
+          "node": Object {
+            "arrival": Object {
+              "airport": Object {
+                "city": Object {
+                  "name": "Mexico City",
+                },
+              },
+            },
+            "departure": Object {
+              "airport": Object {
+                "city": null,
+              },
+            },
+          },
+        },
+        Object {
+          "node": Object {
+            "arrival": Object {
+              "airport": Object {
+                "city": Object {
+                  "name": "Mexico City",
+                },
+              },
+            },
+            "departure": Object {
+              "airport": Object {
+                "city": null,
+              },
+            },
+          },
+        },
+      ],
+    },
+  },
+}
+`;
+
+exports[`all flights filters should return flight with stopovers hours range 1`] = `
+Object {
+  "data": Object {
+    "allFlights": Object {
+      "edges": Array [
+        Object {
+          "node": Object {
+            "arrival": Object {
+              "airport": Object {
+                "city": Object {
+                  "name": "Mexico City",
+                },
+              },
+            },
+            "departure": Object {
+              "airport": Object {
+                "city": null,
+              },
+            },
+          },
+        },
+        Object {
+          "node": Object {
+            "arrival": Object {
+              "airport": Object {
+                "city": Object {
+                  "name": "Mexico City",
+                },
+              },
+            },
+            "departure": Object {
+              "airport": Object {
+                "city": null,
+              },
+            },
+          },
+        },
+        Object {
+          "node": Object {
+            "arrival": Object {
+              "airport": Object {
+                "city": Object {
+                  "name": "Mexico City",
+                },
+              },
+            },
+            "departure": Object {
+              "airport": Object {
+                "city": null,
+              },
+            },
+          },
+        },
+      ],
+    },
+  },
+}
+`;
+
+exports[`all flights filters should return flight with stopovers maximum duration 1`] = `
+Object {
+  "data": Object {
+    "allFlights": Object {
+      "edges": Array [
+        Object {
+          "node": Object {
+            "arrival": Object {
+              "airport": Object {
+                "city": Object {
+                  "name": "Mexico City",
+                },
+              },
+            },
+            "departure": Object {
+              "airport": Object {
+                "city": null,
+              },
+            },
+          },
+        },
+        Object {
+          "node": Object {
+            "arrival": Object {
+              "airport": Object {
+                "city": Object {
+                  "name": "Mexico City",
+                },
+              },
+            },
+            "departure": Object {
+              "airport": Object {
+                "city": null,
+              },
+            },
+          },
+        },
+        Object {
+          "node": Object {
+            "arrival": Object {
+              "airport": Object {
+                "city": Object {
+                  "name": "Mexico City",
+                },
+              },
+            },
+            "departure": Object {
+              "airport": Object {
+                "city": null,
+              },
+            },
+          },
+        },
+      ],
+    },
+  },
+}
+`;

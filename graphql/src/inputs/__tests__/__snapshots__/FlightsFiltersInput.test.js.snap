@@ -2,6 +2,10 @@
 
 exports[`FlightsFiltersInput type should have valid fields 1`] = `
 Object {
+  "duration": Object {
+    "name": "duration",
+    "type": "DurationInput",
+  },
   "maxStopovers": Object {
     "name": "maxStopovers",
     "type": "Int",

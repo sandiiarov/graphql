@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Stopovers type should have valid fields 1`] = `
+Object {
+  "from": Object {
+    "description": "Minimum number of hours of stopover duration.",
+    "name": "from",
+    "type": "Int",
+  },
+  "to": Object {
+    "description": "Maximum number of hours of stopover duration.",
+    "name": "to",
+    "type": "Int",
+  },
+}
+`;
