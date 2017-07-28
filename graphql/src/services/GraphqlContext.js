@@ -1,7 +1,7 @@
 // @flow
 
 import DataLoader from 'dataloader';
-import createIdentityLoader from '../dataLoaders/Identity';
+import IdentityDataloader from '../dataLoaders/Identity';
 import createBookingLoader from '../dataLoaders/Booking';
 import createAirlineLoader from '../dataLoaders/Airline';
 import createRatesLoader from '../dataLoaders/Rates';
@@ -12,7 +12,6 @@ import FlightLoader from '../dataLoaders/Flight';
 import OptionsStorage from './context/OptionsStorage';
 
 import type { Booking } from '../types/Booking';
-import type { Identity } from '../types/User';
 import type { Airline } from '../types/Flight';
 
 export type GraphqlContextType = {|
@@ -22,7 +21,7 @@ export type GraphqlContextType = {|
     booking: DataLoader<number | string, Booking>,
     bookings: BookingsLoader,
     flight: FlightLoader,
-    identity: DataLoader<string, Identity | Error>,
+    identity: IdentityDataloader,
     location: LocationLoader,
     locationSuggestions: LocationSuggestionsLoader,
     rates: DataLoader<string, ?number | Error>,
@@ -43,7 +42,7 @@ export function createContext(token: ?string): GraphqlContextType {
       booking: createBookingLoader(token, bookings),
       bookings: bookings,
       flight: new FlightLoader(location),
-      identity: createIdentityLoader(token),
+      identity: new IdentityDataloader(token),
       location: location,
       locationSuggestions: locationSuggestions,
       rates: createRatesLoader(),

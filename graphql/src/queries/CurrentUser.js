@@ -11,5 +11,5 @@ export default {
     ancestor: mixed,
     args: Object,
     { dataLoader }: GraphqlContextType,
-  ) => dataLoader.identity.load('current'),
+  ) => dataLoader.identity.load(),
 };

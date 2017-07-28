@@ -6,48 +6,67 @@ import Config from '../../config/application';
 
 import type { Identity } from '../types/User';
 
-export default function createInstance(accessToken: ?string) {
-  return new DataLoader((ids: Array<string>) => {
-    return batchLoad(accessToken)(ids);
-  });
-}
+export default class IdentityDataloader {
+  accessToken: ?string;
+  dataLoader: DataLoader<string, Identity>;
 
-function batchLoad(
-  accessToken: ?string,
-): (Array<string>) => Promise<Array<Identity | Error>> {
-  if (typeof accessToken !== 'string') {
-    return () => Promise.reject(new Error('Undefined access token'));
-  }
-  const token = accessToken; // otherwise Flow screams fetch could be called with undefined token
-  return ids => Promise.all(ids.map(userId => fetch(userId, token)));
-}
-
-async function fetch(userId: string, accessToken: string): Promise<Identity> {
-  const payload = {
-    user: userId,
-  };
-  const token = new Buffer(`${Config.auth.digest}:${accessToken}`).toString(
-    'base64',
-  );
-  const headers = {
-    Authorization: `Basic: ${token}`,
-  };
-  const data = await post(Config.restApiEndpoint.identity, payload, headers);
-  if (!data.length) {
-    throw new Error(`User not found (userId: ${userId})`);
+  constructor(accessToken: ?string) {
+    this.accessToken = accessToken;
+    this.dataLoader = new DataLoader((ids: string[]) => {
+      return this.batchLoad(ids);
+    });
   }
 
-  return sanitizeData(data[0]);
-}
+  /**
+   * Load method may be called without parameter. In this case the Identity is
+   * resolved from the access token.
+   */
+  async load(userId: ?string) {
+    if (!userId) {
+      userId = '';
+    }
+    return this.dataLoader.load(userId);
+  }
 
-function sanitizeData(data: Object): Identity {
-  const userData = {
-    email: data.email,
-    emailVerified: data.email_verified,
-    firstName: data.first_name,
-    lastName: data.last_name,
-    login: data.login,
-    userId: data.user_id,
-  };
-  return userData;
+  async loadMany(ids: string[]) {
+    return this.dataLoader.loadMany(ids);
+  }
+
+  async batchLoad(ids: string[]): Promise<Array<*>> {
+    return ids.map(userId => this.fetch(userId));
+  }
+
+  async fetch(userId: string): Promise<Identity | Error> {
+    if (typeof this.accessToken !== 'string') {
+      throw new Error('Undefined access token');
+    }
+
+    const payload = {
+      user: userId,
+    };
+    const token = new Buffer(
+      `${Config.auth.digest}:${this.accessToken}`,
+    ).toString('base64');
+    const headers = {
+      Authorization: `Basic: ${token}`,
+    };
+
+    const data = await post(Config.restApiEndpoint.identity, payload, headers);
+    if (!data.length) {
+      throw new Error(`User not found (userId: ${userId}).`);
+    }
+
+    return this.sanitizeData(data[0]);
+  }
+
+  sanitizeData(data: Object): Identity {
+    return {
+      email: data.email,
+      emailVerified: data.email_verified,
+      firstName: data.first_name,
+      lastName: data.last_name,
+      login: data.login,
+      userId: data.user_id,
+    };
+  }
 }
