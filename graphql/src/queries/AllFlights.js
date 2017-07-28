@@ -63,6 +63,13 @@ export default {
       locale: locale ? locale : null,
       filters: {
         maxStopovers: _.get(args, 'filters.maxStopovers'),
+        duration: {
+          maxFlightDuration: _.get(args, 'filters.duration.maxFlightDuration'),
+          stopovers: {
+            from: _.get(args, 'filters.duration.stopovers.from'),
+            to: _.get(args, 'filters.duration.stopovers.to'),
+          },
+        },
       },
     });
 

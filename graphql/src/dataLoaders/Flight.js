@@ -12,8 +12,14 @@ import LocaleMap from '../inputs/LocaleMap';
 import type { Flight } from '../types/Flight';
 import type { LocationVariants, RadiusLocation } from '../types/Location';
 
+type Duration = {|
+  maxFlightDuration: null | number,
+  stopovers: null | { from: ?number, to: ?number },
+|};
+
 type Filters = {|
   maxStopovers: null | number,
+  duration: null | Duration,
 |};
 
 type QueryParameters = {|
@@ -101,8 +107,22 @@ export default class FlightDataloader {
     if (locale !== null) {
       parameters.locale = LocaleMap[locale];
     }
-    if (filters && filters.maxStopovers !== null) {
-      parameters.maxStopovers = filters.maxStopovers;
+    if (filters) {
+      if (filters.maxStopovers !== null) {
+        parameters.maxStopovers = filters.maxStopovers;
+      }
+      if (filters.duration) {
+        const duration = filters.duration;
+        if (duration.maxFlightDuration !== null) {
+          parameters.maxFlyDuration = duration.maxFlightDuration;
+        }
+        if (duration.stopovers && duration.stopovers.from !== null) {
+          parameters.stopoverfrom = duration.stopovers.from;
+        }
+        if (duration.stopovers && duration.stopovers.to !== null) {
+          parameters.stopoverto = duration.stopovers.to;
+        }
+      }
     }
 
     const firstTry = await get(config.restApiEndpoint.allFlights(parameters));
