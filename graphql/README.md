@@ -6,7 +6,7 @@ Using this command you can run GraphQL API server with HMR (Hot Module Replaceme
 yarn start
 ```
 
-Server is running by default on http://127.0.0.1:3000/
+Server is running by default on `http://127.0.0.1:3000/`
 
 ## Run tests
 
