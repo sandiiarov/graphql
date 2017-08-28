@@ -1,3 +1,5 @@
+Production URL: https://graphql.kiwi.com/
+
 ## Run GraphQL API server
 
 Using this command you can run GraphQL API server with HMR (Hot Module Replacement).

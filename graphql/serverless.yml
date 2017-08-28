@@ -24,3 +24,19 @@ functions:
           method: POST
           cors: true # needed for GraphiQL
           integration: lambda-proxy
+
+# MANUALLY CREATED RESOURCES:
+#
+# N. Virginia
+#   Certificate Manager:
+#     - approved domain: graphql.kiwi.com
+#     - approved domain: *.graphql.kiwi.com
+#
+# Ireland:
+#   API Gateway:
+#     - custom domain: graphql.kiwi.com
+#
+# Global:
+#   Route 53:
+#     - hosted zone: graphql.kiwi.com
+#         A: graphql.kiwi.com. (alias pointing to the CloudFront CDN created by API Gateway)
