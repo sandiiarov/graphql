@@ -1,10 +1,11 @@
 // @flow
 
-import GraphQLIdentity from '../outputs/Identity';
+import type { GraphQLFieldConfig } from 'graphql';
 
+import GraphQLIdentity from '../outputs/Identity';
 import type { GraphqlContextType } from '../services/GraphqlContext';
 
-export default {
+export default ({
   type: GraphQLIdentity, // may be null (doesn't exist)
   description: 'Current user information.',
   resolve: async (
@@ -12,4 +13,4 @@ export default {
     args: Object,
     { dataLoader }: GraphqlContextType,
   ) => dataLoader.identity.load(),
-};
+}: GraphQLFieldConfig<mixed, GraphqlContextType>);

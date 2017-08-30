@@ -1,7 +1,7 @@
 // @flow
 
 import { GraphQLNonNull } from 'graphql';
-import type { GraphQLResolveInfo } from 'graphql';
+import type { GraphQLResolveInfo, GraphQLFieldConfig } from 'graphql';
 
 import {
   connectionArgs,
@@ -22,7 +22,7 @@ const { connectionType: AllFlightsConnection } = connectionDefinitions({
   nodeType: GraphQLFlight,
 });
 
-export default {
+export default ({
   type: AllFlightsConnection,
   description: 'Search for scheduled flights.',
   args: {
@@ -84,4 +84,4 @@ export default {
       args,
     );
   },
-};
+}: GraphQLFieldConfig<mixed, GraphqlContextType>);

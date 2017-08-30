@@ -1,10 +1,10 @@
 // @flow
 
 import Identity from '../Identity';
-
+import type { SimplifiedGraphQLFieldMap } from '../../types/Tests';
 import type { Identity as IdentityType } from '../../types/User';
 
-const fields = Identity.getFields();
+const fields = (Identity.getFields(): SimplifiedGraphQLFieldMap);
 
 it('should have fields defined', () => {
   expect(fields).toMatchSnapshot();
