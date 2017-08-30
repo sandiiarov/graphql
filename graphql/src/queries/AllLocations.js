@@ -1,17 +1,17 @@
 // @flow
 
 import { GraphQLString } from 'graphql';
-import type { GraphQLResolveInfo } from 'graphql';
 import {
   connectionArgs,
   connectionDefinitions,
   connectionFromArray,
 } from 'graphql-relay';
+import type { GraphQLResolveInfo, GraphQLFieldConfig } from 'graphql';
+
 import GraphQLLocation from '../outputs/Location';
 import GraphQLRadius from '../inputs/RadiusInput';
 import GraphQLArea from '../inputs/AreaInput';
 import LocationsOptionsInput from '../inputs/LocationsOptions';
-
 import type { GraphqlContextType } from '../services/GraphqlContext';
 import type { Rectangle } from '../types/Location';
 
@@ -19,7 +19,7 @@ const { connectionType: AllLocationsConnection } = connectionDefinitions({
   nodeType: GraphQLLocation,
 });
 
-export default {
+export default ({
   type: AllLocationsConnection,
   description: 'Search for airports, cities, countries.',
   args: {
@@ -74,7 +74,7 @@ export default {
     }
     return connectionFromArray(response, args);
   },
-};
+}: GraphQLFieldConfig<mixed, GraphqlContextType>);
 
 function validateArea({ topLeft, bottomRight }: Rectangle) {
   if (topLeft.lat <= bottomRight.lat) {

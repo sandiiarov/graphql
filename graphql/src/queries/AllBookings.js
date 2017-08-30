@@ -5,15 +5,16 @@ import {
   connectionDefinitions,
   connectionFromPromisedArray,
 } from 'graphql-relay';
-import GraphQLBooking from '../outputs/Booking';
+import type { GraphQLFieldConfig } from 'graphql';
 
+import GraphQLBooking from '../outputs/Booking';
 import type { GraphqlContextType } from '../services/GraphqlContext';
 
 const { connectionType: AllBookingsConnection } = connectionDefinitions({
   nodeType: GraphQLBooking,
 });
 
-export default {
+export default ({
   type: AllBookingsConnection,
   description: 'Search for your flight bookings.',
   args: connectionArgs,
@@ -22,4 +23,4 @@ export default {
     args: Object,
     { dataLoader }: GraphqlContextType,
   ) => connectionFromPromisedArray(dataLoader.bookings.load(), args),
-};
+}: GraphQLFieldConfig<mixed, GraphqlContextType>);

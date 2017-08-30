@@ -1,8 +1,9 @@
 // @flow
 
 import Booking from '../Booking';
+import type { SimplifiedGraphQLFieldMap } from '../../types/Tests';
 
-const fields = Booking.getFields();
+const fields = (Booking.getFields(): SimplifiedGraphQLFieldMap);
 
 it('Booking type should have valid fields', () => {
   expect(fields).toMatchSnapshot();
