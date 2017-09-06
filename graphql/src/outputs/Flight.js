@@ -35,14 +35,14 @@ export default new GraphQLObjectType({
         ),
     },
 
-    arrival: {
-      type: GraphQLRouteStop,
-      resolve: ({ arrival }: Flight): DepartureArrival => arrival,
-    },
-
     departure: {
       type: GraphQLRouteStop,
       resolve: ({ departure }: Flight): DepartureArrival => departure,
+    },
+
+    arrival: {
+      type: GraphQLRouteStop,
+      resolve: ({ arrival }: Flight): DepartureArrival => arrival,
     },
 
     duration: {

@@ -43,8 +43,9 @@ export default ({
     context: GraphqlContextType,
     { path }: GraphQLResolveInfo,
   ) => {
-    const { from, to, dateFrom, dateTo, passengers } = args.search;
-    validateDates(dateFrom, dateTo);
+    const { from, to, date, returnDate, passengers } = args.search;
+    validateDates(date, returnDate);
+
     if (path) {
       context.options.setOptions(path.key, args.options);
     }
@@ -56,8 +57,15 @@ export default ({
     const allFlights = await context.dataLoader.flight.load({
       from,
       to,
-      dateFrom: new Date(dateFrom),
-      dateTo: new Date(dateTo),
+      dateFrom: new Date(date.exact ? date.exact : date.from),
+      dateTo: new Date(date.exact ? date.exact : date.to),
+      ...(returnDate && {
+        returnFrom: new Date(
+          returnDate.exact ? returnDate.exact : returnDate.from,
+        ),
+        returnTo: new Date(returnDate.exact ? returnDate.exact : returnDate.to),
+        typeFlight: 'return',
+      }),
       currency: currency ? currency : null,
       adults: adults ? adults : null,
       locale: locale ? locale : null,

@@ -1,0 +1,211 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`all flights dates should return response 1`] = `
+Object {
+  "data": Object {
+    "allFlights": Object {
+      "edges": Array [
+        Object {
+          "node": Object {
+            "legs": Array [
+              Object {
+                "arrival": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "Mocked City Name",
+                    },
+                  },
+                },
+                "departure": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "Mocked City Name",
+                    },
+                  },
+                },
+                "id": "bGVnOjMxMzIyNTIxMA==",
+              },
+              Object {
+                "arrival": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "Mocked City Name",
+                    },
+                  },
+                },
+                "departure": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "Mocked City Name",
+                    },
+                  },
+                },
+                "id": "bGVnOjMxMzM1NzM5Ng==",
+              },
+              Object {
+                "arrival": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "Mocked City Name",
+                    },
+                  },
+                },
+                "departure": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "Mocked City Name",
+                    },
+                  },
+                },
+                "id": "bGVnOkVKMjkyODU2MjA4OV80MjE4MDIzODg=",
+              },
+              Object {
+                "arrival": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "Mocked City Name",
+                    },
+                  },
+                },
+                "departure": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "Mocked City Name",
+                    },
+                  },
+                },
+                "id": "bGVnOkVKMjkyODU2MjA4OV8zNTk1MTM3NjU=",
+              },
+            ],
+          },
+        },
+        Object {
+          "node": Object {
+            "legs": Array [
+              Object {
+                "arrival": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "Mocked City Name",
+                    },
+                  },
+                },
+                "departure": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "Mocked City Name",
+                    },
+                  },
+                },
+                "id": "bGVnOkVKMTU3NDYxODM1M18zMDc5MzkyNjQ=",
+              },
+              Object {
+                "arrival": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "Mocked City Name",
+                    },
+                  },
+                },
+                "departure": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "Mocked City Name",
+                    },
+                  },
+                },
+                "id": "bGVnOjMxNDMxNjI0MA==",
+              },
+              Object {
+                "arrival": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "Mocked City Name",
+                    },
+                  },
+                },
+                "departure": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "Mocked City Name",
+                    },
+                  },
+                },
+                "id": "bGVnOjMxNjMyODg2OA==",
+              },
+            ],
+          },
+        },
+        Object {
+          "node": Object {
+            "legs": Array [
+              Object {
+                "arrival": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "Mocked City Name",
+                    },
+                  },
+                },
+                "departure": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "Mocked City Name",
+                    },
+                  },
+                },
+                "id": "bGVnOjMyMTMzNzkwMw==",
+              },
+              Object {
+                "arrival": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "Mocked City Name",
+                    },
+                  },
+                },
+                "departure": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "Mocked City Name",
+                    },
+                  },
+                },
+                "id": "bGVnOjMxNDMxNjI0MA==",
+              },
+              Object {
+                "arrival": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "Mocked City Name",
+                    },
+                  },
+                },
+                "departure": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "Mocked City Name",
+                    },
+                  },
+                },
+                "id": "bGVnOjMxNjMyODg2OA==",
+              },
+            ],
+          },
+        },
+      ],
+    },
+  },
+}
+`;
+
+exports[`all flights dates should throw error with invalid date range 1`] = `
+Object {
+  "data": Object {
+    "allFlights": null,
+  },
+  "errors": Array [
+    [GraphQLError: Please specify both "from" and "to" while working with date range OR use exact dates.],
+  ],
+}
+`;

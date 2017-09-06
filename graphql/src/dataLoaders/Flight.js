@@ -25,8 +25,11 @@ type Filters = {|
 type QueryParameters = {|
   from: Array<LocationVariants>,
   to: Array<LocationVariants>,
-  dateFrom: null | Date,
-  dateTo: null | Date,
+  dateFrom: Date,
+  dateTo: Date,
+  returnFrom: null | Date,
+  returnTo: null | Date,
+  typeFlight: 'return' | 'oneway',
   currency: null | string,
   adults: null | number,
   locale: null | string,
@@ -82,6 +85,9 @@ export default class FlightDataloader {
       to,
       dateFrom,
       dateTo,
+      returnFrom,
+      returnTo,
+      typeFlight,
       currency,
       adults,
       locale,
@@ -91,11 +97,16 @@ export default class FlightDataloader {
     const parameters = {
       flyFrom: this._normalizeLocations(from),
       to: this._normalizeLocations(to),
-      ...(dateFrom && {
-        dateFrom: dateFns.format(dateFrom, 'DD/MM/YYYY'),
+      dateFrom: dateFns.format(dateFrom, 'DD/MM/YYYY'),
+      dateTo: dateFns.format(dateTo, 'DD/MM/YYYY'),
+      ...(returnFrom && {
+        returnFrom: dateFns.format(returnFrom, 'DD/MM/YYYY'),
       }),
-      ...(dateTo && {
-        dateTo: dateFns.format(dateTo, 'DD/MM/YYYY'),
+      ...(returnTo && {
+        returnTo: dateFns.format(returnTo, 'DD/MM/YYYY'),
+      }),
+      ...(typeFlight && {
+        typeFlight: typeFlight,
       }),
     };
     if (currency !== null) {

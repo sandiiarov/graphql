@@ -82,8 +82,10 @@ describe('all flights query', () => {
         to: {
           location: 'MEX',
         },
-        dateFrom: '2017-08-08',
-        dateTo: '2017-09-08',
+        date: {
+          from: '2017-08-08',
+          to: '2017-09-08',
+        },
       },
     };
     expect(await graphql(allFlightsSearchQuery, variables)).toMatchSnapshot();
@@ -110,8 +112,10 @@ describe('all flights query', () => {
         to: {
           location: 'MEX',
         },
-        dateFrom: '08/08/2017',
-        dateTo: '2017-09-08',
+        date: {
+          from: '08/08/2017',
+          to: '2017-09-08',
+        },
       },
     };
     expect(await graphql(allFlightsSearchQuery, variables)).toMatchSnapshot();
@@ -138,8 +142,10 @@ describe('all flights query', () => {
         to: {
           location: 'MEX',
         },
-        dateFrom: '2018-08-08',
-        dateTo: '2017-09-08',
+        date: {
+          from: '2018-08-08', // 2018!
+          to: '2017-09-08',
+        },
       },
     };
     expect(await graphql(allFlightsSearchQuery, variables)).toMatchSnapshot();

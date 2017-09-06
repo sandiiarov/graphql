@@ -2,36 +2,19 @@
 
 import { graphql, RestApiMock } from '../../services/TestingTools';
 import config from '../../../config/application';
-import { Flight, Location } from '../../datasets';
+import { Flight } from '../../datasets';
 
 beforeEach(() => {
   RestApiMock.onGet(
-    config.restApiEndpoint.allLocations({ term: 'Prague' }),
-  ).replyWithData(Location.prague);
-
-  RestApiMock.onGet(
-    config.restApiEndpoint.allLocations({ term: 'Mexico' }),
-  ).replyWithData(Location.mexico);
-
-  RestApiMock.onGet(
     config.restApiEndpoint.allFlights({
-      flyFrom: 'Prague,50.11-8.68-10km',
-      to: 'Mexico',
-      dateFrom: '08/08/2017',
-      dateTo: '08/09/2017',
-    }),
-  ).replyWithData(Flight.noResults);
-
-  RestApiMock.onGet(
-    config.restApiEndpoint.allFlights({
-      flyFrom: 'prague_cz,50.11-8.68-10km',
+      flyFrom: 'PRG',
       to: 'MEX',
       dateFrom: '08/08/2017',
       dateTo: '08/09/2017',
     }),
-  ).replyWithData(Flight.prgFraMex);
+  ).replyWithData(Flight.prgMex);
 
-  ['PRG', 'MXP', 'BRU', 'CUN', 'MEX', 'FRA', 'LIN', 'LHR'].forEach(iata => {
+  ['PRG', 'MEX', 'OSL', 'MCO', 'IAH', 'ARN', 'LAX'].forEach(iata => {
     RestApiMock.onGet(
       config.restApiEndpoint.allLocations({
         term: iata,
@@ -49,9 +32,9 @@ beforeEach(() => {
   });
 });
 
-describe('all flights radius', () => {
-  it('should return legs data for radius search', async () => {
-    const allFlightsSearchQuery = `
+let allFlightsSearchQuery;
+beforeEach(() => {
+  allFlightsSearchQuery = `
     query ($input: FlightsSearchInput!) {
       allFlights(search: $input) {
         edges {
@@ -65,23 +48,38 @@ describe('all flights radius', () => {
         }
       }
     }`;
+});
+
+describe('all flights dates', () => {
+  it('should throw error with invalid date range', async () => {
     const variables = {
       input: {
         from: [
           {
-            location: 'Prague',
-          },
-          {
-            // Frankfurt
-            radius: {
-              lat: 50.11,
-              lng: 8.68,
-              radius: 10,
-            },
+            location: 'PRG',
           },
         ],
         to: {
-          location: 'Mexico',
+          location: 'MEX',
+        },
+        date: {
+          from: '2017-08-08',
+        },
+      },
+    };
+    expect(await graphql(allFlightsSearchQuery, variables)).toMatchSnapshot();
+  });
+
+  it('should return response', async () => {
+    const variables = {
+      input: {
+        from: [
+          {
+            location: 'PRG',
+          },
+        ],
+        to: {
+          location: 'MEX',
         },
         date: {
           from: '2017-08-08',

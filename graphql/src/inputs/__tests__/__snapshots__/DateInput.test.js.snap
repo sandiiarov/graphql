@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DateInput type should have valid fields 1`] = `
+Object {
+  "exact": Object {
+    "description": "Exact date (cannot be used in combination with from-to fields).",
+    "name": "exact",
+    "type": "Date",
+  },
+  "from": Object {
+    "description": "Start of the date range (cannot be used in combination with exact date).",
+    "name": "from",
+    "type": "Date",
+  },
+  "to": Object {
+    "description": "End of the date range (cannot be used in combination with exact date).",
+    "name": "to",
+    "type": "Date",
+  },
+}
+`;

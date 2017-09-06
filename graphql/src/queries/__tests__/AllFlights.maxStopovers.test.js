@@ -45,8 +45,10 @@ describe('all flights filters', () => {
         to: {
           location: 'MEX',
         },
-        dateFrom: '2017-08-08',
-        dateTo: '2017-09-08',
+        date: {
+          from: '2017-08-08',
+          to: '2017-09-08',
+        },
       },
       filters: {
         maxStopovers: 0,
