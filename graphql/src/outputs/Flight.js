@@ -7,21 +7,26 @@ import {
   GraphQLObjectType,
   GraphQLString,
 } from 'graphql';
+import { globalIdField } from 'graphql-relay';
+
 import type { GraphQLResolveInfo } from 'graphql';
+
 import GraphQLRouteStop from './RouteStop';
 import GraphQLLeg from './Leg';
 import GraphQLAirline from './Airline';
 import GraphQLPrice from './Price';
-import type { GraphqlContextType } from '../services/GraphqlContext';
 import FlightDurationInMinutes from '../resolvers/FlightDuration';
 import { buildBookingUrl } from '../queries/flight/BookingUrlBuilder';
 
+import type { GraphqlContextType } from '../services/GraphqlContext';
 import type { Price } from '../types/Price';
 import type { DepartureArrival, Flight, Leg, Airline } from '../types/Flight';
 
 export default new GraphQLObjectType({
   name: 'Flight',
   fields: {
+    id: globalIdField(),
+
     airlines: {
       type: new GraphQLList(GraphQLAirline),
       description: 'List of all Airlines involved.',

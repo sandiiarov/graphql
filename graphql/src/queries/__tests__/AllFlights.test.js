@@ -57,6 +57,7 @@ describe('all flights query', () => {
       allFlights(search: $input) {
         edges {
           node {
+            id
             arrival {
               ...Location
             }

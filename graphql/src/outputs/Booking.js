@@ -1,12 +1,12 @@
 // @flow
 
-import { GraphQLID, GraphQLInt, GraphQLList, GraphQLObjectType } from 'graphql';
+import { GraphQLInt, GraphQLList, GraphQLObjectType } from 'graphql';
+import { globalIdField } from 'graphql-relay';
 
 import GraphQLRouteStop from './RouteStop';
 import GraphQLAllowedBaggage from './AllowedBaggage';
 import GraphQLLeg from './Leg';
 import GraphQLBookingAssets from './BookingAssets';
-import { toGlobalId } from '../services/OpaqueIdentifier';
 
 import type { AllowedBaggage } from '../types/Baggage';
 import type { Booking, BookingAssets } from '../types/Booking';
@@ -16,10 +16,7 @@ import type { GraphqlContextType } from '../services/GraphqlContext';
 export default new GraphQLObjectType({
   name: 'Booking',
   fields: {
-    id: {
-      type: GraphQLID,
-      resolve: ({ id }: Booking): string => toGlobalId('booking', id),
-    },
+    id: globalIdField(),
 
     databaseId: {
       type: GraphQLInt,

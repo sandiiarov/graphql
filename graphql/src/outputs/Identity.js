@@ -1,22 +1,14 @@
 // @flow
 
-import {
-  GraphQLID,
-  GraphQLObjectType,
-  GraphQLString,
-  GraphQLBoolean,
-} from 'graphql';
-import { toGlobalId } from '../services/OpaqueIdentifier';
+import { GraphQLObjectType, GraphQLString, GraphQLBoolean } from 'graphql';
+import { globalIdField } from 'graphql-relay';
 
 import type { Identity } from '../types/User';
 
 export default new GraphQLObjectType({
   name: 'Identity',
   fields: {
-    id: {
-      type: GraphQLID,
-      resolve: ({ userId }: Identity): string => toGlobalId('identity', userId),
-    },
+    id: globalIdField('Identity', ({ userId }: Identity) => userId),
 
     databaseId: {
       type: GraphQLString,

@@ -23,7 +23,7 @@ Object {
                     },
                   },
                 },
-                "id": "bGVnOkVPNjMwMDkxMzUyXzk5MDIwMjY5",
+                "id": "TGVnOkVPNjMwMDkxMzUyXzk5MDIwMjY5",
               },
               Object {
                 "arrival": Object {
@@ -40,7 +40,7 @@ Object {
                     },
                   },
                 },
-                "id": "bGVnOjMxNTU4ODMwMw==",
+                "id": "TGVnOjMxNTU4ODMwMw==",
               },
               Object {
                 "arrival": Object {
@@ -57,7 +57,7 @@ Object {
                     },
                   },
                 },
-                "id": "bGVnOjMwODM0MTczOA==",
+                "id": "TGVnOjMwODM0MTczOA==",
               },
               Object {
                 "arrival": Object {
@@ -74,81 +74,7 @@ Object {
                     },
                   },
                 },
-                "id": "bGVnOjMwODQzMzk4OA==",
-              },
-            ],
-          },
-        },
-        Object {
-          "node": Object {
-            "legs": Array [
-              Object {
-                "arrival": Object {
-                  "airport": Object {
-                    "city": Object {
-                      "name": "Mocked City Name",
-                    },
-                  },
-                },
-                "departure": Object {
-                  "airport": Object {
-                    "city": Object {
-                      "name": "Mocked City Name",
-                    },
-                  },
-                },
-                "id": "bGVnOkVUMTIyODM0ODA0Nl8yMjIzOTE0NTA=",
-              },
-              Object {
-                "arrival": Object {
-                  "airport": Object {
-                    "city": Object {
-                      "name": "Mocked City Name",
-                    },
-                  },
-                },
-                "departure": Object {
-                  "airport": Object {
-                    "city": Object {
-                      "name": "Mocked City Name",
-                    },
-                  },
-                },
-                "id": "bGVnOkVUMTIyODM0ODA0Nl8xNzE3MjAyNDA=",
-              },
-              Object {
-                "arrival": Object {
-                  "airport": Object {
-                    "city": Object {
-                      "name": "Mocked City Name",
-                    },
-                  },
-                },
-                "departure": Object {
-                  "airport": Object {
-                    "city": Object {
-                      "name": "Mocked City Name",
-                    },
-                  },
-                },
-                "id": "bGVnOjMwODM0MTczOA==",
-              },
-              Object {
-                "arrival": Object {
-                  "airport": Object {
-                    "city": Object {
-                      "name": "Mocked City Name",
-                    },
-                  },
-                },
-                "departure": Object {
-                  "airport": Object {
-                    "city": Object {
-                      "name": "Mocked City Name",
-                    },
-                  },
-                },
-                "id": "bGVnOjMwODQzMzk4OA==",
+                "id": "TGVnOjMwODQzMzk4OA==",
               },
             ],
           },
@@ -171,7 +97,7 @@ Object {
                     },
                   },
                 },
-                "id": "bGVnOkVUMjY0MjYyNjU3NF8yMDM4NjUzMzk=",
+                "id": "TGVnOkVUMTIyODM0ODA0Nl8yMjIzOTE0NTA=",
               },
               Object {
                 "arrival": Object {
@@ -188,7 +114,7 @@ Object {
                     },
                   },
                 },
-                "id": "bGVnOkVUMjY0MjYyNjU3NF8yMjAyMTc1MzM=",
+                "id": "TGVnOkVUMTIyODM0ODA0Nl8xNzE3MjAyNDA=",
               },
               Object {
                 "arrival": Object {
@@ -205,7 +131,7 @@ Object {
                     },
                   },
                 },
-                "id": "bGVnOjMwODM0MTczOA==",
+                "id": "TGVnOjMwODM0MTczOA==",
               },
               Object {
                 "arrival": Object {
@@ -222,7 +148,81 @@ Object {
                     },
                   },
                 },
-                "id": "bGVnOjMwODQzMzk4OA==",
+                "id": "TGVnOjMwODQzMzk4OA==",
+              },
+            ],
+          },
+        },
+        Object {
+          "node": Object {
+            "legs": Array [
+              Object {
+                "arrival": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "Mocked City Name",
+                    },
+                  },
+                },
+                "departure": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "Mocked City Name",
+                    },
+                  },
+                },
+                "id": "TGVnOkVUMjY0MjYyNjU3NF8yMDM4NjUzMzk=",
+              },
+              Object {
+                "arrival": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "Mocked City Name",
+                    },
+                  },
+                },
+                "departure": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "Mocked City Name",
+                    },
+                  },
+                },
+                "id": "TGVnOkVUMjY0MjYyNjU3NF8yMjAyMTc1MzM=",
+              },
+              Object {
+                "arrival": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "Mocked City Name",
+                    },
+                  },
+                },
+                "departure": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "Mocked City Name",
+                    },
+                  },
+                },
+                "id": "TGVnOjMwODM0MTczOA==",
+              },
+              Object {
+                "arrival": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "Mocked City Name",
+                    },
+                  },
+                },
+                "departure": Object {
+                  "airport": Object {
+                    "city": Object {
+                      "name": "Mocked City Name",
+                    },
+                  },
+                },
+                "id": "TGVnOjMwODQzMzk4OA==",
               },
             ],
           },
