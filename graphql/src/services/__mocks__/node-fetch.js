@@ -2,7 +2,10 @@
 
 import url from 'url';
 
-export default function(absoluteUrl: string, options?: Object = {}) {
+export default function(
+  absoluteUrl: string,
+  options?: Object = {},
+): Promise<Object> {
   const parsedUrl: Object = url.parse(absoluteUrl, true);
   const response = {
     status: parsedUrl.query.status || 200,

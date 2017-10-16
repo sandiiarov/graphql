@@ -17,14 +17,14 @@ import type { Airline } from '../types/Flight';
 export type GraphqlContextType = {|
   apiToken: ?string,
   dataLoader: {|
-    airline: DataLoader<string, ?Airline | Error>,
+    airline: DataLoader<string, ?Airline>,
     booking: DataLoader<number | string, Booking>,
     bookings: BookingsLoader,
     flight: FlightLoader,
     identity: IdentityDataloader,
     location: LocationLoader,
     locationSuggestions: LocationSuggestionsLoader,
-    rates: DataLoader<string, ?number | Error>,
+    rates: DataLoader<string, ?number>,
   |},
   options: OptionsStorage,
   opticsContext?: Object,

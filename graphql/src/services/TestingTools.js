@@ -50,3 +50,8 @@ export const graphql = async (
     createContext('test_token'),
     variables,
   );
+
+export const evaluateResolver = (field: mixed, testValue: mixed) => {
+  // $FlowAllowNextLineInThisTest (fields are possibly undefined but we assume it's fine)
+  return field.resolve(testValue);
+};

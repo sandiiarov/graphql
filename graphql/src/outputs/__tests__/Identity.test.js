@@ -1,17 +1,18 @@
 // @flow
 
 import Identity from '../Identity';
-import type { SimplifiedGraphQLFieldMap } from '../../types/Tests';
+import { evaluateResolver } from '../../services/TestingTools';
+
 import type { Identity as IdentityType } from '../../types/User';
 
-const fields = (Identity.getFields(): SimplifiedGraphQLFieldMap);
+const fields = Identity.getFields();
 
 it('should have fields defined', () => {
   expect(fields).toMatchSnapshot();
 });
 
 it('Field "id" should use opaque identifiers', () => {
-  expect(fields.id.resolve({ userId: 1 })).toBe('aWRlbnRpdHk6MQ=='); // identity:1
+  expect(evaluateResolver(fields.id, { userId: 1 })).toBe('aWRlbnRpdHk6MQ=='); // identity:1
 });
 
 describe('Field "fullName"', () => {
@@ -25,12 +26,12 @@ describe('Field "fullName"', () => {
   };
 
   it('returns concatenation of first and last name', () => {
-    expect(fields.fullName.resolve(identity)).toBe('First Last');
+    expect(evaluateResolver(fields.fullName, identity)).toBe('First Last');
   });
 
   it('returns login as a fallback', () => {
     expect(
-      fields.fullName.resolve({
+      evaluateResolver(fields.fullName, {
         ...identity,
         firstName: null,
         lastName: null,
@@ -40,7 +41,7 @@ describe('Field "fullName"', () => {
 
   it('returns login if firstName is missing', () => {
     expect(
-      fields.fullName.resolve({
+      evaluateResolver(fields.fullName, {
         ...identity,
         firstName: null,
       }),
@@ -49,7 +50,7 @@ describe('Field "fullName"', () => {
 
   it('returns login if lastName is missing', () => {
     expect(
-      fields.fullName.resolve({
+      evaluateResolver(fields.fullName, {
         ...identity,
         lastName: null,
       }),

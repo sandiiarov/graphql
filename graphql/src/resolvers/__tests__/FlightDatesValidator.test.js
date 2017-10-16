@@ -66,8 +66,8 @@ describe('function validateDates', () => {
 
   it('accepts date range with "from" and "to" for departure', () => {
     expect(() => {
-      // $FlowAllowNextLineInThisTest (invalid arguments)
       validateDates(
+        // $FlowAllowNextLineInThisTest (intentionally incompatible parameter)
         {
           from: new Date(),
         },
@@ -77,8 +77,8 @@ describe('function validateDates', () => {
       'Please specify both "from" and "to" while working with date range OR use exact dates.',
     );
     expect(() => {
-      // $FlowAllowNextLineInThisTest (invalid arguments)
       validateDates(
+        // $FlowAllowNextLineInThisTest (intentionally incompatible parameter)
         {
           to: new Date(),
         },
@@ -91,7 +91,7 @@ describe('function validateDates', () => {
 
   it('accepts date range with "from" and "to" for return flight', () => {
     expect(() => {
-      // $FlowAllowNextLineInThisTest (invalid arguments)
+      // $FlowAllowNextLineInThisTest (intentionally incompatible parameter)
       validateDates(exactInput, {
         from: new Date(),
       });
@@ -99,7 +99,7 @@ describe('function validateDates', () => {
       'Please specify both "from" and "to" while working with date range OR use exact dates.',
     );
     expect(() => {
-      // $FlowAllowNextLineInThisTest (invalid arguments)
+      // $FlowAllowNextLineInThisTest (intentionally incompatible parameter)
       validateDates(exactInput, {
         to: new Date(),
       });

@@ -12,9 +12,11 @@ afterEach(() => {
 });
 
 it('should return valid response', async () => {
-  const response = await request(server).post('/').send({
-    query: '{__schema{queryType{name}}}',
-  });
+  const response = await request(server)
+    .post('/')
+    .send({
+      query: '{__schema{queryType{name}}}',
+    });
   expect(cleanResponse(response)).toMatchSnapshot();
 });
 
@@ -26,7 +28,9 @@ it('should throw error when parsing invalid JSON', async () => {
 });
 
 it('should throw error when parsing body without query field', async () => {
-  const response = await request(server).post('/').send({});
+  const response = await request(server)
+    .post('/')
+    .send({});
   expect(cleanResponse(response)).toMatchSnapshot();
 });
 
