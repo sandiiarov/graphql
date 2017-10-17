@@ -23,4 +23,19 @@ describe('All places REST API endpoint', () => {
       }),
     ).toBe(`${baseUrl}?term=text`);
   });
+
+  it('trims white spaces', () => {
+    expect(config.restApiEndpoint.allLocations({ term: 'BCN  ' })).toBe(
+      `${baseUrl}?term=BCN`,
+    );
+    expect(config.restApiEndpoint.allLocations({ term: '  BCN' })).toBe(
+      `${baseUrl}?term=BCN`,
+    );
+    expect(config.restApiEndpoint.allLocations({ term: '  BCN  ' })).toBe(
+      `${baseUrl}?term=BCN`,
+    );
+    expect(config.restApiEndpoint.allLocations({ term: '  B C N  ' })).toBe(
+      `${baseUrl}?term=B%20C%20N`,
+    );
+  });
 });

@@ -55,6 +55,10 @@ function filterParameters(parameters: Object) {
     if (Array.isArray(val)) {
       filteredParameters[key] = val.toString();
     }
+
+    if (typeof val === 'string') {
+      filteredParameters[key] = val.trim();
+    }
   });
   return filteredParameters;
 }
