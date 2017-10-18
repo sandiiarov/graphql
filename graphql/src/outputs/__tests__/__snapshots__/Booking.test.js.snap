@@ -16,6 +16,14 @@ Object {
     "resolve": [Function],
     "type": "RouteStop",
   },
+  "assets": Object {
+    "args": Array [],
+    "description": "Static assets related to this booking.",
+    "isDeprecated": false,
+    "name": "assets",
+    "resolve": [Function],
+    "type": "BookingAssets",
+  },
   "databaseId": Object {
     "args": Array [],
     "deprecationReason": "Use id field instead.",

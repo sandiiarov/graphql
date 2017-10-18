@@ -17,5 +17,5 @@
     }
   },
   "logHeapUsage": true,
-  "verbose": true
+  "verbose": false
 }
