@@ -40,6 +40,14 @@ Object {
     "resolve": [Function],
     "type": "Int",
   },
+  "id": Object {
+    "args": Array [],
+    "description": "The ID of an object",
+    "isDeprecated": false,
+    "name": "id",
+    "resolve": [Function],
+    "type": "ID!",
+  },
   "legs": Object {
     "args": Array [],
     "description": "Flight segments, e.g. stopover, change of aircraft, etc.",

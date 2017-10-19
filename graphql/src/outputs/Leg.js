@@ -1,17 +1,13 @@
 // @flow
 
-import {
-  GraphQLObjectType,
-  GraphQLID,
-  GraphQLBoolean,
-  GraphQLInt,
-} from 'graphql';
-import { toGlobalId } from '../services/OpaqueIdentifier';
+import { GraphQLObjectType, GraphQLBoolean, GraphQLInt } from 'graphql';
+import { globalIdField } from 'graphql-relay';
+
 import GraphQLRouteStop from './RouteStop';
 import GraphQLAirline from './Airline';
-import type { GraphqlContextType } from '../services/GraphqlContext';
 import FlightDurationInMinutes from '../resolvers/FlightDuration';
 
+import type { GraphqlContextType } from '../services/GraphqlContext';
 import type { DepartureArrival, Leg } from '../types/Flight';
 
 export default new GraphQLObjectType({
@@ -19,10 +15,7 @@ export default new GraphQLObjectType({
   description:
     'Leg is the operation of an aircraft from one scheduled departure station to its next scheduled arrival station.',
   fields: {
-    id: {
-      type: GraphQLID,
-      resolve: ({ id }: Leg): string => toGlobalId('leg', id),
-    },
+    id: globalIdField(),
 
     airline: {
       type: GraphQLAirline,

@@ -11,10 +11,6 @@ it('should have fields defined', () => {
   expect(fields).toMatchSnapshot();
 });
 
-it('Field "id" should use opaque identifiers', () => {
-  expect(evaluateResolver(fields.id, { userId: 1 })).toBe('aWRlbnRpdHk6MQ=='); // identity:1
-});
-
 describe('Field "fullName"', () => {
   const identity: IdentityType = {
     email: 'e@mail.com',
