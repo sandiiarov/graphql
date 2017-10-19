@@ -5,10 +5,11 @@ import { GraphQLID, GraphQLInt, GraphQLList, GraphQLObjectType } from 'graphql';
 import GraphQLRouteStop from './RouteStop';
 import GraphQLAllowedBaggage from './AllowedBaggage';
 import GraphQLLeg from './Leg';
+import GraphQLBookingAssets from './BookingAssets';
 import { toGlobalId } from '../services/OpaqueIdentifier';
 
 import type { AllowedBaggage } from '../types/Baggage';
-import type { Booking } from '../types/Booking';
+import type { Booking, BookingAssets } from '../types/Booking';
 import type { DepartureArrival, Leg } from '../types/Flight';
 import type { GraphqlContextType } from '../services/GraphqlContext';
 
@@ -42,6 +43,19 @@ export default new GraphQLObjectType({
     arrival: {
       type: GraphQLRouteStop,
       resolve: ({ arrival }: Booking): DepartureArrival => arrival,
+    },
+
+    assets: {
+      type: GraphQLBookingAssets,
+      description: 'Static assets related to this booking.',
+      resolve: async (
+        { id }: Booking,
+        params: Object,
+        { dataLoader }: GraphqlContextType,
+      ): Promise<BookingAssets> => {
+        const { assets } = await dataLoader.booking.load(id);
+        return assets;
+      },
     },
 
     departure: {

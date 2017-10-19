@@ -69,6 +69,10 @@ export function sanitizeDetail(apiData: Object): Booking {
         },
       ],
     },
+    assets: {
+      ticketUrl: apiData.assets.eticket,
+      invoiceUrl: apiData.assets.invoice,
+    },
   };
 }
 
