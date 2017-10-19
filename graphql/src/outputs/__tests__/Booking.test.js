@@ -1,14 +1,14 @@
 // @flow
 
 import Booking from '../Booking';
-import type { SimplifiedGraphQLFieldMap } from '../../types/Tests';
+import { evaluateResolver } from '../../services/TestingTools';
 
-const fields = (Booking.getFields(): SimplifiedGraphQLFieldMap);
+const fields = Booking.getFields();
 
 it('Booking type should have valid fields', () => {
   expect(fields).toMatchSnapshot();
 });
 
 it('Field "id" should use opaque identifier', () => {
-  expect(fields.id.resolve({ id: 1 })).toBe('Ym9va2luZzox'); // booking:1
+  expect(evaluateResolver(fields.id, { id: 1 })).toBe('Ym9va2luZzox'); // booking:1
 });

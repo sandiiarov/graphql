@@ -1,5 +1,6 @@
 [ignore]
-.*/node_modules/protobufjs-no-cli/.*
+<PROJECT_ROOT>/node_modules/dataloader/.*
+<PROJECT_ROOT>/node_modules/protobufjs-no-cli/.*
 
 [include]
 

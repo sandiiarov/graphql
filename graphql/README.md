@@ -1,6 +1,6 @@
 Production URL: https://graphql.kiwi.com/
 
-## Run GraphQL API server
+# Run GraphQL API server
 
 Using this command you can run GraphQL API server with HMR (Hot Module Replacement).
 
@@ -10,14 +10,14 @@ yarn start
 
 Server is running by default on `http://127.0.0.1:3000/`
 
-## Run tests
+# Run tests
 
 ```
 yarn test
 yarn test-ci
 ```
 
-## Debug application
+# Debug application
 
 First you need to run `debug` command. This is very similar to the `start` command except it doesn't start server. It only watches changes because of HMR and generates source-maps for JS code.
 
@@ -35,7 +35,7 @@ You'll get `chrome-devtools://` URL where you can discover network targets or us
 
 Second option is recommended but the first one works everytime on chrome based browsers.
 
-## Directory structure
+# Directory structure
 
 ```
 src
@@ -49,3 +49,9 @@ src
 ├── services            (system functions and classes)
 └── types               (internal Flow types definition)
 ```
+
+# Requirements of a Relay-compliant GraphQL server
+
+- [Cursor Connections Specification](https://facebook.github.io/relay/graphql/connections.htm)
+- [Global Object Identification Specification](https://facebook.github.io/relay/graphql/objectidentification.htm)
+- [Input Object Mutations Specification](https://facebook.github.io/relay/graphql/mutations.htm)
