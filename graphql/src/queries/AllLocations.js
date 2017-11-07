@@ -21,7 +21,10 @@ const { connectionType: AllLocationsConnection } = connectionDefinitions({
 
 export default ({
   type: AllLocationsConnection,
-  description: 'Search for airports, cities, countries.',
+  description:
+    'Search for airports, cities, countries. You can search by location name,' +
+    ' radius on the map or rectangle on the map. If you do not specify one of' +
+    ' these search inputs then the alphabetical dump of all locations is returned.',
   args: {
     search: {
       type: GraphQLString,
@@ -52,7 +55,7 @@ export default ({
 
     let response;
     if (args.search) {
-      response = await context.dataLoader.locationSuggestions.load(
+      response = await context.dataLoader.locationSuggestions.loadByKey(
         args.search,
         args.options,
       );
@@ -68,8 +71,8 @@ export default ({
         args.options,
       );
     } else {
-      throw new Error(
-        `You must specify 'search', 'radius' or 'area' argument to find locations.`,
+      response = await context.dataLoader.locationSuggestions.load(
+        args.options,
       );
     }
     return connectionFromArray(response, args);

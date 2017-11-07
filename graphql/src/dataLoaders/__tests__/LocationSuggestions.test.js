@@ -38,13 +38,13 @@ beforeEach(() => {
 
 it('returns PRG suggestions', async () => {
   const dataloader = new LocationSuggestions();
-  const result = await dataloader.load('PRG');
+  const result = await dataloader.loadByKey('PRG');
   expect(result).toMatchSnapshot();
 });
 
 it('returns PRG suggestions in cs-CZ', async () => {
   const dataloader = new LocationSuggestions();
-  const result = await dataloader.load('PRG', { locale: 'cs-CZ' });
+  const result = await dataloader.loadByKey('PRG', { locale: 'cs-CZ' });
   expect(result).toMatchSnapshot();
 });
 

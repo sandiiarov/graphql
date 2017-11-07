@@ -30,23 +30,23 @@ export default class LocationSuggestionsDataloader {
     );
   }
 
-  async load(locationKey: string, options: ?Options): Promise<Location[]> {
+  async load(options: ?Options): Promise<Location[]> {
     return this.dataLoader.load({
-      term: locationKey,
+      type: 'dump',
       locale: options ? options.locale : null,
     });
   }
 
-  async loadMany(
-    locationKeys: string[],
-    options: ?Options,
-  ): Promise<Array<Location[]>> {
-    return this.dataLoader.loadMany(
-      locationKeys.map(location => ({
-        term: location,
-        locale: options ? options.locale : null,
-      })),
-    );
+  /**
+   * Returns single set of multiple suggestions for single location key.
+   * If you need to load only one (the first) location for location key
+   * you have to use 'LocationDataLoader.load' function.
+   */
+  async loadByKey(locationKey: string, options: ?Options): Promise<Location[]> {
+    return this.dataLoader.load({
+      term: locationKey,
+      locale: options ? options.locale : null,
+    });
   }
 
   async loadByRadius(radius: Radius, options: ?Options): Promise<Location[]> {
@@ -68,6 +68,22 @@ export default class LocationSuggestionsDataloader {
       high_lon: area.bottomRight.lng,
       locale: options ? options.locale : null,
     });
+  }
+
+  /**
+   * Returns set of suggestions for multiple places (array of arrays of
+   * possible locations related to the keys).
+   */
+  async loadMany(
+    locationKeys: string[],
+    options: ?Options,
+  ): Promise<Array<Location[]>> {
+    return this.dataLoader.loadMany(
+      locationKeys.map(location => ({
+        term: location,
+        locale: options ? options.locale : null,
+      })),
+    );
   }
 
   /**
