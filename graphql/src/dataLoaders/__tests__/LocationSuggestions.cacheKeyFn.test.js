@@ -24,8 +24,8 @@ jest.mock('../../services/HttpRequest', () => {
 
 it('calls scalar AAA only once', async () => {
   const term = 'AAA';
-  await dataloader.load(term);
-  await dataloader.load(term);
+  await dataloader.loadByKey(term);
+  await dataloader.loadByKey(term);
   expect(mockCalledURLs).toEqual([
     options.restApiEndpoint.allLocations({ term: term }),
   ]);
@@ -33,7 +33,7 @@ it('calls scalar AAA only once', async () => {
 
 it('calls scalar BBB only once', async () => {
   const term = 'BBB';
-  await dataloader.load(term);
+  await dataloader.loadByKey(term);
   await dataloader.loadMany([term, term]);
   expect(mockCalledURLs).toEqual([
     options.restApiEndpoint.allLocations({ term: term }),
@@ -43,14 +43,14 @@ it('calls scalar BBB only once', async () => {
 it('calls scalar CCC only once (changed order)', async () => {
   const term = 'CCC';
   await dataloader.loadMany([term, term]);
-  await dataloader.load(term);
+  await dataloader.loadByKey(term);
   expect(mockCalledURLs).toEqual([
     options.restApiEndpoint.allLocations({ term: term }),
   ]);
 });
 
 it('calls scalars AAA and BBB only once', async () => {
-  await dataloader.load('AAA');
+  await dataloader.loadByKey('AAA');
   await dataloader.loadMany(['BBB', 'AAA']); // AAA again
   expect(mockCalledURLs).toEqual([
     options.restApiEndpoint.allLocations({ term: 'AAA' }),
@@ -59,7 +59,7 @@ it('calls scalars AAA and BBB only once', async () => {
 });
 
 it('calls scalars AAA, BBB and CCC', async () => {
-  await dataloader.load('AAA');
+  await dataloader.loadByKey('AAA');
   await dataloader.loadMany(['BBB', 'CCC']);
   expect(mockCalledURLs).toEqual([
     options.restApiEndpoint.allLocations({ term: 'AAA' }),
