@@ -30,6 +30,7 @@ export function sanitizeListItem(apiData: Object): BookingsItem {
       currency: apiData.original_currency,
     },
     authToken: apiData.auth_token,
+    status: apiData.status,
   };
 }
 

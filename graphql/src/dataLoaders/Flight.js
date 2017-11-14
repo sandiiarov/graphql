@@ -7,7 +7,7 @@ import _ from 'lodash';
 import { get } from '../services/HttpRequest';
 import config from '../../config/application';
 import LocationDataLoader from '../dataLoaders/Location';
-import LocaleMap from '../inputs/LocaleMap';
+import LocaleMap from '../enums/LocaleMap';
 
 import type { Flight } from '../types/Flight';
 import type { LocationVariants, RadiusLocation } from '../types/Location';
