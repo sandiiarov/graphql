@@ -1,7 +1,7 @@
 // @flow
 
 import DataLoader from 'dataloader';
-import dateFns from 'date-fns';
+import { DateTime } from 'luxon';
 import _ from 'lodash';
 
 import { get } from '../services/HttpRequest';
@@ -93,17 +93,17 @@ export default class FlightDataloader {
       locale,
       filters,
     } = searchParameters;
-    // see: https://github.com/tc39/proposal-object-rest-spread/issues/45
+
     const parameters = {
       flyFrom: this._normalizeLocations(from),
       to: this._normalizeLocations(to),
-      dateFrom: dateFns.format(dateFrom, 'DD/MM/YYYY'),
-      dateTo: dateFns.format(dateTo, 'DD/MM/YYYY'),
+      dateFrom: this._formatDateForApi(dateFrom),
+      dateTo: this._formatDateForApi(dateTo),
       ...(returnFrom && {
-        returnFrom: dateFns.format(returnFrom, 'DD/MM/YYYY'),
+        returnFrom: this._formatDateForApi(returnFrom),
       }),
       ...(returnTo && {
-        returnTo: dateFns.format(returnTo, 'DD/MM/YYYY'),
+        returnTo: this._formatDateForApi(returnTo),
       }),
       ...(typeFlight && {
         typeFlight: typeFlight,
@@ -149,6 +149,17 @@ export default class FlightDataloader {
     parameters.to = flyTo;
     return get(config.restApiEndpoint.allFlights(parameters));
   }
+
+  /**
+   * Input dates should be in UTC. This method changes the date format
+   * to be compatible with underlying API. It keeps the same timezone (UTC)
+   * and ignores local timezone. So no matter where you run this code
+   * it should always work as expected (returns the same date in different format).
+   */
+  _formatDateForApi = (date: Date): string =>
+    DateTime.fromJSDate(date, { zone: 'utc' }).toFormat(
+      'dd/LL/yyyy', // http://moment.github.io/luxon/docs/manual/usage/formatting.html
+    );
 
   _normalizeLocations(locations: LocationVariants[]): string[] {
     return locations.map(location => {

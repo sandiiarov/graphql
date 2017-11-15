@@ -57,13 +57,11 @@ export default ({
     const allFlights = await context.dataLoader.flight.load({
       from,
       to,
-      dateFrom: new Date(date.exact ? date.exact : date.from),
-      dateTo: new Date(date.exact ? date.exact : date.to),
+      dateFrom: date.exact ? date.exact : date.from,
+      dateTo: date.exact ? date.exact : date.to,
       ...(returnDate && {
-        returnFrom: new Date(
-          returnDate.exact ? returnDate.exact : returnDate.from,
-        ),
-        returnTo: new Date(returnDate.exact ? returnDate.exact : returnDate.to),
+        returnFrom: returnDate.exact ? returnDate.exact : returnDate.from,
+        returnTo: returnDate.exact ? returnDate.exact : returnDate.to,
         typeFlight: 'return',
       }),
       currency: currency ? currency : null,

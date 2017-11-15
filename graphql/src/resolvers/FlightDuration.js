@@ -1,7 +1,7 @@
 // @flow
 
 import _ from 'lodash';
-import differenceInMinutes from 'date-fns/difference_in_minutes';
+import { DateTime } from 'luxon';
 
 import type { DepartureArrival } from '../types/Flight';
 
@@ -18,5 +18,8 @@ function getDurationInMinutes(departure: ?Date, arrival: ?Date) {
   if (!departure || !arrival || departure > arrival) {
     return null;
   }
-  return differenceInMinutes(arrival, departure);
+
+  return DateTime.fromJSDate(arrival)
+    .diff(DateTime.fromJSDate(departure), 'minutes')
+    .toObject().minutes;
 }
