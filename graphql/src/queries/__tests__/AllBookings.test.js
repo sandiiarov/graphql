@@ -18,7 +18,7 @@ beforeEach(() => {
     ).replyWithData({
       locations: [
         {
-          id: 'MOCKED',
+          id: iata,
           city: {
             name: 'Mocked City Name',
           },
