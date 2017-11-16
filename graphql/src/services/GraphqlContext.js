@@ -10,17 +10,24 @@ import LocationSuggestionsLoader from '../dataLoaders/LocationSuggestions';
 import LocationLoader from '../dataLoaders/Location';
 import FlightLoader from '../dataLoaders/Flight';
 import OptionsStorage from './context/OptionsStorage';
+import HotelsLoader from '../dataLoaders/Hotels';
 
 import type { Booking } from '../types/Booking';
 import type { Airline } from '../types/Flight';
+import type {
+  RequiredParameters as HotelKey,
+  SanitizedHotelApiResponse,
+} from '../dataLoaders/Hotels';
 
 export type GraphqlContextType = {|
+  // DataLoader<K, V>
   apiToken: ?string,
   dataLoader: {|
     airline: DataLoader<string, ?Airline>,
     booking: DataLoader<number | string, Booking>,
     bookings: BookingsLoader,
     flight: FlightLoader,
+    hotels: DataLoader<HotelKey, SanitizedHotelApiResponse[]>,
     identity: IdentityDataloader,
     location: LocationLoader,
     locationSuggestions: LocationSuggestionsLoader,
@@ -42,6 +49,7 @@ export function createContext(token: ?string): GraphqlContextType {
       booking: createBookingLoader(token, bookings),
       bookings: bookings,
       flight: new FlightLoader(location),
+      hotels: HotelsLoader,
       identity: new IdentityDataloader(token),
       location: location,
       locationSuggestions: locationSuggestions,

@@ -24,6 +24,13 @@ export default {
     allLocations: (queryParameters: Object) =>
       queryWithParameters('https://locations.skypicker.com', queryParameters),
     rates: 'https://api.skypicker.com/rates',
+    hotels: {
+      all: (queryParameters: Object) =>
+        queryWithParameters(
+          'https://hotels-api.skypicker.com/api/hotels',
+          queryParameters,
+        ),
+    },
   },
   auth: {
     basicToken: '***REMOVED***',
