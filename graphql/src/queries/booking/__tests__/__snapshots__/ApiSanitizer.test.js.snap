@@ -3,7 +3,10 @@
 exports[`Sanitize detail should work 1`] = `
 Object {
   "arrival": Object {
-    "when": null,
+    "when": Object {
+      "local": 2017-09-11T11:40:00.000Z,
+      "utc": 2017-09-11T09:40:00.000Z,
+    },
     "where": Object {
       "cityName": "Gdansk",
       "code": "GDN",
@@ -11,7 +14,10 @@ Object {
   },
   "authToken": "b9cb406d-f797-434c-bc21-a0612b92f201",
   "departure": Object {
-    "when": null,
+    "when": Object {
+      "local": 2017-09-11T09:05:00.000Z,
+      "utc": 2017-09-11T07:05:00.000Z,
+    },
     "where": Object {
       "cityName": "Rzeszow",
       "code": "RZE",
@@ -110,7 +116,10 @@ Object {
     ],
   },
   "arrival": Object {
-    "when": null,
+    "when": Object {
+      "local": 2017-09-11T11:40:00.000Z,
+      "utc": 2017-09-11T09:40:00.000Z,
+    },
     "where": Object {
       "cityName": "Gdansk",
       "code": "GDN",
@@ -122,7 +131,10 @@ Object {
   },
   "authToken": "b9cb406d-f797-434c-bc21-a0612b92f201",
   "departure": Object {
-    "when": null,
+    "when": Object {
+      "local": 2017-09-11T09:05:00.000Z,
+      "utc": 2017-09-11T07:05:00.000Z,
+    },
     "where": Object {
       "cityName": "Rzeszow",
       "code": "RZE",

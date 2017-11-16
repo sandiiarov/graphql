@@ -12,12 +12,22 @@ const routePropsMap = {
   cityName: 'where.name',
 };
 
+/**
+ * Implementation details (weirdnesses) explained:
+ *
+ * arrival: computed from the last flight leg because API returns "0" for times
+ * departure: computed from the first flight leg because API returns "0" for times
+ */
 export function sanitizeListItem(apiData: Object): BookingsItem {
+  const legs = apiData.flights;
+  const lastLeg = legs[legs.length - 1];
+  const firstLeg = legs[0];
+
   return {
     id: parseInt(apiData.bid),
-    arrival: sanitizeRoute(apiData.arrival, routePropsMap),
-    departure: sanitizeRoute(apiData.departure, routePropsMap),
-    legs: apiData.flights.map((flight): Leg => ({
+    arrival: sanitizeRoute(lastLeg.arrival, routePropsMap),
+    departure: sanitizeRoute(firstLeg.departure, routePropsMap),
+    legs: legs.map((flight): Leg => ({
       id: flight.id,
       recheckRequired: flight.bags_recheck_required,
       flightNo: flight.flight_no,
