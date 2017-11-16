@@ -1,12 +1,17 @@
 // @flow
 
-import compareAsc from 'date-fns/compare_asc';
-
 type DateInput = {|
   exact: ?Date,
   from: ?Date,
   to: ?Date,
 |};
+
+/**
+ * Comparison of dates based on signum function. It returns "zero" for same
+ * dates, "+1" if left date is after the right date and "-1" otherwise.
+ */
+export const compareAsc = (dateLeft: Date, dateRight: Date) =>
+  Math.sign(dateLeft.getTime() - dateRight.getTime());
 
 export function validateDates(date: DateInput, returnDate?: DateInput) {
   // it's possible to use only exact dates or dates range but not both
