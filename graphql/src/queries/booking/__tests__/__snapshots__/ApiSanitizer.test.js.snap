@@ -82,6 +82,7 @@ Object {
     "amount": 1082,
     "currency": "CZK",
   },
+  "status": "confirmed",
 }
 `;
 
@@ -199,5 +200,6 @@ Object {
     "amount": 1082,
     "currency": "CZK",
   },
+  "status": "confirmed",
 }
 `;

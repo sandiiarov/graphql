@@ -3,7 +3,7 @@
 import querystring from 'querystring';
 import DataLoader from 'dataloader';
 import type { Price } from '../../types/Price';
-import LocaleMap from '../../inputs/LocaleMap';
+import LocaleMap from '../../enums/LocaleMap';
 
 export async function buildBookingUrl(
   passengers: number,

@@ -1,7 +1,7 @@
 // @flow
 
 import { GraphQLInputObjectType } from 'graphql';
-import GraphQLLocale from '../inputs/Locale';
+import GraphQLLocale from '../enums/Locale';
 
 export default new GraphQLInputObjectType({
   name: 'LocationsOptionsInput',

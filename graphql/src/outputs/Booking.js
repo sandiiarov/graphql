@@ -7,6 +7,7 @@ import GraphQLRouteStop from './RouteStop';
 import GraphQLAllowedBaggage from './AllowedBaggage';
 import GraphQLLeg from './Leg';
 import GraphQLBookingAssets from './BookingAssets';
+import GraphQLBookingStatus from '../enums/BookingStatus';
 
 import type { AllowedBaggage } from '../types/Baggage';
 import type { Booking, BookingAssets } from '../types/Booking';
@@ -64,6 +65,11 @@ export default new GraphQLObjectType({
       type: new GraphQLList(GraphQLLeg),
       description: 'Flight segments, e.g. stopover, change of aircraft, etc.',
       resolve: ({ legs }: Booking): Leg[] => legs,
+    },
+
+    status: {
+      type: GraphQLBookingStatus,
+      resolve: ({ status }: Booking): string => status,
     },
   },
 });

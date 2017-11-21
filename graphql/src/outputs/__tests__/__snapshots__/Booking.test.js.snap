@@ -56,5 +56,12 @@ Object {
     "resolve": [Function],
     "type": "[Leg]",
   },
+  "status": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "status",
+    "resolve": [Function],
+    "type": "BookingStatus",
+  },
 }
 `;

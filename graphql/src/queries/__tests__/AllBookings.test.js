@@ -42,6 +42,7 @@ describe('id query', () => {
           node {
             id
             databaseId
+            status
           }
         }
       }

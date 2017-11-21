@@ -254,18 +254,21 @@ Object {
           "node": Object {
             "databaseId": 2707251,
             "id": "Qm9va2luZzoyNzA3MjUx",
+            "status": "CONFIRMED",
           },
         },
         Object {
           "node": Object {
             "databaseId": 2707229,
             "id": "Qm9va2luZzoyNzA3MjI5",
+            "status": "CONFIRMED",
           },
         },
         Object {
           "node": Object {
             "databaseId": 2707224,
             "id": "Qm9va2luZzoyNzA3MjI0",
+            "status": "CONFIRMED",
           },
         },
       ],
