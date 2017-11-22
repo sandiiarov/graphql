@@ -3,9 +3,10 @@
 import { GraphQLObjectType } from 'graphql';
 
 import AllBookings from './AllBookings';
-import Booking from './Booking';
 import AllFlights from './AllFlights';
+import AllHotels from './AllHotels';
 import AllLocations from './AllLocations';
+import Booking from './Booking';
 import CurrentUser from './CurrentUser';
 
 export default new GraphQLObjectType({
@@ -13,9 +14,10 @@ export default new GraphQLObjectType({
   description: 'Root Query',
   fields: {
     allBookings: AllBookings,
-    booking: Booking,
     allFlights: AllFlights,
+    allHotels: AllHotels,
     allLocations: AllLocations,
+    booking: Booking,
     currentUser: CurrentUser,
   },
 });

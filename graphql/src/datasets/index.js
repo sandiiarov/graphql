@@ -35,3 +35,7 @@ module.exports.Identity = {
 module.exports.Rates = {
   all: require('./rates/all.json'),
 };
+
+module.exports.Hotels = {
+  all: require('./hotels/all.json'),
+};
