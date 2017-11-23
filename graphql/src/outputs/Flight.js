@@ -7,10 +7,10 @@ import {
   GraphQLObjectType,
   GraphQLString,
 } from 'graphql';
-import { globalIdField } from 'graphql-relay';
 
 import type { GraphQLResolveInfo } from 'graphql';
 
+import { globalIdField } from '../services/OpaqueIdentifier';
 import GraphQLRouteStop from './RouteStop';
 import GraphQLLeg from './Leg';
 import GraphQLAirline from './Airline';

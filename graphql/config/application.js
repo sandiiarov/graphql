@@ -30,6 +30,13 @@ export default {
           'https://hotels-api.skypicker.com/api/hotels',
           queryParameters,
         ),
+      single: (hotelIds: number[]) =>
+        queryWithParameters(
+          'https://hotels-api.skypicker.com/api/hotelDetails',
+          {
+            hotel_ids: hotelIds.join(','),
+          },
+        ),
     },
   },
   auth: {

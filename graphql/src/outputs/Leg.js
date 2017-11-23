@@ -1,7 +1,7 @@
 // @flow
 
 import { GraphQLObjectType, GraphQLBoolean, GraphQLInt } from 'graphql';
-import { globalIdField } from 'graphql-relay';
+import { globalIdField } from '../services/OpaqueIdentifier';
 
 import GraphQLRouteStop from './RouteStop';
 import GraphQLAirline from './Airline';

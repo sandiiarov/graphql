@@ -37,5 +37,6 @@ module.exports.Rates = {
 };
 
 module.exports.Hotels = {
+  '19332': require('./hotels/19332.json'),
   all: require('./hotels/all.json'),
 };

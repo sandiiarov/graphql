@@ -14,7 +14,7 @@ Object {
               "amount": 2214.2,
               "currency": "EUR",
             },
-            "url": "http://hotels.kiwi.com/hotel/it/expo-fiera.html?label=kiwi-application&latitude=45.4654&longitude=9.1859&radius=50&checkin=2017-11-16&checkout=2017-11-23&room1=A,A,4,6&room2=A,2&rows=10&selected_currency=EUR&lang=en",
+            "whitelabelUrl": "http://hotels.kiwi.com/hotel/it/expo-fiera.html?label=kiwi-application&latitude=45.4654&longitude=9.1859&radius=50&checkin=2017-11-16&checkout=2017-11-23&room1=A,A,4,6&room2=A,2&rows=10&selected_currency=EUR&lang=en",
           },
         },
         Object {
@@ -26,7 +26,7 @@ Object {
               "amount": 3021.9,
               "currency": "EUR",
             },
-            "url": "http://hotels.kiwi.com/hotel/it/sheraton-milan-malpensa-airport-conference-centre.html?label=kiwi-application&latitude=45.4654&longitude=9.1859&radius=50&checkin=2017-11-16&checkout=2017-11-23&room1=A,A,4,6&room2=A,2&rows=10&selected_currency=EUR&lang=en",
+            "whitelabelUrl": "http://hotels.kiwi.com/hotel/it/sheraton-milan-malpensa-airport-conference-centre.html?label=kiwi-application&latitude=45.4654&longitude=9.1859&radius=50&checkin=2017-11-16&checkout=2017-11-23&room1=A,A,4,6&room2=A,2&rows=10&selected_currency=EUR&lang=en",
           },
         },
         Object {
@@ -38,7 +38,7 @@ Object {
               "amount": 11060,
               "currency": "EUR",
             },
-            "url": "http://hotels.kiwi.com/hotel/it/principe-di-savoia.html?label=kiwi-application&latitude=45.4654&longitude=9.1859&radius=50&checkin=2017-11-16&checkout=2017-11-23&room1=A,A,4,6&room2=A,2&rows=10&selected_currency=EUR&lang=en",
+            "whitelabelUrl": "http://hotels.kiwi.com/hotel/it/principe-di-savoia.html?label=kiwi-application&latitude=45.4654&longitude=9.1859&radius=50&checkin=2017-11-16&checkout=2017-11-23&room1=A,A,4,6&room2=A,2&rows=10&selected_currency=EUR&lang=en",
           },
         },
         Object {
@@ -50,7 +50,7 @@ Object {
               "amount": 1560.6,
               "currency": "EUR",
             },
-            "url": "http://hotels.kiwi.com/hotel/it/starhotels-grand-milan.html?label=kiwi-application&latitude=45.4654&longitude=9.1859&radius=50&checkin=2017-11-16&checkout=2017-11-23&room1=A,A,4,6&room2=A,2&rows=10&selected_currency=EUR&lang=en",
+            "whitelabelUrl": "http://hotels.kiwi.com/hotel/it/starhotels-grand-milan.html?label=kiwi-application&latitude=45.4654&longitude=9.1859&radius=50&checkin=2017-11-16&checkout=2017-11-23&room1=A,A,4,6&room2=A,2&rows=10&selected_currency=EUR&lang=en",
           },
         },
         Object {
@@ -62,7 +62,7 @@ Object {
               "amount": 5526,
               "currency": "EUR",
             },
-            "url": "http://hotels.kiwi.com/hotel/it/starhotels-rosa.html?label=kiwi-application&latitude=45.4654&longitude=9.1859&radius=50&checkin=2017-11-16&checkout=2017-11-23&room1=A,A,4,6&room2=A,2&rows=10&selected_currency=EUR&lang=en",
+            "whitelabelUrl": "http://hotels.kiwi.com/hotel/it/starhotels-rosa.html?label=kiwi-application&latitude=45.4654&longitude=9.1859&radius=50&checkin=2017-11-16&checkout=2017-11-23&room1=A,A,4,6&room2=A,2&rows=10&selected_currency=EUR&lang=en",
           },
         },
         Object {
@@ -74,7 +74,7 @@ Object {
               "amount": 16313,
               "currency": "EUR",
             },
-            "url": "http://hotels.kiwi.com/hotel/it/mandarin-oriental-milan.html?label=kiwi-application&latitude=45.4654&longitude=9.1859&radius=50&checkin=2017-11-16&checkout=2017-11-23&room1=A,A,4,6&room2=A,2&rows=10&selected_currency=EUR&lang=en",
+            "whitelabelUrl": "http://hotels.kiwi.com/hotel/it/mandarin-oriental-milan.html?label=kiwi-application&latitude=45.4654&longitude=9.1859&radius=50&checkin=2017-11-16&checkout=2017-11-23&room1=A,A,4,6&room2=A,2&rows=10&selected_currency=EUR&lang=en",
           },
         },
         Object {
@@ -86,7 +86,7 @@ Object {
               "amount": 5292,
               "currency": "EUR",
             },
-            "url": "http://hotels.kiwi.com/hotel/it/nh-collection-milano-president.html?label=kiwi-application&latitude=45.4654&longitude=9.1859&radius=50&checkin=2017-11-16&checkout=2017-11-23&room1=A,A,4,6&room2=A,2&rows=10&selected_currency=EUR&lang=en",
+            "whitelabelUrl": "http://hotels.kiwi.com/hotel/it/nh-collection-milano-president.html?label=kiwi-application&latitude=45.4654&longitude=9.1859&radius=50&checkin=2017-11-16&checkout=2017-11-23&room1=A,A,4,6&room2=A,2&rows=10&selected_currency=EUR&lang=en",
           },
         },
         Object {
@@ -98,7 +98,7 @@ Object {
               "amount": 3800,
               "currency": "EUR",
             },
-            "url": "http://hotels.kiwi.com/hotel/it/nh-milano-congress-centre.html?label=kiwi-application&latitude=45.4654&longitude=9.1859&radius=50&checkin=2017-11-16&checkout=2017-11-23&room1=A,A,4,6&room2=A,2&rows=10&selected_currency=EUR&lang=en",
+            "whitelabelUrl": "http://hotels.kiwi.com/hotel/it/nh-milano-congress-centre.html?label=kiwi-application&latitude=45.4654&longitude=9.1859&radius=50&checkin=2017-11-16&checkout=2017-11-23&room1=A,A,4,6&room2=A,2&rows=10&selected_currency=EUR&lang=en",
           },
         },
         Object {
@@ -110,7 +110,7 @@ Object {
               "amount": 3046.5,
               "currency": "EUR",
             },
-            "url": "http://hotels.kiwi.com/hotel/it/galileo-milano.html?label=kiwi-application&latitude=45.4654&longitude=9.1859&radius=50&checkin=2017-11-16&checkout=2017-11-23&room1=A,A,4,6&room2=A,2&rows=10&selected_currency=EUR&lang=en",
+            "whitelabelUrl": "http://hotels.kiwi.com/hotel/it/galileo-milano.html?label=kiwi-application&latitude=45.4654&longitude=9.1859&radius=50&checkin=2017-11-16&checkout=2017-11-23&room1=A,A,4,6&room2=A,2&rows=10&selected_currency=EUR&lang=en",
           },
         },
         Object {
@@ -122,7 +122,7 @@ Object {
               "amount": 1575.9,
               "currency": "EUR",
             },
-            "url": "http://hotels.kiwi.com/hotel/it/colleoni-agrate-brianza.html?label=kiwi-application&latitude=45.4654&longitude=9.1859&radius=50&checkin=2017-11-16&checkout=2017-11-23&room1=A,A,4,6&room2=A,2&rows=10&selected_currency=EUR&lang=en",
+            "whitelabelUrl": "http://hotels.kiwi.com/hotel/it/colleoni-agrate-brianza.html?label=kiwi-application&latitude=45.4654&longitude=9.1859&radius=50&checkin=2017-11-16&checkout=2017-11-23&room1=A,A,4,6&room2=A,2&rows=10&selected_currency=EUR&lang=en",
           },
         },
       ],

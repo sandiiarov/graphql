@@ -1,14 +1,14 @@
 // @flow
 
 import { GraphQLObjectType, GraphQLString, GraphQLBoolean } from 'graphql';
-import { globalIdField } from 'graphql-relay';
+import { globalIdField } from '../services/OpaqueIdentifier';
 
 import type { Identity } from '../types/User';
 
 export default new GraphQLObjectType({
   name: 'Identity',
   fields: {
-    id: globalIdField('Identity', ({ userId }: Identity) => userId),
+    id: globalIdField('identity', ({ userId }: Identity) => userId),
 
     databaseId: {
       type: GraphQLString,

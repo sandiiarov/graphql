@@ -1,13 +1,14 @@
 // @flow
 
 import { GraphQLNonNull } from 'graphql';
-import type { GraphQLResolveInfo, GraphQLFieldConfig } from 'graphql';
-
 import {
   connectionArgs,
   connectionDefinitions,
   connectionFromArray,
 } from 'graphql-relay';
+
+import type { GraphQLResolveInfo, GraphQLFieldConfig } from 'graphql';
+
 import _ from 'lodash';
 import GraphQLFlight from '../outputs/Flight';
 import FlightsSearchInput from '../inputs/FlightsSearchInput';
