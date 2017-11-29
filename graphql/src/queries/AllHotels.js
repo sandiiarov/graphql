@@ -1,11 +1,11 @@
 // @flow
 
+import { GraphQLNonNull, type GraphQLFieldConfig } from 'graphql';
 import {
   connectionArgs,
   connectionDefinitions,
   connectionFromPromisedArray,
 } from 'graphql-relay';
-import { GraphQLNonNull, type GraphQLFieldConfig } from 'graphql';
 
 import GraphQLHotelsSearchInput from '../inputs/HotelsSearchInput';
 import GraphQLHotel from '../outputs/Hotel';
@@ -31,7 +31,7 @@ export default ({
     { dataLoader }: GraphqlContextType,
   ) => {
     return connectionFromPromisedArray(
-      dataLoader.hotels.load({
+      dataLoader.allHotels.load({
         latitude: args.search.latitude,
         longitude: args.search.longitude,
         checkin: args.search.checkin,

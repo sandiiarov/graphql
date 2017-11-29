@@ -6,12 +6,14 @@ import {
   connectionDefinitions,
   connectionFromArray,
 } from 'graphql-relay';
+
 import type { GraphQLResolveInfo, GraphQLFieldConfig } from 'graphql';
 
 import GraphQLLocation from '../outputs/Location';
 import GraphQLRadius from '../inputs/RadiusInput';
 import GraphQLArea from '../inputs/AreaInput';
 import LocationsOptionsInput from '../inputs/LocationsOptions';
+
 import type { GraphqlContextType } from '../services/GraphqlContext';
 import type { Rectangle } from '../types/Location';
 

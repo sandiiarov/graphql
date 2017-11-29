@@ -7,6 +7,8 @@ import { get } from '../services/HttpRequest';
 import { ProxiedError } from '../services/errors/ProxiedError';
 import Config from '../../config/application';
 
+import type { HotelRoomType, HotelFacilityType } from './SingleHotel';
+
 type RoomsConfiguration = Array<{|
   adultsCount: number,
   children?: Array<{|
@@ -26,16 +28,19 @@ export type RequiredParameters = {|
 |};
 
 /**
- * Sanitized shape of single hotel.
+ * Sanitized shape of single hotel returned by API.
  */
-export type SanitizedHotelApiResponse = {|
-  hotelCurrencyCode: string,
-  hotelId: number,
+export type HotelType = {
+  id: string,
+  currencyCode: string,
   price: string, // float
-  photo: string,
-  url: string,
-  city: string,
-|};
+  photoUrl: string,
+  whitelabelUrl: string,
+  cityName: string,
+  // fields bellow are additionally provided by "single hotels" API endpoint
+  facilities: null | HotelFacilityType[],
+  rooms: null | HotelRoomType[],
+};
 
 export default new DataLoader((keys: RequiredParameters[]) =>
   fetchAllHotels(keys),
@@ -53,7 +58,7 @@ export default new DataLoader((keys: RequiredParameters[]) =>
  */
 function fetchAllHotels(
   keys: RequiredParameters[],
-): Promise<Array<Error | SanitizedHotelApiResponse[]>> {
+): Promise<Array<Error | HotelType[]>> {
   return Promise.all(
     keys.map(
       async ({
@@ -102,12 +107,12 @@ function fetchAllHotels(
 
 function sanitizeHotels(hotels) {
   return hotels.map(hotel => ({
-    hotelCurrencyCode: hotel.hotel_currency_code,
-    hotelId: hotel.hotel_id,
+    id: hotel.hotel_id,
+    currencyCode: hotel.hotel_currency_code,
     price: hotel.price,
-    photo: hotel.photo,
-    url: hotel.url,
-    city: hotel.city,
+    photoUrl: hotel.photo,
+    whitelabelUrl: hotel.url,
+    cityName: hotel.city,
   }));
 }
 

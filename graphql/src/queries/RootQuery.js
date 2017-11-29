@@ -8,6 +8,7 @@ import AllHotels from './AllHotels';
 import AllLocations from './AllLocations';
 import Booking from './Booking';
 import CurrentUser from './CurrentUser';
+import Hotel from './Hotel';
 
 export default new GraphQLObjectType({
   name: 'RootQuery',
@@ -19,5 +20,6 @@ export default new GraphQLObjectType({
     allLocations: AllLocations,
     booking: Booking,
     currentUser: CurrentUser,
+    hotel: Hotel,
   },
 });

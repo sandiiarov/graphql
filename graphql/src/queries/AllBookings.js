@@ -1,13 +1,14 @@
 // @flow
 
+import type { GraphQLFieldConfig } from 'graphql';
 import {
   connectionArgs,
   connectionDefinitions,
   connectionFromPromisedArray,
 } from 'graphql-relay';
-import type { GraphQLFieldConfig } from 'graphql';
 
 import GraphQLBooking from '../outputs/Booking';
+
 import type { GraphqlContextType } from '../services/GraphqlContext';
 
 const { connectionType: AllBookingsConnection } = connectionDefinitions({

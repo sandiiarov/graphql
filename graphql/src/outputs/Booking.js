@@ -1,7 +1,7 @@
 // @flow
 
 import { GraphQLInt, GraphQLList, GraphQLObjectType } from 'graphql';
-import { globalIdField } from 'graphql-relay';
+import { globalIdField } from '../services/OpaqueIdentifier';
 
 import GraphQLRouteStop from './RouteStop';
 import GraphQLAllowedBaggage from './AllowedBaggage';

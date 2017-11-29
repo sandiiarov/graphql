@@ -65,8 +65,8 @@ describe('all hotels query', () => {
                   currency
                 }
                 photoUrl
-                url
                 cityName
+                whitelabelUrl
               }
             }
           }
