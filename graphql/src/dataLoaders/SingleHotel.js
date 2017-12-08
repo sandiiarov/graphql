@@ -27,6 +27,7 @@ function sanitizeHotels(hotels): HotelType[] {
       cityName: hotel.city,
       facilities: sanitizeHotelFacilities(hotel.facilities),
       rooms: sanitizeHotelRooms(hotel.rooms),
+      photos: sanitizeHotelPhotos(hotel.photos),
     };
   });
 }
@@ -60,6 +61,22 @@ function sanitizeHotelRooms(rooms): HotelRoomType[] {
     maxPersons: room.max_persons,
     bedding: room.bedding,
     hotelId: room.hotel_id,
+  }));
+}
+
+export type HotelPhotoType = {|
+  id: string,
+  lowResolution: string,
+  highResolution: string,
+  hotelId: string,
+|};
+
+function sanitizeHotelPhotos(photos): HotelPhotoType[] {
+  return photos.map(photo => ({
+    id: photo.photo_id,
+    lowResolution: photo.url_max300,
+    highResolution: photo.url_original,
+    hotelId: photo.hotel_id,
   }));
 }
 

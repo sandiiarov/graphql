@@ -42,9 +42,6 @@ Object {
           Object {
             "cursor": "YXJyYXljb25uZWN0aW9uOjA=",
             "node": Object {
-              "hotel": Object {
-                "id": "aG90ZWw6MTkzMzI=",
-              },
               "id": "aG90ZWxGYWNpbGl0eToz",
               "name": "Restaurant",
             },
@@ -52,9 +49,6 @@ Object {
           Object {
             "cursor": "YXJyYXljb25uZWN0aW9uOjE=",
             "node": Object {
-              "hotel": Object {
-                "id": "aG90ZWw6MTkzMzI=",
-              },
               "id": "aG90ZWxGYWNpbGl0eTo1",
               "name": "Room service",
             },
@@ -64,6 +58,18 @@ Object {
       "id": "aG90ZWw6MTkzMzI=",
       "name": "Atahotel Expo Fiera",
       "photoUrl": "http://aff.bstatic.com/images/hotel/max500/588/58853664.jpg",
+      "photos": Object {
+        "edges": Array [
+          Object {
+            "cursor": "YXJyYXljb25uZWN0aW9uOjA=",
+            "node": Object {
+              "highResUrl": "http://aff.bstatic.com/images/hotel/max500/588/58853664.jpg",
+              "id": "aG90ZWxQaG90bzo1ODg1MzY2NA==",
+              "lowResUrl": "http://aff.bstatic.com/images/hotel/max300/588/58853664.jpg",
+            },
+          },
+        ],
+      },
       "price": Object {
         "amount": null,
         "currency": "EUR",
@@ -92,9 +98,6 @@ Object {
                   "type": "Large bed(s) (King size)",
                 },
               ],
-              "hotel": Object {
-                "id": "aG90ZWw6MTkzMzI=",
-              },
               "id": "aG90ZWxSb29tOjE5MzMyMDE=",
               "maxPersons": 2,
               "type": "Twin/Double",
@@ -109,9 +112,6 @@ Object {
                   "type": "Large bed(s) (King size)",
                 },
               ],
-              "hotel": Object {
-                "id": "aG90ZWw6MTkzMzI=",
-              },
               "id": "aG90ZWxSb29tOjE5MzMyMDM=",
               "maxPersons": 2,
               "type": "Double",
