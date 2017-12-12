@@ -11,6 +11,8 @@ import { globalIdField } from '../services/OpaqueIdentifier';
 import GraphQLPrice from './Price';
 import GraphQLHotelFacility from './HotelFacility';
 import GraphQLHotelRoom from './HotelRoom';
+import GraphQLHotelRating from './HotelRating';
+import GraphQLHotelReview from './HotelReview';
 
 import type { HotelType } from '../dataLoaders/AllHotels';
 import type { GraphqlContextType } from '../services/GraphqlContext';
@@ -28,6 +30,25 @@ export default new GraphQLObjectType({
         amount: price,
         currency: currencyCode,
       }),
+    },
+
+    name: {
+      description: 'Name of the hotel.',
+      type: GraphQLString,
+      resolve: ({ name }: HotelType) => name,
+    },
+
+    rating: {
+      // see: https://en.wikipedia.org/wiki/Hotel_rating
+      description: 'The star rating of the hotel.',
+      type: GraphQLHotelRating,
+      resolve: ({ rating }: HotelType) => rating,
+    },
+
+    review: {
+      description: 'Hotel review from hotel visitors.',
+      type: GraphQLHotelReview,
+      resolve: () => true, // we do not have necessary data yet, see: https://gitlab.skypicker.com/mobile/hotels-bookingcom-api/issues/1
     },
 
     photoUrl: {

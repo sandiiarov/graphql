@@ -32,11 +32,14 @@ export type RequiredParameters = {|
  */
 export type HotelType = {
   id: string,
+  name: string,
+  rating: number,
   currencyCode: string,
   price: string, // float
   photoUrl: string,
   whitelabelUrl: string,
   cityName: string,
+
   // fields bellow are additionally provided by "single hotels" API endpoint
   facilities: null | HotelFacilityType[],
   rooms: null | HotelRoomType[],
@@ -108,6 +111,8 @@ function fetchAllHotels(
 function sanitizeHotels(hotels) {
   return hotels.map(hotel => ({
     id: hotel.hotel_id,
+    name: hotel.hotel_name,
+    rating: Math.round(hotel.stars),
     currencyCode: hotel.hotel_currency_code,
     price: hotel.price,
     photoUrl: hotel.photo,

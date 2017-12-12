@@ -7,122 +7,222 @@ Object {
       "edges": Array [
         Object {
           "node": Object {
-            "cityName": "Pero",
-            "id": "aG90ZWw6MTkzMzI=",
-            "photoUrl": "http://aff.bstatic.com/images/hotel/max500/588/58853664.jpg",
+            "cityName": "Rho",
+            "id": "aG90ZWw6MjUyMTU=",
+            "name": "Italiana Hotels Milan Rho Fair",
+            "photoUrl": "http://aff.bstatic.com/images/hotel/max500/740/74030690.jpg",
             "price": Object {
-              "amount": 2214.2,
+              "amount": 1134.9,
               "currency": "EUR",
             },
-            "whitelabelUrl": "http://hotels.kiwi.com/hotel/it/expo-fiera.html?label=kiwi-application&latitude=45.4654&longitude=9.1859&radius=50&checkin=2017-11-16&checkout=2017-11-23&room1=A,A,4,6&room2=A,2&rows=10&selected_currency=EUR&lang=en",
+            "rating": Object {
+              "categoryName": "First Class",
+              "stars": 4,
+            },
+            "review": Object {
+              "count": null,
+              "description": null,
+              "score": null,
+            },
+            "whitelabelUrl": "http://hotels.kiwi.com/hotel/it/holiday-inn-milan-rho-fair.html?label=kiwi-application&latitude=45.4654&longitude=9.1859&radius=50&checkin=2017-12-16&checkout=2017-12-23&room1=A,A,4,6&room2=A,2&output=hotel_details&rows=10&selected_currency=EUR&lang=en",
           },
         },
         Object {
           "node": Object {
             "cityName": "Case Nuove",
             "id": "aG90ZWw6MjQ4NTM5",
+            "name": "Sheraton Milan Malpensa Airport Hotel & Conference Centre",
             "photoUrl": "http://aff.bstatic.com/images/hotel/max500/267/26753013.jpg",
             "price": Object {
-              "amount": 3021.9,
+              "amount": 2471.98,
               "currency": "EUR",
             },
-            "whitelabelUrl": "http://hotels.kiwi.com/hotel/it/sheraton-milan-malpensa-airport-conference-centre.html?label=kiwi-application&latitude=45.4654&longitude=9.1859&radius=50&checkin=2017-11-16&checkout=2017-11-23&room1=A,A,4,6&room2=A,2&rows=10&selected_currency=EUR&lang=en",
+            "rating": Object {
+              "categoryName": "First Class",
+              "stars": 4,
+            },
+            "review": Object {
+              "count": null,
+              "description": null,
+              "score": null,
+            },
+            "whitelabelUrl": "http://hotels.kiwi.com/hotel/it/sheraton-milan-malpensa-airport-conference-centre.html?label=kiwi-application&latitude=45.4654&longitude=9.1859&radius=50&checkin=2017-12-16&checkout=2017-12-23&room1=A,A,4,6&room2=A,2&output=hotel_details&rows=10&selected_currency=EUR&lang=en",
+          },
+        },
+        Object {
+          "node": Object {
+            "cityName": "Milan",
+            "id": "aG90ZWw6ODAwODM=",
+            "name": "Art Hotel Navigli",
+            "photoUrl": "http://aff.bstatic.com/images/hotel/max500/904/90423457.jpg",
+            "price": Object {
+              "amount": 2956,
+              "currency": "EUR",
+            },
+            "rating": Object {
+              "categoryName": "First Class",
+              "stars": 4,
+            },
+            "review": Object {
+              "count": null,
+              "description": null,
+              "score": null,
+            },
+            "whitelabelUrl": "http://hotels.kiwi.com/hotel/it/art-hotel-navigli.html?label=kiwi-application&latitude=45.4654&longitude=9.1859&radius=50&checkin=2017-12-16&checkout=2017-12-23&room1=A,A,4,6&room2=A,2&output=hotel_details&rows=10&selected_currency=EUR&lang=en",
           },
         },
         Object {
           "node": Object {
             "cityName": "Milan",
             "id": "aG90ZWw6ODc1NDE=",
+            "name": "Hotel Principe Di Savoia",
             "photoUrl": "http://aff.bstatic.com/images/hotel/max500/141/14189943.jpg",
             "price": Object {
-              "amount": 11060,
+              "amount": 5292,
               "currency": "EUR",
             },
-            "whitelabelUrl": "http://hotels.kiwi.com/hotel/it/principe-di-savoia.html?label=kiwi-application&latitude=45.4654&longitude=9.1859&radius=50&checkin=2017-11-16&checkout=2017-11-23&room1=A,A,4,6&room2=A,2&rows=10&selected_currency=EUR&lang=en",
-          },
-        },
-        Object {
-          "node": Object {
-            "cityName": "Saronno",
-            "id": "aG90ZWw6ODc5MDU=",
-            "photoUrl": "http://aff.bstatic.com/images/hotel/max500/108/108161730.jpg",
-            "price": Object {
-              "amount": 1560.6,
-              "currency": "EUR",
+            "rating": Object {
+              "categoryName": "Luxury",
+              "stars": 5,
             },
-            "whitelabelUrl": "http://hotels.kiwi.com/hotel/it/starhotels-grand-milan.html?label=kiwi-application&latitude=45.4654&longitude=9.1859&radius=50&checkin=2017-11-16&checkout=2017-11-23&room1=A,A,4,6&room2=A,2&rows=10&selected_currency=EUR&lang=en",
+            "review": Object {
+              "count": null,
+              "description": null,
+              "score": null,
+            },
+            "whitelabelUrl": "http://hotels.kiwi.com/hotel/it/principe-di-savoia.html?label=kiwi-application&latitude=45.4654&longitude=9.1859&radius=50&checkin=2017-12-16&checkout=2017-12-23&room1=A,A,4,6&room2=A,2&output=hotel_details&rows=10&selected_currency=EUR&lang=en",
           },
         },
         Object {
           "node": Object {
             "cityName": "Milan",
             "id": "aG90ZWw6ODM2ODk=",
+            "name": "Rosa Grand Milano - Starhotels Collezione",
             "photoUrl": "http://aff.bstatic.com/images/hotel/max500/141/14194079.jpg",
             "price": Object {
-              "amount": 5526,
+              "amount": 4668,
               "currency": "EUR",
             },
-            "whitelabelUrl": "http://hotels.kiwi.com/hotel/it/starhotels-rosa.html?label=kiwi-application&latitude=45.4654&longitude=9.1859&radius=50&checkin=2017-11-16&checkout=2017-11-23&room1=A,A,4,6&room2=A,2&rows=10&selected_currency=EUR&lang=en",
+            "rating": Object {
+              "categoryName": "First Class",
+              "stars": 4,
+            },
+            "review": Object {
+              "count": null,
+              "description": null,
+              "score": null,
+            },
+            "whitelabelUrl": "http://hotels.kiwi.com/hotel/it/starhotels-rosa.html?label=kiwi-application&latitude=45.4654&longitude=9.1859&radius=50&checkin=2017-12-16&checkout=2017-12-23&room1=A,A,4,6&room2=A,2&output=hotel_details&rows=10&selected_currency=EUR&lang=en",
+          },
+        },
+        Object {
+          "node": Object {
+            "cityName": "Sesto San Giovanni",
+            "id": "aG90ZWw6ODkwMTc=",
+            "name": "NH Milano Concordia",
+            "photoUrl": "http://aff.bstatic.com/images/hotel/max500/117/117696570.jpg",
+            "price": Object {
+              "amount": 1238.4,
+              "currency": "EUR",
+            },
+            "rating": Object {
+              "categoryName": "First Class",
+              "stars": 4,
+            },
+            "review": Object {
+              "count": null,
+              "description": null,
+              "score": null,
+            },
+            "whitelabelUrl": "http://hotels.kiwi.com/hotel/it/nh-milano-concordia.html?label=kiwi-application&latitude=45.4654&longitude=9.1859&radius=50&checkin=2017-12-16&checkout=2017-12-23&room1=A,A,4,6&room2=A,2&output=hotel_details&rows=10&selected_currency=EUR&lang=en",
           },
         },
         Object {
           "node": Object {
             "cityName": "Milan",
-            "id": "aG90ZWw6MTM0NDQ0OA==",
-            "photoUrl": "http://aff.bstatic.com/images/hotel/max500/628/62881831.jpg",
+            "id": "aG90ZWw6NDYyODMw",
+            "name": "Four Seasons Hotel Milano",
+            "photoUrl": "http://aff.bstatic.com/images/hotel/max500/193/19310448.jpg",
             "price": Object {
-              "amount": 16313,
+              "amount": 11715.62,
               "currency": "EUR",
             },
-            "whitelabelUrl": "http://hotels.kiwi.com/hotel/it/mandarin-oriental-milan.html?label=kiwi-application&latitude=45.4654&longitude=9.1859&radius=50&checkin=2017-11-16&checkout=2017-11-23&room1=A,A,4,6&room2=A,2&rows=10&selected_currency=EUR&lang=en",
+            "rating": Object {
+              "categoryName": "Luxury",
+              "stars": 5,
+            },
+            "review": Object {
+              "count": null,
+              "description": null,
+              "score": null,
+            },
+            "whitelabelUrl": "http://hotels.kiwi.com/hotel/it/four-seasons-milano.html?label=kiwi-application&latitude=45.4654&longitude=9.1859&radius=50&checkin=2017-12-16&checkout=2017-12-23&room1=A,A,4,6&room2=A,2&output=hotel_details&rows=10&selected_currency=EUR&lang=en",
           },
         },
         Object {
           "node": Object {
             "cityName": "Milan",
-            "id": "aG90ZWw6MjI2MDk0",
-            "photoUrl": "http://aff.bstatic.com/images/hotel/max500/113/113569974.jpg",
+            "id": "aG90ZWw6ODMxMTI=",
+            "name": "Hotel Tocq",
+            "photoUrl": "http://aff.bstatic.com/images/hotel/max500/931/93128199.jpg",
             "price": Object {
-              "amount": 5292,
+              "amount": 3110.15,
               "currency": "EUR",
             },
-            "whitelabelUrl": "http://hotels.kiwi.com/hotel/it/nh-collection-milano-president.html?label=kiwi-application&latitude=45.4654&longitude=9.1859&radius=50&checkin=2017-11-16&checkout=2017-11-23&room1=A,A,4,6&room2=A,2&rows=10&selected_currency=EUR&lang=en",
+            "rating": Object {
+              "categoryName": "First Class",
+              "stars": 4,
+            },
+            "review": Object {
+              "count": null,
+              "description": null,
+              "score": null,
+            },
+            "whitelabelUrl": "http://hotels.kiwi.com/hotel/it/hotel-tocq.html?label=kiwi-application&latitude=45.4654&longitude=9.1859&radius=50&checkin=2017-12-16&checkout=2017-12-23&room1=A,A,4,6&room2=A,2&output=hotel_details&rows=10&selected_currency=EUR&lang=en",
           },
         },
         Object {
           "node": Object {
-            "cityName": "Assago",
-            "id": "aG90ZWw6ODE3Mjk=",
-            "photoUrl": "http://aff.bstatic.com/images/hotel/max500/118/118609678.jpg",
+            "cityName": "Saronno",
+            "id": "aG90ZWw6ODc5MDU=",
+            "name": "Starhotels Grand Milan",
+            "photoUrl": "http://aff.bstatic.com/images/hotel/max500/108/108161730.jpg",
             "price": Object {
-              "amount": 3800,
+              "amount": 1392,
               "currency": "EUR",
             },
-            "whitelabelUrl": "http://hotels.kiwi.com/hotel/it/nh-milano-congress-centre.html?label=kiwi-application&latitude=45.4654&longitude=9.1859&radius=50&checkin=2017-11-16&checkout=2017-11-23&room1=A,A,4,6&room2=A,2&rows=10&selected_currency=EUR&lang=en",
+            "rating": Object {
+              "categoryName": "First Class",
+              "stars": 4,
+            },
+            "review": Object {
+              "count": null,
+              "description": null,
+              "score": null,
+            },
+            "whitelabelUrl": "http://hotels.kiwi.com/hotel/it/starhotels-grand-milan.html?label=kiwi-application&latitude=45.4654&longitude=9.1859&radius=50&checkin=2017-12-16&checkout=2017-12-23&room1=A,A,4,6&room2=A,2&output=hotel_details&rows=10&selected_currency=EUR&lang=en",
           },
         },
         Object {
           "node": Object {
             "cityName": "Milan",
-            "id": "aG90ZWw6ODg3MDM=",
-            "photoUrl": "http://aff.bstatic.com/images/hotel/max500/314/31473350.jpg",
+            "id": "aG90ZWw6MjE4MTc1",
+            "name": "Starhotels Echo",
+            "photoUrl": "http://aff.bstatic.com/images/hotel/max500/142/14204975.jpg",
             "price": Object {
-              "amount": 3046.5,
+              "amount": 3298.96,
               "currency": "EUR",
             },
-            "whitelabelUrl": "http://hotels.kiwi.com/hotel/it/galileo-milano.html?label=kiwi-application&latitude=45.4654&longitude=9.1859&radius=50&checkin=2017-11-16&checkout=2017-11-23&room1=A,A,4,6&room2=A,2&rows=10&selected_currency=EUR&lang=en",
-          },
-        },
-        Object {
-          "node": Object {
-            "cityName": "Agrate Brianza",
-            "id": "aG90ZWw6MTg2NDQw",
-            "photoUrl": "http://aff.bstatic.com/images/hotel/max500/517/51725598.jpg",
-            "price": Object {
-              "amount": 1575.9,
-              "currency": "EUR",
+            "rating": Object {
+              "categoryName": "First Class",
+              "stars": 4,
             },
-            "whitelabelUrl": "http://hotels.kiwi.com/hotel/it/colleoni-agrate-brianza.html?label=kiwi-application&latitude=45.4654&longitude=9.1859&radius=50&checkin=2017-11-16&checkout=2017-11-23&room1=A,A,4,6&room2=A,2&rows=10&selected_currency=EUR&lang=en",
+            "review": Object {
+              "count": null,
+              "description": null,
+              "score": null,
+            },
+            "whitelabelUrl": "http://hotels.kiwi.com/hotel/it/starhotels-echo.html?label=kiwi-application&latitude=45.4654&longitude=9.1859&radius=50&checkin=2017-12-16&checkout=2017-12-23&room1=A,A,4,6&room2=A,2&output=hotel_details&rows=10&selected_currency=EUR&lang=en",
           },
         },
       ],
@@ -139,7 +239,7 @@ Object {
         Object {
           "cursor": "YXJyYXljb25uZWN0aW9uOjA=",
           "node": Object {
-            "id": "aG90ZWw6MTkzMzI=",
+            "id": "aG90ZWw6MjUyMTU=",
           },
         },
         Object {
@@ -151,13 +251,13 @@ Object {
         Object {
           "cursor": "YXJyYXljb25uZWN0aW9uOjI=",
           "node": Object {
-            "id": "aG90ZWw6ODc1NDE=",
+            "id": "aG90ZWw6ODAwODM=",
           },
         },
         Object {
           "cursor": "YXJyYXljb25uZWN0aW9uOjM=",
           "node": Object {
-            "id": "aG90ZWw6ODc5MDU=",
+            "id": "aG90ZWw6ODc1NDE=",
           },
         },
         Object {
@@ -169,31 +269,31 @@ Object {
         Object {
           "cursor": "YXJyYXljb25uZWN0aW9uOjU=",
           "node": Object {
-            "id": "aG90ZWw6MTM0NDQ0OA==",
+            "id": "aG90ZWw6ODkwMTc=",
           },
         },
         Object {
           "cursor": "YXJyYXljb25uZWN0aW9uOjY=",
           "node": Object {
-            "id": "aG90ZWw6MjI2MDk0",
+            "id": "aG90ZWw6NDYyODMw",
           },
         },
         Object {
           "cursor": "YXJyYXljb25uZWN0aW9uOjc=",
           "node": Object {
-            "id": "aG90ZWw6ODE3Mjk=",
+            "id": "aG90ZWw6ODMxMTI=",
           },
         },
         Object {
           "cursor": "YXJyYXljb25uZWN0aW9uOjg=",
           "node": Object {
-            "id": "aG90ZWw6ODg3MDM=",
+            "id": "aG90ZWw6ODc5MDU=",
           },
         },
         Object {
           "cursor": "YXJyYXljb25uZWN0aW9uOjk=",
           "node": Object {
-            "id": "aG90ZWw6MTg2NDQw",
+            "id": "aG90ZWw6MjE4MTc1",
           },
         },
       ],

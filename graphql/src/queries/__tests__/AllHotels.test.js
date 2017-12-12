@@ -6,12 +6,12 @@ import { Hotels } from '../../datasets';
 beforeEach(() => {
   // minimal query
   RestApiMock.onGet(
-    'https://hotels-api.skypicker.com/api/hotels?latitude=45.4654&longitude=9.1859&radius=50&checkin=2017-11-16&checkout=2017-11-23&room1=A',
+    'https://hotels-api.skypicker.com/api/hotels?output=hotel_details&latitude=45.4654&longitude=9.1859&radius=50&checkin=2017-11-16&checkout=2017-11-23&room1=A',
   ).replyWithData(Hotels.all);
 
   // full query
   RestApiMock.onGet(
-    'https://hotels-api.skypicker.com/api/hotels?latitude=45.4654&longitude=9.1859&radius=50&checkin=2017-11-16&checkout=2017-11-23&room1=A%2CA%2C4%2C6&room2=A%2C2',
+    'https://hotels-api.skypicker.com/api/hotels?output=hotel_details&latitude=45.4654&longitude=9.1859&radius=50&checkin=2017-11-16&checkout=2017-11-23&room1=A%2CA%2C4%2C6&room2=A%2C2',
   ).replyWithData(Hotels.all);
 });
 
@@ -60,6 +60,7 @@ describe('all hotels query', () => {
             edges {
               node {
                 id
+                name
                 price {
                   amount
                   currency
@@ -67,6 +68,15 @@ describe('all hotels query', () => {
                 photoUrl
                 cityName
                 whitelabelUrl
+                rating {
+                  stars
+                  categoryName
+                }
+                review {
+                  score
+                  description
+                  count
+                }
               }
             }
           }

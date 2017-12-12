@@ -72,9 +72,19 @@ it('works with full example (containing circular references)', async () => {
               amount
               currency
             }
+            name
             photoUrl
             cityName
             whitelabelUrl
+            rating {
+              stars
+              categoryName
+            }
+            review {
+              score
+              description
+              count
+            }
             facilities(first: 2) {
               edges {
                 cursor
