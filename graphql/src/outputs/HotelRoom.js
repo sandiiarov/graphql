@@ -8,16 +8,13 @@ import {
 } from 'graphql';
 import { globalIdField } from '../services/OpaqueIdentifier';
 
-import GraphQLHotel from './Hotel';
 import GraphQLHotelRoomBedding from './HotelRoomBedding';
 
-import type { GraphqlContextType } from '../services/GraphqlContext';
 import type { HotelRoomType } from '../dataLoaders/SingleHotel';
 
 export default new GraphQLObjectType({
   name: 'HotelRoom',
-  // fields are thunk because there is circular dependency with Hotel type
-  fields: () => ({
+  fields: {
     id: globalIdField('hotelRoom', ({ id }: HotelRoomType) => id),
 
     type: {
@@ -35,16 +32,5 @@ export default new GraphQLObjectType({
       type: new GraphQLList(GraphQLHotelRoomBedding),
       resolve: ({ bedding }: HotelRoomType) => bedding,
     },
-
-    hotel: {
-      type: GraphQLHotel,
-      resolve: (
-        { hotelId }: HotelRoomType,
-        params: Object,
-        { dataLoader }: GraphqlContextType,
-      ) => {
-        return dataLoader.singleHotel.load(hotelId);
-      },
-    },
-  }),
+  },
 });

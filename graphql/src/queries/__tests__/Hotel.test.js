@@ -91,9 +91,6 @@ it('works with full example (containing circular references)', async () => {
                 node {
                   id
                   name
-                  hotel {
-                    id
-                  }
                 }
               }
             }
@@ -108,9 +105,16 @@ it('works with full example (containing circular references)', async () => {
                     type
                     amount
                   }
-                  hotel {
-                    id
-                  }
+                }
+              }
+            }
+            photos(first: 2) {
+              edges {
+                cursor
+                node {
+                  id
+                  lowResUrl
+                  highResUrl
                 }
               }
             }

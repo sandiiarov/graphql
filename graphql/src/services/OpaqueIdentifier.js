@@ -18,6 +18,7 @@ type AvailableOpaqueTypes =
   | 'hotel'
   | 'hotelFacility'
   | 'hotelRoom'
+  | 'hotelPhoto'
   | 'identity';
 
 export const globalIdField = (

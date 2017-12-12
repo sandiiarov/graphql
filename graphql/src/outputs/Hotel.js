@@ -11,6 +11,7 @@ import { globalIdField } from '../services/OpaqueIdentifier';
 import GraphQLPrice from '../common/types/outputs/Price';
 import GraphQLHotelFacility from './HotelFacility';
 import GraphQLHotelRoom from './HotelRoom';
+import GraphQLHotelPhoto from './HotelPhoto';
 import GraphQLHotelRating from './HotelRating';
 import GraphQLHotelReview from './HotelReview';
 
@@ -97,6 +98,23 @@ export default new GraphQLObjectType({
       ) => {
         const { rooms } = await dataLoader.singleHotel.load(id);
         return connectionFromArray(rooms, args);
+      },
+    },
+
+    photos: {
+      description:
+        'All available photos of the hotel in high and low resolution.',
+      type: connectionDefinitions({
+        nodeType: GraphQLHotelPhoto,
+      }).connectionType,
+      args: connectionArgs,
+      resolve: async (
+        { id }: HotelType,
+        args: Object,
+        { dataLoader }: GraphqlContextType,
+      ) => {
+        const { photos } = await dataLoader.singleHotel.load(id);
+        return connectionFromArray(photos, args);
       },
     },
   },

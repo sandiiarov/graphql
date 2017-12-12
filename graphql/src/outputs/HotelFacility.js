@@ -3,15 +3,11 @@
 import { GraphQLObjectType, GraphQLString } from 'graphql';
 import { globalIdField } from '../services/OpaqueIdentifier';
 
-import GraphQLHotel from './Hotel';
-
-import type { GraphqlContextType } from '../services/GraphqlContext';
 import type { HotelFacilityType } from '../dataLoaders/SingleHotel';
 
 export default new GraphQLObjectType({
   name: 'HotelFacility',
-  // fields are thunk because there is circular dependency with Hotel type
-  fields: () => ({
+  fields: {
     id: globalIdField('hotelFacility', ({ id }: HotelFacilityType) => id),
 
     name: {
@@ -19,16 +15,5 @@ export default new GraphQLObjectType({
       type: GraphQLString,
       resolve: ({ name }: HotelFacilityType) => name,
     },
-
-    hotel: {
-      type: GraphQLHotel,
-      resolve: (
-        { hotelId }: HotelFacilityType,
-        params: Object,
-        { dataLoader }: GraphqlContextType,
-      ) => {
-        return dataLoader.singleHotel.load(hotelId);
-      },
-    },
-  }),
+  },
 });
