@@ -1,7 +1,7 @@
 // @flow
 
 import DataLoader from 'dataloader';
-import { post } from '../../services/HttpRequest';
+import { post } from '../../common/services/HttpRequest';
 import Config from '../../../config/application';
 
 import type { Identity } from '../User';

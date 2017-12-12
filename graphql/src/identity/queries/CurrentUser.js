@@ -3,7 +3,7 @@
 import type { GraphQLFieldConfig } from 'graphql';
 
 import GraphQLIdentity from '../types/outputs/Identity';
-import type { GraphqlContextType } from '../../services/GraphqlContext';
+import type { GraphqlContextType } from '../../common/services/GraphqlContext';
 
 export default ({
   type: GraphQLIdentity, // may be null (doesn't exist)

@@ -1,8 +1,11 @@
 // @flow
 
-import { graphql, RestApiMock } from '../../../../services/TestingTools';
+import { graphql, RestApiMock } from '../../../../common/services/TestingTools';
 import config from '../../../../../config/application';
-import { Flight, Location } from '../../../../datasets/index';
+import PrgMexCsCzDataset from '../../../datasets/prg-mex-cs-CZ.json';
+import NoFlightsDataset from '../../../datasets/no-results.json';
+import PragueCsCzDataset from '../../../../location/datasets/prague-cs-CZ.json';
+import MexCsCzDataset from '../../../../location/datasets/mex-cs-CZ.json';
 
 beforeEach(() => {
   RestApiMock.onGet(
@@ -13,7 +16,7 @@ beforeEach(() => {
       dateTo: '08/09/2017',
       locale: 'cz',
     }),
-  ).replyWithData(Flight.prgMexCsCZ);
+  ).replyWithData(PrgMexCsCzDataset);
 
   RestApiMock.onGet(
     config.restApiEndpoint.allFlights({
@@ -23,7 +26,7 @@ beforeEach(() => {
       dateTo: '08/09/2017',
       locale: 'cz',
     }),
-  ).replyWithData(Flight.noResults);
+  ).replyWithData(NoFlightsDataset);
 
   RestApiMock.onGet(
     config.restApiEndpoint.allFlights({
@@ -33,7 +36,7 @@ beforeEach(() => {
       dateTo: '08/09/2017',
       locale: 'cz',
     }),
-  ).replyWithData(Flight.prgMexCsCZ);
+  ).replyWithData(PrgMexCsCzDataset);
 
   ['PRG', 'Praha'].forEach(location => {
     RestApiMock.onGet(
@@ -41,12 +44,12 @@ beforeEach(() => {
         term: location,
         locale: 'cs-CZ',
       }),
-    ).replyWithData(Location.pragueCsCZ);
+    ).replyWithData(PragueCsCzDataset);
   });
 
   RestApiMock.onGet(
     config.restApiEndpoint.allLocations({ term: 'MEX', locale: 'cs-CZ' }),
-  ).replyWithData(Location.mexCsCZ);
+  ).replyWithData(MexCsCzDataset);
 });
 
 describe('all flights query', () => {

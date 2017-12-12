@@ -1,11 +1,11 @@
 // @flow
 
-import { RestApiMock } from '../../../services/TestingTools';
+import { RestApiMock } from '../../services/TestingTools';
 import config from '../../../../config/application';
-import { Rates } from '../../../datasets/index';
+import RatesDataset from '../../datasets/rates.json';
 import createRatesLoader from '../Rates';
 
-RestApiMock.onGet(config.restApiEndpoint.rates).replyWithData(Rates.all);
+RestApiMock.onGet(config.restApiEndpoint.rates).replyWithData(RatesDataset);
 
 describe('Rates dataloader', () => {
   it('should load rate', async () => {

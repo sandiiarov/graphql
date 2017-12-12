@@ -1,13 +1,13 @@
 // @flow
 
 import { GraphQLObjectType, GraphQLBoolean, GraphQLInt } from 'graphql';
-import { globalIdField } from '../../../services/OpaqueIdentifier';
+import { globalIdField } from '../../../common/services/OpaqueIdentifier';
 
 import GraphQLRouteStop from './RouteStop';
 import GraphQLAirline from './Airline';
 import FlightDurationInMinutes from '../../resolvers/FlightDuration';
 
-import type { GraphqlContextType } from '../../../services/GraphqlContext';
+import type { GraphqlContextType } from '../../../common/services/GraphqlContext';
 import type { DepartureArrival, Leg } from '../../Flight';
 
 export default new GraphQLObjectType({

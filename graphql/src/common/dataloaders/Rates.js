@@ -1,7 +1,7 @@
 // @flow
 
 import DataLoader from 'dataloader';
-import { get } from '../../services/HttpRequest';
+import { get } from '../services/HttpRequest';
 import Config from '../../../config/application';
 
 let ratesCache = null;

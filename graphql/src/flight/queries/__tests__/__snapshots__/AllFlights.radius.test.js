@@ -1,17 +1,20 @@
 // @flow
 
-import { graphql, RestApiMock } from '../../../../services/TestingTools';
+import { graphql, RestApiMock } from '../../../../common/services/TestingTools';
 import config from '../../../../../config/application';
-import { Flight, Location } from '../../../../datasets/index';
+import PragueDataset from '../../../../location/datasets/prague.json';
+import MexicoDataset from '../../../../location/datasets/mexico.json';
+import NoFlightsDataset from '../../../datasets/no-results.json';
+import PrgFraMexDataset from '../../../datasets/prg,fra-mex.json';
 
 beforeEach(() => {
   RestApiMock.onGet(
     config.restApiEndpoint.allLocations({ term: 'Prague' }),
-  ).replyWithData(Location.prague);
+  ).replyWithData(PragueDataset);
 
   RestApiMock.onGet(
     config.restApiEndpoint.allLocations({ term: 'Mexico' }),
-  ).replyWithData(Location.mexico);
+  ).replyWithData(MexicoDataset);
 
   RestApiMock.onGet(
     config.restApiEndpoint.allFlights({
@@ -20,7 +23,7 @@ beforeEach(() => {
       dateFrom: '08/08/2017',
       dateTo: '08/09/2017',
     }),
-  ).replyWithData(Flight.noResults);
+  ).replyWithData(NoFlightsDataset);
 
   RestApiMock.onGet(
     config.restApiEndpoint.allFlights({
@@ -29,7 +32,7 @@ beforeEach(() => {
       dateFrom: '08/08/2017',
       dateTo: '08/09/2017',
     }),
-  ).replyWithData(Flight.prgFraMex);
+  ).replyWithData(PrgFraMexDataset);
 
   ['PRG', 'MXP', 'BRU', 'CUN', 'MEX', 'FRA', 'LIN', 'LHR'].forEach(iata => {
     RestApiMock.onGet(

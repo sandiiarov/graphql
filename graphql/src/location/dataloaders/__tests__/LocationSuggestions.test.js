@@ -1,13 +1,13 @@
 // @flow
 
-import { RestApiMock } from '../../../services/TestingTools';
+import { RestApiMock } from '../../../common/services/TestingTools';
 import LocationSuggestions from '../LocationSuggestions';
 import options from '../../../../config/application';
 
 import locationsJsonPRG from './__datasets__/locations-prg.json';
 import locationsJsonBRQ from './__datasets__/locations-brq.json';
 import locationsJsonUnknown from './__datasets__/locations-unknown.json';
-import { Location } from '../../../datasets/index';
+import PragueDataset from '../../datasets/prague-cs-CZ.json';
 
 beforeEach(() => {
   RestApiMock.onGet(
@@ -33,7 +33,7 @@ beforeEach(() => {
       term: 'PRG',
       locale: 'cs-CZ',
     }),
-  ).replyWithData(Location.pragueCsCZ);
+  ).replyWithData(PragueDataset);
 });
 
 it('returns PRG suggestions', async () => {

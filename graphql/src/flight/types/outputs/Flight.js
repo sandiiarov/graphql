@@ -10,7 +10,7 @@ import {
 
 import type { GraphQLResolveInfo } from 'graphql';
 
-import { globalIdField } from '../../../services/OpaqueIdentifier';
+import { globalIdField } from '../../../common/services/OpaqueIdentifier';
 import GraphQLRouteStop from './RouteStop';
 import GraphQLLeg from './Leg';
 import GraphQLAirline from './Airline';
@@ -18,7 +18,7 @@ import GraphQLPrice from '../../../common/types/outputs/Price';
 import FlightDurationInMinutes from '../../resolvers/FlightDuration';
 import { buildBookingUrl } from '../../dataloaders/BookingUrlBuilder';
 
-import type { GraphqlContextType } from '../../../services/GraphqlContext';
+import type { GraphqlContextType } from '../../../common/services/GraphqlContext';
 import type { Price } from '../../../common/Price';
 import type { DepartureArrival, Flight, Leg, Airline } from '../../Flight';
 

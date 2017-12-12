@@ -3,12 +3,12 @@
 import { GraphQLNonNull, GraphQLString } from 'graphql';
 import type { GraphQLFieldConfig } from 'graphql';
 
-import { post } from '../../services/HttpRequest';
+import { post } from '../../common/services/HttpRequest';
 import config from '../../../config/application';
 import GraphQLUser from '../types/outputs/User';
-import { createContext } from '../../services/GraphqlContext';
-import { ProxiedError } from '../../services/errors/ProxiedError';
-import type { GraphqlContextType } from '../../services/GraphqlContext';
+import { createContext } from '../../common/services/GraphqlContext';
+import { ProxiedError } from '../../common/services/errors/ProxiedError';
+import type { GraphqlContextType } from '../../common/services/GraphqlContext';
 import type { Login } from '../User';
 
 export default ({

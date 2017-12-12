@@ -1,7 +1,7 @@
 // @flow
 
 import { GraphQLInt, GraphQLList, GraphQLObjectType } from 'graphql';
-import { globalIdField } from '../../../services/OpaqueIdentifier';
+import { globalIdField } from '../../../common/services/OpaqueIdentifier';
 
 import GraphQLRouteStop from '../../../flight/types/outputs/RouteStop';
 import GraphQLAllowedBaggage from './AllowedBaggage';
@@ -12,7 +12,7 @@ import GraphQLBookingStatus from '../enums/BookingStatus';
 import type { AllowedBaggage } from '../../Baggage';
 import type { Booking, BookingAssets } from '../../Booking';
 import type { DepartureArrival, Leg } from '../../../flight/Flight';
-import type { GraphqlContextType } from '../../../services/GraphqlContext';
+import type { GraphqlContextType } from '../../../common/services/GraphqlContext';
 
 export default new GraphQLObjectType({
   name: 'Booking',

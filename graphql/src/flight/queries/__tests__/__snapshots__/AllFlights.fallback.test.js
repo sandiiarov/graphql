@@ -1,8 +1,13 @@
 // @flow
 
-import { graphql, RestApiMock } from '../../../../services/TestingTools';
+import { graphql, RestApiMock } from '../../../../common/services/TestingTools';
 import config from '../../../../../config/application';
-import { Flight, Location } from '../../../../datasets/index';
+import PrgMexDataset from '../../../datasets/prg-mex.json';
+import NoFlightsDataset from '../../../datasets/no-results.json';
+import PrgFraMexDataset from '../../../datasets/prg,fra-mex.json';
+import PragueDataset from '../../../../location/datasets/prague.json';
+import FrankfurtDataset from '../../../../location/datasets/frankfurt.json';
+import MexicoDataset from '../../../../location/datasets/mexico.json';
 
 beforeEach(() => {
   RestApiMock.onGet(
@@ -12,7 +17,7 @@ beforeEach(() => {
       dateFrom: '08/08/2017',
       dateTo: '08/09/2017',
     }),
-  ).replyWithData(Flight.noResults);
+  ).replyWithData(NoFlightsDataset);
 
   RestApiMock.onGet(
     config.restApiEndpoint.allFlights({
@@ -21,7 +26,7 @@ beforeEach(() => {
       dateFrom: '08/08/2017',
       dateTo: '08/09/2017',
     }),
-  ).replyWithData(Flight.prgMex);
+  ).replyWithData(PrgMexDataset);
 
   RestApiMock.onGet(
     config.restApiEndpoint.allFlights({
@@ -30,7 +35,7 @@ beforeEach(() => {
       dateFrom: '08/08/2017',
       dateTo: '08/09/2017',
     }),
-  ).replyWithData(Flight.noResults);
+  ).replyWithData(NoFlightsDataset);
 
   RestApiMock.onGet(
     config.restApiEndpoint.allFlights({
@@ -39,19 +44,19 @@ beforeEach(() => {
       dateFrom: '08/08/2017',
       dateTo: '08/09/2017',
     }),
-  ).replyWithData(Flight.prgFraMex);
+  ).replyWithData(PrgFraMexDataset);
 
   RestApiMock.onGet(
     config.restApiEndpoint.allLocations({ term: 'Prague' }),
-  ).replyWithData(Location.prague);
+  ).replyWithData(PragueDataset);
 
   RestApiMock.onGet(
     config.restApiEndpoint.allLocations({ term: 'Frankfurt' }),
-  ).replyWithData(Location.frankfurt);
+  ).replyWithData(FrankfurtDataset);
 
   RestApiMock.onGet(
     config.restApiEndpoint.allLocations({ term: 'Mexico' }),
-  ).replyWithData(Location.mexico);
+  ).replyWithData(MexicoDataset);
 
   [
     'PRG',

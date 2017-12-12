@@ -11,8 +11,10 @@ beforeEach(() => {
   mockCalledURLs = [];
 });
 
-jest.mock('../../../services/HttpRequest', () => {
-  const HttpRequest = jest.genMockFromModule('../../../services/HttpRequest');
+jest.mock('../../../common/services/HttpRequest', () => {
+  const HttpRequest = jest.genMockFromModule(
+    '../../../common/services/HttpRequest',
+  );
   HttpRequest.get = url => {
     mockCalledURLs.push(url);
     return {

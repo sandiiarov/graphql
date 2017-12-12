@@ -1,8 +1,10 @@
 // @flow
 
-import { graphql, RestApiMock } from '../../../../services/TestingTools';
+import { graphql, RestApiMock } from '../../../../common/services/TestingTools';
 import config from '../../../../../config/application';
-import { Flight, Location } from '../../../../datasets/index';
+import PrgMexDataset from '../../../datasets/prg-mex.json';
+import PragueDataset from '../../../../location/datasets/prague.json';
+import MexicoDataset from '../../../../location/datasets/mexico.json';
 
 beforeEach(() => {
   RestApiMock.onGet(
@@ -13,15 +15,15 @@ beforeEach(() => {
       dateTo: '08/09/2017',
       maxStopovers: 0,
     }),
-  ).replyWithData(Flight.prgMex);
+  ).replyWithData(PrgMexDataset);
 
   RestApiMock.onGet(
     config.restApiEndpoint.allLocations({ term: 'PRG' }),
-  ).replyWithData(Location.prague);
+  ).replyWithData(PragueDataset);
 
   RestApiMock.onGet(
     config.restApiEndpoint.allLocations({ term: 'MEX' }),
-  ).replyWithData(Location.mexico);
+  ).replyWithData(MexicoDataset);
 });
 
 describe('all flights filters', () => {

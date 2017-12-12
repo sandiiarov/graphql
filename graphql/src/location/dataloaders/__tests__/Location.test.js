@@ -1,6 +1,6 @@
 // @flow
 
-import { RestApiMock } from '../../../services/TestingTools';
+import { RestApiMock } from '../../../common/services/TestingTools';
 import Location from '../Location';
 import LocationSuggestions from '../LocationSuggestions';
 import options from '../../../../config/application';

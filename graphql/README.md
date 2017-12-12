@@ -37,23 +37,6 @@ Second option is recommended but the first one works everytime on chrome based b
 
 # Directory structure
 
-This directory structure is deprecated, see below.
-
-```
-src
-├── dataLoaders         (for data loading)
-├── datasets            (responses from backend REST API)
-├── inputs              (GraphQLInputObjectTypes)
-├── mutations           (GraphQL mutations)
-├── outputs             (GraphQLObjectTypes)
-├── queries             (GraphQL queries)
-├── resolvers           (more complicated GraphQL resolvers)
-├── services            (system functions and classes)
-└── types               (internal Flow types definition)
-```
-
-New proposed directory structure:
-
 ```
 src
 ├── booking

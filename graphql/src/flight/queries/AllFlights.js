@@ -17,7 +17,7 @@ import FlightsFiltersInput from '../types/inputs/FlightsFiltersInput';
 import { sanitizeApiResponse } from '../dataloaders/ApiSanitizer';
 import { validateDates } from '../resolvers/FlightDatesValidator';
 
-import type { GraphqlContextType } from '../../services/GraphqlContext';
+import type { GraphqlContextType } from '../../common/services/GraphqlContext';
 
 const { connectionType: AllFlightsConnection } = connectionDefinitions({
   nodeType: GraphQLFlight,

@@ -1,6 +1,6 @@
 // @flow
 
-import { RestApiMock } from '../../../services/TestingTools';
+import { RestApiMock } from '../../../common/services/TestingTools';
 import IdentityDataloader from '../Identity';
 import config from '../../../../config/application';
 import userMockData from './__datasets__/user.get.json';

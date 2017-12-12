@@ -1,12 +1,12 @@
 // @flow
 
-import { RestApiMock } from '../../../services/TestingTools';
+import { RestApiMock } from '../../../common/services/TestingTools';
 import config from '../../../../config/application';
 import { buildBookingUrl } from '../BookingUrlBuilder';
 import createRatesLoader from '../../../common/dataloaders/Rates';
-import { Rates } from '../../../datasets/index';
+import RatesDataset from '../../../common/datasets/rates.json';
 
-RestApiMock.onGet(config.restApiEndpoint.rates).replyWithData(Rates.all);
+RestApiMock.onGet(config.restApiEndpoint.rates).replyWithData(RatesDataset);
 
 describe('BookingUrlBuilder', () => {
   it('should build URL out of passengers, price and token', async () => {

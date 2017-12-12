@@ -1,6 +1,6 @@
 // @flow
 
-import { graphql, RestApiMock } from '../../../services/TestingTools';
+import { graphql, RestApiMock } from '../../../common/services/TestingTools';
 import config from '../../../../config/application';
 import userMockData from '../../dataloaders/__tests__/__datasets__/user.get.json';
 

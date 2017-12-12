@@ -1,7 +1,7 @@
 // @flow
 
 import { GraphQLObjectType, GraphQLString, GraphQLBoolean } from 'graphql';
-import { globalIdField } from '../../../services/OpaqueIdentifier';
+import { globalIdField } from '../../../common/services/OpaqueIdentifier';
 
 import type { Identity } from '../../User';
 

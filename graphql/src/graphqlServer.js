@@ -7,9 +7,9 @@ import OpticsAgent from 'optics-agent';
 import type { $Request, $Response } from 'express';
 
 import Schema from './Schema';
-import { createContext } from './services/GraphqlContext';
-import Logger from './services/Logger';
-import { ProxiedError } from './services/errors/ProxiedError';
+import { createContext } from './common/services/GraphqlContext';
+import Logger from './common/services/Logger';
+import { ProxiedError } from './common/services/errors/ProxiedError';
 
 require('dotenv').config();
 

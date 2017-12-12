@@ -1,13 +1,13 @@
 // @flow
 
-import { graphql, RestApiMock } from '../../../services/TestingTools';
+import { graphql, RestApiMock } from '../../../common/services/TestingTools';
 import config from '../../../../config/application';
 import AllLocations from '../AllLocations';
-import { Location } from '../../../datasets/index';
+import PragueDataset from '../../datasets/prague.json';
 
 RestApiMock.onGet(
   config.restApiEndpoint.allLocations({ term: 'Prague' }),
-).replyWithData(Location.prague);
+).replyWithData(PragueDataset);
 
 describe('all locations query', () => {
   it('should be list of location types', () => {

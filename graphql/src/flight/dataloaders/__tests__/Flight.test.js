@@ -9,8 +9,10 @@ jest.mock('../../../location/dataloaders/LocationSuggestions');
 
 const mockCalledEndpoints = [];
 
-jest.mock('../../../services/HttpRequest', () => {
-  const HttpRequest = jest.genMockFromModule('../../../services/HttpRequest');
+jest.mock('../../../common/services/HttpRequest', () => {
+  const HttpRequest = jest.genMockFromModule(
+    '../../../common/services/HttpRequest',
+  );
   HttpRequest.get = (url: string) => {
     mockCalledEndpoints.push(url);
     return Promise.resolve({ data: ['something'] });

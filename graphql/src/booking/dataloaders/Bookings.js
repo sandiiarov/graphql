@@ -1,6 +1,6 @@
 // @flow
 
-import { get } from '../../services/HttpRequest';
+import { get } from '../../common/services/HttpRequest';
 import Config from '../../../config/application';
 import { sanitizeListItem } from './ApiSanitizer';
 
