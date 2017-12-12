@@ -2,20 +2,20 @@
 
 import DataLoader from 'dataloader';
 
-import IdentityDataloader from '../dataLoaders/Identity';
-import createBookingLoader from '../dataLoaders/Booking';
-import createAirlineLoader from '../dataLoaders/Airline';
-import createRatesLoader from '../dataLoaders/Rates';
-import BookingsLoader from '../dataLoaders/Bookings';
-import LocationSuggestionsLoader from '../dataLoaders/LocationSuggestions';
-import LocationLoader from '../dataLoaders/Location';
-import FlightLoader from '../dataLoaders/Flight';
+import IdentityDataloader from '../identity/dataloaders/Identity';
+import createBookingLoader from '../booking/dataloaders/Booking';
+import createAirlineLoader from '../flight/dataloaders/Airline';
+import createRatesLoader from '../common/dataloaders/Rates';
+import BookingsLoader from '../booking/dataloaders/Bookings';
+import LocationSuggestionsLoader from '../location/dataloaders/LocationSuggestions';
+import LocationLoader from '../location/dataloaders/Location';
+import FlightLoader from '../flight/dataloaders/Flight';
 import OptionsStorage from './context/OptionsStorage';
 import AllHotelsLoader from '../dataLoaders/AllHotels';
 import SingleHotelLoader from '../dataLoaders/SingleHotel';
 
-import type { Booking } from '../types/Booking';
-import type { Airline } from '../types/Flight';
+import type { Booking } from '../booking/Booking';
+import type { Airline } from '../flight/Flight';
 import type {
   RequiredParameters as HotelKey,
   HotelType,
