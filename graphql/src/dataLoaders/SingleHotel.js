@@ -18,6 +18,8 @@ function sanitizeHotels(hotels): HotelType[] {
     }
     return {
       id: hotel.hotel_id,
+      name: hotel.name,
+      rating: Math.round(hotel.class),
       currencyCode: hotel.currencycode,
       price: null, // it doesn't make sense to provide price in this case
       photoUrl: hotel.photos[0].url_original,

@@ -62,10 +62,20 @@ Object {
         ],
       },
       "id": "aG90ZWw6MTkzMzI=",
+      "name": "Atahotel Expo Fiera",
       "photoUrl": "http://aff.bstatic.com/images/hotel/max500/588/58853664.jpg",
       "price": Object {
         "amount": null,
         "currency": "EUR",
+      },
+      "rating": Object {
+        "categoryName": "First Class",
+        "stars": 4,
+      },
+      "review": Object {
+        "count": null,
+        "description": null,
+        "score": null,
       },
       "rooms": Object {
         "edges": Array [

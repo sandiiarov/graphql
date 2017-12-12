@@ -26,10 +26,10 @@ export default {
     rates: 'https://api.skypicker.com/rates',
     hotels: {
       all: (queryParameters: Object) =>
-        queryWithParameters(
-          'https://hotels-api.skypicker.com/api/hotels',
-          queryParameters,
-        ),
+        queryWithParameters('https://hotels-api.skypicker.com/api/hotels', {
+          output: 'hotel_details',
+          ...queryParameters,
+        }),
       single: (hotelIds: number[]) =>
         queryWithParameters(
           'https://hotels-api.skypicker.com/api/hotelDetails',
