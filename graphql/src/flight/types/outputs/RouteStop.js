@@ -7,7 +7,7 @@ import Location from '../../../location/types/outputs/Location';
 
 import type { DepartureArrival } from '../../Flight';
 import type { Location as LocationType } from '../../../location/Location';
-import type { GraphqlContextType } from '../../../services/GraphqlContext';
+import type { GraphqlContextType } from '../../../common/services/GraphqlContext';
 
 export default new GraphQLObjectType({
   name: 'RouteStop',

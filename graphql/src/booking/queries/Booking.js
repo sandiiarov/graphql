@@ -4,7 +4,7 @@ import { GraphQLID, GraphQLNonNull } from 'graphql';
 import type { GraphQLFieldConfig } from 'graphql';
 
 import GraphQLBooking from '../types/outputs/Booking';
-import type { GraphqlContextType } from '../../services/GraphqlContext';
+import type { GraphqlContextType } from '../../common/services/GraphqlContext';
 import type { BookingsItem } from '../Booking';
 
 export default ({

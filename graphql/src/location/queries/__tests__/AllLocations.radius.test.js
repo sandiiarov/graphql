@@ -1,7 +1,7 @@
 // @flow
 
-import datasets from '../../../datasets/index';
-import { graphql, RestApiMock } from '../../../services/TestingTools';
+import PragueDataset from '../../datasets/prague.json';
+import { graphql, RestApiMock } from '../../../common/services/TestingTools';
 import config from '../../../../config/application';
 
 RestApiMock.onGet(
@@ -11,7 +11,7 @@ RestApiMock.onGet(
     lon: 14,
     radius: 50,
   }),
-).replyWithData(datasets.Location.prague);
+).replyWithData(PragueDataset);
 
 describe('all locations query', () => {
   it('should return locations by radius', async () => {

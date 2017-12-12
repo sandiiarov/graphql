@@ -1,8 +1,10 @@
 // @flow
 
-import { graphql, RestApiMock } from '../../../../services/TestingTools';
+import { graphql, RestApiMock } from '../../../../common/services/TestingTools';
 import config from '../../../../../config/application';
-import { Flight, Location } from '../../../../datasets/index';
+import PrgMexCsCzDataset from '../../../datasets/prg-mex-cs-CZ.json';
+import PragueDataset from '../../../../location/datasets/prague.json';
+import MexicoDataset from '../../../../location/datasets/mexico.json';
 
 /*
  * Location datasets have to be different to recognize both requests were called with proper locale.
@@ -16,7 +18,7 @@ beforeEach(() => {
       dateTo: '08/09/2017',
       locale: 'de',
     }),
-  ).replyWithData(Flight.prgMexCsCZ);
+  ).replyWithData(PrgMexCsCzDataset);
 
   RestApiMock.onGet(
     config.restApiEndpoint.allFlights({
@@ -26,15 +28,15 @@ beforeEach(() => {
       dateTo: '08/09/2017',
       locale: 'es',
     }),
-  ).replyWithData(Flight.prgMexCsCZ);
+  ).replyWithData(PrgMexCsCzDataset);
 
   RestApiMock.onGet(
     config.restApiEndpoint.allLocations({ term: 'PRG', locale: 'de-DE' }),
-  ).replyWithData(Location.prague);
+  ).replyWithData(PragueDataset);
 
   RestApiMock.onGet(
     config.restApiEndpoint.allLocations({ term: 'PRG', locale: 'es-ES' }),
-  ).replyWithData(Location.mexico);
+  ).replyWithData(MexicoDataset);
 });
 
 describe('AllFlights locale ', () => {

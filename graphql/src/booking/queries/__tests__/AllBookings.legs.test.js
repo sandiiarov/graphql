@@ -1,12 +1,12 @@
 // @flow
 
-import { Booking } from '../../../datasets/index';
-import { graphql, RestApiMock } from '../../../services/TestingTools';
+import { graphql, RestApiMock } from '../../../common/services/TestingTools';
 import config from '../../../../config/application';
+import AllBookingsDataset from '../../datasets/AllBookings.json';
 
 beforeEach(() => {
   RestApiMock.onGet(config.restApiEndpoint.allBookings).replyWithData(
-    Booking.all,
+    AllBookingsDataset,
   );
 
   ['CDG', 'PRG', 'LGW', 'STN', 'KBP', 'DXB', 'KUF'].forEach(iata => {

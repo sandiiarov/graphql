@@ -1,17 +1,19 @@
 // @flow
 
-import { graphql, RestApiMock } from '../../../../services/TestingTools';
+import { graphql, RestApiMock } from '../../../../common/services/TestingTools';
 import config from '../../../../../config/application';
-import { Flight, Location } from '../../../../datasets/index';
+import PrgMexDataset from '../../../datasets/prg-mex.json';
+import PragueDataset from '../../../../location/datasets/prague.json';
+import MexicoDataset from '../../../../location/datasets/mexico.json';
 
 beforeEach(() => {
   RestApiMock.onGet(
     config.restApiEndpoint.allLocations({ term: 'PRG' }),
-  ).replyWithData(Location.prague);
+  ).replyWithData(PragueDataset);
 
   RestApiMock.onGet(
     config.restApiEndpoint.allLocations({ term: 'MEX' }),
-  ).replyWithData(Location.mexico);
+  ).replyWithData(MexicoDataset);
 });
 
 describe('all flights filters', () => {
@@ -24,7 +26,7 @@ describe('all flights filters', () => {
         dateTo: '08/09/2017',
         maxFlyDuration: 15,
       }),
-    ).replyWithData(Flight.prgMex);
+    ).replyWithData(PrgMexDataset);
 
     const query = `
     query ($input: FlightsSearchInput!, $filters: FlightsFiltersInput) {
@@ -69,7 +71,7 @@ describe('all flights filters', () => {
         stopoverfrom: 2,
         stopoverto: 5,
       }),
-    ).replyWithData(Flight.prgMex);
+    ).replyWithData(PrgMexDataset);
 
     const query = `
     query ($input: FlightsSearchInput!, $filters: FlightsFiltersInput) {
@@ -116,7 +118,7 @@ describe('all flights filters', () => {
         dateTo: '08/09/2017',
         stopoverto: 5,
       }),
-    ).replyWithData(Flight.prgMex);
+    ).replyWithData(PrgMexDataset);
 
     const query = `
     query ($input: FlightsSearchInput!, $filters: FlightsFiltersInput) {

@@ -1,8 +1,9 @@
 // @flow
 
-import { graphql, RestApiMock } from '../../../../services/TestingTools';
+import { graphql, RestApiMock } from '../../../../common/services/TestingTools';
 import config from '../../../../../config/application';
-import { Flight } from '../../../../datasets/index';
+import PrgMexDataset from '../../../datasets/prg-mex.json';
+import PrgMexCzkDataset from '../../../datasets/prg-mex-czk.json';
 
 RestApiMock.onGet(
   config.restApiEndpoint.allFlights({
@@ -11,7 +12,7 @@ RestApiMock.onGet(
     dateFrom: '08/08/2017',
     dateTo: '08/09/2017',
   }),
-).replyWithData(Flight.prgMex);
+).replyWithData(PrgMexDataset);
 
 RestApiMock.onGet(
   config.restApiEndpoint.allFlights({
@@ -21,7 +22,7 @@ RestApiMock.onGet(
     dateTo: '08/09/2017',
     curr: 'CZK',
   }),
-).replyWithData(Flight.prgMexCzk);
+).replyWithData(PrgMexCzkDataset);
 
 describe('all flights query', () => {
   it('should return flight prices', async () => {

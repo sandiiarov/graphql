@@ -1,8 +1,8 @@
 // @flow
 
-import { graphql, RestApiMock } from '../../../../services/TestingTools';
+import { graphql, RestApiMock } from '../../../../common/services/TestingTools';
 import config from '../../../../../config/application';
-import { Flight } from '../../../../datasets/index';
+import PrgMexDataset from '../../../datasets/prg-mex.json';
 
 beforeEach(() => {
   RestApiMock.onGet(
@@ -12,7 +12,7 @@ beforeEach(() => {
       dateFrom: '08/08/2017',
       dateTo: '08/09/2017',
     }),
-  ).replyWithData(Flight.prgMex);
+  ).replyWithData(PrgMexDataset);
 
   RestApiMock.onGet(
     config.restApiEndpoint.allFlights({
@@ -22,7 +22,7 @@ beforeEach(() => {
       dateTo: '08/09/2017',
       adults: 3,
     }),
-  ).replyWithData(Flight.prgMex);
+  ).replyWithData(PrgMexDataset);
 
   RestApiMock.onGet(
     config.restApiEndpoint.allFlights({
@@ -32,7 +32,7 @@ beforeEach(() => {
       dateTo: '08/09/2017',
       locale: 'cz',
     }),
-  ).replyWithData(Flight.prgMex);
+  ).replyWithData(PrgMexDataset);
 });
 
 describe('All Flights booking URL', () => {

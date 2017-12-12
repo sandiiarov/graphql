@@ -4,11 +4,11 @@ import { GraphQLObjectType } from 'graphql';
 
 import AllBookings from './booking/queries/AllBookings';
 import AllFlights from './flight/queries/AllFlights';
-import AllHotels from './queries/AllHotels';
+import AllHotels from './hotel/queries/AllHotels';
 import AllLocations from './location/queries/AllLocations';
 import Booking from './booking/queries/Booking';
 import CurrentUser from './identity/queries/CurrentUser';
-import Hotel from './queries/Hotel';
+import Hotel from './hotel/queries/Hotel';
 
 export default new GraphQLObjectType({
   name: 'RootQuery',

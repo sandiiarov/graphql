@@ -1,13 +1,13 @@
 // @flow
 
-import { graphql, RestApiMock } from '../../../services/TestingTools';
+import { graphql, RestApiMock } from '../../../common/services/TestingTools';
 import config from '../../../../config/application';
-import { Identity as IdentityDataset } from '../../../datasets/index';
+import CurrentUserDataset from '../../datasets/currentUser.json';
 import CurrentUser from '../CurrentUser';
 
 beforeEach(() => {
   RestApiMock.onPost(config.restApiEndpoint.identity).replyWithData(
-    IdentityDataset.currentUser,
+    CurrentUserDataset,
   );
 });
 

@@ -3,7 +3,7 @@
 import _ from 'lodash';
 import DataLoader from 'dataloader';
 import config from '../../../config/application';
-import { get } from '../../services/HttpRequest';
+import { get } from '../../common/services/HttpRequest';
 
 import type { Radius, Rectangle, LocationArea, Location } from '../Location';
 

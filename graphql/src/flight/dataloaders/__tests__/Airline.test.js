@@ -1,11 +1,13 @@
 // @flow
 
-import { RestApiMock } from '../../../services/TestingTools';
+import { RestApiMock } from '../../../common/services/TestingTools';
 import config from '../../../../config/application';
-import { Airline } from '../../../datasets/index';
+import AirlinesDataset from '../../datasets/airlines.json';
 import createAirlineLoader from '../Airline';
 
-RestApiMock.onGet(config.restApiEndpoint.airlines).replyWithData(Airline.all);
+RestApiMock.onGet(config.restApiEndpoint.airlines).replyWithData(
+  AirlinesDataset,
+);
 
 describe('Airline dataloader', () => {
   it('should load airlines', async () => {

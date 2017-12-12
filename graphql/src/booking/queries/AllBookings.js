@@ -9,7 +9,7 @@ import {
 
 import GraphQLBooking from '../types/outputs/Booking';
 
-import type { GraphqlContextType } from '../../services/GraphqlContext';
+import type { GraphqlContextType } from '../../common/services/GraphqlContext';
 
 const { connectionType: AllBookingsConnection } = connectionDefinitions({
   nodeType: GraphQLBooking,

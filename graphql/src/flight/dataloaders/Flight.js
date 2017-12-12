@@ -4,7 +4,7 @@ import DataLoader from 'dataloader';
 import { DateTime } from 'luxon';
 import _ from 'lodash';
 
-import { get } from '../../services/HttpRequest';
+import { get } from '../../common/services/HttpRequest';
 import config from '../../../config/application';
 import LocationDataLoader from '../../location/dataloaders/Location';
 import LocaleMap from '../../common/types/enums/LocaleMap';

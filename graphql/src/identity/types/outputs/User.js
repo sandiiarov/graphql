@@ -4,7 +4,7 @@ import { GraphQLBoolean, GraphQLObjectType, GraphQLString } from 'graphql';
 import Identity from './Identity';
 
 import type { Login } from '../../User';
-import type { GraphqlContextType } from '../../../services/GraphqlContext';
+import type { GraphqlContextType } from '../../../common/services/GraphqlContext';
 
 export default new GraphQLObjectType({
   name: 'User',

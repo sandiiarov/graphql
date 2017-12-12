@@ -14,7 +14,7 @@ import GraphQLRadius from '../types/inputs/RadiusInput';
 import GraphQLArea from '../types/inputs/AreaInput';
 import LocationsOptionsInput from '../types/inputs/LocationsOptions';
 
-import type { GraphqlContextType } from '../../services/GraphqlContext';
+import type { GraphqlContextType } from '../../common/services/GraphqlContext';
 import type { Rectangle } from '../Location';
 
 const { connectionType: AllLocationsConnection } = connectionDefinitions({

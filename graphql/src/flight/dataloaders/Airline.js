@@ -1,7 +1,7 @@
 // @flow
 
 import Dataloader from 'dataloader';
-import { get } from '../../services/HttpRequest';
+import { get } from '../../common/services/HttpRequest';
 import Config from '../../../config/application';
 
 import type { Airline as AirlineType } from '../Flight';
