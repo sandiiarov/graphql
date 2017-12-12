@@ -1,6 +1,6 @@
 // @flow
 
-import FlightsFiltersInput from '../FlightsFiltersInput';
+import FlightsFiltersInput from '../../flight/types/inputs/FlightsFiltersInput';
 
 it('FlightsFiltersInput type should have valid fields', () => {
   expect(FlightsFiltersInput.getFields()).toMatchSnapshot();

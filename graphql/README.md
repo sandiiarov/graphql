@@ -37,6 +37,8 @@ Second option is recommended but the first one works everytime on chrome based b
 
 # Directory structure
 
+This directory structure is deprecated, see below.
+
 ```
 src
 ├── dataLoaders         (for data loading)
@@ -49,6 +51,32 @@ src
 ├── services            (system functions and classes)
 └── types               (internal Flow types definition)
 ```
+
+New proposed directory structure:
+
+```
+src
+├── booking
+│    ├── queries
+│    │    ├── AllBookings.js
+│    │    └── SingleBooking.js
+│    ├── mutations (if exists)
+│    ├── dataloaders + API sanitizers
+│    ├── types
+│    │    ├── outputs
+│    │    ├── inputs
+│    │    └── enums
+│    ├── resolvers (if exists)
+│    └── datasets
+├── flight
+│    └── ditto
+├── hotel
+├── location
+├── identity
+└── common (contains shared services)
+```
+
+Motivations: there is point in time in every application where doing groups by generic "outputs" or "inputs" is not enough and it's becoming mess. For this reason it's better to group application parts by responsibilities. With this structure the project is less flat and more deep.
 
 # Requirements of a Relay-compliant GraphQL server
 

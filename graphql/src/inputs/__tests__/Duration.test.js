@@ -1,6 +1,6 @@
 // @flow
 
-import Duration from '../Duration';
+import Duration from '../../flight/types/inputs/Duration';
 
 it('Duration type should have valid fields', () => {
   expect(Duration.getFields()).toMatchSnapshot();

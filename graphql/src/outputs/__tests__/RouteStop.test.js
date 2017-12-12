@@ -1,6 +1,6 @@
 // @flow
 
-import GraphQLRouteStop from '../RouteStop';
+import GraphQLRouteStop from '../../flight/types/outputs/RouteStop';
 import { evaluateResolver } from '../../services/TestingTools';
 
 it('RouteStop type should have valid fields', () => {

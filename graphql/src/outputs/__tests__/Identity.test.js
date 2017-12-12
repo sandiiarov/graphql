@@ -1,9 +1,9 @@
 // @flow
 
-import Identity from '../Identity';
+import Identity from '../../identity/types/outputs/Identity';
 import { evaluateResolver } from '../../services/TestingTools';
 
-import type { Identity as IdentityType } from '../../types/User';
+import type { Identity as IdentityType } from '../../identity/User';
 
 const fields = Identity.getFields();
 

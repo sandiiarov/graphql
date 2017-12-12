@@ -8,7 +8,7 @@ import {
 } from 'graphql-relay';
 
 import { globalIdField } from '../services/OpaqueIdentifier';
-import GraphQLPrice from './Price';
+import GraphQLPrice from '../common/types/outputs/Price';
 import GraphQLHotelFacility from './HotelFacility';
 import GraphQLHotelRoom from './HotelRoom';
 

@@ -1,8 +1,8 @@
 // @flow
 
 import { GraphQLSchema } from 'graphql';
-import RootQuery from './queries/RootQuery';
-import RootMutation from './mutations/RootMutation';
+import RootQuery from './RootQuery';
+import RootMutation from './RootMutation';
 
 export default new GraphQLSchema({
   query: RootQuery,
