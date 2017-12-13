@@ -1,0 +1,153 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`works with full query 1`] = `
+Object {
+  "data": Object {
+    "hotel": Object {
+      "cityName": "Pero",
+      "facilities": Object {
+        "edges": Array [
+          Object {
+            "cursor": "YXJyYXljb25uZWN0aW9uOjA=",
+            "node": Object {
+              "id": "aG90ZWxGYWNpbGl0eToz",
+              "name": "Restaurant",
+            },
+          },
+          Object {
+            "cursor": "YXJyYXljb25uZWN0aW9uOjE=",
+            "node": Object {
+              "id": "aG90ZWxGYWNpbGl0eTo1",
+              "name": "Room service",
+            },
+          },
+        ],
+      },
+      "id": "aG90ZWw6MTkzMzI=",
+      "mainPhoto": Object {
+        "highResUrl": "http://aff.bstatic.com/images/hotel/max500/588/58853664.jpg",
+        "id": "aG90ZWxQaG90bzo1ODg1MzY2NA==",
+        "lowResUrl": "http://aff.bstatic.com/images/hotel/max300/588/58853664.jpg",
+        "thumbnailUrl": "http://aff.bstatic.com/images/hotel/square60/588/58853664.jpg",
+      },
+      "name": "Atahotel Expo Fiera",
+      "photos": Object {
+        "edges": Array [
+          Object {
+            "cursor": "YXJyYXljb25uZWN0aW9uOjA=",
+            "node": Object {
+              "highResUrl": "http://aff.bstatic.com/images/hotel/max500/588/58853664.jpg",
+              "id": "aG90ZWxQaG90bzo1ODg1MzY2NA==",
+              "lowResUrl": "http://aff.bstatic.com/images/hotel/max300/588/58853664.jpg",
+              "thumbnailUrl": "http://aff.bstatic.com/images/hotel/square60/588/58853664.jpg",
+            },
+          },
+          Object {
+            "cursor": "YXJyYXljb25uZWN0aW9uOjE=",
+            "node": Object {
+              "highResUrl": "http://aff.bstatic.com/images/hotel/max500/588/58853663.jpg",
+              "id": "aG90ZWxQaG90bzo1ODg1MzY2Mw==",
+              "lowResUrl": "http://aff.bstatic.com/images/hotel/max300/588/58853663.jpg",
+              "thumbnailUrl": "http://aff.bstatic.com/images/hotel/square60/588/58853663.jpg",
+            },
+          },
+        ],
+      },
+      "price": Object {
+        "amount": null,
+        "currency": "EUR",
+      },
+      "rating": Object {
+        "categoryName": "First Class",
+        "stars": 4,
+      },
+      "review": Object {
+        "count": null,
+        "description": null,
+        "score": null,
+      },
+      "rooms": Object {
+        "edges": Array [
+          Object {
+            "cursor": "YXJyYXljb25uZWN0aW9uOjA=",
+            "node": Object {
+              "bedding": Array [
+                Object {
+                  "amount": 2,
+                  "type": "Single bed(s)",
+                },
+                Object {
+                  "amount": 1,
+                  "type": "Large bed(s) (King size)",
+                },
+              ],
+              "id": "aG90ZWxSb29tOjE5MzMyMDE=",
+              "maxPersons": 2,
+              "photos": Object {
+                "edges": Array [
+                  Object {
+                    "cursor": "YXJyYXljb25uZWN0aW9uOjA=",
+                    "node": Object {
+                      "highResUrl": "http://aff.bstatic.com/images/hotel/max500/588/58849008.jpg",
+                      "id": "aG90ZWxQaG90bzo1ODg0OTAwOA==",
+                      "lowResUrl": "http://aff.bstatic.com/images/hotel/max300/588/58849008.jpg",
+                      "thumbnailUrl": "http://aff.bstatic.com/images/hotel/square60/588/58849008.jpg",
+                    },
+                  },
+                  Object {
+                    "cursor": "YXJyYXljb25uZWN0aW9uOjE=",
+                    "node": Object {
+                      "highResUrl": "http://aff.bstatic.com/images/hotel/max500/588/58848985.jpg",
+                      "id": "aG90ZWxQaG90bzo1ODg0ODk4NQ==",
+                      "lowResUrl": "http://aff.bstatic.com/images/hotel/max300/588/58848985.jpg",
+                      "thumbnailUrl": "http://aff.bstatic.com/images/hotel/square60/588/58848985.jpg",
+                    },
+                  },
+                ],
+              },
+              "type": "Twin/Double",
+            },
+          },
+          Object {
+            "cursor": "YXJyYXljb25uZWN0aW9uOjE=",
+            "node": Object {
+              "bedding": Array [
+                Object {
+                  "amount": 1,
+                  "type": "Large bed(s) (King size)",
+                },
+              ],
+              "id": "aG90ZWxSb29tOjE5MzMyMDM=",
+              "maxPersons": 2,
+              "photos": Object {
+                "edges": Array [
+                  Object {
+                    "cursor": "YXJyYXljb25uZWN0aW9uOjA=",
+                    "node": Object {
+                      "highResUrl": "http://aff.bstatic.com/images/hotel/max500/588/58848972.jpg",
+                      "id": "aG90ZWxQaG90bzo1ODg0ODk3Mg==",
+                      "lowResUrl": "http://aff.bstatic.com/images/hotel/max300/588/58848972.jpg",
+                      "thumbnailUrl": "http://aff.bstatic.com/images/hotel/square60/588/58848972.jpg",
+                    },
+                  },
+                  Object {
+                    "cursor": "YXJyYXljb25uZWN0aW9uOjE=",
+                    "node": Object {
+                      "highResUrl": "http://aff.bstatic.com/images/hotel/max500/588/58848991.jpg",
+                      "id": "aG90ZWxQaG90bzo1ODg0ODk5MQ==",
+                      "lowResUrl": "http://aff.bstatic.com/images/hotel/max300/588/58848991.jpg",
+                      "thumbnailUrl": "http://aff.bstatic.com/images/hotel/square60/588/58848991.jpg",
+                    },
+                  },
+                ],
+              },
+              "type": "Double",
+            },
+          },
+        ],
+      },
+      "whitelabelUrl": "https://www.booking.com/hotel/it/expo-fiera.html",
+    },
+  },
+}
+`;

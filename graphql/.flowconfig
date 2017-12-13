@@ -15,3 +15,4 @@ module.name_mapper='^graphql-iso-date$' -> '<PROJECT_ROOT>/config/stub/GeneralSt
 suppress_comment=\\(.\\|\n\\)*\\$FlowAllowMockMagic
 suppress_comment=\\(.\\|\n\\)*\\$FlowAllowNextLineInThisTest
 suppress_comment=\\(.\\|\n\\)*\\$FlowExpectedError
+suppress_comment=\\(.\\|\n\\)*\\$FlowIssue

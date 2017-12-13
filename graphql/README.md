@@ -1,5 +1,7 @@
 Production URL: https://graphql.kiwi.com/
 
+This GraphQL API proxy is written for serverless infrastructure. This assumption is especially important in case of dataloaders. For more information please read: https://github.com/facebook/dataloader#caching-per-request
+
 # Run GraphQL API server
 
 Using this command you can run GraphQL API server with HMR (Hot Module Replacement).

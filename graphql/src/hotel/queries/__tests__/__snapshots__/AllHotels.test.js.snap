@@ -10,7 +10,6 @@ Object {
             "cityName": "Rho",
             "id": "aG90ZWw6MjUyMTU=",
             "name": "Italiana Hotels Milan Rho Fair",
-            "photoUrl": "http://aff.bstatic.com/images/hotel/max500/740/74030690.jpg",
             "price": Object {
               "amount": 1134.9,
               "currency": "EUR",
@@ -32,7 +31,6 @@ Object {
             "cityName": "Case Nuove",
             "id": "aG90ZWw6MjQ4NTM5",
             "name": "Sheraton Milan Malpensa Airport Hotel & Conference Centre",
-            "photoUrl": "http://aff.bstatic.com/images/hotel/max500/267/26753013.jpg",
             "price": Object {
               "amount": 2471.98,
               "currency": "EUR",
@@ -54,7 +52,6 @@ Object {
             "cityName": "Milan",
             "id": "aG90ZWw6ODAwODM=",
             "name": "Art Hotel Navigli",
-            "photoUrl": "http://aff.bstatic.com/images/hotel/max500/904/90423457.jpg",
             "price": Object {
               "amount": 2956,
               "currency": "EUR",
@@ -76,7 +73,6 @@ Object {
             "cityName": "Milan",
             "id": "aG90ZWw6ODc1NDE=",
             "name": "Hotel Principe Di Savoia",
-            "photoUrl": "http://aff.bstatic.com/images/hotel/max500/141/14189943.jpg",
             "price": Object {
               "amount": 5292,
               "currency": "EUR",
@@ -98,7 +94,6 @@ Object {
             "cityName": "Milan",
             "id": "aG90ZWw6ODM2ODk=",
             "name": "Rosa Grand Milano - Starhotels Collezione",
-            "photoUrl": "http://aff.bstatic.com/images/hotel/max500/141/14194079.jpg",
             "price": Object {
               "amount": 4668,
               "currency": "EUR",
@@ -120,7 +115,6 @@ Object {
             "cityName": "Sesto San Giovanni",
             "id": "aG90ZWw6ODkwMTc=",
             "name": "NH Milano Concordia",
-            "photoUrl": "http://aff.bstatic.com/images/hotel/max500/117/117696570.jpg",
             "price": Object {
               "amount": 1238.4,
               "currency": "EUR",
@@ -142,7 +136,6 @@ Object {
             "cityName": "Milan",
             "id": "aG90ZWw6NDYyODMw",
             "name": "Four Seasons Hotel Milano",
-            "photoUrl": "http://aff.bstatic.com/images/hotel/max500/193/19310448.jpg",
             "price": Object {
               "amount": 11715.62,
               "currency": "EUR",
@@ -164,7 +157,6 @@ Object {
             "cityName": "Milan",
             "id": "aG90ZWw6ODMxMTI=",
             "name": "Hotel Tocq",
-            "photoUrl": "http://aff.bstatic.com/images/hotel/max500/931/93128199.jpg",
             "price": Object {
               "amount": 3110.15,
               "currency": "EUR",
@@ -186,7 +178,6 @@ Object {
             "cityName": "Saronno",
             "id": "aG90ZWw6ODc5MDU=",
             "name": "Starhotels Grand Milan",
-            "photoUrl": "http://aff.bstatic.com/images/hotel/max500/108/108161730.jpg",
             "price": Object {
               "amount": 1392,
               "currency": "EUR",
@@ -208,7 +199,6 @@ Object {
             "cityName": "Milan",
             "id": "aG90ZWw6MjE4MTc1",
             "name": "Starhotels Echo",
-            "photoUrl": "http://aff.bstatic.com/images/hotel/max500/142/14204975.jpg",
             "price": Object {
               "amount": 3298.96,
               "currency": "EUR",

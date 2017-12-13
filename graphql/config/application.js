@@ -45,7 +45,7 @@ export default {
   },
 };
 
-function queryWithParameters(
+export function queryWithParameters(
   absoluteUrl: string,
   queryParameters: ?Object = null,
 ) {

@@ -6,11 +6,18 @@ import {
   GraphQLInt,
   GraphQLList,
 } from 'graphql';
+import {
+  connectionArgs,
+  connectionDefinitions,
+  connectionFromPromisedArray,
+} from 'graphql-relay';
+
 import { globalIdField } from '../../../common/services/OpaqueIdentifier';
-
 import GraphQLHotelRoomBedding from './HotelRoomBedding';
+import GraphQLHotelPhoto from './HotelPhoto';
+import HotelRoomPhotoDataloader from '../../dataloaders/HotelRoomPhotos';
 
-import type { HotelRoomType } from '../../dataloaders/SingleHotel';
+import type { HotelRoomType } from '../../dataloaders/HotelByID';
 
 export default new GraphQLObjectType({
   name: 'HotelRoom',
@@ -31,6 +38,21 @@ export default new GraphQLObjectType({
     bedding: {
       type: new GraphQLList(GraphQLHotelRoomBedding),
       resolve: ({ bedding }: HotelRoomType) => bedding,
+    },
+
+    photos: {
+      description: 'All available photos of the hotel room.',
+      type: connectionDefinitions({
+        name: 'HotelRoomPhoto',
+        nodeType: GraphQLHotelPhoto,
+      }).connectionType,
+      args: connectionArgs,
+      resolve: async ({ id }: HotelRoomType, args: Object) => {
+        return connectionFromPromisedArray(
+          HotelRoomPhotoDataloader.load(id),
+          args,
+        );
+      },
     },
   },
 });

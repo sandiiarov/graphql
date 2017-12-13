@@ -4,7 +4,7 @@ import { toGlobalId } from '../../../common/services/OpaqueIdentifier';
 
 import { graphql, RestApiMock } from '../../../common/services/TestingTools';
 import SingleHotelDataset from '../../datasets/19332.json';
-import Dataloader from '../../dataloaders/SingleHotel';
+import Dataloader from '../../dataloaders/HotelByID';
 
 // keep the URL hardcoded here so we will know if it changed unintentionally
 const baseUrl = 'https://hotels-api.skypicker.com/api/hotelDetails?hotel_ids=';
@@ -59,71 +59,4 @@ describe('single hotels query', () => {
       }),
     ).toMatchSnapshot();
   });
-});
-
-it('works with full example (containing circular references)', async () => {
-  expect(
-    await graphql(
-      `
-        query($id: ID!) {
-          hotel(id: $id) {
-            id
-            price {
-              amount
-              currency
-            }
-            name
-            photoUrl
-            cityName
-            whitelabelUrl
-            rating {
-              stars
-              categoryName
-            }
-            review {
-              score
-              description
-              count
-            }
-            facilities(first: 2) {
-              edges {
-                cursor
-                node {
-                  id
-                  name
-                }
-              }
-            }
-            rooms(first: 2) {
-              edges {
-                cursor
-                node {
-                  id
-                  type
-                  maxPersons
-                  bedding {
-                    type
-                    amount
-                  }
-                }
-              }
-            }
-            photos(first: 2) {
-              edges {
-                cursor
-                node {
-                  id
-                  lowResUrl
-                  highResUrl
-                }
-              }
-            }
-          }
-        }
-      `,
-      {
-        id: toGlobalId('hotel', '19332'),
-      },
-    ),
-  ).toMatchSnapshot();
 });
