@@ -7,7 +7,15 @@ import { get } from '../../common/services/HttpRequest';
 import { ProxiedError } from '../../common/services/errors/ProxiedError';
 import Config from '../../../config/application';
 
-import type { HotelRoomType, HotelFacilityType } from './SingleHotel';
+import type { HotelType } from './flow/HotelType';
+
+export type SearchParameters = {|
+  latitude: number,
+  longitude: number,
+  checkin: Date,
+  checkout: Date,
+  roomsConfiguration: RoomsConfiguration,
+|};
 
 type RoomsConfiguration = Array<{|
   adultsCount: number,
@@ -17,36 +25,12 @@ type RoomsConfiguration = Array<{|
 |}>;
 
 /**
- * Required parameters by this dataloader.
+ * This data-loader loads all available hotels in the checkin-checkout date range.
+ * If you need to load individual hotels based on IDs please use "HotelByID" loader.
  */
-export type RequiredParameters = {|
-  latitude: number,
-  longitude: number,
-  checkin: Date,
-  checkout: Date,
-  roomsConfiguration: RoomsConfiguration,
-|};
-
-/**
- * Sanitized shape of single hotel returned by API.
- */
-export type HotelType = {
-  id: string,
-  name: string,
-  rating: number,
-  currencyCode: string,
-  price: string, // float
-  photoUrl: string,
-  whitelabelUrl: string,
-  cityName: string,
-
-  // fields bellow are additionally provided by "single hotels" API endpoint
-  facilities: null | HotelFacilityType[],
-  rooms: null | HotelRoomType[],
-};
-
-export default new DataLoader((keys: RequiredParameters[]) =>
-  fetchAllHotels(keys),
+export default new DataLoader(
+  async (keys: SearchParameters[]): Promise<Array<HotelType[] | Error>> =>
+    await fetchAllHotels(keys),
 );
 
 /**
@@ -59,9 +43,9 @@ export default new DataLoader((keys: RequiredParameters[]) =>
  *          Child age numbers are 0..17.
  * - room2: see room1 (it's the same but other room, room3, room4, ...)
  */
-function fetchAllHotels(
-  keys: RequiredParameters[],
-): Promise<Array<Error | HotelType[]>> {
+async function fetchAllHotels(
+  keys: SearchParameters[],
+): Promise<Array<HotelType[] | Error>> {
   return Promise.all(
     keys.map(
       async ({
@@ -102,20 +86,20 @@ function fetchAllHotels(
           return new ProxiedError(response.message, response.code, absoluteUrl);
         }
 
+        // $FlowIssue: https://github.com/facebook/flow/issues/4936
         return sanitizeHotels(response.hotels);
       },
     ),
   );
 }
 
-function sanitizeHotels(hotels) {
+function sanitizeHotels(hotels): HotelType[] {
   return hotels.map(hotel => ({
     id: hotel.hotel_id,
     name: hotel.hotel_name,
     rating: Math.round(hotel.stars),
     currencyCode: hotel.hotel_currency_code,
     price: hotel.price,
-    photoUrl: hotel.photo,
     whitelabelUrl: hotel.url,
     cityName: hotel.city,
   }));

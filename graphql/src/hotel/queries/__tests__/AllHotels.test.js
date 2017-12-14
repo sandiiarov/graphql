@@ -65,7 +65,6 @@ describe('all hotels query', () => {
                   amount
                   currency
                 }
-                photoUrl
                 cityName
                 whitelabelUrl
                 rating {

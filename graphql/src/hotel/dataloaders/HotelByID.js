@@ -4,27 +4,39 @@ import { get } from '../../common/services/HttpRequest';
 import Config from '../../../config/application';
 import OptimisticDataloader from '../../common/services/OptimisticDataloader';
 
-import type { HotelType } from './AllHotels';
+import type { HotelType } from './flow/HotelType';
+import type { PhotoType as HotelPhotoType } from './flow/PhotoType';
 
+/**
+ * This data-loader loads all hotels by their ID.
+ */
 export default new OptimisticDataloader(async (hotelIds: number[]): Promise<
-  HotelType[],
+  ExtendedHotelType[],
 > => sanitizeHotels(await get(Config.restApiEndpoint.hotels.single(hotelIds))));
 
-function sanitizeHotels(hotels): HotelType[] {
+type ExtendedHotelType = {
+  ...HotelType,
+  facilities: HotelFacilityType[],
+  rooms: HotelRoomType[],
+  photos: HotelPhotoType[],
+};
+
+function sanitizeHotels(hotels): ExtendedHotelType[] {
   return hotels.map(hotel => {
     if (!hotelExists(hotel)) {
       // do not throw, just return it to the OptimisticDataloader
       return new Error('Requested hotel does not exist.');
     }
     return {
+      // HotelByAvailabilityType:
       id: hotel.hotel_id,
       name: hotel.name,
       rating: Math.round(hotel.class),
       currencyCode: hotel.currencycode,
       price: null, // it doesn't make sense to provide price in this case
-      photoUrl: hotel.photos[0].url_original,
       whitelabelUrl: hotel.url, // it's not whitelabel (?)
       cityName: hotel.city,
+      // + HotelByIDType:
       facilities: sanitizeHotelFacilities(hotel.facilities),
       rooms: sanitizeHotelRooms(hotel.rooms),
       photos: sanitizeHotelPhotos(hotel.photos),
@@ -35,14 +47,12 @@ function sanitizeHotels(hotels): HotelType[] {
 export type HotelFacilityType = {|
   id: string,
   name: string,
-  hotelId: string,
 |};
 
 function sanitizeHotelFacilities(facilities): HotelFacilityType[] {
   return facilities.map(facility => ({
     id: facility.hotelfacilitytype_id,
     name: facility.name,
-    hotelId: facility.hotel_id,
   }));
 }
 
@@ -51,7 +61,6 @@ export type HotelRoomType = {|
   type: string,
   maxPersons: string,
   bedding: string,
-  hotelId: string,
 |};
 
 function sanitizeHotelRooms(rooms): HotelRoomType[] {
@@ -60,23 +69,15 @@ function sanitizeHotelRooms(rooms): HotelRoomType[] {
     type: room.roomtype,
     maxPersons: room.max_persons,
     bedding: room.bedding,
-    hotelId: room.hotel_id,
   }));
 }
-
-export type HotelPhotoType = {|
-  id: string,
-  lowResolution: string,
-  highResolution: string,
-  hotelId: string,
-|};
 
 function sanitizeHotelPhotos(photos): HotelPhotoType[] {
   return photos.map(photo => ({
     id: photo.photo_id,
     lowResolution: photo.url_max300,
     highResolution: photo.url_original,
-    hotelId: photo.hotel_id,
+    thumbnail: photo.url_square60,
   }));
 }
 

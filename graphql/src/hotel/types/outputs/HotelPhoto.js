@@ -3,7 +3,7 @@
 import { GraphQLObjectType, GraphQLString } from 'graphql';
 import { globalIdField } from '../../../common/services/OpaqueIdentifier';
 
-import type { HotelPhotoType } from '../../dataloaders/SingleHotel';
+import type { PhotoType as HotelPhotoType } from '../../dataloaders/flow/PhotoType';
 
 export default new GraphQLObjectType({
   name: 'HotelPhoto',
@@ -18,6 +18,11 @@ export default new GraphQLObjectType({
     highResUrl: {
       type: GraphQLString,
       resolve: ({ highResolution }: HotelPhotoType) => highResolution,
+    },
+
+    thumbnailUrl: {
+      type: GraphQLString,
+      resolve: ({ thumbnail }: HotelPhotoType) => thumbnail,
     },
   },
 });

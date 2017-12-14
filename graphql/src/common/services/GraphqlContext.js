@@ -11,15 +11,13 @@ import LocationSuggestionsLoader from '../../location/dataloaders/LocationSugges
 import LocationLoader from '../../location/dataloaders/Location';
 import FlightLoader from '../../flight/dataloaders/Flight';
 import OptionsStorage from './context/OptionsStorage';
-import AllHotelsLoader from '../../hotel/dataloaders/AllHotels';
-import SingleHotelLoader from '../../hotel/dataloaders/SingleHotel';
+import HotelsByLocation from '../../hotel/dataloaders/HotelsByLocation';
+import HotelByID from '../../hotel/dataloaders/HotelByID';
 
 import type { Booking } from '../../booking/Booking';
 import type { Airline } from '../../flight/Flight';
-import type {
-  RequiredParameters as HotelKey,
-  HotelType,
-} from '../../hotel/dataloaders/AllHotels';
+import type { SearchParameters as HotelKey } from '../../hotel/dataloaders/HotelsByLocation';
+import type { HotelType } from '../../hotel/dataloaders/flow/HotelType';
 
 export type GraphqlContextType = {|
   // DataLoader<K, V>
@@ -30,7 +28,7 @@ export type GraphqlContextType = {|
     bookings: BookingsLoader,
     flight: FlightLoader,
     allHotels: DataLoader<HotelKey, HotelType[]>,
-    singleHotel: typeof SingleHotelLoader,
+    singleHotel: typeof HotelByID,
     identity: IdentityDataloader,
     location: LocationLoader,
     locationSuggestions: LocationSuggestionsLoader,
@@ -52,8 +50,8 @@ export function createContext(token: ?string): GraphqlContextType {
       booking: createBookingLoader(token, bookings),
       bookings: bookings,
       flight: new FlightLoader(location),
-      allHotels: AllHotelsLoader,
-      singleHotel: SingleHotelLoader,
+      allHotels: HotelsByLocation,
+      singleHotel: HotelByID,
       identity: new IdentityDataloader(token),
       location: location,
       locationSuggestions: locationSuggestions,

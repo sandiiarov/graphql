@@ -5,6 +5,7 @@ import {
   connectionArgs,
   connectionDefinitions,
   connectionFromArray,
+  connectionFromPromisedArray,
 } from 'graphql-relay';
 
 import { globalIdField } from '../../../common/services/OpaqueIdentifier';
@@ -14,8 +15,9 @@ import GraphQLHotelRoom from './HotelRoom';
 import GraphQLHotelPhoto from './HotelPhoto';
 import GraphQLHotelRating from './HotelRating';
 import GraphQLHotelReview from './HotelReview';
+import HotelPhotosDataloader from '../../dataloaders/HotelPhotos';
 
-import type { HotelType } from '../../dataloaders/AllHotels';
+import type { HotelType } from '../../dataloaders/flow/HotelType';
 import type { GraphqlContextType } from '../../../common/services/GraphqlContext';
 
 export default new GraphQLObjectType({
@@ -52,10 +54,13 @@ export default new GraphQLObjectType({
       resolve: () => true, // we do not have necessary data yet, see: https://gitlab.skypicker.com/mobile/hotels-bookingcom-api/issues/1
     },
 
-    photoUrl: {
+    mainPhoto: {
       description: 'Main photo of the hotel.',
-      type: GraphQLString,
-      resolve: ({ photoUrl }: HotelType) => photoUrl,
+      type: GraphQLHotelPhoto,
+      resolve: async ({ id }: HotelType) => {
+        const allPhotos = await HotelPhotosDataloader.load(id);
+        return allPhotos[0]; // just the first one
+      },
     },
 
     cityName: {
@@ -102,19 +107,16 @@ export default new GraphQLObjectType({
     },
 
     photos: {
-      description:
-        'All available photos of the hotel in high and low resolution.',
+      description: 'All available photos of the hotel.',
       type: connectionDefinitions({
         nodeType: GraphQLHotelPhoto,
       }).connectionType,
       args: connectionArgs,
-      resolve: async (
-        { id }: HotelType,
-        args: Object,
-        { dataLoader }: GraphqlContextType,
-      ) => {
-        const { photos } = await dataLoader.singleHotel.load(id);
-        return connectionFromArray(photos, args);
+      resolve: async ({ id }: HotelType, args: Object) => {
+        return connectionFromPromisedArray(
+          HotelPhotosDataloader.load(id),
+          args,
+        );
       },
     },
   },
