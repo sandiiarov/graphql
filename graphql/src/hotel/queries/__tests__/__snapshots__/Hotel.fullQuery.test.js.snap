@@ -4,7 +4,16 @@ exports[`works with full query 1`] = `
 Object {
   "data": Object {
     "hotel": Object {
+      "address": Object {
+        "city": "Pero",
+        "street": "Via Giovanni Keplero",
+        "zip": "20016",
+      },
       "cityName": "Pero",
+      "coordinates": Object {
+        "lat": 45.5021510909085,
+        "lng": 9.08717393875122,
+      },
       "facilities": Object {
         "edges": Array [
           Object {

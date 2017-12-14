@@ -19,6 +19,10 @@ type ExtendedHotelType = {
   facilities: HotelFacilityType[],
   rooms: HotelRoomType[],
   photos: HotelPhotoType[],
+  location: {|
+    longitude: string,
+    latitude: string,
+  |},
 };
 
 function sanitizeHotels(hotels): ExtendedHotelType[] {
@@ -28,7 +32,7 @@ function sanitizeHotels(hotels): ExtendedHotelType[] {
       return new Error('Requested hotel does not exist.');
     }
     return {
-      // HotelByAvailabilityType:
+      // HotelType:
       id: hotel.hotel_id,
       name: hotel.name,
       rating: Math.round(hotel.class),
@@ -36,10 +40,19 @@ function sanitizeHotels(hotels): ExtendedHotelType[] {
       price: null, // it doesn't make sense to provide price in this case
       whitelabelUrl: hotel.url, // it's not whitelabel (?)
       cityName: hotel.city,
-      // + HotelByIDType:
+      address: {
+        street: hotel.address,
+        city: hotel.city,
+        zip: hotel.zip,
+      },
+      // + ExtendedHotelType:
       facilities: sanitizeHotelFacilities(hotel.facilities),
       rooms: sanitizeHotelRooms(hotel.rooms),
       photos: sanitizeHotelPhotos(hotel.photos),
+      location: {
+        longitude: hotel.location.longitude,
+        latitude: hotel.location.latitude,
+      },
     };
   });
 }

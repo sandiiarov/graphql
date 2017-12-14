@@ -15,10 +15,13 @@ import GraphQLHotelRoom from './HotelRoom';
 import GraphQLHotelPhoto from './HotelPhoto';
 import GraphQLHotelRating from './HotelRating';
 import GraphQLHotelReview from './HotelReview';
+import GraphQLCoordinates from '../../../location/types/outputs/Coordinates';
+import GraphQLAddress from '../../../common/types/outputs/Address';
 import HotelPhotosDataloader from '../../dataloaders/HotelPhotos';
 
 import type { HotelType } from '../../dataloaders/flow/HotelType';
 import type { GraphqlContextType } from '../../../common/services/GraphqlContext';
+import type { Address } from '../../../common/types/outputs/Address';
 
 export default new GraphQLObjectType({
   name: 'Hotel',
@@ -72,6 +75,33 @@ export default new GraphQLObjectType({
       description: 'URL to our whitelabel page of this hotel.',
       type: GraphQLString,
       resolve: ({ whitelabelUrl }: HotelType) => whitelabelUrl,
+    },
+
+    coordinates: {
+      description: 'Location of the hotel.',
+      type: GraphQLCoordinates,
+      resolve: async (
+        { id }: HotelType,
+        args: Object,
+        { dataLoader }: GraphqlContextType,
+      ) => {
+        const { location } = await dataLoader.singleHotel.load(id);
+        return {
+          lat: location.latitude,
+          lng: location.longitude,
+        };
+      },
+    },
+
+    address: {
+      type: GraphQLAddress,
+      resolve: ({ address }: HotelType): Address => {
+        return {
+          street: address.street,
+          city: address.city,
+          zip: address.zip,
+        };
+      },
     },
 
     facilities: {

@@ -61,12 +61,17 @@ describe('all hotels query', () => {
               node {
                 id
                 name
+                cityName
+                whitelabelUrl
                 price {
                   amount
                   currency
                 }
-                cityName
-                whitelabelUrl
+                address {
+                  street
+                  city
+                  zip
+                }
                 rating {
                   stars
                   categoryName
