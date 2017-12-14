@@ -27,19 +27,28 @@ it('works with full query', async () => {
         query($id: ID!) {
           hotel(id: $id) {
             id
+            name
+            cityName
+            whitelabelUrl
             price {
               amount
               currency
             }
-            name
             mainPhoto {
               id
               lowResUrl
               highResUrl
               thumbnailUrl
             }
-            cityName
-            whitelabelUrl
+            coordinates {
+              lat
+              lng
+            }
+            address {
+              street
+              city
+              zip
+            }
             rating {
               stars
               categoryName

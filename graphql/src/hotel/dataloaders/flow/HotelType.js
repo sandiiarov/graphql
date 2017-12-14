@@ -1,5 +1,7 @@
 // @flow
 
+import type { Address } from '../../../common/types/outputs/Address';
+
 export type HotelType = {|
   id: string,
   name: string,
@@ -8,4 +10,5 @@ export type HotelType = {|
   price: string, // actually float as a string
   whitelabelUrl: string,
   cityName: string,
+  address: Address,
 |};

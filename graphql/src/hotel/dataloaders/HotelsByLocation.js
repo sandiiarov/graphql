@@ -102,6 +102,11 @@ function sanitizeHotels(hotels): HotelType[] {
     price: hotel.price,
     whitelabelUrl: hotel.url,
     cityName: hotel.city,
+    address: {
+      street: hotel.address,
+      city: hotel.city,
+      zip: hotel.postcode,
+    },
   }));
 }
 

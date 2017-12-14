@@ -7,6 +7,11 @@ Object {
       "edges": Array [
         Object {
           "node": Object {
+            "address": Object {
+              "city": "Rho",
+              "street": "Via Alessandro Volta S/N, Rho",
+              "zip": "20017",
+            },
             "cityName": "Rho",
             "id": "aG90ZWw6MjUyMTU=",
             "name": "Italiana Hotels Milan Rho Fair",
@@ -28,6 +33,11 @@ Object {
         },
         Object {
           "node": Object {
+            "address": Object {
+              "city": "Case Nuove",
+              "street": "Malpensa Terminal 1 S.S. 336, Case Nuove",
+              "zip": "21010",
+            },
             "cityName": "Case Nuove",
             "id": "aG90ZWw6MjQ4NTM5",
             "name": "Sheraton Milan Malpensa Airport Hotel & Conference Centre",
@@ -49,6 +59,11 @@ Object {
         },
         Object {
           "node": Object {
+            "address": Object {
+              "city": "Milan",
+              "street": "Via Angelo Carlo Fumagalli 4, Navigli, Milan",
+              "zip": "20143",
+            },
             "cityName": "Milan",
             "id": "aG90ZWw6ODAwODM=",
             "name": "Art Hotel Navigli",
@@ -70,6 +85,11 @@ Object {
         },
         Object {
           "node": Object {
+            "address": Object {
+              "city": "Milan",
+              "street": "Piazza Della Repubblica 17, Stazione Centrale, Milan",
+              "zip": "20124",
+            },
             "cityName": "Milan",
             "id": "aG90ZWw6ODc1NDE=",
             "name": "Hotel Principe Di Savoia",
@@ -91,6 +111,11 @@ Object {
         },
         Object {
           "node": Object {
+            "address": Object {
+              "city": "Milan",
+              "street": "Piazza Fontana 3, Milan City Centre, Milan",
+              "zip": "20122",
+            },
             "cityName": "Milan",
             "id": "aG90ZWw6ODM2ODk=",
             "name": "Rosa Grand Milano - Starhotels Collezione",
@@ -112,6 +137,11 @@ Object {
         },
         Object {
           "node": Object {
+            "address": Object {
+              "city": "Sesto San Giovanni",
+              "street": "Via Luciano Lama, 10 (Viale Edison), Sesto San Giovanni",
+              "zip": "20099",
+            },
             "cityName": "Sesto San Giovanni",
             "id": "aG90ZWw6ODkwMTc=",
             "name": "NH Milano Concordia",
@@ -133,6 +163,11 @@ Object {
         },
         Object {
           "node": Object {
+            "address": Object {
+              "city": "Milan",
+              "street": "Via Gesù 6-8, Milan City Centre, Milan",
+              "zip": "20121",
+            },
             "cityName": "Milan",
             "id": "aG90ZWw6NDYyODMw",
             "name": "Four Seasons Hotel Milano",
@@ -154,6 +189,11 @@ Object {
         },
         Object {
           "node": Object {
+            "address": Object {
+              "city": "Milan",
+              "street": "Via A. de Tocqueville 7/D, Stazione Garibaldi, Milan",
+              "zip": "20154",
+            },
             "cityName": "Milan",
             "id": "aG90ZWw6ODMxMTI=",
             "name": "Hotel Tocq",
@@ -175,6 +215,11 @@ Object {
         },
         Object {
           "node": Object {
+            "address": Object {
+              "city": "Saronno",
+              "street": "Via Varese 23, Saronno",
+              "zip": "21047",
+            },
             "cityName": "Saronno",
             "id": "aG90ZWw6ODc5MDU=",
             "name": "Starhotels Grand Milan",
@@ -196,6 +241,11 @@ Object {
         },
         Object {
           "node": Object {
+            "address": Object {
+              "city": "Milan",
+              "street": "Viale Andrea Doria 4, Stazione Centrale, Milan",
+              "zip": "20124",
+            },
             "cityName": "Milan",
             "id": "aG90ZWw6MjE4MTc1",
             "name": "Starhotels Echo",
