@@ -13,6 +13,8 @@ import FlightLoader from '../../flight/dataloaders/Flight';
 import OptionsStorage from './context/OptionsStorage';
 import HotelsByLocation from '../../hotel/dataloaders/HotelsByLocation';
 import HotelByID from '../../hotel/dataloaders/HotelByID';
+import HotelRoomsLoader from '../../hotel/dataloaders/HotelRooms';
+import HotelRoomAvailabilityLoader from '../../hotel/dataloaders/HotelRoomAvailability';
 
 import type { Booking } from '../../booking/Booking';
 import type { Airline } from '../../flight/Flight';
@@ -27,12 +29,16 @@ export type GraphqlContextType = {|
     booking: DataLoader<number | string, Booking>,
     bookings: BookingsLoader,
     flight: FlightLoader,
-    allHotels: DataLoader<HotelKey, HotelType[]>,
-    singleHotel: typeof HotelByID,
     identity: IdentityDataloader,
     location: LocationLoader,
     locationSuggestions: LocationSuggestionsLoader,
     rates: DataLoader<string, ?number>,
+    hotel: {
+      byLocation: DataLoader<HotelKey, HotelType[]>,
+      byId: typeof HotelByID,
+      room: HotelRoomsLoader,
+      roomAvailability: HotelRoomAvailabilityLoader,
+    },
   |},
   options: OptionsStorage,
   opticsContext?: Object,
@@ -50,12 +56,16 @@ export function createContext(token: ?string): GraphqlContextType {
       booking: createBookingLoader(token, bookings),
       bookings: bookings,
       flight: new FlightLoader(location),
-      allHotels: HotelsByLocation,
-      singleHotel: HotelByID,
       identity: new IdentityDataloader(token),
       location: location,
       locationSuggestions: locationSuggestions,
       rates: createRatesLoader(),
+      hotel: {
+        byLocation: HotelsByLocation,
+        byId: HotelByID,
+        room: new HotelRoomsLoader(),
+        roomAvailability: new HotelRoomAvailabilityLoader(),
+      },
     },
     options: new OptionsStorage(),
   };

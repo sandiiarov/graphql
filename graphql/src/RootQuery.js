@@ -2,9 +2,10 @@
 
 import { GraphQLObjectType } from 'graphql';
 
+import DeprecatedRootQuery from './RootQuery.deprecated';
 import AllBookings from './booking/queries/AllBookings';
 import AllFlights from './flight/queries/AllFlights';
-import AllHotels from './hotel/queries/AllHotels';
+import AllAvailableHotels from './hotel/queries/AllAvailableHotels';
 import AllLocations from './location/queries/AllLocations';
 import Booking from './booking/queries/Booking';
 import CurrentUser from './identity/queries/CurrentUser';
@@ -16,10 +17,11 @@ export default new GraphQLObjectType({
   fields: {
     allBookings: AllBookings,
     allFlights: AllFlights,
-    allHotels: AllHotels,
+    allAvailableHotels: AllAvailableHotels,
     allLocations: AllLocations,
     booking: Booking,
     currentUser: CurrentUser,
     hotel: Hotel,
+    ...DeprecatedRootQuery,
   },
 });

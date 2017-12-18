@@ -40,7 +40,7 @@ describe('all hotels query', () => {
     expect(
       await graphql(`
         {
-          allHotels(
+          allAvailableHotels(
             search: {
               latitude: 45.4654
               longitude: 9.1859
@@ -65,7 +65,7 @@ describe('all hotels query', () => {
     expect(
       await graphql(`
         {
-          allHotels(
+          allAvailableHotels(
             search: {
               latitude: 45.4654
               longitude: 9.1859
@@ -94,12 +94,12 @@ describe('all hotels query', () => {
                     amount
                     currency
                   }
-                  roomInformation {
+                  room {
                     id
                     type
                   }
                 }
-                hotelInformation {
+                hotel {
                   id
                 }
               }

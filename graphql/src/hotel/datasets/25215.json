@@ -1,0 +1,131 @@
+[
+  {
+    "countrycode": "it",
+    "maxrate": "262",
+    "max_persons_in_reservation": "0",
+    "book_domestic_without_cc_details": "0",
+    "hoteltype_id": "14",
+    "commission": "0",
+    "preferred": "1",
+    "class": "4",
+    "district": "",
+    "is_closed": "0",
+    "hotel_id": "25215",
+    "minrate": "48.6",
+    "currencycode": "EUR",
+    "name": "Italiana Hotels Milan Rho Fair",
+    "zip": "20017",
+    "creditcard_required": "1",
+    "languagecode": "en",
+    "class_is_estimated": "0",
+    "contractchain_id": "0",
+    "city": "Rho",
+    "max_rooms_in_reservation": "0",
+    "exact_class": "4.0",
+    "pagename": "holiday-inn-milan-rho-fair",
+    "nr_rooms": "135",
+    "url": "https://www.booking.com/hotel/it/holiday-inn-milan-rho-fair.html",
+    "direct_payment": "1",
+    "created": "2008-12-19 09:09:24",
+    "city_id": "-126278",
+    "address": "Via Alessandro Volta S/N",
+    "facilities": [
+      {
+        "name": "Restaurant",
+        "languagecode": "en",
+        "hotelfacilitytype_id": "3",
+        "type": "boolean",
+        "facilitytype_id": "7",
+        "hotel_id": "25215"
+      },
+      {
+        "name": "Room service",
+        "hotelfacilitytype_id": "5",
+        "type": "boolean",
+        "facilitytype_id": "7",
+        "languagecode": "en",
+        "hotel_id": "25215"
+      },
+      {
+        "name": "Meeting/banquet facilities",
+        "languagecode": "en",
+        "type": "free_or_paid",
+        "facilitytype_id": "27",
+        "hotelfacilitytype_id": "6",
+        "hotel_id": "25215"
+      }
+    ],
+    "rooms": [
+      {
+        "bookable": "1",
+        "max_persons": "2",
+        "roomtype": "Double",
+        "min_price": "0",
+        "max_price": "0",
+        "hotel_id": "25215",
+        "room_id": "2521507",
+        "roomtype_id": "9",
+        "ranking": "6",
+        "bedding": [
+          {
+            "type": "Extra-large double bed(s) (Super-king size)",
+            "amount": "1"
+          }
+        ]
+      },
+      {
+        "roomtype_id": "8",
+        "ranking": "3",
+        "roomtype": "Twin",
+        "min_price": "53.1",
+        "bookable": "1",
+        "max_persons": "2",
+        "max_price": "262",
+        "hotel_id": "25215",
+        "room_id": "2521509",
+        "bedding": [
+          {
+            "amount": "2",
+            "type": "Single bed(s)"
+          }
+        ]
+      }
+    ],
+    "descriptions": [
+      {
+        "description": "Italiana Hotels Milan Rho Fair is set in a renovated cotton mill from the early 20th century, 10 minutes' drive from RhoFiera Milano exhibition centre. It offers air-conditioned rooms, free WiFi throughout, and a small gym with sauna and Turkish bath.\n\nThis Italiana hotel features elegant rooms with parquet floors and a flat-screen TV with satellite channels. Some rooms feature tea and coffee making facilities, and luxury toiletries. Some also have a private terrace.\n\nOn the top floor you will find the hotel's trendy Club 1902 bar, and the La Fabbrica del Cotone restaurant, both with panoramic views. The restaurant serves Mediterranean and Milanese specialities prepared by the chef each day.\n\nDuring major events, a free shuttle is offered to/from RhoFiera Milano exhibition centre. The property is 500 metres from Rho Train Station. From there, you can reach the EXPO 2015 exhibition centre in 4 minutes.",
+        "hotel_id": "25215",
+        "languagecode": "en",
+        "descriptiontype_id": "6"
+      },
+      {
+        "description": "Restaurant might not be available if already booked for a private party.\n\nPlease note, the shuttle is subject to availability and must be booked in advance.",
+        "languagecode": "en",
+        "hotel_id": "25215",
+        "descriptiontype_id": "7"
+      }
+    ],
+    "photos": [
+      {
+        "hotel_id": "25215",
+        "url_original": "http://aff.bstatic.com/images/hotel/max500/740/74030690.jpg",
+        "url_max300": "http://aff.bstatic.com/images/hotel/max300/740/74030690.jpg",
+        "url_square60": "http://aff.bstatic.com/images/hotel/square60/740/74030690.jpg",
+        "photo_id": "74030690"
+      }
+    ],
+    "chains": [],
+    "checkin": {
+      "to": "",
+      "from": "14:00"
+    },
+    "checkout": {
+      "to": "",
+      "from": "14:00"
+    },
+    "location": {
+      "latitude": "45.52403387526",
+      "longitude": "9.03759062290192"
+    }
+  }
+]

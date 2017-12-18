@@ -1,0 +1,469 @@
+[
+  {
+    "bookable": "1",
+    "min_price": "0",
+    "roomtype": "Double",
+    "max_persons": "2",
+    "hotel_id": "25215",
+    "room_id": "2521507",
+    "ranking": "6",
+    "max_price": "0",
+    "roomtype_id": "9",
+    "facilities": [
+      {
+        "facilitytype_id": "7",
+        "name": "Minibar",
+        "type": "free_or_paid",
+        "languagecode": "en",
+        "roomfacilitytype_id": "3",
+        "room_id": "2521507",
+        "hotel_id": "25215"
+      },
+      {
+        "languagecode": "en",
+        "roomfacilitytype_id": "6",
+        "name": "Safety Deposit Box",
+        "facilitytype_id": "4",
+        "type": "free_or_paid",
+        "room_id": "2521507",
+        "hotel_id": "25215"
+      },
+      {
+        "roomfacilitytype_id": "7",
+        "languagecode": "en",
+        "type": "boolean",
+        "name": "Pay-per-view Channels",
+        "facilitytype_id": "6",
+        "room_id": "2521507",
+        "hotel_id": "25215"
+      }
+    ],
+    "descriptions": [
+      {
+        "description": "Large high ceilinged room with wooden floors and spacious bathroom. Includes free WiFi, work desk and flat-screen satellite TV. Complete with tea/coffee maker and luxury toiletries.",
+        "room_id": "2521507",
+        "languagecode": "en",
+        "name": "Executive King Room",
+        "hotel_id": "25215"
+      }
+    ],
+    "bedding": [
+      {
+        "amount": "1",
+        "type": "Extra-large double bed(s) (Super-king size)"
+      }
+    ]
+  },
+  {
+    "room_id": "2521509",
+    "max_price": "0",
+    "ranking": "3",
+    "roomtype_id": "8",
+    "bookable": "1",
+    "roomtype": "Twin",
+    "min_price": "0",
+    "hotel_id": "25215",
+    "max_persons": "2",
+    "facilities": [
+      {
+        "facilitytype_id": "5",
+        "name": "Shower",
+        "type": "boolean",
+        "roomfacilitytype_id": "4",
+        "languagecode": "en",
+        "room_id": "2521509",
+        "hotel_id": "25215"
+      },
+      {
+        "type": "boolean",
+        "name": "Sofa",
+        "facilitytype_id": "4",
+        "roomfacilitytype_id": "77",
+        "languagecode": "en",
+        "room_id": "2521509",
+        "hotel_id": "25215"
+      }
+    ],
+    "descriptions": [
+      {
+        "description": "Modern high ceilinged room with wooden floors and spacious bathroom. Includes free WiFi, work desk and flat-screen satellite TV.",
+        "name": "Twin Room",
+        "hotel_id": "25215",
+        "room_id": "2521509",
+        "languagecode": "en"
+      }
+    ],
+    "bedding": [
+      {
+        "type": "Single bed(s)",
+        "amount": "2"
+      }
+    ]
+  },
+  {
+    "max_persons": "2",
+    "hotel_id": "25215",
+    "roomtype": "Double",
+    "min_price": "53.1",
+    "bookable": "1",
+    "roomtype_id": "9",
+    "ranking": "1",
+    "max_price": "854",
+    "room_id": "2521511",
+    "descriptions": [
+      {
+        "description": "Includes free WiFi, work desk and flat-screen satellite TV.\n\nNon-smoking rooms on request.",
+        "languagecode": "en",
+        "hotel_id": "25215",
+        "room_id": "2521511",
+        "name": "Double Room"
+      }
+    ],
+    "bedding": [
+      {
+        "amount": "1",
+        "type": "Large bed(s) (King size)"
+      }
+    ]
+  },
+  {
+    "roomtype_id": "7",
+    "room_id": "2521512",
+    "ranking": "4",
+    "max_price": "0",
+    "roomtype": "Triple",
+    "min_price": "0",
+    "max_persons": "3",
+    "hotel_id": "25215",
+    "bookable": "1",
+    "descriptions": [
+      {
+        "description": "This spacious and comfortable room has high ceilings and parquet floors. It features free WiFi, a work desk and flat-screen TV with satellite channels.",
+        "name": "Triple Room",
+        "hotel_id": "25215",
+        "room_id": "2521512",
+        "languagecode": "en"
+      }
+    ],
+    "bedding": [
+      {
+        "amount": "3",
+        "type": "Single bed(s)"
+      }
+    ]
+  },
+  {
+    "room_id": "2521513",
+    "ranking": "5",
+    "max_price": "0",
+    "roomtype_id": "24",
+    "bookable": "1",
+    "min_price": "0",
+    "roomtype": "Twin/Double",
+    "max_persons": "4",
+    "hotel_id": "25215",
+    "descriptions": [
+      {
+        "description": "Composed of connecting rooms, each with a spacious bathroom, this room features parquet floors and a work desk. It also has free WiFi and a flat-screen TV with satellite channels.",
+        "room_id": "2521513",
+        "name": "Two Connecting Rooms",
+        "languagecode": "en",
+        "hotel_id": "25215"
+      }
+    ],
+    "bedding": [
+      {
+        "type": "Single bed(s)",
+        "amount": "2"
+      },
+      {
+        "amount": "1",
+        "type": "Extra-large double bed(s) (Super-king size)"
+      },
+      {
+        "amount": "2",
+        "type": "Extra-large double bed(s) (Super-king size)"
+      }
+    ]
+  },
+  {
+    "max_persons": "1",
+    "hotel_id": "25215",
+    "min_price": "53.1",
+    "roomtype": "Twin/Double",
+    "bookable": "1",
+    "roomtype_id": "24",
+    "ranking": "2",
+    "max_price": "854",
+    "room_id": "2521515",
+    "descriptions": [
+      {
+        "description": "Includes free WiFi, work desk and flat-screen satellite TV.\n\nNon-smoking rooms on request.",
+        "name": "Double or Twin Room for Single Use",
+        "room_id": "2521515",
+        "hotel_id": "25215",
+        "languagecode": "en"
+      }
+    ],
+    "bedding": [
+      {
+        "amount": "1",
+        "type": "Large bed(s) (King size)"
+      }
+    ]
+  },
+  {
+    "roomtype": "Double",
+    "min_price": "0",
+    "hotel_id": "25215",
+    "max_persons": "1",
+    "bookable": "1",
+    "roomtype_id": "9",
+    "room_id": "2521517",
+    "max_price": "0",
+    "ranking": "7",
+    "facilities": [
+      {
+        "type": "boolean",
+        "name": "Electric kettle",
+        "facilitytype_id": "7",
+        "roomfacilitytype_id": "86",
+        "languagecode": "en",
+        "room_id": "2521517",
+        "hotel_id": "25215"
+      }
+    ],
+    "descriptions": [
+      {
+        "room_id": "2521517",
+        "hotel_id": "25215",
+        "name": "Executive King Room for Single Use",
+        "languagecode": "en",
+        "description": "En suite room with high ceilings, parquet floors, and tea/coffee maker. Offers free WiFi, air conditioning, and a satellite flat-screen TV. The bathroom is complete with luxury toiletries."
+      }
+    ],
+    "bedding": [
+      {
+        "amount": "1",
+        "type": "Extra-large double bed(s) (Super-king size)"
+      }
+    ]
+  },
+  {
+    "roomtype_id": "9",
+    "room_id": "2521518",
+    "ranking": "0",
+    "max_price": "0",
+    "roomtype": "Double",
+    "min_price": "0",
+    "max_persons": "3",
+    "hotel_id": "25215",
+    "bookable": "1",
+    "descriptions": [
+      {
+        "description": "Offering free WiFi, this air-conditioned room comes with a satellite flat-screen TV, a desk and parquet floors. The private bathroom includes a hairdryer and free toiletries.",
+        "room_id": "2521518",
+        "languagecode": "en",
+        "name": "Double Room with Extra Bed",
+        "hotel_id": "25215"
+      }
+    ],
+    "bedding": [
+      {
+        "type": "Single bed(s)",
+        "amount": "1"
+      },
+      {
+        "type": "Large bed(s) (King size)",
+        "amount": "1"
+      }
+    ]
+  },
+  {
+    "max_price": "0",
+    "ranking": "0",
+    "room_id": "2521519",
+    "roomtype_id": "4",
+    "bookable": "1",
+    "hotel_id": "25215",
+    "max_persons": "4",
+    "roomtype": "Quadruple",
+    "min_price": "0",
+    "descriptions": [
+      {
+        "description": "Offering free WiFi, this air-conditioned room comes with a satellite flat-screen TV, a desk and parquet floors. The private bathroom includes a hairdryer and free toiletries.\n\nPlease specify bed preference when booking.",
+        "name": "Quadruple Room",
+        "hotel_id": "25215",
+        "room_id": "2521519",
+        "languagecode": "en"
+      }
+    ],
+    "bedding": [
+      {
+        "type": "Single bed(s)",
+        "amount": "2"
+      },
+      {
+        "type": "Single bed(s)",
+        "amount": "4"
+      },
+      {
+        "type": "Large bed(s) (King size)",
+        "amount": "1"
+      }
+    ]
+  },
+  {
+    "roomtype": "Double",
+    "min_price": "0",
+    "hotel_id": "25215",
+    "max_persons": "2",
+    "bookable": "1",
+    "roomtype_id": "9",
+    "room_id": "2521523",
+    "max_price": "0",
+    "ranking": "0",
+    "facilities": [
+      {
+        "name": "Bath",
+        "facilitytype_id": "5",
+        "type": "boolean",
+        "languagecode": "en",
+        "roomfacilitytype_id": "5",
+        "room_id": "2521523",
+        "hotel_id": "25215"
+      },
+      {
+        "languagecode": "en",
+        "roomfacilitytype_id": "121",
+        "type": "boolean",
+        "name": "City view",
+        "facilitytype_id": "9",
+        "room_id": "2521523",
+        "hotel_id": "25215"
+      },
+      {
+        "name": "Terrace",
+        "facilitytype_id": "9",
+        "type": "boolean",
+        "languagecode": "en",
+        "roomfacilitytype_id": "123",
+        "room_id": "2521523",
+        "hotel_id": "25215"
+      },
+      {
+        "roomfacilitytype_id": "129",
+        "languagecode": "en",
+        "type": "boolean",
+        "name": "Outdoor furniture",
+        "facilitytype_id": "7",
+        "room_id": "2521523",
+        "hotel_id": "25215"
+      }
+    ],
+    "descriptions": [
+      {
+        "description": "Boasting a private terrace with city views, this air-conditioned room comes with a satellite flat-screen TV, a desk and parquet floors. The private bathroom includes a hairdryer and free toiletries. WiFi is free.",
+        "name": "Double Room Top Executive",
+        "room_id": "2521523",
+        "hotel_id": "25215",
+        "languagecode": "en"
+      }
+    ],
+    "bedding": [
+      {
+        "type": "Extra-large double bed(s) (Super-king size)",
+        "amount": "1"
+      }
+    ]
+  },
+  {
+    "min_price": "0",
+    "roomtype": "Double",
+    "max_persons": "1",
+    "hotel_id": "25215",
+    "bookable": "1",
+    "roomtype_id": "9",
+    "room_id": "2521524",
+    "ranking": "0",
+    "max_price": "0",
+    "descriptions": [
+      {
+        "description": "Boasting a private terrace with city views, this air-conditioned room comes with a satellite flat-screen TV, a desk and parquet floors. The private bathroom includes a hairdryer and free toiletries. WiFi is free.",
+        "hotel_id": "25215",
+        "languagecode": "en",
+        "name": " Top Executive Single Use",
+        "room_id": "2521524"
+      }
+    ],
+    "bedding": [
+      {
+        "type": "Extra-large double bed(s) (Super-king size)",
+        "amount": "1"
+      }
+    ]
+  },
+  {
+    "room_id": "2521525",
+    "max_price": "0",
+    "ranking": "0",
+    "roomtype_id": "24",
+    "bookable": "1",
+    "roomtype": "Twin/Double",
+    "min_price": "0",
+    "max_persons": "2",
+    "hotel_id": "25215",
+    "facilities": [
+      {
+        "name": "Toilet paper",
+        "facilitytype_id": "5",
+        "type": "boolean",
+        "languagecode": "en",
+        "roomfacilitytype_id": "141",
+        "room_id": "2521525",
+        "hotel_id": "25215"
+      }
+    ],
+    "descriptions": [
+      {
+        "name": "Double or Twin Room - DogLovers ",
+        "languagecode": "en",
+        "hotel_id": "25215",
+        "room_id": "2521525",
+        "description": "This twin/double room has air conditioning and minibar"
+      }
+    ],
+    "bedding": [
+      {
+        "amount": "1",
+        "type": "Large bed(s) (King size)"
+      }
+    ]
+  },
+  {
+    "roomtype": "Twin/Double",
+    "min_price": "0",
+    "hotel_id": "25215",
+    "max_persons": "1",
+    "bookable": "1",
+    "roomtype_id": "24",
+    "room_id": "2521526",
+    "max_price": "0",
+    "ranking": "0",
+    "descriptions": [
+      {
+        "description": "This twin/double room features a flat-screen TV, minibar and air conditioning.",
+        "languagecode": "en",
+        "room_id": "2521526",
+        "hotel_id": "25215",
+        "name": "Double Room Single Use - DogLovers "
+      }
+    ],
+    "bedding": [
+      {
+        "amount": "1",
+        "type": "Large bed(s) (King size)"
+      }
+    ]
+  }
+]

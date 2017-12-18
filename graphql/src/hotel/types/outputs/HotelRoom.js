@@ -14,10 +14,11 @@ import {
 
 import { globalIdField } from '../../../common/services/OpaqueIdentifier';
 import GraphQLHotelRoomBedding from './HotelRoomBedding';
+import GraphQLHotelRoomDescription from './HotelRoomDescription';
 import GraphQLHotelPhoto from './HotelPhoto';
 import HotelRoomPhotoDataloader from '../../dataloaders/HotelRoomPhotos';
 
-import type { HotelRoomType } from '../../dataloaders/HotelByID';
+import type { HotelRoomType } from '../../dataloaders/flow/HotelRoomType';
 
 export default new GraphQLObjectType({
   name: 'HotelRoom',
@@ -53,6 +54,12 @@ export default new GraphQLObjectType({
           args,
         );
       },
+    },
+
+    description: {
+      type: GraphQLHotelRoomDescription,
+      resolve: ({ descriptions }: HotelRoomType) =>
+        descriptions.length > 0 ? descriptions[0] : null,
     },
   },
 });

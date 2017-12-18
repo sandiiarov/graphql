@@ -26,7 +26,7 @@ exports[`single hotels query works with single hotel ID 1`] = `
 Object {
   "data": Object {
     "hotel": Object {
-      "id": "aG90ZWw6MTkzMzI=",
+      "id": "aG90ZWw6MjUyMTU=",
     },
   },
 }

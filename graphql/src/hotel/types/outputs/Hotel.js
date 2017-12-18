@@ -9,7 +9,6 @@ import {
 } from 'graphql-relay';
 
 import { globalIdField } from '../../../common/services/OpaqueIdentifier';
-import GraphQLPrice from '../../../common/types/outputs/Price';
 import GraphQLHotelFacility from './HotelFacility';
 import GraphQLHotelRoom from './HotelRoom';
 import GraphQLHotelPhoto from './HotelPhoto';
@@ -25,45 +24,14 @@ import type { Address } from '../../../common/types/outputs/Address';
 
 export default new GraphQLObjectType({
   name: 'Hotel',
+  description: 'General information about the hotel.',
   fields: {
     id: globalIdField('hotel', ({ id }) => id),
-
-    price: {
-      type: GraphQLPrice,
-      description:
-        'Total price for all guests and nights and in the hotel. (including VAT)',
-      resolve: ({ price, currencyCode }: HotelType) => ({
-        amount: price,
-        currency: currencyCode,
-      }),
-    },
 
     name: {
       description: 'Name of the hotel.',
       type: GraphQLString,
       resolve: ({ name }: HotelType) => name,
-    },
-
-    rating: {
-      // see: https://en.wikipedia.org/wiki/Hotel_rating
-      description: 'The star rating of the hotel.',
-      type: GraphQLHotelRating,
-      resolve: ({ rating }: HotelType) => rating,
-    },
-
-    review: {
-      description: 'Hotel review from hotel visitors.',
-      type: GraphQLHotelReview,
-      resolve: () => true, // we do not have necessary data yet, see: https://gitlab.skypicker.com/mobile/hotels-bookingcom-api/issues/1
-    },
-
-    mainPhoto: {
-      description: 'Main photo of the hotel.',
-      type: GraphQLHotelPhoto,
-      resolve: async ({ id }: HotelType) => {
-        const allPhotos = await HotelPhotosDataloader.load(id);
-        return allPhotos[0]; // just the first one
-      },
     },
 
     cityName: {
@@ -77,6 +45,15 @@ export default new GraphQLObjectType({
       resolve: ({ whitelabelUrl }: HotelType) => whitelabelUrl,
     },
 
+    mainPhoto: {
+      description: 'Main photo of the hotel.',
+      type: GraphQLHotelPhoto,
+      resolve: async ({ id }: HotelType) => {
+        const allPhotos = await HotelPhotosDataloader.load(id);
+        return allPhotos[0]; // just the first one
+      },
+    },
+
     coordinates: {
       description: 'Location of the hotel.',
       type: GraphQLCoordinates,
@@ -85,7 +62,7 @@ export default new GraphQLObjectType({
         args: Object,
         { dataLoader }: GraphqlContextType,
       ) => {
-        const { location } = await dataLoader.singleHotel.load(id);
+        const { location } = await dataLoader.hotel.byId.load(id);
         return {
           lat: location.latitude,
           lng: location.longitude,
@@ -104,6 +81,19 @@ export default new GraphQLObjectType({
       },
     },
 
+    rating: {
+      // see: https://en.wikipedia.org/wiki/Hotel_rating
+      description: 'The star rating of the hotel.',
+      type: GraphQLHotelRating,
+      resolve: ({ rating }: HotelType) => rating,
+    },
+
+    review: {
+      description: 'Hotel review from hotel visitors.',
+      type: GraphQLHotelReview,
+      resolve: () => true, // we do not have necessary data yet, see: https://gitlab.skypicker.com/mobile/hotels-bookingcom-api/issues/1
+    },
+
     facilities: {
       description: 'All facilities available in the hotel.',
       type: connectionDefinitions({
@@ -115,7 +105,7 @@ export default new GraphQLObjectType({
         args: Object,
         { dataLoader }: GraphqlContextType,
       ) => {
-        const { facilities } = await dataLoader.singleHotel.load(id);
+        const { facilities } = await dataLoader.hotel.byId.load(id);
         return connectionFromArray(facilities, args);
       },
     },
@@ -131,8 +121,10 @@ export default new GraphQLObjectType({
         args: Object,
         { dataLoader }: GraphqlContextType,
       ) => {
-        const { rooms } = await dataLoader.singleHotel.load(id);
-        return connectionFromArray(rooms, args);
+        return connectionFromPromisedArray(
+          dataLoader.hotel.room.loadAll([id]),
+          args,
+        );
       },
     },
 

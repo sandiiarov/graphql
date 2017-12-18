@@ -3,23 +3,27 @@
 import { toGlobalId } from '../../../common/services/OpaqueIdentifier';
 
 import { graphql, RestApiMock } from '../../../common/services/TestingTools';
-import SingleHotelDataset from '../../datasets/19332.json';
+import SingleHotelDataset from '../../datasets/25215.json';
 import HotelPhotosDataset from '../../datasets/hotelPhotos.json';
 import HotelRoomPhotosDataset from '../../datasets/roomPhotos.json';
+import HotelRoomDetailsDataset from '../../datasets/roomDetails.json';
 
 // keep the URL hardcoded here so we will know if it changed unintentionally
 const baseUrl = 'https://hotels-api.skypicker.com/api/';
 
 it('works with full query', async () => {
-  RestApiMock.onGet(`${baseUrl}hotelDetails?hotel_ids=19332`).replyWithData(
+  RestApiMock.onGet(`${baseUrl}hotelDetails?hotel_ids=25215`).replyWithData(
     SingleHotelDataset,
   );
-  RestApiMock.onGet(`${baseUrl}hotelPhotos?hotel_ids=19332`).replyWithData(
+  RestApiMock.onGet(`${baseUrl}hotelPhotos?hotel_ids=25215`).replyWithData(
     HotelPhotosDataset,
   );
   RestApiMock.onGet(
-    `${baseUrl}roomPhotos?room_ids=1933201%2C1933203`,
+    `${baseUrl}roomPhotos?room_ids=2521507%2C2521509`,
   ).replyWithData(HotelRoomPhotosDataset);
+  RestApiMock.onGet(`${baseUrl}roomDetails?hotel_ids=25215`).replyWithData(
+    HotelRoomDetailsDataset,
+  );
 
   expect(
     await graphql(
@@ -30,10 +34,6 @@ it('works with full query', async () => {
             name
             cityName
             whitelabelUrl
-            price {
-              amount
-              currency
-            }
             mainPhoto {
               id
               lowResUrl
@@ -89,6 +89,10 @@ it('works with full query', async () => {
                       }
                     }
                   }
+                  description {
+                    title
+                    text
+                  }
                 }
               }
             }
@@ -107,7 +111,7 @@ it('works with full query', async () => {
         }
       `,
       {
-        id: toGlobalId('hotel', '19332'),
+        id: toGlobalId('hotel', '25215'),
       },
     ),
   ).toMatchSnapshot();
