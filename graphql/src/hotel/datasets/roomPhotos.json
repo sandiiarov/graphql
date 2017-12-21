@@ -1,74 +1,50 @@
 [
   {
-    "url_square60": "http://aff.bstatic.com/images/hotel/square60/588/58849008.jpg",
-    "url_original": "http://aff.bstatic.com/images/hotel/max500/588/58849008.jpg",
-    "room_id": "1933201",
-    "hotel_id": "19332",
-    "photo_id": "58849008",
-    "url_max300": "http://aff.bstatic.com/images/hotel/max300/588/58849008.jpg"
+    "url_original": "http://aff.bstatic.com/images/hotel/max500/740/74030508.jpg",
+    "url_max300": "http://aff.bstatic.com/images/hotel/max300/740/74030508.jpg",
+    "room_id": "2521507",
+    "photo_id": "74030508",
+    "hotel_id": "25215",
+    "url_square60": "http://aff.bstatic.com/images/hotel/square60/740/74030508.jpg"
   },
   {
-    "room_id": "1933201",
-    "url_original": "http://aff.bstatic.com/images/hotel/max500/588/58848985.jpg",
-    "url_square60": "http://aff.bstatic.com/images/hotel/square60/588/58848985.jpg",
-    "photo_id": "58848985",
-    "hotel_id": "19332",
-    "url_max300": "http://aff.bstatic.com/images/hotel/max300/588/58848985.jpg"
+    "hotel_id": "25215",
+    "url_square60": "http://aff.bstatic.com/images/hotel/square60/740/74030464.jpg",
+    "room_id": "2521507",
+    "photo_id": "74030464",
+    "url_max300": "http://aff.bstatic.com/images/hotel/max300/740/74030464.jpg",
+    "url_original": "http://aff.bstatic.com/images/hotel/max500/740/74030464.jpg"
   },
   {
-    "hotel_id": "19332",
-    "photo_id": "58849010",
-    "url_max300": "http://aff.bstatic.com/images/hotel/max300/588/58849010.jpg",
-    "room_id": "1933201",
-    "url_original": "http://aff.bstatic.com/images/hotel/max500/588/58849010.jpg",
-    "url_square60": "http://aff.bstatic.com/images/hotel/square60/588/58849010.jpg"
+    "hotel_id": "25215",
+    "url_square60": "http://aff.bstatic.com/images/hotel/square60/740/74030481.jpg",
+    "room_id": "2521507",
+    "photo_id": "74030481",
+    "url_original": "http://aff.bstatic.com/images/hotel/max500/740/74030481.jpg",
+    "url_max300": "http://aff.bstatic.com/images/hotel/max300/740/74030481.jpg"
   },
   {
-    "room_id": "1933201",
-    "url_original": "http://aff.bstatic.com/images/hotel/max500/588/58849018.jpg",
-    "url_square60": "http://aff.bstatic.com/images/hotel/square60/588/58849018.jpg",
-    "url_max300": "http://aff.bstatic.com/images/hotel/max300/588/58849018.jpg",
-    "photo_id": "58849018",
-    "hotel_id": "19332"
+    "url_square60": "http://aff.bstatic.com/images/hotel/square60/740/74030573.jpg",
+    "hotel_id": "25215",
+    "room_id": "2521509",
+    "photo_id": "74030573",
+    "url_max300": "http://aff.bstatic.com/images/hotel/max300/740/74030573.jpg",
+    "url_original": "http://aff.bstatic.com/images/hotel/max500/740/74030573.jpg"
   },
   {
-    "url_max300": "http://aff.bstatic.com/images/hotel/max300/588/58848972.jpg",
-    "hotel_id": "19332",
-    "photo_id": "58848972",
-    "url_square60": "http://aff.bstatic.com/images/hotel/square60/588/58848972.jpg",
-    "url_original": "http://aff.bstatic.com/images/hotel/max500/588/58848972.jpg",
-    "room_id": "1933203"
+    "url_square60": "http://aff.bstatic.com/images/hotel/square60/740/74030487.jpg",
+    "hotel_id": "25215",
+    "photo_id": "74030487",
+    "room_id": "2521509",
+    "url_original": "http://aff.bstatic.com/images/hotel/max500/740/74030487.jpg",
+    "url_max300": "http://aff.bstatic.com/images/hotel/max300/740/74030487.jpg"
   },
   {
-    "hotel_id": "19332",
-    "url_max300": "http://aff.bstatic.com/images/hotel/max300/588/58848991.jpg",
-    "room_id": "1933203",
-    "url_original": "http://aff.bstatic.com/images/hotel/max500/588/58848991.jpg",
-    "photo_id": "58848991",
-    "url_square60": "http://aff.bstatic.com/images/hotel/square60/588/58848991.jpg"
-  },
-  {
-    "url_max300": "http://aff.bstatic.com/images/hotel/max300/588/58848997.jpg",
-    "hotel_id": "19332",
-    "photo_id": "58848997",
-    "url_square60": "http://aff.bstatic.com/images/hotel/square60/588/58848997.jpg",
-    "url_original": "http://aff.bstatic.com/images/hotel/max500/588/58848997.jpg",
-    "room_id": "1933203"
-  },
-  {
-    "url_original": "http://aff.bstatic.com/images/hotel/max500/588/58849000.jpg",
-    "room_id": "1933203",
-    "url_square60": "http://aff.bstatic.com/images/hotel/square60/588/58849000.jpg",
-    "photo_id": "58849000",
-    "url_max300": "http://aff.bstatic.com/images/hotel/max300/588/58849000.jpg",
-    "hotel_id": "19332"
-  },
-  {
-    "url_square60": "http://aff.bstatic.com/images/hotel/square60/588/58849090.jpg",
-    "photo_id": "58849090",
-    "url_original": "http://aff.bstatic.com/images/hotel/max500/588/58849090.jpg",
-    "room_id": "1933203",
-    "url_max300": "http://aff.bstatic.com/images/hotel/max300/588/58849090.jpg",
-    "hotel_id": "19332"
+    "url_max300": "http://aff.bstatic.com/images/hotel/max300/740/74030561.jpg",
+    "url_original": "http://aff.bstatic.com/images/hotel/max500/740/74030561.jpg",
+    "photo_id": "74030561",
+    "room_id": "2521509",
+    "hotel_id": "25215",
+    "url_square60": "http://aff.bstatic.com/images/hotel/square60/740/74030561.jpg"
   }
 ]

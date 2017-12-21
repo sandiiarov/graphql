@@ -1,0 +1,144 @@
+[
+  {
+    "pagename": "sheraton-milan-malpensa-airport-conference-centre",
+    "currencycode": "EUR",
+    "created": "2010-06-08 09:41:07",
+    "book_domestic_without_cc_details": "0",
+    "contractchain_id": "0",
+    "creditcard_required": "1",
+    "city_id": "900048081",
+    "zip": "21010",
+    "class": "4",
+    "class_is_estimated": "0",
+    "hoteltype_id": "14",
+    "preferred": "1",
+    "name": "Sheraton Milan Malpensa Airport Hotel & Conference Centre",
+    "city": "Case Nuove",
+    "exact_class": "4.0",
+    "languagecode": "en",
+    "maxrate": "787",
+    "district": "",
+    "countrycode": "it",
+    "is_closed": "0",
+    "nr_rooms": "437",
+    "address": "Malpensa Terminal 1 S.S. 336",
+    "minrate": "105",
+    "url": "https://www.booking.com/hotel/it/sheraton-milan-malpensa-airport-conference-centre.html",
+    "max_persons_in_reservation": "0",
+    "hotel_id": "248539",
+    "commission": "0",
+    "max_rooms_in_reservation": "8",
+    "facilities": [
+      {
+        "name": "Restaurant",
+        "facilitytype_id": "7",
+        "languagecode": "en",
+        "hotelfacilitytype_id": "3",
+        "type": "boolean",
+        "hotel_id": "248539"
+      },
+      {
+        "type": "boolean",
+        "hotelfacilitytype_id": "5",
+        "facilitytype_id": "7",
+        "name": "Room service",
+        "languagecode": "en",
+        "hotel_id": "248539"
+      },
+      {
+        "hotelfacilitytype_id": "6",
+        "languagecode": "en",
+        "facilitytype_id": "27",
+        "name": "Meeting/banquet facilities",
+        "type": "free_or_paid",
+        "hotel_id": "248539"
+      }
+    ],
+    "rooms": [
+      {
+        "roomtype": "Twin/Double",
+        "max_persons": "3",
+        "hotel_id": "248539",
+        "bookable": "1",
+        "min_price": "96.3",
+        "roomtype_id": "24",
+        "ranking": "1000",
+        "max_price": "796.14",
+        "room_id": "24853901",
+        "bedding": [
+          {
+            "type": "Single bed(s)",
+            "amount": "2"
+          },
+          {
+            "type": "Extra-large double bed(s) (Super-king size)",
+            "amount": "1"
+          }
+        ]
+      },
+      {
+        "min_price": "0",
+        "bookable": "1",
+        "roomtype": "Twin/Double",
+        "max_persons": "3",
+        "hotel_id": "248539",
+        "max_price": "0",
+        "room_id": "24853903",
+        "roomtype_id": "24",
+        "ranking": "1002",
+        "bedding": [
+          {
+            "amount": "2",
+            "type": "Single bed(s)"
+          },
+          {
+            "type": "Extra-large double bed(s) (Super-king size)",
+            "amount": "1"
+          }
+        ]
+      }
+    ],
+    "descriptions": [
+      {
+        "description": "Sheraton Milan Malpensa Hotel is located inside Malpensa Airport's Terminal 1. It offers air-conditioned rooms with minibar and flat-screen TV. A fitness centre is also available.\n\nRooms at Sheraton Milano Malpensa Airport Hotel and Conference Centre are soundproofed and feature Sheraton Sweet Sleeper beds.\n\nOther hotel facilities include business meeting rooms, a spa and beauty centre and indoor swimming pool.\n\nGuests can sip a cocktail at the on-site bar and have dinner at the restaurant, which specialises in Italian cuisine.\n\nThe hotel is a 40-minute drive from Milan centre, and 40 km from Rho Fiera Milano Exhibition Centre. You can also use public and private shuttles to Milan Central Railway Station.",
+        "languagecode": "en",
+        "hotel_id": "248539",
+        "descriptiontype_id": "6"
+      },
+      {
+        "description": "Please note that the spa is closed from 27 April until 14 May. Please inform Sheraton Milan Malpensa Airport Hotel & Conference Centre in advance of your expected arrival time. You can use the Special Requests box when booking, or contact the property directly with the contact details provided in your confirmation.",
+        "hotel_id": "248539",
+        "languagecode": "en",
+        "descriptiontype_id": "7"
+      }
+    ],
+    "photos": [
+      {
+        "url_max300": "http://aff.bstatic.com/images/hotel/max300/267/26753013.jpg",
+        "hotel_id": "248539",
+        "url_original": "http://aff.bstatic.com/images/hotel/max500/267/26753013.jpg",
+        "url_square60": "http://aff.bstatic.com/images/hotel/square60/267/26753013.jpg",
+        "photo_id": "26753013"
+      }
+    ],
+    "chains": [
+      {
+        "chain_id": "1056",
+        "name": "Sheraton",
+        "hotel_id": "248539"
+      }
+    ],
+    "checkin": {
+      "to": "",
+      "from": "15:00"
+    },
+    "checkout": {
+      "to": "",
+      "from": "15:00"
+    },
+    "location": {
+      "latitude": "45.6275442354691",
+      "longitude": "8.71018409729004"
+    }
+  }
+]

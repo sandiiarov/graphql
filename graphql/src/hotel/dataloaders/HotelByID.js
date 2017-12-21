@@ -9,6 +9,8 @@ import type { PhotoType as HotelPhotoType } from './flow/PhotoType';
 
 /**
  * This data-loader loads all hotels by their ID.
+ *
+ * @see https://hotels-api.skypicker.com/api/hotelDetails?hotel_ids=25215
  */
 export default new OptimisticDataloader(async (hotelIds: number[]): Promise<
   ExtendedHotelType[],
@@ -17,7 +19,6 @@ export default new OptimisticDataloader(async (hotelIds: number[]): Promise<
 type ExtendedHotelType = {
   ...HotelType,
   facilities: HotelFacilityType[],
-  rooms: HotelRoomType[],
   photos: HotelPhotoType[],
   location: {|
     longitude: string,
@@ -47,7 +48,6 @@ function sanitizeHotels(hotels): ExtendedHotelType[] {
       },
       // + ExtendedHotelType:
       facilities: sanitizeHotelFacilities(hotel.facilities),
-      rooms: sanitizeHotelRooms(hotel.rooms),
       photos: sanitizeHotelPhotos(hotel.photos),
       location: {
         longitude: hotel.location.longitude,
@@ -66,22 +66,6 @@ function sanitizeHotelFacilities(facilities): HotelFacilityType[] {
   return facilities.map(facility => ({
     id: facility.hotelfacilitytype_id,
     name: facility.name,
-  }));
-}
-
-export type HotelRoomType = {|
-  id: string,
-  type: string,
-  maxPersons: string,
-  bedding: string,
-|};
-
-function sanitizeHotelRooms(rooms): HotelRoomType[] {
-  return rooms.map(room => ({
-    id: room.room_id,
-    type: room.roomtype,
-    maxPersons: room.max_persons,
-    bedding: room.bedding,
   }));
 }
 

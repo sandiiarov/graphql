@@ -9,6 +9,8 @@ import type { PhotoType as HotelRoomPhotoType } from './flow/PhotoType';
 
 /**
  * This data-loader loads photos of the hotel.
+ *
+ * @see https://hotels-api.skypicker.com/api/roomPhotos?room_ids=1933201,1933202
  */
 export default new Dataloader(async (roomIds: string[]): Promise<
   Array<HotelRoomPhotoType[] | Error>,

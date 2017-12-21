@@ -3,7 +3,7 @@
 import { toGlobalId } from '../../../common/services/OpaqueIdentifier';
 
 import { graphql, RestApiMock } from '../../../common/services/TestingTools';
-import SingleHotelDataset from '../../datasets/19332.json';
+import SingleHotelDataset from '../../datasets/25215.json';
 import Dataloader from '../../dataloaders/HotelByID';
 
 // keep the URL hardcoded here so we will know if it changed unintentionally
@@ -16,19 +16,16 @@ beforeEach(() => {
 
 describe('single hotels query', () => {
   it('works with single hotel ID', async () => {
-    RestApiMock.onGet(`${baseUrl}19332`).replyWithData(SingleHotelDataset);
+    RestApiMock.onGet(`${baseUrl}25215`).replyWithData(SingleHotelDataset);
 
     expect(
       await graphql('query($id: ID!) { hotel(id: $id) { id } }', {
-        id: toGlobalId('hotel', '19332'),
+        id: toGlobalId('hotel', '25215'),
       }),
     ).toMatchSnapshot();
   });
 
   it('throws error for unknown ID type (ID mishmash)', async () => {
-    // it should request only one URL (not two separated)
-    RestApiMock.onGet(`${baseUrl}19332`).replyWithData(SingleHotelDataset);
-
     expect(
       await graphql('query($id: ID!) { hotel(id: $id) { id } }', {
         id: toGlobalId(

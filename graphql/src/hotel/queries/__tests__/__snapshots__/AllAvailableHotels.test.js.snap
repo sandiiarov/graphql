@@ -3,7 +3,7 @@
 exports[`all hotels query should work for full query 1`] = `
 Object {
   "data": Object {
-    "allHotels": Object {
+    "allAvailableHotels": Object {
       "edges": Array [
         Object {
           "node": Object {
@@ -48,7 +48,7 @@ Object {
                   "amount": 120,
                   "currency": "EUR",
                 },
-                "roomInformation": null,
+                "room": null,
               },
               Object {
                 "id": "SG90ZWxSb29tQXZhaWxhYmlsaXR5OjI0ODUzOTAxXzEwNjY2NjM4N18xXzJfMA==",
@@ -90,7 +90,7 @@ Object {
                   "amount": 127,
                   "currency": "EUR",
                 },
-                "roomInformation": null,
+                "room": null,
               },
               Object {
                 "id": "SG90ZWxSb29tQXZhaWxhYmlsaXR5OjI1MjE1MTVfOTUxNDkwMzZfMF8xXzA=",
@@ -136,7 +136,7 @@ Object {
                   "amount": 62.1,
                   "currency": "EUR",
                 },
-                "roomInformation": Object {
+                "room": Object {
                   "id": "aG90ZWxSb29tOjI1MjE1MTU=",
                   "type": "Twin/Double",
                 },
@@ -185,13 +185,13 @@ Object {
                   "amount": 69,
                   "currency": "EUR",
                 },
-                "roomInformation": Object {
+                "room": Object {
                   "id": "aG90ZWxSb29tOjI1MjE1MTU=",
                   "type": "Twin/Double",
                 },
               },
             ],
-            "hotelInformation": Object {
+            "hotel": Object {
               "id": "aG90ZWw6MjUyMTU=",
             },
             "id": "SG90ZWxBdmFpbGFiaWxpdHk6MjUyMTU=",
@@ -244,7 +244,7 @@ Object {
                   "amount": 120,
                   "currency": "EUR",
                 },
-                "roomInformation": null,
+                "room": null,
               },
               Object {
                 "id": "SG90ZWxSb29tQXZhaWxhYmlsaXR5OjI0ODUzOTAxXzEwNjY2NjM4N18xXzJfMA==",
@@ -286,7 +286,7 @@ Object {
                   "amount": 127,
                   "currency": "EUR",
                 },
-                "roomInformation": null,
+                "room": null,
               },
               Object {
                 "id": "SG90ZWxSb29tQXZhaWxhYmlsaXR5OjI1MjE1MTVfOTUxNDkwMzZfMF8xXzA=",
@@ -332,7 +332,7 @@ Object {
                   "amount": 62.1,
                   "currency": "EUR",
                 },
-                "roomInformation": Object {
+                "room": Object {
                   "id": "aG90ZWxSb29tOjI1MjE1MTU=",
                   "type": "Twin/Double",
                 },
@@ -381,13 +381,13 @@ Object {
                   "amount": 69,
                   "currency": "EUR",
                 },
-                "roomInformation": Object {
+                "room": Object {
                   "id": "aG90ZWxSb29tOjI1MjE1MTU=",
                   "type": "Twin/Double",
                 },
               },
             ],
-            "hotelInformation": Object {
+            "hotel": Object {
               "id": "aG90ZWw6MjQ4NTM5",
             },
             "id": "SG90ZWxBdmFpbGFiaWxpdHk6MjQ4NTM5",
@@ -406,7 +406,7 @@ Object {
 exports[`all hotels query should work for minimal example 1`] = `
 Object {
   "data": Object {
-    "allHotels": Object {
+    "allAvailableHotels": Object {
       "edges": Array [
         Object {
           "cursor": "YXJyYXljb25uZWN0aW9uOjA=",

@@ -5,14 +5,14 @@ Object {
   "data": Object {
     "hotel": Object {
       "address": Object {
-        "city": "Pero",
-        "street": "Via Giovanni Keplero",
-        "zip": "20016",
+        "city": "Rho",
+        "street": "Via Alessandro Volta S/N",
+        "zip": "20017",
       },
-      "cityName": "Pero",
+      "cityName": "Rho",
       "coordinates": Object {
-        "lat": 45.5021510909085,
-        "lng": 9.08717393875122,
+        "lat": 45.52403387526,
+        "lng": 9.03759062290192,
       },
       "facilities": Object {
         "edges": Array [
@@ -32,39 +32,35 @@ Object {
           },
         ],
       },
-      "id": "aG90ZWw6MTkzMzI=",
+      "id": "aG90ZWw6MjUyMTU=",
       "mainPhoto": Object {
-        "highResUrl": "http://aff.bstatic.com/images/hotel/max500/588/58853664.jpg",
-        "id": "aG90ZWxQaG90bzo1ODg1MzY2NA==",
-        "lowResUrl": "http://aff.bstatic.com/images/hotel/max300/588/58853664.jpg",
-        "thumbnailUrl": "http://aff.bstatic.com/images/hotel/square60/588/58853664.jpg",
+        "highResUrl": "http://aff.bstatic.com/images/hotel/max500/740/74030690.jpg",
+        "id": "aG90ZWxQaG90bzo3NDAzMDY5MA==",
+        "lowResUrl": "http://aff.bstatic.com/images/hotel/max300/740/74030690.jpg",
+        "thumbnailUrl": "http://aff.bstatic.com/images/hotel/square60/740/74030690.jpg",
       },
-      "name": "Atahotel Expo Fiera",
+      "name": "Italiana Hotels Milan Rho Fair",
       "photos": Object {
         "edges": Array [
           Object {
             "cursor": "YXJyYXljb25uZWN0aW9uOjA=",
             "node": Object {
-              "highResUrl": "http://aff.bstatic.com/images/hotel/max500/588/58853664.jpg",
-              "id": "aG90ZWxQaG90bzo1ODg1MzY2NA==",
-              "lowResUrl": "http://aff.bstatic.com/images/hotel/max300/588/58853664.jpg",
-              "thumbnailUrl": "http://aff.bstatic.com/images/hotel/square60/588/58853664.jpg",
+              "highResUrl": "http://aff.bstatic.com/images/hotel/max500/740/74030690.jpg",
+              "id": "aG90ZWxQaG90bzo3NDAzMDY5MA==",
+              "lowResUrl": "http://aff.bstatic.com/images/hotel/max300/740/74030690.jpg",
+              "thumbnailUrl": "http://aff.bstatic.com/images/hotel/square60/740/74030690.jpg",
             },
           },
           Object {
             "cursor": "YXJyYXljb25uZWN0aW9uOjE=",
             "node": Object {
-              "highResUrl": "http://aff.bstatic.com/images/hotel/max500/588/58853663.jpg",
-              "id": "aG90ZWxQaG90bzo1ODg1MzY2Mw==",
-              "lowResUrl": "http://aff.bstatic.com/images/hotel/max300/588/58853663.jpg",
-              "thumbnailUrl": "http://aff.bstatic.com/images/hotel/square60/588/58853663.jpg",
+              "highResUrl": "http://aff.bstatic.com/images/hotel/max500/681/68146841.jpg",
+              "id": "aG90ZWxQaG90bzo2ODE0Njg0MQ==",
+              "lowResUrl": "http://aff.bstatic.com/images/hotel/max300/681/68146841.jpg",
+              "thumbnailUrl": "http://aff.bstatic.com/images/hotel/square60/681/68146841.jpg",
             },
           },
         ],
-      },
-      "price": Object {
-        "amount": null,
-        "currency": "EUR",
       },
       "rating": Object {
         "categoryName": "First Class",
@@ -82,70 +78,34 @@ Object {
             "node": Object {
               "bedding": Array [
                 Object {
-                  "amount": 2,
-                  "type": "Single bed(s)",
-                },
-                Object {
                   "amount": 1,
-                  "type": "Large bed(s) (King size)",
+                  "type": "Extra-large double bed(s) (Super-king size)",
                 },
               ],
-              "id": "aG90ZWxSb29tOjE5MzMyMDE=",
-              "maxPersons": 2,
-              "photos": Object {
-                "edges": Array [
-                  Object {
-                    "cursor": "YXJyYXljb25uZWN0aW9uOjA=",
-                    "node": Object {
-                      "highResUrl": "http://aff.bstatic.com/images/hotel/max500/588/58849008.jpg",
-                      "id": "aG90ZWxQaG90bzo1ODg0OTAwOA==",
-                      "lowResUrl": "http://aff.bstatic.com/images/hotel/max300/588/58849008.jpg",
-                      "thumbnailUrl": "http://aff.bstatic.com/images/hotel/square60/588/58849008.jpg",
-                    },
-                  },
-                  Object {
-                    "cursor": "YXJyYXljb25uZWN0aW9uOjE=",
-                    "node": Object {
-                      "highResUrl": "http://aff.bstatic.com/images/hotel/max500/588/58848985.jpg",
-                      "id": "aG90ZWxQaG90bzo1ODg0ODk4NQ==",
-                      "lowResUrl": "http://aff.bstatic.com/images/hotel/max300/588/58848985.jpg",
-                      "thumbnailUrl": "http://aff.bstatic.com/images/hotel/square60/588/58848985.jpg",
-                    },
-                  },
-                ],
+              "description": Object {
+                "text": "Large high ceilinged room with wooden floors and spacious bathroom. Includes free WiFi, work desk and flat-screen satellite TV. Complete with tea/coffee maker and luxury toiletries.",
+                "title": "Executive King Room",
               },
-              "type": "Twin/Double",
-            },
-          },
-          Object {
-            "cursor": "YXJyYXljb25uZWN0aW9uOjE=",
-            "node": Object {
-              "bedding": Array [
-                Object {
-                  "amount": 1,
-                  "type": "Large bed(s) (King size)",
-                },
-              ],
-              "id": "aG90ZWxSb29tOjE5MzMyMDM=",
+              "id": "aG90ZWxSb29tOjI1MjE1MDc=",
               "maxPersons": 2,
               "photos": Object {
                 "edges": Array [
                   Object {
                     "cursor": "YXJyYXljb25uZWN0aW9uOjA=",
                     "node": Object {
-                      "highResUrl": "http://aff.bstatic.com/images/hotel/max500/588/58848972.jpg",
-                      "id": "aG90ZWxQaG90bzo1ODg0ODk3Mg==",
-                      "lowResUrl": "http://aff.bstatic.com/images/hotel/max300/588/58848972.jpg",
-                      "thumbnailUrl": "http://aff.bstatic.com/images/hotel/square60/588/58848972.jpg",
+                      "highResUrl": "http://aff.bstatic.com/images/hotel/max500/740/74030508.jpg",
+                      "id": "aG90ZWxQaG90bzo3NDAzMDUwOA==",
+                      "lowResUrl": "http://aff.bstatic.com/images/hotel/max300/740/74030508.jpg",
+                      "thumbnailUrl": "http://aff.bstatic.com/images/hotel/square60/740/74030508.jpg",
                     },
                   },
                   Object {
                     "cursor": "YXJyYXljb25uZWN0aW9uOjE=",
                     "node": Object {
-                      "highResUrl": "http://aff.bstatic.com/images/hotel/max500/588/58848991.jpg",
-                      "id": "aG90ZWxQaG90bzo1ODg0ODk5MQ==",
-                      "lowResUrl": "http://aff.bstatic.com/images/hotel/max300/588/58848991.jpg",
-                      "thumbnailUrl": "http://aff.bstatic.com/images/hotel/square60/588/58848991.jpg",
+                      "highResUrl": "http://aff.bstatic.com/images/hotel/max500/740/74030464.jpg",
+                      "id": "aG90ZWxQaG90bzo3NDAzMDQ2NA==",
+                      "lowResUrl": "http://aff.bstatic.com/images/hotel/max300/740/74030464.jpg",
+                      "thumbnailUrl": "http://aff.bstatic.com/images/hotel/square60/740/74030464.jpg",
                     },
                   },
                 ],
@@ -153,9 +113,49 @@ Object {
               "type": "Double",
             },
           },
+          Object {
+            "cursor": "YXJyYXljb25uZWN0aW9uOjE=",
+            "node": Object {
+              "bedding": Array [
+                Object {
+                  "amount": 2,
+                  "type": "Single bed(s)",
+                },
+              ],
+              "description": Object {
+                "text": "Modern high ceilinged room with wooden floors and spacious bathroom. Includes free WiFi, work desk and flat-screen satellite TV.",
+                "title": "Twin Room",
+              },
+              "id": "aG90ZWxSb29tOjI1MjE1MDk=",
+              "maxPersons": 2,
+              "photos": Object {
+                "edges": Array [
+                  Object {
+                    "cursor": "YXJyYXljb25uZWN0aW9uOjA=",
+                    "node": Object {
+                      "highResUrl": "http://aff.bstatic.com/images/hotel/max500/740/74030573.jpg",
+                      "id": "aG90ZWxQaG90bzo3NDAzMDU3Mw==",
+                      "lowResUrl": "http://aff.bstatic.com/images/hotel/max300/740/74030573.jpg",
+                      "thumbnailUrl": "http://aff.bstatic.com/images/hotel/square60/740/74030573.jpg",
+                    },
+                  },
+                  Object {
+                    "cursor": "YXJyYXljb25uZWN0aW9uOjE=",
+                    "node": Object {
+                      "highResUrl": "http://aff.bstatic.com/images/hotel/max500/740/74030487.jpg",
+                      "id": "aG90ZWxQaG90bzo3NDAzMDQ4Nw==",
+                      "lowResUrl": "http://aff.bstatic.com/images/hotel/max300/740/74030487.jpg",
+                      "thumbnailUrl": "http://aff.bstatic.com/images/hotel/square60/740/74030487.jpg",
+                    },
+                  },
+                ],
+              },
+              "type": "Twin",
+            },
+          },
         ],
       },
-      "whitelabelUrl": "https://www.booking.com/hotel/it/expo-fiera.html",
+      "whitelabelUrl": "https://www.booking.com/hotel/it/holiday-inn-milan-rho-fair.html",
     },
   },
 }

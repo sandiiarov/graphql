@@ -29,6 +29,6 @@ export default ({
           `Please use opaque ID of the hotel.`,
       );
     }
-    return dataLoader.singleHotel.load(idObject.id);
+    return dataLoader.hotel.byId.load(idObject.id);
   },
 }: GraphQLFieldConfig<mixed, GraphqlContextType>);
