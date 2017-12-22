@@ -2,7 +2,6 @@
 
 import { GraphQLObjectType } from 'graphql';
 
-import DeprecatedRootQuery from './RootQuery.deprecated';
 import AllBookings from './booking/queries/AllBookings';
 import AllFlights from './flight/queries/AllFlights';
 import AllAvailableHotels from './hotel/queries/AllAvailableHotels';
@@ -22,6 +21,5 @@ export default new GraphQLObjectType({
     booking: Booking,
     currentUser: CurrentUser,
     hotel: Hotel,
-    ...DeprecatedRootQuery,
   },
 });
