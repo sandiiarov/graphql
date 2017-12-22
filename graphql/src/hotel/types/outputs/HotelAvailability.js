@@ -2,7 +2,6 @@
 
 import { GraphQLObjectType, GraphQLList } from 'graphql';
 
-import DeprecatedHotelAvailability from './HotelAvailability.deprecated';
 import { globalIdField } from '../../../common/services/OpaqueIdentifier';
 import GraphQLPrice from '../../../common/types/outputs/Price';
 import GraphQLHotel from './Hotel';
@@ -53,7 +52,5 @@ export default new GraphQLObjectType({
         return dataLoader.hotel.byId.load(ancestor.id);
       },
     },
-
-    ...DeprecatedHotelAvailability,
   },
 });
