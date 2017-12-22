@@ -1,9 +1,9 @@
 // @flow
 
-import { graphql, RestApiMock } from '../../../../common/services/TestingTools';
-import config from '../../../../../config/application';
-import PrgMexDataset from '../../../datasets/prg-mex.json';
-import AirlinesDataset from '../../../datasets/airlines.json';
+import { graphql, RestApiMock } from '../../../common/services/TestingTools';
+import config from '../../../../config/application';
+import PrgMexDataset from '../../datasets/prg-mex.json';
+import AirlinesDataset from '../../datasets/airlines.json';
 
 RestApiMock.onGet(
   config.restApiEndpoint.allFlights({
@@ -18,18 +18,20 @@ RestApiMock.onGet(config.restApiEndpoint.airlines).replyWithData(
   AirlinesDataset,
 );
 
-describe('all flights query', () => {
-  it('should return array of flights', async () => {
+describe('all flights query with legs airline', () => {
+  it('should return array of flight legs with airline', async () => {
     const allFlightsSearchQuery = `
     query ($input: FlightsSearchInput!) {
       allFlights(search: $input) {
         edges {
           node {
-            airlines {
-              name
-              code
-              logoUrl
-              isLowCost
+            legs {
+              airline {
+                name
+                code
+                logoUrl
+                isLowCost
+              }
             }
           }
         }

@@ -1,10 +1,10 @@
 // @flow
 
-import { graphql, RestApiMock } from '../../../../common/services/TestingTools';
-import config from '../../../../../config/application';
-import AllFlights from '../../AllFlights';
-import AirlinesDataset from '../../../datasets/airlines.json';
-import FlightDataset from '../../../datasets/prg-mex.json';
+import { graphql, RestApiMock } from '../../../common/services/TestingTools';
+import config from '../../../../config/application';
+import AllFlights from '../AllFlights';
+import AirlinesDataset from '../../datasets/airlines.json';
+import FlightDataset from '../../datasets/prg-mex.json';
 
 beforeEach(() => {
   RestApiMock.onGet(config.restApiEndpoint.airlines).replyWithData(

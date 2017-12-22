@@ -1,10 +1,10 @@
 // @flow
 
-import { graphql, RestApiMock } from '../../../../common/services/TestingTools';
-import config from '../../../../../config/application';
-import PrgMexCsCzDataset from '../../../datasets/prg-mex-cs-CZ.json';
-import PragueDataset from '../../../../location/datasets/prague.json';
-import MexicoDataset from '../../../../location/datasets/mexico.json';
+import { graphql, RestApiMock } from '../../../common/services/TestingTools';
+import config from '../../../../config/application';
+import PrgMexCsCzDataset from '../../datasets/prg-mex-cs-CZ.json';
+import PragueDataset from '../../../location/datasets/prague.json';
+import MexicoDataset from '../../../location/datasets/mexico.json';
 
 /*
  * Location datasets have to be different to recognize both requests were called with proper locale.

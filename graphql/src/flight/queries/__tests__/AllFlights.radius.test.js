@@ -1,11 +1,11 @@
 // @flow
 
-import { graphql, RestApiMock } from '../../../../common/services/TestingTools';
-import config from '../../../../../config/application';
-import PragueDataset from '../../../../location/datasets/prague.json';
-import MexicoDataset from '../../../../location/datasets/mexico.json';
-import NoFlightsDataset from '../../../datasets/no-results.json';
-import PrgFraMexDataset from '../../../datasets/prg,fra-mex.json';
+import { graphql, RestApiMock } from '../../../common/services/TestingTools';
+import config from '../../../../config/application';
+import PragueDataset from '../../../location/datasets/prague.json';
+import MexicoDataset from '../../../location/datasets/mexico.json';
+import NoFlightsDataset from '../../datasets/no-results.json';
+import PrgFraMexDataset from '../../datasets/prg,fra-mex.json';
 
 beforeEach(() => {
   RestApiMock.onGet(
