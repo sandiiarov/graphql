@@ -1,9 +1,9 @@
 // @flow
 
-import { graphql, RestApiMock } from '../../../../common/services/TestingTools';
-import config from '../../../../../config/application';
-import PrgMexDataset from '../../../datasets/prg-mex.json';
-import PrgMexCzkDataset from '../../../datasets/prg-mex-czk.json';
+import { graphql, RestApiMock } from '../../../common/services/TestingTools';
+import config from '../../../../config/application';
+import PrgMexDataset from '../../datasets/prg-mex.json';
+import PrgMexCzkDataset from '../../datasets/prg-mex-czk.json';
 
 RestApiMock.onGet(
   config.restApiEndpoint.allFlights({
