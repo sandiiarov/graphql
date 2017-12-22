@@ -35,7 +35,7 @@ export default new DataLoader(
 
 /**
  * Minimal valid query:
- * https://hotels-api.skypicker.com/api/hotels?latitude=45.4654219&longitude=9.1859243&radius=50&checkin=2017-11-16&checkout=2017-11-23&room1=A
+ * https://hotels-api.skypicker.com/api/hotels?latitude=45.4654219&longitude=9.1859243&radius=50&checkin=2018-11-16&checkout=2018-11-23&room1=A
  *
  * Parameters explained:
  * - room1: "A" represents an adult and an integer represents a child. eg

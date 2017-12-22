@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`sorts cities by number of hotels and name 1`] = `
+Array [
+  Object {
+    "id": "undefined",
+    "location": Object {
+      "lat": NaN,
+      "lng": NaN,
+    },
+    "name": "d",
+    "numberOfHotels": 2,
+  },
+  Object {
+    "id": "undefined",
+    "location": Object {
+      "lat": NaN,
+      "lng": NaN,
+    },
+    "name": "b",
+    "numberOfHotels": 1,
+  },
+  Object {
+    "id": "undefined",
+    "location": Object {
+      "lat": NaN,
+      "lng": NaN,
+    },
+    "name": "c",
+    "numberOfHotels": 1,
+  },
+  Object {
+    "id": "undefined",
+    "location": Object {
+      "lat": NaN,
+      "lng": NaN,
+    },
+    "name": "a",
+    "numberOfHotels": 0,
+  },
+]
+`;
