@@ -13,6 +13,7 @@ import FlightLoader from '../../flight/dataloaders/Flight';
 import OptionsStorage from './context/OptionsStorage';
 import HotelsByLocation from '../../hotel/dataloaders/HotelsByLocation';
 import HotelByID from '../../hotel/dataloaders/HotelByID';
+import HotelCities from '../../hotel/dataloaders/HotelCities';
 import HotelRoomsLoader from '../../hotel/dataloaders/HotelRooms';
 import HotelRoomAvailabilityLoader from '../../hotel/dataloaders/HotelRoomAvailability';
 
@@ -20,6 +21,7 @@ import type { Booking } from '../../booking/Booking';
 import type { Airline } from '../../flight/Flight';
 import type { SearchParameters as HotelKey } from '../../hotel/dataloaders/HotelsByLocation';
 import type { HotelType } from '../../hotel/dataloaders/flow/HotelType';
+import type { HotelCity } from '../../hotel/types/outputs/HotelCity';
 
 export type GraphqlContextType = {|
   // DataLoader<K, V>
@@ -36,6 +38,7 @@ export type GraphqlContextType = {|
     hotel: {
       byLocation: DataLoader<HotelKey, HotelType[]>,
       byId: typeof HotelByID,
+      cities: DataLoader<string, HotelCity[]>,
       room: HotelRoomsLoader,
       roomAvailability: HotelRoomAvailabilityLoader,
     },
@@ -63,6 +66,7 @@ export function createContext(token: ?string): GraphqlContextType {
       hotel: {
         byLocation: HotelsByLocation,
         byId: HotelByID,
+        cities: HotelCities,
         room: new HotelRoomsLoader(),
         roomAvailability: new HotelRoomAvailabilityLoader(),
       },
