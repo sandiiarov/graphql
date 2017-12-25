@@ -53,18 +53,14 @@ Object {
             "line": 1,
           },
         ],
-        "message": "Syntax Error GraphQL request (1:14) Expected Name, found <EOF>
-
-1: {invalid json
-                ^
-",
+        "message": "Syntax Error: Expected Name, found <EOF>",
       },
     ],
   },
   "headers": Object {
     "access-control-allow-origin": "*",
     "connection": "close",
-    "content-length": "167",
+    "content-length": "104",
     "content-type": "application/json; charset=utf-8",
     "x-powered-by": "Express",
   },

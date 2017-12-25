@@ -5,7 +5,7 @@ import type { ResponsePath } from 'graphql';
 export default class OptionsStorage {
   queriesOptions: Object = {};
 
-  getOptions(path: ResponsePath): ?Object {
+  getOptions(path?: ResponsePath): ?Object {
     return this.queriesOptions[getQueryKey(path)];
   }
 
@@ -17,7 +17,7 @@ export default class OptionsStorage {
 /**
  * Get name of root query. Can be simple query name or label.
  */
-function getQueryKey(path: ResponsePath): ?string {
+function getQueryKey(path?: ResponsePath): ?string {
   if (path === undefined) {
     return undefined;
   } else if (path.prev !== undefined) {

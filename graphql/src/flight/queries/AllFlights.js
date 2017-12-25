@@ -7,7 +7,7 @@ import {
   connectionFromArray,
 } from 'graphql-relay';
 
-import type { GraphQLResolveInfo, GraphQLFieldConfig } from 'graphql';
+import type { GraphQLResolveInfo } from 'graphql';
 
 import _ from 'lodash';
 import GraphQLFlight from '../types/outputs/Flight';
@@ -23,7 +23,7 @@ const { connectionType: AllFlightsConnection } = connectionDefinitions({
   nodeType: GraphQLFlight,
 });
 
-export default ({
+export default {
   type: AllFlightsConnection,
   description: 'Search for scheduled flights.',
   args: {
@@ -91,4 +91,4 @@ export default ({
       args,
     );
   },
-}: GraphQLFieldConfig<mixed, GraphqlContextType>);
+};
