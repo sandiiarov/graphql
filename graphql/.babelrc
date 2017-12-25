@@ -1,16 +1,8 @@
 {
-  "env": {
-    "test": {
-      "plugins": [
-        "transform-es2015-modules-commonjs" // https://facebook.github.io/jest/docs/webpack.html#using-with-webpack-2
-      ]
-    }
-  },
   "presets": [
     [
       "env",
       {
-        "modules": false,
         "exclude": [
           "transform-regenerator",
           "transform-async-to-generator"
@@ -25,6 +17,7 @@
   "plugins": [
     "fast-async",
     "transform-object-rest-spread",
-    "transform-class-properties"
+    "transform-class-properties",
+    "transform-es2015-modules-commonjs"
   ]
 }
