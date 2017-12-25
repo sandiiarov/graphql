@@ -1,14 +1,13 @@
 // @flow
 
 import { GraphQLID, GraphQLNonNull } from 'graphql';
-import type { GraphQLFieldConfig } from 'graphql';
 import { fromGlobalId } from 'graphql-relay';
 
 import GraphQLHotel from '../types/outputs/Hotel';
 
 import type { GraphqlContextType } from '../../common/services/GraphqlContext';
 
-export default ({
+export default {
   type: GraphQLHotel,
   description: 'Single hotel by ID.',
   args: {
@@ -31,4 +30,4 @@ export default ({
     }
     return dataLoader.hotel.byId.load(idObject.id);
   },
-}: GraphQLFieldConfig<mixed, GraphqlContextType>);
+};

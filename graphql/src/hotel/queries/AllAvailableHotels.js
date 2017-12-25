@@ -1,6 +1,6 @@
 // @flow
 
-import { GraphQLNonNull, type GraphQLFieldConfig } from 'graphql';
+import { GraphQLNonNull } from 'graphql';
 import {
   connectionArgs,
   connectionDefinitions,
@@ -16,7 +16,7 @@ const { connectionType: AllHotelsConnection } = connectionDefinitions({
   nodeType: GraphQLHotelAvailability,
 });
 
-export default ({
+export default {
   type: AllHotelsConnection,
   description: 'Search for all hotels in one location.',
   args: {
@@ -46,4 +46,4 @@ export default ({
       args,
     );
   },
-}: GraphQLFieldConfig<mixed, GraphqlContextType>);
+};

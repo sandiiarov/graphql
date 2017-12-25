@@ -1,7 +1,6 @@
 // @flow
 
 import { GraphQLNonNull, GraphQLString } from 'graphql';
-import type { GraphQLFieldConfig } from 'graphql';
 
 import { post } from '../../common/services/HttpRequest';
 import config from '../../../config/application';
@@ -11,7 +10,7 @@ import { ProxiedError } from '../../common/services/errors/ProxiedError';
 import type { GraphqlContextType } from '../../common/services/GraphqlContext';
 import type { Login } from '../User';
 
-export default ({
+export default {
   type: GraphQLUser,
   args: {
     email: {
@@ -52,4 +51,4 @@ export default ({
       userId: data.user_id,
     };
   },
-}: GraphQLFieldConfig<mixed, GraphqlContextType>);
+};
