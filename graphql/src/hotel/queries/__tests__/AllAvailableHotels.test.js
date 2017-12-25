@@ -10,12 +10,12 @@ import RoomDetailsDataset from '../../datasets/roomDetails.json';
 beforeEach(() => {
   // minimal query
   RestApiMock.onGet(
-    'https://hotels-api.skypicker.com/api/hotels?output=hotel_details&latitude=45.4654&longitude=9.1859&radius=50&checkin=2017-11-16&checkout=2017-11-23&room1=A',
+    'https://hotels-api.skypicker.com/api/hotels?output=hotel_details&radius=50&latitude=45.4654&longitude=9.1859&checkin=2017-11-16&checkout=2017-11-23&room1=A',
   ).replyWithData(AllHotelsDataset);
 
   // full query
   RestApiMock.onGet(
-    'https://hotels-api.skypicker.com/api/hotels?output=hotel_details&latitude=45.4654&longitude=9.1859&radius=50&checkin=2017-11-16&checkout=2017-11-23&room1=A%2CA%2C4%2C6&room2=A%2C2',
+    'https://hotels-api.skypicker.com/api/hotels?output=hotel_details&radius=50&latitude=45.4654&longitude=9.1859&checkin=2017-11-16&checkout=2017-11-23&room1=A%2CA%2C4%2C6&room2=A%2C2',
   ).replyWithData(AllHotelsDataset);
   RestApiMock.onGet(
     'https://hotels-api.skypicker.com/api/hotelDetails?hotel_ids=25215%2C248539',

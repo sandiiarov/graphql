@@ -5,9 +5,10 @@ import {
   GraphQLNonNull,
   GraphQLInputObjectType,
   GraphQLList,
-  GraphQLInt,
 } from 'graphql';
 import { GraphQLDate } from 'graphql-iso-date';
+
+import HotelRoomsConfiguration from './HotelRoomsConfiguration';
 
 export default new GraphQLInputObjectType({
   name: 'HotelsSearchInput',
@@ -32,30 +33,7 @@ export default new GraphQLInputObjectType({
 
     roomsConfiguration: {
       type: new GraphQLNonNull(
-        new GraphQLList(
-          new GraphQLNonNull(
-            new GraphQLInputObjectType({
-              name: 'RoomsConfiguration',
-              fields: {
-                adultsCount: {
-                  type: new GraphQLNonNull(GraphQLInt),
-                },
-                children: {
-                  type: new GraphQLList(
-                    new GraphQLInputObjectType({
-                      name: 'RoomsChildrenConfiguration',
-                      fields: {
-                        age: {
-                          type: GraphQLInt,
-                        },
-                      },
-                    }),
-                  ),
-                },
-              },
-            }),
-          ),
-        ),
+        new GraphQLList(new GraphQLNonNull(HotelRoomsConfiguration)),
       ),
     },
   },

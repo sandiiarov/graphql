@@ -7,7 +7,7 @@ import {
   connectionFromArray,
 } from 'graphql-relay';
 
-import GraphQLHotelsSearchInput from '../types/inputs/HotelsSearchInput';
+import GraphQLHotelsSearchInput from '../types/inputs/AllAvailableHotelsSearchInput';
 import GraphQLHotelAvailability from '../types/outputs/HotelAvailability';
 
 import type { GraphqlContextType } from '../../common/services/GraphqlContext';
@@ -18,7 +18,10 @@ const { connectionType: AllHotelsConnection } = connectionDefinitions({
 
 export default {
   type: AllHotelsConnection,
-  description: 'Search for all hotels in one location.',
+  description:
+    "Search for all available hotels in one location. It's necessary to " +
+    'send checkin and checkout dates as well as rooms configuration to ' +
+    'get availability info.',
   args: {
     search: {
       type: new GraphQLNonNull(GraphQLHotelsSearchInput),
@@ -30,7 +33,7 @@ export default {
     args: Object,
     { dataLoader }: GraphqlContextType,
   ) => {
-    const availableHotels = await dataLoader.hotel.byLocation.load({
+    const availableHotels = await dataLoader.hotel.availabilityByLocation.load({
       latitude: args.search.latitude,
       longitude: args.search.longitude,
       checkin: args.search.checkin,

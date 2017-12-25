@@ -49,7 +49,7 @@ export default new GraphQLObjectType({
         args: Object,
         { dataLoader }: GraphqlContextType,
       ) => {
-        return dataLoader.hotel.byId.load(ancestor.id);
+        return dataLoader.hotel.byID.load(ancestor.id);
       },
     },
   },
