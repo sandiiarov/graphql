@@ -9,6 +9,7 @@ module.exports = {
   output: {
     path: path.resolve(appDirectory, 'dist'),
     filename: '[name].js',
+    libraryTarget: 'commonjs2',
   },
   module: {
     rules: [

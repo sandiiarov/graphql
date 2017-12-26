@@ -24,7 +24,6 @@
     "babel-plugin-transform-object-rest-spread": "^6.23.0",
     "babel-preset-env": "^1.5.2",
     "babel-preset-flow": "^6.23.0",
-    "babili-webpack-plugin": "^0.1.2",
     "eslint": "^4.1.1",
     "eslint-config-airbnb-base": "^11.2.0",
     "eslint-config-prettier": "^2.3.0",
@@ -54,5 +53,8 @@
     "test": "jest --setupTestFrameworkScriptFile=./config/setupTests.js",
     "test-ci": "yarn run typecheck && yarn run lint && TZ='Asia/Tokyo' yarn run test -- --ci --color --config=jest.json && yarn babel-node scripts/CheckBackwardCompatibility.js",
     "typecheck": "flow check --color=always"
+  },
+  "resolutions": {
+    "graphql": "0.12.3"
   }
 }
