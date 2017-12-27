@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`single hotel availability query should work for full query 1`] = `
+Object {
+  "data": Object {
+    "availableHotel": Object {
+      "id": "SG90ZWxBdmFpbGFiaWxpdHk6MjUyMTU=",
+      "price": Object {
+        "amount": 1134.9,
+        "currency": "EUR",
+      },
+    },
+  },
+}
+`;

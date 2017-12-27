@@ -221,6 +221,33 @@
             "deprecationReason": null
           },
           {
+            "name": "availableHotel",
+            "description": "Search for single hotel availability by its ID.",
+            "args": [
+              {
+                "name": "search",
+                "description": null,
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "AvailableHotelSearchInput",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "OBJECT",
+              "name": "HotelAvailability",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "allLocations",
             "description": "Search for airports, cities, countries. You can search by location name, radius on the map or rectangle on the map. If you do not specify one of these search inputs then the alphabetical dump of all locations is returned.",
             "args": [
@@ -4911,6 +4938,81 @@
         ],
         "inputFields": null,
         "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "AvailableHotelSearchInput",
+        "description": null,
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "hotelId",
+            "description": "Opaque hotel ID.",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "ID",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "checkin",
+            "description": null,
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Date",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "checkout",
+            "description": null,
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Date",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "roomsConfiguration",
+            "description": null,
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "RoomsConfiguration",
+                    "ofType": null
+                  }
+                }
+              }
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
         "enumValues": null,
         "possibleTypes": null
       },

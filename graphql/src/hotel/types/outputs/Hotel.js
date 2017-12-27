@@ -62,7 +62,7 @@ export default new GraphQLObjectType({
         args: Object,
         { dataLoader }: GraphqlContextType,
       ) => {
-        const { location } = await dataLoader.hotel.byId.load(id);
+        const { location } = await dataLoader.hotel.byID.load(id);
         return {
           lat: location.latitude,
           lng: location.longitude,
@@ -105,7 +105,7 @@ export default new GraphQLObjectType({
         args: Object,
         { dataLoader }: GraphqlContextType,
       ) => {
-        const { facilities } = await dataLoader.hotel.byId.load(id);
+        const { facilities } = await dataLoader.hotel.byID.load(id);
         return connectionFromArray(facilities, args);
       },
     },

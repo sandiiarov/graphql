@@ -28,6 +28,6 @@ export default {
           `Please use opaque ID of the hotel.`,
       );
     }
-    return dataLoader.hotel.byId.load(idObject.id);
+    return dataLoader.hotel.byID.load(idObject.id);
   },
 };

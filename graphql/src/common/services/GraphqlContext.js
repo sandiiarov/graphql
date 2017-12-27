@@ -11,7 +11,9 @@ import LocationSuggestionsLoader from '../../location/dataloaders/LocationSugges
 import LocationLoader from '../../location/dataloaders/Location';
 import FlightLoader from '../../flight/dataloaders/Flight';
 import OptionsStorage from './context/OptionsStorage';
-import HotelsByLocation from '../../hotel/dataloaders/HotelsByLocation';
+import HotelsAvailability, {
+  type SearchParameters as HotelKey,
+} from '../../hotel/dataloaders/HotelsAvailability';
 import HotelByID from '../../hotel/dataloaders/HotelByID';
 import HotelCities from '../../hotel/dataloaders/HotelCities';
 import HotelRoomsLoader from '../../hotel/dataloaders/HotelRooms';
@@ -19,10 +21,12 @@ import HotelRoomAvailabilityLoader from '../../hotel/dataloaders/HotelRoomAvaila
 
 import type { Booking } from '../../booking/Booking';
 import type { Airline } from '../../flight/Flight';
-import type { SearchParameters as HotelKey } from '../../hotel/dataloaders/HotelsByLocation';
 import type { HotelType } from '../../hotel/dataloaders/flow/HotelType';
 import type { HotelCity } from '../../hotel/types/outputs/HotelCity';
 
+/**
+ * FIXME: this is stupid - it's already defined by data-loader itself
+ */
 export type GraphqlContextType = {|
   // DataLoader<K, V>
   apiToken: ?string,
@@ -36,8 +40,9 @@ export type GraphqlContextType = {|
     locationSuggestions: LocationSuggestionsLoader,
     rates: DataLoader<string, ?number>,
     hotel: {
-      byLocation: DataLoader<HotelKey, HotelType[]>,
-      byId: typeof HotelByID,
+      availabilityByLocation: DataLoader<HotelKey, HotelType[]>,
+      availabilityByID: DataLoader<HotelKey, HotelType[]>,
+      byID: typeof HotelByID,
       cities: DataLoader<string, HotelCity[]>,
       room: HotelRoomsLoader,
       roomAvailability: HotelRoomAvailabilityLoader,
@@ -64,8 +69,9 @@ export function createContext(token: ?string): GraphqlContextType {
       locationSuggestions: locationSuggestions,
       rates: createRatesLoader(),
       hotel: {
-        byLocation: HotelsByLocation,
-        byId: HotelByID,
+        availabilityByLocation: HotelsAvailability,
+        availabilityByID: HotelsAvailability,
+        byID: HotelByID,
         cities: HotelCities,
         room: new HotelRoomsLoader(),
         roomAvailability: new HotelRoomAvailabilityLoader(),

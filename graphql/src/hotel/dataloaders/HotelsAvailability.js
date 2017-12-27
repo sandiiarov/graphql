@@ -9,13 +9,20 @@ import Config from '../../../config/application';
 
 import type { HotelType } from './flow/HotelType';
 
-export type SearchParameters = {|
-  latitude: number,
-  longitude: number,
-  checkin: Date,
-  checkout: Date,
-  roomsConfiguration: RoomsConfiguration,
-|};
+export type SearchParameters =
+  | {|
+      hotelId: string,
+      checkin: Date,
+      checkout: Date,
+      roomsConfiguration: RoomsConfiguration,
+    |}
+  | {|
+      latitude: number,
+      longitude: number,
+      checkin: Date,
+      checkout: Date,
+      roomsConfiguration: RoomsConfiguration,
+    |};
 
 type RoomsConfiguration = Array<{|
   adultsCount: number,
@@ -25,8 +32,9 @@ type RoomsConfiguration = Array<{|
 |}>;
 
 /**
- * This data-loader loads all available hotels in the checkin-checkout date range.
- * If you need to load individual hotels based on IDs please use "HotelByID" loader.
+ * This data-loader loads all available hotels in the specified
+ * configuration (checkin, checkout, rooms configuration). You can
+ * load hotels by their ID or in location (lng/lat/rad).
  */
 export default new DataLoader(
   async (keys: SearchParameters[]): Promise<Array<HotelType[] | Error>> =>
@@ -34,8 +42,11 @@ export default new DataLoader(
 );
 
 /**
- * Minimal valid query:
+ * Minimal valid query (lng/lat/rad):
  * https://hotels-api.skypicker.com/api/hotels?latitude=45.4654219&longitude=9.1859243&radius=50&checkin=2018-11-16&checkout=2018-11-23&room1=A
+ *
+ * Minimal valid query (hotel_ids):
+ * https://hotels-api.skypicker.com/api/hotels?checkin=2018-11-16&checkout=2018-11-23&room1=A&hotel_ids=2906934
  *
  * Parameters explained:
  * - room1: "A" represents an adult and an integer represents a child. eg
@@ -47,49 +58,48 @@ async function fetchAllHotels(
   keys: SearchParameters[],
 ): Promise<Array<HotelType[] | Error>> {
   return Promise.all(
-    keys.map(
-      async ({
-        latitude,
-        longitude,
-        checkin,
-        checkout,
-        roomsConfiguration,
-      }) => {
-        const radius = '50'; // not configurable yet (but required)
-        const roomsQuery = Object.assign(
-          {},
-          ...formatRoomsConfigurationForAPI(
-            roomsConfiguration,
-          ).map((configuration, index) => ({
-            [`room${index + 1}`]: configuration,
-          })),
-        );
+    keys.map(async searchParameters => {
+      const parameters = {};
 
-        checkin = DateTime.fromJSDate(checkin, {
-          zone: 'UTC',
-        }).toISODate();
-        checkout = DateTime.fromJSDate(checkout, {
-          zone: 'UTC',
-        }).toISODate();
+      if (searchParameters.hotelId) {
+        // search by hotel ID
+        parameters.hotel_ids = searchParameters.hotelId;
+      } else if (searchParameters.latitude) {
+        // search by lng/lat/rad
+        parameters.radius = '50'; // not configurable yet (but required)
+        parameters.latitude = searchParameters.latitude;
+        parameters.longitude = searchParameters.longitude;
+      }
 
-        const absoluteUrl = Config.restApiEndpoint.hotels.all({
-          latitude,
-          longitude,
-          radius,
-          checkin,
-          checkout,
-          ...roomsQuery,
-        });
+      const roomsQuery = Object.assign(
+        {},
+        ...formatRoomsConfigurationForAPI(
+          searchParameters.roomsConfiguration,
+        ).map((configuration, index) => ({
+          [`room${index + 1}`]: configuration,
+        })),
+      );
 
-        const response = await get(absoluteUrl);
-        if (response.message) {
-          return new ProxiedError(response.message, response.code, absoluteUrl);
-        }
+      parameters.checkin = DateTime.fromJSDate(searchParameters.checkin, {
+        zone: 'UTC',
+      }).toISODate();
+      parameters.checkout = DateTime.fromJSDate(searchParameters.checkout, {
+        zone: 'UTC',
+      }).toISODate();
 
-        // $FlowIssue: https://github.com/facebook/flow/issues/4936
-        return sanitizeHotels(response.hotels);
-      },
-    ),
+      const absoluteUrl = Config.restApiEndpoint.hotels.all({
+        ...parameters,
+        ...roomsQuery,
+      });
+
+      const response = await get(absoluteUrl);
+      if (response.message) {
+        return new ProxiedError(response.message, response.code, absoluteUrl);
+      }
+
+      // $FlowIssue: https://github.com/facebook/flow/issues/4936
+      return sanitizeHotels(response.hotels);
+    }),
   );
 }
 
