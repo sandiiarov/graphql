@@ -16,7 +16,7 @@ describe('single hotel availability query', () => {
         {
           availableHotel(
             search: {
-              hotelId: "SG90ZWxBdmFpbGFiaWxpdHk6MjUyMTU=" # HotelAvailability:25215
+              hotelId: "aG90ZWw6MjUyMTU=" # hotel:25215
               checkin: "2018-11-16"
               checkout: "2018-11-23"
               roomsConfiguration: { adultsCount: 1 }

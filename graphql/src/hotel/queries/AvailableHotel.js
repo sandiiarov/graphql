@@ -26,11 +26,11 @@ export default ({
   ) => {
     const { hotelId } = args.search;
     const idObject = fromGlobalId(hotelId); // hotelId is opaque
-    if (idObject.type !== 'HotelAvailability') {
+    if (idObject.type !== 'hotel') {
       throw new Error(
-        `Hotel Availability ID mishmash. You cannot fetch hotel with ID ` +
-          `'${hotelId}' because this ID is not ID of the hotel availability. ` +
-          `Please use opaque ID of the hotel availability.`,
+        `Hotel ID mishmash. You cannot fetch hotel with ID '${hotelId}' ` +
+          `because this ID is not ID of a hotel. Please use opaque ID of ` +
+          `the hotel.`,
       );
     }
 
