@@ -155,7 +155,7 @@
           },
           {
             "name": "allAvailableHotels",
-            "description": "Search for all hotels in one location.",
+            "description": "Search for all available hotels in one location. It's necessary to send checkin and checkout dates as well as rooms configuration to get availability info.",
             "args": [
               {
                 "name": "search",
@@ -222,7 +222,7 @@
           },
           {
             "name": "availableHotel",
-            "description": "Search for single hotel availability by its ID.",
+            "description": "Search for single available hotel by its ID. It's necessary to send checkin and checkout dates as well as rooms configuration to get availability info.",
             "args": [
               {
                 "name": "search",
@@ -3851,6 +3851,18 @@
             },
             "isDeprecated": false,
             "deprecationReason": null
+          },
+          {
+            "name": "originalId",
+            "description": "Original block ID used to open Booking.com page.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": true,
+            "deprecationReason": "Use \"id\" field whenever possible."
           },
           {
             "name": "minimalPrice",
