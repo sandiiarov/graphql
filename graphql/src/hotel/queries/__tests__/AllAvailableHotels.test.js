@@ -86,6 +86,7 @@ describe('all hotels query', () => {
                 }
                 availableRooms {
                   id
+                  originalId
                   minimalPrice {
                     amount
                     currency

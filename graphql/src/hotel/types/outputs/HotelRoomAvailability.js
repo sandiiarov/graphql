@@ -1,6 +1,6 @@
 // @flow
 
-import { GraphQLObjectType, GraphQLList } from 'graphql';
+import { GraphQLObjectType, GraphQLList, GraphQLString } from 'graphql';
 
 import { globalIdField } from '../../../common/services/OpaqueIdentifier';
 import GraphQLHotelRoom from './HotelRoom';
@@ -13,6 +13,13 @@ export default new GraphQLObjectType({
   name: 'HotelRoomAvailability',
   fields: {
     id: globalIdField(),
+
+    originalId: {
+      type: GraphQLString,
+      deprecationReason: 'Use "id" field whenever possible.',
+      description: 'Original block ID used to open Booking.com page.',
+      resolve: ({ id }: HotelRoomAvailabilityType) => id,
+    },
 
     minimalPrice: {
       type: GraphQLPrice,
