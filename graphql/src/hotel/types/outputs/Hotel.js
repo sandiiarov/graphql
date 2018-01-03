@@ -26,7 +26,16 @@ export default new GraphQLObjectType({
   name: 'Hotel',
   description: 'General information about the hotel.',
   fields: {
-    id: globalIdField('hotel', ({ id }) => id),
+    id: globalIdField('hotel', ({ id }: HotelType): string => id),
+
+    originalId: {
+      description:
+        'Original (low level ID of the hotel). You are probably looking for "id" field.',
+      deprecationReason:
+        'Use field "id" instead. This field is used only because of compatibility reasons with old APIs.',
+      type: GraphQLString,
+      resolve: ({ id }: HotelType): string => id,
+    },
 
     name: {
       description: 'Name of the hotel.',

@@ -4279,6 +4279,18 @@
             "deprecationReason": null
           },
           {
+            "name": "originalId",
+            "description": "Original (low level ID of the hotel). You are probably looking for \"id\" field.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": true,
+            "deprecationReason": "Use field \"id\" instead. This field is used only because of compatibility reasons with old APIs."
+          },
+          {
             "name": "name",
             "description": "Name of the hotel.",
             "args": [],
