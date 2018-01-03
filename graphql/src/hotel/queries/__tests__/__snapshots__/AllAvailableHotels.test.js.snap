@@ -197,6 +197,13 @@ Object {
             ],
             "hotel": Object {
               "id": "aG90ZWw6MjUyMTU=",
+              "summary": "Italiana Hotels Milan Rho Fair is set in a renovated cotton mill from the early 20th century, 10 minutes' drive from RhoFiera Milano exhibition centre. It offers air-conditioned rooms, free WiFi throughout, and a small gym with sauna and Turkish bath.
+
+This Italiana hotel features elegant rooms with parquet floors and a flat-screen TV with satellite channels. Some rooms feature tea and coffee making facilities, and luxury toiletries. Some also have a private terrace.
+
+On the top floor you will find the hotel's trendy Club 1902 bar, and the La Fabbrica del Cotone restaurant, both with panoramic views. The restaurant serves Mediterranean and Milanese specialities prepared by the chef each day.
+
+During major events, a free shuttle is offered to/from RhoFiera Milano exhibition centre. The property is 500 metres from Rho Train Station. From there, you can reach the EXPO 2015 exhibition centre in 4 minutes.",
             },
             "id": "SG90ZWxBdmFpbGFiaWxpdHk6MjUyMTU=",
             "price": Object {
@@ -397,6 +404,15 @@ Object {
             ],
             "hotel": Object {
               "id": "aG90ZWw6MjQ4NTM5",
+              "summary": "Sheraton Milan Malpensa Hotel is located inside Malpensa Airport's Terminal 1. It offers air-conditioned rooms with minibar and flat-screen TV. A fitness centre is also available.
+
+Rooms at Sheraton Milano Malpensa Airport Hotel and Conference Centre are soundproofed and feature Sheraton Sweet Sleeper beds.
+
+Other hotel facilities include business meeting rooms, a spa and beauty centre and indoor swimming pool.
+
+Guests can sip a cocktail at the on-site bar and have dinner at the restaurant, which specialises in Italian cuisine.
+
+The hotel is a 40-minute drive from Milan centre, and 40 km from Rho Fiera Milano Exhibition Centre. You can also use public and private shuttles to Milan Central Railway Station.",
             },
             "id": "SG90ZWxBdmFpbGFiaWxpdHk6MjQ4NTM5",
             "price": Object {

@@ -45,6 +45,12 @@ export default new GraphQLObjectType({
       resolve: ({ whitelabelUrl }: HotelType) => whitelabelUrl,
     },
 
+    summary: {
+      description: 'Main description (summary) of the hotel.',
+      type: GraphQLString,
+      resolve: ({ summary }: HotelType) => summary,
+    },
+
     mainPhoto: {
       description: 'Main photo of the hotel.',
       type: GraphQLHotelPhoto,
