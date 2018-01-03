@@ -31,6 +31,7 @@ it('works with full query', async () => {
         query($id: ID!) {
           hotel(id: $id) {
             id
+            originalId
             name
             cityName
             whitelabelUrl
