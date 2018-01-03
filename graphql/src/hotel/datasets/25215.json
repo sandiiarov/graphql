@@ -29,6 +29,8 @@
     "created": "2008-12-19 09:09:24",
     "city_id": "-126278",
     "address": "Via Alessandro Volta S/N",
+    "review_score": "8.3",
+    "review_nr": "2405",
     "facilities": [
       {
         "name": "Restaurant",

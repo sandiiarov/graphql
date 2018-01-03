@@ -37,6 +37,11 @@ function sanitizeHotels(hotels): ExtendedHotelType[] {
       id: hotel.hotel_id,
       name: hotel.name,
       rating: Math.round(hotel.class),
+      review: {
+        // there is no "review_score_word" in the output JSON
+        score: hotel.review_score,
+        count: hotel.review_nr,
+      },
       currencyCode: hotel.currencycode,
       price: null, // it doesn't make sense to provide price in this case
       whitelabelUrl: hotel.url, // it's not whitelabel (?)

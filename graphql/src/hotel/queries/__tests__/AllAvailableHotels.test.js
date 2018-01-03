@@ -104,6 +104,11 @@ describe('all hotels query', () => {
                   id
                   originalId
                   summary
+                  review {
+                    score
+                    description
+                    count
+                  }
                 }
               }
             }

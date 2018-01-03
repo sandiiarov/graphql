@@ -68,9 +68,9 @@ Object {
         "stars": 4,
       },
       "review": Object {
-        "count": null,
+        "count": 2405,
         "description": null,
-        "score": null,
+        "score": 8.3,
       },
       "rooms": Object {
         "edges": Array [
