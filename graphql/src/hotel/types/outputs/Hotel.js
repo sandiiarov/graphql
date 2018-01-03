@@ -13,7 +13,7 @@ import GraphQLHotelFacility from './HotelFacility';
 import GraphQLHotelRoom from './HotelRoom';
 import GraphQLHotelPhoto from './HotelPhoto';
 import GraphQLHotelRating from './HotelRating';
-import GraphQLHotelReview from './HotelReview';
+import GraphQLHotelReview, { type HotelReviewType } from './HotelReview';
 import GraphQLCoordinates from '../../../location/types/outputs/Coordinates';
 import GraphQLAddress from '../../../common/types/outputs/Address';
 import HotelPhotosDataloader from '../../dataloaders/HotelPhotos';
@@ -106,7 +106,11 @@ export default new GraphQLObjectType({
     review: {
       description: 'Hotel review from hotel visitors.',
       type: GraphQLHotelReview,
-      resolve: () => true, // we do not have necessary data yet, see: https://gitlab.skypicker.com/mobile/hotels-bookingcom-api/issues/1
+      resolve: ({ review }: HotelType): HotelReviewType => ({
+        score: review.score,
+        count: review.count,
+        description: undefined, // we still do not have data
+      }),
     },
 
     facilities: {
