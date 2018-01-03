@@ -46,6 +46,10 @@ function sanitizeHotels(hotels): ExtendedHotelType[] {
         city: hotel.city,
         zip: hotel.zip,
       },
+      summary: hotel.descriptions.find(
+        // no docs but according to the Booking.com type "6" is called summary
+        description => description.descriptiontype_id === '6',
+      ).description,
       // + ExtendedHotelType:
       facilities: sanitizeHotelFacilities(hotel.facilities),
       photos: sanitizeHotelPhotos(hotel.photos),

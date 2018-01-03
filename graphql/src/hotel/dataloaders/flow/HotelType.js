@@ -11,4 +11,5 @@ export type HotelType = {|
   whitelabelUrl: string,
   cityName: string,
   address: Address,
+  summary: string,
 |};

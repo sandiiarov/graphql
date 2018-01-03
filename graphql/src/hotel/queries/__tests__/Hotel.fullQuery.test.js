@@ -34,6 +34,7 @@ it('works with full query', async () => {
             name
             cityName
             whitelabelUrl
+            summary
             mainPhoto {
               id
               lowResUrl

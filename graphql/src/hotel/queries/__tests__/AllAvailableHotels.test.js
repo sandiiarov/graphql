@@ -102,6 +102,7 @@ describe('all hotels query', () => {
                 }
                 hotel {
                   id
+                  summary
                 }
               }
             }
