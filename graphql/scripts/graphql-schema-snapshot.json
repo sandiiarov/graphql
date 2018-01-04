@@ -172,6 +172,16 @@
                 "defaultValue": null
               },
               {
+                "name": "filter",
+                "description": null,
+                "type": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "HotelsFilterInput",
+                  "ofType": null
+                },
+                "defaultValue": null
+              },
+              {
                 "name": "after",
                 "description": null,
                 "type": {
@@ -3683,6 +3693,31 @@
         "possibleTypes": null
       },
       {
+        "kind": "INPUT_OBJECT",
+        "name": "HotelsFilterInput",
+        "description": null,
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "starsRating",
+            "description": "List of hotels classes (stars) you want to filter.",
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              }
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
         "kind": "OBJECT",
         "name": "HotelAvailabilityConnection",
         "description": "A connection to a list of items.",
@@ -4328,7 +4363,7 @@
           },
           {
             "name": "summary",
-            "description": "Main description of the hotel.",
+            "description": "Main description (summary) of the hotel.",
             "args": [],
             "type": {
               "kind": "SCALAR",

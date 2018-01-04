@@ -12,16 +12,20 @@ import type { HotelType } from './flow/HotelType';
 export type SearchParameters =
   | {|
       hotelId: string,
+      // shared part
       checkin: Date,
       checkout: Date,
       roomsConfiguration: RoomsConfiguration,
+      stars?: number[],
     |}
   | {|
       latitude: number,
       longitude: number,
+      // shared part
       checkin: Date,
       checkout: Date,
       roomsConfiguration: RoomsConfiguration,
+      stars?: number[],
     |};
 
 type RoomsConfiguration = Array<{|
@@ -86,6 +90,19 @@ async function fetchAllHotels(
       parameters.checkout = DateTime.fromJSDate(searchParameters.checkout, {
         zone: 'UTC',
       }).toISODate();
+
+      parameters.stars =
+        searchParameters.stars &&
+        searchParameters.stars
+          .filter((element, index, array) => {
+            const unique = array.indexOf(element) === index;
+            if (unique) {
+              // allowed interval is <0;5> where "0" indicates "not a hotel" (?)
+              return 0 <= element === element <= 5;
+            }
+            return false;
+          })
+          .join(',');
 
       const absoluteUrl = Config.restApiEndpoint.hotels.all({
         ...parameters,
