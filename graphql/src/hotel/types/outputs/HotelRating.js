@@ -8,7 +8,9 @@ export default new GraphQLObjectType({
     stars: {
       description: 'Star rating is always in the interval 1-5 inclusive.',
       type: GraphQLInt,
-      resolve: (stars: number) => stars,
+      resolve: (stars: number) => {
+        return stars === 0 ? null : stars;
+      },
     },
 
     categoryName: {

@@ -8,6 +8,7 @@ import {
 } from 'graphql-relay';
 
 import GraphQLHotelsSearchInput from '../types/inputs/AllAvailableHotelsSearchInput';
+import GraphQLHotelsFilterInput from '../types/inputs/AllAvailableHotelsFilterInput';
 import GraphQLHotelAvailability from '../types/outputs/HotelAvailability';
 
 import type { GraphqlContextType } from '../../common/services/GraphqlContext';
@@ -26,6 +27,9 @@ export default {
     search: {
       type: new GraphQLNonNull(GraphQLHotelsSearchInput),
     },
+    filter: {
+      type: GraphQLHotelsFilterInput,
+    },
     ...connectionArgs,
   },
   resolve: async (
@@ -39,6 +43,9 @@ export default {
       checkin: args.search.checkin,
       checkout: args.search.checkout,
       roomsConfiguration: args.search.roomsConfiguration,
+      ...(args.filter && {
+        stars: args.filter.starsRating,
+      }),
     });
 
     return connectionFromArray(

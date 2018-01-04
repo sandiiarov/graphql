@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`all hotels query should work for full query 1`] = `
+Object {
+  "data": Object {
+    "allAvailableHotels": Object {
+      "edges": Array [
+        Object {
+          "node": Object {
+            "hotel": Object {
+              "originalId": "25215",
+              "rating": Object {
+                "categoryName": "First Class",
+                "stars": 4,
+              },
+            },
+          },
+        },
+        Object {
+          "node": Object {
+            "hotel": Object {
+              "originalId": "248539",
+              "rating": Object {
+                "categoryName": "Standard",
+                "stars": 2,
+              },
+            },
+          },
+        },
+      ],
+    },
+  },
+}
+`;
