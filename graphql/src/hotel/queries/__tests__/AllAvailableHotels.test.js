@@ -8,12 +8,6 @@ import RoomBlocksDataset from '../../datasets/roomBlocks.json';
 import RoomDetailsDataset from '../../datasets/roomDetails.json';
 
 beforeEach(() => {
-  // minimal query
-  RestApiMock.onGet(
-    'https://hotels-api.skypicker.com/api/hotels?output=hotel_details&radius=50&latitude=45.4654&longitude=9.1859&checkin=2017-11-16&checkout=2017-11-23&room1=A',
-  ).replyWithData(AllHotelsDataset);
-
-  // full query
   RestApiMock.onGet(
     'https://hotels-api.skypicker.com/api/hotels?output=hotel_details&radius=50&latitude=45.4654&longitude=9.1859&checkin=2017-11-16&checkout=2017-11-23&room1=A%2CA%2C4%2C6&room2=A%2C2',
   ).replyWithData(AllHotelsDataset);
@@ -36,31 +30,6 @@ beforeEach(() => {
 });
 
 describe('all hotels query', () => {
-  it('should work for minimal example', async () => {
-    expect(
-      await graphql(`
-        {
-          allAvailableHotels(
-            search: {
-              latitude: 45.4654
-              longitude: 9.1859
-              checkin: "2017-11-16"
-              checkout: "2017-11-23"
-              roomsConfiguration: { adultsCount: 1 }
-            }
-          ) {
-            edges {
-              cursor
-              node {
-                id
-              }
-            }
-          }
-        }
-      `),
-    ).toMatchSnapshot();
-  });
-
   it('should work for full query', async () => {
     expect(
       await graphql(`

@@ -5,6 +5,7 @@ import {
   connectionArgs,
   connectionDefinitions,
   connectionFromArray,
+  fromGlobalId,
 } from 'graphql-relay';
 
 import GraphQLHotelsSearchInput from '../types/inputs/AllAvailableHotelsSearchInput';
@@ -37,21 +38,43 @@ export default {
     args: Object,
     { dataLoader }: GraphqlContextType,
   ) => {
-    const availableHotels = await dataLoader.hotel.availabilityByLocation.load({
-      latitude: args.search.latitude,
-      longitude: args.search.longitude,
-      checkin: args.search.checkin,
-      checkout: args.search.checkout,
-      roomsConfiguration: args.search.roomsConfiguration,
-      ...(args.filter && {
-        stars: args.filter.starsRating,
+    const { search: searchArgs, filter: filterArgs } = args;
+
+    let searchParams: Object = {
+      checkin: searchArgs.checkin,
+      checkout: searchArgs.checkout,
+      roomsConfiguration: searchArgs.roomsConfiguration,
+      ...(filterArgs && {
+        stars: filterArgs.starsRating,
+        minPrice: filterArgs.minPrice,
+        maxPrice: filterArgs.maxPrice,
       }),
-    });
+    };
+
+    const cityId = searchArgs.cityId;
+    if (cityId) {
+      const idObject = fromGlobalId(cityId); // id is opaque
+      if (idObject.type !== 'hotelCity') {
+        throw new Error(
+          `Hotel city ID mishmash. You cannot search hotels with city ID ` +
+            `'${cityId}' because this ID is not ID of the hotel city. ` +
+            `Please use opaque ID.`,
+        );
+      }
+      searchParams.cityId = idObject.id;
+    } else {
+      searchParams.latitude = searchArgs.latitude;
+      searchParams.longitude = searchArgs.longitude;
+    }
+
+    const availableHotels = await dataLoader.hotel.availabilityByLocation.load(
+      searchParams,
+    );
 
     return connectionFromArray(
       availableHotels.map(hotel => ({
         ...hotel,
-        args: args.search, // pass search arguments down
+        args: searchArgs, // pass search arguments down
       })),
       args,
     );

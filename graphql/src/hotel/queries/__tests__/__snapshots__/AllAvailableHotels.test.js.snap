@@ -438,26 +438,3 @@ The hotel is a 40-minute drive from Milan centre, and 40 km from Rho Fiera Milan
   },
 }
 `;
-
-exports[`all hotels query should work for minimal example 1`] = `
-Object {
-  "data": Object {
-    "allAvailableHotels": Object {
-      "edges": Array [
-        Object {
-          "cursor": "YXJyYXljb25uZWN0aW9uOjA=",
-          "node": Object {
-            "id": "SG90ZWxBdmFpbGFiaWxpdHk6MjUyMTU=",
-          },
-        },
-        Object {
-          "cursor": "YXJyYXljb25uZWN0aW9uOjE=",
-          "node": Object {
-            "id": "SG90ZWxBdmFpbGFiaWxpdHk6MjQ4NTM5",
-          },
-        },
-      ],
-    },
-  },
-}
-`;

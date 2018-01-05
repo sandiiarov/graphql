@@ -2,6 +2,7 @@
 
 import {
   GraphQLFloat,
+  GraphQLString,
   GraphQLNonNull,
   GraphQLInputObjectType,
   GraphQLList,
@@ -12,15 +13,21 @@ import HotelRoomsConfiguration from './HotelRoomsConfiguration';
 
 export default new GraphQLInputObjectType({
   name: 'HotelsSearchInput',
+  description: 'You must provide lat/lng combination OR city ID.',
   fields: {
     latitude: {
-      type: new GraphQLNonNull(GraphQLFloat),
+      type: GraphQLFloat,
       description: 'Latitude in float format (example: 45.4654).',
     },
 
     longitude: {
-      type: new GraphQLNonNull(GraphQLFloat),
+      type: GraphQLFloat,
       description: 'Longitude in float format (example: 9.1859).',
+    },
+
+    cityId: {
+      type: GraphQLString,
+      description: 'Opaque ID of the city.',
     },
 
     checkin: {

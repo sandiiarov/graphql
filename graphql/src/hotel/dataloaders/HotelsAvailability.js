@@ -9,24 +9,14 @@ import Config from '../../../config/application';
 
 import type { HotelType } from './flow/HotelType';
 
-export type SearchParameters =
-  | {|
-      hotelId: string,
-      // shared part
-      checkin: Date,
-      checkout: Date,
-      roomsConfiguration: RoomsConfiguration,
-      stars?: number[],
-    |}
-  | {|
-      latitude: number,
-      longitude: number,
-      // shared part
-      checkin: Date,
-      checkout: Date,
-      roomsConfiguration: RoomsConfiguration,
-      stars?: number[],
-    |};
+type SharedSearchParameters = {|
+  checkin: Date,
+  checkout: Date,
+  roomsConfiguration: RoomsConfiguration,
+  stars?: number[],
+  minPrice?: number,
+  maxPrice?: number,
+|};
 
 type RoomsConfiguration = Array<{|
   adultsCount: number,
@@ -35,10 +25,31 @@ type RoomsConfiguration = Array<{|
   |}>,
 |}>;
 
+type SearchByHotelId = {|
+  hotelId: string,
+  ...SharedSearchParameters,
+|};
+
+type SearchByCityId = {|
+  cityId: string,
+  ...SharedSearchParameters,
+|};
+
+type SearchByCoordinates = {|
+  latitude: number,
+  longitude: number,
+  ...SharedSearchParameters,
+|};
+
+export type SearchParameters =
+  | SearchByHotelId
+  | SearchByCityId
+  | SearchByCoordinates;
+
 /**
  * This data-loader loads all available hotels in the specified
  * configuration (checkin, checkout, rooms configuration). You can
- * load hotels by their ID or in location (lng/lat/rad).
+ * load hotels by their ID, city ID or by location (lng/lat/rad).
  */
 export default new DataLoader(
   async (keys: SearchParameters[]): Promise<Array<HotelType[] | Error>> =>
@@ -68,6 +79,9 @@ async function fetchAllHotels(
       if (searchParameters.hotelId) {
         // search by hotel ID
         parameters.hotel_ids = searchParameters.hotelId;
+      } else if (searchParameters.cityId) {
+        // search by city ID
+        parameters.city_ids = searchParameters.cityId;
       } else if (searchParameters.latitude) {
         // search by lng/lat/rad
         parameters.radius = '50'; // not configurable yet (but required)
@@ -103,6 +117,9 @@ async function fetchAllHotels(
             return false;
           })
           .join(',');
+
+      parameters.min_price = searchParameters.minPrice;
+      parameters.max_price = searchParameters.maxPrice;
 
       const absoluteUrl = Config.restApiEndpoint.hotels.all({
         ...parameters,
