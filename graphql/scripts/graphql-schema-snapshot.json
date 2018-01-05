@@ -3546,20 +3546,16 @@
       {
         "kind": "INPUT_OBJECT",
         "name": "HotelsSearchInput",
-        "description": null,
+        "description": "You must provide lat/lng combination OR city ID.",
         "fields": null,
         "inputFields": [
           {
             "name": "latitude",
             "description": "Latitude in float format (example: 45.4654).",
             "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "SCALAR",
-                "name": "Float",
-                "ofType": null
-              }
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
             },
             "defaultValue": null
           },
@@ -3567,13 +3563,19 @@
             "name": "longitude",
             "description": "Longitude in float format (example: 9.1859).",
             "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "SCALAR",
-                "name": "Float",
-                "ofType": null
-              }
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "cityId",
+            "description": "Opaque ID of the city.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
             },
             "defaultValue": null
           },
@@ -3709,6 +3711,26 @@
                 "name": "Int",
                 "ofType": null
               }
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "minPrice",
+            "description": "Show only hotels having minimum total price lower than or equal to this value.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "maxPrice",
+            "description": "Show only hotels having minimum total price higher than or equal to this value.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float",
+              "ofType": null
             },
             "defaultValue": null
           }
