@@ -3,15 +3,15 @@
 import Dataloader from 'dataloader';
 import { DateTime } from 'luxon';
 
-import { get } from '../../common/services/HttpRequest';
+import { get } from '../services/BookingComRequest';
 import { queryWithParameters } from '../../../config/application';
 
 import type { HotelRoomAvailabilityType } from './flow/HotelRoomAvailabilityType';
 import type { Block } from './flow/ApiBlockTypes';
 
 type UrlParameters = {|
-  arrival_date: string,
-  departure_date: string,
+  checkin: string,
+  checkout: string,
   hotel_ids: string,
 |};
 
@@ -20,7 +20,7 @@ type UrlParameters = {|
  * a property. A room can have multiple blocks, as a block is a combination of
  * the meal, cancellation policy, occupancy and other things.
  *
- * @see https://hotels-api.skypicker.com/api/blocks?arrival_date=2018-01-09&departure_date=2018-01-10&hotel_ids=25215,248539
+ * @see https://distribution-xml.booking.com/2.0/json/blockAvailability?checkin=2018-01-09&checkout=2018-01-10&hotel_ids=25215,248539
  */
 export default class HotelRoomAvailabilityLoader {
   dataLoader: Dataloader<Object, HotelRoomAvailabilityType[]>;
@@ -42,10 +42,10 @@ export default class HotelRoomAvailabilityLoader {
     departureDate: Date,
   ): Promise<HotelRoomAvailabilityType[]> {
     const availableRooms = await this.dataLoader.load({
-      arrival_date: DateTime.fromJSDate(arrivalDate, {
+      checkin: DateTime.fromJSDate(arrivalDate, {
         zone: 'UTC',
       }).toISODate(),
-      departure_date: DateTime.fromJSDate(departureDate, {
+      checkout: DateTime.fromJSDate(departureDate, {
         zone: 'UTC',
       }).toISODate(),
       hotel_ids: hotelIds.join(','),
@@ -62,15 +62,15 @@ export default class HotelRoomAvailabilityLoader {
       urlParameters.map(parameter =>
         get(
           queryWithParameters(
-            'https://hotels-api.skypicker.com/api/blocks',
-            parameter,
+            'https://distribution-xml.booking.com/2.0/json/blockAvailability',
+            { detail_level: 1, ...parameter },
           ),
         ),
       ),
     );
 
     return roomBlocks.map(roomBlock =>
-      roomBlock.map(room => {
+      roomBlock.result.map(room => {
         return room.block.map(block =>
           this.sanitizeHotelRoomAvailability(block, room.hotel_id),
         );

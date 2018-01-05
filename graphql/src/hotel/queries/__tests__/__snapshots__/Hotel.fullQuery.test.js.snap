@@ -11,33 +11,33 @@ Object {
       },
       "cityName": "Rho",
       "coordinates": Object {
-        "lat": 45.52403387526,
-        "lng": 9.03759062290192,
+        "lat": 45.52403,
+        "lng": 9.03759,
       },
       "facilities": Object {
         "edges": Array [
           Object {
             "cursor": "YXJyYXljb25uZWN0aW9uOjA=",
             "node": Object {
-              "id": "aG90ZWxGYWNpbGl0eToz",
-              "name": "Restaurant",
+              "id": "aG90ZWxGYWNpbGl0eTo=",
+              "name": "Parking",
             },
           },
           Object {
             "cursor": "YXJyYXljb25uZWN0aW9uOjE=",
             "node": Object {
-              "id": "aG90ZWxGYWNpbGl0eTo1",
-              "name": "Room service",
+              "id": "aG90ZWxGYWNpbGl0eTo=",
+              "name": "Restaurant",
             },
           },
         ],
       },
       "id": "aG90ZWw6MjUyMTU=",
       "mainPhoto": Object {
-        "highResUrl": "http://aff.bstatic.com/images/hotel/max500/740/74030690.jpg",
+        "highResUrl": "https://aff.bstatic.com/images/hotel/max500/740/74030690.jpg",
         "id": "aG90ZWxQaG90bzo3NDAzMDY5MA==",
-        "lowResUrl": "http://aff.bstatic.com/images/hotel/max300/740/74030690.jpg",
-        "thumbnailUrl": "http://aff.bstatic.com/images/hotel/square60/740/74030690.jpg",
+        "lowResUrl": "https://aff.bstatic.com/images/hotel/max300/740/74030690.jpg",
+        "thumbnailUrl": "https://aff.bstatic.com/images/hotel/square60/740/74030690.jpg",
       },
       "name": "Italiana Hotels Milan Rho Fair",
       "originalId": "25215",
@@ -46,19 +46,19 @@ Object {
           Object {
             "cursor": "YXJyYXljb25uZWN0aW9uOjA=",
             "node": Object {
-              "highResUrl": "http://aff.bstatic.com/images/hotel/max500/740/74030690.jpg",
+              "highResUrl": "https://aff.bstatic.com/images/hotel/max500/740/74030690.jpg",
               "id": "aG90ZWxQaG90bzo3NDAzMDY5MA==",
-              "lowResUrl": "http://aff.bstatic.com/images/hotel/max300/740/74030690.jpg",
-              "thumbnailUrl": "http://aff.bstatic.com/images/hotel/square60/740/74030690.jpg",
+              "lowResUrl": "https://aff.bstatic.com/images/hotel/max300/740/74030690.jpg",
+              "thumbnailUrl": "https://aff.bstatic.com/images/hotel/square60/740/74030690.jpg",
             },
           },
           Object {
             "cursor": "YXJyYXljb25uZWN0aW9uOjE=",
             "node": Object {
-              "highResUrl": "http://aff.bstatic.com/images/hotel/max500/681/68146841.jpg",
+              "highResUrl": "https://aff.bstatic.com/images/hotel/max500/681/68146841.jpg",
               "id": "aG90ZWxQaG90bzo2ODE0Njg0MQ==",
-              "lowResUrl": "http://aff.bstatic.com/images/hotel/max300/681/68146841.jpg",
-              "thumbnailUrl": "http://aff.bstatic.com/images/hotel/square60/681/68146841.jpg",
+              "lowResUrl": "https://aff.bstatic.com/images/hotel/max300/681/68146841.jpg",
+              "thumbnailUrl": "https://aff.bstatic.com/images/hotel/square60/681/68146841.jpg",
             },
           },
         ],
@@ -94,19 +94,19 @@ Object {
                   Object {
                     "cursor": "YXJyYXljb25uZWN0aW9uOjA=",
                     "node": Object {
-                      "highResUrl": "http://aff.bstatic.com/images/hotel/max500/740/74030508.jpg",
+                      "highResUrl": "https://aff.bstatic.com/images/hotel/max500/740/74030508.jpg",
                       "id": "aG90ZWxQaG90bzo3NDAzMDUwOA==",
-                      "lowResUrl": "http://aff.bstatic.com/images/hotel/max300/740/74030508.jpg",
-                      "thumbnailUrl": "http://aff.bstatic.com/images/hotel/square60/740/74030508.jpg",
+                      "lowResUrl": "https://aff.bstatic.com/images/hotel/max300/740/74030508.jpg",
+                      "thumbnailUrl": "https://aff.bstatic.com/images/hotel/square60/740/74030508.jpg",
                     },
                   },
                   Object {
                     "cursor": "YXJyYXljb25uZWN0aW9uOjE=",
                     "node": Object {
-                      "highResUrl": "http://aff.bstatic.com/images/hotel/max500/740/74030464.jpg",
+                      "highResUrl": "https://aff.bstatic.com/images/hotel/max500/740/74030464.jpg",
                       "id": "aG90ZWxQaG90bzo3NDAzMDQ2NA==",
-                      "lowResUrl": "http://aff.bstatic.com/images/hotel/max300/740/74030464.jpg",
-                      "thumbnailUrl": "http://aff.bstatic.com/images/hotel/square60/740/74030464.jpg",
+                      "lowResUrl": "https://aff.bstatic.com/images/hotel/max300/740/74030464.jpg",
+                      "thumbnailUrl": "https://aff.bstatic.com/images/hotel/square60/740/74030464.jpg",
                     },
                   },
                 ],
@@ -134,19 +134,19 @@ Object {
                   Object {
                     "cursor": "YXJyYXljb25uZWN0aW9uOjA=",
                     "node": Object {
-                      "highResUrl": "http://aff.bstatic.com/images/hotel/max500/740/74030573.jpg",
+                      "highResUrl": "https://aff.bstatic.com/images/hotel/max500/740/74030573.jpg",
                       "id": "aG90ZWxQaG90bzo3NDAzMDU3Mw==",
-                      "lowResUrl": "http://aff.bstatic.com/images/hotel/max300/740/74030573.jpg",
-                      "thumbnailUrl": "http://aff.bstatic.com/images/hotel/square60/740/74030573.jpg",
+                      "lowResUrl": "https://aff.bstatic.com/images/hotel/max300/740/74030573.jpg",
+                      "thumbnailUrl": "https://aff.bstatic.com/images/hotel/square60/740/74030573.jpg",
                     },
                   },
                   Object {
                     "cursor": "YXJyYXljb25uZWN0aW9uOjE=",
                     "node": Object {
-                      "highResUrl": "http://aff.bstatic.com/images/hotel/max500/740/74030487.jpg",
-                      "id": "aG90ZWxQaG90bzo3NDAzMDQ4Nw==",
-                      "lowResUrl": "http://aff.bstatic.com/images/hotel/max300/740/74030487.jpg",
-                      "thumbnailUrl": "http://aff.bstatic.com/images/hotel/square60/740/74030487.jpg",
+                      "highResUrl": "https://aff.bstatic.com/images/hotel/max500/740/74030572.jpg",
+                      "id": "aG90ZWxQaG90bzo3NDAzMDU3Mg==",
+                      "lowResUrl": "https://aff.bstatic.com/images/hotel/max300/740/74030572.jpg",
+                      "thumbnailUrl": "https://aff.bstatic.com/images/hotel/square60/740/74030572.jpg",
                     },
                   },
                 ],
@@ -156,13 +156,7 @@ Object {
           },
         ],
       },
-      "summary": "Italiana Hotels Milan Rho Fair is set in a renovated cotton mill from the early 20th century, 10 minutes' drive from RhoFiera Milano exhibition centre. It offers air-conditioned rooms, free WiFi throughout, and a small gym with sauna and Turkish bath.
-
-This Italiana hotel features elegant rooms with parquet floors and a flat-screen TV with satellite channels. Some rooms feature tea and coffee making facilities, and luxury toiletries. Some also have a private terrace.
-
-On the top floor you will find the hotel's trendy Club 1902 bar, and the La Fabbrica del Cotone restaurant, both with panoramic views. The restaurant serves Mediterranean and Milanese specialities prepared by the chef each day.
-
-During major events, a free shuttle is offered to/from RhoFiera Milano exhibition centre. The property is 500 metres from Rho Train Station. From there, you can reach the EXPO 2015 exhibition centre in 4 minutes.",
+      "summary": "Italiana Hotels Milan Rho Fair is set in a renovated cotton mill from the early 20th century, 10 minutes' drive from RhoFiera Milano exhibition centre. It offers air-conditioned rooms, free WiFi throughout, and a small gym with sauna and Turkish bath. This Italiana hotel features elegant rooms with parquet floors and a flat-screen TV with satellite channels. Some rooms feature tea and coffee making facilities, and luxury toiletries. Some also have a private terrace. On the top floor you will find the hotel's trendy Club 1902 bar, and the La Fabbrica del Cotone restaurant, both with panoramic views. The restaurant serves Mediterranean and Milanese specialities prepared by the chef each day. During major events, a free shuttle is offered to/from RhoFiera Milano exhibition centre. The property is 500 metres from Rho Train Station. From there, you can reach the EXPO 2015 exhibition centre in 4 minutes.",
       "whitelabelUrl": "https://www.booking.com/hotel/it/holiday-inn-milan-rho-fair.html",
     },
   },

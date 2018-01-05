@@ -3,7 +3,7 @@
 import { GraphQLObjectType, GraphQLString } from 'graphql';
 import { globalIdField } from '../../../common/services/OpaqueIdentifier';
 
-import type { HotelFacilityType } from '../../dataloaders/HotelByID';
+import type { HotelFacilityType } from '../../dataloaders/flow/HotelFacilityType';
 
 export default new GraphQLObjectType({
   name: 'HotelFacility',

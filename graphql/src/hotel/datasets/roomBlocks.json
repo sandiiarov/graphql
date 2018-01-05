@@ -1,243 +1,118 @@
-[
-  {
-    "hotel_text": "",
-    "block": [
-      {
-        "room_id": "24853901",
-        "name": "Classic Double or Twin Room - single occupancy - Non-refundable",
-        "breakfast_included": 0,
-        "deposit_required": 1,
-        "rack_rate": {
-          "currency": "EUR",
-          "price": "0.00"
+{
+  "result": [
+    {
+      "checkin": "2018-01-09",
+      "checkout": "2018-01-10",
+      "hotel_id": 248539,
+      "block": [
+        {
+          "block_id": "24853901_94364928_1_2_0",
+          "deposit_required": true,
+          "min_price": { "currency": "EUR", "price": 125 },
+          "breakfast_included": false,
+          "taxes": "10 % VAT",
+          "rack_rate": { "currency": "EUR", "price": 0 },
+          "refundable": false,
+          "photos": "",
+          "name":
+            "Classic Double or Twin Room - single occupancy - Non-refundable",
+          "room_id": 24853901,
+          "room_description": "Air-conditioned rooms with minibar and TV.\n",
+          "incremental_price": [
+            { "currency": "EUR", "price": 125 },
+            { "currency": "EUR", "price": 250 },
+            { "currency": "EUR", "price": 375 },
+            { "currency": "EUR", "price": 500 },
+            { "currency": "EUR", "price": 625 },
+            { "currency": "EUR", "price": 750 },
+            { "currency": "EUR", "price": 875 },
+            { "currency": "EUR", "price": 1000 }
+          ],
+          "max_occupancy": 1,
+          "refundable_until": ""
         },
-        "refundable": 0,
-        "block_text": "",
-        "block_id": "24853901_94364928_1_2_0",
-        "min_price": {
-          "price": "120.00",
-          "currency": "EUR"
+        {
+          "deposit_required": false,
+          "block_id": "24853901_106666387_1_2_0",
+          "breakfast_included": false,
+          "taxes": "10 % VAT",
+          "min_price": { "currency": "EUR", "price": 125 },
+          "room_description": "Air-conditioned rooms with minibar and TV.\n",
+          "rack_rate": { "price": 0, "currency": "EUR" },
+          "refundable": true,
+          "room_id": 24853901,
+          "photos": "",
+          "name": "Classic Double or Twin Room - single occupancy",
+          "refundable_until": "2018-01-07 23:59:59 +0100",
+          "max_occupancy": 1,
+          "incremental_price": [
+            { "currency": "EUR", "price": 125 },
+            { "currency": "EUR", "price": 250 },
+            { "currency": "EUR", "price": 375 },
+            { "price": 500, "currency": "EUR" },
+            { "currency": "EUR", "price": 625 },
+            { "price": 750, "currency": "EUR" },
+            { "currency": "EUR", "price": 875 },
+            { "currency": "EUR", "price": 1000 }
+          ]
+        }
+      ]
+    },
+    {
+      "checkout": "2018-01-10",
+      "checkin": "2018-01-09",
+      "block": [
+        {
+          "refundable": false,
+          "rack_rate": { "currency": "EUR", "price": 0 },
+          "photos": "",
+          "room_id": 2521515,
+          "name": "Double or Twin Room for Single Use - Non-refundable",
+          "room_description":
+            "Includes free WiFi, work desk and flat-screen satellite TV.\n\nNon-smoking rooms on request.",
+          "max_occupancy": 1,
+          "incremental_price": [
+            { "currency": "EUR", "price": 53.1 },
+            { "currency": "EUR", "price": 106.2 },
+            { "price": 159.3, "currency": "EUR" },
+            { "price": 212.4, "currency": "EUR" },
+            { "currency": "EUR", "price": 265.5 },
+            { "currency": "EUR", "price": 318.6 }
+          ],
+          "refundable_until": "",
+          "block_id": "2521515_95149036_0_1_0",
+          "deposit_required": true,
+          "min_price": { "currency": "EUR", "price": 53.1 },
+          "breakfast_included": true,
+          "taxes": "10 % VAT"
         },
-        "max_occupancy": 1,
-        "photos": "",
-        "refundable_until": "",
-        "incremental_price": [
-          {
-            "price": "120.00",
-            "currency": "EUR"
-          },
-          {
-            "currency": "EUR",
-            "price": "240.00"
-          },
-          {
-            "price": "360.00",
-            "currency": "EUR"
-          },
-          {
-            "currency": "EUR",
-            "price": "480.00"
-          },
-          {
-            "currency": "EUR",
-            "price": "600.00"
-          },
-          {
-            "price": "720.00",
-            "currency": "EUR"
-          },
-          {
-            "price": "840.00",
-            "currency": "EUR"
-          },
-          {
-            "currency": "EUR",
-            "price": "960.00"
-          }
-        ]
-      },
-      {
-        "min_price": {
-          "price": "127.00",
-          "currency": "EUR"
-        },
-        "block_id": "24853901_106666387_1_2_0",
-        "block_text": "",
-        "refundable": 1,
-        "rack_rate": {
-          "currency": "EUR",
-          "price": "0.00"
-        },
-        "breakfast_included": 0,
-        "deposit_required": 0,
-        "name": "Classic Double or Twin Room - single occupancy",
-        "room_id": "24853901",
-        "incremental_price": [
-          {
-            "price": "127.00",
-            "currency": "EUR"
-          },
-          {
-            "currency": "EUR",
-            "price": "254.00"
-          },
-          {
-            "currency": "EUR",
-            "price": "381.00"
-          },
-          {
-            "currency": "EUR",
-            "price": "508.00"
-          },
-          {
-            "price": "635.00",
-            "currency": "EUR"
-          },
-          {
-            "price": "762.00",
-            "currency": "EUR"
-          },
-          {
-            "currency": "EUR",
-            "price": "889.00"
-          },
-          {
-            "currency": "EUR",
-            "price": "1016.00"
-          }
-        ],
-        "refundable_until": "2018-01-07 23:59:59 +0100",
-        "photos": "",
-        "max_occupancy": 1
-      }
-    ],
-    "departure_date": "2018-01-10",
-    "hotel_id": "248539",
-    "arrival_date": "2018-01-09"
-  },
-  {
-    "hotel_text": "",
-    "direct_payment": 1,
-    "block": [
-      {
-        "photos": "",
-        "max_occupancy": 1,
-        "incremental_price": [
-          {
-            "price": "62.10",
-            "currency": "EUR"
-          },
-          {
-            "currency": "EUR",
-            "price": "124.20"
-          },
-          {
-            "price": "186.30",
-            "currency": "EUR"
-          },
-          {
-            "price": "248.40",
-            "currency": "EUR"
-          },
-          {
-            "currency": "EUR",
-            "price": "310.50"
-          },
-          {
-            "currency": "EUR",
-            "price": "372.60"
-          },
-          {
-            "price": "434.70",
-            "currency": "EUR"
-          },
-          {
-            "price": "496.80",
-            "currency": "EUR"
-          },
-          {
-            "currency": "EUR",
-            "price": "558.90"
-          }
-        ],
-        "refundable_until": "",
-        "rack_rate": {
-          "currency": "EUR",
-          "price": "0.00"
-        },
-        "breakfast_included": 1,
-        "name": "Double or Twin Room for Single Use - Non-refundable",
-        "deposit_required": 1,
-        "room_id": "2521515",
-        "min_price": {
-          "price": "62.10",
-          "currency": "EUR"
-        },
-        "block_text": "",
-        "block_id": "2521515_95149036_0_1_0",
-        "refundable": 0
-      },
-      {
-        "incremental_price": [
-          {
-            "price": "69.00",
-            "currency": "EUR"
-          },
-          {
-            "price": "138.00",
-            "currency": "EUR"
-          },
-          {
-            "currency": "EUR",
-            "price": "207.00"
-          },
-          {
-            "currency": "EUR",
-            "price": "276.00"
-          },
-          {
-            "currency": "EUR",
-            "price": "345.00"
-          },
-          {
-            "price": "414.00",
-            "currency": "EUR"
-          },
-          {
-            "price": "483.00",
-            "currency": "EUR"
-          },
-          {
-            "price": "552.00",
-            "currency": "EUR"
-          },
-          {
-            "price": "621.00",
-            "currency": "EUR"
-          }
-        ],
-        "refundable_until": "2018-01-07 23:59:59 +0100",
-        "photos": "",
-        "max_occupancy": 1,
-        "min_price": {
-          "price": "69.00",
-          "currency": "EUR"
-        },
-        "block_text": "",
-        "block_id": "2521515_103019629_0_1_0",
-        "refundable": 1,
-        "rack_rate": {
-          "price": "0.00",
-          "currency": "EUR"
-        },
-        "breakfast_included": 1,
-        "deposit_required": 0,
-        "name": "Double or Twin Room for Single Use",
-        "room_id": "2521515"
-      }
-    ],
-    "departure_date": "2018-01-10",
-    "hotel_id": "25215",
-    "arrival_date": "2018-01-09"
-  }
-]
+        {
+          "block_id": "2521515_103019629_0_1_0",
+          "deposit_required": false,
+          "min_price": { "currency": "EUR", "price": 59 },
+          "breakfast_included": true,
+          "taxes": "10 % VAT",
+          "refundable": true,
+          "photos": "",
+          "rack_rate": { "price": 0, "currency": "EUR" },
+          "room_id": 2521515,
+          "name": "Double or Twin Room for Single Use",
+          "room_description":
+            "Includes free WiFi, work desk and flat-screen satellite TV.\n\nNon-smoking rooms on request.",
+          "max_occupancy": 1,
+          "incremental_price": [
+            { "currency": "EUR", "price": 59 },
+            { "price": 118, "currency": "EUR" },
+            { "price": 177, "currency": "EUR" },
+            { "price": 236, "currency": "EUR" },
+            { "currency": "EUR", "price": 295 },
+            { "currency": "EUR", "price": 354 }
+          ],
+          "refundable_until": "2018-01-07 23:59:59 +0100"
+        }
+      ],
+      "hotel_id": 25215,
+      "direct_payment": true
+    }
+  ]
+}

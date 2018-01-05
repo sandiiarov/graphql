@@ -3,9 +3,8 @@
 import DataLoader from 'dataloader';
 import { DateTime } from 'luxon';
 
-import { get } from '../../common/services/HttpRequest';
-import { ProxiedError } from '../../common/services/errors/ProxiedError';
-import Config from '../../../config/application';
+import { get } from '../services/BookingComRequest';
+import { queryWithParameters } from '../../../config/application';
 
 import type { HotelType } from './flow/HotelType';
 
@@ -58,10 +57,10 @@ export default new DataLoader(
 
 /**
  * Minimal valid query (lng/lat/rad):
- * https://hotels-api.skypicker.com/api/hotels?latitude=45.4654219&longitude=9.1859243&radius=50&checkin=2018-11-16&checkout=2018-11-23&room1=A
+ * https://distribution-xml.booking.com/2.0/json/hotelAvailability?latitude=45.4654219&longitude=9.1859243&radius=50&checkin=2018-11-16&checkout=2018-11-23&room1=A
  *
  * Minimal valid query (hotel_ids):
- * https://hotels-api.skypicker.com/api/hotels?checkin=2018-11-16&checkout=2018-11-23&room1=A&hotel_ids=2906934
+ * https://distribution-xml.booking.com/2.0/json/hotelAvailability?checkin=2018-04-07&checkout=2018-04-08&city_ids=-1565670&room1=A,A&extras=room_details,hotel_details
  *
  * Parameters explained:
  * - room1: "A" represents an adult and an integer represents a child. eg
@@ -121,18 +120,19 @@ async function fetchAllHotels(
       parameters.min_price = searchParameters.minPrice;
       parameters.max_price = searchParameters.maxPrice;
 
-      const absoluteUrl = Config.restApiEndpoint.hotels.all({
-        ...parameters,
-        ...roomsQuery,
-      });
+      const absoluteUrl = queryWithParameters(
+        'https://distribution-xml.booking.com/2.0/json/hotelAvailability',
+        {
+          extras: 'hotel_details',
+          ...parameters,
+          ...roomsQuery,
+        },
+      );
 
       const response = await get(absoluteUrl);
-      if (response.message) {
-        return new ProxiedError(response.message, response.code, absoluteUrl);
-      }
 
       // $FlowIssue: https://github.com/facebook/flow/issues/4936
-      return sanitizeHotels(response.hotels);
+      return sanitizeHotels(response.result);
     }),
   );
 }

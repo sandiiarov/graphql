@@ -1,63 +1,34 @@
 {
-  "latitude": "45.4654",
-  "guest_groups": [
+  "result": [
     {
-      "guests": 2,
-      "children": [
-        "4",
-        "6"
-      ]
+      "direct_payment": true,
+      "default_language": "en",
+      "hotel_name": "Hotel Abcoude",
+      "review_score": 8,
+      "address": "Kerkplein 7, Abcoude",
+      "review_nr": 759,
+      "postcode": "1391 GJ",
+      "checkin_time": { "until": "00:00", "from": "14:00" },
+      "price": 528.71,
+      "country": "nl",
+      "review_score_word": "Very good",
+      "hotel_currency_code": "EUR",
+      "hotel_id": 25215,
+      "stars": "3"
     },
     {
-      "children": [
-        "2"
-      ],
-      "guests": 1
-    }
-  ],
-  "other_currency": "EUR",
-  "longitude": "9.1859",
-  "radius": "50",
-  "hotels": [
-    {
-      "stars": 4,
-      "hotel_id": "25215",
-      "default_language": "en",
-      "country": "it",
-      "postcode": "20017",
-      "direct_payment": 1,
-      "price": "1134.90",
-      "hotel_name": "Italiana Hotels Milan Rho Fair",
-      "checkin_time": {
-        "until": "",
-        "from": "14:00"
-      },
-      "address": "Via Alessandro Volta S/N, Rho",
+      "review_score_word": "Exceptional",
       "hotel_currency_code": "EUR",
-      "photo": "http://aff.bstatic.com/images/hotel/max500/740/74030690.jpg",
-      "url": "http://hotels.kiwi.com/hotel/it/holiday-inn-milan-rho-fair.html?label=kiwi-application&latitude=45.4654&longitude=9.1859&radius=50&checkin=2017-12-16&checkout=2017-12-23&room1=A,A,4,6&room2=A,2&output=hotel_details&rows=10&selected_currency=EUR&lang=en",
-      "city": "Rho"
-    },
-    {
-      "default_language": "en",
-      "hotel_id": "248539",
-      "country": "it",
-      "postcode": "21010",
-      "address": "Malpensa Terminal 1 S.S. 336, Case Nuove",
-      "price": "2471.98",
-      "hotel_name": "Sheraton Milan Malpensa Airport Hotel & Conference Centre",
-      "checkin_time": {
-        "until": "",
-        "from": "15:00"
-      },
-      "hotel_currency_code": "EUR",
-      "stars": 4,
-      "photo": "http://aff.bstatic.com/images/hotel/max500/267/26753013.jpg",
-      "url": "http://hotels.kiwi.com/hotel/it/sheraton-milan-malpensa-airport-conference-centre.html?label=kiwi-application&latitude=45.4654&longitude=9.1859&radius=50&checkin=2017-12-16&checkout=2017-12-23&room1=A,A,4,6&room2=A,2&output=hotel_details&rows=10&selected_currency=EUR&lang=en",
-      "city": "Case Nuove"
+      "hotel_id": 248539,
+      "default_language": "nl",
+      "hotel_name": "Hotel De Witte Dame",
+      "review_score": 9.6,
+      "checkin_time": { "until": "22:00", "from": "15:00" },
+      "review_nr": 424,
+      "postcode": "1391 GS",
+      "address": "Stationsplein 3, Abcoude",
+      "price": 775,
+      "country": "nl"
     }
-  ],
-  "checkout": "2017-12-23",
-  "checkin": "2017-12-16",
-  "search_link": "http://hotels.kiwi.com/searchresults.html?aid=1178571&latitude=45.4654&longitude=9.1859&radius=50&checkin=2017-12-16&checkout=2017-12-23&room1=A,A,4,6&room2=A,2&output=hotel_details&rows=10&selected_currency=EUR&lang=en&label=kiwi-application"
+  ]
 }

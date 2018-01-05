@@ -5,7 +5,6 @@ import {
   connectionArgs,
   connectionDefinitions,
   connectionFromArray,
-  connectionFromPromisedArray,
 } from 'graphql-relay';
 
 import { globalIdField } from '../../../common/services/OpaqueIdentifier';
@@ -16,9 +15,8 @@ import GraphQLHotelRating from './HotelRating';
 import GraphQLHotelReview, { type HotelReviewType } from './HotelReview';
 import GraphQLCoordinates from '../../../location/types/outputs/Coordinates';
 import GraphQLAddress from '../../../common/types/outputs/Address';
-import HotelPhotosDataloader from '../../dataloaders/HotelPhotos';
 
-import type { HotelType } from '../../dataloaders/flow/HotelType';
+import type { HotelExtendedType } from '../../dataloaders/flow/HotelExtendedType';
 import type { GraphqlContextType } from '../../../common/services/GraphqlContext';
 import type { Address } from '../../../common/types/outputs/Address';
 
@@ -26,7 +24,7 @@ export default new GraphQLObjectType({
   name: 'Hotel',
   description: 'General information about the hotel.',
   fields: {
-    id: globalIdField('hotel', ({ id }: HotelType): string => id),
+    id: globalIdField('hotel', ({ id }: HotelExtendedType): string => id),
 
     originalId: {
       description:
@@ -34,38 +32,37 @@ export default new GraphQLObjectType({
       deprecationReason:
         'Use field "id" instead. This field is used only because of compatibility reasons with old APIs.',
       type: GraphQLString,
-      resolve: ({ id }: HotelType): string => id,
+      resolve: ({ id }: HotelExtendedType): string => id,
     },
 
     name: {
       description: 'Name of the hotel.',
       type: GraphQLString,
-      resolve: ({ name }: HotelType) => name,
+      resolve: ({ name }: HotelExtendedType) => name,
     },
 
     cityName: {
       type: GraphQLString,
-      resolve: ({ cityName }: HotelType) => cityName,
+      resolve: ({ cityName }: HotelExtendedType) => cityName,
     },
 
     whitelabelUrl: {
       description: 'URL to our whitelabel page of this hotel.',
       type: GraphQLString,
-      resolve: ({ whitelabelUrl }: HotelType) => whitelabelUrl,
+      resolve: ({ whitelabelUrl }: HotelExtendedType) => whitelabelUrl,
     },
 
     summary: {
       description: 'Main description (summary) of the hotel.',
       type: GraphQLString,
-      resolve: ({ summary }: HotelType) => summary,
+      resolve: ({ summary }: HotelExtendedType) => summary,
     },
 
     mainPhoto: {
       description: 'Main photo of the hotel.',
       type: GraphQLHotelPhoto,
-      resolve: async ({ id }: HotelType) => {
-        const allPhotos = await HotelPhotosDataloader.load(id);
-        return allPhotos[0]; // just the first one
+      resolve: async ({ photos }: HotelExtendedType) => {
+        return photos[0]; // just the first one
       },
     },
 
@@ -73,7 +70,7 @@ export default new GraphQLObjectType({
       description: 'Location of the hotel.',
       type: GraphQLCoordinates,
       resolve: async (
-        { id }: HotelType,
+        { id }: HotelExtendedType,
         args: Object,
         { dataLoader }: GraphqlContextType,
       ) => {
@@ -87,7 +84,7 @@ export default new GraphQLObjectType({
 
     address: {
       type: GraphQLAddress,
-      resolve: ({ address }: HotelType): Address => {
+      resolve: ({ address }: HotelExtendedType): Address => {
         return {
           street: address.street,
           city: address.city,
@@ -100,13 +97,13 @@ export default new GraphQLObjectType({
       // see: https://en.wikipedia.org/wiki/Hotel_rating
       description: 'The star rating of the hotel.',
       type: GraphQLHotelRating,
-      resolve: ({ rating }: HotelType) => rating,
+      resolve: ({ rating }: HotelExtendedType) => rating,
     },
 
     review: {
       description: 'Hotel review from hotel visitors.',
       type: GraphQLHotelReview,
-      resolve: ({ review }: HotelType): HotelReviewType => ({
+      resolve: ({ review }: HotelExtendedType): HotelReviewType => ({
         score: review.score,
         count: review.count,
         description: undefined, // we still do not have data
@@ -120,7 +117,7 @@ export default new GraphQLObjectType({
       }).connectionType,
       args: connectionArgs,
       resolve: async (
-        { id }: HotelType,
+        { id }: HotelExtendedType,
         args: Object,
         { dataLoader }: GraphqlContextType,
       ) => {
@@ -135,15 +132,8 @@ export default new GraphQLObjectType({
         nodeType: GraphQLHotelRoom,
       }).connectionType,
       args: connectionArgs,
-      resolve: async (
-        { id }: HotelType,
-        args: Object,
-        { dataLoader }: GraphqlContextType,
-      ) => {
-        return connectionFromPromisedArray(
-          dataLoader.hotel.room.loadAll([id]),
-          args,
-        );
+      resolve: async ({ rooms }: HotelExtendedType, args: Object) => {
+        return connectionFromArray(rooms, args);
       },
     },
 
@@ -153,11 +143,8 @@ export default new GraphQLObjectType({
         nodeType: GraphQLHotelPhoto,
       }).connectionType,
       args: connectionArgs,
-      resolve: async ({ id }: HotelType, args: Object) => {
-        return connectionFromPromisedArray(
-          HotelPhotosDataloader.load(id),
-          args,
-        );
+      resolve: async ({ photos }: HotelExtendedType, args: Object) => {
+        return connectionFromArray(photos, args);
       },
     },
   },

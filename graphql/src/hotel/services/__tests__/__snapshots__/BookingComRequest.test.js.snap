@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GET request in production sets authorization header 1`] = `
+Object {
+  "options": Object {
+    "headers": Object {
+      "authorization": "booking_com_token",
+    },
+    "method": "GET",
+  },
+  "url": "https://path/to/api",
+}
+`;
