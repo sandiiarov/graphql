@@ -422,15 +422,11 @@
             "args": [
               {
                 "name": "prefix",
-                "description": "First few letters. Note that search doesn't work with prefix shorter than 3 characters.",
+                "description": "First few letters.",
                 "type": {
-                  "kind": "NON_NULL",
-                  "name": null,
-                  "ofType": {
-                    "kind": "SCALAR",
-                    "name": "String",
-                    "ofType": null
-                  }
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
                 },
                 "defaultValue": null
               },

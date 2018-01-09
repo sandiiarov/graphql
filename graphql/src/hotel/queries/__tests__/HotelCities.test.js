@@ -1,10 +1,11 @@
 // @flow
 
-import { graphql, RestApiMock } from '../../../common/services/TestingTools';
+import AlgoliaMock from 'algoliasearch';
+import { graphql } from '../../../common/services/TestingTools';
 
-// keep the URL hardcoded here so we will know if it changed unintentionally
-const baseUrl = 'https://hotels-api.skypicker.com/api/cities?prefix=';
-const validResponse = [
+jest.mock('algoliasearch');
+
+const matchingCities = [
   {
     location: {
       longitude: '4.97104',
@@ -24,12 +25,13 @@ const validResponse = [
 ];
 
 describe('hotel cities query', () => {
-  it('throws error for too short prefix', async () => {
+  it('works with empty string prefix', async () => {
+    AlgoliaMock.setMatchedCities(matchingCities);
     expect(
       await graphql(
         `
           {
-            hotelCities(prefix: "ab") {
+            hotelCities {
               edges {
                 node {
                   id
@@ -43,7 +45,7 @@ describe('hotel cities query', () => {
   });
 
   it('works for normal request', async () => {
-    RestApiMock.onGet(`${baseUrl}abc`).replyWithData(validResponse);
+    AlgoliaMock.setMatchedCities(matchingCities, 'abc');
     expect(
       await graphql(
         `
@@ -68,7 +70,7 @@ describe('hotel cities query', () => {
   });
 
   it('works with empty response', async () => {
-    RestApiMock.onGet(`${baseUrl}abcd`).replyWithData([]);
+    AlgoliaMock.setMatchedCities([], 'abcd');
     expect(
       await graphql(
         `
