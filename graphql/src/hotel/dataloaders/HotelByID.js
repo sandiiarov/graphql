@@ -51,10 +51,7 @@ function sanitizeHotels(hotels): ExtendedHotelType[] {
         city: hotel.city,
         zip: hotel.zip,
       },
-      summary: hotel.descriptions.find(
-        // no docs but according to the Booking.com type "6" is called summary
-        description => description.descriptiontype_id === '6',
-      ).description,
+      summary: sanitizeHotelDescription(hotel.descriptions),
       // + ExtendedHotelType:
       facilities: sanitizeHotelFacilities(hotel.facilities),
       photos: sanitizeHotelPhotos(hotel.photos),
@@ -64,6 +61,19 @@ function sanitizeHotels(hotels): ExtendedHotelType[] {
       },
     };
   });
+}
+
+export function sanitizeHotelDescription(
+  descriptions: Array<{|
+    descriptiontype_id: string,
+    description: string,
+  |}>,
+): string | null {
+  const summary = descriptions.find(
+    // no docs but according to the Booking.com type "6" is called summary
+    description => description.descriptiontype_id === '6',
+  );
+  return summary ? summary.description : null;
 }
 
 export type HotelFacilityType = {|
