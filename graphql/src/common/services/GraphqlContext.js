@@ -18,6 +18,7 @@ import HotelByID from '../../hotel/dataloaders/HotelByID';
 import HotelCities from '../../hotel/dataloaders/HotelCities';
 import HotelRoomsLoader from '../../hotel/dataloaders/HotelRooms';
 import HotelRoomAvailabilityLoader from '../../hotel/dataloaders/HotelRoomAvailability';
+import HotelRoomBeddingLoader from '../../hotel/dataloaders/RoomBedding';
 
 import type { Booking } from '../../booking/Booking';
 import type { Airline } from '../../flight/Flight';
@@ -46,6 +47,7 @@ export type GraphqlContextType = {|
       cities: DataLoader<string, HotelCity[]>,
       room: HotelRoomsLoader,
       roomAvailability: HotelRoomAvailabilityLoader,
+      roomBedding: typeof HotelRoomBeddingLoader,
     },
   |},
   options: OptionsStorage,
@@ -75,6 +77,7 @@ export function createContext(token: ?string): GraphqlContextType {
         cities: HotelCities,
         room: new HotelRoomsLoader(),
         roomAvailability: new HotelRoomAvailabilityLoader(),
+        roomBedding: HotelRoomBeddingLoader,
       },
     },
     options: new OptionsStorage(),

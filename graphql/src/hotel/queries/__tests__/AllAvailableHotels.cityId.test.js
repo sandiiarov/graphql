@@ -1,11 +1,14 @@
 // @flow
 
-import { graphql, RestApiMock } from '../../../common/services/TestingTools';
+import {
+  graphql,
+  BookingComApiMock,
+} from '../../../common/services/TestingTools';
 import AllHotelsDataset from '../../datasets/all.json';
 
 beforeEach(() => {
-  RestApiMock.onGet(
-    'https://hotels-api.skypicker.com/api/hotels?output=hotel_details&city_ids=-2140205&checkin=2017-11-16&checkout=2017-11-23&room1=A',
+  BookingComApiMock.onGet(
+    'https://distribution-xml.booking.com/2.0/json/hotelAvailability?extras=hotel_details&city_ids=-2140205&checkin=2017-11-16&checkout=2017-11-23&room1=A',
   ).replyWithData(AllHotelsDataset);
 });
 

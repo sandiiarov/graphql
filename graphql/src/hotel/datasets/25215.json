@@ -1,133 +1,1954 @@
-[
-  {
-    "countrycode": "it",
-    "maxrate": "262",
-    "max_persons_in_reservation": "0",
-    "book_domestic_without_cc_details": "0",
-    "hoteltype_id": "14",
-    "commission": "0",
-    "preferred": "1",
-    "class": "4",
-    "district": "",
-    "is_closed": "0",
-    "hotel_id": "25215",
-    "minrate": "48.6",
-    "currencycode": "EUR",
-    "name": "Italiana Hotels Milan Rho Fair",
-    "zip": "20017",
-    "creditcard_required": "1",
-    "languagecode": "en",
-    "class_is_estimated": "0",
-    "contractchain_id": "0",
-    "city": "Rho",
-    "max_rooms_in_reservation": "0",
-    "exact_class": "4.0",
-    "pagename": "holiday-inn-milan-rho-fair",
-    "nr_rooms": "135",
-    "url": "https://www.booking.com/hotel/it/holiday-inn-milan-rho-fair.html",
-    "direct_payment": "1",
-    "created": "2008-12-19 09:09:24",
-    "city_id": "-126278",
-    "address": "Via Alessandro Volta S/N",
-    "review_score": "8.3",
-    "review_nr": "2405",
-    "facilities": [
-      {
-        "name": "Restaurant",
-        "languagecode": "en",
-        "hotelfacilitytype_id": "3",
-        "type": "boolean",
-        "facilitytype_id": "7",
-        "hotel_id": "25215"
-      },
-      {
-        "name": "Room service",
-        "hotelfacilitytype_id": "5",
-        "type": "boolean",
-        "facilitytype_id": "7",
-        "languagecode": "en",
-        "hotel_id": "25215"
-      },
-      {
-        "name": "Meeting/banquet facilities",
-        "languagecode": "en",
-        "type": "free_or_paid",
-        "facilitytype_id": "27",
-        "hotelfacilitytype_id": "6",
-        "hotel_id": "25215"
-      }
-    ],
-    "rooms": [
-      {
-        "bookable": "1",
-        "max_persons": "2",
-        "roomtype": "Double",
-        "min_price": "0",
-        "max_price": "0",
-        "hotel_id": "25215",
-        "room_id": "2521507",
-        "roomtype_id": "9",
-        "ranking": "6",
-        "bedding": [
+{
+  "result": [
+    {
+      "hotel_data": {
+        "creditcard_required": true,
+        "address": "Via Alessandro Volta S/N",
+        "location": { "latitude": 45.52403, "longitude": 9.03759 },
+        "hotel_important_information":
+          "Restaurant might not be available if already booked for a private party. Please note, the shuttle is subject to availability and must be booked in advance.",
+        "class": 4,
+        "city_id": -126278,
+        "book_domestic_without_cc_details": false,
+        "spoken_languages": ["it", "fr", "en"],
+        "payment_details": [
           {
-            "type": "Extra-large double bed(s) (Super-king size)",
-            "amount": "1"
-          }
-        ]
-      },
-      {
-        "roomtype_id": "8",
-        "ranking": "3",
-        "roomtype": "Twin",
-        "min_price": "53.1",
-        "bookable": "1",
-        "max_persons": "2",
-        "max_price": "262",
-        "hotel_id": "25215",
-        "room_id": "2521509",
-        "bedding": [
+            "payable": true,
+            "cvc_required": false,
+            "bookable": true,
+            "payment_id": 3
+          },
           {
-            "amount": "2",
-            "type": "Single bed(s)"
+            "cvc_required": false,
+            "payment_id": 21,
+            "bookable": false,
+            "payable": true
+          },
+          {
+            "payable": true,
+            "cvc_required": false,
+            "payment_id": 1,
+            "bookable": true
+          },
+          {
+            "cvc_required": false,
+            "bookable": true,
+            "payment_id": 2,
+            "payable": true
+          },
+          {
+            "payable": true,
+            "bookable": false,
+            "cvc_required": false,
+            "payment_id": 8
+          },
+          {
+            "cvc_required": false,
+            "payment_id": 5,
+            "bookable": true,
+            "payable": true
+          },
+          {
+            "payable": true,
+            "cvc_required": false,
+            "payment_id": 10,
+            "bookable": false
           }
-        ]
-      }
-    ],
-    "descriptions": [
-      {
-        "description": "Italiana Hotels Milan Rho Fair is set in a renovated cotton mill from the early 20th century, 10 minutes' drive from RhoFiera Milano exhibition centre. It offers air-conditioned rooms, free WiFi throughout, and a small gym with sauna and Turkish bath.\n\nThis Italiana hotel features elegant rooms with parquet floors and a flat-screen TV with satellite channels. Some rooms feature tea and coffee making facilities, and luxury toiletries. Some also have a private terrace.\n\nOn the top floor you will find the hotel's trendy Club 1902 bar, and the La Fabbrica del Cotone restaurant, both with panoramic views. The restaurant serves Mediterranean and Milanese specialities prepared by the chef each day.\n\nDuring major events, a free shuttle is offered to/from RhoFiera Milano exhibition centre. The property is 500 metres from Rho Train Station. From there, you can reach the EXPO 2015 exhibition centre in 4 minutes.",
-        "hotel_id": "25215",
-        "languagecode": "en",
-        "descriptiontype_id": "6"
+        ],
+        "review_score": 8.3,
+        "url":
+          "https://www.booking.com/hotel/it/holiday-inn-milan-rho-fair.html",
+        "name": "Italiana Hotels Milan Rho Fair",
+        "default_language": "en",
+        "max_persons_in_reservation": 0,
+        "hotel_photos": [
+          {
+            "main_photo": true,
+            "url_max300":
+              "https://aff.bstatic.com/images/hotel/max300/740/74030690.jpg",
+            "url_square60":
+              "https://aff.bstatic.com/images/hotel/square60/740/74030690.jpg",
+            "url_original":
+              "https://aff.bstatic.com/images/hotel/max500/740/74030690.jpg"
+          },
+          {
+            "url_square60":
+              "https://aff.bstatic.com/images/hotel/square60/681/68146841.jpg",
+            "url_max300":
+              "https://aff.bstatic.com/images/hotel/max300/681/68146841.jpg",
+            "url_original":
+              "https://aff.bstatic.com/images/hotel/max500/681/68146841.jpg"
+          },
+          {
+            "url_square60":
+              "https://aff.bstatic.com/images/hotel/square60/740/74030512.jpg",
+            "url_max300":
+              "https://aff.bstatic.com/images/hotel/max300/740/74030512.jpg",
+            "url_original":
+              "https://aff.bstatic.com/images/hotel/max500/740/74030512.jpg"
+          },
+          {
+            "url_original":
+              "https://aff.bstatic.com/images/hotel/max500/740/74030551.jpg",
+            "url_max300":
+              "https://aff.bstatic.com/images/hotel/max300/740/74030551.jpg",
+            "url_square60":
+              "https://aff.bstatic.com/images/hotel/square60/740/74030551.jpg"
+          },
+          {
+            "url_original":
+              "https://aff.bstatic.com/images/hotel/max500/681/68146839.jpg",
+            "url_square60":
+              "https://aff.bstatic.com/images/hotel/square60/681/68146839.jpg",
+            "url_max300":
+              "https://aff.bstatic.com/images/hotel/max300/681/68146839.jpg"
+          },
+          {
+            "url_original":
+              "https://aff.bstatic.com/images/hotel/max500/740/74030629.jpg",
+            "url_max300":
+              "https://aff.bstatic.com/images/hotel/max300/740/74030629.jpg",
+            "url_square60":
+              "https://aff.bstatic.com/images/hotel/square60/740/74030629.jpg"
+          },
+          {
+            "url_max300":
+              "https://aff.bstatic.com/images/hotel/max300/740/74030555.jpg",
+            "url_square60":
+              "https://aff.bstatic.com/images/hotel/square60/740/74030555.jpg",
+            "url_original":
+              "https://aff.bstatic.com/images/hotel/max500/740/74030555.jpg"
+          },
+          {
+            "url_square60":
+              "https://aff.bstatic.com/images/hotel/square60/740/74030651.jpg",
+            "url_max300":
+              "https://aff.bstatic.com/images/hotel/max300/740/74030651.jpg",
+            "url_original":
+              "https://aff.bstatic.com/images/hotel/max500/740/74030651.jpg"
+          },
+          {
+            "url_square60":
+              "https://aff.bstatic.com/images/hotel/square60/740/74030525.jpg",
+            "url_max300":
+              "https://aff.bstatic.com/images/hotel/max300/740/74030525.jpg",
+            "url_original":
+              "https://aff.bstatic.com/images/hotel/max500/740/74030525.jpg"
+          },
+          {
+            "url_max300":
+              "https://aff.bstatic.com/images/hotel/max300/740/74030445.jpg",
+            "url_square60":
+              "https://aff.bstatic.com/images/hotel/square60/740/74030445.jpg",
+            "url_original":
+              "https://aff.bstatic.com/images/hotel/max500/740/74030445.jpg"
+          },
+          {
+            "url_max300":
+              "https://aff.bstatic.com/images/hotel/max300/740/74030470.jpg",
+            "url_square60":
+              "https://aff.bstatic.com/images/hotel/square60/740/74030470.jpg",
+            "url_original":
+              "https://aff.bstatic.com/images/hotel/max500/740/74030470.jpg"
+          },
+          {
+            "url_max300":
+              "https://aff.bstatic.com/images/hotel/max300/740/74030669.jpg",
+            "url_square60":
+              "https://aff.bstatic.com/images/hotel/square60/740/74030669.jpg",
+            "url_original":
+              "https://aff.bstatic.com/images/hotel/max500/740/74030669.jpg"
+          },
+          {
+            "url_square60":
+              "https://aff.bstatic.com/images/hotel/square60/684/68422590.jpg",
+            "url_max300":
+              "https://aff.bstatic.com/images/hotel/max300/684/68422590.jpg",
+            "url_original":
+              "https://aff.bstatic.com/images/hotel/max500/684/68422590.jpg"
+          },
+          {
+            "url_max300":
+              "https://aff.bstatic.com/images/hotel/max300/667/66705537.jpg",
+            "url_square60":
+              "https://aff.bstatic.com/images/hotel/square60/667/66705537.jpg",
+            "url_original":
+              "https://aff.bstatic.com/images/hotel/max500/667/66705537.jpg"
+          },
+          {
+            "url_original":
+              "https://aff.bstatic.com/images/hotel/max500/740/74030464.jpg",
+            "url_max300":
+              "https://aff.bstatic.com/images/hotel/max300/740/74030464.jpg",
+            "url_square60":
+              "https://aff.bstatic.com/images/hotel/square60/740/74030464.jpg"
+          },
+          {
+            "url_original":
+              "https://aff.bstatic.com/images/hotel/max500/740/74030442.jpg",
+            "url_max300":
+              "https://aff.bstatic.com/images/hotel/max300/740/74030442.jpg",
+            "url_square60":
+              "https://aff.bstatic.com/images/hotel/square60/740/74030442.jpg"
+          },
+          {
+            "url_original":
+              "https://aff.bstatic.com/images/hotel/max500/681/68146856.jpg",
+            "url_square60":
+              "https://aff.bstatic.com/images/hotel/square60/681/68146856.jpg",
+            "url_max300":
+              "https://aff.bstatic.com/images/hotel/max300/681/68146856.jpg"
+          },
+          {
+            "url_original":
+              "https://aff.bstatic.com/images/hotel/max500/740/74030648.jpg",
+            "url_max300":
+              "https://aff.bstatic.com/images/hotel/max300/740/74030648.jpg",
+            "url_square60":
+              "https://aff.bstatic.com/images/hotel/square60/740/74030648.jpg"
+          },
+          {
+            "url_original":
+              "https://aff.bstatic.com/images/hotel/max500/740/74030685.jpg",
+            "url_max300":
+              "https://aff.bstatic.com/images/hotel/max300/740/74030685.jpg",
+            "url_square60":
+              "https://aff.bstatic.com/images/hotel/square60/740/74030685.jpg"
+          },
+          {
+            "url_original":
+              "https://aff.bstatic.com/images/hotel/max500/681/68146877.jpg",
+            "url_max300":
+              "https://aff.bstatic.com/images/hotel/max300/681/68146877.jpg",
+            "url_square60":
+              "https://aff.bstatic.com/images/hotel/square60/681/68146877.jpg"
+          },
+          {
+            "url_max300":
+              "https://aff.bstatic.com/images/hotel/max300/647/64726429.jpg",
+            "url_square60":
+              "https://aff.bstatic.com/images/hotel/square60/647/64726429.jpg",
+            "url_original":
+              "https://aff.bstatic.com/images/hotel/max500/647/64726429.jpg"
+          },
+          {
+            "url_square60":
+              "https://aff.bstatic.com/images/hotel/square60/740/74030508.jpg",
+            "url_max300":
+              "https://aff.bstatic.com/images/hotel/max300/740/74030508.jpg",
+            "url_original":
+              "https://aff.bstatic.com/images/hotel/max500/740/74030508.jpg"
+          },
+          {
+            "url_max300":
+              "https://aff.bstatic.com/images/hotel/max300/681/68146880.jpg",
+            "url_square60":
+              "https://aff.bstatic.com/images/hotel/square60/681/68146880.jpg",
+            "url_original":
+              "https://aff.bstatic.com/images/hotel/max500/681/68146880.jpg"
+          },
+          {
+            "url_max300":
+              "https://aff.bstatic.com/images/hotel/max300/740/74030437.jpg",
+            "url_square60":
+              "https://aff.bstatic.com/images/hotel/square60/740/74030437.jpg",
+            "url_original":
+              "https://aff.bstatic.com/images/hotel/max500/740/74030437.jpg"
+          },
+          {
+            "url_original":
+              "https://aff.bstatic.com/images/hotel/max500/740/74030440.jpg",
+            "url_max300":
+              "https://aff.bstatic.com/images/hotel/max300/740/74030440.jpg",
+            "url_square60":
+              "https://aff.bstatic.com/images/hotel/square60/740/74030440.jpg"
+          },
+          {
+            "url_max300":
+              "https://aff.bstatic.com/images/hotel/max300/740/74030441.jpg",
+            "url_square60":
+              "https://aff.bstatic.com/images/hotel/square60/740/74030441.jpg",
+            "url_original":
+              "https://aff.bstatic.com/images/hotel/max500/740/74030441.jpg"
+          },
+          {
+            "url_square60":
+              "https://aff.bstatic.com/images/hotel/square60/740/74030499.jpg",
+            "url_max300":
+              "https://aff.bstatic.com/images/hotel/max300/740/74030499.jpg",
+            "url_original":
+              "https://aff.bstatic.com/images/hotel/max500/740/74030499.jpg"
+          },
+          {
+            "url_original":
+              "https://aff.bstatic.com/images/hotel/max500/740/74030468.jpg",
+            "url_max300":
+              "https://aff.bstatic.com/images/hotel/max300/740/74030468.jpg",
+            "url_square60":
+              "https://aff.bstatic.com/images/hotel/square60/740/74030468.jpg"
+          },
+          {
+            "url_original":
+              "https://aff.bstatic.com/images/hotel/max500/740/74030471.jpg",
+            "url_max300":
+              "https://aff.bstatic.com/images/hotel/max300/740/74030471.jpg",
+            "url_square60":
+              "https://aff.bstatic.com/images/hotel/square60/740/74030471.jpg"
+          },
+          {
+            "url_original":
+              "https://aff.bstatic.com/images/hotel/max500/740/74030487.jpg",
+            "url_max300":
+              "https://aff.bstatic.com/images/hotel/max300/740/74030487.jpg",
+            "url_square60":
+              "https://aff.bstatic.com/images/hotel/square60/740/74030487.jpg"
+          },
+          {
+            "url_square60":
+              "https://aff.bstatic.com/images/hotel/square60/740/74030472.jpg",
+            "url_max300":
+              "https://aff.bstatic.com/images/hotel/max300/740/74030472.jpg",
+            "url_original":
+              "https://aff.bstatic.com/images/hotel/max500/740/74030472.jpg"
+          },
+          {
+            "url_square60":
+              "https://aff.bstatic.com/images/hotel/square60/740/74030474.jpg",
+            "url_max300":
+              "https://aff.bstatic.com/images/hotel/max300/740/74030474.jpg",
+            "url_original":
+              "https://aff.bstatic.com/images/hotel/max500/740/74030474.jpg"
+          },
+          {
+            "url_max300":
+              "https://aff.bstatic.com/images/hotel/max300/740/74030481.jpg",
+            "url_square60":
+              "https://aff.bstatic.com/images/hotel/square60/740/74030481.jpg",
+            "url_original":
+              "https://aff.bstatic.com/images/hotel/max500/740/74030481.jpg"
+          },
+          {
+            "url_square60":
+              "https://aff.bstatic.com/images/hotel/square60/740/74030485.jpg",
+            "url_max300":
+              "https://aff.bstatic.com/images/hotel/max300/740/74030485.jpg",
+            "url_original":
+              "https://aff.bstatic.com/images/hotel/max500/740/74030485.jpg"
+          },
+          {
+            "url_max300":
+              "https://aff.bstatic.com/images/hotel/max300/740/74030694.jpg",
+            "url_square60":
+              "https://aff.bstatic.com/images/hotel/square60/740/74030694.jpg",
+            "url_original":
+              "https://aff.bstatic.com/images/hotel/max500/740/74030694.jpg"
+          },
+          {
+            "url_original":
+              "https://aff.bstatic.com/images/hotel/max500/740/74030491.jpg",
+            "url_square60":
+              "https://aff.bstatic.com/images/hotel/square60/740/74030491.jpg",
+            "url_max300":
+              "https://aff.bstatic.com/images/hotel/max300/740/74030491.jpg"
+          },
+          {
+            "url_original":
+              "https://aff.bstatic.com/images/hotel/max500/740/74030486.jpg",
+            "url_square60":
+              "https://aff.bstatic.com/images/hotel/square60/740/74030486.jpg",
+            "url_max300":
+              "https://aff.bstatic.com/images/hotel/max300/740/74030486.jpg"
+          },
+          {
+            "url_square60":
+              "https://aff.bstatic.com/images/hotel/square60/740/74030488.jpg",
+            "url_max300":
+              "https://aff.bstatic.com/images/hotel/max300/740/74030488.jpg",
+            "url_original":
+              "https://aff.bstatic.com/images/hotel/max500/740/74030488.jpg"
+          },
+          {
+            "url_square60":
+              "https://aff.bstatic.com/images/hotel/square60/740/74030489.jpg",
+            "url_max300":
+              "https://aff.bstatic.com/images/hotel/max300/740/74030489.jpg",
+            "url_original":
+              "https://aff.bstatic.com/images/hotel/max500/740/74030489.jpg"
+          },
+          {
+            "url_original":
+              "https://aff.bstatic.com/images/hotel/max500/740/74030561.jpg",
+            "url_square60":
+              "https://aff.bstatic.com/images/hotel/square60/740/74030561.jpg",
+            "url_max300":
+              "https://aff.bstatic.com/images/hotel/max300/740/74030561.jpg"
+          },
+          {
+            "url_original":
+              "https://aff.bstatic.com/images/hotel/max500/740/74030671.jpg",
+            "url_max300":
+              "https://aff.bstatic.com/images/hotel/max300/740/74030671.jpg",
+            "url_square60":
+              "https://aff.bstatic.com/images/hotel/square60/740/74030671.jpg"
+          },
+          {
+            "url_original":
+              "https://aff.bstatic.com/images/hotel/max500/740/74030513.jpg",
+            "url_max300":
+              "https://aff.bstatic.com/images/hotel/max300/740/74030513.jpg",
+            "url_square60":
+              "https://aff.bstatic.com/images/hotel/square60/740/74030513.jpg"
+          },
+          {
+            "url_original":
+              "https://aff.bstatic.com/images/hotel/max500/740/74030517.jpg",
+            "url_max300":
+              "https://aff.bstatic.com/images/hotel/max300/740/74030517.jpg",
+            "url_square60":
+              "https://aff.bstatic.com/images/hotel/square60/740/74030517.jpg"
+          },
+          {
+            "url_square60":
+              "https://aff.bstatic.com/images/hotel/square60/740/74030518.jpg",
+            "url_max300":
+              "https://aff.bstatic.com/images/hotel/max300/740/74030518.jpg",
+            "url_original":
+              "https://aff.bstatic.com/images/hotel/max500/740/74030518.jpg"
+          },
+          {
+            "url_max300":
+              "https://aff.bstatic.com/images/hotel/max300/740/74030547.jpg",
+            "url_square60":
+              "https://aff.bstatic.com/images/hotel/square60/740/74030547.jpg",
+            "url_original":
+              "https://aff.bstatic.com/images/hotel/max500/740/74030547.jpg"
+          },
+          {
+            "url_original":
+              "https://aff.bstatic.com/images/hotel/max500/740/74030549.jpg",
+            "url_max300":
+              "https://aff.bstatic.com/images/hotel/max300/740/74030549.jpg",
+            "url_square60":
+              "https://aff.bstatic.com/images/hotel/square60/740/74030549.jpg"
+          },
+          {
+            "url_max300":
+              "https://aff.bstatic.com/images/hotel/max300/740/74030660.jpg",
+            "url_square60":
+              "https://aff.bstatic.com/images/hotel/square60/740/74030660.jpg",
+            "url_original":
+              "https://aff.bstatic.com/images/hotel/max500/740/74030660.jpg"
+          },
+          {
+            "url_original":
+              "https://aff.bstatic.com/images/hotel/max500/740/74030556.jpg",
+            "url_square60":
+              "https://aff.bstatic.com/images/hotel/square60/740/74030556.jpg",
+            "url_max300":
+              "https://aff.bstatic.com/images/hotel/max300/740/74030556.jpg"
+          },
+          {
+            "url_square60":
+              "https://aff.bstatic.com/images/hotel/square60/740/74030558.jpg",
+            "url_max300":
+              "https://aff.bstatic.com/images/hotel/max300/740/74030558.jpg",
+            "url_original":
+              "https://aff.bstatic.com/images/hotel/max500/740/74030558.jpg"
+          },
+          {
+            "url_max300":
+              "https://aff.bstatic.com/images/hotel/max300/740/74030559.jpg",
+            "url_square60":
+              "https://aff.bstatic.com/images/hotel/square60/740/74030559.jpg",
+            "url_original":
+              "https://aff.bstatic.com/images/hotel/max500/740/74030559.jpg"
+          },
+          {
+            "url_original":
+              "https://aff.bstatic.com/images/hotel/max500/740/74030572.jpg",
+            "url_max300":
+              "https://aff.bstatic.com/images/hotel/max300/740/74030572.jpg",
+            "url_square60":
+              "https://aff.bstatic.com/images/hotel/square60/740/74030572.jpg"
+          },
+          {
+            "url_original":
+              "https://aff.bstatic.com/images/hotel/max500/740/74030573.jpg",
+            "url_max300":
+              "https://aff.bstatic.com/images/hotel/max300/740/74030573.jpg",
+            "url_square60":
+              "https://aff.bstatic.com/images/hotel/square60/740/74030573.jpg"
+          },
+          {
+            "url_square60":
+              "https://aff.bstatic.com/images/hotel/square60/740/74030575.jpg",
+            "url_max300":
+              "https://aff.bstatic.com/images/hotel/max300/740/74030575.jpg",
+            "url_original":
+              "https://aff.bstatic.com/images/hotel/max500/740/74030575.jpg"
+          },
+          {
+            "url_square60":
+              "https://aff.bstatic.com/images/hotel/square60/740/74030578.jpg",
+            "url_max300":
+              "https://aff.bstatic.com/images/hotel/max300/740/74030578.jpg",
+            "url_original":
+              "https://aff.bstatic.com/images/hotel/max500/740/74030578.jpg"
+          },
+          {
+            "url_max300":
+              "https://aff.bstatic.com/images/hotel/max300/740/74030579.jpg",
+            "url_square60":
+              "https://aff.bstatic.com/images/hotel/square60/740/74030579.jpg",
+            "url_original":
+              "https://aff.bstatic.com/images/hotel/max500/740/74030579.jpg"
+          },
+          {
+            "url_original":
+              "https://aff.bstatic.com/images/hotel/max500/740/74030580.jpg",
+            "url_max300":
+              "https://aff.bstatic.com/images/hotel/max300/740/74030580.jpg",
+            "url_square60":
+              "https://aff.bstatic.com/images/hotel/square60/740/74030580.jpg"
+          },
+          {
+            "url_original":
+              "https://aff.bstatic.com/images/hotel/max500/740/74030604.jpg",
+            "url_square60":
+              "https://aff.bstatic.com/images/hotel/square60/740/74030604.jpg",
+            "url_max300":
+              "https://aff.bstatic.com/images/hotel/max300/740/74030604.jpg"
+          },
+          {
+            "url_original":
+              "https://aff.bstatic.com/images/hotel/max500/740/74030609.jpg",
+            "url_square60":
+              "https://aff.bstatic.com/images/hotel/square60/740/74030609.jpg",
+            "url_max300":
+              "https://aff.bstatic.com/images/hotel/max300/740/74030609.jpg"
+          },
+          {
+            "url_max300":
+              "https://aff.bstatic.com/images/hotel/max300/740/74030612.jpg",
+            "url_square60":
+              "https://aff.bstatic.com/images/hotel/square60/740/74030612.jpg",
+            "url_original":
+              "https://aff.bstatic.com/images/hotel/max500/740/74030612.jpg"
+          },
+          {
+            "url_original":
+              "https://aff.bstatic.com/images/hotel/max500/681/68146835.jpg",
+            "url_max300":
+              "https://aff.bstatic.com/images/hotel/max300/681/68146835.jpg",
+            "url_square60":
+              "https://aff.bstatic.com/images/hotel/square60/681/68146835.jpg"
+          },
+          {
+            "url_original":
+              "https://aff.bstatic.com/images/hotel/max500/740/74030443.jpg",
+            "url_square60":
+              "https://aff.bstatic.com/images/hotel/square60/740/74030443.jpg",
+            "url_max300":
+              "https://aff.bstatic.com/images/hotel/max300/740/74030443.jpg"
+          },
+          {
+            "url_original":
+              "https://aff.bstatic.com/images/hotel/max500/740/74030615.jpg",
+            "url_square60":
+              "https://aff.bstatic.com/images/hotel/square60/740/74030615.jpg",
+            "url_max300":
+              "https://aff.bstatic.com/images/hotel/max300/740/74030615.jpg"
+          },
+          {
+            "url_square60":
+              "https://aff.bstatic.com/images/hotel/square60/684/68422574.jpg",
+            "url_max300":
+              "https://aff.bstatic.com/images/hotel/max300/684/68422574.jpg",
+            "url_original":
+              "https://aff.bstatic.com/images/hotel/max500/684/68422574.jpg"
+          },
+          {
+            "url_original":
+              "https://aff.bstatic.com/images/hotel/max500/740/74030619.jpg",
+            "url_square60":
+              "https://aff.bstatic.com/images/hotel/square60/740/74030619.jpg",
+            "url_max300":
+              "https://aff.bstatic.com/images/hotel/max300/740/74030619.jpg"
+          },
+          {
+            "url_max300":
+              "https://aff.bstatic.com/images/hotel/max300/740/74030622.jpg",
+            "url_square60":
+              "https://aff.bstatic.com/images/hotel/square60/740/74030622.jpg",
+            "url_original":
+              "https://aff.bstatic.com/images/hotel/max500/740/74030622.jpg"
+          },
+          {
+            "url_original":
+              "https://aff.bstatic.com/images/hotel/max500/740/74030633.jpg",
+            "url_max300":
+              "https://aff.bstatic.com/images/hotel/max300/740/74030633.jpg",
+            "url_square60":
+              "https://aff.bstatic.com/images/hotel/square60/740/74030633.jpg"
+          },
+          {
+            "url_max300":
+              "https://aff.bstatic.com/images/hotel/max300/740/74030637.jpg",
+            "url_square60":
+              "https://aff.bstatic.com/images/hotel/square60/740/74030637.jpg",
+            "url_original":
+              "https://aff.bstatic.com/images/hotel/max500/740/74030637.jpg"
+          },
+          {
+            "url_original":
+              "https://aff.bstatic.com/images/hotel/max500/740/74030643.jpg",
+            "url_square60":
+              "https://aff.bstatic.com/images/hotel/square60/740/74030643.jpg",
+            "url_max300":
+              "https://aff.bstatic.com/images/hotel/max300/740/74030643.jpg"
+          },
+          {
+            "url_square60":
+              "https://aff.bstatic.com/images/hotel/square60/740/74030644.jpg",
+            "url_max300":
+              "https://aff.bstatic.com/images/hotel/max300/740/74030644.jpg",
+            "url_original":
+              "https://aff.bstatic.com/images/hotel/max500/740/74030644.jpg"
+          },
+          {
+            "url_square60":
+              "https://aff.bstatic.com/images/hotel/square60/740/74030658.jpg",
+            "url_max300":
+              "https://aff.bstatic.com/images/hotel/max300/740/74030658.jpg",
+            "url_original":
+              "https://aff.bstatic.com/images/hotel/max500/740/74030658.jpg"
+          },
+          {
+            "url_original":
+              "https://aff.bstatic.com/images/hotel/max500/740/74030659.jpg",
+            "url_square60":
+              "https://aff.bstatic.com/images/hotel/square60/740/74030659.jpg",
+            "url_max300":
+              "https://aff.bstatic.com/images/hotel/max300/740/74030659.jpg"
+          },
+          {
+            "url_original":
+              "https://aff.bstatic.com/images/hotel/max500/740/74030662.jpg",
+            "url_max300":
+              "https://aff.bstatic.com/images/hotel/max300/740/74030662.jpg",
+            "url_square60":
+              "https://aff.bstatic.com/images/hotel/square60/740/74030662.jpg"
+          },
+          {
+            "url_max300":
+              "https://aff.bstatic.com/images/hotel/max300/740/74030681.jpg",
+            "url_square60":
+              "https://aff.bstatic.com/images/hotel/square60/740/74030681.jpg",
+            "url_original":
+              "https://aff.bstatic.com/images/hotel/max500/740/74030681.jpg"
+          },
+          {
+            "url_original":
+              "https://aff.bstatic.com/images/hotel/max500/740/74030688.jpg",
+            "url_square60":
+              "https://aff.bstatic.com/images/hotel/square60/740/74030688.jpg",
+            "url_max300":
+              "https://aff.bstatic.com/images/hotel/max300/740/74030688.jpg"
+          },
+          {
+            "url_original":
+              "https://aff.bstatic.com/images/hotel/max500/789/78908092.jpg",
+            "url_max300":
+              "https://aff.bstatic.com/images/hotel/max300/789/78908092.jpg",
+            "url_square60":
+              "https://aff.bstatic.com/images/hotel/square60/789/78908092.jpg"
+          },
+          {
+            "url_square60":
+              "https://aff.bstatic.com/images/hotel/square60/789/78908097.jpg",
+            "url_max300":
+              "https://aff.bstatic.com/images/hotel/max300/789/78908097.jpg",
+            "url_original":
+              "https://aff.bstatic.com/images/hotel/max500/789/78908097.jpg"
+          },
+          {
+            "url_original":
+              "https://aff.bstatic.com/images/hotel/max500/789/78908099.jpg",
+            "url_max300":
+              "https://aff.bstatic.com/images/hotel/max300/789/78908099.jpg",
+            "url_square60":
+              "https://aff.bstatic.com/images/hotel/square60/789/78908099.jpg"
+          },
+          {
+            "url_square60":
+              "https://aff.bstatic.com/images/hotel/square60/789/78908100.jpg",
+            "url_max300":
+              "https://aff.bstatic.com/images/hotel/max300/789/78908100.jpg",
+            "url_original":
+              "https://aff.bstatic.com/images/hotel/max500/789/78908100.jpg"
+          },
+          {
+            "url_original":
+              "https://aff.bstatic.com/images/hotel/max500/789/78911303.jpg",
+            "url_square60":
+              "https://aff.bstatic.com/images/hotel/square60/789/78911303.jpg",
+            "url_max300":
+              "https://aff.bstatic.com/images/hotel/max300/789/78911303.jpg"
+          }
+        ],
+        "preferred": true,
+        "district_id": null,
+        "city": "Rho",
+        "hotelier_welcome_message":
+          "Opened in 1902 as a cotton factory, the building was completely renovated to allow the opening of the Hotel in 2009.\nThe retro style that distinguishes the hotel externally has been maintained and has been combined with modern interior.",
+        "ranking": 2751006,
+        "number_of_reviews": 2405,
+        "hotel_facilities": [
+          { "name": "Parking", "hotel_facility_type_id": 2 },
+          { "name": "Restaurant", "hotel_facility_type_id": 3 },
+          { "name": "Pets allowed", "hotel_facility_type_id": 4 },
+          { "name": "Room service", "hotel_facility_type_id": 5 },
+          { "hotel_facility_type_id": 6, "name": "Meeting/banquet facilities" },
+          { "hotel_facility_type_id": 7, "name": "Bar" },
+          { "hotel_facility_type_id": 8, "name": "24-hour front desk" },
+          { "name": "Sauna", "hotel_facility_type_id": 10 },
+          { "name": "Fitness centre", "hotel_facility_type_id": 11 },
+          { "hotel_facility_type_id": 15, "name": "Terrace" },
+          { "name": "Non-smoking rooms", "hotel_facility_type_id": 16 },
+          { "hotel_facility_type_id": 20, "name": "Business centre" },
+          {
+            "hotel_facility_type_id": 21,
+            "name": "Babysitting/child services",
+            "attrs": ["paid"]
+          },
+          {
+            "hotel_facility_type_id": 22,
+            "attrs": ["paid"],
+            "name": "Laundry"
+          },
+          {
+            "name": "Dry cleaning",
+            "attrs": ["paid"],
+            "hotel_facility_type_id": 23
+          },
+          {
+            "name": "Facilities for disabled guests",
+            "hotel_facility_type_id": 25
+          },
+          { "hotel_facility_type_id": 28, "name": "Family rooms" },
+          { "name": "VIP room facilities", "hotel_facility_type_id": 41 },
+          { "name": "Breakfast in the room", "hotel_facility_type_id": 43 },
+          { "name": "Ironing service", "hotel_facility_type_id": 44 },
+          { "name": "Free parking", "hotel_facility_type_id": 46 },
+          { "hotel_facility_type_id": 47, "name": "Internet services" },
+          { "name": "Lift", "hotel_facility_type_id": 48 },
+          { "hotel_facility_type_id": 51, "name": "Safety deposit box" },
+          { "name": "Soundproof rooms", "hotel_facility_type_id": 64 },
+          { "name": "Library", "hotel_facility_type_id": 66 },
+          { "hotel_facility_type_id": 73, "name": "Packed lunches" },
+          { "name": "Hammam", "hotel_facility_type_id": 79 },
+          { "name": "Heating", "hotel_facility_type_id": 80 },
+          {
+            "attrs": ["paid"],
+            "name": "Fax/photocopying",
+            "hotel_facility_type_id": 81
+          },
+          { "name": "Luggage storage", "hotel_facility_type_id": 91 },
+          { "name": "WiFi", "hotel_facility_type_id": 96 },
+          { "hotel_facility_type_id": 107, "name": "Free WiFi" },
+          { "hotel_facility_type_id": 109, "name": "Air conditioning" },
+          { "hotel_facility_type_id": 115, "name": "Restaurant (à la carte)" },
+          { "name": "Snack bar", "hotel_facility_type_id": 117 },
+          {
+            "hotel_facility_type_id": 129,
+            "name": "Shuttle service (additional charge)"
+          },
+          {
+            "name": "Special diet menus (on request)",
+            "hotel_facility_type_id": 133
+          },
+          { "name": "Daily maid service", "hotel_facility_type_id": 158 },
+          {
+            "hotel_facility_type_id": 163,
+            "name": "WiFi available in all areas"
+          },
+          {
+            "hotel_facility_type_id": 176,
+            "name": "Kid meals",
+            "attrs": ["paid"]
+          },
+          {
+            "hotel_facility_type_id": 182,
+            "name": "Electric vehicle charging station"
+          }
+        ],
+        "checkin_checkout_times": {
+          "checkin_from": "14:00",
+          "checkout_to": "12:00",
+          "checkout_from": "",
+          "checkin_to": ""
+        },
+        "max_rooms_in_reservation": 0,
+        "hotel_type_id": 204,
+        "exact_class": 4,
+        "country": "it",
+        "zip": "20017",
+        "deep_link_url": "booking://hotel/25215?affiliate_id=334345",
+        "class_is_estimated": false,
+        "hotel_description":
+          "Italiana Hotels Milan Rho Fair is set in a renovated cotton mill from the early 20th century, 10 minutes' drive from RhoFiera Milano exhibition centre. It offers air-conditioned rooms, free WiFi throughout, and a small gym with sauna and Turkish bath. This Italiana hotel features elegant rooms with parquet floors and a flat-screen TV with satellite channels. Some rooms feature tea and coffee making facilities, and luxury toiletries. Some also have a private terrace. On the top floor you will find the hotel's trendy Club 1902 bar, and the La Fabbrica del Cotone restaurant, both with panoramic views. The restaurant serves Mediterranean and Milanese specialities prepared by the chef each day. During major events, a free shuttle is offered to/from RhoFiera Milano exhibition centre. The property is 500 metres from Rho Train Station. From there, you can reach the EXPO 2015 exhibition centre in 4 minutes.",
+        "currency": "EUR",
+        "number_of_rooms": 135
       },
-      {
-        "description": "Restaurant might not be available if already booked for a private party.\n\nPlease note, the shuttle is subject to availability and must be booked in advance.",
-        "languagecode": "en",
-        "hotel_id": "25215",
-        "descriptiontype_id": "7"
-      }
-    ],
-    "photos": [
-      {
-        "hotel_id": "25215",
-        "url_original": "http://aff.bstatic.com/images/hotel/max500/740/74030690.jpg",
-        "url_max300": "http://aff.bstatic.com/images/hotel/max300/740/74030690.jpg",
-        "url_square60": "http://aff.bstatic.com/images/hotel/square60/740/74030690.jpg",
-        "photo_id": "74030690"
-      }
-    ],
-    "chains": [],
-    "checkin": {
-      "to": "",
-      "from": "14:00"
-    },
-    "checkout": {
-      "to": "",
-      "from": "14:00"
-    },
-    "location": {
-      "latitude": "45.52403387526",
-      "longitude": "9.03759062290192"
+      "hotel_id": 25215,
+      "room_data": [
+        {
+          "room_id": 2521507,
+          "room_photos": [
+            {
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030508.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030508.jpg",
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030508.jpg"
+            },
+            {
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030464.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030464.jpg",
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030464.jpg"
+            },
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030481.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030481.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030481.jpg"
+            },
+            {
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030551.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030551.jpg",
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030551.jpg"
+            },
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030555.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030555.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030555.jpg"
+            },
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030580.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030580.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030580.jpg"
+            },
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030518.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030518.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030518.jpg"
+            }
+          ],
+          "room_facilities": [
+            { "name": "Minibar", "room_facility_type_id": 3 },
+            { "name": "Safety Deposit Box", "room_facility_type_id": 6 },
+            { "name": "Pay-per-view Channels", "room_facility_type_id": 7 },
+            { "name": "Telephone", "room_facility_type_id": 9 },
+            { "name": "Air conditioning", "room_facility_type_id": 11 },
+            { "room_facility_type_id": 12, "name": "Hairdryer" },
+            { "room_facility_type_id": 19, "name": "Bathrobe" },
+            { "name": "Radio", "room_facility_type_id": 21 },
+            { "room_facility_type_id": 23, "name": "Desk" },
+            { "name": "Ironing Facilities", "room_facility_type_id": 25 },
+            { "name": "Free toiletries", "room_facility_type_id": 27 },
+            { "name": "Toilet", "room_facility_type_id": 31 },
+            { "room_facility_type_id": 38, "name": "Bathroom" },
+            { "room_facility_type_id": 40, "name": "Heating" },
+            { "name": "Slippers", "room_facility_type_id": 43 },
+            { "room_facility_type_id": 44, "name": "Satellite Channels" },
+            { "name": "Bath or Shower", "room_facility_type_id": 69 },
+            { "name": "Laptop safe", "room_facility_type_id": 74 },
+            { "name": "Flat-screen TV", "room_facility_type_id": 75 },
+            { "name": "Hardwood/Parquet floors", "room_facility_type_id": 82 },
+            { "name": "Wake-up service", "room_facility_type_id": 83 },
+            {
+              "room_facility_type_id": 91,
+              "name": "Towels/Sheets (extra fee)"
+            },
+            { "room_facility_type_id": 95, "name": "Wardrobe/Closet" },
+            { "name": "Bidet", "room_facility_type_id": 100 },
+            { "name": "Towels", "room_facility_type_id": 124 },
+            { "room_facility_type_id": 125, "name": "Linen" }
+          ],
+          "room_description":
+            "Large high ceilinged room with wooden floors and spacious bathroom. Includes free WiFi, work desk and flat-screen satellite TV. Complete with tea/coffee maker and luxury toiletries.",
+          "room_info": {
+            "room_size": { "metre_square": 25 },
+            "bookable": true,
+            "bedroom_count": 0,
+            "bathroom_count": 0,
+            "min_price": 0,
+            "room_type": "Double",
+            "ranking": 6,
+            "max_price": 0,
+            "room_type_id": 9,
+            "max_persons": 2
+          },
+          "room_name": "Executive King Room"
+        },
+        {
+          "room_name": "Twin Room",
+          "room_info": {
+            "bedroom_count": 0,
+            "room_size": { "metre_square": 23 },
+            "bookable": true,
+            "min_price": 0,
+            "bathroom_count": 0,
+            "room_type": "Twin",
+            "max_price": 0,
+            "ranking": 3,
+            "room_type_id": 8,
+            "max_persons": 2
+          },
+          "room_description":
+            "Modern high ceilinged room with wooden floors and spacious bathroom. Includes free WiFi, work desk and flat-screen satellite TV.",
+          "room_facilities": [
+            { "room_facility_type_id": 3, "name": "Minibar" },
+            { "room_facility_type_id": 4, "name": "Shower" },
+            { "room_facility_type_id": 6, "name": "Safety Deposit Box" },
+            { "room_facility_type_id": 7, "name": "Pay-per-view Channels" },
+            { "name": "Telephone", "room_facility_type_id": 9 },
+            { "room_facility_type_id": 11, "name": "Air conditioning" },
+            { "room_facility_type_id": 12, "name": "Hairdryer" },
+            { "name": "Radio", "room_facility_type_id": 21 },
+            { "room_facility_type_id": 23, "name": "Desk" },
+            { "name": "Free toiletries", "room_facility_type_id": 27 },
+            { "room_facility_type_id": 31, "name": "Toilet" },
+            { "name": "Bathroom", "room_facility_type_id": 38 },
+            { "room_facility_type_id": 40, "name": "Heating" },
+            { "room_facility_type_id": 44, "name": "Satellite Channels" },
+            { "room_facility_type_id": 74, "name": "Laptop safe" },
+            { "room_facility_type_id": 75, "name": "Flat-screen TV" },
+            { "room_facility_type_id": 77, "name": "Sofa" },
+            { "name": "Hardwood/Parquet floors", "room_facility_type_id": 82 },
+            { "name": "Wake-up service", "room_facility_type_id": 83 },
+            { "room_facility_type_id": 95, "name": "Wardrobe/Closet" },
+            { "room_facility_type_id": 100, "name": "Bidet" }
+          ],
+          "room_photos": [
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030573.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030573.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030573.jpg"
+            },
+            {
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030572.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030572.jpg",
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030572.jpg"
+            },
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030580.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030580.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030580.jpg"
+            },
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030487.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030487.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030487.jpg"
+            },
+            {
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030561.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030561.jpg",
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030561.jpg"
+            }
+          ],
+          "room_id": 2521509
+        },
+        {
+          "room_facilities": [
+            { "room_facility_type_id": 3, "name": "Minibar" },
+            { "name": "Shower", "room_facility_type_id": 4 },
+            { "room_facility_type_id": 6, "name": "Safety Deposit Box" },
+            { "name": "Pay-per-view Channels", "room_facility_type_id": 7 },
+            { "room_facility_type_id": 9, "name": "Telephone" },
+            { "room_facility_type_id": 11, "name": "Air conditioning" },
+            { "name": "Hairdryer", "room_facility_type_id": 12 },
+            { "room_facility_type_id": 21, "name": "Radio" },
+            { "name": "Desk", "room_facility_type_id": 23 },
+            { "room_facility_type_id": 27, "name": "Free toiletries" },
+            { "room_facility_type_id": 31, "name": "Toilet" },
+            { "room_facility_type_id": 38, "name": "Bathroom" },
+            { "room_facility_type_id": 40, "name": "Heating" },
+            { "name": "Satellite Channels", "room_facility_type_id": 44 },
+            { "room_facility_type_id": 74, "name": "Laptop safe" },
+            { "room_facility_type_id": 75, "name": "Flat-screen TV" },
+            { "name": "Hardwood/Parquet floors", "room_facility_type_id": 82 },
+            { "name": "Wake-up service", "room_facility_type_id": 83 },
+            { "room_facility_type_id": 95, "name": "Wardrobe/Closet" },
+            { "room_facility_type_id": 100, "name": "Bidet" }
+          ],
+          "room_photos": [
+            {
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030622.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030622.jpg",
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030622.jpg"
+            },
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030619.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030619.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030619.jpg"
+            },
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030578.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030578.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030578.jpg"
+            },
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030525.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030525.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030525.jpg"
+            },
+            {
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030491.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030491.jpg",
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030491.jpg"
+            },
+            {
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030604.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030604.jpg",
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030604.jpg"
+            }
+          ],
+          "room_id": 2521511,
+          "room_info": {
+            "ranking": 1,
+            "max_price": 0,
+            "room_type_id": 9,
+            "max_persons": 2,
+            "room_size": { "metre_square": 23 },
+            "bookable": true,
+            "bedroom_count": 0,
+            "bathroom_count": 0,
+            "min_price": 0,
+            "room_type": "Double"
+          },
+          "room_name": "Double Room",
+          "room_description":
+            "Includes free WiFi, work desk and flat-screen satellite TV.\n\nNon-smoking rooms on request."
+        },
+        {
+          "room_photos": [
+            {
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030615.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030615.jpg",
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030615.jpg"
+            },
+            {
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030579.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030579.jpg",
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030579.jpg"
+            },
+            {
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030572.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030572.jpg",
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030572.jpg"
+            },
+            {
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030491.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030491.jpg",
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030491.jpg"
+            },
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030637.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030637.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030637.jpg"
+            }
+          ],
+          "room_id": 2521512,
+          "room_facilities": [
+            { "room_facility_type_id": 3, "name": "Minibar" },
+            { "room_facility_type_id": 4, "name": "Shower" },
+            { "room_facility_type_id": 6, "name": "Safety Deposit Box" },
+            { "room_facility_type_id": 7, "name": "Pay-per-view Channels" },
+            { "name": "Telephone", "room_facility_type_id": 9 },
+            { "name": "Air conditioning", "room_facility_type_id": 11 },
+            { "room_facility_type_id": 12, "name": "Hairdryer" },
+            { "room_facility_type_id": 21, "name": "Radio" },
+            { "room_facility_type_id": 23, "name": "Desk" },
+            { "room_facility_type_id": 27, "name": "Free toiletries" },
+            { "room_facility_type_id": 31, "name": "Toilet" },
+            { "room_facility_type_id": 38, "name": "Bathroom" },
+            { "name": "Heating", "room_facility_type_id": 40 },
+            { "name": "Satellite Channels", "room_facility_type_id": 44 },
+            { "name": "Laptop safe", "room_facility_type_id": 74 },
+            { "name": "Flat-screen TV", "room_facility_type_id": 75 },
+            { "room_facility_type_id": 82, "name": "Hardwood/Parquet floors" },
+            { "room_facility_type_id": 83, "name": "Wake-up service" },
+            { "room_facility_type_id": 95, "name": "Wardrobe/Closet" },
+            { "name": "Bidet", "room_facility_type_id": 100 }
+          ],
+          "room_description":
+            "This spacious and comfortable room has high ceilings and parquet floors. It features free WiFi, a work desk and flat-screen TV with satellite channels.",
+          "room_name": "Triple Room",
+          "room_info": {
+            "bedroom_count": 0,
+            "room_size": { "metre_square": 25 },
+            "bookable": true,
+            "min_price": 0,
+            "bathroom_count": 0,
+            "room_type": "Triple",
+            "max_price": 0,
+            "ranking": 4,
+            "room_type_id": 7,
+            "max_persons": 3
+          }
+        },
+        {
+          "room_facilities": [
+            { "name": "Minibar", "room_facility_type_id": 3 },
+            { "room_facility_type_id": 4, "name": "Shower" },
+            { "name": "Safety Deposit Box", "room_facility_type_id": 6 },
+            { "room_facility_type_id": 7, "name": "Pay-per-view Channels" },
+            { "name": "Telephone", "room_facility_type_id": 9 },
+            { "room_facility_type_id": 11, "name": "Air conditioning" },
+            { "name": "Hairdryer", "room_facility_type_id": 12 },
+            { "room_facility_type_id": 21, "name": "Radio" },
+            { "name": "Desk", "room_facility_type_id": 23 },
+            { "room_facility_type_id": 27, "name": "Free toiletries" },
+            { "name": "Toilet", "room_facility_type_id": 31 },
+            { "name": "Bathroom", "room_facility_type_id": 38 },
+            { "room_facility_type_id": 40, "name": "Heating" },
+            { "room_facility_type_id": 44, "name": "Satellite Channels" },
+            { "room_facility_type_id": 74, "name": "Laptop safe" },
+            { "name": "Flat-screen TV", "room_facility_type_id": 75 },
+            { "room_facility_type_id": 82, "name": "Hardwood/Parquet floors" },
+            { "room_facility_type_id": 83, "name": "Wake-up service" },
+            { "room_facility_type_id": 95, "name": "Wardrobe/Closet" },
+            { "name": "Bidet", "room_facility_type_id": 100 }
+          ],
+          "room_photos": [
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030622.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030622.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030622.jpg"
+            },
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030575.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030575.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030575.jpg"
+            },
+            {
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030518.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030518.jpg",
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030518.jpg"
+            },
+            {
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030579.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030579.jpg",
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030579.jpg"
+            },
+            {
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030619.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030619.jpg",
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030619.jpg"
+            },
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030499.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030499.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030499.jpg"
+            },
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030487.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030487.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030487.jpg"
+            }
+          ],
+          "room_id": 2521513,
+          "room_name": "Two Connecting Rooms",
+          "room_info": {
+            "ranking": 5,
+            "max_price": 0,
+            "room_type_id": 24,
+            "max_persons": 4,
+            "room_size": { "metre_square": 25 },
+            "bookable": true,
+            "bedroom_count": 0,
+            "bathroom_count": 0,
+            "min_price": 0,
+            "room_type": "Twin/Double"
+          },
+          "room_description":
+            "Composed of connecting rooms, each with a spacious bathroom, this room features parquet floors and a work desk. It also has free WiFi and a flat-screen TV with satellite channels."
+        },
+        {
+          "room_facilities": [
+            { "room_facility_type_id": 3, "name": "Minibar" },
+            { "name": "Shower", "room_facility_type_id": 4 },
+            { "room_facility_type_id": 6, "name": "Safety Deposit Box" },
+            { "room_facility_type_id": 7, "name": "Pay-per-view Channels" },
+            { "name": "Telephone", "room_facility_type_id": 9 },
+            { "name": "Air conditioning", "room_facility_type_id": 11 },
+            { "room_facility_type_id": 12, "name": "Hairdryer" },
+            { "room_facility_type_id": 21, "name": "Radio" },
+            { "name": "Desk", "room_facility_type_id": 23 },
+            { "room_facility_type_id": 27, "name": "Free toiletries" },
+            { "name": "Toilet", "room_facility_type_id": 31 },
+            { "room_facility_type_id": 38, "name": "Bathroom" },
+            { "name": "Heating", "room_facility_type_id": 40 },
+            { "name": "Satellite Channels", "room_facility_type_id": 44 },
+            { "room_facility_type_id": 74, "name": "Laptop safe" },
+            { "name": "Flat-screen TV", "room_facility_type_id": 75 },
+            { "room_facility_type_id": 82, "name": "Hardwood/Parquet floors" },
+            { "name": "Wake-up service", "room_facility_type_id": 83 },
+            { "room_facility_type_id": 95, "name": "Wardrobe/Closet" },
+            { "name": "Bidet", "room_facility_type_id": 100 }
+          ],
+          "room_id": 2521515,
+          "room_photos": [
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030578.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030578.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030578.jpg"
+            },
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030579.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030579.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030579.jpg"
+            },
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030491.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030491.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030491.jpg"
+            },
+            {
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030572.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030572.jpg",
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030572.jpg"
+            },
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030573.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030573.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030573.jpg"
+            },
+            {
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030487.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030487.jpg",
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030487.jpg"
+            }
+          ],
+          "room_info": {
+            "room_type": "Twin/Double",
+            "bedroom_count": 0,
+            "room_size": { "metre_square": 23 },
+            "bookable": true,
+            "min_price": 53.1,
+            "bathroom_count": 0,
+            "max_persons": 1,
+            "max_price": 363.27,
+            "ranking": 2,
+            "room_type_id": 24
+          },
+          "room_name": "Double or Twin Room for Single Use",
+          "room_description":
+            "Includes free WiFi, work desk and flat-screen satellite TV.\n\nNon-smoking rooms on request."
+        },
+        {
+          "room_photos": [
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030525.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030525.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030525.jpg"
+            },
+            {
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030489.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030489.jpg",
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030489.jpg"
+            },
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030513.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030513.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030513.jpg"
+            },
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030551.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030551.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030551.jpg"
+            },
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030518.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030518.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030518.jpg"
+            },
+            {
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030555.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030555.jpg",
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030555.jpg"
+            }
+          ],
+          "room_id": 2521517,
+          "room_facilities": [
+            { "room_facility_type_id": 3, "name": "Minibar" },
+            { "room_facility_type_id": 6, "name": "Safety Deposit Box" },
+            { "room_facility_type_id": 7, "name": "Pay-per-view Channels" },
+            { "name": "Telephone", "room_facility_type_id": 9 },
+            { "room_facility_type_id": 11, "name": "Air conditioning" },
+            { "name": "Hairdryer", "room_facility_type_id": 12 },
+            { "room_facility_type_id": 19, "name": "Bathrobe" },
+            { "room_facility_type_id": 21, "name": "Radio" },
+            { "room_facility_type_id": 23, "name": "Desk" },
+            { "name": "Ironing Facilities", "room_facility_type_id": 25 },
+            { "name": "Free toiletries", "room_facility_type_id": 27 },
+            { "name": "Toilet", "room_facility_type_id": 31 },
+            { "room_facility_type_id": 38, "name": "Bathroom" },
+            { "room_facility_type_id": 40, "name": "Heating" },
+            { "room_facility_type_id": 43, "name": "Slippers" },
+            { "name": "Satellite Channels", "room_facility_type_id": 44 },
+            { "room_facility_type_id": 69, "name": "Bath or Shower" },
+            { "room_facility_type_id": 74, "name": "Laptop safe" },
+            { "room_facility_type_id": 75, "name": "Flat-screen TV" },
+            { "name": "Hardwood/Parquet floors", "room_facility_type_id": 82 },
+            { "name": "Wake-up service", "room_facility_type_id": 83 },
+            { "room_facility_type_id": 86, "name": "Electric kettle" },
+            { "room_facility_type_id": 95, "name": "Wardrobe/Closet" },
+            { "room_facility_type_id": 100, "name": "Bidet" }
+          ],
+          "room_description":
+            "En suite room with high ceilings, parquet floors, and tea/coffee maker. Offers free WiFi, air conditioning, and a satellite flat-screen TV. The bathroom is complete with luxury toiletries.",
+          "room_info": {
+            "room_type": "Double",
+            "bedroom_count": 0,
+            "room_size": { "metre_square": 24 },
+            "bookable": true,
+            "min_price": 0,
+            "bathroom_count": 0,
+            "max_persons": 1,
+            "max_price": 0,
+            "ranking": 7,
+            "room_type_id": 9
+          },
+          "room_name": "Executive King Room for Single Use"
+        },
+        {
+          "room_info": {
+            "max_persons": 3,
+            "room_type_id": 9,
+            "max_price": 0,
+            "ranking": 0,
+            "room_type": "Double",
+            "min_price": 0,
+            "bathroom_count": 0,
+            "bedroom_count": 0,
+            "room_size": { "metre_square": 24 },
+            "bookable": true
+          },
+          "room_name": "Double Room with Extra Bed",
+          "room_description":
+            "Offering free WiFi, this air-conditioned room comes with a satellite flat-screen TV, a desk and parquet floors. The private bathroom includes a hairdryer and free toiletries.",
+          "room_facilities": [
+            { "room_facility_type_id": 3, "name": "Minibar" },
+            { "room_facility_type_id": 6, "name": "Safety Deposit Box" },
+            { "room_facility_type_id": 9, "name": "Telephone" },
+            { "name": "Air conditioning", "room_facility_type_id": 11 },
+            { "room_facility_type_id": 12, "name": "Hairdryer" },
+            { "name": "Radio", "room_facility_type_id": 21 },
+            { "room_facility_type_id": 23, "name": "Desk" },
+            { "name": "Free toiletries", "room_facility_type_id": 27 },
+            { "name": "Toilet", "room_facility_type_id": 31 },
+            { "name": "Bathroom", "room_facility_type_id": 38 },
+            { "name": "Heating", "room_facility_type_id": 40 },
+            { "name": "Satellite Channels", "room_facility_type_id": 44 },
+            { "name": "Flat-screen TV", "room_facility_type_id": 75 },
+            { "name": "Hardwood/Parquet floors", "room_facility_type_id": 82 },
+            { "room_facility_type_id": 83, "name": "Wake-up service" },
+            { "name": "Wardrobe/Closet", "room_facility_type_id": 95 },
+            { "name": "Bidet", "room_facility_type_id": 100 }
+          ],
+          "room_photos": [
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030690.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030690.jpg",
+              "main_photo": true,
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030690.jpg"
+            },
+            {
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030688.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030688.jpg",
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030688.jpg"
+            },
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030660.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030660.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030660.jpg"
+            },
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030512.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030512.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030512.jpg"
+            },
+            {
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030579.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030579.jpg",
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030579.jpg"
+            },
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030499.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030499.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030499.jpg"
+            }
+          ],
+          "room_id": 2521518
+        },
+        {
+          "room_facilities": [
+            { "room_facility_type_id": 3, "name": "Minibar" },
+            { "name": "Safety Deposit Box", "room_facility_type_id": 6 },
+            { "name": "Telephone", "room_facility_type_id": 9 },
+            { "room_facility_type_id": 11, "name": "Air conditioning" },
+            { "name": "Hairdryer", "room_facility_type_id": 12 },
+            { "name": "Radio", "room_facility_type_id": 21 },
+            { "name": "Desk", "room_facility_type_id": 23 },
+            { "room_facility_type_id": 27, "name": "Free toiletries" },
+            { "room_facility_type_id": 31, "name": "Toilet" },
+            { "room_facility_type_id": 38, "name": "Bathroom" },
+            { "room_facility_type_id": 40, "name": "Heating" },
+            { "room_facility_type_id": 44, "name": "Satellite Channels" },
+            { "name": "Flat-screen TV", "room_facility_type_id": 75 },
+            { "name": "Hardwood/Parquet floors", "room_facility_type_id": 82 },
+            { "room_facility_type_id": 83, "name": "Wake-up service" },
+            { "name": "Wardrobe/Closet", "room_facility_type_id": 95 },
+            { "room_facility_type_id": 100, "name": "Bidet" }
+          ],
+          "room_photos": [
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030578.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030578.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030578.jpg"
+            },
+            {
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030688.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030688.jpg",
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030688.jpg"
+            },
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030558.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030558.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030558.jpg"
+            },
+            {
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030491.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030491.jpg",
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030491.jpg"
+            }
+          ],
+          "room_id": 2521519,
+          "room_name": "Quadruple Room",
+          "room_info": {
+            "bathroom_count": 0,
+            "min_price": 0,
+            "bookable": true,
+            "room_size": { "metre_square": 25 },
+            "bedroom_count": 0,
+            "room_type": "Quadruple",
+            "room_type_id": 4,
+            "ranking": 0,
+            "max_price": 0,
+            "max_persons": 4
+          },
+          "room_description":
+            "Offering free WiFi, this air-conditioned room comes with a satellite flat-screen TV, a desk and parquet floors. The private bathroom includes a hairdryer and free toiletries.\n\nPlease specify bed preference when booking."
+        },
+        {
+          "room_description":
+            "Boasting a private terrace with city views, this air-conditioned room comes with a satellite flat-screen TV, a desk and parquet floors. The private bathroom includes a hairdryer and free toiletries. WiFi is free.",
+          "room_info": {
+            "room_type": "Double",
+            "room_size": { "metre_square": 25 },
+            "bookable": true,
+            "bedroom_count": 0,
+            "bathroom_count": 0,
+            "min_price": 0,
+            "max_persons": 2,
+            "ranking": 0,
+            "max_price": 0,
+            "room_type_id": 9
+          },
+          "room_name": "Double Room Top Executive",
+          "room_id": 2521523,
+          "room_photos": [
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030440.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030440.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030440.jpg"
+            },
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030489.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030489.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030489.jpg"
+            },
+            {
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030517.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030517.jpg",
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030517.jpg"
+            },
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030555.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030555.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030555.jpg"
+            },
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030525.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030525.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030525.jpg"
+            },
+            {
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030485.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030485.jpg",
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030485.jpg"
+            }
+          ],
+          "room_facilities": [
+            { "room_facility_type_id": 3, "name": "Minibar" },
+            { "name": "Bath", "room_facility_type_id": 5 },
+            { "name": "Safety Deposit Box", "room_facility_type_id": 6 },
+            { "room_facility_type_id": 9, "name": "Telephone" },
+            { "room_facility_type_id": 11, "name": "Air conditioning" },
+            { "room_facility_type_id": 12, "name": "Hairdryer" },
+            { "room_facility_type_id": 19, "name": "Bathrobe" },
+            { "room_facility_type_id": 21, "name": "Radio" },
+            { "name": "Desk", "room_facility_type_id": 23 },
+            { "room_facility_type_id": 25, "name": "Ironing Facilities" },
+            { "room_facility_type_id": 27, "name": "Free toiletries" },
+            { "room_facility_type_id": 31, "name": "Toilet" },
+            { "room_facility_type_id": 38, "name": "Bathroom" },
+            { "name": "Heating", "room_facility_type_id": 40 },
+            { "room_facility_type_id": 44, "name": "Satellite Channels" },
+            { "room_facility_type_id": 75, "name": "Flat-screen TV" },
+            { "room_facility_type_id": 82, "name": "Hardwood/Parquet floors" },
+            { "name": "Wake-up service", "room_facility_type_id": 83 },
+            { "room_facility_type_id": 86, "name": "Electric kettle" },
+            { "room_facility_type_id": 95, "name": "Wardrobe/Closet" },
+            { "room_facility_type_id": 100, "name": "Bidet" },
+            { "name": "City view", "room_facility_type_id": 121 },
+            { "name": "Terrace", "room_facility_type_id": 123 },
+            { "room_facility_type_id": 129, "name": "Outdoor furniture" }
+          ]
+        },
+        {
+          "room_facilities": [
+            { "name": "Minibar", "room_facility_type_id": 3 },
+            { "name": "Safety Deposit Box", "room_facility_type_id": 6 },
+            { "room_facility_type_id": 9, "name": "Telephone" },
+            { "name": "Air conditioning", "room_facility_type_id": 11 },
+            { "room_facility_type_id": 12, "name": "Hairdryer" },
+            { "room_facility_type_id": 21, "name": "Radio" },
+            { "room_facility_type_id": 23, "name": "Desk" },
+            { "room_facility_type_id": 27, "name": "Free toiletries" },
+            { "room_facility_type_id": 31, "name": "Toilet" },
+            { "name": "Bathroom", "room_facility_type_id": 38 },
+            { "room_facility_type_id": 40, "name": "Heating" },
+            { "room_facility_type_id": 44, "name": "Satellite Channels" },
+            { "room_facility_type_id": 75, "name": "Flat-screen TV" },
+            { "name": "Hardwood/Parquet floors", "room_facility_type_id": 82 },
+            { "room_facility_type_id": 83, "name": "Wake-up service" },
+            { "room_facility_type_id": 95, "name": "Wardrobe/Closet" },
+            { "name": "Bidet", "room_facility_type_id": 100 },
+            { "name": "City view", "room_facility_type_id": 121 },
+            { "room_facility_type_id": 123, "name": "Terrace" }
+          ],
+          "room_id": 2521524,
+          "room_photos": [
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030508.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030508.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030508.jpg"
+            },
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030512.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030512.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030512.jpg"
+            },
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030488.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030488.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030488.jpg"
+            },
+            {
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030517.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030517.jpg",
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030517.jpg"
+            },
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030440.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030440.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030440.jpg"
+            },
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030579.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030579.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030579.jpg"
+            },
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030499.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030499.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030499.jpg"
+            }
+          ],
+          "room_name": " Top Executive Single Use",
+          "room_info": {
+            "room_type": "Double",
+            "min_price": 0,
+            "bathroom_count": 0,
+            "bedroom_count": 0,
+            "room_size": { "metre_square": 25 },
+            "bookable": true,
+            "max_persons": 1,
+            "room_type_id": 9,
+            "max_price": 0,
+            "ranking": 0
+          },
+          "room_description":
+            "Boasting a private terrace with city views, this air-conditioned room comes with a satellite flat-screen TV, a desk and parquet floors. The private bathroom includes a hairdryer and free toiletries. WiFi is free."
+        },
+        {
+          "room_facilities": [
+            { "name": "Minibar", "room_facility_type_id": 3 },
+            { "name": "Safety Deposit Box", "room_facility_type_id": 6 },
+            { "name": "Telephone", "room_facility_type_id": 9 },
+            { "name": "Air conditioning", "room_facility_type_id": 11 },
+            { "room_facility_type_id": 12, "name": "Hairdryer" },
+            { "name": "Radio", "room_facility_type_id": 21 },
+            { "room_facility_type_id": 23, "name": "Desk" },
+            { "name": "Free toiletries", "room_facility_type_id": 27 },
+            { "room_facility_type_id": 31, "name": "Toilet" },
+            { "room_facility_type_id": 38, "name": "Bathroom" },
+            { "room_facility_type_id": 40, "name": "Heating" },
+            { "room_facility_type_id": 44, "name": "Satellite Channels" },
+            { "name": "Flat-screen TV", "room_facility_type_id": 75 },
+            { "name": "Hardwood/Parquet floors", "room_facility_type_id": 82 },
+            { "room_facility_type_id": 83, "name": "Wake-up service" },
+            { "room_facility_type_id": 95, "name": "Wardrobe/Closet" },
+            { "name": "Bidet", "room_facility_type_id": 100 },
+            { "name": "Toilet paper", "room_facility_type_id": 141 }
+          ],
+          "room_photos": [
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/789/78908092.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/789/78908092.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/789/78908092.jpg"
+            },
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/789/78908097.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/789/78908097.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/789/78908097.jpg"
+            },
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/789/78908099.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/789/78908099.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/789/78908099.jpg"
+            },
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/789/78908100.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/789/78908100.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/789/78908100.jpg"
+            },
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/789/78911303.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/789/78911303.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/789/78911303.jpg"
+            }
+          ],
+          "room_id": 2521525,
+          "room_info": {
+            "room_size": { "metre_square": 25 },
+            "bookable": true,
+            "bedroom_count": 0,
+            "bathroom_count": 0,
+            "min_price": 0,
+            "room_type": "Twin/Double",
+            "ranking": 0,
+            "max_price": 0,
+            "room_type_id": 24,
+            "max_persons": 2
+          },
+          "room_name": "Double or Twin Room - DogLovers ",
+          "room_description":
+            "This twin/double room has air conditioning and minibar"
+        },
+        {
+          "room_id": 2521526,
+          "room_photos": [
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/789/78908099.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/789/78908099.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/789/78908099.jpg"
+            },
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/789/78908097.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/789/78908097.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/789/78908097.jpg"
+            },
+            {
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/789/78908100.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/789/78908100.jpg",
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/789/78908100.jpg"
+            },
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/789/78911303.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/789/78911303.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/789/78911303.jpg"
+            }
+          ],
+          "room_facilities": [
+            { "name": "Minibar", "room_facility_type_id": 3 },
+            { "name": "Safety Deposit Box", "room_facility_type_id": 6 },
+            { "room_facility_type_id": 9, "name": "Telephone" },
+            { "room_facility_type_id": 11, "name": "Air conditioning" },
+            { "room_facility_type_id": 12, "name": "Hairdryer" },
+            { "name": "Radio", "room_facility_type_id": 21 },
+            { "room_facility_type_id": 23, "name": "Desk" },
+            { "room_facility_type_id": 27, "name": "Free toiletries" },
+            { "room_facility_type_id": 31, "name": "Toilet" },
+            { "room_facility_type_id": 38, "name": "Bathroom" },
+            { "name": "Heating", "room_facility_type_id": 40 },
+            { "room_facility_type_id": 44, "name": "Satellite Channels" },
+            { "name": "Flat-screen TV", "room_facility_type_id": 75 },
+            { "room_facility_type_id": 82, "name": "Hardwood/Parquet floors" },
+            { "name": "Wake-up service", "room_facility_type_id": 83 },
+            { "name": "Wardrobe/Closet", "room_facility_type_id": 95 },
+            { "room_facility_type_id": 100, "name": "Bidet" },
+            { "room_facility_type_id": 141, "name": "Toilet paper" }
+          ],
+          "room_description":
+            "This twin/double room features a flat-screen TV, minibar and air conditioning.",
+          "room_name": "Double Room Single Use - DogLovers ",
+          "room_info": {
+            "max_price": 0,
+            "ranking": 0,
+            "room_type_id": 24,
+            "max_persons": 1,
+            "bedroom_count": 0,
+            "room_size": { "metre_square": 24 },
+            "bookable": true,
+            "min_price": 0,
+            "bathroom_count": 0,
+            "room_type": "Twin/Double"
+          }
+        }
+      ]
     }
-  }
-]
+  ]
+}

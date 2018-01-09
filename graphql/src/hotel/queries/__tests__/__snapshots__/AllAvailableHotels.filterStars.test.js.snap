@@ -21,8 +21,8 @@ Object {
             "hotel": Object {
               "originalId": "248539",
               "rating": Object {
-                "categoryName": "Standard",
-                "stars": 2,
+                "categoryName": "First Class",
+                "stars": 4,
               },
             },
           },

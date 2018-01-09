@@ -1,469 +1,1155 @@
-[
-  {
-    "bookable": "1",
-    "min_price": "0",
-    "roomtype": "Double",
-    "max_persons": "2",
-    "hotel_id": "25215",
-    "room_id": "2521507",
-    "ranking": "6",
-    "max_price": "0",
-    "roomtype_id": "9",
-    "facilities": [
-      {
-        "facilitytype_id": "7",
-        "name": "Minibar",
-        "type": "free_or_paid",
-        "languagecode": "en",
-        "roomfacilitytype_id": "3",
-        "room_id": "2521507",
-        "hotel_id": "25215"
-      },
-      {
-        "languagecode": "en",
-        "roomfacilitytype_id": "6",
-        "name": "Safety Deposit Box",
-        "facilitytype_id": "4",
-        "type": "free_or_paid",
-        "room_id": "2521507",
-        "hotel_id": "25215"
-      },
-      {
-        "roomfacilitytype_id": "7",
-        "languagecode": "en",
-        "type": "boolean",
-        "name": "Pay-per-view Channels",
-        "facilitytype_id": "6",
-        "room_id": "2521507",
-        "hotel_id": "25215"
-      }
-    ],
-    "descriptions": [
-      {
-        "description": "Large high ceilinged room with wooden floors and spacious bathroom. Includes free WiFi, work desk and flat-screen satellite TV. Complete with tea/coffee maker and luxury toiletries.",
-        "room_id": "2521507",
-        "languagecode": "en",
-        "name": "Executive King Room",
-        "hotel_id": "25215"
-      }
-    ],
-    "bedding": [
-      {
-        "amount": "1",
-        "type": "Extra-large double bed(s) (Super-king size)"
-      }
-    ]
-  },
-  {
-    "room_id": "2521509",
-    "max_price": "0",
-    "ranking": "3",
-    "roomtype_id": "8",
-    "bookable": "1",
-    "roomtype": "Twin",
-    "min_price": "0",
-    "hotel_id": "25215",
-    "max_persons": "2",
-    "facilities": [
-      {
-        "facilitytype_id": "5",
-        "name": "Shower",
-        "type": "boolean",
-        "roomfacilitytype_id": "4",
-        "languagecode": "en",
-        "room_id": "2521509",
-        "hotel_id": "25215"
-      },
-      {
-        "type": "boolean",
-        "name": "Sofa",
-        "facilitytype_id": "4",
-        "roomfacilitytype_id": "77",
-        "languagecode": "en",
-        "room_id": "2521509",
-        "hotel_id": "25215"
-      }
-    ],
-    "descriptions": [
-      {
-        "description": "Modern high ceilinged room with wooden floors and spacious bathroom. Includes free WiFi, work desk and flat-screen satellite TV.",
-        "name": "Twin Room",
-        "hotel_id": "25215",
-        "room_id": "2521509",
-        "languagecode": "en"
-      }
-    ],
-    "bedding": [
-      {
-        "type": "Single bed(s)",
-        "amount": "2"
-      }
-    ]
-  },
-  {
-    "max_persons": "2",
-    "hotel_id": "25215",
-    "roomtype": "Double",
-    "min_price": "53.1",
-    "bookable": "1",
-    "roomtype_id": "9",
-    "ranking": "1",
-    "max_price": "854",
-    "room_id": "2521511",
-    "descriptions": [
-      {
-        "description": "Includes free WiFi, work desk and flat-screen satellite TV.\n\nNon-smoking rooms on request.",
-        "languagecode": "en",
-        "hotel_id": "25215",
-        "room_id": "2521511",
-        "name": "Double Room"
-      }
-    ],
-    "bedding": [
-      {
-        "amount": "1",
-        "type": "Large bed(s) (King size)"
-      }
-    ]
-  },
-  {
-    "roomtype_id": "7",
-    "room_id": "2521512",
-    "ranking": "4",
-    "max_price": "0",
-    "roomtype": "Triple",
-    "min_price": "0",
-    "max_persons": "3",
-    "hotel_id": "25215",
-    "bookable": "1",
-    "descriptions": [
-      {
-        "description": "This spacious and comfortable room has high ceilings and parquet floors. It features free WiFi, a work desk and flat-screen TV with satellite channels.",
-        "name": "Triple Room",
-        "hotel_id": "25215",
-        "room_id": "2521512",
-        "languagecode": "en"
-      }
-    ],
-    "bedding": [
-      {
-        "amount": "3",
-        "type": "Single bed(s)"
-      }
-    ]
-  },
-  {
-    "room_id": "2521513",
-    "ranking": "5",
-    "max_price": "0",
-    "roomtype_id": "24",
-    "bookable": "1",
-    "min_price": "0",
-    "roomtype": "Twin/Double",
-    "max_persons": "4",
-    "hotel_id": "25215",
-    "descriptions": [
-      {
-        "description": "Composed of connecting rooms, each with a spacious bathroom, this room features parquet floors and a work desk. It also has free WiFi and a flat-screen TV with satellite channels.",
-        "room_id": "2521513",
-        "name": "Two Connecting Rooms",
-        "languagecode": "en",
-        "hotel_id": "25215"
-      }
-    ],
-    "bedding": [
-      {
-        "type": "Single bed(s)",
-        "amount": "2"
-      },
-      {
-        "amount": "1",
-        "type": "Extra-large double bed(s) (Super-king size)"
-      },
-      {
-        "amount": "2",
-        "type": "Extra-large double bed(s) (Super-king size)"
-      }
-    ]
-  },
-  {
-    "max_persons": "1",
-    "hotel_id": "25215",
-    "min_price": "53.1",
-    "roomtype": "Twin/Double",
-    "bookable": "1",
-    "roomtype_id": "24",
-    "ranking": "2",
-    "max_price": "854",
-    "room_id": "2521515",
-    "descriptions": [
-      {
-        "description": "Includes free WiFi, work desk and flat-screen satellite TV.\n\nNon-smoking rooms on request.",
-        "name": "Double or Twin Room for Single Use",
-        "room_id": "2521515",
-        "hotel_id": "25215",
-        "languagecode": "en"
-      }
-    ],
-    "bedding": [
-      {
-        "amount": "1",
-        "type": "Large bed(s) (King size)"
-      }
-    ]
-  },
-  {
-    "roomtype": "Double",
-    "min_price": "0",
-    "hotel_id": "25215",
-    "max_persons": "1",
-    "bookable": "1",
-    "roomtype_id": "9",
-    "room_id": "2521517",
-    "max_price": "0",
-    "ranking": "7",
-    "facilities": [
-      {
-        "type": "boolean",
-        "name": "Electric kettle",
-        "facilitytype_id": "7",
-        "roomfacilitytype_id": "86",
-        "languagecode": "en",
-        "room_id": "2521517",
-        "hotel_id": "25215"
-      }
-    ],
-    "descriptions": [
-      {
-        "room_id": "2521517",
-        "hotel_id": "25215",
-        "name": "Executive King Room for Single Use",
-        "languagecode": "en",
-        "description": "En suite room with high ceilings, parquet floors, and tea/coffee maker. Offers free WiFi, air conditioning, and a satellite flat-screen TV. The bathroom is complete with luxury toiletries."
-      }
-    ],
-    "bedding": [
-      {
-        "amount": "1",
-        "type": "Extra-large double bed(s) (Super-king size)"
-      }
-    ]
-  },
-  {
-    "roomtype_id": "9",
-    "room_id": "2521518",
-    "ranking": "0",
-    "max_price": "0",
-    "roomtype": "Double",
-    "min_price": "0",
-    "max_persons": "3",
-    "hotel_id": "25215",
-    "bookable": "1",
-    "descriptions": [
-      {
-        "description": "Offering free WiFi, this air-conditioned room comes with a satellite flat-screen TV, a desk and parquet floors. The private bathroom includes a hairdryer and free toiletries.",
-        "room_id": "2521518",
-        "languagecode": "en",
-        "name": "Double Room with Extra Bed",
-        "hotel_id": "25215"
-      }
-    ],
-    "bedding": [
-      {
-        "type": "Single bed(s)",
-        "amount": "1"
-      },
-      {
-        "type": "Large bed(s) (King size)",
-        "amount": "1"
-      }
-    ]
-  },
-  {
-    "max_price": "0",
-    "ranking": "0",
-    "room_id": "2521519",
-    "roomtype_id": "4",
-    "bookable": "1",
-    "hotel_id": "25215",
-    "max_persons": "4",
-    "roomtype": "Quadruple",
-    "min_price": "0",
-    "descriptions": [
-      {
-        "description": "Offering free WiFi, this air-conditioned room comes with a satellite flat-screen TV, a desk and parquet floors. The private bathroom includes a hairdryer and free toiletries.\n\nPlease specify bed preference when booking.",
-        "name": "Quadruple Room",
-        "hotel_id": "25215",
-        "room_id": "2521519",
-        "languagecode": "en"
-      }
-    ],
-    "bedding": [
-      {
-        "type": "Single bed(s)",
-        "amount": "2"
-      },
-      {
-        "type": "Single bed(s)",
-        "amount": "4"
-      },
-      {
-        "type": "Large bed(s) (King size)",
-        "amount": "1"
-      }
-    ]
-  },
-  {
-    "roomtype": "Double",
-    "min_price": "0",
-    "hotel_id": "25215",
-    "max_persons": "2",
-    "bookable": "1",
-    "roomtype_id": "9",
-    "room_id": "2521523",
-    "max_price": "0",
-    "ranking": "0",
-    "facilities": [
-      {
-        "name": "Bath",
-        "facilitytype_id": "5",
-        "type": "boolean",
-        "languagecode": "en",
-        "roomfacilitytype_id": "5",
-        "room_id": "2521523",
-        "hotel_id": "25215"
-      },
-      {
-        "languagecode": "en",
-        "roomfacilitytype_id": "121",
-        "type": "boolean",
-        "name": "City view",
-        "facilitytype_id": "9",
-        "room_id": "2521523",
-        "hotel_id": "25215"
-      },
-      {
-        "name": "Terrace",
-        "facilitytype_id": "9",
-        "type": "boolean",
-        "languagecode": "en",
-        "roomfacilitytype_id": "123",
-        "room_id": "2521523",
-        "hotel_id": "25215"
-      },
-      {
-        "roomfacilitytype_id": "129",
-        "languagecode": "en",
-        "type": "boolean",
-        "name": "Outdoor furniture",
-        "facilitytype_id": "7",
-        "room_id": "2521523",
-        "hotel_id": "25215"
-      }
-    ],
-    "descriptions": [
-      {
-        "description": "Boasting a private terrace with city views, this air-conditioned room comes with a satellite flat-screen TV, a desk and parquet floors. The private bathroom includes a hairdryer and free toiletries. WiFi is free.",
-        "name": "Double Room Top Executive",
-        "room_id": "2521523",
-        "hotel_id": "25215",
-        "languagecode": "en"
-      }
-    ],
-    "bedding": [
-      {
-        "type": "Extra-large double bed(s) (Super-king size)",
-        "amount": "1"
-      }
-    ]
-  },
-  {
-    "min_price": "0",
-    "roomtype": "Double",
-    "max_persons": "1",
-    "hotel_id": "25215",
-    "bookable": "1",
-    "roomtype_id": "9",
-    "room_id": "2521524",
-    "ranking": "0",
-    "max_price": "0",
-    "descriptions": [
-      {
-        "description": "Boasting a private terrace with city views, this air-conditioned room comes with a satellite flat-screen TV, a desk and parquet floors. The private bathroom includes a hairdryer and free toiletries. WiFi is free.",
-        "hotel_id": "25215",
-        "languagecode": "en",
-        "name": " Top Executive Single Use",
-        "room_id": "2521524"
-      }
-    ],
-    "bedding": [
-      {
-        "type": "Extra-large double bed(s) (Super-king size)",
-        "amount": "1"
-      }
-    ]
-  },
-  {
-    "room_id": "2521525",
-    "max_price": "0",
-    "ranking": "0",
-    "roomtype_id": "24",
-    "bookable": "1",
-    "roomtype": "Twin/Double",
-    "min_price": "0",
-    "max_persons": "2",
-    "hotel_id": "25215",
-    "facilities": [
-      {
-        "name": "Toilet paper",
-        "facilitytype_id": "5",
-        "type": "boolean",
-        "languagecode": "en",
-        "roomfacilitytype_id": "141",
-        "room_id": "2521525",
-        "hotel_id": "25215"
-      }
-    ],
-    "descriptions": [
-      {
-        "name": "Double or Twin Room - DogLovers ",
-        "languagecode": "en",
-        "hotel_id": "25215",
-        "room_id": "2521525",
-        "description": "This twin/double room has air conditioning and minibar"
-      }
-    ],
-    "bedding": [
-      {
-        "amount": "1",
-        "type": "Large bed(s) (King size)"
-      }
-    ]
-  },
-  {
-    "roomtype": "Twin/Double",
-    "min_price": "0",
-    "hotel_id": "25215",
-    "max_persons": "1",
-    "bookable": "1",
-    "roomtype_id": "24",
-    "room_id": "2521526",
-    "max_price": "0",
-    "ranking": "0",
-    "descriptions": [
-      {
-        "description": "This twin/double room features a flat-screen TV, minibar and air conditioning.",
-        "languagecode": "en",
-        "room_id": "2521526",
-        "hotel_id": "25215",
-        "name": "Double Room Single Use - DogLovers "
-      }
-    ],
-    "bedding": [
-      {
-        "amount": "1",
-        "type": "Large bed(s) (King size)"
-      }
-    ]
-  }
-]
+{
+  "result": [
+    {
+      "hotel_id": 25215,
+      "room_data": [
+        {
+          "room_description":
+            "Large high ceilinged room with wooden floors and spacious bathroom. Includes free WiFi, work desk and flat-screen satellite TV. Complete with tea/coffee maker and luxury toiletries.",
+          "room_name": "Executive King Room",
+          "room_facilities": [
+            { "room_facility_type_id": 3, "name": "Minibar" },
+            { "name": "Safety Deposit Box", "room_facility_type_id": 6 },
+            { "room_facility_type_id": 7, "name": "Pay-per-view Channels" },
+            { "name": "Telephone", "room_facility_type_id": 9 },
+            { "name": "Air conditioning", "room_facility_type_id": 11 },
+            { "name": "Hairdryer", "room_facility_type_id": 12 },
+            { "room_facility_type_id": 19, "name": "Bathrobe" },
+            { "name": "Radio", "room_facility_type_id": 21 },
+            { "room_facility_type_id": 23, "name": "Desk" },
+            { "name": "Ironing Facilities", "room_facility_type_id": 25 },
+            { "name": "Free toiletries", "room_facility_type_id": 27 },
+            { "name": "Toilet", "room_facility_type_id": 31 },
+            { "room_facility_type_id": 38, "name": "Bathroom" },
+            { "room_facility_type_id": 40, "name": "Heating" },
+            { "room_facility_type_id": 43, "name": "Slippers" },
+            { "name": "Satellite Channels", "room_facility_type_id": 44 },
+            { "name": "Bath or Shower", "room_facility_type_id": 69 },
+            { "room_facility_type_id": 74, "name": "Laptop safe" },
+            { "name": "Flat-screen TV", "room_facility_type_id": 75 },
+            { "name": "Hardwood/Parquet floors", "room_facility_type_id": 82 },
+            { "room_facility_type_id": 83, "name": "Wake-up service" },
+            {
+              "room_facility_type_id": 91,
+              "name": "Towels/Sheets (extra fee)"
+            },
+            { "room_facility_type_id": 95, "name": "Wardrobe/Closet" },
+            { "name": "Bidet", "room_facility_type_id": 100 },
+            { "room_facility_type_id": 124, "name": "Towels" },
+            { "room_facility_type_id": 125, "name": "Linen" }
+          ],
+          "room_photos": [
+            {
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030508.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030508.jpg",
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030508.jpg"
+            },
+            {
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030464.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030464.jpg",
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030464.jpg"
+            },
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030481.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030481.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030481.jpg"
+            },
+            {
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030551.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030551.jpg",
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030551.jpg"
+            },
+            {
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030555.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030555.jpg",
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030555.jpg"
+            },
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030580.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030580.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030580.jpg"
+            },
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030518.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030518.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030518.jpg"
+            }
+          ],
+          "room_id": 2521507,
+          "room_info": {
+            "max_persons": 2,
+            "max_price": 0,
+            "ranking": 6,
+            "bookable": true,
+            "room_type_id": 9,
+            "room_size": { "metre_square": 25 },
+            "min_price": 0,
+            "room_type": "Double",
+            "bathroom_count": 0,
+            "bedroom_count": 0
+          }
+        },
+        {
+          "room_description":
+            "Modern high ceilinged room with wooden floors and spacious bathroom. Includes free WiFi, work desk and flat-screen satellite TV.",
+          "room_id": 2521509,
+          "room_facilities": [
+            { "name": "Minibar", "room_facility_type_id": 3 },
+            { "room_facility_type_id": 4, "name": "Shower" },
+            { "name": "Safety Deposit Box", "room_facility_type_id": 6 },
+            { "room_facility_type_id": 7, "name": "Pay-per-view Channels" },
+            { "name": "Telephone", "room_facility_type_id": 9 },
+            { "room_facility_type_id": 11, "name": "Air conditioning" },
+            { "room_facility_type_id": 12, "name": "Hairdryer" },
+            { "name": "Radio", "room_facility_type_id": 21 },
+            { "room_facility_type_id": 23, "name": "Desk" },
+            { "room_facility_type_id": 27, "name": "Free toiletries" },
+            { "room_facility_type_id": 31, "name": "Toilet" },
+            { "name": "Bathroom", "room_facility_type_id": 38 },
+            { "room_facility_type_id": 40, "name": "Heating" },
+            { "name": "Satellite Channels", "room_facility_type_id": 44 },
+            { "name": "Laptop safe", "room_facility_type_id": 74 },
+            { "room_facility_type_id": 75, "name": "Flat-screen TV" },
+            { "name": "Sofa", "room_facility_type_id": 77 },
+            { "room_facility_type_id": 82, "name": "Hardwood/Parquet floors" },
+            { "name": "Wake-up service", "room_facility_type_id": 83 },
+            { "name": "Wardrobe/Closet", "room_facility_type_id": 95 },
+            { "name": "Bidet", "room_facility_type_id": 100 }
+          ],
+          "room_photos": [
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030573.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030573.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030573.jpg"
+            },
+            {
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030572.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030572.jpg",
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030572.jpg"
+            },
+            {
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030580.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030580.jpg",
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030580.jpg"
+            },
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030487.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030487.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030487.jpg"
+            },
+            {
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030561.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030561.jpg",
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030561.jpg"
+            }
+          ],
+          "room_name": "Twin Room",
+          "room_info": {
+            "min_price": 0,
+            "room_type": "Twin",
+            "room_type_id": 8,
+            "room_size": { "metre_square": 23 },
+            "bedroom_count": 0,
+            "bathroom_count": 0,
+            "max_persons": 2,
+            "max_price": 0,
+            "ranking": 3,
+            "bookable": true
+          }
+        },
+        {
+          "room_info": {
+            "max_price": 0,
+            "max_persons": 2,
+            "ranking": 1,
+            "bookable": true,
+            "room_size": { "metre_square": 23 },
+            "room_type_id": 9,
+            "room_type": "Double",
+            "min_price": 0,
+            "bathroom_count": 0,
+            "bedroom_count": 0
+          },
+          "room_facilities": [
+            { "name": "Minibar", "room_facility_type_id": 3 },
+            { "room_facility_type_id": 4, "name": "Shower" },
+            { "name": "Safety Deposit Box", "room_facility_type_id": 6 },
+            { "room_facility_type_id": 7, "name": "Pay-per-view Channels" },
+            { "name": "Telephone", "room_facility_type_id": 9 },
+            { "name": "Air conditioning", "room_facility_type_id": 11 },
+            { "name": "Hairdryer", "room_facility_type_id": 12 },
+            { "room_facility_type_id": 21, "name": "Radio" },
+            { "name": "Desk", "room_facility_type_id": 23 },
+            { "name": "Free toiletries", "room_facility_type_id": 27 },
+            { "room_facility_type_id": 31, "name": "Toilet" },
+            { "name": "Bathroom", "room_facility_type_id": 38 },
+            { "name": "Heating", "room_facility_type_id": 40 },
+            { "name": "Satellite Channels", "room_facility_type_id": 44 },
+            { "room_facility_type_id": 74, "name": "Laptop safe" },
+            { "name": "Flat-screen TV", "room_facility_type_id": 75 },
+            { "room_facility_type_id": 82, "name": "Hardwood/Parquet floors" },
+            { "room_facility_type_id": 83, "name": "Wake-up service" },
+            { "name": "Wardrobe/Closet", "room_facility_type_id": 95 },
+            { "room_facility_type_id": 100, "name": "Bidet" }
+          ],
+          "room_photos": [
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030622.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030622.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030622.jpg"
+            },
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030619.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030619.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030619.jpg"
+            },
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030578.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030578.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030578.jpg"
+            },
+            {
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030525.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030525.jpg",
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030525.jpg"
+            },
+            {
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030491.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030491.jpg",
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030491.jpg"
+            },
+            {
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030604.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030604.jpg",
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030604.jpg"
+            }
+          ],
+          "room_id": 2521511,
+          "room_name": "Double Room",
+          "room_description":
+            "Includes free WiFi, work desk and flat-screen satellite TV.\n\nNon-smoking rooms on request."
+        },
+        {
+          "room_description":
+            "This spacious and comfortable room has high ceilings and parquet floors. It features free WiFi, a work desk and flat-screen TV with satellite channels.",
+          "room_facilities": [
+            { "room_facility_type_id": 3, "name": "Minibar" },
+            { "room_facility_type_id": 4, "name": "Shower" },
+            { "room_facility_type_id": 6, "name": "Safety Deposit Box" },
+            { "room_facility_type_id": 7, "name": "Pay-per-view Channels" },
+            { "room_facility_type_id": 9, "name": "Telephone" },
+            { "name": "Air conditioning", "room_facility_type_id": 11 },
+            { "name": "Hairdryer", "room_facility_type_id": 12 },
+            { "room_facility_type_id": 21, "name": "Radio" },
+            { "name": "Desk", "room_facility_type_id": 23 },
+            { "room_facility_type_id": 27, "name": "Free toiletries" },
+            { "name": "Toilet", "room_facility_type_id": 31 },
+            { "room_facility_type_id": 38, "name": "Bathroom" },
+            { "name": "Heating", "room_facility_type_id": 40 },
+            { "name": "Satellite Channels", "room_facility_type_id": 44 },
+            { "room_facility_type_id": 74, "name": "Laptop safe" },
+            { "room_facility_type_id": 75, "name": "Flat-screen TV" },
+            { "name": "Hardwood/Parquet floors", "room_facility_type_id": 82 },
+            { "name": "Wake-up service", "room_facility_type_id": 83 },
+            { "room_facility_type_id": 95, "name": "Wardrobe/Closet" },
+            { "room_facility_type_id": 100, "name": "Bidet" }
+          ],
+          "room_name": "Triple Room",
+          "room_photos": [
+            {
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030615.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030615.jpg",
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030615.jpg"
+            },
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030579.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030579.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030579.jpg"
+            },
+            {
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030572.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030572.jpg",
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030572.jpg"
+            },
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030491.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030491.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030491.jpg"
+            },
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030637.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030637.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030637.jpg"
+            }
+          ],
+          "room_id": 2521512,
+          "room_info": {
+            "ranking": 4,
+            "bookable": true,
+            "max_price": 0,
+            "max_persons": 3,
+            "bedroom_count": 0,
+            "bathroom_count": 0,
+            "room_type": "Triple",
+            "min_price": 0,
+            "room_size": { "metre_square": 25 },
+            "room_type_id": 7
+          }
+        },
+        {
+          "room_facilities": [
+            { "name": "Minibar", "room_facility_type_id": 3 },
+            { "room_facility_type_id": 4, "name": "Shower" },
+            { "room_facility_type_id": 6, "name": "Safety Deposit Box" },
+            { "name": "Pay-per-view Channels", "room_facility_type_id": 7 },
+            { "name": "Telephone", "room_facility_type_id": 9 },
+            { "room_facility_type_id": 11, "name": "Air conditioning" },
+            { "room_facility_type_id": 12, "name": "Hairdryer" },
+            { "room_facility_type_id": 21, "name": "Radio" },
+            { "room_facility_type_id": 23, "name": "Desk" },
+            { "room_facility_type_id": 27, "name": "Free toiletries" },
+            { "room_facility_type_id": 31, "name": "Toilet" },
+            { "name": "Bathroom", "room_facility_type_id": 38 },
+            { "room_facility_type_id": 40, "name": "Heating" },
+            { "name": "Satellite Channels", "room_facility_type_id": 44 },
+            { "room_facility_type_id": 74, "name": "Laptop safe" },
+            { "room_facility_type_id": 75, "name": "Flat-screen TV" },
+            { "name": "Hardwood/Parquet floors", "room_facility_type_id": 82 },
+            { "room_facility_type_id": 83, "name": "Wake-up service" },
+            { "room_facility_type_id": 95, "name": "Wardrobe/Closet" },
+            { "room_facility_type_id": 100, "name": "Bidet" }
+          ],
+          "room_photos": [
+            {
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030622.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030622.jpg",
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030622.jpg"
+            },
+            {
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030575.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030575.jpg",
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030575.jpg"
+            },
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030518.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030518.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030518.jpg"
+            },
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030579.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030579.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030579.jpg"
+            },
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030619.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030619.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030619.jpg"
+            },
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030499.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030499.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030499.jpg"
+            },
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030487.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030487.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030487.jpg"
+            }
+          ],
+          "room_id": 2521513,
+          "room_name": "Two Connecting Rooms",
+          "room_info": {
+            "bookable": true,
+            "ranking": 5,
+            "max_price": 0,
+            "max_persons": 4,
+            "bathroom_count": 0,
+            "bedroom_count": 0,
+            "room_size": { "metre_square": 25 },
+            "room_type_id": 24,
+            "room_type": "Twin/Double",
+            "min_price": 0
+          },
+          "room_description":
+            "Composed of connecting rooms, each with a spacious bathroom, this room features parquet floors and a work desk. It also has free WiFi and a flat-screen TV with satellite channels."
+        },
+        {
+          "room_facilities": [
+            { "room_facility_type_id": 3, "name": "Minibar" },
+            { "room_facility_type_id": 4, "name": "Shower" },
+            { "room_facility_type_id": 6, "name": "Safety Deposit Box" },
+            { "name": "Pay-per-view Channels", "room_facility_type_id": 7 },
+            { "room_facility_type_id": 9, "name": "Telephone" },
+            { "name": "Air conditioning", "room_facility_type_id": 11 },
+            { "room_facility_type_id": 12, "name": "Hairdryer" },
+            { "room_facility_type_id": 21, "name": "Radio" },
+            { "name": "Desk", "room_facility_type_id": 23 },
+            { "name": "Free toiletries", "room_facility_type_id": 27 },
+            { "room_facility_type_id": 31, "name": "Toilet" },
+            { "name": "Bathroom", "room_facility_type_id": 38 },
+            { "room_facility_type_id": 40, "name": "Heating" },
+            { "name": "Satellite Channels", "room_facility_type_id": 44 },
+            { "name": "Laptop safe", "room_facility_type_id": 74 },
+            { "room_facility_type_id": 75, "name": "Flat-screen TV" },
+            { "name": "Hardwood/Parquet floors", "room_facility_type_id": 82 },
+            { "name": "Wake-up service", "room_facility_type_id": 83 },
+            { "room_facility_type_id": 95, "name": "Wardrobe/Closet" },
+            { "room_facility_type_id": 100, "name": "Bidet" }
+          ],
+          "room_id": 2521515,
+          "room_photos": [
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030578.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030578.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030578.jpg"
+            },
+            {
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030579.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030579.jpg",
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030579.jpg"
+            },
+            {
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030491.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030491.jpg",
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030491.jpg"
+            },
+            {
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030572.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030572.jpg",
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030572.jpg"
+            },
+            {
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030573.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030573.jpg",
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030573.jpg"
+            },
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030487.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030487.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030487.jpg"
+            }
+          ],
+          "room_name": "Double or Twin Room for Single Use",
+          "room_info": {
+            "bookable": true,
+            "ranking": 2,
+            "max_persons": 1,
+            "max_price": 363.27,
+            "bathroom_count": 0,
+            "bedroom_count": 0,
+            "room_type_id": 24,
+            "room_size": { "metre_square": 23 },
+            "min_price": 53.1,
+            "room_type": "Twin/Double"
+          },
+          "room_description":
+            "Includes free WiFi, work desk and flat-screen satellite TV.\n\nNon-smoking rooms on request."
+        },
+        {
+          "room_description":
+            "En suite room with high ceilings, parquet floors, and tea/coffee maker. Offers free WiFi, air conditioning, and a satellite flat-screen TV. The bathroom is complete with luxury toiletries.",
+          "room_info": {
+            "bathroom_count": 0,
+            "bedroom_count": 0,
+            "room_size": { "metre_square": 24 },
+            "room_type_id": 9,
+            "room_type": "Double",
+            "min_price": 0,
+            "ranking": 7,
+            "bookable": true,
+            "max_price": 0,
+            "max_persons": 1
+          },
+          "room_id": 2521517,
+          "room_facilities": [
+            { "name": "Minibar", "room_facility_type_id": 3 },
+            { "name": "Safety Deposit Box", "room_facility_type_id": 6 },
+            { "name": "Pay-per-view Channels", "room_facility_type_id": 7 },
+            { "room_facility_type_id": 9, "name": "Telephone" },
+            { "room_facility_type_id": 11, "name": "Air conditioning" },
+            { "name": "Hairdryer", "room_facility_type_id": 12 },
+            { "name": "Bathrobe", "room_facility_type_id": 19 },
+            { "room_facility_type_id": 21, "name": "Radio" },
+            { "name": "Desk", "room_facility_type_id": 23 },
+            { "name": "Ironing Facilities", "room_facility_type_id": 25 },
+            { "room_facility_type_id": 27, "name": "Free toiletries" },
+            { "name": "Toilet", "room_facility_type_id": 31 },
+            { "name": "Bathroom", "room_facility_type_id": 38 },
+            { "name": "Heating", "room_facility_type_id": 40 },
+            { "name": "Slippers", "room_facility_type_id": 43 },
+            { "room_facility_type_id": 44, "name": "Satellite Channels" },
+            { "room_facility_type_id": 69, "name": "Bath or Shower" },
+            { "name": "Laptop safe", "room_facility_type_id": 74 },
+            { "room_facility_type_id": 75, "name": "Flat-screen TV" },
+            { "name": "Hardwood/Parquet floors", "room_facility_type_id": 82 },
+            { "room_facility_type_id": 83, "name": "Wake-up service" },
+            { "name": "Electric kettle", "room_facility_type_id": 86 },
+            { "room_facility_type_id": 95, "name": "Wardrobe/Closet" },
+            { "name": "Bidet", "room_facility_type_id": 100 }
+          ],
+          "room_photos": [
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030525.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030525.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030525.jpg"
+            },
+            {
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030489.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030489.jpg",
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030489.jpg"
+            },
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030513.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030513.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030513.jpg"
+            },
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030551.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030551.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030551.jpg"
+            },
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030518.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030518.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030518.jpg"
+            },
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030555.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030555.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030555.jpg"
+            }
+          ],
+          "room_name": "Executive King Room for Single Use"
+        },
+        {
+          "room_id": 2521518,
+          "room_facilities": [
+            { "room_facility_type_id": 3, "name": "Minibar" },
+            { "room_facility_type_id": 6, "name": "Safety Deposit Box" },
+            { "room_facility_type_id": 9, "name": "Telephone" },
+            { "room_facility_type_id": 11, "name": "Air conditioning" },
+            { "name": "Hairdryer", "room_facility_type_id": 12 },
+            { "name": "Radio", "room_facility_type_id": 21 },
+            { "room_facility_type_id": 23, "name": "Desk" },
+            { "name": "Free toiletries", "room_facility_type_id": 27 },
+            { "name": "Toilet", "room_facility_type_id": 31 },
+            { "room_facility_type_id": 38, "name": "Bathroom" },
+            { "room_facility_type_id": 40, "name": "Heating" },
+            { "room_facility_type_id": 44, "name": "Satellite Channels" },
+            { "name": "Flat-screen TV", "room_facility_type_id": 75 },
+            { "room_facility_type_id": 82, "name": "Hardwood/Parquet floors" },
+            { "room_facility_type_id": 83, "name": "Wake-up service" },
+            { "name": "Wardrobe/Closet", "room_facility_type_id": 95 },
+            { "name": "Bidet", "room_facility_type_id": 100 }
+          ],
+          "room_photos": [
+            {
+              "main_photo": true,
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030690.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030690.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030690.jpg"
+            },
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030688.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030688.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030688.jpg"
+            },
+            {
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030660.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030660.jpg",
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030660.jpg"
+            },
+            {
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030512.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030512.jpg",
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030512.jpg"
+            },
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030579.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030579.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030579.jpg"
+            },
+            {
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030499.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030499.jpg",
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030499.jpg"
+            }
+          ],
+          "room_name": "Double Room with Extra Bed",
+          "room_info": {
+            "max_persons": 3,
+            "max_price": 0,
+            "bookable": true,
+            "ranking": 0,
+            "min_price": 0,
+            "room_type": "Double",
+            "room_type_id": 9,
+            "room_size": { "metre_square": 24 },
+            "bedroom_count": 0,
+            "bathroom_count": 0
+          },
+          "room_description":
+            "Offering free WiFi, this air-conditioned room comes with a satellite flat-screen TV, a desk and parquet floors. The private bathroom includes a hairdryer and free toiletries."
+        },
+        {
+          "room_facilities": [
+            { "name": "Minibar", "room_facility_type_id": 3 },
+            { "room_facility_type_id": 6, "name": "Safety Deposit Box" },
+            { "room_facility_type_id": 9, "name": "Telephone" },
+            { "name": "Air conditioning", "room_facility_type_id": 11 },
+            { "name": "Hairdryer", "room_facility_type_id": 12 },
+            { "room_facility_type_id": 21, "name": "Radio" },
+            { "room_facility_type_id": 23, "name": "Desk" },
+            { "name": "Free toiletries", "room_facility_type_id": 27 },
+            { "name": "Toilet", "room_facility_type_id": 31 },
+            { "name": "Bathroom", "room_facility_type_id": 38 },
+            { "name": "Heating", "room_facility_type_id": 40 },
+            { "name": "Satellite Channels", "room_facility_type_id": 44 },
+            { "name": "Flat-screen TV", "room_facility_type_id": 75 },
+            { "name": "Hardwood/Parquet floors", "room_facility_type_id": 82 },
+            { "room_facility_type_id": 83, "name": "Wake-up service" },
+            { "name": "Wardrobe/Closet", "room_facility_type_id": 95 },
+            { "name": "Bidet", "room_facility_type_id": 100 }
+          ],
+          "room_photos": [
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030578.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030578.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030578.jpg"
+            },
+            {
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030688.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030688.jpg",
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030688.jpg"
+            },
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030558.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030558.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030558.jpg"
+            },
+            {
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030491.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030491.jpg",
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030491.jpg"
+            }
+          ],
+          "room_name": "Quadruple Room",
+          "room_id": 2521519,
+          "room_info": {
+            "ranking": 0,
+            "bookable": true,
+            "max_persons": 4,
+            "max_price": 0,
+            "bedroom_count": 0,
+            "bathroom_count": 0,
+            "min_price": 0,
+            "room_type": "Quadruple",
+            "room_type_id": 4,
+            "room_size": { "metre_square": 25 }
+          },
+          "room_description":
+            "Offering free WiFi, this air-conditioned room comes with a satellite flat-screen TV, a desk and parquet floors. The private bathroom includes a hairdryer and free toiletries.\n\nPlease specify bed preference when booking."
+        },
+        {
+          "room_description":
+            "Boasting a private terrace with city views, this air-conditioned room comes with a satellite flat-screen TV, a desk and parquet floors. The private bathroom includes a hairdryer and free toiletries. WiFi is free.",
+          "room_facilities": [
+            { "name": "Minibar", "room_facility_type_id": 3 },
+            { "name": "Bath", "room_facility_type_id": 5 },
+            { "name": "Safety Deposit Box", "room_facility_type_id": 6 },
+            { "room_facility_type_id": 9, "name": "Telephone" },
+            { "name": "Air conditioning", "room_facility_type_id": 11 },
+            { "room_facility_type_id": 12, "name": "Hairdryer" },
+            { "room_facility_type_id": 19, "name": "Bathrobe" },
+            { "name": "Radio", "room_facility_type_id": 21 },
+            { "name": "Desk", "room_facility_type_id": 23 },
+            { "room_facility_type_id": 25, "name": "Ironing Facilities" },
+            { "name": "Free toiletries", "room_facility_type_id": 27 },
+            { "name": "Toilet", "room_facility_type_id": 31 },
+            { "room_facility_type_id": 38, "name": "Bathroom" },
+            { "room_facility_type_id": 40, "name": "Heating" },
+            { "name": "Satellite Channels", "room_facility_type_id": 44 },
+            { "name": "Flat-screen TV", "room_facility_type_id": 75 },
+            { "room_facility_type_id": 82, "name": "Hardwood/Parquet floors" },
+            { "name": "Wake-up service", "room_facility_type_id": 83 },
+            { "name": "Electric kettle", "room_facility_type_id": 86 },
+            { "name": "Wardrobe/Closet", "room_facility_type_id": 95 },
+            { "name": "Bidet", "room_facility_type_id": 100 },
+            { "name": "City view", "room_facility_type_id": 121 },
+            { "name": "Terrace", "room_facility_type_id": 123 },
+            { "name": "Outdoor furniture", "room_facility_type_id": 129 }
+          ],
+          "room_name": "Double Room Top Executive",
+          "room_photos": [
+            {
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030440.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030440.jpg",
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030440.jpg"
+            },
+            {
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030489.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030489.jpg",
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030489.jpg"
+            },
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030517.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030517.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030517.jpg"
+            },
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030555.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030555.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030555.jpg"
+            },
+            {
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030525.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030525.jpg",
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030525.jpg"
+            },
+            {
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030485.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030485.jpg",
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030485.jpg"
+            }
+          ],
+          "room_id": 2521523,
+          "room_info": {
+            "max_price": 0,
+            "max_persons": 2,
+            "bookable": true,
+            "ranking": 0,
+            "room_type": "Double",
+            "min_price": 0,
+            "room_size": { "metre_square": 25 },
+            "room_type_id": 9,
+            "bedroom_count": 0,
+            "bathroom_count": 0
+          }
+        },
+        {
+          "room_description":
+            "Boasting a private terrace with city views, this air-conditioned room comes with a satellite flat-screen TV, a desk and parquet floors. The private bathroom includes a hairdryer and free toiletries. WiFi is free.",
+          "room_info": {
+            "max_persons": 1,
+            "max_price": 0,
+            "ranking": 0,
+            "bookable": true,
+            "room_type_id": 9,
+            "room_size": { "metre_square": 25 },
+            "min_price": 0,
+            "room_type": "Double",
+            "bathroom_count": 0,
+            "bedroom_count": 0
+          },
+          "room_facilities": [
+            { "room_facility_type_id": 3, "name": "Minibar" },
+            { "room_facility_type_id": 6, "name": "Safety Deposit Box" },
+            { "room_facility_type_id": 9, "name": "Telephone" },
+            { "name": "Air conditioning", "room_facility_type_id": 11 },
+            { "name": "Hairdryer", "room_facility_type_id": 12 },
+            { "room_facility_type_id": 21, "name": "Radio" },
+            { "name": "Desk", "room_facility_type_id": 23 },
+            { "name": "Free toiletries", "room_facility_type_id": 27 },
+            { "name": "Toilet", "room_facility_type_id": 31 },
+            { "name": "Bathroom", "room_facility_type_id": 38 },
+            { "name": "Heating", "room_facility_type_id": 40 },
+            { "name": "Satellite Channels", "room_facility_type_id": 44 },
+            { "name": "Flat-screen TV", "room_facility_type_id": 75 },
+            { "name": "Hardwood/Parquet floors", "room_facility_type_id": 82 },
+            { "name": "Wake-up service", "room_facility_type_id": 83 },
+            { "room_facility_type_id": 95, "name": "Wardrobe/Closet" },
+            { "name": "Bidet", "room_facility_type_id": 100 },
+            { "name": "City view", "room_facility_type_id": 121 },
+            { "room_facility_type_id": 123, "name": "Terrace" }
+          ],
+          "room_id": 2521524,
+          "room_photos": [
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030508.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030508.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030508.jpg"
+            },
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030512.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030512.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030512.jpg"
+            },
+            {
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030488.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030488.jpg",
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030488.jpg"
+            },
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030517.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030517.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030517.jpg"
+            },
+            {
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030440.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030440.jpg",
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030440.jpg"
+            },
+            {
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030579.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030579.jpg",
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030579.jpg"
+            },
+            {
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/740/74030499.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/740/74030499.jpg",
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/740/74030499.jpg"
+            }
+          ],
+          "room_name": " Top Executive Single Use"
+        },
+        {
+          "room_description":
+            "This twin/double room has air conditioning and minibar",
+          "room_info": {
+            "bathroom_count": 0,
+            "bedroom_count": 0,
+            "room_type_id": 24,
+            "room_size": { "metre_square": 25 },
+            "min_price": 0,
+            "room_type": "Twin/Double",
+            "bookable": true,
+            "ranking": 0,
+            "max_persons": 2,
+            "max_price": 0
+          },
+          "room_facilities": [
+            { "name": "Minibar", "room_facility_type_id": 3 },
+            { "name": "Safety Deposit Box", "room_facility_type_id": 6 },
+            { "name": "Telephone", "room_facility_type_id": 9 },
+            { "name": "Air conditioning", "room_facility_type_id": 11 },
+            { "room_facility_type_id": 12, "name": "Hairdryer" },
+            { "name": "Radio", "room_facility_type_id": 21 },
+            { "name": "Desk", "room_facility_type_id": 23 },
+            { "name": "Free toiletries", "room_facility_type_id": 27 },
+            { "room_facility_type_id": 31, "name": "Toilet" },
+            { "name": "Bathroom", "room_facility_type_id": 38 },
+            { "room_facility_type_id": 40, "name": "Heating" },
+            { "room_facility_type_id": 44, "name": "Satellite Channels" },
+            { "name": "Flat-screen TV", "room_facility_type_id": 75 },
+            { "room_facility_type_id": 82, "name": "Hardwood/Parquet floors" },
+            { "room_facility_type_id": 83, "name": "Wake-up service" },
+            { "name": "Wardrobe/Closet", "room_facility_type_id": 95 },
+            { "room_facility_type_id": 100, "name": "Bidet" },
+            { "room_facility_type_id": 141, "name": "Toilet paper" }
+          ],
+          "room_name": "Double or Twin Room - DogLovers ",
+          "room_photos": [
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/789/78908092.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/789/78908092.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/789/78908092.jpg"
+            },
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/789/78908097.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/789/78908097.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/789/78908097.jpg"
+            },
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/789/78908099.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/789/78908099.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/789/78908099.jpg"
+            },
+            {
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/789/78908100.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/789/78908100.jpg",
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/789/78908100.jpg"
+            },
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/789/78911303.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/789/78911303.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/789/78911303.jpg"
+            }
+          ],
+          "room_id": 2521525
+        },
+        {
+          "room_description":
+            "This twin/double room features a flat-screen TV, minibar and air conditioning.",
+          "room_photos": [
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/789/78908099.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/789/78908099.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/789/78908099.jpg"
+            },
+            {
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/789/78908097.jpg",
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/789/78908097.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/789/78908097.jpg"
+            },
+            {
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/789/78908100.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/789/78908100.jpg",
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/789/78908100.jpg"
+            },
+            {
+              "url_max300":
+                "https://aff.bstatic.com/images/hotel/max300/789/78911303.jpg",
+              "url_square60":
+                "https://aff.bstatic.com/images/hotel/square60/789/78911303.jpg",
+              "url_original":
+                "https://aff.bstatic.com/images/hotel/max500/789/78911303.jpg"
+            }
+          ],
+          "room_facilities": [
+            { "room_facility_type_id": 3, "name": "Minibar" },
+            { "name": "Safety Deposit Box", "room_facility_type_id": 6 },
+            { "room_facility_type_id": 9, "name": "Telephone" },
+            { "room_facility_type_id": 11, "name": "Air conditioning" },
+            { "room_facility_type_id": 12, "name": "Hairdryer" },
+            { "name": "Radio", "room_facility_type_id": 21 },
+            { "name": "Desk", "room_facility_type_id": 23 },
+            { "room_facility_type_id": 27, "name": "Free toiletries" },
+            { "name": "Toilet", "room_facility_type_id": 31 },
+            { "room_facility_type_id": 38, "name": "Bathroom" },
+            { "name": "Heating", "room_facility_type_id": 40 },
+            { "name": "Satellite Channels", "room_facility_type_id": 44 },
+            { "room_facility_type_id": 75, "name": "Flat-screen TV" },
+            { "name": "Hardwood/Parquet floors", "room_facility_type_id": 82 },
+            { "room_facility_type_id": 83, "name": "Wake-up service" },
+            { "name": "Wardrobe/Closet", "room_facility_type_id": 95 },
+            { "room_facility_type_id": 100, "name": "Bidet" },
+            { "room_facility_type_id": 141, "name": "Toilet paper" }
+          ],
+          "room_id": 2521526,
+          "room_name": "Double Room Single Use - DogLovers ",
+          "room_info": {
+            "min_price": 0,
+            "room_type": "Twin/Double",
+            "room_type_id": 24,
+            "room_size": { "metre_square": 24 },
+            "bedroom_count": 0,
+            "bathroom_count": 0,
+            "max_persons": 1,
+            "max_price": 0,
+            "ranking": 0,
+            "bookable": true
+          }
+        }
+      ]
+    }
+  ]
+}

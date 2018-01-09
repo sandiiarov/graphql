@@ -9,16 +9,16 @@ import {
 import {
   connectionArgs,
   connectionDefinitions,
-  connectionFromPromisedArray,
+  connectionFromArray,
 } from 'graphql-relay';
 
 import { globalIdField } from '../../../common/services/OpaqueIdentifier';
 import GraphQLHotelRoomBedding from './HotelRoomBedding';
 import GraphQLHotelRoomDescription from './HotelRoomDescription';
 import GraphQLHotelPhoto from './HotelPhoto';
-import HotelRoomPhotoDataloader from '../../dataloaders/HotelRoomPhotos';
 
 import type { HotelRoomType } from '../../dataloaders/flow/HotelRoomType';
+import type { GraphqlContextType } from '../../../common/services/GraphqlContext';
 
 export default new GraphQLObjectType({
   name: 'HotelRoom',
@@ -38,7 +38,13 @@ export default new GraphQLObjectType({
 
     bedding: {
       type: new GraphQLList(GraphQLHotelRoomBedding),
-      resolve: ({ bedding }: HotelRoomType) => bedding,
+      resolve: (
+        { id: roomId, hotelId }: HotelRoomType,
+        args: Object,
+        { dataLoader }: GraphqlContextType,
+      ) => {
+        return dataLoader.hotel.roomBedding.load({ hotelId, roomId });
+      },
     },
 
     photos: {
@@ -48,11 +54,9 @@ export default new GraphQLObjectType({
         nodeType: GraphQLHotelPhoto,
       }).connectionType,
       args: connectionArgs,
-      resolve: async ({ id }: HotelRoomType, args: Object) => {
-        return connectionFromPromisedArray(
-          HotelRoomPhotoDataloader.load(id),
-          args,
-        );
+      resolve: async ({ photos }: HotelRoomType, args: Object) => {
+        if (!photos) return [];
+        return connectionFromArray(photos, args);
       },
     },
 

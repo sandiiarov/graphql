@@ -1,85 +1,73 @@
 // @flow
 
-import { get } from '../../common/services/HttpRequest';
-import Config from '../../../config/application';
+import { get } from '../services/BookingComRequest';
+import { queryWithParameters } from '../../../config/application';
 import OptimisticDataloader from '../../common/services/OptimisticDataloader';
+import sanitizePhoto from './PhotoSanitizer';
 
-import type { HotelType } from './flow/HotelType';
-import type { PhotoType as HotelPhotoType } from './flow/PhotoType';
+import type { HotelExtendedType } from './flow/HotelExtendedType';
+import type { HotelFacilityType } from './flow/HotelFacilityType';
+import type { HotelRoomType } from './flow/HotelRoomType';
 
 /**
  * This data-loader loads all hotels by their ID.
  *
- * @see https://hotels-api.skypicker.com/api/hotelDetails?hotel_ids=25215
+ * @see https://distribution-xml.booking.com/2.0/json/hotels?hotel_ids=25215&extras=hotel_info,hotel_photos,hotel_description,hotel_facilities,payment_details,room_info,room_photos,room_description,room_facilities
  */
 export default new OptimisticDataloader(async (hotelIds: number[]): Promise<
-  ExtendedHotelType[],
-> => sanitizeHotels(await get(Config.restApiEndpoint.hotels.single(hotelIds))));
-
-type ExtendedHotelType = {
-  ...HotelType,
-  facilities: HotelFacilityType[],
-  photos: HotelPhotoType[],
-  location: {|
-    longitude: string,
-    latitude: string,
-  |},
-};
-
-function sanitizeHotels(hotels): ExtendedHotelType[] {
-  return hotels.map(hotel => {
-    if (!hotelExists(hotel)) {
-      // do not throw, just return it to the OptimisticDataloader
-      return new Error('Requested hotel does not exist.');
-    }
-    return {
-      // HotelType:
-      id: hotel.hotel_id,
-      name: hotel.name,
-      rating: Math.round(hotel.class),
-      review: {
-        // there is no "review_score_word" in the output JSON
-        score: hotel.review_score,
-        count: hotel.review_nr,
-      },
-      currencyCode: hotel.currencycode,
-      price: null, // it doesn't make sense to provide price in this case
-      whitelabelUrl: hotel.url, // it's not whitelabel (?)
-      cityName: hotel.city,
-      address: {
-        street: hotel.address,
-        city: hotel.city,
-        zip: hotel.zip,
-      },
-      summary: sanitizeHotelDescription(hotel.descriptions),
-      // + ExtendedHotelType:
-      facilities: sanitizeHotelFacilities(hotel.facilities),
-      photos: sanitizeHotelPhotos(hotel.photos),
-      location: {
-        longitude: hotel.location.longitude,
-        latitude: hotel.location.latitude,
-      },
-    };
+  Array<HotelExtendedType | Error>,
+> => {
+  const response = await get(createUrl(hotelIds));
+  const hotels = hotelIds.map(id => {
+    const hotelData = response.result.find(h => h.hotel_id == id);
+    if (!hotelData) return new Error('Requested hotel does not exist.');
+    return sanitizeHotel(hotelData);
   });
-}
+  return hotels;
+});
 
-export function sanitizeHotelDescription(
-  descriptions: Array<{|
-    descriptiontype_id: string,
-    description: string,
-  |}>,
-): string | null {
-  const summary = descriptions.find(
-    // no docs but according to the Booking.com type "6" is called summary
-    description => description.descriptiontype_id === '6',
+function createUrl(hotelIds: number[]) {
+  const params = {
+    extras:
+      'hotel_info,hotel_photos,hotel_description,hotel_facilities,payment_details,room_info,room_photos,room_description,room_facilities',
+    hotel_ids: hotelIds.join(','),
+  };
+  return queryWithParameters(
+    'https://distribution-xml.booking.com/2.0/json/hotels',
+    params,
   );
-  return summary ? summary.description : null;
 }
 
-export type HotelFacilityType = {|
-  id: string,
-  name: string,
-|};
+function sanitizeHotel(hotelData): HotelExtendedType {
+  const { hotel_data: hotel, hotel_id, room_data: rooms } = hotelData;
+  return {
+    id: hotel_id,
+    name: hotel.name,
+    rating: Math.round(hotel.class),
+    review: {
+      // there is no "review_score_word" in the output JSON
+      score: hotel.review_score,
+      count: hotel.number_of_reviews,
+    },
+    currencyCode: hotel.currencycode,
+    price: null, // it doesn't make sense to provide price in this case
+    whitelabelUrl: hotel.url, // it's not whitelabel (?)
+    cityName: hotel.city,
+    address: {
+      street: hotel.address,
+      city: hotel.city,
+      zip: hotel.zip,
+    },
+    summary: hotel.hotel_description,
+    facilities: sanitizeHotelFacilities(hotel.hotel_facilities),
+    photos: sanitizePhotos(hotel.hotel_photos),
+    location: {
+      longitude: hotel.location.longitude,
+      latitude: hotel.location.latitude,
+    },
+    rooms: sanitizeHotelRooms(rooms, hotel_id),
+  };
+}
 
 function sanitizeHotelFacilities(facilities): HotelFacilityType[] {
   return facilities.map(facility => ({
@@ -88,38 +76,23 @@ function sanitizeHotelFacilities(facilities): HotelFacilityType[] {
   }));
 }
 
-function sanitizeHotelPhotos(photos): HotelPhotoType[] {
-  return photos.map(photo => ({
-    id: photo.photo_id,
-    lowResolution: photo.url_max300,
-    highResolution: photo.url_original,
-    thumbnail: photo.url_square60,
-  }));
+function sanitizePhotos(photos) {
+  return photos.map(photo => sanitizePhoto(photo));
 }
 
-/**
- * API returns this lovely response for non-existing hotels:
- *
- * [
- *   {
- *     "facilities": [],
- *     "rooms": [],
- *     "descriptions": [],
- *     "photos": [],
- *     "chains": [],
- *     "checkin": {},
- *     "checkout": {},
- *     "location": {}
- *   }
- * ]
- *
- * Let's assume that hotel does not exist if there are no rooms and
- * "checkin" and "checkout" are not defined. This should be enough.
- */
-function hotelExists(hotel) {
-  return !(
-    hotel.rooms.length === 0 &&
-    Object.keys(hotel.checkin).length === 0 &&
-    Object.keys(hotel.checkout).length === 0
-  );
+function sanitizeHotelRooms(rooms: Object, hotelId: number): HotelRoomType[] {
+  return rooms.map(room => ({
+    id: room.room_id,
+    hotelId,
+    type: room.room_info.room_type,
+    maxPersons: room.room_info.max_persons,
+    bedding: null, // not provided by API v2
+    descriptions: [
+      {
+        title: room.room_name,
+        text: room.room_description,
+      },
+    ],
+    photos: sanitizePhotos(room.room_photos),
+  }));
 }

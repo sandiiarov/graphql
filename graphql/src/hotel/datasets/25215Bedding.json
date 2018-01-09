@@ -1,0 +1,202 @@
+[
+  {
+    "bookable": 1,
+    "min_price": 0,
+    "hotel_id": 25215,
+    "max_price": 0,
+    "ranking": 6,
+    "roomtype_id": "9",
+    "max_persons": 2,
+    "bedding": {
+      "beds": [
+        { "type": "Extra-large double bed(s) (Super-king size)", "amount": "1" }
+      ]
+    },
+    "roomtype": "Double",
+    "room_id": "2521507"
+  },
+  {
+    "bedding": { "beds": [{ "type": "Single bed(s)", "amount": "2" }] },
+    "roomtype": "Twin",
+    "room_id": "2521509",
+    "max_price": 0,
+    "max_persons": 2,
+    "ranking": 3,
+    "roomtype_id": "8",
+    "min_price": 0,
+    "hotel_id": 25215,
+    "bookable": 1
+  },
+  {
+    "roomtype_id": "9",
+    "ranking": 1,
+    "max_persons": 2,
+    "max_price": 0,
+    "room_id": "2521511",
+    "bedding": {
+      "beds": [{ "type": "Large bed(s) (King size)", "amount": "1" }]
+    },
+    "roomtype": "Double",
+    "bookable": 1,
+    "hotel_id": 25215,
+    "min_price": 0
+  },
+  {
+    "max_persons": 3,
+    "roomtype_id": "7",
+    "ranking": 4,
+    "max_price": 0,
+    "room_id": "2521512",
+    "roomtype": "Triple",
+    "bedding": { "beds": [{ "type": "Single bed(s)", "amount": "3" }] },
+    "bookable": 1,
+    "hotel_id": 25215,
+    "min_price": 0
+  },
+  {
+    "hotel_id": 25215,
+    "min_price": 0,
+    "bookable": 1,
+    "room_id": "2521513",
+    "bedding": {
+      "beds": [
+        { "type": "Single bed(s)", "amount": "2" },
+        {
+          "type": "Extra-large double bed(s) (Super-king size)",
+          "amount": "1"
+        },
+        { "type": "Extra-large double bed(s) (Super-king size)", "amount": "2" }
+      ]
+    },
+    "roomtype": "Twin/Double",
+    "ranking": 5,
+    "roomtype_id": "24",
+    "max_persons": 4,
+    "max_price": 0
+  },
+  {
+    "room_id": "2521515",
+    "bedding": {
+      "beds": [{ "type": "Large bed(s) (King size)", "amount": "1" }]
+    },
+    "roomtype": "Twin/Double",
+    "roomtype_id": "24",
+    "max_persons": 1,
+    "ranking": 2,
+    "max_price": 370.286,
+    "hotel_id": 25215,
+    "min_price": 53.1,
+    "bookable": 1
+  },
+  {
+    "room_id": "2521517",
+    "roomtype": "Double",
+    "bedding": {
+      "beds": [
+        { "amount": "1", "type": "Extra-large double bed(s) (Super-king size)" }
+      ]
+    },
+    "roomtype_id": "9",
+    "ranking": 7,
+    "max_persons": 1,
+    "max_price": 0,
+    "hotel_id": 25215,
+    "min_price": 0,
+    "bookable": 1
+  },
+  {
+    "hotel_id": 25215,
+    "min_price": 0,
+    "bookable": 1,
+    "room_id": "2521518",
+    "roomtype": "Double",
+    "bedding": {
+      "beds": [
+        { "type": "Single bed(s)", "amount": "1" },
+        { "amount": "1", "type": "Large bed(s) (King size)" }
+      ]
+    },
+    "ranking": 0,
+    "max_persons": 3,
+    "roomtype_id": "9",
+    "max_price": 0
+  },
+  {
+    "min_price": 0,
+    "hotel_id": 25215,
+    "bookable": 1,
+    "bedding": {
+      "beds": [
+        { "type": "Single bed(s)", "amount": "2" },
+        { "amount": "4", "type": "Single bed(s)" },
+        { "amount": "1", "type": "Large bed(s) (King size)" }
+      ]
+    },
+    "roomtype": "Quadruple",
+    "room_id": "2521519",
+    "max_price": 0,
+    "ranking": 0,
+    "max_persons": 4,
+    "roomtype_id": "4"
+  },
+  {
+    "min_price": 0,
+    "hotel_id": 25215,
+    "bookable": 1,
+    "bedding": {
+      "beds": [
+        { "type": "Extra-large double bed(s) (Super-king size)", "amount": "1" }
+      ]
+    },
+    "roomtype": "Double",
+    "room_id": "2521523",
+    "max_price": 0,
+    "roomtype_id": "9",
+    "ranking": 0,
+    "max_persons": 2
+  },
+  {
+    "room_id": "2521524",
+    "bedding": {
+      "beds": [
+        { "type": "Extra-large double bed(s) (Super-king size)", "amount": "1" }
+      ]
+    },
+    "roomtype": "Double",
+    "ranking": 0,
+    "roomtype_id": "9",
+    "max_persons": 1,
+    "max_price": 0,
+    "hotel_id": 25215,
+    "min_price": 0,
+    "bookable": 1
+  },
+  {
+    "min_price": 0,
+    "hotel_id": 25215,
+    "bookable": 1,
+    "roomtype": "Twin/Double",
+    "bedding": {
+      "beds": [{ "amount": "1", "type": "Large bed(s) (King size)" }]
+    },
+    "room_id": "2521525",
+    "max_price": 0,
+    "ranking": 0,
+    "roomtype_id": "24",
+    "max_persons": 2
+  },
+  {
+    "bookable": 1,
+    "hotel_id": 25215,
+    "min_price": 0,
+    "roomtype_id": "24",
+    "ranking": 0,
+    "max_persons": 1,
+    "max_price": 0,
+    "room_id": "2521526",
+    "bedding": {
+      "beds": [{ "amount": "1", "type": "Large bed(s) (King size)" }]
+    },
+    "roomtype": "Twin/Double"
+  }
+]

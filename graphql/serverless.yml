@@ -18,6 +18,7 @@ functions:
     handler: dist/lambda.graphql
     environment:
       OPTICS_API_KEY: ${env:OPTICS_API_KEY}
+      BOOKING_COM_TOKEN: ${env:BOOKING_COM_TOKEN}
     events:
       - http:
           path: /

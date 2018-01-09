@@ -7,8 +7,10 @@ import { createContext } from './GraphqlContext';
 /**
  * TestingTools must be imported FIRST otherwise mock of HttpRequest won't work.
  */
-jest.mock('../services/HttpRequest');
+jest.mock('./HttpRequest');
+jest.mock('../../hotel/services/BookingComRequest');
 const mockedHttpRequest = require('./HttpRequest');
+const mockedBookingComRequest = require('../../hotel/services/BookingComRequest');
 
 class MockResponse {
   absoluteUrl: string;
@@ -29,6 +31,17 @@ class MockResponse {
   }
 }
 
+class MockBookingComResponse extends MockResponse {
+  replyWithData(response: Array<Object> | Object) {
+    // $FlowAllowMockMagic
+    mockedBookingComRequest.__setMockData(
+      this.httpMethod,
+      this.absoluteUrl,
+      response,
+    );
+  }
+}
+
 export class RestApiMock {
   static onGet(absoluteUrl: string) {
     return new MockResponse('GET', absoluteUrl);
@@ -36,6 +49,12 @@ export class RestApiMock {
 
   static onPost(absoluteUrl: string) {
     return new MockResponse('POST', absoluteUrl);
+  }
+}
+
+export class BookingComApiMock {
+  static onGet(absoluteUrl: string) {
+    return new MockBookingComResponse('GET', absoluteUrl);
   }
 }
 
