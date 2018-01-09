@@ -19,14 +19,14 @@ Object {
           Object {
             "cursor": "YXJyYXljb25uZWN0aW9uOjA=",
             "node": Object {
-              "id": "aG90ZWxGYWNpbGl0eTo=",
+              "id": "aG90ZWxGYWNpbGl0eToy",
               "name": "Parking",
             },
           },
           Object {
             "cursor": "YXJyYXljb25uZWN0aW9uOjE=",
             "node": Object {
-              "id": "aG90ZWxGYWNpbGl0eTo=",
+              "id": "aG90ZWxGYWNpbGl0eToz",
               "name": "Restaurant",
             },
           },
