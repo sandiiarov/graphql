@@ -66,6 +66,7 @@ export default {
       searchParams.latitude = searchArgs.latitude;
       searchParams.longitude = searchArgs.longitude;
     }
+    searchParams.first = args.first;
 
     const availableHotels = await dataLoader.hotel.availabilityByLocation.load(
       searchParams,

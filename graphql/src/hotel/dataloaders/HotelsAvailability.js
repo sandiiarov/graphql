@@ -119,11 +119,13 @@ async function fetchAllHotels(
 
       parameters.min_price = searchParameters.minPrice;
       parameters.max_price = searchParameters.maxPrice;
+      parameters.rows = searchParameters.first || 50;
 
       const absoluteUrl = queryWithParameters(
         'https://distribution-xml.booking.com/2.0/json/hotelAvailability',
         {
           extras: 'hotel_details',
+          order_by: 'popularity',
           ...parameters,
           ...roomsQuery,
         },
