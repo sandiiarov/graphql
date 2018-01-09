@@ -70,6 +70,7 @@ function sanitizeHotel(hotelData): HotelExtendedType {
 }
 
 function sanitizeHotelFacilities(facilities): HotelFacilityType[] {
+  if (!Array.isArray(facilities)) return [];
   return facilities.map(facility => ({
     id: facility.hotelfacilitytype_id,
     name: facility.name,
@@ -77,6 +78,7 @@ function sanitizeHotelFacilities(facilities): HotelFacilityType[] {
 }
 
 function sanitizePhotos(photos) {
+  if (!Array.isArray(photos)) return [];
   return photos.map(photo => sanitizePhoto(photo));
 }
 
