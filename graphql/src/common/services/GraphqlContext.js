@@ -51,7 +51,7 @@ export type GraphqlContextType = {|
     },
   |},
   options: OptionsStorage,
-  opticsContext?: Object,
+  _traceCollector?: Object,
 |};
 
 export function createContext(token: ?string): GraphqlContextType {
