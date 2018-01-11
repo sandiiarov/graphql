@@ -1,16 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`hotel cities query throws error for too short prefix 1`] = `
-Object {
-  "data": Object {
-    "hotelCities": null,
-  },
-  "errors": Array [
-    [GraphQLError: City prefix is too short. It must be at least 3 characters long.],
-  ],
-}
-`;
-
 exports[`hotel cities query works for normal request 1`] = `
 Object {
   "data": Object {
@@ -38,6 +27,22 @@ Object {
   "data": Object {
     "hotelCities": Object {
       "edges": Array [],
+    },
+  },
+}
+`;
+
+exports[`hotel cities query works with empty string prefix 1`] = `
+Object {
+  "data": Object {
+    "hotelCities": Object {
+      "edges": Array [
+        Object {
+          "node": Object {
+            "id": "aG90ZWxDaXR5Oi0yMTQwMjA1",
+          },
+        },
+      ],
     },
   },
 }

@@ -1,6 +1,6 @@
 // @flow
 
-import { GraphQLNonNull, GraphQLString } from 'graphql';
+import { GraphQLString } from 'graphql';
 import {
   connectionArgs,
   connectionDefinitions,
@@ -17,15 +17,15 @@ const { connectionType: HotelCitiesConnection } = connectionDefinitions({
 
 export default {
   type: HotelCitiesConnection,
-  description:
-    'All cities where you can find the hotels. This query can be used for ' +
-    'suggestions of relevant cities (search for example).',
+  description: `
+    All cities where you can find the hotels. This query can be used for
+    suggestions of relevant cities (search for example). Cities can be filtered
+    by prefix with typo tolerance. Items are sorted by prefix matching and a
+    number of hotels (desc). When the prefix is omitted top cities are returned.`,
   args: {
     prefix: {
-      type: new GraphQLNonNull(GraphQLString),
-      description:
-        "First few letters. Note that search doesn't work with prefix shorter " +
-        'than 3 characters.',
+      type: GraphQLString,
+      description: 'First few letters.',
     },
     ...connectionArgs,
   },
@@ -34,14 +34,8 @@ export default {
     args: Object,
     { dataLoader }: GraphqlContextType,
   ) => {
-    if (args.prefix.length < 3) {
-      return Error(
-        'City prefix is too short. It must be at least 3 characters long.',
-      );
-    }
-
     return connectionFromPromisedArray(
-      dataLoader.hotel.cities.load(args.prefix),
+      dataLoader.hotel.cities.load(args.prefix || ''),
       args,
     );
   },
