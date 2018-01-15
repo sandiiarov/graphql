@@ -1,5 +1,6 @@
 // @flow
 
+import _ from 'lodash';
 import { GraphQLNonNull, type GraphQLFieldConfig } from 'graphql';
 import { fromGlobalId } from 'graphql-relay';
 
@@ -7,6 +8,7 @@ import GraphQLAvailableHotelSearchInput from '../types/inputs/AvailableHotelSear
 import GraphQLHotelAvailability from '../types/outputs/HotelAvailability';
 
 import type { GraphqlContextType } from '../../common/services/GraphqlContext';
+import GraphQLAvailableHotelOptionsInput from '../types/inputs/AvailableHotelOptionsInput';
 
 export default ({
   type: GraphQLHotelAvailability,
@@ -17,6 +19,9 @@ export default ({
   args: {
     search: {
       type: new GraphQLNonNull(GraphQLAvailableHotelSearchInput),
+    },
+    options: {
+      type: GraphQLAvailableHotelOptionsInput,
     },
   },
   resolve: async (
@@ -39,6 +44,7 @@ export default ({
       checkin: args.search.checkin,
       checkout: args.search.checkout,
       roomsConfiguration: args.search.roomsConfiguration,
+      currency: _.get(args, 'options.currency'),
     });
 
     return availableHotels.map(hotel => ({
