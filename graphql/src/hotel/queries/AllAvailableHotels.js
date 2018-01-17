@@ -10,6 +10,7 @@ import {
 
 import GraphQLHotelsSearchInput from '../types/inputs/AllAvailableHotelsSearchInput';
 import GraphQLHotelsFilterInput from '../types/inputs/AllAvailableHotelsFilterInput';
+import GraphQLAvailableHotelOptionsInput from '../types/inputs/AvailableHotelOptionsInput';
 import GraphQLHotelAvailability from '../types/outputs/HotelAvailability';
 
 import type { GraphqlContextType } from '../../common/services/GraphqlContext';
@@ -31,6 +32,9 @@ export default {
     filter: {
       type: GraphQLHotelsFilterInput,
     },
+    options: {
+      type: GraphQLAvailableHotelOptionsInput,
+    },
     ...connectionArgs,
   },
   resolve: async (
@@ -38,11 +42,12 @@ export default {
     args: Object,
     { dataLoader }: GraphqlContextType,
   ) => {
-    const { search: searchArgs, filter: filterArgs } = args;
+    const { search: searchArgs, filter: filterArgs, options } = args;
 
     let searchParams: Object = {
       checkin: searchArgs.checkin,
       checkout: searchArgs.checkout,
+      currency: options && options.currency,
       roomsConfiguration: searchArgs.roomsConfiguration,
       ...(filterArgs && {
         stars: filterArgs.starsRating,

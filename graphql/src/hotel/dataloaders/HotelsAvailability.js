@@ -1,5 +1,6 @@
 // @flow
 
+import _ from 'lodash';
 import DataLoader from 'dataloader';
 import { DateTime } from 'luxon';
 
@@ -15,6 +16,7 @@ type SharedSearchParameters = {|
   stars?: number[],
   minPrice?: number,
   maxPrice?: number,
+  currency?: string,
 |};
 
 type RoomsConfiguration = Array<{|
@@ -117,6 +119,7 @@ async function fetchAllHotels(
           })
           .join(',');
 
+      parameters.currency = searchParameters.currency;
       parameters.min_price = searchParameters.minPrice;
       parameters.max_price = searchParameters.maxPrice;
       parameters.rows = searchParameters.first || 50;
@@ -134,17 +137,21 @@ async function fetchAllHotels(
       const response = await get(absoluteUrl);
 
       // $FlowIssue: https://github.com/facebook/flow/issues/4936
-      return sanitizeHotels(response.result);
+      return sanitizeHotels(response.result, searchParameters);
     }),
   );
 }
 
-function sanitizeHotels(hotels): HotelType[] {
+function sanitizeHotels(hotels, searchParameters): HotelType[] {
   return hotels.map(hotel => ({
     id: hotel.hotel_id,
     name: hotel.hotel_name,
     rating: Math.round(hotel.stars),
-    currencyCode: hotel.hotel_currency_code,
+    currencyCode: _.get(
+      searchParameters,
+      'currency',
+      hotel.hotel_currency_code,
+    ),
     price: hotel.price,
     whitelabelUrl: hotel.url,
     cityName: hotel.city,

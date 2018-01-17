@@ -182,6 +182,16 @@
                 "defaultValue": null
               },
               {
+                "name": "options",
+                "description": null,
+                "type": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "AvailableHotelOptionsInput",
+                  "ofType": null
+                },
+                "defaultValue": null
+              },
+              {
                 "name": "after",
                 "description": null,
                 "type": {
@@ -245,6 +255,16 @@
                     "name": "AvailableHotelSearchInput",
                     "ofType": null
                   }
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "options",
+                "description": null,
+                "type": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "AvailableHotelOptionsInput",
+                  "ofType": null
                 },
                 "defaultValue": null
               }
@@ -418,7 +438,7 @@
           },
           {
             "name": "hotelCities",
-            "description": "All cities where you can find the hotels. This query can be used for suggestions of relevant cities (search for example).",
+            "description": "\n    All cities where you can find the hotels. This query can be used for\n    suggestions of relevant cities (search for example). Cities can be filtered\n    by prefix with typo tolerance. Items are sorted by prefix matching and a\n    number of hotels (desc). When the prefix is omitted top cities are returned.",
             "args": [
               {
                 "name": "prefix",
@@ -3726,6 +3746,27 @@
             "type": {
               "kind": "SCALAR",
               "name": "Float",
+              "ofType": null
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "AvailableHotelOptionsInput",
+        "description": null,
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "currency",
+            "description": "Three-letters ISO 4217 currency code, e.g. EUR or USD",
+            "type": {
+              "kind": "ENUM",
+              "name": "Currency",
               "ofType": null
             },
             "defaultValue": null
