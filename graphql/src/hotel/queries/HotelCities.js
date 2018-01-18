@@ -18,10 +18,11 @@ const { connectionType: HotelCitiesConnection } = connectionDefinitions({
 export default {
   type: HotelCitiesConnection,
   description: `
-    All cities where you can find the hotels. This query can be used for
-    suggestions of relevant cities (search for example). Cities can be filtered
-    by prefix with typo tolerance. Items are sorted by prefix matching and a
-    number of hotels (desc). When the prefix is omitted top cities are returned.`,
+All cities where you can find the hotels. This query can be used for
+suggestions of relevant cities (search for example). Cities can be filtered
+by prefix with typo tolerance. Items are sorted by prefix matching and a
+number of hotels (desc). When the prefix is omitted top cities are returned.
+`.trim(),
   args: {
     prefix: {
       type: GraphQLString,
