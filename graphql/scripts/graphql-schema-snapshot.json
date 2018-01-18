@@ -438,7 +438,7 @@
           },
           {
             "name": "hotelCities",
-            "description": "\n    All cities where you can find the hotels. This query can be used for\n    suggestions of relevant cities (search for example). Cities can be filtered\n    by prefix with typo tolerance. Items are sorted by prefix matching and a\n    number of hotels (desc). When the prefix is omitted top cities are returned.",
+            "description": "All cities where you can find the hotels. This query can be used for\nsuggestions of relevant cities (search for example). Cities can be filtered\nby prefix with typo tolerance. Items are sorted by prefix matching and a\nnumber of hotels (desc). When the prefix is omitted top cities are returned.",
             "args": [
               {
                 "name": "prefix",
