@@ -20,11 +20,11 @@ beforeEach(() => {
     result: FirstHotelDataset.result.concat(SecondHotelDataset.result),
   });
   BookingComApiMock.onGet(
-    'https://distribution-xml.booking.com/2.0/json/blockAvailability?detail_level=1&checkin=2017-11-16&checkout=2017-11-23&hotel_ids=25215',
+    'https://distribution-xml.booking.com/2.0/json/blockAvailability?detail_level=1&checkin=2017-11-16&checkout=2017-11-23&hotel_ids=25215&currency=EUR',
   ).replyWithData(RoomBlocksDataset);
   BookingComApiMock.onGet(
     // this can be merged into previous request (hotel_ids=25215,248539) but we are not doing this optimization yet
-    'https://distribution-xml.booking.com/2.0/json/blockAvailability?detail_level=1&checkin=2017-11-16&checkout=2017-11-23&hotel_ids=248539',
+    'https://distribution-xml.booking.com/2.0/json/blockAvailability?detail_level=1&checkin=2017-11-16&checkout=2017-11-23&hotel_ids=248539&currency=EUR',
   ).replyWithData(RoomBlocksDataset);
   BookingComApiMock.onGet(
     'https://distribution-xml.booking.com/2.0/json/hotels?extras=hotel_info%2Chotel_photos%2Chotel_description%2Chotel_facilities%2Cpayment_details%2Croom_info%2Croom_photos%2Croom_description%2Croom_facilities&hotel_ids=25215',

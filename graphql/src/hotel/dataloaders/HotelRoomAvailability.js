@@ -1,5 +1,6 @@
 // @flow
 
+import idx from 'idx';
 import Dataloader from 'dataloader';
 import { DateTime } from 'luxon';
 
@@ -40,6 +41,7 @@ export default class HotelRoomAvailabilityLoader {
     hotelIds: string[],
     arrivalDate: Date,
     departureDate: Date,
+    currency: string,
   ): Promise<HotelRoomAvailabilityType[]> {
     const availableRooms = await this.dataLoader.load({
       checkin: DateTime.fromJSDate(arrivalDate, {
@@ -49,6 +51,7 @@ export default class HotelRoomAvailabilityLoader {
         zone: 'UTC',
       }).toISODate(),
       hotel_ids: hotelIds.join(','),
+      currency,
     });
 
     // flatten all room blocks
@@ -87,12 +90,17 @@ export default class HotelRoomAvailabilityLoader {
       hotelId: hotelId,
       roomId: block.room_id,
       minPrice: {
-        amount: Number(block.min_price.price),
-        currency: block.min_price.currency,
+        amount: Number(
+          idx(block, _ => _.min_price.other_currency.price) ||
+            block.min_price.price,
+        ),
+        currency:
+          idx(block, _ => _.min_price.other_currency.currency) ||
+          block.min_price.currency,
       },
       incrementalPrice: block.incremental_price.map(price => ({
-        amount: Number(price.price),
-        currency: price.currency,
+        amount: Number(idx(price, _ => _.other_currency.price) || price.price),
+        currency: idx(price, _ => _.other_currency.currency) || price.currency,
       })),
     };
   }

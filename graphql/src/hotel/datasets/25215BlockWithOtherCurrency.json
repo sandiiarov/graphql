@@ -1,0 +1,1712 @@
+{
+  "result": [
+    {
+      "block": [
+        {
+          "deposit_required": true,
+          "block_id": "2521515_95149036_0_1_0",
+          "room_id": 2521515,
+          "taxes": "10 % VAT",
+          "rack_rate": {
+            "price": 0,
+            "currency": "EUR",
+            "other_currency": {
+              "price": 0,
+              "currency": "CZK"
+            }
+          },
+          "breakfast_included": true,
+          "min_price": {
+            "price": 458.1,
+            "currency": "EUR",
+            "other_currency": {
+              "price": 11635.52,
+              "currency": "CZK"
+            }
+          },
+          "incremental_price": [
+            {
+              "price": 458.1,
+              "currency": "EUR",
+              "other_currency": {
+                "price": 11635.52,
+                "currency": "CZK"
+              }
+            },
+            {
+              "price": 916.2,
+              "currency": "EUR",
+              "other_currency": {
+                "price": 23271.04,
+                "currency": "CZK"
+              }
+            },
+            {
+              "other_currency": {
+                "currency": "CZK",
+                "price": 34906.55
+              },
+              "currency": "EUR",
+              "price": 1374.3
+            }
+          ],
+          "photos": [
+            {
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030578.jpg",
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030578.jpg",
+              "photo_id": 74030578,
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030578.jpg"
+            },
+            {
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030579.jpg",
+              "photo_id": 74030579,
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030579.jpg",
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030579.jpg"
+            },
+            {
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030491.jpg",
+              "photo_id": 74030491,
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030491.jpg",
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030491.jpg"
+            },
+            {
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030572.jpg",
+              "photo_id": 74030572,
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030572.jpg",
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030572.jpg"
+            },
+            {
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030573.jpg",
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030573.jpg",
+              "photo_id": 74030573,
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030573.jpg"
+            },
+            {
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030487.jpg",
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030487.jpg",
+              "photo_id": 74030487,
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030487.jpg"
+            }
+          ],
+          "refundable_until": "",
+          "name": "Double or Twin Room for Single Use - Non-refundable",
+          "max_occupancy": 1,
+          "refundable": false,
+          "room_description": "Includes free WiFi, work desk and flat-screen satellite TV.\n\nNon-smoking rooms on request."
+        },
+        {
+          "refundable": false,
+          "room_description": "Includes free WiFi, work desk and flat-screen satellite TV.\n\nNon-smoking rooms on request.",
+          "max_occupancy": 1,
+          "block_id": "2521515_91898707_0_1_0",
+          "room_id": 2521515,
+          "deposit_required": false,
+          "taxes": "10 % VAT",
+          "rack_rate": {
+            "price": 0,
+            "currency": "EUR",
+            "other_currency": {
+              "price": 0,
+              "currency": "CZK"
+            }
+          },
+          "breakfast_included": true,
+          "incremental_price": [
+            {
+              "other_currency": {
+                "price": 12928.35,
+                "currency": "CZK"
+              },
+              "price": 509,
+              "currency": "EUR"
+            },
+            {
+              "other_currency": {
+                "price": 25856.71,
+                "currency": "CZK"
+              },
+              "price": 1018,
+              "currency": "EUR"
+            },
+            {
+              "other_currency": {
+                "price": 38785.06,
+                "currency": "CZK"
+              },
+              "price": 1527,
+              "currency": "EUR"
+            }
+          ],
+          "min_price": {
+            "other_currency": {
+              "price": 12928.35,
+              "currency": "CZK"
+            },
+            "price": 509,
+            "currency": "EUR"
+          },
+          "refundable_until": "",
+          "name": "Double or Twin Room for Single Use - Non-refundable",
+          "photos": [
+            {
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030578.jpg",
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030578.jpg",
+              "photo_id": 74030578,
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030578.jpg"
+            },
+            {
+              "photo_id": 74030579,
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030579.jpg",
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030579.jpg",
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030579.jpg"
+            },
+            {
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030491.jpg",
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030491.jpg",
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030491.jpg",
+              "photo_id": 74030491
+            },
+            {
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030572.jpg",
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030572.jpg",
+              "photo_id": 74030572,
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030572.jpg"
+            },
+            {
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030573.jpg",
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030573.jpg",
+              "photo_id": 74030573,
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030573.jpg"
+            },
+            {
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030487.jpg",
+              "photo_id": 74030487,
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030487.jpg",
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030487.jpg"
+            }
+          ]
+        },
+        {
+          "room_description": "Includes free WiFi, work desk and flat-screen satellite TV.\n\nNon-smoking rooms on request.",
+          "max_occupancy": 2,
+          "refundable": false,
+          "min_price": {
+            "price": 539.1,
+            "currency": "EUR",
+            "other_currency": {
+              "currency": "CZK",
+              "price": 13692.88
+            }
+          },
+          "breakfast_included": true,
+          "incremental_price": [
+            {
+              "price": 539.1,
+              "currency": "EUR",
+              "other_currency": {
+                "currency": "CZK",
+                "price": 13692.88
+              }
+            }
+          ],
+          "refundable_until": "",
+          "name": "Double Room - Non-refundable",
+          "photos": [
+            {
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030622.jpg",
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030622.jpg",
+              "photo_id": 74030622,
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030622.jpg"
+            },
+            {
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030619.jpg",
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030619.jpg",
+              "photo_id": 74030619,
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030619.jpg"
+            },
+            {
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030578.jpg",
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030578.jpg",
+              "photo_id": 74030578,
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030578.jpg"
+            },
+            {
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030525.jpg",
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030525.jpg",
+              "photo_id": 74030525,
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030525.jpg"
+            },
+            {
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030491.jpg",
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030491.jpg",
+              "photo_id": 74030491,
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030491.jpg"
+            },
+            {
+              "photo_id": 74030604,
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030604.jpg",
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030604.jpg",
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030604.jpg"
+            }
+          ],
+          "block_id": "2521511_95149036_0_1_0",
+          "room_id": 2521511,
+          "deposit_required": true,
+          "taxes": "10 % VAT",
+          "rack_rate": {
+            "other_currency": {
+              "price": 0,
+              "currency": "CZK"
+            },
+            "currency": "EUR",
+            "price": 0
+          }
+        },
+        {
+          "max_occupancy": 2,
+          "refundable": false,
+          "room_description": "Modern high ceilinged room with wooden floors and spacious bathroom. Includes free WiFi, work desk and flat-screen satellite TV.",
+          "breakfast_included": true,
+          "min_price": {
+            "price": 539.1,
+            "currency": "EUR",
+            "other_currency": {
+              "currency": "CZK",
+              "price": 13692.88
+            }
+          },
+          "incremental_price": [
+            {
+              "price": 539.1,
+              "currency": "EUR",
+              "other_currency": {
+                "currency": "CZK",
+                "price": 13692.88
+              }
+            }
+          ],
+          "photos": [
+            {
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030573.jpg",
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030573.jpg",
+              "photo_id": 74030573,
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030573.jpg"
+            },
+            {
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030572.jpg",
+              "photo_id": 74030572,
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030572.jpg",
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030572.jpg"
+            },
+            {
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030580.jpg",
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030580.jpg",
+              "photo_id": 74030580,
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030580.jpg"
+            },
+            {
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030487.jpg",
+              "photo_id": 74030487,
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030487.jpg",
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030487.jpg"
+            },
+            {
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030561.jpg",
+              "photo_id": 74030561,
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030561.jpg",
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030561.jpg"
+            }
+          ],
+          "refundable_until": "",
+          "name": "Twin Room - Non-refundable",
+          "deposit_required": true,
+          "block_id": "2521509_95149036_0_1_0",
+          "room_id": 2521509,
+          "taxes": "10 % VAT",
+          "rack_rate": {
+            "price": 0,
+            "currency": "EUR",
+            "other_currency": {
+              "price": 0,
+              "currency": "CZK"
+            }
+          }
+        },
+        {
+          "refundable": false,
+          "room_description": "Modern high ceilinged room with wooden floors and spacious bathroom. Includes free WiFi, work desk and flat-screen satellite TV.",
+          "max_occupancy": 2,
+          "taxes": "10 % VAT",
+          "rack_rate": {
+            "other_currency": {
+              "currency": "CZK",
+              "price": 0
+            },
+            "currency": "EUR",
+            "price": 0
+          },
+          "room_id": 2521509,
+          "block_id": "2521509_91898707_0_1_0",
+          "deposit_required": false,
+          "name": "Twin Room - Non-refundable",
+          "refundable_until": "",
+          "photos": [
+            {
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030573.jpg",
+              "photo_id": 74030573,
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030573.jpg",
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030573.jpg"
+            },
+            {
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030572.jpg",
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030572.jpg",
+              "photo_id": 74030572,
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030572.jpg"
+            },
+            {
+              "photo_id": 74030580,
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030580.jpg",
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030580.jpg",
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030580.jpg"
+            },
+            {
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030487.jpg",
+              "photo_id": 74030487,
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030487.jpg",
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030487.jpg"
+            },
+            {
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030561.jpg",
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030561.jpg",
+              "photo_id": 74030561,
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030561.jpg"
+            }
+          ],
+          "min_price": {
+            "other_currency": {
+              "price": 15214.31,
+              "currency": "CZK"
+            },
+            "currency": "EUR",
+            "price": 599
+          },
+          "breakfast_included": true,
+          "incremental_price": [
+            {
+              "other_currency": {
+                "price": 15214.31,
+                "currency": "CZK"
+              },
+              "currency": "EUR",
+              "price": 599
+            }
+          ]
+        },
+        {
+          "room_description": "Includes free WiFi, work desk and flat-screen satellite TV.\n\nNon-smoking rooms on request.",
+          "max_occupancy": 2,
+          "refundable": false,
+          "incremental_price": [
+            {
+              "other_currency": {
+                "currency": "CZK",
+                "price": 15214.31
+              },
+              "currency": "EUR",
+              "price": 599
+            }
+          ],
+          "breakfast_included": true,
+          "min_price": {
+            "other_currency": {
+              "currency": "CZK",
+              "price": 15214.31
+            },
+            "currency": "EUR",
+            "price": 599
+          },
+          "refundable_until": "",
+          "name": "Double Room - Non-refundable",
+          "photos": [
+            {
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030622.jpg",
+              "photo_id": 74030622,
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030622.jpg",
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030622.jpg"
+            },
+            {
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030619.jpg",
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030619.jpg",
+              "photo_id": 74030619,
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030619.jpg"
+            },
+            {
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030578.jpg",
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030578.jpg",
+              "photo_id": 74030578,
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030578.jpg"
+            },
+            {
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030525.jpg",
+              "photo_id": 74030525,
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030525.jpg",
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030525.jpg"
+            },
+            {
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030491.jpg",
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030491.jpg",
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030491.jpg",
+              "photo_id": 74030491
+            },
+            {
+              "photo_id": 74030604,
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030604.jpg",
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030604.jpg",
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030604.jpg"
+            }
+          ],
+          "room_id": 2521511,
+          "block_id": "2521511_91898707_0_1_0",
+          "deposit_required": false,
+          "rack_rate": {
+            "other_currency": {
+              "price": 0,
+              "currency": "CZK"
+            },
+            "currency": "EUR",
+            "price": 0
+          },
+          "taxes": "10 % VAT"
+        },
+        {
+          "room_description": "Includes free WiFi, work desk and flat-screen satellite TV.\n\nNon-smoking rooms on request.",
+          "refundable": false,
+          "max_occupancy": 1,
+          "photos": [
+            {
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030578.jpg",
+              "photo_id": 74030578,
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030578.jpg",
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030578.jpg"
+            },
+            {
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030579.jpg",
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030579.jpg",
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030579.jpg",
+              "photo_id": 74030579
+            },
+            {
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030491.jpg",
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030491.jpg",
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030491.jpg",
+              "photo_id": 74030491
+            },
+            {
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030572.jpg",
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030572.jpg",
+              "photo_id": 74030572,
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030572.jpg"
+            },
+            {
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030573.jpg",
+              "photo_id": 74030573,
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030573.jpg",
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030573.jpg"
+            },
+            {
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030487.jpg",
+              "photo_id": 74030487,
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030487.jpg",
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030487.jpg"
+            }
+          ],
+          "refundable_until": "",
+          "name": "Double or Twin Room for Single Use - Non-refundable",
+          "incremental_price": [
+            {
+              "currency": "EUR",
+              "price": 600.3,
+              "other_currency": {
+                "currency": "CZK",
+                "price": 15247.33
+              }
+            },
+            {
+              "currency": "EUR",
+              "price": 1200.6,
+              "other_currency": {
+                "price": 30494.66,
+                "currency": "CZK"
+              }
+            },
+            {
+              "price": 1800.9,
+              "currency": "EUR",
+              "other_currency": {
+                "currency": "CZK",
+                "price": 45741.99
+              }
+            }
+          ],
+          "breakfast_included": true,
+          "min_price": {
+            "currency": "EUR",
+            "price": 600.3,
+            "other_currency": {
+              "currency": "CZK",
+              "price": 15247.33
+            }
+          },
+          "taxes": "10 % VAT",
+          "rack_rate": {
+            "other_currency": {
+              "currency": "CZK",
+              "price": 0
+            },
+            "price": 0,
+            "currency": "EUR"
+          },
+          "deposit_required": true,
+          "block_id": "2521515_95149036_0_17_0",
+          "room_id": 2521515
+        },
+        {
+          "deposit_required": true,
+          "block_id": "2521524_95149036_0_2_0",
+          "room_id": 2521524,
+          "rack_rate": {
+            "other_currency": {
+              "currency": "CZK",
+              "price": 0
+            },
+            "currency": "EUR",
+            "price": 0
+          },
+          "taxes": "10 % VAT",
+          "breakfast_included": false,
+          "incremental_price": [
+            {
+              "currency": "EUR",
+              "price": 647.1,
+              "other_currency": {
+                "price": 16436.03,
+                "currency": "CZK"
+              }
+            }
+          ],
+          "min_price": {
+            "currency": "EUR",
+            "price": 647.1,
+            "other_currency": {
+              "price": 16436.03,
+              "currency": "CZK"
+            }
+          },
+          "photos": [
+            {
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030508.jpg",
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030508.jpg",
+              "photo_id": 74030508,
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030508.jpg"
+            },
+            {
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030512.jpg",
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030512.jpg",
+              "photo_id": 74030512,
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030512.jpg"
+            },
+            {
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030488.jpg",
+              "photo_id": 74030488,
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030488.jpg",
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030488.jpg"
+            },
+            {
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030517.jpg",
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030517.jpg",
+              "photo_id": 74030517,
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030517.jpg"
+            },
+            {
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030440.jpg",
+              "photo_id": 74030440,
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030440.jpg",
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030440.jpg"
+            },
+            {
+              "photo_id": 74030579,
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030579.jpg",
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030579.jpg",
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030579.jpg"
+            },
+            {
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030499.jpg",
+              "photo_id": 74030499,
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030499.jpg",
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030499.jpg"
+            }
+          ],
+          "name": " Top Executive Single Use - Non-refundable",
+          "refundable_until": "",
+          "room_description": "Boasting a private terrace with city views, this air-conditioned room comes with a satellite flat-screen TV, a desk and parquet floors. The private bathroom includes a hairdryer and free toiletries. WiFi is free.",
+          "refundable": false,
+          "max_occupancy": 1
+        },
+        {
+          "rack_rate": {
+            "other_currency": {
+              "price": 0,
+              "currency": "CZK"
+            },
+            "currency": "EUR",
+            "price": 0
+          },
+          "taxes": "10 % VAT",
+          "block_id": "2521515_91898707_0_17_0",
+          "room_id": 2521515,
+          "deposit_required": false,
+          "refundable_until": "",
+          "name": "Double or Twin Room for Single Use - Non-refundable",
+          "photos": [
+            {
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030578.jpg",
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030578.jpg",
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030578.jpg",
+              "photo_id": 74030578
+            },
+            {
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030579.jpg",
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030579.jpg",
+              "photo_id": 74030579,
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030579.jpg"
+            },
+            {
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030491.jpg",
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030491.jpg",
+              "photo_id": 74030491,
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030491.jpg"
+            },
+            {
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030572.jpg",
+              "photo_id": 74030572,
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030572.jpg",
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030572.jpg"
+            },
+            {
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030573.jpg",
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030573.jpg",
+              "photo_id": 74030573,
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030573.jpg"
+            },
+            {
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030487.jpg",
+              "photo_id": 74030487,
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030487.jpg",
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030487.jpg"
+            }
+          ],
+          "breakfast_included": true,
+          "min_price": {
+            "currency": "EUR",
+            "price": 667,
+            "other_currency": {
+              "currency": "CZK",
+              "price": 16941.48
+            }
+          },
+          "incremental_price": [
+            {
+              "currency": "EUR",
+              "price": 667,
+              "other_currency": {
+                "currency": "CZK",
+                "price": 16941.48
+              }
+            },
+            {
+              "other_currency": {
+                "currency": "CZK",
+                "price": 33882.95
+              },
+              "currency": "EUR",
+              "price": 1334
+            },
+            {
+              "price": 2001,
+              "currency": "EUR",
+              "other_currency": {
+                "price": 50824.43,
+                "currency": "CZK"
+              }
+            }
+          ],
+          "refundable": false,
+          "max_occupancy": 1,
+          "room_description": "Includes free WiFi, work desk and flat-screen satellite TV.\n\nNon-smoking rooms on request."
+        },
+        {
+          "max_occupancy": 3,
+          "refundable": false,
+          "room_description": "This spacious and comfortable room has high ceilings and parquet floors. It features free WiFi, a work desk and flat-screen TV with satellite channels.",
+          "min_price": {
+            "price": 701.1,
+            "currency": "EUR",
+            "other_currency": {
+              "currency": "CZK",
+              "price": 17807.6
+            }
+          },
+          "breakfast_included": true,
+          "incremental_price": [
+            {
+              "price": 701.1,
+              "currency": "EUR",
+              "other_currency": {
+                "currency": "CZK",
+                "price": 17807.6
+              }
+            }
+          ],
+          "name": "Triple Room - Non-refundable",
+          "refundable_until": "",
+          "photos": [
+            {
+              "photo_id": 74030615,
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030615.jpg",
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030615.jpg",
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030615.jpg"
+            },
+            {
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030579.jpg",
+              "photo_id": 74030579,
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030579.jpg",
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030579.jpg"
+            },
+            {
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030572.jpg",
+              "photo_id": 74030572,
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030572.jpg",
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030572.jpg"
+            },
+            {
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030491.jpg",
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030491.jpg",
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030491.jpg",
+              "photo_id": 74030491
+            },
+            {
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030637.jpg",
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030637.jpg",
+              "photo_id": 74030637,
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030637.jpg"
+            }
+          ],
+          "room_id": 2521512,
+          "block_id": "2521512_95149036_0_1_0",
+          "deposit_required": true,
+          "rack_rate": {
+            "other_currency": {
+              "currency": "CZK",
+              "price": 0
+            },
+            "currency": "EUR",
+            "price": 0
+          },
+          "taxes": "10 % VAT"
+        },
+        {
+          "deposit_required": false,
+          "block_id": "2521524_91898707_0_2_0",
+          "room_id": 2521524,
+          "rack_rate": {
+            "currency": "EUR",
+            "price": 0,
+            "other_currency": {
+              "currency": "CZK",
+              "price": 0
+            }
+          },
+          "taxes": "10 % VAT",
+          "min_price": {
+            "other_currency": {
+              "currency": "CZK",
+              "price": 18262.25
+            },
+            "currency": "EUR",
+            "price": 719
+          },
+          "breakfast_included": false,
+          "incremental_price": [
+            {
+              "other_currency": {
+                "currency": "CZK",
+                "price": 18262.25
+              },
+              "currency": "EUR",
+              "price": 719
+            }
+          ],
+          "photos": [
+            {
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030508.jpg",
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030508.jpg",
+              "photo_id": 74030508,
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030508.jpg"
+            },
+            {
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030512.jpg",
+              "photo_id": 74030512,
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030512.jpg",
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030512.jpg"
+            },
+            {
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030488.jpg",
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030488.jpg",
+              "photo_id": 74030488,
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030488.jpg"
+            },
+            {
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030517.jpg",
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030517.jpg",
+              "photo_id": 74030517,
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030517.jpg"
+            },
+            {
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030440.jpg",
+              "photo_id": 74030440,
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030440.jpg",
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030440.jpg"
+            },
+            {
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030579.jpg",
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030579.jpg",
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030579.jpg",
+              "photo_id": 74030579
+            },
+            {
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030499.jpg",
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030499.jpg",
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030499.jpg",
+              "photo_id": 74030499
+            }
+          ],
+          "name": " Top Executive Single Use - Non-refundable",
+          "refundable_until": "",
+          "room_description": "Boasting a private terrace with city views, this air-conditioned room comes with a satellite flat-screen TV, a desk and parquet floors. The private bathroom includes a hairdryer and free toiletries. WiFi is free.",
+          "max_occupancy": 1,
+          "refundable": false
+        },
+        {
+          "block_id": "2521523_95149036_0_1_0",
+          "room_id": 2521523,
+          "deposit_required": true,
+          "rack_rate": {
+            "other_currency": {
+              "price": 0,
+              "currency": "CZK"
+            },
+            "currency": "EUR",
+            "price": 0
+          },
+          "taxes": "10 % VAT",
+          "min_price": {
+            "currency": "EUR",
+            "price": 728.1,
+            "other_currency": {
+              "price": 18493.39,
+              "currency": "CZK"
+            }
+          },
+          "breakfast_included": true,
+          "incremental_price": [
+            {
+              "currency": "EUR",
+              "price": 728.1,
+              "other_currency": {
+                "price": 18493.39,
+                "currency": "CZK"
+              }
+            }
+          ],
+          "refundable_until": "",
+          "name": "Double Room Top Executive - Non-refundable",
+          "photos": [
+            {
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030440.jpg",
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030440.jpg",
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030440.jpg",
+              "photo_id": 74030440
+            },
+            {
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030489.jpg",
+              "photo_id": 74030489,
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030489.jpg",
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030489.jpg"
+            },
+            {
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030517.jpg",
+              "photo_id": 74030517,
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030517.jpg",
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030517.jpg"
+            },
+            {
+              "photo_id": 74030555,
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030555.jpg",
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030555.jpg",
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030555.jpg"
+            },
+            {
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030525.jpg",
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030525.jpg",
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030525.jpg",
+              "photo_id": 74030525
+            },
+            {
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030485.jpg",
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030485.jpg",
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030485.jpg",
+              "photo_id": 74030485
+            }
+          ],
+          "room_description": "Boasting a private terrace with city views, this air-conditioned room comes with a satellite flat-screen TV, a desk and parquet floors. The private bathroom includes a hairdryer and free toiletries. WiFi is free.",
+          "refundable": false,
+          "max_occupancy": 2
+        },
+        {
+          "taxes": "10 % VAT",
+          "rack_rate": {
+            "other_currency": {
+              "currency": "CZK",
+              "price": 0
+            },
+            "currency": "EUR",
+            "price": 0
+          },
+          "deposit_required": false,
+          "block_id": "2521512_91898707_0_1_0",
+          "room_id": 2521512,
+          "photos": [
+            {
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030615.jpg",
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030615.jpg",
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030615.jpg",
+              "photo_id": 74030615
+            },
+            {
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030579.jpg",
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030579.jpg",
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030579.jpg",
+              "photo_id": 74030579
+            },
+            {
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030572.jpg",
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030572.jpg",
+              "photo_id": 74030572,
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030572.jpg"
+            },
+            {
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030491.jpg",
+              "photo_id": 74030491,
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030491.jpg",
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030491.jpg"
+            },
+            {
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030637.jpg",
+              "photo_id": 74030637,
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030637.jpg",
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030637.jpg"
+            }
+          ],
+          "name": "Triple Room - Non-refundable",
+          "refundable_until": "",
+          "incremental_price": [
+            {
+              "other_currency": {
+                "price": 19786.22,
+                "currency": "CZK"
+              },
+              "price": 779,
+              "currency": "EUR"
+            }
+          ],
+          "breakfast_included": true,
+          "min_price": {
+            "other_currency": {
+              "price": 19786.22,
+              "currency": "CZK"
+            },
+            "price": 779,
+            "currency": "EUR"
+          },
+          "max_occupancy": 3,
+          "refundable": false,
+          "room_description": "This spacious and comfortable room has high ceilings and parquet floors. It features free WiFi, a work desk and flat-screen TV with satellite channels."
+        },
+        {
+          "refundable": false,
+          "max_occupancy": 2,
+          "room_description": "Boasting a private terrace with city views, this air-conditioned room comes with a satellite flat-screen TV, a desk and parquet floors. The private bathroom includes a hairdryer and free toiletries. WiFi is free.",
+          "incremental_price": [
+            {
+              "other_currency": {
+                "price": 20548.21,
+                "currency": "CZK"
+              },
+              "price": 809,
+              "currency": "EUR"
+            }
+          ],
+          "breakfast_included": true,
+          "min_price": {
+            "other_currency": {
+              "price": 20548.21,
+              "currency": "CZK"
+            },
+            "price": 809,
+            "currency": "EUR"
+          },
+          "photos": [
+            {
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030440.jpg",
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030440.jpg",
+              "photo_id": 74030440,
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030440.jpg"
+            },
+            {
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030489.jpg",
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030489.jpg",
+              "photo_id": 74030489,
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030489.jpg"
+            },
+            {
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030517.jpg",
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030517.jpg",
+              "photo_id": 74030517,
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030517.jpg"
+            },
+            {
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030555.jpg",
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030555.jpg",
+              "photo_id": 74030555,
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030555.jpg"
+            },
+            {
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030525.jpg",
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030525.jpg",
+              "photo_id": 74030525,
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030525.jpg"
+            },
+            {
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030485.jpg",
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030485.jpg",
+              "photo_id": 74030485,
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030485.jpg"
+            }
+          ],
+          "refundable_until": "",
+          "name": "Double Room Top Executive - Non-refundable",
+          "deposit_required": false,
+          "block_id": "2521523_91898707_0_1_0",
+          "room_id": 2521523,
+          "taxes": "10 % VAT",
+          "rack_rate": {
+            "price": 0,
+            "currency": "EUR",
+            "other_currency": {
+              "currency": "CZK",
+              "price": 0
+            }
+          }
+        },
+        {
+          "max_occupancy": 2,
+          "room_description": "Modern high ceilinged room with wooden floors and spacious bathroom. Includes free WiFi, work desk and flat-screen satellite TV.",
+          "refundable": false,
+          "name": "Twin Room - Non-refundable",
+          "refundable_until": "",
+          "photos": [
+            {
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030573.jpg",
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030573.jpg",
+              "photo_id": 74030573,
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030573.jpg"
+            },
+            {
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030572.jpg",
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030572.jpg",
+              "photo_id": 74030572,
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030572.jpg"
+            },
+            {
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030580.jpg",
+              "photo_id": 74030580,
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030580.jpg",
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030580.jpg"
+            },
+            {
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030487.jpg",
+              "photo_id": 74030487,
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030487.jpg",
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030487.jpg"
+            },
+            {
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030561.jpg",
+              "photo_id": 74030561,
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030561.jpg",
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030561.jpg"
+            }
+          ],
+          "breakfast_included": true,
+          "incremental_price": [
+            {
+              "other_currency": {
+                "price": 20870.78,
+                "currency": "CZK"
+              },
+              "currency": "EUR",
+              "price": 821.7
+            }
+          ],
+          "min_price": {
+            "other_currency": {
+              "price": 20870.78,
+              "currency": "CZK"
+            },
+            "currency": "EUR",
+            "price": 821.7
+          },
+          "rack_rate": {
+            "price": 0,
+            "currency": "EUR",
+            "other_currency": {
+              "currency": "CZK",
+              "price": 0
+            }
+          },
+          "taxes": "10 % VAT",
+          "room_id": 2521509,
+          "block_id": "2521509_95149036_0_17_0",
+          "deposit_required": true
+        },
+        {
+          "max_occupancy": 2,
+          "room_description": "Includes free WiFi, work desk and flat-screen satellite TV.\n\nNon-smoking rooms on request.",
+          "refundable": false,
+          "room_id": 2521511,
+          "block_id": "2521511_95149036_0_17_0",
+          "deposit_required": true,
+          "rack_rate": {
+            "price": 0,
+            "currency": "EUR",
+            "other_currency": {
+              "currency": "CZK",
+              "price": 0
+            }
+          },
+          "taxes": "10 % VAT",
+          "breakfast_included": true,
+          "min_price": {
+            "other_currency": {
+              "price": 20870.78,
+              "currency": "CZK"
+            },
+            "price": 821.7,
+            "currency": "EUR"
+          },
+          "incremental_price": [
+            {
+              "other_currency": {
+                "price": 20870.78,
+                "currency": "CZK"
+              },
+              "price": 821.7,
+              "currency": "EUR"
+            }
+          ],
+          "refundable_until": "",
+          "name": "Double Room - Non-refundable",
+          "photos": [
+            {
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030622.jpg",
+              "photo_id": 74030622,
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030622.jpg",
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030622.jpg"
+            },
+            {
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030619.jpg",
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030619.jpg",
+              "photo_id": 74030619,
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030619.jpg"
+            },
+            {
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030578.jpg",
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030578.jpg",
+              "photo_id": 74030578,
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030578.jpg"
+            },
+            {
+              "photo_id": 74030525,
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030525.jpg",
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030525.jpg",
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030525.jpg"
+            },
+            {
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030491.jpg",
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030491.jpg",
+              "photo_id": 74030491,
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030491.jpg"
+            },
+            {
+              "photo_id": 74030604,
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030604.jpg",
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030604.jpg",
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030604.jpg"
+            }
+          ]
+        },
+        {
+          "block_id": "2521511_91898707_0_17_0",
+          "room_id": 2521511,
+          "deposit_required": false,
+          "rack_rate": {
+            "other_currency": {
+              "price": 0,
+              "currency": "CZK"
+            },
+            "price": 0,
+            "currency": "EUR"
+          },
+          "taxes": "10 % VAT",
+          "min_price": {
+            "other_currency": {
+              "currency": "CZK",
+              "price": 23189.76
+            },
+            "price": 913,
+            "currency": "EUR"
+          },
+          "breakfast_included": true,
+          "incremental_price": [
+            {
+              "other_currency": {
+                "currency": "CZK",
+                "price": 23189.76
+              },
+              "price": 913,
+              "currency": "EUR"
+            }
+          ],
+          "refundable_until": "",
+          "name": "Double Room - Non-refundable",
+          "photos": [
+            {
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030622.jpg",
+              "photo_id": 74030622,
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030622.jpg",
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030622.jpg"
+            },
+            {
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030619.jpg",
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030619.jpg",
+              "photo_id": 74030619,
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030619.jpg"
+            },
+            {
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030578.jpg",
+              "photo_id": 74030578,
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030578.jpg",
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030578.jpg"
+            },
+            {
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030525.jpg",
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030525.jpg",
+              "photo_id": 74030525,
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030525.jpg"
+            },
+            {
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030491.jpg",
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030491.jpg",
+              "photo_id": 74030491,
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030491.jpg"
+            },
+            {
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030604.jpg",
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030604.jpg",
+              "photo_id": 74030604,
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030604.jpg"
+            }
+          ],
+          "room_description": "Includes free WiFi, work desk and flat-screen satellite TV.\n\nNon-smoking rooms on request.",
+          "max_occupancy": 2,
+          "refundable": false
+        },
+        {
+          "block_id": "2521509_91898707_0_17_0",
+          "room_id": 2521509,
+          "deposit_required": false,
+          "taxes": "10 % VAT",
+          "rack_rate": {
+            "other_currency": {
+              "currency": "CZK",
+              "price": 0
+            },
+            "currency": "EUR",
+            "price": 0
+          },
+          "breakfast_included": true,
+          "incremental_price": [
+            {
+              "currency": "EUR",
+              "price": 913,
+              "other_currency": {
+                "price": 23189.76,
+                "currency": "CZK"
+              }
+            }
+          ],
+          "min_price": {
+            "currency": "EUR",
+            "price": 913,
+            "other_currency": {
+              "price": 23189.76,
+              "currency": "CZK"
+            }
+          },
+          "name": "Twin Room - Non-refundable",
+          "refundable_until": "",
+          "photos": [
+            {
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030573.jpg",
+              "photo_id": 74030573,
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030573.jpg",
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030573.jpg"
+            },
+            {
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030572.jpg",
+              "photo_id": 74030572,
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030572.jpg",
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030572.jpg"
+            },
+            {
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030580.jpg",
+              "photo_id": 74030580,
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030580.jpg",
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030580.jpg"
+            },
+            {
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030487.jpg",
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030487.jpg",
+              "photo_id": 74030487,
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030487.jpg"
+            },
+            {
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030561.jpg",
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030561.jpg",
+              "photo_id": 74030561,
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030561.jpg"
+            }
+          ],
+          "max_occupancy": 2,
+          "room_description": "Modern high ceilinged room with wooden floors and spacious bathroom. Includes free WiFi, work desk and flat-screen satellite TV.",
+          "refundable": false
+        },
+        {
+          "refundable": false,
+          "max_occupancy": 2,
+          "room_description": "Boasting a private terrace with city views, this air-conditioned room comes with a satellite flat-screen TV, a desk and parquet floors. The private bathroom includes a hairdryer and free toiletries. WiFi is free.",
+          "taxes": "10 % VAT",
+          "rack_rate": {
+            "currency": "EUR",
+            "price": 0,
+            "other_currency": {
+              "price": 0,
+              "currency": "CZK"
+            }
+          },
+          "deposit_required": true,
+          "room_id": 2521523,
+          "block_id": "2521523_95149036_0_17_0",
+          "photos": [
+            {
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030440.jpg",
+              "photo_id": 74030440,
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030440.jpg",
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030440.jpg"
+            },
+            {
+              "photo_id": 74030489,
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030489.jpg",
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030489.jpg",
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030489.jpg"
+            },
+            {
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030517.jpg",
+              "photo_id": 74030517,
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030517.jpg",
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030517.jpg"
+            },
+            {
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030555.jpg",
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030555.jpg",
+              "photo_id": 74030555,
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030555.jpg"
+            },
+            {
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030525.jpg",
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030525.jpg",
+              "photo_id": 74030525,
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030525.jpg"
+            },
+            {
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030485.jpg",
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030485.jpg",
+              "photo_id": 74030485,
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030485.jpg"
+            }
+          ],
+          "refundable_until": "",
+          "name": "Double Room Top Executive - Non-refundable",
+          "breakfast_included": true,
+          "min_price": {
+            "other_currency": {
+              "price": 25671.29,
+              "currency": "CZK"
+            },
+            "price": 1010.7,
+            "currency": "EUR"
+          },
+          "incremental_price": [
+            {
+              "other_currency": {
+                "price": 25671.29,
+                "currency": "CZK"
+              },
+              "price": 1010.7,
+              "currency": "EUR"
+            }
+          ]
+        },
+        {
+          "breakfast_included": true,
+          "incremental_price": [
+            {
+              "other_currency": {
+                "currency": "CZK",
+                "price": 28523.66
+              },
+              "price": 1123,
+              "currency": "EUR"
+            }
+          ],
+          "min_price": {
+            "other_currency": {
+              "currency": "CZK",
+              "price": 28523.66
+            },
+            "price": 1123,
+            "currency": "EUR"
+          },
+          "refundable_until": "",
+          "name": "Double Room Top Executive - Non-refundable",
+          "photos": [
+            {
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030440.jpg",
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030440.jpg",
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030440.jpg",
+              "photo_id": 74030440
+            },
+            {
+              "photo_id": 74030489,
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030489.jpg",
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030489.jpg",
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030489.jpg"
+            },
+            {
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030517.jpg",
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030517.jpg",
+              "photo_id": 74030517,
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030517.jpg"
+            },
+            {
+              "photo_id": 74030555,
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030555.jpg",
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030555.jpg",
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030555.jpg"
+            },
+            {
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030525.jpg",
+              "photo_id": 74030525,
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030525.jpg",
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030525.jpg"
+            },
+            {
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030485.jpg",
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030485.jpg",
+              "photo_id": 74030485,
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030485.jpg"
+            }
+          ],
+          "room_id": 2521523,
+          "block_id": "2521523_91898707_0_17_0",
+          "deposit_required": false,
+          "rack_rate": {
+            "other_currency": {
+              "price": 0,
+              "currency": "CZK"
+            },
+            "currency": "EUR",
+            "price": 0
+          },
+          "taxes": "10 % VAT",
+          "refundable": false,
+          "max_occupancy": 2,
+          "room_description": "Boasting a private terrace with city views, this air-conditioned room comes with a satellite flat-screen TV, a desk and parquet floors. The private bathroom includes a hairdryer and free toiletries. WiFi is free."
+        },
+        {
+          "max_occupancy": 3,
+          "room_description": "This spacious and comfortable room has high ceilings and parquet floors. It features free WiFi, a work desk and flat-screen TV with satellite channels.",
+          "refundable": false,
+          "rack_rate": {
+            "other_currency": {
+              "price": 0,
+              "currency": "CZK"
+            },
+            "currency": "EUR",
+            "price": 0
+          },
+          "taxes": "10 % VAT",
+          "room_id": 2521512,
+          "block_id": "2521512_95149036_0_17_0",
+          "deposit_required": true,
+          "refundable_until": "",
+          "name": "Triple Room - Non-refundable",
+          "photos": [
+            {
+              "photo_id": 74030615,
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030615.jpg",
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030615.jpg",
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030615.jpg"
+            },
+            {
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030579.jpg",
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030579.jpg",
+              "photo_id": 74030579,
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030579.jpg"
+            },
+            {
+              "photo_id": 74030572,
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030572.jpg",
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030572.jpg",
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030572.jpg"
+            },
+            {
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030491.jpg",
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030491.jpg",
+              "photo_id": 74030491,
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030491.jpg"
+            },
+            {
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030637.jpg",
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030637.jpg",
+              "photo_id": 74030637,
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030637.jpg"
+            }
+          ],
+          "breakfast_included": true,
+          "incremental_price": [
+            {
+              "currency": "EUR",
+              "price": 1125,
+              "other_currency": {
+                "currency": "CZK",
+                "price": 28574.45
+              }
+            }
+          ],
+          "min_price": {
+            "currency": "EUR",
+            "price": 1125,
+            "other_currency": {
+              "currency": "CZK",
+              "price": 28574.45
+            }
+          }
+        },
+        {
+          "incremental_price": [
+            {
+              "currency": "EUR",
+              "price": 1250,
+              "other_currency": {
+                "price": 31749.39,
+                "currency": "CZK"
+              }
+            }
+          ],
+          "breakfast_included": true,
+          "min_price": {
+            "currency": "EUR",
+            "price": 1250,
+            "other_currency": {
+              "price": 31749.39,
+              "currency": "CZK"
+            }
+          },
+          "photos": [
+            {
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030615.jpg",
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030615.jpg",
+              "photo_id": 74030615,
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030615.jpg"
+            },
+            {
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030579.jpg",
+              "photo_id": 74030579,
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030579.jpg",
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030579.jpg"
+            },
+            {
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030572.jpg",
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030572.jpg",
+              "photo_id": 74030572,
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030572.jpg"
+            },
+            {
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030491.jpg",
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030491.jpg",
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030491.jpg",
+              "photo_id": 74030491
+            },
+            {
+              "url_square60": "https://aff.bstatic.com/images/hotel/square60/740/74030637.jpg",
+              "url_original": "https://aff.bstatic.com/images/hotel/max500/740/74030637.jpg",
+              "photo_id": 74030637,
+              "url_max300": "https://aff.bstatic.com/images/hotel/max300/740/74030637.jpg"
+            }
+          ],
+          "refundable_until": "",
+          "name": "Triple Room - Non-refundable",
+          "deposit_required": false,
+          "room_id": 2521512,
+          "block_id": "2521512_91898707_0_17_0",
+          "rack_rate": {
+            "currency": "EUR",
+            "price": 0,
+            "other_currency": {
+              "currency": "CZK",
+              "price": 0
+            }
+          },
+          "taxes": "10 % VAT",
+          "refundable": false,
+          "max_occupancy": 3,
+          "room_description": "This spacious and comfortable room has high ceilings and parquet floors. It features free WiFi, a work desk and flat-screen TV with satellite channels."
+        }
+      ],
+      "direct_payment": true,
+      "checkout": "2018-01-28",
+      "checkin": "2018-01-22",
+      "hotel_id": 25215
+    }
+  ]
+}

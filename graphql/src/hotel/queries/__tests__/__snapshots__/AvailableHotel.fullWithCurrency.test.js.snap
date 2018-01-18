@@ -1,0 +1,312 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`single hotel availability query should support currency for full query 1`] = `
+Object {
+  "data": Object {
+    "availableHotel": Object {
+      "availableRooms": Array [
+        Object {
+          "incrementalPrice": Array [
+            Object {
+              "amount": 11635.52,
+              "currency": "CZK",
+            },
+            Object {
+              "amount": 23271.04,
+              "currency": "CZK",
+            },
+            Object {
+              "amount": 34906.55,
+              "currency": "CZK",
+            },
+          ],
+          "minimalPrice": Object {
+            "amount": 11635.52,
+            "currency": "CZK",
+          },
+        },
+        Object {
+          "incrementalPrice": Array [
+            Object {
+              "amount": 12928.35,
+              "currency": "CZK",
+            },
+            Object {
+              "amount": 25856.71,
+              "currency": "CZK",
+            },
+            Object {
+              "amount": 38785.06,
+              "currency": "CZK",
+            },
+          ],
+          "minimalPrice": Object {
+            "amount": 12928.35,
+            "currency": "CZK",
+          },
+        },
+        Object {
+          "incrementalPrice": Array [
+            Object {
+              "amount": 13692.88,
+              "currency": "CZK",
+            },
+          ],
+          "minimalPrice": Object {
+            "amount": 13692.88,
+            "currency": "CZK",
+          },
+        },
+        Object {
+          "incrementalPrice": Array [
+            Object {
+              "amount": 13692.88,
+              "currency": "CZK",
+            },
+          ],
+          "minimalPrice": Object {
+            "amount": 13692.88,
+            "currency": "CZK",
+          },
+        },
+        Object {
+          "incrementalPrice": Array [
+            Object {
+              "amount": 15214.31,
+              "currency": "CZK",
+            },
+          ],
+          "minimalPrice": Object {
+            "amount": 15214.31,
+            "currency": "CZK",
+          },
+        },
+        Object {
+          "incrementalPrice": Array [
+            Object {
+              "amount": 15214.31,
+              "currency": "CZK",
+            },
+          ],
+          "minimalPrice": Object {
+            "amount": 15214.31,
+            "currency": "CZK",
+          },
+        },
+        Object {
+          "incrementalPrice": Array [
+            Object {
+              "amount": 15247.33,
+              "currency": "CZK",
+            },
+            Object {
+              "amount": 30494.66,
+              "currency": "CZK",
+            },
+            Object {
+              "amount": 45741.99,
+              "currency": "CZK",
+            },
+          ],
+          "minimalPrice": Object {
+            "amount": 15247.33,
+            "currency": "CZK",
+          },
+        },
+        Object {
+          "incrementalPrice": Array [
+            Object {
+              "amount": 16436.03,
+              "currency": "CZK",
+            },
+          ],
+          "minimalPrice": Object {
+            "amount": 16436.03,
+            "currency": "CZK",
+          },
+        },
+        Object {
+          "incrementalPrice": Array [
+            Object {
+              "amount": 16941.48,
+              "currency": "CZK",
+            },
+            Object {
+              "amount": 33882.95,
+              "currency": "CZK",
+            },
+            Object {
+              "amount": 50824.43,
+              "currency": "CZK",
+            },
+          ],
+          "minimalPrice": Object {
+            "amount": 16941.48,
+            "currency": "CZK",
+          },
+        },
+        Object {
+          "incrementalPrice": Array [
+            Object {
+              "amount": 17807.6,
+              "currency": "CZK",
+            },
+          ],
+          "minimalPrice": Object {
+            "amount": 17807.6,
+            "currency": "CZK",
+          },
+        },
+        Object {
+          "incrementalPrice": Array [
+            Object {
+              "amount": 18262.25,
+              "currency": "CZK",
+            },
+          ],
+          "minimalPrice": Object {
+            "amount": 18262.25,
+            "currency": "CZK",
+          },
+        },
+        Object {
+          "incrementalPrice": Array [
+            Object {
+              "amount": 18493.39,
+              "currency": "CZK",
+            },
+          ],
+          "minimalPrice": Object {
+            "amount": 18493.39,
+            "currency": "CZK",
+          },
+        },
+        Object {
+          "incrementalPrice": Array [
+            Object {
+              "amount": 19786.22,
+              "currency": "CZK",
+            },
+          ],
+          "minimalPrice": Object {
+            "amount": 19786.22,
+            "currency": "CZK",
+          },
+        },
+        Object {
+          "incrementalPrice": Array [
+            Object {
+              "amount": 20548.21,
+              "currency": "CZK",
+            },
+          ],
+          "minimalPrice": Object {
+            "amount": 20548.21,
+            "currency": "CZK",
+          },
+        },
+        Object {
+          "incrementalPrice": Array [
+            Object {
+              "amount": 20870.78,
+              "currency": "CZK",
+            },
+          ],
+          "minimalPrice": Object {
+            "amount": 20870.78,
+            "currency": "CZK",
+          },
+        },
+        Object {
+          "incrementalPrice": Array [
+            Object {
+              "amount": 20870.78,
+              "currency": "CZK",
+            },
+          ],
+          "minimalPrice": Object {
+            "amount": 20870.78,
+            "currency": "CZK",
+          },
+        },
+        Object {
+          "incrementalPrice": Array [
+            Object {
+              "amount": 23189.76,
+              "currency": "CZK",
+            },
+          ],
+          "minimalPrice": Object {
+            "amount": 23189.76,
+            "currency": "CZK",
+          },
+        },
+        Object {
+          "incrementalPrice": Array [
+            Object {
+              "amount": 23189.76,
+              "currency": "CZK",
+            },
+          ],
+          "minimalPrice": Object {
+            "amount": 23189.76,
+            "currency": "CZK",
+          },
+        },
+        Object {
+          "incrementalPrice": Array [
+            Object {
+              "amount": 25671.29,
+              "currency": "CZK",
+            },
+          ],
+          "minimalPrice": Object {
+            "amount": 25671.29,
+            "currency": "CZK",
+          },
+        },
+        Object {
+          "incrementalPrice": Array [
+            Object {
+              "amount": 28523.66,
+              "currency": "CZK",
+            },
+          ],
+          "minimalPrice": Object {
+            "amount": 28523.66,
+            "currency": "CZK",
+          },
+        },
+        Object {
+          "incrementalPrice": Array [
+            Object {
+              "amount": 28574.45,
+              "currency": "CZK",
+            },
+          ],
+          "minimalPrice": Object {
+            "amount": 28574.45,
+            "currency": "CZK",
+          },
+        },
+        Object {
+          "incrementalPrice": Array [
+            Object {
+              "amount": 31749.39,
+              "currency": "CZK",
+            },
+          ],
+          "minimalPrice": Object {
+            "amount": 31749.39,
+            "currency": "CZK",
+          },
+        },
+      ],
+      "price": Object {
+        "amount": 528.71,
+        "currency": "CZK",
+      },
+    },
+  },
+}
+`;

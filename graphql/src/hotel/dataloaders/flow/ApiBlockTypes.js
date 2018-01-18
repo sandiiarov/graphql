@@ -20,6 +20,10 @@ export type Block = {|
 export type RackRate = {|
   currency: string,
   price: string,
+  other_currency?: {|
+    currency: string,
+    price: string,
+  |},
 |};
 
 export type RootInterface = {|
