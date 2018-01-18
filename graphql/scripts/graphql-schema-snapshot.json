@@ -3749,6 +3749,137 @@
               "ofType": null
             },
             "defaultValue": null
+          },
+          {
+            "name": "hotelFacilities",
+            "description": "Show only hotels having specified hotel facilities",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "HotelFacilitiesInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "HotelFacilitiesInput",
+        "description": null,
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "airportShuttle",
+            "description": "Show only hotels having airport shuttle as a service.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "familyRooms",
+            "description": "Show only hotels having family rooms.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "facilitiesForDisabled",
+            "description": "Show only hotels having facilities for disabled.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "fitnessCenter",
+            "description": "Show only hotels having fitness room.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "parking",
+            "description": "Show only hotels having any parking.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "freeParking",
+            "description": "Show only hotels having free parking.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "valetParking",
+            "description": "Show only hotels having valet parking.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "indoorPool",
+            "description": "Show only hotels having indoor swimming pool.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "petsAllowed",
+            "description": "Show only hotels having pets allowed.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "spa",
+            "description": "Show only hotels having spa.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "wifi",
+            "description": "Show only hotels having wifi.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            },
+            "defaultValue": null
           }
         ],
         "interfaces": null,

@@ -7,6 +7,8 @@ import {
   GraphQLFloat,
 } from 'graphql';
 
+import HotelFacilities from './HotelFacilities';
+
 export default new GraphQLInputObjectType({
   name: 'HotelsFilterInput',
   fields: {
@@ -25,6 +27,11 @@ export default new GraphQLInputObjectType({
       type: GraphQLFloat,
       description:
         'Show only hotels having minimum total price higher than or equal to this value.',
+    },
+
+    hotelFacilities: {
+      type: HotelFacilities,
+      description: 'Show only hotels having specified hotel facilities',
     },
   },
 });
