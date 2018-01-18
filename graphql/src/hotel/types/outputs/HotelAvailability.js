@@ -38,6 +38,7 @@ export default new GraphQLObjectType({
           [ancestor.id],
           ancestor.args.checkin,
           ancestor.args.checkout,
+          ancestor.currencyCode,
         );
       },
     },
