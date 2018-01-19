@@ -17,6 +17,7 @@ type SharedSearchParameters = {|
   minPrice?: number,
   maxPrice?: number,
   currency?: string,
+  hotelFacilities?: HotelFacilities,
 |};
 
 type RoomsConfiguration = Array<{|
@@ -46,6 +47,20 @@ export type SearchParameters =
   | SearchByHotelId
   | SearchByCityId
   | SearchByCoordinates;
+
+type HotelFacilities = {|
+  airportShuttle: ?boolean,
+  familyRooms: ?boolean,
+  facilitiesForDisabled: ?boolean,
+  fitnessCenter: ?boolean,
+  parking: ?boolean,
+  freeParking: ?boolean,
+  valetParking: ?boolean,
+  indoorPool: ?boolean,
+  petsAllowed: ?boolean,
+  spa: ?boolean,
+  wifi: ?boolean,
+|};
 
 /**
  * This data-loader loads all available hotels in the specified
@@ -123,6 +138,11 @@ async function fetchAllHotels(
       parameters.min_price = searchParameters.minPrice;
       parameters.max_price = searchParameters.maxPrice;
       parameters.rows = searchParameters.first || 50;
+      if (searchParameters.hotelFacilities) {
+        parameters.hotel_facilities = sanitizeHotelFacilities(
+          searchParameters.hotelFacilities,
+        );
+      }
 
       const absoluteUrl = queryWithParameters(
         'https://distribution-xml.booking.com/2.0/json/hotelAvailability',
@@ -161,6 +181,51 @@ function sanitizeHotels(hotels, searchParameters): HotelType[] {
       zip: hotel.postcode,
     },
   }));
+}
+
+function sanitizeHotelFacilities(params: HotelFacilities): string | null {
+  const hotelFacilities = [];
+  if (params.airportShuttle) {
+    hotelFacilities.push('airport_shuttle');
+  }
+  if (params.familyRooms) {
+    hotelFacilities.push('family_rooms');
+  }
+  if (params.facilitiesForDisabled) {
+    hotelFacilities.push('facilities_for_disabled');
+  }
+  if (params.fitnessCenter) {
+    hotelFacilities.push('fitness_room');
+  }
+  if (params.parking) {
+    hotelFacilities.push('parking_on_site');
+    hotelFacilities.push('different_parking_types');
+    hotelFacilities.push('private_parking');
+    hotelFacilities.push('paid_parking');
+    hotelFacilities.push('free_parking');
+    hotelFacilities.push('valet_parking');
+  }
+  if (params.freeParking) {
+    hotelFacilities.push('free_parking');
+  }
+  if (params.valetParking) {
+    hotelFacilities.push('valet_parking');
+  }
+  if (params.indoorPool) {
+    hotelFacilities.push('swimmingpool_indoor');
+  }
+  if (params.petsAllowed) {
+    hotelFacilities.push('pets_allowed');
+  }
+  if (params.spa) {
+    hotelFacilities.push('spa_wellness_centre');
+  }
+  if (params.wifi) {
+    hotelFacilities.push('paid_wifi');
+    hotelFacilities.push('wifi_everywhere');
+    hotelFacilities.push('free_wifi_internet_access_included');
+  }
+  return _.uniq(hotelFacilities).join(',') || null;
 }
 
 /**

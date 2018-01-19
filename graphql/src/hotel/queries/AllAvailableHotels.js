@@ -53,6 +53,7 @@ export default {
         stars: filterArgs.starsRating,
         minPrice: filterArgs.minPrice,
         maxPrice: filterArgs.maxPrice,
+        hotelFacilities: filterArgs.hotelFacilities,
       }),
     };
 
