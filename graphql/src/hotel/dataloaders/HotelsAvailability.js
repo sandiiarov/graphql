@@ -198,12 +198,7 @@ function sanitizeHotelFacilities(params: HotelFacilities): string | null {
     hotelFacilities.push('fitness_room');
   }
   if (params.parking) {
-    hotelFacilities.push('parking_on_site');
-    hotelFacilities.push('different_parking_types');
     hotelFacilities.push('private_parking');
-    hotelFacilities.push('paid_parking');
-    hotelFacilities.push('free_parking');
-    hotelFacilities.push('valet_parking');
   }
   if (params.freeParking) {
     hotelFacilities.push('free_parking');
@@ -221,8 +216,6 @@ function sanitizeHotelFacilities(params: HotelFacilities): string | null {
     hotelFacilities.push('spa_wellness_centre');
   }
   if (params.wifi) {
-    hotelFacilities.push('paid_wifi');
-    hotelFacilities.push('wifi_everywhere');
     hotelFacilities.push('free_wifi_internet_access_included');
   }
   return _.uniq(hotelFacilities).join(',') || null;
