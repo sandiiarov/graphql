@@ -3759,6 +3759,16 @@
               "ofType": null
             },
             "defaultValue": null
+          },
+          {
+            "name": "minScore",
+            "description": "Show only hotels having minimum review score higher than or equal to this value. Score must be between 1 and 10.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "defaultValue": null
           }
         ],
         "interfaces": null,

@@ -33,5 +33,11 @@ export default new GraphQLInputObjectType({
       type: HotelFacilities,
       description: 'Show only hotels having specified hotel facilities',
     },
+
+    minScore: {
+      type: GraphQLInt, // Float is rounded on Booking.com.
+      description:
+        'Show only hotels having minimum review score higher than or equal to this value. Score must be between 1 and 10.',
+    },
   },
 });

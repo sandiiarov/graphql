@@ -8,7 +8,7 @@ import AllHotelsDataset from '../../datasets/all.json';
 
 beforeEach(() => {
   BookingComApiMock.onGet(
-    'https://distribution-xml.booking.com/2.0/json/hotelAvailability?extras=hotel_details&order_by=popularity&radius=50&latitude=51.5&longitude=0&checkin=2017-11-16&checkout=2017-11-23&rows=2&hotel_facilities=airport_shuttle%2Cfamily_rooms%2Cfacilities_for_disabled%2Cfitness_room%2Cparking_on_site%2Cdifferent_parking_types%2Cprivate_parking%2Cpaid_parking%2Cfree_parking%2Cvalet_parking%2Cswimmingpool_indoor%2Cpets_allowed%2Cspa_wellness_centre%2Cpaid_wifi%2Cwifi_everywhere%2Cfree_wifi_internet_access_included&room1=A',
+    'https://distribution-xml.booking.com/2.0/json/hotelAvailability?extras=hotel_details&order_by=popularity&radius=50&latitude=51.5&longitude=0&checkin=2017-11-16&checkout=2017-11-23&rows=2&hotel_facilities=airport_shuttle%2Cfamily_rooms%2Cfacilities_for_disabled%2Cfitness_room%2Cprivate_parking%2Cfree_parking%2Cvalet_parking%2Cswimmingpool_indoor%2Cpets_allowed%2Cspa_wellness_centre%2Cfree_wifi_internet_access_included&room1=A',
   ).replyWithData(AllHotelsDataset);
   BookingComApiMock.onGet(
     'https://distribution-xml.booking.com/2.0/json/hotelAvailability?extras=hotel_details&order_by=popularity&radius=50&latitude=51.5&longitude=0&checkin=2017-11-16&checkout=2017-11-23&rows=2&room1=A',
