@@ -55,6 +55,7 @@ export default {
         maxPrice: filterArgs.maxPrice,
         hotelFacilities: filterArgs.hotelFacilities,
         minScore: filterArgs.minScore,
+        freeCancellation: filterArgs.freeCancellation,
       }),
     };
 

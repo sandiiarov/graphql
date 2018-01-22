@@ -19,6 +19,7 @@ type SharedSearchParameters = {|
   currency?: string,
   hotelFacilities?: HotelFacilities,
   minScore?: number,
+  freeCancellation?: boolean,
 |};
 
 type RoomsConfiguration = Array<{|
@@ -145,6 +146,9 @@ async function fetchAllHotels(
         );
       }
       parameters.min_review_score = searchParameters.minScore;
+      if (searchParameters.freeCancellation) {
+        parameters.filter = 'free_cancellation';
+      }
 
       const absoluteUrl = queryWithParameters(
         'https://distribution-xml.booking.com/2.0/json/hotelAvailability',
