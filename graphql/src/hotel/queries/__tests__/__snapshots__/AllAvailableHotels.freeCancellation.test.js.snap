@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`all hotels query free cancellation should be included in url 1`] = `
+Object {
+  "data": Object {
+    "allAvailableHotels": Object {
+      "edges": Array [
+        Object {
+          "node": Object {
+            "id": "SG90ZWxBdmFpbGFiaWxpdHk6MjUyMTU=",
+          },
+        },
+        Object {
+          "node": Object {
+            "id": "SG90ZWxBdmFpbGFiaWxpdHk6MjQ4NTM5",
+          },
+        },
+      ],
+    },
+  },
+}
+`;

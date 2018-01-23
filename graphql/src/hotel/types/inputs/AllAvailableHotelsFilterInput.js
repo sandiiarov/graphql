@@ -5,6 +5,7 @@ import {
   GraphQLInputObjectType,
   GraphQLList,
   GraphQLFloat,
+  GraphQLBoolean,
 } from 'graphql';
 
 import HotelFacilities from './HotelFacilities';
@@ -38,6 +39,11 @@ export default new GraphQLInputObjectType({
       type: GraphQLInt, // Float is rounded on Booking.com.
       description:
         'Show only hotels having minimum review score higher than or equal to this value. Score must be between 1 and 10.',
+    },
+
+    freeCancellation: {
+      type: GraphQLBoolean,
+      description: 'Show only hotels having free cancellation.',
     },
   },
 });
