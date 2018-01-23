@@ -18,6 +18,7 @@ type SharedSearchParameters = {|
   maxPrice?: number,
   currency?: string,
   hotelFacilities?: HotelFacilities,
+  minScore?: number,
 |};
 
 type RoomsConfiguration = Array<{|
@@ -143,6 +144,7 @@ async function fetchAllHotels(
           searchParameters.hotelFacilities,
         );
       }
+      parameters.min_review_score = searchParameters.minScore;
 
       const absoluteUrl = queryWithParameters(
         'https://distribution-xml.booking.com/2.0/json/hotelAvailability',
@@ -183,41 +185,27 @@ function sanitizeHotels(hotels, searchParameters): HotelType[] {
   }));
 }
 
+const facilitiesList = {
+  airportShuttle: 'airport_shuttle',
+  familyRooms: 'family_rooms',
+  facilitiesForDisabled: 'facilities_for_disabled',
+  fitnessCenter: 'fitness_room',
+  parking: 'private_parking',
+  freeParking: 'free_parking',
+  valetParking: 'valet_parking',
+  indoorPool: 'swimmingpool_indoor',
+  petsAllowed: 'pets_allowed',
+  spa: 'spa_wellness_centre',
+  wifi: 'free_wifi_internet_access_included',
+};
+
 function sanitizeHotelFacilities(params: HotelFacilities): string | null {
   const hotelFacilities = [];
-  if (params.airportShuttle) {
-    hotelFacilities.push('airport_shuttle');
-  }
-  if (params.familyRooms) {
-    hotelFacilities.push('family_rooms');
-  }
-  if (params.facilitiesForDisabled) {
-    hotelFacilities.push('facilities_for_disabled');
-  }
-  if (params.fitnessCenter) {
-    hotelFacilities.push('fitness_room');
-  }
-  if (params.parking) {
-    hotelFacilities.push('private_parking');
-  }
-  if (params.freeParking) {
-    hotelFacilities.push('free_parking');
-  }
-  if (params.valetParking) {
-    hotelFacilities.push('valet_parking');
-  }
-  if (params.indoorPool) {
-    hotelFacilities.push('swimmingpool_indoor');
-  }
-  if (params.petsAllowed) {
-    hotelFacilities.push('pets_allowed');
-  }
-  if (params.spa) {
-    hotelFacilities.push('spa_wellness_centre');
-  }
-  if (params.wifi) {
-    hotelFacilities.push('free_wifi_internet_access_included');
-  }
+  Object.keys(facilitiesList).forEach(key => {
+    if (params[key]) {
+      hotelFacilities.push(facilitiesList[key]);
+    }
+  });
   return _.uniq(hotelFacilities).join(',') || null;
 }
 

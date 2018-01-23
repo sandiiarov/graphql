@@ -54,6 +54,7 @@ export default {
         minPrice: filterArgs.minPrice,
         maxPrice: filterArgs.maxPrice,
         hotelFacilities: filterArgs.hotelFacilities,
+        minScore: filterArgs.minScore,
       }),
     };
 
@@ -73,6 +74,9 @@ export default {
       searchParams.longitude = searchArgs.longitude;
     }
     searchParams.first = args.first;
+    if (filterArgs && (filterArgs.minScore < 1 || filterArgs.minScore > 10)) {
+      throw new Error("Filter 'minScore' must be between 1 and 10.");
+    }
 
     const availableHotels = await dataLoader.hotel.availabilityByLocation.load(
       searchParams,

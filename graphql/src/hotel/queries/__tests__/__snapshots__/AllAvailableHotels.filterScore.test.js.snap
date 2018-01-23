@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`all hotels query should filter hotels with min score 8 1`] = `
+Object {
+  "data": Object {
+    "allAvailableHotels": Object {
+      "edges": Array [
+        Object {
+          "node": Object {
+            "id": "SG90ZWxBdmFpbGFiaWxpdHk6MjUyMTU=",
+          },
+        },
+        Object {
+          "node": Object {
+            "id": "SG90ZWxBdmFpbGFiaWxpdHk6MjQ4NTM5",
+          },
+        },
+      ],
+    },
+  },
+}
+`;
+
+exports[`all hotels query should not allow to set minScore out of range 1-10 1`] = `
+Object {
+  "data": Object {
+    "allAvailableHotels": null,
+  },
+  "errors": Array [
+    [GraphQLError: Filter 'minScore' must be between 1 and 10.],
+  ],
+}
+`;
