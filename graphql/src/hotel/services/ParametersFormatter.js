@@ -3,6 +3,7 @@
 import _ from 'lodash';
 import { DateTime } from 'luxon';
 import { fromGlobalId } from 'graphql-relay';
+import idx from 'idx';
 
 import type { SearchParameters } from '../dataloaders/flow/SearchParameters';
 import type { HotelFacilities } from './../dataloaders/flow/HotelFacilities';
@@ -26,7 +27,8 @@ export const processInputArguments = (args: Object) => {
     }),
   };
 
-  if (filterArgs && (filterArgs.minScore < 1 || filterArgs.minScore > 10)) {
+  const minScore = idx(filterArgs, _ => _.minScore);
+  if (minScore && (minScore < 1 || minScore > 10)) {
     throw new Error("Filter 'minScore' must be between 1 and 10.");
   }
 
