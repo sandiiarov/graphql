@@ -11,14 +11,14 @@ import LocationSuggestionsLoader from '../../location/dataloaders/LocationSugges
 import LocationLoader from '../../location/dataloaders/Location';
 import FlightLoader from '../../flight/dataloaders/Flight';
 import OptionsStorage from './context/OptionsStorage';
-import HotelsAvailability, {
-  type SearchParameters as HotelKey,
-} from '../../hotel/dataloaders/HotelsAvailability';
+import HotelsAvailability from '../../hotel/dataloaders/HotelsAvailability';
+import { type SearchParameters as HotelKey } from '../../hotel/dataloaders/flow/SearchParameters';
 import HotelByID from '../../hotel/dataloaders/HotelByID';
 import HotelCities from '../../hotel/dataloaders/HotelCities';
 import HotelRoomsLoader from '../../hotel/dataloaders/HotelRooms';
 import HotelRoomAvailabilityLoader from '../../hotel/dataloaders/HotelRoomAvailability';
 import HotelRoomBeddingLoader from '../../hotel/dataloaders/RoomBedding';
+import PriceStatsLoader from '../../hotel/dataloaders/PriceStats';
 
 import type { Booking } from '../../booking/Booking';
 import type { Airline } from '../../flight/Flight';
@@ -48,6 +48,10 @@ export type GraphqlContextType = {|
       room: HotelRoomsLoader,
       roomAvailability: HotelRoomAvailabilityLoader,
       roomBedding: typeof HotelRoomBeddingLoader,
+      priceStats: DataLoader<
+        { searchParams: HotelKey, boundary: 'MAX' | 'MIN' },
+        number,
+      >,
     },
   |},
   options: OptionsStorage,
@@ -78,6 +82,7 @@ export function createContext(token: ?string): GraphqlContextType {
         room: new HotelRoomsLoader(),
         roomAvailability: new HotelRoomAvailabilityLoader(),
         roomBedding: HotelRoomBeddingLoader,
+        priceStats: PriceStatsLoader,
       },
     },
     options: new OptionsStorage(),

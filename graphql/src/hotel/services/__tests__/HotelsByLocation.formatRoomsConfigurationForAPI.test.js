@@ -1,6 +1,6 @@
 // @flow
 
-import { formatRoomsConfigurationForAPI } from '../HotelsAvailability';
+import { formatRoomsConfigurationForAPI } from '../ParametersFormatter';
 
 it('works for one adult', () => {
   expect(formatRoomsConfigurationForAPI([{ adultsCount: 1 }])).toEqual(['A']);
