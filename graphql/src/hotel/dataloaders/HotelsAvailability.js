@@ -2,67 +2,16 @@
 
 import _ from 'lodash';
 import DataLoader from 'dataloader';
-import { DateTime } from 'luxon';
 
 import { get } from '../services/BookingComRequest';
 import { queryWithParameters } from '../../../config/application';
+import {
+  prepareRequestParameters,
+  prepareRoomsRequestParameters,
+} from '../services/ParametersFormatter';
 
 import type { HotelType } from './flow/HotelType';
-
-type SharedSearchParameters = {|
-  checkin: Date,
-  checkout: Date,
-  roomsConfiguration: RoomsConfiguration,
-  stars?: number[],
-  minPrice?: number,
-  maxPrice?: number,
-  currency?: string,
-  hotelFacilities?: HotelFacilities,
-  minScore?: number,
-  freeCancellation?: boolean,
-|};
-
-type RoomsConfiguration = Array<{|
-  adultsCount: number,
-  children?: Array<{|
-    age: number,
-  |}>,
-|}>;
-
-type SearchByHotelId = {|
-  hotelId: string,
-  ...SharedSearchParameters,
-|};
-
-type SearchByCityId = {|
-  cityId: string,
-  ...SharedSearchParameters,
-|};
-
-type SearchByCoordinates = {|
-  latitude: number,
-  longitude: number,
-  ...SharedSearchParameters,
-|};
-
-export type SearchParameters =
-  | SearchByHotelId
-  | SearchByCityId
-  | SearchByCoordinates;
-
-type HotelFacilities = {|
-  airportShuttle: ?boolean,
-  familyRooms: ?boolean,
-  facilitiesForDisabled: ?boolean,
-  fitnessCenter: ?boolean,
-  parking: ?boolean,
-  freeParking: ?boolean,
-  valetParking: ?boolean,
-  indoorPool: ?boolean,
-  petsAllowed: ?boolean,
-  spa: ?boolean,
-  wifi: ?boolean,
-|};
+import type { SearchParameters } from './flow/SearchParameters';
 
 /**
  * This data-loader loads all available hotels in the specified
@@ -92,71 +41,14 @@ async function fetchAllHotels(
 ): Promise<Array<HotelType[] | Error>> {
   return Promise.all(
     keys.map(async searchParameters => {
-      const parameters = {};
-
-      if (searchParameters.hotelId) {
-        // search by hotel ID
-        parameters.hotel_ids = searchParameters.hotelId;
-      } else if (searchParameters.cityId) {
-        // search by city ID
-        parameters.city_ids = searchParameters.cityId;
-      } else if (searchParameters.latitude) {
-        // search by lng/lat/rad
-        parameters.radius = '50'; // not configurable yet (but required)
-        parameters.latitude = searchParameters.latitude;
-        parameters.longitude = searchParameters.longitude;
-      }
-
-      const roomsQuery = Object.assign(
-        {},
-        ...formatRoomsConfigurationForAPI(
-          searchParameters.roomsConfiguration,
-        ).map((configuration, index) => ({
-          [`room${index + 1}`]: configuration,
-        })),
-      );
-
-      parameters.checkin = DateTime.fromJSDate(searchParameters.checkin, {
-        zone: 'UTC',
-      }).toISODate();
-      parameters.checkout = DateTime.fromJSDate(searchParameters.checkout, {
-        zone: 'UTC',
-      }).toISODate();
-
-      parameters.stars =
-        searchParameters.stars &&
-        searchParameters.stars
-          .filter((element, index, array) => {
-            const unique = array.indexOf(element) === index;
-            if (unique) {
-              // allowed interval is <0;5> where "0" indicates "not a hotel" (?)
-              return 0 <= element === element <= 5;
-            }
-            return false;
-          })
-          .join(',');
-
-      parameters.currency = searchParameters.currency;
-      parameters.min_price = searchParameters.minPrice;
-      parameters.max_price = searchParameters.maxPrice;
-      parameters.rows = searchParameters.first || 50;
-      if (searchParameters.hotelFacilities) {
-        parameters.hotel_facilities = sanitizeHotelFacilities(
-          searchParameters.hotelFacilities,
-        );
-      }
-      parameters.min_review_score = searchParameters.minScore;
-      if (searchParameters.freeCancellation) {
-        parameters.filter = 'free_cancellation';
-      }
-
+      const parameters = prepareRequestParameters(searchParameters);
       const absoluteUrl = queryWithParameters(
         'https://distribution-xml.booking.com/2.0/json/hotelAvailability',
         {
           extras: 'hotel_details',
           order_by: 'popularity',
           ...parameters,
-          ...roomsQuery,
+          ...prepareRoomsRequestParameters(searchParameters.roomsConfiguration),
         },
       );
 
@@ -187,52 +79,4 @@ function sanitizeHotels(hotels, searchParameters): HotelType[] {
       zip: hotel.postcode,
     },
   }));
-}
-
-const facilitiesList = {
-  airportShuttle: 'airport_shuttle',
-  familyRooms: 'family_rooms',
-  facilitiesForDisabled: 'facilities_for_disabled',
-  fitnessCenter: 'fitness_room',
-  parking: 'private_parking',
-  freeParking: 'free_parking',
-  valetParking: 'valet_parking',
-  indoorPool: 'swimmingpool_indoor',
-  petsAllowed: 'pets_allowed',
-  spa: 'spa_wellness_centre',
-  wifi: 'free_wifi_internet_access_included',
-};
-
-function sanitizeHotelFacilities(params: HotelFacilities): string | null {
-  const hotelFacilities = [];
-  Object.keys(facilitiesList).forEach(key => {
-    if (params[key]) {
-      hotelFacilities.push(facilitiesList[key]);
-    }
-  });
-  return _.uniq(hotelFacilities).join(',') || null;
-}
-
-/**
- * Returns array with rooms configuration:
- *
- * ['A,A,4,6', 'A,2']
- */
-export function formatRoomsConfigurationForAPI(
-  roomsConfiguration: RoomsConfiguration,
-): string[] {
-  return roomsConfiguration.map(roomConfiguration => {
-    const children = roomConfiguration.children || []; // children are optional
-    return new Array(roomConfiguration.adultsCount)
-      .fill('A')
-      .concat(
-        children.map(({ age }) => {
-          if (age >= 0 && age <= 17) {
-            return age;
-          }
-          return 'A';
-        }),
-      )
-      .join(',');
-  });
 }
