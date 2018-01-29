@@ -14,6 +14,7 @@ export type HotelType = {|
   price: ?string, // actually float as a string
   whitelabelUrl: string,
   cityName: string,
+  cityId: number,
   address: Address,
   summary: string,
 |};

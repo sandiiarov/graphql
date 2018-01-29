@@ -15,6 +15,7 @@ import HotelsAvailability from '../../hotel/dataloaders/HotelsAvailability';
 import { type SearchParameters as HotelKey } from '../../hotel/dataloaders/flow/SearchParameters';
 import HotelByID from '../../hotel/dataloaders/HotelByID';
 import HotelCities from '../../hotel/dataloaders/HotelCities';
+import CitiesByID from '../../hotel/dataloaders/CitiesByID';
 import HotelRoomsLoader from '../../hotel/dataloaders/HotelRooms';
 import HotelRoomAvailabilityLoader from '../../hotel/dataloaders/HotelRoomAvailability';
 import HotelRoomBeddingLoader from '../../hotel/dataloaders/RoomBedding';
@@ -23,6 +24,7 @@ import PriceStatsLoader from '../../hotel/dataloaders/PriceStats';
 import type { Booking } from '../../booking/Booking';
 import type { Airline } from '../../flight/Flight';
 import type { HotelType } from '../../hotel/dataloaders/flow/HotelType';
+import type { City } from '../../hotel/dataloaders/flow/City';
 import type { HotelCity } from '../../hotel/types/outputs/HotelCity';
 
 /**
@@ -40,6 +42,7 @@ export type GraphqlContextType = {|
     location: LocationLoader,
     locationSuggestions: LocationSuggestionsLoader,
     rates: DataLoader<string, ?number>,
+    city: DataLoader<string, City[]>,
     hotel: {
       availabilityByLocation: DataLoader<HotelKey, HotelType[]>,
       availabilityByID: DataLoader<HotelKey, HotelType[]>,
@@ -74,6 +77,7 @@ export function createContext(token: ?string): GraphqlContextType {
       location: location,
       locationSuggestions: locationSuggestions,
       rates: createRatesLoader(),
+      city: CitiesByID,
       hotel: {
         availabilityByLocation: HotelsAvailability,
         availabilityByID: HotelsAvailability,

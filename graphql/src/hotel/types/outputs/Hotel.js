@@ -1,11 +1,12 @@
 // @flow
 
-import { GraphQLObjectType, GraphQLString } from 'graphql';
+import { GraphQLObjectType, GraphQLString, GraphQLFloat } from 'graphql';
 import {
   connectionArgs,
   connectionDefinitions,
   connectionFromArray,
 } from 'graphql-relay';
+import distance from 'gps-distance';
 
 import { globalIdField } from '../../../common/services/OpaqueIdentifier';
 import GraphQLHotelFacility from './HotelFacility';
@@ -145,6 +146,31 @@ export default new GraphQLObjectType({
       args: connectionArgs,
       resolve: async ({ photos }: HotelExtendedType, args: Object) => {
         return connectionFromArray(photos, args);
+      },
+    },
+
+    distanceFromCenter: {
+      description: 'Hotel distance from the center in Km.',
+      type: GraphQLFloat,
+      resolve: async (
+        { id }: HotelExtendedType,
+        args: Object,
+        { dataLoader }: GraphqlContextType,
+      ) => {
+        const { location, cityId } = await dataLoader.hotel.byID.load(id);
+        const city = await dataLoader.city.load(cityId);
+        if (location && city && city.location) {
+          return Math.abs(
+            distance(
+              location.latitude,
+              location.longitude,
+              city.location.latitude,
+              city.location.longitude,
+            ),
+          ).toFixed(3);
+        } else {
+          return null;
+        }
       },
     },
   },
