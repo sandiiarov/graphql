@@ -1,6 +1,7 @@
 // @flow
 
 import DataLoader from 'dataloader';
+import { DateTime, Interval } from 'luxon';
 
 import type { SearchParameters } from './flow/SearchParameters';
 import {
@@ -10,11 +11,24 @@ import {
 import { queryWithParameters } from '../../../config/application';
 import { get } from '../services/BookingComRequest';
 
+function getNightsFromCheckinToCheckout(checkinDate: Date, checkoutDate: Date) {
+  const checkin = DateTime.fromJSDate(checkinDate);
+  const checkout = DateTime.fromJSDate(checkoutDate);
+  const interval = Interval.fromDateTimes(checkin, checkout);
+  return interval.length('days');
+}
+
 const PriceStats = async (
   searchParams: SearchParameters,
   boundary: 'MAX' | 'MIN',
 ) => {
-  const parameters = prepareRequestParameters(searchParams);
+  // Price filter should not affect search stats max and min price
+  const parameters = {
+    ...prepareRequestParameters(searchParams),
+    min_price: undefined,
+    max_price: undefined,
+  };
+
   const absoluteUrl = queryWithParameters(
     'https://distribution-xml.booking.com/2.0/json/hotelAvailability',
     {
@@ -28,8 +42,12 @@ const PriceStats = async (
     },
   );
   const response = await get(absoluteUrl);
+  const nights = getNightsFromCheckinToCheckout(
+    searchParams.checkin,
+    searchParams.checkout,
+  );
 
-  return response.result.map(hotel => hotel.price);
+  return response.result.map(hotel => Math.round(hotel.price / nights));
 };
 
 export default new DataLoader(async (keys): Promise<Array<number | Error>> => {
