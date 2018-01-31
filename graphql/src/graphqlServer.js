@@ -3,8 +3,12 @@
 import express from 'express';
 import graphqlHTTP from 'express-graphql';
 import cors from 'cors';
-import OpticsAgent from 'optics-agent';
 import type { $Request, $Response } from 'express';
+import {
+  TraceCollector,
+  instrumentSchemaForTracing,
+  formatTraceData,
+} from 'apollo-tracing';
 
 import Schema from './Schema';
 import { createContext } from './common/services/GraphqlContext';
@@ -20,20 +24,13 @@ process.on('unhandledRejection', reason => {
 const app = express();
 app.use(cors({ methods: ['GET', 'POST'] }));
 
-const useOptics = !!(
-  process.env.NODE_ENV !== 'test' && process.env.OPTICS_API_KEY
-);
-
-if (useOptics) {
-  OpticsAgent.instrumentSchema(Schema);
-  app.use(OpticsAgent.middleware());
-}
-
 app.use('/', (request: $Request, response: $Response) => {
   const token = request.header('authorization') || null;
   const context = createContext(token);
-  if (useOptics) {
-    context.opticsContext = OpticsAgent.context(request);
+  if (process.env.NODE_ENV !== 'test') {
+    const traceCollector = new TraceCollector();
+    traceCollector.requestDidStart();
+    context._traceCollector = traceCollector;
   }
   return createGraphqlServer(Schema, context)(request, response);
 });
@@ -42,7 +39,7 @@ export default app;
 
 function createGraphqlServer(schema, context) {
   return graphqlHTTP({
-    schema: schema,
+    schema: instrumentSchemaForTracing(schema),
     pretty: false,
     graphiql: true,
     context: context,
@@ -60,6 +57,14 @@ function createGraphqlServer(schema, context) {
 
       Logger.error(errorMessage);
       return error;
+    },
+    extensions: () => {
+      const traceCollector = context._traceCollector;
+      if (!traceCollector) return {};
+      traceCollector.requestDidEnd();
+      return {
+        tracing: formatTraceData(traceCollector),
+      };
     },
   });
 }

@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "algoliasearch": "^3.24.9",
+    "apollo-tracing": "^0.0.9",
     "aws-serverless-express": "^3.0.2",
     "chalk": "^2.0.1",
     "cors": "^2.8.4",
@@ -14,8 +15,7 @@
     "idx": "2.2.0",
     "lodash": "^4.17.4",
     "luxon": "^0.0.17",
-    "node-fetch": "^1.7.1",
-    "optics-agent": "^1.1.6"
+    "node-fetch": "^1.7.1"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
@@ -54,7 +54,8 @@
     "lint": "eslint .",
     "test": "jest --setupTestFrameworkScriptFile=./config/setupTests.js",
     "test-ci": "yarn run typecheck && yarn run lint && TZ='Asia/Tokyo' yarn run test -- --ci --color --config=jest.json && yarn babel-node scripts/CheckBackwardCompatibility.js",
-    "typecheck": "flow check --color=always"
+    "typecheck": "flow check --color=always",
+    "start-apollo-engine": "docker run --env \"ENGINE_CONFIG=$(cat config/apolloEngine.json)\" -p 3001:3001 gcr.io/mdg-public/engine:2018.01-1-gc024df504"
   },
   "resolutions": {
     "graphql": "0.12.3"
