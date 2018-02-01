@@ -53,6 +53,7 @@ function sanitizeHotel(hotelData): HotelExtendedType {
     price: null, // it doesn't make sense to provide price in this case
     whitelabelUrl: hotel.url, // it's not whitelabel (?)
     cityName: hotel.city,
+    cityId: hotel.city_id,
     address: {
       street: hotel.address,
       city: hotel.city,
