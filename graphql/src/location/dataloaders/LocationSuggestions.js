@@ -28,6 +28,7 @@ export default class LocationSuggestionsDataloader {
   async load(options: ?Options): Promise<Location[]> {
     return this.dataLoader.load({
       type: 'dump',
+      limit: 9999,
       locale: options ? options.locale : null,
     });
   }
