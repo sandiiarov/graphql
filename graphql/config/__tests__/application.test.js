@@ -2,7 +2,7 @@
 
 import config from '../application';
 
-const baseUrl = 'https://locations.skypicker.com/';
+const baseUrl = 'https://api.skypicker.com/locations';
 
 describe('All places REST API endpoint', () => {
   it('should return URL without parameters', () => {
