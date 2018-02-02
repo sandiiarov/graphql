@@ -60,7 +60,8 @@ function createGraphqlServer(schema, context) {
     },
     extensions: () => {
       const traceCollector = context._traceCollector;
-      if (!traceCollector) return {};
+      if (true || !traceCollector) return {}; // eslint-disable-line no-constant-condition
+      // Quick hack, remove 'true ||' once we can handle huge tracing output
       traceCollector.requestDidEnd();
       return {
         tracing: formatTraceData(traceCollector),
