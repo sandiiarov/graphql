@@ -1,6 +1,12 @@
 // @flow
 
-import { GraphQLObjectType, GraphQLString } from 'graphql';
+import {
+  GraphQLObjectType,
+  GraphQLString,
+  GraphQLBoolean,
+  GraphQLInt,
+  GraphQLList,
+} from 'graphql';
 
 import GraphQLCoordinates from './Coordinates';
 import GraphQLLocationArea from './LocationArea';
@@ -55,6 +61,26 @@ export default new GraphQLObjectType({
     country: {
       type: GraphQLLocationArea,
       resolve: ({ country }: Location): ?LocationArea => country,
+    },
+
+    isActive: {
+      type: GraphQLBoolean,
+      resolve: ({ isActive }: Location): boolean => isActive,
+    },
+
+    stationsCount: {
+      type: GraphQLInt,
+      resolve: ({ stationsCount }: Location): number => stationsCount,
+    },
+
+    airportsCount: {
+      type: GraphQLInt,
+      resolve: ({ airportsCount }: Location): number => airportsCount,
+    },
+
+    alternativeNames: {
+      type: new GraphQLList(GraphQLString),
+      resolve: ({ alternativeNames }: Location): string[] => alternativeNames,
     },
   },
 });

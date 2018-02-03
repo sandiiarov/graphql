@@ -2,149 +2,244 @@
   "locations": [
     {
       "id": "PRG",
+      "int_id": 5212,
+      "active": true,
+      "code": "PRG",
       "name": "V\u00e1clav Havel Airport Prague",
-      "slug": "vaclav-havel-airport-prague-prague-czech-republic",
+      "slug": "vaclav-havel-airport-prague-prague-czechia",
       "alternative_names": [],
       "rank": 1,
-      "timezone": "Europe\/Prague",
+      "timezone": "Europe/Prague",
       "city": {
         "id": "prague_cz",
         "name": "Prague",
-        "slug": "prague-czech-republic",
+        "code": "PRG",
+        "slug": "prague-czechia",
         "subdivision": null,
         "autonomous_territory": null,
         "country": {
           "id": "CZ",
-          "name": "Czech Republic",
-          "slug": "czech-republic"
+          "name": "Czechia",
+          "slug": "czechia",
+          "code": "CZ"
+        },
+        "region": {
+          "id": "eastern-europe",
+          "name": "Eastern Europe",
+          "slug": "eastern-europe"
+        },
+        "continent": {
+          "id": "europe",
+          "name": "Europe",
+          "slug": "europe",
+          "code": "EU"
         }
       },
       "location": {
-        "lat": 50.1008333,
+        "lat": 50.100833,
         "lon": 14.26
       },
       "type": "airport"
     },
     {
       "id": "prague_cz",
+      "active": true,
       "name": "Prague",
-      "slug": "prague-czech-republic",
+      "slug": "prague-czechia",
       "code": "PRG",
       "alternative_names": [],
       "rank": 1,
-      "timezone": "Europe\/Prague",
-      "population": null,
-      "airports": 2,
+      "timezone": "Europe/Prague",
+      "population": 1165581,
+      "airports": 1,
+      "stations": 0,
       "subdivision": null,
       "autonomous_territory": null,
       "country": {
         "id": "CZ",
-        "name": "Czech Republic",
-        "slug": "czech-republic"
+        "name": "Czechia",
+        "slug": "czechia",
+        "code": "CZ"
+      },
+      "region": {
+        "id": "eastern-europe",
+        "name": "Eastern Europe",
+        "slug": "eastern-europe"
+      },
+      "continent": {
+        "id": "europe",
+        "name": "Europe",
+        "slug": "europe",
+        "code": "EU"
       },
       "location": {
-        "lat": 50.0755381,
-        "lon": 14.4378005
+        "lat": 50.075538,
+        "lon": 14.4378
       },
       "type": "city"
     },
     {
       "id": "MED",
+      "int_id": 1011,
+      "active": true,
+      "code": "MED",
       "name": "Prince Mohammad bin Abdulaziz",
       "slug": "prince-mohammad-bin-abdulaziz-medina-saudi-arabia",
       "alternative_names": [],
-      "rank": 9,
-      "timezone": "Asia\/Riyadh",
+      "rank": 17,
+      "timezone": "Asia/Riyadh",
       "city": {
         "id": "medina_sa",
         "name": "Medina",
+        "code": "MED",
         "slug": "medina-saudi-arabia",
         "subdivision": null,
         "autonomous_territory": null,
         "country": {
           "id": "SA",
           "name": "Saudi Arabia",
-          "slug": "saudi-arabia"
+          "slug": "saudi-arabia",
+          "code": "SA"
+        },
+        "region": {
+          "id": "western-asia",
+          "name": "Western Asia",
+          "slug": "western-asia"
+        },
+        "continent": {
+          "id": "asia",
+          "name": "Asia",
+          "slug": "asia",
+          "code": "AS"
         }
       },
       "location": {
-        "lat": 24.5533333,
+        "lat": 24.553333,
         "lon": 39.705
       },
       "type": "airport"
     },
     {
       "id": "PRN",
+      "int_id": 3384,
+      "active": true,
+      "code": "PRN",
       "name": "Pristina International",
-      "slug": "pristina-international-pristina-unknown-region",
+      "slug": "pristina-international-pristina-kosovo",
       "alternative_names": [],
-      "rank": 11,
-      "timezone": "Europe\/Belgrade",
+      "rank": 15,
+      "timezone": "Europe/Belgrade",
       "city": {
         "id": "pristina_xk",
         "name": "Pristina",
-        "slug": "pristina-unknown-region",
+        "code": "PRN",
+        "slug": "pristina-kosovo",
         "subdivision": null,
         "autonomous_territory": null,
         "country": {
           "id": "XK",
           "name": "Kosovo",
-          "slug": "kosovo"
+          "slug": "kosovo",
+          "code": "XK"
+        },
+        "region": {
+          "id": "southern-europe",
+          "name": "Southern Europe",
+          "slug": "southern-europe"
+        },
+        "continent": {
+          "id": "europe",
+          "name": "Europe",
+          "slug": "europe",
+          "code": "EU"
         }
       },
       "location": {
-        "lat": 42.5727778,
-        "lon": 21.0358333
+        "lat": 42.572778,
+        "lon": 21.035833
       },
       "type": "airport"
     },
     {
       "id": "ELQ",
+      "int_id": 8594,
+      "active": true,
+      "code": "ELQ",
       "name": "Prince Nayef bin Abdulaziz Regional",
-      "slug": "prince-nayef-bin-abdulaziz-regional-gassim-saudi-arabia",
+      "slug":
+        "prince-nayef-bin-abdulaziz-regional-al-qassim-region-saudi-arabia",
       "alternative_names": [],
-      "rank": 12,
-      "timezone": "Asia\/Riyadh",
+      "rank": 24,
+      "timezone": "Asia/Riyadh",
       "city": {
         "id": "gassim_sa",
-        "name": "Gassim",
-        "slug": "gassim-saudi-arabia",
+        "name": "Al-Qassim Region",
+        "code": "ELQ",
+        "slug": "al-qassim-region-saudi-arabia",
         "subdivision": null,
         "autonomous_territory": null,
         "country": {
           "id": "SA",
           "name": "Saudi Arabia",
-          "slug": "saudi-arabia"
+          "slug": "saudi-arabia",
+          "code": "SA"
+        },
+        "region": {
+          "id": "western-asia",
+          "name": "Western Asia",
+          "slug": "western-asia"
+        },
+        "continent": {
+          "id": "asia",
+          "name": "Asia",
+          "slug": "asia",
+          "code": "AS"
         }
       },
       "location": {
-        "lat": 26.3027778,
-        "lon": 43.7738889
+        "lat": 26.302778,
+        "lon": 43.773889
       },
       "type": "airport"
     },
     {
       "id": "BCN",
+      "int_id": 431,
+      "active": true,
+      "code": "BCN",
       "name": "Barcelona\u2013El Prat",
       "slug": "barcelona-el-prat-barcelona-spain",
       "alternative_names": [],
       "rank": 0,
-      "timezone": "Europe\/Madrid",
+      "timezone": "Europe/Madrid",
       "city": {
         "id": "barcelona_es",
         "name": "Barcelona",
+        "code": "BCN",
         "slug": "barcelona-spain",
         "subdivision": null,
         "autonomous_territory": null,
         "country": {
           "id": "ES",
           "name": "Spain",
-          "slug": "spain"
+          "slug": "spain",
+          "code": "ES"
+        },
+        "region": {
+          "id": "southern-europe",
+          "name": "Southern Europe",
+          "slug": "southern-europe"
+        },
+        "continent": {
+          "id": "europe",
+          "name": "Europe",
+          "slug": "europe",
+          "code": "EU"
         }
       },
       "location": {
-        "lat": 41.2969444,
-        "lon": 2.07833333
+        "lat": 41.296944,
+        "lon": 2.078333
       },
       "type": "airport"
     }

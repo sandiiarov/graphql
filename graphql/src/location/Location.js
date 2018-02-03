@@ -36,6 +36,10 @@ export type Location = {|
   city: ?LocationArea,
   subdivision: ?LocationArea,
   country: ?LocationArea,
+  isActive: boolean,
+  stationsCount: number,
+  airportsCount: number,
+  alternativeNames: string[],
 |};
 
 export type LocationArea = {|

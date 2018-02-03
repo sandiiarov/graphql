@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`all locations query should return locations 1`] = `
+Object {
+  "data": Object {
+    "allLocations": Object {
+      "edges": Array [
+        Object {
+          "node": Object {
+            "airportsCount": null,
+            "alternativeNames": Array [
+              "USA",
+            ],
+            "isActive": true,
+            "locationId": "US",
+            "name": "United States",
+            "stationsCount": null,
+          },
+        },
+        Object {
+          "node": Object {
+            "airportsCount": 2,
+            "alternativeNames": Array [
+              "Brussels",
+            ],
+            "isActive": true,
+            "locationId": "brussels_be",
+            "name": "City of Brussels",
+            "stationsCount": 1,
+          },
+        },
+        Object {
+          "node": Object {
+            "airportsCount": null,
+            "alternativeNames": Array [
+              "O'Hare International",
+            ],
+            "isActive": true,
+            "locationId": "ORD",
+            "name": "O Hare International",
+            "stationsCount": null,
+          },
+        },
+      ],
+    },
+  },
+}
+`;

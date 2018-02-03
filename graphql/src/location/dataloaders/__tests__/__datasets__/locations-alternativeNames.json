@@ -1,0 +1,112 @@
+{
+  "locations": [
+    {
+      "id": "US",
+      "active": true,
+      "code": "US",
+      "name": "United States",
+      "slug": "united-states",
+      "alternative_names": ["USA"],
+      "rank": 0,
+      "region": {
+        "id": "northern-america",
+        "name": "Northern America",
+        "slug": "northern-america"
+      },
+      "continent": {
+        "id": "north-america",
+        "code": "NA",
+        "name": "North America",
+        "slug": "north-america"
+      },
+      "location": {
+        "lat": 38.883333,
+        "lon": -77
+      },
+      "type": "country"
+    },
+    {
+      "id": "brussels_be",
+      "active": true,
+      "name": "City of Brussels",
+      "slug": "city-of-brussels-belgium",
+      "code": "BRU",
+      "alternative_names": ["Brussels"],
+      "rank": 1,
+      "timezone": "Europe/Brussels",
+      "population": null,
+      "airports": 2,
+      "stations": 1,
+      "subdivision": null,
+      "autonomous_territory": null,
+      "country": {
+        "id": "BE",
+        "name": "Belgium",
+        "slug": "belgium",
+        "code": "BE"
+      },
+      "region": {
+        "id": "western-europe",
+        "name": "Western Europe",
+        "slug": "western-europe"
+      },
+      "continent": {
+        "id": "europe",
+        "name": "Europe",
+        "slug": "europe",
+        "code": "EU"
+      },
+      "location": {
+        "lat": 50.850346,
+        "lon": 4.351721
+      },
+      "type": "city"
+    },
+    {
+      "id": "ORD",
+      "int_id": 2697,
+      "active": true,
+      "code": "ORD",
+      "name": "O Hare International",
+      "slug": "o-hare-international-chicago-illinois-united-states",
+      "alternative_names": ["O'Hare International"],
+      "rank": 1,
+      "timezone": "America/Chicago",
+      "city": {
+        "id": "chicago_il_us",
+        "name": "Chicago",
+        "code": "CHI",
+        "slug": "chicago-illinois-united-states",
+        "subdivision": {
+          "id": "IL_US",
+          "name": "Illinois",
+          "slug": "illinois-united-states",
+          "code": "IL"
+        },
+        "autonomous_territory": null,
+        "country": {
+          "id": "US",
+          "name": "United States",
+          "slug": "united-states",
+          "code": "US"
+        },
+        "region": {
+          "id": "northern-america",
+          "name": "Northern America",
+          "slug": "northern-america"
+        },
+        "continent": {
+          "id": "north-america",
+          "name": "North America",
+          "slug": "north-america",
+          "code": "NA"
+        }
+      },
+      "location": {
+        "lat": 41.978611,
+        "lon": -87.904722
+      },
+      "type": "airport"
+    }
+  ]
+}
