@@ -5,11 +5,13 @@ import DataLoader from 'dataloader';
 import config from '../../../config/application';
 import { get } from '../../common/services/HttpRequest';
 
-import type { Radius, Rectangle, LocationArea, Location } from '../Location';
-
-type Options = {
-  locale?: string,
-};
+import type {
+  Radius,
+  Rectangle,
+  LocationArea,
+  Location,
+  Options,
+} from '../Location';
 
 export default class LocationSuggestionsDataloader {
   dataLoader: DataLoader<Object, Location[] | Error>;
@@ -29,7 +31,7 @@ export default class LocationSuggestionsDataloader {
     return this.dataLoader.load({
       type: 'dump',
       limit: 9999,
-      locale: options ? options.locale : null,
+      ...sanitizeOptions(options),
     });
   }
 
@@ -44,7 +46,7 @@ export default class LocationSuggestionsDataloader {
   ): Promise<Location[] | Error> {
     return this.dataLoader.load({
       term: locationKey,
-      locale: options ? options.locale : null,
+      ...sanitizeOptions(options),
     });
   }
 
@@ -57,7 +59,7 @@ export default class LocationSuggestionsDataloader {
       lat: radius.lat,
       lon: radius.lng,
       radius: radius.radius,
-      locale: options ? options.locale : null,
+      ...sanitizeOptions(options),
     });
   }
 
@@ -71,7 +73,7 @@ export default class LocationSuggestionsDataloader {
       low_lon: area.topLeft.lng,
       low_lat: area.bottomRight.lat,
       high_lon: area.bottomRight.lng,
-      locale: options ? options.locale : null,
+      ...sanitizeOptions(options),
     });
   }
 
@@ -86,7 +88,7 @@ export default class LocationSuggestionsDataloader {
     return this.dataLoader.loadMany(
       locationKeys.map(location => ({
         term: location,
-        locale: options ? options.locale : null,
+        ...sanitizeOptions(options),
       })),
     );
   }
@@ -155,4 +157,12 @@ function sanitizeLocationArea(area: null | Object): ?LocationArea {
         slug: area.slug,
       }
     : null;
+}
+
+function sanitizeOptions(options: ?Options): Object {
+  if (!options) return {};
+  return {
+    locale: options.locale,
+    location_types: options.locationType,
+  };
 }

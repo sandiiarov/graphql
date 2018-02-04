@@ -3,8 +3,14 @@
 exports[`LocationsOptions type should have valid fields 1`] = `
 Object {
   "locale": Object {
+    "description": "Language tag in the format of the RFC 5646.",
     "name": "locale",
     "type": "Locale",
+  },
+  "locationType": Object {
+    "description": "Desired location type the response should only include.",
+    "name": "locationType",
+    "type": "LocationType",
   },
 }
 `;

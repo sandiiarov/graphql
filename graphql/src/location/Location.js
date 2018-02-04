@@ -47,3 +47,8 @@ export type LocationArea = {|
   name: string,
   slug: string,
 |};
+
+export type Options = {
+  locale?: string,
+  locationType?: string,
+};
