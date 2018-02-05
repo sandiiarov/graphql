@@ -1,5 +1,4 @@
 [ignore]
-<PROJECT_ROOT>/node_modules/dataloader/.*
 <PROJECT_ROOT>/node_modules/protobufjs-no-cli/.*
 
 [include]
@@ -14,5 +13,8 @@ module.name_mapper='^graphql-iso-date$' -> '<PROJECT_ROOT>/config/stub/GeneralSt
 
 suppress_comment=\\(.\\|\n\\)*\\$FlowAllowMockMagic
 suppress_comment=\\(.\\|\n\\)*\\$FlowAllowNextLineInThisTest
-suppress_comment=\\(.\\|\n\\)*\\$FlowExpectedError
-suppress_comment=\\(.\\|\n\\)*\\$FlowIssue
+suppress_comment=\\(.\\|\n\\)*\\$FlowExpectedError: .+
+suppress_comment=\\(.\\|\n\\)*\\$FlowIssue: https://github.com/facebook/flow/issues/[0-9]+
+
+[version]
+^0.64.0

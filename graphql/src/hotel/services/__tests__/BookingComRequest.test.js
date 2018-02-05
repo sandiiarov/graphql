@@ -37,6 +37,7 @@ describe('GET request in production', () => {
     try {
       await get('https://path/to/api?status=500');
     } catch (error) {
+      // $FlowExpectedError: toBeInstanceOf expects classes but ProxiedError is a function
       expect(error).toBeInstanceOf(ProxiedError);
       expect(error).toHaveProperty('message', 'Status Text');
       expect(error).toHaveProperty('originStatusCode', 500);

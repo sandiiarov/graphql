@@ -16,12 +16,14 @@ type Airline = {
 
 export default function createAirlineLoader() {
   airlinesCache = null;
-  return new Dataloader((airlinesCodes: Array<string>) =>
+  return new Dataloader((airlinesCodes: $ReadOnlyArray<string>) =>
     batchLoad(airlinesCodes),
   );
 }
 
-async function batchLoad(airlinesCodes): Promise<Array<?AirlineType | Error>> {
+async function batchLoad(
+  airlinesCodes: $ReadOnlyArray<string>,
+): Promise<Array<?AirlineType>> {
   const airlines = await fetchAirlines();
   return airlinesCodes.map(airlineCode => {
     const airline = airlines[airlineCode];

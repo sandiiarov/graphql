@@ -28,7 +28,7 @@ export default class HotelRoomAvailabilityLoader {
 
   constructor() {
     this.dataLoader = new Dataloader(
-      (urlParameters: UrlParameters[]) => {
+      (urlParameters: $ReadOnlyArray<UrlParameters>) => {
         return this.batchLoad(urlParameters);
       },
       {
@@ -59,8 +59,8 @@ export default class HotelRoomAvailabilityLoader {
   }
 
   async batchLoad(
-    urlParameters: UrlParameters[],
-  ): Promise<Array<HotelRoomAvailabilityType[] | Error>> {
+    urlParameters: $ReadOnlyArray<UrlParameters>,
+  ): Promise<Array<HotelRoomAvailabilityType[]>> {
     const roomBlocks = await Promise.all(
       urlParameters.map(parameter =>
         get(

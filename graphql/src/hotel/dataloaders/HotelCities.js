@@ -11,8 +11,8 @@ import type { HotelCity } from '../types/outputs/HotelCity';
  * by number of hotels and by alphabet (if two cities have the same number)
  * of hotels.
  */
-export default new Dataloader(async (prefixes: string[]): Promise<
-  Array<HotelCity[] | Error>,
+export default new Dataloader(async (prefixes: $ReadOnlyArray<string>): Promise<
+  Array<HotelCity[]>,
 > => {
   const algolia = Algolia(
     process.env.ALGOLIA_APP_ID,

@@ -22,7 +22,7 @@ export default class HotelRoomBlocksDataloader {
 
   constructor() {
     this.dataLoader = new Dataloader(
-      (urlParameters: UrlParameters[]) => {
+      (urlParameters: $ReadOnlyArray<UrlParameters>) => {
         return this.batchLoad(urlParameters);
       },
       {
@@ -49,8 +49,8 @@ export default class HotelRoomBlocksDataloader {
   }
 
   async batchLoad(
-    urlParameters: Object[],
-  ): Promise<Array<HotelRoomType[] | Error>> {
+    urlParameters: $ReadOnlyArray<UrlParameters>,
+  ): Promise<Array<HotelRoomType[]>> {
     const urls = urlParameters.map(parameter =>
       queryWithParameters(
         'https://distribution-xml.booking.com/2.0/json/hotels',
@@ -68,7 +68,9 @@ export default class HotelRoomBlocksDataloader {
       const hotelRooms = hotelIds.map(hotelId => {
         const results = _.get(responses[pIndex], 'result', []);
         const rooms = results.find(r => r.hotel_id === hotelId);
-        if (!rooms) return [];
+        if (!rooms) {
+          return [];
+        }
         return this.sanitizeHotelRooms(rooms.room_data, hotelId);
       });
       return hotelRooms.reduce((a, b) => a.concat(b));

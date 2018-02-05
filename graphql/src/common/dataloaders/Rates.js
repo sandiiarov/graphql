@@ -8,12 +8,14 @@ let ratesCache = null;
 
 export default function createRatesLoader() {
   ratesCache = null;
-  return new DataLoader((currencyCode: Array<string>) =>
+  return new DataLoader((currencyCode: $ReadOnlyArray<string>) =>
     batchLoad(currencyCode),
   );
 }
 
-async function batchLoad(currencyCodes): Promise<Array<?number | Error>> {
+async function batchLoad(
+  currencyCodes: $ReadOnlyArray<string>,
+): Promise<Array<?number>> {
   const rates = await fetchRates();
   return currencyCodes.map(currencyCode => {
     const rate = rates[currencyCode];

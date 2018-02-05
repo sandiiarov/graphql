@@ -14,19 +14,21 @@ import type { HotelRoomType } from './flow/HotelRoomType';
  *
  * @see https://distribution-xml.booking.com/2.0/json/hotels?hotel_ids=25215&extras=hotel_info,hotel_photos,hotel_description,hotel_facilities,payment_details,room_info,room_photos,room_description,room_facilities
  */
-export default new OptimisticDataloader(async (hotelIds: number[]): Promise<
-  Array<HotelExtendedType | Error>,
-> => {
-  const response = await get(createUrl(hotelIds));
-  const hotels = hotelIds.map(id => {
-    const hotelData = response.result.find(h => h.hotel_id == id);
-    if (!hotelData) return new Error('Requested hotel does not exist.');
-    return sanitizeHotel(hotelData);
-  });
-  return hotels;
-});
+export default new OptimisticDataloader(
+  async (
+    hotelIds: $ReadOnlyArray<number>,
+  ): Promise<Array<HotelExtendedType | Error>> => {
+    const response = await get(createUrl(hotelIds));
 
-function createUrl(hotelIds: number[]) {
+    return hotelIds.map(id => {
+      const hotelData = response.result.find(h => h.hotel_id == id);
+      if (!hotelData) return new Error('Requested hotel does not exist.');
+      return sanitizeHotel(hotelData);
+    });
+  },
+);
+
+function createUrl(hotelIds: $ReadOnlyArray<number>) {
   const params = {
     extras:
       'hotel_info,hotel_photos,hotel_description,hotel_facilities,payment_details,room_info,room_photos,room_description,room_facilities',

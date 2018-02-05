@@ -28,7 +28,9 @@ import type { City } from '../../hotel/dataloaders/flow/City';
 import type { HotelCity } from '../../hotel/types/outputs/HotelCity';
 
 /**
- * FIXME: this is stupid - it's already defined by data-loader itself
+ * FIXME:
+ * This is stupid - it's already defined by data-loader itself but currently
+ * it's needed to type resolvers. How to do it better?
  */
 export type GraphqlContextType = {|
   // DataLoader<K, V>

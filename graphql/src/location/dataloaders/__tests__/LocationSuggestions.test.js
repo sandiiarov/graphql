@@ -63,7 +63,9 @@ it('returns PRG and BRQ suggestions', async () => {
 it('returns BRQ and PRG suggestions (changed order)', async () => {
   const dataloader = new LocationSuggestions();
   const result = await dataloader.loadMany(['BRQ', 'PRG']);
+  // $FlowExpectedError: returned type may be an Error
   expect(result[0][0].name).toEqual('Brno\u2013Tu\u0159any');
+  // $FlowExpectedError: returned type may be an Error
   expect(result[1][0].name).toBe('V\u00E1clav Havel Airport Prague');
 });
 
