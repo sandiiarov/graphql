@@ -5494,10 +5494,20 @@
         "inputFields": [
           {
             "name": "locale",
-            "description": null,
+            "description": "Language tag in the format of the RFC 5646.",
             "type": {
               "kind": "ENUM",
               "name": "Locale",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "locationType",
+            "description": "Desired location type the response should only include",
+            "type": {
+              "kind": "ENUM",
+              "name": "LocationType",
               "ofType": null
             },
             "defaultValue": null
@@ -5505,6 +5515,53 @@
         ],
         "interfaces": null,
         "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "ENUM",
+        "name": "LocationType",
+        "description": "Type of location",
+        "fields": null,
+        "inputFields": null,
+        "interfaces": null,
+        "enumValues": [
+          {
+            "name": "airport",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "autonomous_territory",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "city",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "country",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "station",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "subdivision",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
         "possibleTypes": null
       },
       {

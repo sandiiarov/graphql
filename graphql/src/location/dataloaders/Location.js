@@ -2,11 +2,7 @@
 
 import LocationSuggestions from './LocationSuggestions';
 
-import type { Location } from '../Location';
-
-type Options = {
-  locale?: string,
-};
+import type { Location, Options } from '../Location';
 
 export default class LocationDataLoader {
   locationSuggestionsDataLoader: LocationSuggestions;
