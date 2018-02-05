@@ -23,6 +23,9 @@ export default class LocationDataLoader {
       locationKey,
       options,
     );
+    if (possibleValues instanceof Error) {
+      throw possibleValues;
+    }
     return possibleValues[0];
   }
 
@@ -33,6 +36,11 @@ export default class LocationDataLoader {
     const allLocations = await this.locationSuggestionsDataLoader.loadMany(
       locationKeys,
     );
-    return allLocations.map(possibleLocations => possibleLocations[0]);
+    return allLocations.map(possibleLocations => {
+      if (possibleLocations instanceof Error) {
+        throw possibleLocations;
+      }
+      return possibleLocations[0];
+    });
   }
 }

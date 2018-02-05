@@ -13,7 +13,7 @@ export default function createInstance(
   bookingsLoader: BookingsLoader,
 ) {
   return new DataLoader(
-    (ids: Array<number | string>) =>
+    (ids: $ReadOnlyArray<number | string>) =>
       batchLoad(accessToken, bookingsLoader)(ids),
     {
       cacheKeyFn: key => parseInt(key, 10),
@@ -24,7 +24,7 @@ export default function createInstance(
 function batchLoad(
   accessToken: ?string,
   bookingsLoader: BookingsLoader,
-): (Array<number | string>) => Promise<Array<Object>> {
+): ($ReadOnlyArray<number | string>) => Promise<Array<Object>> {
   if (typeof accessToken !== 'string') {
     return () => Promise.reject(new Error('Undefined access token'));
   }

@@ -12,7 +12,7 @@ export default class IdentityDataloader {
 
   constructor(accessToken: ?string) {
     this.accessToken = accessToken;
-    this.dataLoader = new DataLoader((ids: string[]) => {
+    this.dataLoader = new DataLoader((ids: $ReadOnlyArray<string>) => {
       return this.batchLoad(ids);
     });
   }
@@ -32,7 +32,7 @@ export default class IdentityDataloader {
     return this.dataLoader.loadMany(ids);
   }
 
-  async batchLoad(ids: string[]): Promise<Array<*>> {
+  async batchLoad(ids: $ReadOnlyArray<string>): Promise<Array<*>> {
     return ids.map(userId => this.fetch(userId));
   }
 

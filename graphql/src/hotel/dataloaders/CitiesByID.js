@@ -11,19 +11,19 @@ import type { City } from './flow/City';
  *
  * @see https://distribution-xml.booking.com/2.0/json/cities?city_ids=-850553&extras=location
  */
-export default new OptimisticDataloader(async (cityIds: number[]): Promise<
-  Array<City | Error>,
-> => {
-  const response = await get(createUrl(cityIds));
-  const cities = cityIds.map(id => {
-    const cityData = response.result.find(c => c.city_id == id);
-    if (!cityData) return new Error('Requested city does not exist.');
-    return sanitizeCity(cityData);
-  });
-  return cities;
-});
+export default new OptimisticDataloader(
+  async (cityIds: $ReadOnlyArray<number>): Promise<Array<City | Error>> => {
+    const response = await get(createUrl(cityIds));
 
-function createUrl(cityIds: number[]) {
+    return cityIds.map(id => {
+      const cityData = response.result.find(c => c.city_id == id);
+      if (!cityData) return new Error('Requested city does not exist.');
+      return sanitizeCity(cityData);
+    });
+  },
+);
+
+function createUrl(cityIds: $ReadOnlyArray<number>) {
   const params = {
     extras: 'location',
     city_ids: cityIds.join(','),

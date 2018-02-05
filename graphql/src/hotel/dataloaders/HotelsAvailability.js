@@ -19,7 +19,7 @@ import type { SearchParameters } from './flow/SearchParameters';
  * load hotels by their ID, city ID or by location (lng/lat/rad).
  */
 export default new DataLoader(
-  async (keys: SearchParameters[]): Promise<Array<HotelType[] | Error>> =>
+  async (keys: $ReadOnlyArray<SearchParameters>): Promise<Array<HotelType[]>> =>
     await fetchAllHotels(keys),
 );
 
@@ -37,8 +37,8 @@ export default new DataLoader(
  * - room2: see room1 (it's the same but other room, room3, room4, ...)
  */
 async function fetchAllHotels(
-  keys: SearchParameters[],
-): Promise<Array<HotelType[] | Error>> {
+  keys: $ReadOnlyArray<SearchParameters>,
+): Promise<Array<HotelType[]>> {
   return Promise.all(
     keys.map(async searchParameters => {
       const parameters = prepareRequestParameters(searchParameters);

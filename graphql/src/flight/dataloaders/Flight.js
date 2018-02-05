@@ -47,7 +47,7 @@ export default class FlightDataloader {
 
   constructor(locationDataLoader: LocationDataLoader) {
     this.flightDataLoader = new DataLoader(
-      (searchParameters: QueryParameters[]) => {
+      (searchParameters: $ReadOnlyArray<QueryParameters>) => {
         return this.batchGetLocations(searchParameters);
       },
       {
@@ -70,8 +70,8 @@ export default class FlightDataloader {
   }
 
   async batchGetLocations(
-    searchParameters: QueryParameters[],
-  ): Promise<Array<BackendAPIResponse | Error>> {
+    searchParameters: $ReadOnlyArray<QueryParameters>,
+  ): Promise<Array<BackendAPIResponse>> {
     return await Promise.all(
       searchParameters.map(searchParameters =>
         this._fetchFlights(searchParameters),

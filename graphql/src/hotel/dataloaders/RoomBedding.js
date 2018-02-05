@@ -17,22 +17,24 @@ type input = {
  *
  * @see https://distribution-xml.booking.com/json/bookings.getRooms?hotel_ids=121543,25215
  */
-export default new OptimisticDataloader(async (inputs: input[]): Promise<
-  Array<RoomBeddingType | Error>,
-> => {
-  const hotelIds = Array.from(new Set(inputs.map(i => i.hotelId))).join(',');
-  const response = await get(
-    `https://distribution-xml.booking.com/json/bookings.getRooms?hotel_ids=${hotelIds}`,
-  );
-  const beddings = inputs.map(({ hotelId, roomId }) => {
-    const room = response.find(
-      r => r.hotel_id == hotelId && r.room_id == roomId,
+export default new OptimisticDataloader(
+  async (
+    inputs: $ReadOnlyArray<input>,
+  ): Promise<Array<RoomBeddingType | Error>> => {
+    const hotelIds = Array.from(new Set(inputs.map(i => i.hotelId))).join(',');
+    const response = await get(
+      `https://distribution-xml.booking.com/json/bookings.getRooms?hotel_ids=${hotelIds}`,
     );
-    if (!room) return new Error('Requested room does not exist.');
-    return _.get(room, 'bedding.beds', []).map(b => ({
-      amount: Number(b.amount),
-      type: b.type,
-    }));
-  });
-  return beddings;
-});
+
+    return inputs.map(({ hotelId, roomId }) => {
+      const room = response.find(
+        r => r.hotel_id == hotelId && r.room_id == roomId,
+      );
+      if (!room) return new Error('Requested room does not exist.');
+      return _.get(room, 'bedding.beds', []).map(b => ({
+        amount: Number(b.amount),
+        type: b.type,
+      }));
+    });
+  },
+);

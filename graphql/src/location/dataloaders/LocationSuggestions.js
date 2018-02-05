@@ -12,11 +12,11 @@ type Options = {
 };
 
 export default class LocationSuggestionsDataloader {
-  dataLoader: DataLoader<Object, Location[]>;
+  dataLoader: DataLoader<Object, Location[] | Error>;
 
   constructor() {
     this.dataLoader = new DataLoader(
-      (urlParameters: Object[]) => {
+      (urlParameters: $ReadOnlyArray<Object>) => {
         return this.batchGetLocations(urlParameters);
       },
       {
@@ -25,7 +25,7 @@ export default class LocationSuggestionsDataloader {
     );
   }
 
-  async load(options: ?Options): Promise<Location[]> {
+  async load(options: ?Options): Promise<Location[] | Error> {
     return this.dataLoader.load({
       type: 'dump',
       limit: 9999,
@@ -38,14 +38,20 @@ export default class LocationSuggestionsDataloader {
    * If you need to load only one (the first) location for location key
    * you have to use 'LocationDataLoader.load' function.
    */
-  async loadByKey(locationKey: string, options: ?Options): Promise<Location[]> {
+  async loadByKey(
+    locationKey: string,
+    options: ?Options,
+  ): Promise<Location[] | Error> {
     return this.dataLoader.load({
       term: locationKey,
       locale: options ? options.locale : null,
     });
   }
 
-  async loadByRadius(radius: Radius, options: ?Options): Promise<Location[]> {
+  async loadByRadius(
+    radius: Radius,
+    options: ?Options,
+  ): Promise<Location[] | Error> {
     return this.dataLoader.load({
       type: 'radius',
       lat: radius.lat,
@@ -55,7 +61,10 @@ export default class LocationSuggestionsDataloader {
     });
   }
 
-  async loadByArea(area: Rectangle, options: ?Options): Promise<Location[]> {
+  async loadByArea(
+    area: Rectangle,
+    options: ?Options,
+  ): Promise<Location[] | Error> {
     return this.dataLoader.load({
       type: 'box',
       high_lat: area.topLeft.lat,
@@ -73,7 +82,7 @@ export default class LocationSuggestionsDataloader {
   async loadMany(
     locationKeys: string[],
     options: ?Options,
-  ): Promise<Array<Location[]>> {
+  ): Promise<Array<Location[] | Error>> {
     return this.dataLoader.loadMany(
       locationKeys.map(location => ({
         term: location,
@@ -97,7 +106,7 @@ export default class LocationSuggestionsDataloader {
    * @private
    */
   async batchGetLocations(
-    urlParameters: Object[],
+    urlParameters: $ReadOnlyArray<Object>,
   ): Promise<Array<Location[] | Error>> {
     const promisesStack = [];
 
