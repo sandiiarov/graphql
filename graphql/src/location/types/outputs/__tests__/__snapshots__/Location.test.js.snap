@@ -2,6 +2,20 @@
 
 exports[`Location type should have valid fields 1`] = `
 Object {
+  "airportsCount": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "airportsCount",
+    "resolve": [Function],
+    "type": "Int",
+  },
+  "alternativeNames": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "alternativeNames",
+    "resolve": [Function],
+    "type": "[String]",
+  },
   "city": Object {
     "args": Array [],
     "isDeprecated": false,
@@ -15,6 +29,13 @@ Object {
     "name": "country",
     "resolve": [Function],
     "type": "LocationArea",
+  },
+  "isActive": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "isActive",
+    "resolve": [Function],
+    "type": "Boolean",
   },
   "location": Object {
     "args": Array [],
@@ -44,6 +65,13 @@ Object {
     "name": "slug",
     "resolve": [Function],
     "type": "String",
+  },
+  "stationsCount": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "stationsCount",
+    "resolve": [Function],
+    "type": "Int",
   },
   "subdivision": Object {
     "args": Array [],

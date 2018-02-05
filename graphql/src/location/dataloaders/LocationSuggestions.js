@@ -131,6 +131,10 @@ function sanitizeApiResponse(location: Object): Location {
     city: sanitizeLocationArea(location.city),
     subdivision: sanitizeLocationArea(location.subdivision),
     country: sanitizeLocationArea(location.country),
+    isActive: location.active,
+    stationsCount: location.stations,
+    airportsCount: location.airports,
+    alternativeNames: location.alternative_names,
   };
 }
 
