@@ -146,6 +146,7 @@ function sanitizeApiResponse(location: Object): Location {
     stationsCount: location.stations,
     airportsCount: location.airports,
     alternativeNames: location.alternative_names,
+    autonomousTerritory: sanitizeLocationArea(location.autonomous_territory),
   };
 }
 

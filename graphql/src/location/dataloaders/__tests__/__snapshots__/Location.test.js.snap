@@ -5,6 +5,7 @@ Array [
   Object {
     "airportsCount": undefined,
     "alternativeNames": Array [],
+    "autonomousTerritory": null,
     "city": Object {
       "locationId": "prague_cz",
       "name": "Prague",
@@ -27,6 +28,7 @@ Array [
   Object {
     "airportsCount": undefined,
     "alternativeNames": Array [],
+    "autonomousTerritory": null,
     "city": Object {
       "locationId": "brno_cz",
       "name": "Brno",
@@ -53,6 +55,7 @@ exports[`returns single PRG result 1`] = `
 Object {
   "airportsCount": undefined,
   "alternativeNames": Array [],
+  "autonomousTerritory": null,
   "city": Object {
     "locationId": "prague_cz",
     "name": "Prague",

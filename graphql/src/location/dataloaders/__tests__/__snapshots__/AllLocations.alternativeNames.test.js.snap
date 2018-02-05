@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`all locations query should return locations 1`] = `
+exports[`all locations query should support alternativeNames 1`] = `
 Object {
   "data": Object {
     "allLocations": Object {
