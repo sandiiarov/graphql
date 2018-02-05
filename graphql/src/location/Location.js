@@ -40,6 +40,7 @@ export type Location = {|
   stationsCount: number,
   airportsCount: number,
   alternativeNames: string[],
+  autonomousTerritory: ?LocationArea,
 |};
 
 export type LocationArea = {|

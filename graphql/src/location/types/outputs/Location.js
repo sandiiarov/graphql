@@ -82,5 +82,11 @@ export default new GraphQLObjectType({
       type: new GraphQLList(GraphQLString),
       resolve: ({ alternativeNames }: Location): string[] => alternativeNames,
     },
+
+    autonomousTerritory: {
+      type: GraphQLLocationArea,
+      resolve: ({ autonomousTerritory }: Location): ?LocationArea =>
+        autonomousTerritory,
+    },
   },
 });

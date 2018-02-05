@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`all locations query should support autonomousTerritory 1`] = `
+Object {
+  "data": Object {
+    "allLocations": Object {
+      "edges": Array [
+        Object {
+          "node": Object {
+            "autonomousTerritory": Object {
+              "locationId": "PR",
+              "name": "Puerto Rico",
+              "slug": "puerto-rico-united-states",
+            },
+            "locationId": "san-juan_pr_pr",
+            "name": "San Juan",
+          },
+        },
+        Object {
+          "node": Object {
+            "autonomousTerritory": Object {
+              "locationId": "MP",
+              "name": "Northern Mariana Islands",
+              "slug": "northern-mariana-islands-united-states",
+            },
+            "locationId": "saipan_mp",
+            "name": "Saipan",
+          },
+        },
+        Object {
+          "node": Object {
+            "autonomousTerritory": null,
+            "locationId": "PRG",
+            "name": "Václav Havel Airport Prague",
+          },
+        },
+      ],
+    },
+  },
+}
+`;

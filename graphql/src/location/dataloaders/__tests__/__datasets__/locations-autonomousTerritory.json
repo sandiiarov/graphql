@@ -1,0 +1,129 @@
+{
+  "locations": [
+    {
+      "id": "san-juan_pr_pr",
+      "active": true,
+      "name": "San Juan",
+      "slug": "san-juan-puerto-rico-united-states",
+      "code": "SJU",
+      "alternative_names": [],
+      "rank": 8,
+      "timezone": "America/Puerto_Rico",
+      "population": 418140,
+      "airports": 2,
+      "stations": 0,
+      "subdivision": null,
+      "autonomous_territory": {
+        "id": "PR",
+        "name": "Puerto Rico",
+        "slug": "puerto-rico-united-states",
+        "code": "PR"
+      },
+      "country": {
+        "id": "US",
+        "name": "United States",
+        "slug": "united-states",
+        "code": "US"
+      },
+      "region": {
+        "id": "caribbean",
+        "name": "Caribbean",
+        "slug": "caribbean"
+      },
+      "continent": {
+        "id": "north-america",
+        "name": "North America",
+        "slug": "north-america",
+        "code": "NA"
+      },
+      "location": {
+        "lat": 18.465539,
+        "lon": -66.105735
+      },
+      "type": "city"
+    },
+    {
+      "id": "saipan_mp",
+      "active": true,
+      "name": "Saipan",
+      "slug": "saipan-northern-mariana-islands-united-states",
+      "code": "SPN",
+      "alternative_names": [],
+      "rank": 13,
+      "timezone": "Pacific/Saipan",
+      "population": 48220,
+      "airports": 1,
+      "stations": 0,
+      "subdivision": null,
+      "autonomous_territory": {
+        "id": "MP",
+        "name": "Northern Mariana Islands",
+        "slug": "northern-mariana-islands-united-states",
+        "code": "MP"
+      },
+      "country": {
+        "id": "US",
+        "name": "United States",
+        "slug": "united-states",
+        "code": "US"
+      },
+      "region": {
+        "id": "micronesia",
+        "name": "Micronesia",
+        "slug": "micronesia-1"
+      },
+      "continent": {
+        "id": "oceania",
+        "name": "Oceania",
+        "slug": "oceania",
+        "code": "OC"
+      },
+      "location": {
+        "lat": 15.151515,
+        "lon": 145.729789
+      },
+      "type": "city"
+    },
+    {
+      "id": "PRG",
+      "int_id": 5212,
+      "active": true,
+      "code": "PRG",
+      "name": "V\u00e1clav Havel Airport Prague",
+      "slug": "vaclav-havel-airport-prague-prague-czechia",
+      "alternative_names": [],
+      "rank": 1,
+      "timezone": "Europe/Prague",
+      "city": {
+        "id": "prague_cz",
+        "name": "Prague",
+        "code": "PRG",
+        "slug": "prague-czechia",
+        "subdivision": null,
+        "autonomous_territory": null,
+        "country": {
+          "id": "CZ",
+          "name": "Czechia",
+          "slug": "czechia",
+          "code": "CZ"
+        },
+        "region": {
+          "id": "eastern-europe",
+          "name": "Eastern Europe",
+          "slug": "eastern-europe"
+        },
+        "continent": {
+          "id": "europe",
+          "name": "Europe",
+          "slug": "europe",
+          "code": "EU"
+        }
+      },
+      "location": {
+        "lat": 50.100833,
+        "lon": 14.26
+      },
+      "type": "airport"
+    }
+  ]
+}

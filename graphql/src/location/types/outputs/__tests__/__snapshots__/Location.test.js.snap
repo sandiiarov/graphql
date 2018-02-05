@@ -16,6 +16,13 @@ Object {
     "resolve": [Function],
     "type": "[String]",
   },
+  "autonomousTerritory": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "autonomousTerritory",
+    "resolve": [Function],
+    "type": "LocationArea",
+  },
   "city": Object {
     "args": Array [],
     "isDeprecated": false,

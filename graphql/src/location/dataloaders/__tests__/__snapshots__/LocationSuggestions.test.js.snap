@@ -6,6 +6,7 @@ Array [
     Object {
       "airportsCount": undefined,
       "alternativeNames": Array [],
+      "autonomousTerritory": null,
       "city": Object {
         "locationId": "prague_cz",
         "name": "Prague",
@@ -28,6 +29,7 @@ Array [
     Object {
       "airportsCount": 1,
       "alternativeNames": Array [],
+      "autonomousTerritory": null,
       "city": null,
       "country": Object {
         "locationId": "CZ",
@@ -50,6 +52,7 @@ Array [
     Object {
       "airportsCount": undefined,
       "alternativeNames": Array [],
+      "autonomousTerritory": null,
       "city": Object {
         "locationId": "medina_sa",
         "name": "Medina",
@@ -72,6 +75,7 @@ Array [
     Object {
       "airportsCount": undefined,
       "alternativeNames": Array [],
+      "autonomousTerritory": null,
       "city": Object {
         "locationId": "pristina_xk",
         "name": "Pristina",
@@ -94,6 +98,7 @@ Array [
     Object {
       "airportsCount": undefined,
       "alternativeNames": Array [],
+      "autonomousTerritory": null,
       "city": Object {
         "locationId": "gassim_sa",
         "name": "Al-Qassim Region",
@@ -116,6 +121,7 @@ Array [
     Object {
       "airportsCount": undefined,
       "alternativeNames": Array [],
+      "autonomousTerritory": null,
       "city": Object {
         "locationId": "barcelona_es",
         "name": "Barcelona",
@@ -140,6 +146,7 @@ Array [
     Object {
       "airportsCount": undefined,
       "alternativeNames": Array [],
+      "autonomousTerritory": null,
       "city": Object {
         "locationId": "brno_cz",
         "name": "Brno",
@@ -162,6 +169,7 @@ Array [
     Object {
       "airportsCount": 1,
       "alternativeNames": Array [],
+      "autonomousTerritory": null,
       "city": null,
       "country": Object {
         "locationId": "CZ",
@@ -184,6 +192,7 @@ Array [
     Object {
       "airportsCount": undefined,
       "alternativeNames": Array [],
+      "autonomousTerritory": null,
       "city": Object {
         "locationId": "brussels_be",
         "name": "City of Brussels",
@@ -206,6 +215,7 @@ Array [
     Object {
       "airportsCount": undefined,
       "alternativeNames": Array [],
+      "autonomousTerritory": null,
       "city": Object {
         "locationId": "brisbane_ql_au",
         "name": "Brisbane",
@@ -228,6 +238,7 @@ Array [
     Object {
       "airportsCount": 1,
       "alternativeNames": Array [],
+      "autonomousTerritory": null,
       "city": null,
       "country": Object {
         "locationId": "AU",
@@ -254,6 +265,7 @@ Array [
     Object {
       "airportsCount": undefined,
       "alternativeNames": Array [],
+      "autonomousTerritory": null,
       "city": Object {
         "locationId": "bremen_de",
         "name": "Bremen",
@@ -282,6 +294,7 @@ Array [
   Object {
     "airportsCount": undefined,
     "alternativeNames": Array [],
+    "autonomousTerritory": null,
     "city": Object {
       "locationId": "prague_cz",
       "name": "Prague",
@@ -304,6 +317,7 @@ Array [
   Object {
     "airportsCount": 1,
     "alternativeNames": Array [],
+    "autonomousTerritory": null,
     "city": null,
     "country": Object {
       "locationId": "CZ",
@@ -326,6 +340,7 @@ Array [
   Object {
     "airportsCount": undefined,
     "alternativeNames": Array [],
+    "autonomousTerritory": null,
     "city": Object {
       "locationId": "medina_sa",
       "name": "Medina",
@@ -348,6 +363,7 @@ Array [
   Object {
     "airportsCount": undefined,
     "alternativeNames": Array [],
+    "autonomousTerritory": null,
     "city": Object {
       "locationId": "pristina_xk",
       "name": "Pristina",
@@ -370,6 +386,7 @@ Array [
   Object {
     "airportsCount": undefined,
     "alternativeNames": Array [],
+    "autonomousTerritory": null,
     "city": Object {
       "locationId": "gassim_sa",
       "name": "Al-Qassim Region",
@@ -392,6 +409,7 @@ Array [
   Object {
     "airportsCount": undefined,
     "alternativeNames": Array [],
+    "autonomousTerritory": null,
     "city": Object {
       "locationId": "barcelona_es",
       "name": "Barcelona",
@@ -419,6 +437,7 @@ Array [
   Object {
     "airportsCount": 2,
     "alternativeNames": Array [],
+    "autonomousTerritory": null,
     "city": null,
     "country": Object {
       "locationId": "CZ",
@@ -441,6 +460,7 @@ Array [
   Object {
     "airportsCount": undefined,
     "alternativeNames": Array [],
+    "autonomousTerritory": null,
     "city": Object {
       "locationId": "prague_cz",
       "name": "Praha",
@@ -463,6 +483,7 @@ Array [
   Object {
     "airportsCount": 1,
     "alternativeNames": Array [],
+    "autonomousTerritory": null,
     "city": null,
     "country": Object {
       "locationId": "ID",
@@ -485,6 +506,7 @@ Array [
   Object {
     "airportsCount": undefined,
     "alternativeNames": Array [],
+    "autonomousTerritory": null,
     "city": Object {
       "locationId": "luang-prabang_la",
       "name": "Luang Prabang",
@@ -507,6 +529,7 @@ Array [
   Object {
     "airportsCount": 1,
     "alternativeNames": Array [],
+    "autonomousTerritory": null,
     "city": null,
     "country": Object {
       "locationId": "CV",
@@ -529,6 +552,7 @@ Array [
   Object {
     "airportsCount": 1,
     "alternativeNames": Array [],
+    "autonomousTerritory": null,
     "city": null,
     "country": Object {
       "locationId": "LA",
@@ -551,6 +575,7 @@ Array [
   Object {
     "airportsCount": undefined,
     "alternativeNames": Array [],
+    "autonomousTerritory": null,
     "city": Object {
       "locationId": "patna_in",
       "name": "Patna",
@@ -579,6 +604,7 @@ Array [
     Object {
       "airportsCount": 2,
       "alternativeNames": Array [],
+      "autonomousTerritory": null,
       "city": null,
       "country": Object {
         "locationId": "CZ",
@@ -601,6 +627,7 @@ Array [
     Object {
       "airportsCount": undefined,
       "alternativeNames": Array [],
+      "autonomousTerritory": null,
       "city": Object {
         "locationId": "prague_cz",
         "name": "Praha",
@@ -623,6 +650,7 @@ Array [
     Object {
       "airportsCount": 1,
       "alternativeNames": Array [],
+      "autonomousTerritory": null,
       "city": null,
       "country": Object {
         "locationId": "ID",
@@ -645,6 +673,7 @@ Array [
     Object {
       "airportsCount": undefined,
       "alternativeNames": Array [],
+      "autonomousTerritory": null,
       "city": Object {
         "locationId": "luang-prabang_la",
         "name": "Luang Prabang",
@@ -667,6 +696,7 @@ Array [
     Object {
       "airportsCount": 1,
       "alternativeNames": Array [],
+      "autonomousTerritory": null,
       "city": null,
       "country": Object {
         "locationId": "CV",
@@ -689,6 +719,7 @@ Array [
     Object {
       "airportsCount": 1,
       "alternativeNames": Array [],
+      "autonomousTerritory": null,
       "city": null,
       "country": Object {
         "locationId": "LA",
@@ -711,6 +742,7 @@ Array [
     Object {
       "airportsCount": undefined,
       "alternativeNames": Array [],
+      "autonomousTerritory": null,
       "city": Object {
         "locationId": "patna_in",
         "name": "Patna",
@@ -735,6 +767,7 @@ Array [
     Object {
       "airportsCount": 2,
       "alternativeNames": Array [],
+      "autonomousTerritory": null,
       "city": null,
       "country": Object {
         "locationId": "CZ",
@@ -757,6 +790,7 @@ Array [
     Object {
       "airportsCount": undefined,
       "alternativeNames": Array [],
+      "autonomousTerritory": null,
       "city": Object {
         "locationId": "prague_cz",
         "name": "Praha",
@@ -779,6 +813,7 @@ Array [
     Object {
       "airportsCount": 1,
       "alternativeNames": Array [],
+      "autonomousTerritory": null,
       "city": null,
       "country": Object {
         "locationId": "ID",
@@ -801,6 +836,7 @@ Array [
     Object {
       "airportsCount": undefined,
       "alternativeNames": Array [],
+      "autonomousTerritory": null,
       "city": Object {
         "locationId": "luang-prabang_la",
         "name": "Luang Prabang",
@@ -823,6 +859,7 @@ Array [
     Object {
       "airportsCount": 1,
       "alternativeNames": Array [],
+      "autonomousTerritory": null,
       "city": null,
       "country": Object {
         "locationId": "CV",
@@ -845,6 +882,7 @@ Array [
     Object {
       "airportsCount": 1,
       "alternativeNames": Array [],
+      "autonomousTerritory": null,
       "city": null,
       "country": Object {
         "locationId": "LA",
@@ -867,6 +905,7 @@ Array [
     Object {
       "airportsCount": undefined,
       "alternativeNames": Array [],
+      "autonomousTerritory": null,
       "city": Object {
         "locationId": "patna_in",
         "name": "Patna",
