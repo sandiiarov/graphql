@@ -29,8 +29,8 @@ export default {
     rates: 'https://api.skypicker.com/rates',
   },
   auth: {
-    basicToken: '***REMOVED***',
-    digest: '***REMOVED***',
+    basicToken: String(process.env.AUTH_BASIC_TOKEN),
+    digest: String(process.env.AUTH_DIGEST),
   },
 };
 

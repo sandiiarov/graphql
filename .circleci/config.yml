@@ -34,19 +34,17 @@ jobs:
       - run: node scripts/testLambdaHandlers.js
 
       - persist_to_workspace:
-          root: dist
-          # Must be relative path from root
+          root: .
           paths:
             - '*'
 
   deploy:
     <<: *defaults
     steps:
+      - checkout
       - attach_workspace:
-          at: dist
-      - run: ls -l dist
-      #- run: yarn run serverless config credentials --provider aws --key $X_AWS_ACCESS_KEY_ID --secret $X_AWS_SECRET_ACCESS_KEY
-      #- run: yarn run serverless deploy
+          at: .
+      - run: sh ./scripts/deploy.sh
 
 workflows:
   version: 2
@@ -56,7 +54,7 @@ workflows:
       - deploy:
           requires:
             - test
-#          filters:
-#            branches:
-#              only:
-#                - master
+          filters:
+            branches:
+              only:
+                - master

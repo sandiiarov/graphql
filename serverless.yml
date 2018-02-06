@@ -1,9 +1,9 @@
-service: graphql-proxy
+service: graphql
 
 provider:
   name: aws
   runtime: nodejs6.10
-  stage: dev
+  stage: production
   region: eu-west-1 # EU (Ireland)
   timeout: 20 # The default is 6
 
@@ -17,9 +17,11 @@ functions:
   api:
     handler: dist/lambda.graphql
     environment:
-      BOOKING_COM_TOKEN: ${env:BOOKING_COM_TOKEN}
       ALGOLIA_APP_ID: ${env:ALGOLIA_APP_ID}
       ALGOLIA_API_KEY: ${env:ALGOLIA_API_KEY}
+      AUTH_BASIC_TOKEN: ${env:AUTH_BASIC_TOKEN}
+      AUTH_DIGEST: ${env:AUTH_DIGEST}
+      BOOKING_COM_TOKEN: ${env:BOOKING_COM_TOKEN}
     events:
       - http:
           path: /
