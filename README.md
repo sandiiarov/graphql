@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/kiwicom/graphql/tree/master.svg?style=svg)](https://circleci.com/gh/kiwicom/graphql/tree/master)
+
 Production URL: https://graphql.kiwi.com/
 
 This GraphQL API proxy is written for serverless infrastructure. This assumption is especially important in case of dataloaders. For more information please read: https://github.com/facebook/dataloader#caching-per-request
