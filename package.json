@@ -54,7 +54,7 @@
     "debug": "webpack --config config/webpack.debug.js",
     "lint": "eslint .",
     "test": "jest --setupTestFrameworkScriptFile=./config/setupTests.js",
-    "test-ci": "yarn run typecheck && yarn run lint && TZ='Asia/Tokyo' yarn run test -- --ci --color --config=jest.json && yarn babel-node scripts/CheckBackwardCompatibility.js",
+    "test-ci": "yarn run typecheck && yarn run lint && TZ='Asia/Tokyo' yarn run test -- --ci --color --logHeapUsage --maxWorkers=4 --config=jest.json && yarn babel-node scripts/CheckBackwardCompatibility.js",
     "typecheck": "flow check --color=always",
     "start-apollo-engine": "docker run --env \"ENGINE_CONFIG=$(cat config/apolloEngine.json)\" -p 3001:3001 gcr.io/mdg-public/engine:2018.01-1-gc024df504"
   },
