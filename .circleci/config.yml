@@ -30,7 +30,7 @@ jobs:
       - run: yarn run test-ci
 
       # Build and verify the build
-      - run: yarn run build:prod -- --colors
+      - run: yarn run build -- --colors
       - run: node scripts/testLambdaHandlers.js
 
       - persist_to_workspace:

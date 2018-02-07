@@ -1,21 +1,44 @@
 // @flow
 
+const path = require('path');
 const webpack = require('webpack');
-const webpackMerge = require('webpack-merge');
-const commonConfig = require('./webpack.common');
 
-module.exports = () => {
-  return webpackMerge.strategy({
-    entry: 'replace',
-  })(commonConfig, {
-    entry: {
-      lambda: './src/lambda.js',
-    },
-    plugins: [
-      new webpack.DefinePlugin({
-        'process.env.NODE_ENV': JSON.stringify('production'),
-      }),
-      new webpack.optimize.ModuleConcatenationPlugin(),
+const appDirectory = path.resolve(__dirname, '..');
+
+module.exports = () => ({
+  context: appDirectory,
+  entry: {
+    lambda: './src/lambda.js',
+  },
+  output: {
+    path: path.resolve(appDirectory, 'dist'),
+    filename: '[name].js',
+    libraryTarget: 'commonjs2',
+  },
+  plugins: [
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify('production'),
+    }),
+    new webpack.optimize.ModuleConcatenationPlugin(),
+  ],
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        loader: 'babel-loader',
+        query: {
+          babelrc: true,
+        },
+        include: [
+          path.resolve(appDirectory, 'config'),
+          path.resolve(appDirectory, 'src'),
+        ],
+      },
+      {
+        test: /\.json$/,
+        loader: 'json-loader',
+      },
     ],
-  });
-};
+  },
+  target: 'node',
+});
