@@ -1,10 +1,12 @@
 // @flow
 
-import { GraphQLNonNull } from 'graphql';
+import { GraphQLNonNull, GraphQLInt } from 'graphql';
 import {
   connectionArgs,
   connectionDefinitions,
   connectionFromArray,
+  cursorToOffset,
+  toGlobalId,
 } from 'graphql-relay';
 
 import { processInputArguments } from '../services/ParametersFormatter';
@@ -43,15 +45,25 @@ export default {
       type: GraphQLAvailableHotelOptionsInput,
     },
     ...connectionArgs,
+    first: {
+      type: GraphQLInt,
+      defaultValue: 50,
+    },
   },
   resolve: async (
     ancestor: mixed,
     args: Object,
     { dataLoader }: GraphqlContextType,
   ) => {
-    const { search: searchArgs } = args;
-    const searchParams = processInputArguments(args);
+    if (args.last) {
+      throw new Error(
+        'Booking.com API does not support querying last, use first query paramter instead.',
+      );
+    }
 
+    const { search: searchArgs } = args;
+    const offset = args.after ? cursorToOffset(args.after) + 1 : 0;
+    const searchParams = processInputArguments({ ...args, offset });
     const availableHotels = await dataLoader.hotel.availabilityByLocation.load(
       searchParams,
     );
@@ -61,13 +73,30 @@ export default {
         ...hotel,
         args: searchArgs, // pass search arguments down
       })),
-      args,
+      {
+        ...args,
+        after: offset,
+      },
     );
 
     return Object.assign(
       {},
       connection,
       { searchParams }, // pass search arguments down
+      // creating page info since booking.com does not provide needed data
+      {
+        pageInfo: {
+          startCursor: toGlobalId('arrayconnection', offset.toString()),
+          endCursor: toGlobalId(
+            'arrayconnection',
+            (offset + args.first - 1).toString(),
+          ),
+          hasPreviousPage: offset > 0,
+          // if we get the count we ask for, there is most likely another page
+          // if we get less than we asked for, there should not be more data to load
+          hasNextPage: connection.edges.length === args.first,
+        },
+      },
     );
   },
 };

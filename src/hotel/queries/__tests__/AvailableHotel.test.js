@@ -8,7 +8,7 @@ import AllHotelsDataset from '../../datasets/all.json';
 
 beforeEach(() => {
   BookingComApiMock.onGet(
-    'https://distribution-xml.booking.com/2.0/json/hotelAvailability?extras=hotel_details&order_by=popularity&hotel_ids=25215&checkin=2018-11-16&checkout=2018-11-23&rows=50&room1=A',
+    'https://distribution-xml.booking.com/2.0/json/hotelAvailability?extras=hotel_details&order_by=popularity&hotel_ids=25215&checkin=2018-11-16&checkout=2018-11-23&room1=A',
   ).replyWithData(AllHotelsDataset);
 });
 
