@@ -51,6 +51,12 @@ describe('all hotels query', () => {
               ]
             }
           ) {
+            pageInfo {
+              hasNextPage
+              hasPreviousPage
+              startCursor
+              endCursor
+            }
             edges {
               node {
                 id

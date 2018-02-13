@@ -47,8 +47,8 @@ export const processInputArguments = (args: Object) => {
     searchParams.latitude = searchArgs.latitude;
     searchParams.longitude = searchArgs.longitude;
   }
-  searchParams.first = args.first;
-
+  searchParams.rows = args.first;
+  searchParams.offset = args.offset;
   return searchParams;
 };
 
@@ -81,7 +81,11 @@ export function prepareRequestParameters(searchParameters: SearchParameters) {
   parameters.currency = searchParameters.currency;
   parameters.min_price = searchParameters.minPrice;
   parameters.max_price = searchParameters.maxPrice;
-  parameters.rows = searchParameters.first || 50;
+  parameters.rows = searchParameters.rows;
+
+  if (searchParameters.offset) {
+    parameters.offset = searchParameters.offset;
+  }
   if (searchParameters.hotelFacilities) {
     parameters.hotel_facilities = sanitizeHotelFacilities(
       searchParameters.hotelFacilities,
