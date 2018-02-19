@@ -1,4 +1,6 @@
 // @flow
+import idx from 'idx';
+import stringify from 'json-stable-stringify';
 
 import { get } from '../services/BookingComRequest';
 import { queryWithParameters } from '../../../config/application';
@@ -8,6 +10,7 @@ import sanitizePhoto from './PhotoSanitizer';
 import type { HotelExtendedType } from './flow/HotelExtendedType';
 import type { HotelFacilityType } from './flow/HotelFacilityType';
 import type { HotelRoomType } from './flow/HotelRoomType';
+import type { HotelByIDType } from './flow/HotelById';
 
 /**
  * This data-loader loads all hotels by their ID.
@@ -16,24 +19,33 @@ import type { HotelRoomType } from './flow/HotelRoomType';
  */
 export default new OptimisticDataloader(
   async (
-    hotelIds: $ReadOnlyArray<number>,
+    keys: $ReadOnlyArray<HotelByIDType>,
   ): Promise<Array<HotelExtendedType | Error>> => {
-    const response = await get(createUrl(hotelIds));
+    const hotelIds = keys.map(key => key.hotelId);
 
-    return hotelIds.map(id => {
+    const language = idx(keys, _ => _[0].language);
+    const response = await get(createUrl(hotelIds, language));
+
+    const hotels = hotelIds.map(id => {
       const hotelData = response.result.find(h => h.hotel_id == id);
+
       if (!hotelData) return new Error('Requested hotel does not exist.');
       return sanitizeHotel(hotelData);
     });
+
+    return hotels;
   },
+  { cacheKeyFn: key => stringify(key) },
 );
 
-function createUrl(hotelIds: $ReadOnlyArray<number>) {
+function createUrl(hotelIds: $ReadOnlyArray<number>, language: ?string) {
   const params = {
     extras:
       'hotel_info,hotel_photos,hotel_description,hotel_facilities,payment_details,room_info,room_photos,room_description,room_facilities',
     hotel_ids: hotelIds.join(','),
+    language,
   };
+
   return queryWithParameters(
     'https://distribution-xml.booking.com/2.0/json/hotels',
     params,

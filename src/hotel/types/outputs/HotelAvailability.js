@@ -1,6 +1,7 @@
 // @flow
 
 import { GraphQLObjectType, GraphQLList } from 'graphql';
+import idx from 'idx';
 
 import { globalIdField } from '../../../common/services/OpaqueIdentifier';
 import GraphQLPrice from '../../../common/types/outputs/Price';
@@ -50,7 +51,10 @@ export default new GraphQLObjectType({
         args: Object,
         { dataLoader }: GraphqlContextType,
       ) => {
-        return dataLoader.hotel.byID.load(ancestor.id);
+        return dataLoader.hotel.byID.load({
+          hotelId: ancestor.id,
+          language: idx(ancestor, _ => _.args.language),
+        });
       },
     },
   },
