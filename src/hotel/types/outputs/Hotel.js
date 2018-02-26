@@ -71,11 +71,13 @@ export default new GraphQLObjectType({
       description: 'Location of the hotel.',
       type: GraphQLCoordinates,
       resolve: async (
-        { id }: HotelExtendedType,
+        ancestor: HotelExtendedType,
         args: Object,
         { dataLoader }: GraphqlContextType,
       ) => {
-        const { location } = await dataLoader.hotel.byID.load(id);
+        const { location } = await dataLoader.hotel.byID.load({
+          hotelId: ancestor.id,
+        });
         return {
           lat: location.latitude,
           lng: location.longitude,
@@ -122,7 +124,9 @@ export default new GraphQLObjectType({
         args: Object,
         { dataLoader }: GraphqlContextType,
       ) => {
-        const { facilities } = await dataLoader.hotel.byID.load(id);
+        const { facilities } = await dataLoader.hotel.byID.load({
+          hotelId: id,
+        });
         return connectionFromArray(facilities, args);
       },
     },
@@ -157,7 +161,9 @@ export default new GraphQLObjectType({
         args: Object,
         { dataLoader }: GraphqlContextType,
       ) => {
-        const { location, cityId } = await dataLoader.hotel.byID.load(id);
+        const { location, cityId } = await dataLoader.hotel.byID.load({
+          hotelId: id,
+        });
         const city = await dataLoader.city.load(cityId);
         if (location && city && city.location) {
           return Math.abs(

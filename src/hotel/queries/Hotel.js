@@ -4,6 +4,7 @@ import { GraphQLID, GraphQLNonNull } from 'graphql';
 import { fromGlobalId } from 'graphql-relay';
 
 import GraphQLHotel from '../types/outputs/Hotel';
+import LanguageInput from '../types/inputs/LanguageInput';
 
 import type { GraphqlContextType } from '../../common/services/GraphqlContext';
 
@@ -14,10 +15,13 @@ export default {
     id: {
       type: new GraphQLNonNull(GraphQLID),
     },
+    language: {
+      type: LanguageInput,
+    },
   },
   resolve: async (
     ancestor: mixed,
-    { id }: Object,
+    { id, language }: Object,
     { dataLoader }: GraphqlContextType,
   ) => {
     const idObject = fromGlobalId(id); // id is opaque
@@ -28,6 +32,6 @@ export default {
           `Please use opaque ID of the hotel.`,
       );
     }
-    return dataLoader.hotel.byID.load(idObject.id);
+    return dataLoader.hotel.byID.load({ hotelId: idObject.id, language });
   },
 };

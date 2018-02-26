@@ -1,6 +1,5 @@
 // @flow
 
-import _ from 'lodash';
 import { GraphQLNonNull, type GraphQLFieldConfig } from 'graphql';
 import { fromGlobalId } from 'graphql-relay';
 
@@ -9,6 +8,7 @@ import GraphQLHotelAvailability from '../types/outputs/HotelAvailability';
 
 import type { GraphqlContextType } from '../../common/services/GraphqlContext';
 import GraphQLAvailableHotelOptionsInput from '../types/inputs/AvailableHotelOptionsInput';
+import { prepareAvailableHotelsQueryArgs } from '../services/ParametersFormatter';
 
 export default ({
   type: GraphQLHotelAvailability,
@@ -39,13 +39,9 @@ export default ({
       );
     }
 
-    const availableHotels = await dataLoader.hotel.availabilityByID.load({
-      hotelId: idObject.id,
-      checkin: args.search.checkin,
-      checkout: args.search.checkout,
-      roomsConfiguration: args.search.roomsConfiguration,
-      currency: _.get(args, 'options.currency'),
-    });
+    const availableHotels = await dataLoader.hotel.availabilityByID.load(
+      prepareAvailableHotelsQueryArgs(idObject.id, args),
+    );
 
     return availableHotels.map(hotel => ({
       ...hotel,

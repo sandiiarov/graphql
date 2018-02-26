@@ -16,6 +16,7 @@ type SharedSearchParameters = {|
   freeCancellation?: boolean,
   rows?: number,
   offset?: number,
+  language?: string,
 |};
 
 type SearchByHotelId = {|

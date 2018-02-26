@@ -17,6 +17,7 @@ export const processInputArguments = (args: Object) => {
     checkout: searchArgs.checkout,
     currency: options && options.currency,
     roomsConfiguration: searchArgs.roomsConfiguration,
+    language: searchArgs.language,
     ...(filterArgs && {
       stars: filterArgs.starsRating,
       minPrice: filterArgs.minPrice,
@@ -95,7 +96,9 @@ export function prepareRequestParameters(searchParameters: SearchParameters) {
   if (searchParameters.freeCancellation) {
     parameters.filter = 'free_cancellation';
   }
-
+  if (searchParameters.language) {
+    parameters.language = searchParameters.language;
+  }
   return parameters;
 }
 
@@ -147,6 +150,26 @@ export function formatRoomsConfigurationForAPI(
       )
       .join(',');
   });
+}
+
+export function prepareAvailableHotelsQueryArgs(hotelId: string, args: Object) {
+  let queryArgs: Object = {
+    hotelId,
+    checkin: args.search.checkin,
+    checkout: args.search.checkout,
+    roomsConfiguration: args.search.roomsConfiguration,
+  };
+  const currency = idx(args, _ => _.options.currency);
+  const language = idx(args, _ => _.search.language);
+
+  if (language) {
+    queryArgs.language = language;
+  }
+  if (currency) {
+    queryArgs.currency = currency;
+  }
+
+  return queryArgs;
 }
 
 const facilitiesList = {

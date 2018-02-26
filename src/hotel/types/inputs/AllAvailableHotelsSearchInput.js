@@ -10,6 +10,7 @@ import {
 import { GraphQLDate } from 'graphql-iso-date';
 
 import HotelRoomsConfiguration from './HotelRoomsConfiguration';
+import LanguageInput from './LanguageInput';
 
 export default new GraphQLInputObjectType({
   name: 'HotelsSearchInput',
@@ -37,7 +38,9 @@ export default new GraphQLInputObjectType({
     checkout: {
       type: new GraphQLNonNull(GraphQLDate),
     },
-
+    language: {
+      type: LanguageInput,
+    },
     roomsConfiguration: {
       type: new GraphQLNonNull(
         new GraphQLList(new GraphQLNonNull(HotelRoomsConfiguration)),
