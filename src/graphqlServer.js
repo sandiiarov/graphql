@@ -25,6 +25,9 @@ const app = express();
 app.use(cors({ methods: ['GET', 'POST'] }));
 
 app.use('/', (request: $Request, response: $Response) => {
+  if (process.env.NODE_ENV === 'production' && request.method === 'GET') {
+    return response.redirect(301, 'https://kiwi-graphiql.now.sh/');
+  }
   const token = request.header('authorization') || null;
   const context = createContext(token);
   if (process.env.NODE_ENV !== 'test') {
