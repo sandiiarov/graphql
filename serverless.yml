@@ -13,6 +13,13 @@ package:
   include:
     - dist/lambda.js
 
+plugins:
+  - serverless-content-encoding
+
+custom:
+  contentEncoding:
+    minimumCompressionSize: 0 # Minimum body size required for compression in bytes
+
 functions:
   api:
     handler: dist/lambda.graphql
