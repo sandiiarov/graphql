@@ -28,6 +28,10 @@ functions:
           method: POST
           cors: true # needed for GraphiQL
           integration: lambda-proxy
+      - http:
+          path: /
+          method: GET # info response on bad method request
+          integration: lambda-proxy
 
 # MANUALLY CREATED RESOURCES:
 #
