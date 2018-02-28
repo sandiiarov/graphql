@@ -44,6 +44,7 @@
     "nodemon": "^1.14.12",
     "prettier": "^1.5.2",
     "serverless": "^1.26.0",
+    "serverless-content-encoding": "^1.0.20",
     "start-server-webpack-plugin": "^2.2.0",
     "supertest": "^3.0.0",
     "webpack": "^3.0.0",
