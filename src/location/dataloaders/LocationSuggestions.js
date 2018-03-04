@@ -1,17 +1,11 @@
 // @flow
 
-import _ from 'lodash';
 import DataLoader from 'dataloader';
-import config from '../../../config/application';
-import { get } from '../../common/services/HttpRequest';
+import stringify from 'json-stable-stringify';
 
-import type {
-  Radius,
-  Rectangle,
-  LocationArea,
-  Location,
-  Options,
-} from '../Location';
+import { batchGetLocations } from './Fetcher';
+
+import type { Radius, Rectangle, Location, Options } from '../Location';
 
 export default class LocationSuggestionsDataloader {
   dataLoader: DataLoader<Object, Location[] | Error>;
@@ -19,10 +13,10 @@ export default class LocationSuggestionsDataloader {
   constructor() {
     this.dataLoader = new DataLoader(
       (urlParameters: $ReadOnlyArray<Object>) => {
-        return this.batchGetLocations(urlParameters);
+        return batchGetLocations(urlParameters);
       },
       {
-        cacheKeyFn: key => JSON.stringify(key),
+        cacheKeyFn: key => stringify(key),
       },
     );
   }
@@ -92,75 +86,9 @@ export default class LocationSuggestionsDataloader {
       })),
     );
   }
-
-  /**
-   * It returns array of arrays of possible locations related to the keys.
-   * First array contains arrays of requested keys.
-   * The inner array contains all possible values for requested key.
-   *
-   * Example of the response (PRG, BRQ):
-   *
-   * [
-   *   [{ PRG fields }, { Praha fields }]
-   *   [{ BRQ fields }, { Brno fields }]
-   * ]
-   *
-   * @private
-   */
-  async batchGetLocations(
-    urlParameters: $ReadOnlyArray<Object>,
-  ): Promise<Array<Location[] | Error>> {
-    const promisesStack = [];
-
-    urlParameters.forEach(parameters => {
-      promisesStack.push(get(config.restApiEndpoint.allLocations(parameters)));
-    });
-
-    const responseArray = await Promise.all(promisesStack);
-    return responseArray.map(response => {
-      if (response.locations.length === 0) {
-        return new Error(`Location has not been found.`);
-      }
-      return response.locations.map((location): Location =>
-        sanitizeApiResponse(location),
-      );
-    });
-  }
 }
 
-function sanitizeApiResponse(location: Object): Location {
-  return {
-    locationId: location.id,
-    name: location.name,
-    slug: location.slug,
-    timezone: location.timezone,
-    location: {
-      lat: _.get(location, 'location.lat', null),
-      lng: _.get(location, 'location.lon', null),
-    },
-    type: location.type,
-    city: sanitizeLocationArea(location.city),
-    subdivision: sanitizeLocationArea(location.subdivision),
-    country: sanitizeLocationArea(location.country),
-    isActive: location.active,
-    stationsCount: location.stations,
-    airportsCount: location.airports,
-    alternativeNames: location.alternative_names,
-    autonomousTerritory: sanitizeLocationArea(location.autonomous_territory),
-  };
-}
-
-function sanitizeLocationArea(area: null | Object): ?LocationArea {
-  return area
-    ? {
-        locationId: area.id,
-        name: area.name,
-        slug: area.slug,
-      }
-    : null;
-}
-
-function sanitizeOptions(options: ?Options): Object {
+export function sanitizeOptions(options: ?Options): Object {
   if (!options) return {};
   return {
     locale: options.locale,

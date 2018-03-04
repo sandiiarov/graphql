@@ -1,14 +1,27 @@
 // @flow
 
+import DataLoader from 'dataloader';
+import stringify from 'json-stable-stringify';
+
 import LocationSuggestions from './LocationSuggestions';
+import { batchGetLocations } from './Fetcher';
 
 import type { Location, Options } from '../Location';
 
 export default class LocationDataLoader {
   locationSuggestionsDataLoader: LocationSuggestions;
+  dataLoader: DataLoader<Object, Location[] | Error>;
 
   constructor(dataloader: LocationSuggestions) {
     this.locationSuggestionsDataLoader = dataloader;
+    this.dataLoader = new DataLoader(
+      (urlParameters: $ReadOnlyArray<Object>) => {
+        return batchGetLocations(urlParameters);
+      },
+      {
+        cacheKeyFn: key => stringify(key),
+      },
+    );
   }
 
   /**
@@ -38,5 +51,17 @@ export default class LocationDataLoader {
       }
       return possibleLocations[0];
     });
+  }
+
+  async loadById(id: String, locale?: String): Promise<Location> {
+    const possibleValues = await this.dataLoader.load({
+      type: 'id',
+      id,
+      locale,
+    });
+    if (possibleValues instanceof Error) {
+      throw possibleValues;
+    }
+    return possibleValues[0];
   }
 }
