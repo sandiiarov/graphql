@@ -6,6 +6,7 @@ import { fetchJson } from './JsonFetcher';
 export async function get(
   absoluteApiUrl: string,
   token: ?string,
+  requestHeaders?: Object = {},
 ): Promise<Object> {
   const urlObject = url.parse(absoluteApiUrl, true);
   if (token !== null && token !== undefined) {
@@ -16,6 +17,8 @@ export async function get(
   }
   const headers = {
     'User-Agent': 'graphql',
+    'Content-Type': 'application/json',
+    ...requestHeaders,
   };
 
   return fetchJson(url.format(urlObject), 'GET', { headers });

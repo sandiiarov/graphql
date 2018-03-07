@@ -1,0 +1,95 @@
+[
+  {
+    "id": 84,
+    "title": "How can Price Alerts save me time and money?",
+    "content":
+      "<em>Price</em> Alerts are by far the best travel tool for saving time and money on your trip…",
+    "categories": [
+      {
+        "tree_id": 1,
+        "tree_name": "menu",
+        "items": [
+          { "id": 46, "title": "Booking", "style": "orange", "icon": "card" },
+          {
+            "id": 27,
+            "title": "Booking a Flight",
+            "style": "orange",
+            "icon": "ticket"
+          }
+        ]
+      },
+      {
+        "tree_id": 2,
+        "tree_name": "related",
+        "items": [
+          { "id": 3, "title": "booking", "style": "", "icon": "" },
+          { "id": 6, "title": "booking", "style": "orange", "icon": "card" }
+        ]
+      },
+      {
+        "tree_id": 2,
+        "tree_name": "related",
+        "items": [{ "id": 4, "title": "search", "style": "", "icon": "" }]
+      }
+    ],
+    "upvotes": 61,
+    "downvotes": 39
+  },
+  {
+    "id": 16,
+    "title": "How do I book a ticket for a child?",
+    "content":
+      "Some airlines provide discounted <em>prices</em> for children but in most cases, the ticket <em>price</em> is the same as for adults. Please contact us before making your booking if you would like us to arrange a child fare for you…",
+    "categories": [
+      {
+        "tree_id": 1,
+        "tree_name": "menu",
+        "items": [
+          { "id": 46, "title": "Booking", "style": "orange", "icon": "card" },
+          {
+            "id": 27,
+            "title": "Booking a Flight",
+            "style": "orange",
+            "icon": "ticket"
+          }
+        ]
+      },
+      {
+        "tree_id": 2,
+        "tree_name": "related",
+        "items": [
+          { "id": 3, "title": "booking", "style": "", "icon": "" },
+          { "id": 6, "title": "booking", "style": "orange", "icon": "card" }
+        ]
+      }
+    ],
+    "upvotes": 38,
+    "downvotes": 62
+  },
+  {
+    "id": 112,
+    "title": "How do I manage flights with the mobile app?",
+    "content":
+      "<em>Price</em> Alerts By adding <em>Price</em> Alerts, you'll be able to: Receive notifications whenever the <em>price</em> drops below your chosen level. Find the flight again easily. To add a <em>Price</em> Alert, search for a flight, then tap one of the offered destinations to view the options. Under the 4th option, tap the yellow button ‘Add <em>Price</em> Alert’ and set the maximum <em>price</em> that you want to pay. To find these again, simply tap the list icon in the top right corner of……",
+    "categories": [
+      {
+        "tree_id": 1,
+        "tree_name": "menu",
+        "items": [
+          { "id": 50, "title": "Other", "style": "grey", "icon": "list" },
+          { "id": 38, "title": "Mobile App", "style": "grey", "icon": "mobile" }
+        ]
+      },
+      {
+        "tree_id": 2,
+        "tree_name": "related",
+        "items": [
+          { "id": 3, "title": "booking", "style": "", "icon": "" },
+          { "id": 8, "title": "manage", "style": "blue", "icon": "tool" }
+        ]
+      }
+    ],
+    "upvotes": 26,
+    "downvotes": 74
+  }
+]

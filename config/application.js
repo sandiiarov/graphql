@@ -27,6 +27,11 @@ export default {
         queryParameters,
       ),
     rates: 'https://api.skypicker.com/rates',
+    allFAQ: (queryParameters: ?Object = null) =>
+      queryWithParameters(
+        'https://api.skypicker.com/knowledgebase/api/v1/search',
+        queryParameters,
+      ),
   },
   auth: {
     basicToken: String(process.env.AUTH_BASIC_TOKEN),
