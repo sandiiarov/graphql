@@ -8,6 +8,7 @@ import AllAvailableHotels from './hotel/queries/AllAvailableHotels';
 import AvailableHotel from './hotel/queries/AvailableHotel';
 import AllLocations from './location/queries/AllLocations';
 import Location from './location/queries/Location';
+import AllSubLocations from './location/queries/AllSubLocations';
 import Booking from './booking/queries/Booking';
 import CurrentUser from './identity/queries/CurrentUser';
 import Hotel from './hotel/queries/Hotel';
@@ -23,6 +24,7 @@ export default new GraphQLObjectType({
     availableHotel: AvailableHotel,
     allLocations: AllLocations,
     location: Location,
+    allSubLocations: AllSubLocations,
     booking: Booking,
     currentUser: CurrentUser,
     hotel: Hotel,

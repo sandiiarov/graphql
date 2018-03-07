@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`allSubLocations query should return locations 1`] = `
+Object {
+  "data": Object {
+    "allSubLocations": Object {
+      "edges": Array [
+        Object {
+          "node": Object {
+            "locationId": "prague_cz",
+            "name": "Praha",
+            "slug": "praha-ceska-republika",
+            "type": "city",
+          },
+        },
+        Object {
+          "node": Object {
+            "locationId": "PRG",
+            "name": "Letiště Václava Havla Praha",
+            "slug": "letiste-vaclava-havla-praha-praha-ceska-republika",
+            "type": "airport",
+          },
+        },
+      ],
+    },
+  },
+}
+`;
