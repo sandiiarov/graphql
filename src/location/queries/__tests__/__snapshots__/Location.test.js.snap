@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`location query should return error on unknown location 1`] = `
+Object {
+  "data": Object {
+    "location": null,
+  },
+  "errors": Array [
+    [GraphQLError: Location has not been found.],
+  ],
+}
+`;
+
+exports[`location query should return location 1`] = `
+Object {
+  "data": Object {
+    "location": Object {
+      "locationId": "prague_cz",
+      "name": "Prague",
+      "slug": "prague-czech-republic",
+    },
+  },
+}
+`;
+
+exports[`location query should return location in Czech 1`] = `
+Object {
+  "data": Object {
+    "location": Object {
+      "locationId": "prague_cz",
+      "name": "Praha",
+      "slug": "praha-ceska-republika",
+    },
+  },
+}
+`;

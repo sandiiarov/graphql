@@ -20,7 +20,7 @@ import type { Location } from '../Location';
  */
 export async function batchGetLocations(
   urlParameters: $ReadOnlyArray<Object>,
-): Promise<Array<Location[] | Error>> {
+): Promise<Array<Location[]>> {
   const promisesStack = [];
 
   urlParameters.forEach(parameters => {
@@ -29,11 +29,13 @@ export async function batchGetLocations(
 
   const responseArray = await Promise.all(promisesStack);
   return responseArray.map(response => {
-    if (response.locations.length === 0) {
-      return new Error(`Location has not been found.`);
-    }
     return response.locations.map((location): Location =>
       sanitizeApiResponse(location),
     );
   });
+}
+
+export function processResponse(locations: Location[]) {
+  if (!locations.length) throw new Error(`Location has not been found.`);
+  return locations;
 }

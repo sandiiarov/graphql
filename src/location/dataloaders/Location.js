@@ -4,13 +4,13 @@ import DataLoader from 'dataloader';
 import stringify from 'json-stable-stringify';
 
 import LocationSuggestions from './LocationSuggestions';
-import { batchGetLocations } from './Fetcher';
+import { batchGetLocations, processResponse } from './Fetcher';
 
 import type { Location, Options } from '../Location';
 
 export default class LocationDataLoader {
   locationSuggestionsDataLoader: LocationSuggestions;
-  dataLoader: DataLoader<Object, Location[] | Error>;
+  dataLoader: DataLoader<Object, Location[]>;
 
   constructor(dataloader: LocationSuggestions) {
     this.locationSuggestionsDataLoader = dataloader;
@@ -32,10 +32,7 @@ export default class LocationDataLoader {
       locationKey,
       options,
     );
-    if (possibleValues instanceof Error) {
-      throw possibleValues;
-    }
-    return possibleValues[0];
+    return processResponse(possibleValues)[0];
   }
 
   /**
@@ -45,23 +42,17 @@ export default class LocationDataLoader {
     const allLocations = await this.locationSuggestionsDataLoader.loadMany(
       locationKeys,
     );
-    return allLocations.map(possibleLocations => {
-      if (possibleLocations instanceof Error) {
-        throw possibleLocations;
-      }
-      return possibleLocations[0];
-    });
+    return allLocations.map(
+      possibleLocations => processResponse(possibleLocations)[0],
+    );
   }
 
-  async loadById(id: String, locale?: String): Promise<Location> {
-    const possibleValues = await this.dataLoader.load({
+  async loadById(id: string, locale?: string): Promise<Location> {
+    const locations = await this.dataLoader.load({
       type: 'id',
       id,
       locale,
     });
-    if (possibleValues instanceof Error) {
-      throw possibleValues;
-    }
-    return possibleValues[0];
+    return processResponse(locations)[0];
   }
 }

@@ -78,9 +78,6 @@ export default {
       );
     }
 
-    if (response instanceof Error) {
-      throw response;
-    }
     return connectionFromArray(response, args);
   },
 };
