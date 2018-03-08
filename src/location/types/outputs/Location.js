@@ -88,5 +88,10 @@ export default new GraphQLObjectType({
       resolve: ({ autonomousTerritory }: Location): ?LocationArea =>
         autonomousTerritory,
     },
+
+    rank: {
+      type: GraphQLInt,
+      resolve: ({ rank }: Location): number => rank,
+    },
   },
 });

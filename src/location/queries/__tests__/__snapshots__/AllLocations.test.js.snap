@@ -19,6 +19,7 @@ Object {
             },
             "locationId": "prague_cz",
             "name": "Prague",
+            "rank": 1,
             "slug": "prague-czech-republic",
             "subdivision": null,
             "timezone": "Europe/Prague",
