@@ -8,6 +8,7 @@ import {
 } from 'graphql-relay';
 
 import GraphQLHotelCity from '../types/outputs/HotelCity';
+import GraphQLCoordinatesInput from '../../common/types/inputs/CoordinatesInput';
 
 import type { GraphqlContextType } from '../../common/services/GraphqlContext';
 
@@ -28,16 +29,21 @@ number of hotels (desc). When the prefix is omitted top cities are returned.
       type: GraphQLString,
       description: 'First few letters.',
     },
+    position: {
+      type: GraphQLCoordinatesInput,
+      description: 'Search for cities around a given position.',
+    },
     ...connectionArgs,
   },
   resolve: async (
     ancestor: mixed,
-    args: Object,
-    { dataLoader }: GraphqlContextType,
+    { prefix, position, ...pagination }: Object,
+    context: GraphqlContextType,
   ) => {
-    return connectionFromPromisedArray(
-      dataLoader.hotel.cities.load(args.prefix || ''),
-      args,
-    );
+    const dataLoader = context.dataLoader.hotel.cities;
+    const cities = position
+      ? dataLoader.loadByLatLng(position.lat, position.lng)
+      : dataLoader.loadByPrefix(prefix || '');
+    return connectionFromPromisedArray(cities, pagination);
   },
 };

@@ -1,7 +1,7 @@
 // @flow
 
 import { GraphQLInputObjectType, GraphQLNonNull } from 'graphql';
-import GraphQLCoordinates from './CoordinatesInput';
+import GraphQLCoordinates from '../../../common/types/inputs/CoordinatesInput';
 
 export default new GraphQLInputObjectType({
   name: 'AreaInput',
