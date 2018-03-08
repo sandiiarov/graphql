@@ -45,6 +45,11 @@ jobs:
       - attach_workspace:
           at: .
       - run: sh ./scripts/deploy.sh
+  rancher deploy:
+    docker:
+      - image: pstauffer/curl:latest
+    steps:
+      - run: curl -gX POST $DEPLOY_TRIGGER_URL$CIRCLE_SHA1
 
 workflows:
   version: 2
@@ -52,6 +57,13 @@ workflows:
     jobs:
       - test
       - deploy:
+          requires:
+            - test
+          filters:
+            branches:
+              only:
+                - master
+      - rancher deploy:
           requires:
             - test
           filters:
