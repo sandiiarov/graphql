@@ -41,6 +41,7 @@ export type Location = {|
   airportsCount: number,
   alternativeNames: string[],
   autonomousTerritory: ?LocationArea,
+  rank: number,
 |};
 
 export type LocationArea = {|

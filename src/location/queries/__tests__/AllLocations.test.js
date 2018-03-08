@@ -41,6 +41,7 @@ describe('all locations query', () => {
               name
               slug
             }
+            rank
           }
         }
       }

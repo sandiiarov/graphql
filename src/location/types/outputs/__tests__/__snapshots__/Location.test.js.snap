@@ -66,6 +66,13 @@ Object {
     "resolve": [Function],
     "type": "String",
   },
+  "rank": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "rank",
+    "resolve": [Function],
+    "type": "Int",
+  },
   "slug": Object {
     "args": Array [],
     "isDeprecated": false,
