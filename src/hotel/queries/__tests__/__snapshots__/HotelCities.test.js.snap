@@ -47,3 +47,19 @@ Object {
   },
 }
 `;
+
+exports[`hotel cities query works with position parameter 1`] = `
+Object {
+  "data": Object {
+    "hotelCities": Object {
+      "edges": Array [
+        Object {
+          "node": Object {
+            "id": "aG90ZWxDaXR5Oi0yMTQwMjA1",
+          },
+        },
+      ],
+    },
+  },
+}
+`;

@@ -25,7 +25,6 @@ import type { Booking } from '../../booking/Booking';
 import type { Airline } from '../../flight/Flight';
 import type { HotelType } from '../../hotel/dataloaders/flow/HotelType';
 import type { City } from '../../hotel/dataloaders/flow/City';
-import type { HotelCity } from '../../hotel/types/outputs/HotelCity';
 
 /**
  * FIXME:
@@ -49,7 +48,7 @@ export type GraphqlContextType = {|
       availabilityByLocation: DataLoader<HotelKey, HotelType[]>,
       availabilityByID: DataLoader<HotelKey, HotelType[]>,
       byID: typeof HotelByID,
-      cities: DataLoader<string, HotelCity[]>,
+      cities: HotelCities,
       room: HotelRoomsLoader,
       roomAvailability: HotelRoomAvailabilityLoader,
       roomBedding: typeof HotelRoomBeddingLoader,
@@ -67,6 +66,7 @@ export function createContext(token: ?string): GraphqlContextType {
   const bookings = new BookingsLoader(token);
   const locationSuggestions = new LocationSuggestionsLoader();
   const location = new LocationLoader(locationSuggestions);
+  const hotelCities = new HotelCities();
 
   return {
     apiToken: token,
@@ -84,7 +84,7 @@ export function createContext(token: ?string): GraphqlContextType {
         availabilityByLocation: HotelsAvailability,
         availabilityByID: HotelsAvailability,
         byID: HotelByID,
-        cities: HotelCities,
+        cities: hotelCities,
         room: new HotelRoomsLoader(),
         roomAvailability: new HotelRoomAvailabilityLoader(),
         roomBedding: HotelRoomBeddingLoader,
