@@ -87,4 +87,26 @@ describe('hotel cities query', () => {
       ),
     ).toMatchSnapshot();
   });
+
+  it('works with position parameter', async () => {
+    const lat = 51;
+    const lng = 14;
+    AlgoliaMock.setNearbyCities(matchingCities, lat, lng);
+    expect(
+      await graphql(
+        `
+          query hotelCities($lat: Float!, $lng: Float!) {
+            hotelCities(position: { lat: $lat, lng: $lng }) {
+              edges {
+                node {
+                  id
+                }
+              }
+            }
+          }
+        `,
+        { lat, lng },
+      ),
+    ).toMatchSnapshot();
+  });
 });
