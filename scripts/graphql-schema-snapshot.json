@@ -575,6 +575,16 @@
                 "defaultValue": null
               },
               {
+                "name": "position",
+                "description": "Search for cities around a given position.",
+                "type": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "CoordinatesInput",
+                  "ofType": null
+                },
+                "defaultValue": null
+              },
+              {
                 "name": "after",
                 "description": null,
                 "type": {

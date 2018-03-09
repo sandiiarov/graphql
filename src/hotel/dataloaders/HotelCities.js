@@ -1,34 +1,62 @@
 // @flow
 
-import Dataloader from 'dataloader';
+import DataLoader from 'dataloader';
 import Algolia from 'algoliasearch';
-import _ from 'lodash';
+import idx from 'idx';
+import stringify from 'json-stable-stringify';
 
 import type { HotelCity } from '../types/outputs/HotelCity';
 
-/**
- * Loads all cities by prefix (suggestions). Returned cities are sorted
- * by number of hotels and by alphabet (if two cities have the same number)
- * of hotels.
- */
-export default new Dataloader(async (prefixes: $ReadOnlyArray<string>): Promise<
-  Array<HotelCity[]>,
-> => {
-  const algolia = Algolia(
-    process.env.ALGOLIA_APP_ID,
-    process.env.ALGOLIA_API_KEY,
-  );
-  const citiesIndex = algolia.initIndex('cities');
+type SearchInput =
+  | {|
+      type: 'prefix',
+      prefix: string,
+    |}
+  | {| type: 'latLng', lat: number, lng: number |};
 
-  const responses = await Promise.all(
-    prefixes.map(prefix => citiesIndex.search(prefix)),
-  );
+export default class LocationDataLoader {
+  dataLoader: DataLoader<SearchInput, HotelCity[]>;
 
-  return responses.map(response => {
-    const cities = _.get(response, 'hits', []);
-    return sanitizeHotelCities(cities);
-  });
-});
+  constructor() {
+    const algolia = Algolia(
+      process.env.ALGOLIA_APP_ID,
+      process.env.ALGOLIA_API_KEY,
+    );
+    const citiesIndex = algolia.initIndex('cities');
+
+    this.dataLoader = new DataLoader(
+      async (inputs: $ReadOnlyArray<SearchInput>) => {
+        const responses = await Promise.all(
+          inputs.map(input => {
+            if (input.type === 'prefix')
+              return citiesIndex.search(input.prefix);
+            if (input.type === 'latLng') {
+              return citiesIndex.search({
+                aroundLatLng: `${input.lat}, ${input.lng}`,
+              });
+            }
+          }),
+        );
+
+        return responses.map(response => {
+          const cities = idx(response, _ => _.hits) || [];
+          return sanitizeHotelCities(cities);
+        });
+      },
+      {
+        cacheKeyFn: key => stringify(key),
+      },
+    );
+  }
+
+  loadByPrefix(prefix: string): Promise<HotelCity[]> {
+    return this.dataLoader.load({ type: 'prefix', prefix });
+  }
+
+  loadByLatLng(lat: number, lng: number): Promise<HotelCity[]> {
+    return this.dataLoader.load({ type: 'latLng', lat, lng });
+  }
+}
 
 export function sanitizeHotelCities(cities: ValidResponse): HotelCity[] {
   return cities.map(city => ({

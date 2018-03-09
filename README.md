@@ -21,29 +21,7 @@ client and GraphQL server. It brings features like performance tracing, error
 tracking or caching.
 
 It can be handy to check performance during development. To run Apollo Engine
-on localhost you'll need Docker installed and have Apollo Engine API key
-(available after registration).
-
-First create config file:
-```
-cp config/apolloEngine.json.sample config/apolloEngine.json
-```
-
-Insert the API key into `config/apolloEngine.json` file and run:
-
-```
-yarn start-apollo-engine
-```
-
-It's only a proxy, so don't forget to run GraphQL server:
-
-```
-yarn start
-```
-
-Apollo Engine will start on http://127.0.0.1:3001/ and you can use it as a
-standard GraphQL server. Useful information will be available in Apollo Engine
-Dashboard within seconds after the first query.
+on localhost you'll need to fill in the `ENGINE_KEY` environmental variable.
 
 # Run tests
 
