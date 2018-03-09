@@ -66,6 +66,15 @@ export default class LocationSuggestionsDataloader {
     return processResponse(locations);
   }
 
+  async loadSubLocations(term: String, options: ?Options): Promise<Location[]> {
+    const locations = await this.dataLoader.load({
+      type: 'subentity',
+      term,
+      ...sanitizeOptions(options),
+    });
+    return processResponse(locations);
+  }
+
   /**
    * Returns set of suggestions for multiple places (array of arrays of
    * possible locations related to the keys).

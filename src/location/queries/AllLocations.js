@@ -1,28 +1,20 @@
 // @flow
 
 import { GraphQLString } from 'graphql';
-import {
-  connectionArgs,
-  connectionDefinitions,
-  connectionFromArray,
-} from 'graphql-relay';
+import { connectionArgs, connectionFromArray } from 'graphql-relay';
 
 import type { GraphQLResolveInfo } from 'graphql';
 
-import GraphQLLocation from '../types/outputs/Location';
 import GraphQLRadius from '../types/inputs/RadiusInput';
 import GraphQLArea from '../types/inputs/AreaInput';
 import LocationsOptionsInput from '../types/inputs/LocationsOptions';
+import GraphQLLocationConnection from '../types/outputs/LocationConnection';
 
 import type { GraphqlContextType } from '../../common/services/GraphqlContext';
 import type { Rectangle } from '../Location';
 
-const { connectionType: AllLocationsConnection } = connectionDefinitions({
-  nodeType: GraphQLLocation,
-});
-
 export default {
-  type: AllLocationsConnection,
+  type: GraphQLLocationConnection,
   description:
     'Search for airports, cities, countries. You can search by location name,' +
     ' radius on the map or rectangle on the map. If you do not specify one of' +
