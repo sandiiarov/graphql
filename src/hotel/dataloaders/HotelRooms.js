@@ -5,7 +5,7 @@ import _ from 'lodash';
 
 import { get } from '../services/BookingComRequest';
 import { queryWithParameters } from '../../../config/application';
-import sanitizePhoto from './PhotoSanitizer';
+import sanitizeHotelRooms from './HotelRoomsSanitizer';
 
 import type { HotelRoomType } from './flow/HotelRoomType';
 
@@ -71,32 +71,9 @@ export default class HotelRoomBlocksDataloader {
         if (!rooms) {
           return [];
         }
-        return this.sanitizeHotelRooms(rooms.room_data, hotelId);
+        return sanitizeHotelRooms(rooms.room_data, hotelId);
       });
       return hotelRooms.reduce((a, b) => a.concat(b));
     });
   }
-
-  sanitizeHotelRooms(rooms: Object, hotelId: number): HotelRoomType[] {
-    return rooms.map(room => {
-      return {
-        id: room.room_id,
-        hotelId,
-        type: room.room_info.room_type,
-        maxPersons: room.room_info.max_persons,
-        bedding: null, // not provided by API v2
-        descriptions: [
-          {
-            title: room.room_name,
-            text: room.room_description,
-          },
-        ],
-        photos: sanitizePhotos(room.room_photos),
-      };
-    });
-  }
-}
-
-function sanitizePhotos(photos) {
-  return photos.map(photo => sanitizePhoto(photo));
 }
