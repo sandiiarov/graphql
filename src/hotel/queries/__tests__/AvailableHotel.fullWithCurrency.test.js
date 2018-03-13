@@ -38,6 +38,8 @@ describe('single hotel availability query', () => {
             currency
           }
           availableRooms {
+            isBreakfastIncluded
+            isRefundable
             minimalPrice {
               amount
               currency

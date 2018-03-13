@@ -102,6 +102,8 @@ export default class HotelRoomAvailabilityLoader {
         amount: Number(idx(price, _ => _.other_currency.price) || price.price),
         currency: idx(price, _ => _.other_currency.currency) || price.currency,
       })),
+      isRefundable: block.refundable,
+      isBreakfastIncluded: block.breakfast_included,
     };
   }
 }
