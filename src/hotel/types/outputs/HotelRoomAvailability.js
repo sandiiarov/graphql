@@ -1,6 +1,11 @@
 // @flow
 
-import { GraphQLObjectType, GraphQLList, GraphQLString } from 'graphql';
+import {
+  GraphQLObjectType,
+  GraphQLList,
+  GraphQLString,
+  GraphQLBoolean,
+} from 'graphql';
 
 import { globalIdField } from '../../../common/services/OpaqueIdentifier';
 import GraphQLHotelRoom from './HotelRoom';
@@ -31,6 +36,19 @@ export default new GraphQLObjectType({
       type: new GraphQLList(GraphQLPrice),
       resolve: ({ incrementalPrice }: HotelRoomAvailabilityType) =>
         incrementalPrice,
+    },
+
+    isRefundable: {
+      type: GraphQLBoolean,
+      description: 'Is the hotelroom refundable',
+      resolve: ({ isRefundable }: HotelRoomAvailabilityType) => isRefundable,
+    },
+
+    isBreakfastIncluded: {
+      type: GraphQLBoolean,
+      description: 'Is breakfast included in the hotelroom',
+      resolve: ({ isBreakfastIncluded }: HotelRoomAvailabilityType) =>
+        isBreakfastIncluded,
     },
 
     room: {

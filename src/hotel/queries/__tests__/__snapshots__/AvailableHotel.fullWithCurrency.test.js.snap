@@ -20,6 +20,8 @@ Object {
               "currency": "CZK",
             },
           ],
+          "isBreakfastIncluded": true,
+          "isRefundable": false,
           "minimalPrice": Object {
             "amount": 11635.52,
             "currency": "CZK",
@@ -40,6 +42,8 @@ Object {
               "currency": "CZK",
             },
           ],
+          "isBreakfastIncluded": true,
+          "isRefundable": false,
           "minimalPrice": Object {
             "amount": 12928.35,
             "currency": "CZK",
@@ -52,6 +56,8 @@ Object {
               "currency": "CZK",
             },
           ],
+          "isBreakfastIncluded": true,
+          "isRefundable": false,
           "minimalPrice": Object {
             "amount": 13692.88,
             "currency": "CZK",
@@ -64,6 +70,8 @@ Object {
               "currency": "CZK",
             },
           ],
+          "isBreakfastIncluded": true,
+          "isRefundable": false,
           "minimalPrice": Object {
             "amount": 13692.88,
             "currency": "CZK",
@@ -76,6 +84,8 @@ Object {
               "currency": "CZK",
             },
           ],
+          "isBreakfastIncluded": true,
+          "isRefundable": false,
           "minimalPrice": Object {
             "amount": 15214.31,
             "currency": "CZK",
@@ -88,6 +98,8 @@ Object {
               "currency": "CZK",
             },
           ],
+          "isBreakfastIncluded": true,
+          "isRefundable": false,
           "minimalPrice": Object {
             "amount": 15214.31,
             "currency": "CZK",
@@ -108,6 +120,8 @@ Object {
               "currency": "CZK",
             },
           ],
+          "isBreakfastIncluded": true,
+          "isRefundable": false,
           "minimalPrice": Object {
             "amount": 15247.33,
             "currency": "CZK",
@@ -120,6 +134,8 @@ Object {
               "currency": "CZK",
             },
           ],
+          "isBreakfastIncluded": false,
+          "isRefundable": false,
           "minimalPrice": Object {
             "amount": 16436.03,
             "currency": "CZK",
@@ -140,6 +156,8 @@ Object {
               "currency": "CZK",
             },
           ],
+          "isBreakfastIncluded": true,
+          "isRefundable": false,
           "minimalPrice": Object {
             "amount": 16941.48,
             "currency": "CZK",
@@ -152,6 +170,8 @@ Object {
               "currency": "CZK",
             },
           ],
+          "isBreakfastIncluded": true,
+          "isRefundable": false,
           "minimalPrice": Object {
             "amount": 17807.6,
             "currency": "CZK",
@@ -164,6 +184,8 @@ Object {
               "currency": "CZK",
             },
           ],
+          "isBreakfastIncluded": false,
+          "isRefundable": false,
           "minimalPrice": Object {
             "amount": 18262.25,
             "currency": "CZK",
@@ -176,6 +198,8 @@ Object {
               "currency": "CZK",
             },
           ],
+          "isBreakfastIncluded": true,
+          "isRefundable": false,
           "minimalPrice": Object {
             "amount": 18493.39,
             "currency": "CZK",
@@ -188,6 +212,8 @@ Object {
               "currency": "CZK",
             },
           ],
+          "isBreakfastIncluded": true,
+          "isRefundable": false,
           "minimalPrice": Object {
             "amount": 19786.22,
             "currency": "CZK",
@@ -200,6 +226,8 @@ Object {
               "currency": "CZK",
             },
           ],
+          "isBreakfastIncluded": true,
+          "isRefundable": false,
           "minimalPrice": Object {
             "amount": 20548.21,
             "currency": "CZK",
@@ -212,6 +240,8 @@ Object {
               "currency": "CZK",
             },
           ],
+          "isBreakfastIncluded": true,
+          "isRefundable": false,
           "minimalPrice": Object {
             "amount": 20870.78,
             "currency": "CZK",
@@ -224,6 +254,8 @@ Object {
               "currency": "CZK",
             },
           ],
+          "isBreakfastIncluded": true,
+          "isRefundable": false,
           "minimalPrice": Object {
             "amount": 20870.78,
             "currency": "CZK",
@@ -236,6 +268,8 @@ Object {
               "currency": "CZK",
             },
           ],
+          "isBreakfastIncluded": true,
+          "isRefundable": false,
           "minimalPrice": Object {
             "amount": 23189.76,
             "currency": "CZK",
@@ -248,6 +282,8 @@ Object {
               "currency": "CZK",
             },
           ],
+          "isBreakfastIncluded": true,
+          "isRefundable": false,
           "minimalPrice": Object {
             "amount": 23189.76,
             "currency": "CZK",
@@ -260,6 +296,8 @@ Object {
               "currency": "CZK",
             },
           ],
+          "isBreakfastIncluded": true,
+          "isRefundable": false,
           "minimalPrice": Object {
             "amount": 25671.29,
             "currency": "CZK",
@@ -272,6 +310,8 @@ Object {
               "currency": "CZK",
             },
           ],
+          "isBreakfastIncluded": true,
+          "isRefundable": false,
           "minimalPrice": Object {
             "amount": 28523.66,
             "currency": "CZK",
@@ -284,6 +324,8 @@ Object {
               "currency": "CZK",
             },
           ],
+          "isBreakfastIncluded": true,
+          "isRefundable": false,
           "minimalPrice": Object {
             "amount": 28574.45,
             "currency": "CZK",
@@ -296,6 +338,8 @@ Object {
               "currency": "CZK",
             },
           ],
+          "isBreakfastIncluded": true,
+          "isRefundable": false,
           "minimalPrice": Object {
             "amount": 31749.39,
             "currency": "CZK",

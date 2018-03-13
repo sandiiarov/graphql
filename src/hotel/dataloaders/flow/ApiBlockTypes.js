@@ -15,6 +15,8 @@ export type Block = {|
   deposit_required: number,
   min_price: RackRate,
   name: string,
+  refundable: boolean,
+  breakfast_included: boolean,
 |};
 
 export type RackRate = {|
