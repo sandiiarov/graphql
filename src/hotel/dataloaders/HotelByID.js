@@ -5,11 +5,11 @@ import stringify from 'json-stable-stringify';
 import { get } from '../services/BookingComRequest';
 import { queryWithParameters } from '../../../config/application';
 import OptimisticDataloader from '../../common/services/OptimisticDataloader';
-import sanitizePhoto from './PhotoSanitizer';
+import sanitizePhotos from './PhotoSanitizer';
+import sanitizeHotelRooms from './HotelRoomsSanitizer';
 
 import type { HotelExtendedType } from './flow/HotelExtendedType';
 import type { HotelFacilityType } from './flow/HotelFacilityType';
-import type { HotelRoomType } from './flow/HotelRoomType';
 import type { HotelByIDType } from './flow/HotelById';
 
 /**
@@ -89,27 +89,5 @@ function sanitizeHotelFacilities(facilities): HotelFacilityType[] {
   return facilities.map(facility => ({
     id: facility.hotel_facility_type_id,
     name: facility.name,
-  }));
-}
-
-function sanitizePhotos(photos) {
-  if (!Array.isArray(photos)) return [];
-  return photos.map(photo => sanitizePhoto(photo));
-}
-
-function sanitizeHotelRooms(rooms: Object, hotelId: number): HotelRoomType[] {
-  return rooms.map(room => ({
-    id: room.room_id,
-    hotelId,
-    type: room.room_info.room_type,
-    maxPersons: room.room_info.max_persons,
-    bedding: null, // not provided by API v2
-    descriptions: [
-      {
-        title: room.room_name,
-        text: room.room_description,
-      },
-    ],
-    photos: sanitizePhotos(room.room_photos),
   }));
 }

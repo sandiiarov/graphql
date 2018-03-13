@@ -5,6 +5,7 @@ import {
   GraphQLString,
   GraphQLInt,
   GraphQLList,
+  GraphQLFloat,
 } from 'graphql';
 import {
   connectionArgs,
@@ -64,6 +65,12 @@ export default new GraphQLObjectType({
       type: GraphQLHotelRoomDescription,
       resolve: ({ descriptions }: HotelRoomType) =>
         descriptions.length > 0 ? descriptions[0] : null,
+    },
+
+    roomSize: {
+      type: GraphQLFloat,
+      description: 'The hotelroom size in square meters',
+      resolve: ({ roomSize }: HotelRoomType) => roomSize,
     },
   },
 });

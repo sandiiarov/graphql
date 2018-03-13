@@ -68,6 +68,7 @@ it('works with full query', async () => {
                   id
                   type
                   maxPersons
+                  roomSize
                   bedding {
                     type
                     amount

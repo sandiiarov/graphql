@@ -16,4 +16,5 @@ export type HotelRoomType = {|
     text: string,
   |}>,
   photos: HotelPhotoType[],
+  roomSize: number,
 |};

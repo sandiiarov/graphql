@@ -78,6 +78,7 @@ describe('all hotels query', () => {
                   room {
                     id
                     type
+                    roomSize
                   }
                 }
                 hotel {
