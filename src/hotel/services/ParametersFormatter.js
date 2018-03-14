@@ -12,7 +12,7 @@ import type { RoomsConfiguration } from '../dataloaders/flow/RoomsConfiguration'
 export const processInputArguments = (args: Object) => {
   const { search: searchArgs, filter: filterArgs, options } = args;
 
-  let searchParams: Object = {
+  const searchParams: Object = {
     checkin: searchArgs.checkin,
     checkout: searchArgs.checkout,
     currency: options && options.currency,
@@ -153,7 +153,7 @@ export function formatRoomsConfigurationForAPI(
 }
 
 export function prepareAvailableHotelsQueryArgs(hotelId: string, args: Object) {
-  let queryArgs: Object = {
+  const queryArgs: Object = {
     hotelId,
     checkin: args.search.checkin,
     checkout: args.search.checkout,
