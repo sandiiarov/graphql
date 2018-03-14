@@ -2,7 +2,7 @@
 
 import stringify from 'json-stable-stringify';
 
-let mockResponses = {};
+const mockResponses = {};
 
 module.exports = () => ({
   initIndex: () => ({
