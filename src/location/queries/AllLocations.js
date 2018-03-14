@@ -3,15 +3,13 @@
 import { GraphQLString } from 'graphql';
 import { connectionArgs, connectionFromArray } from 'graphql-relay';
 
-import type { GraphQLResolveInfo } from 'graphql';
-
 import GraphQLRadius from '../types/inputs/RadiusInput';
 import GraphQLArea from '../types/inputs/AreaInput';
 import LocationsOptionsInput from '../types/inputs/LocationsOptions';
 import GraphQLLocationConnection from '../types/outputs/LocationConnection';
+import { getLocations } from './AllLocationsResolver';
 
 import type { GraphqlContextType } from '../../common/services/GraphqlContext';
-import type { Rectangle } from '../Location';
 
 export default {
   type: GraphQLLocationConnection,
@@ -32,6 +30,11 @@ export default {
       type: GraphQLArea,
       description: 'Search location by area.',
     },
+    slugRadius: {
+      type: GraphQLString,
+      description:
+        'Combination of slug and radius. e.g. bratislava-slovakia-169km',
+    },
     options: {
       type: LocationsOptionsInput,
     },
@@ -41,48 +44,9 @@ export default {
     ancestor: mixed,
     args: Object,
     context: GraphqlContextType,
-    { path }: GraphQLResolveInfo,
   ) => {
-    if (path) {
-      context.options.setOptions(path.key, args.options);
-    }
+    const locations = await getLocations(ancestor, args, context);
 
-    let response;
-    if (args.search) {
-      response = await context.dataLoader.locationSuggestions.loadByKey(
-        args.search,
-        args.options,
-      );
-    } else if (args.radius) {
-      response = await context.dataLoader.locationSuggestions.loadByRadius(
-        args.radius,
-        args.options,
-      );
-    } else if (args.area) {
-      validateArea(args.area);
-      response = await context.dataLoader.locationSuggestions.loadByArea(
-        args.area,
-        args.options,
-      );
-    } else {
-      response = await context.dataLoader.locationSuggestions.load(
-        args.options,
-      );
-    }
-
-    return connectionFromArray(response, args);
+    return connectionFromArray(locations, args);
   },
 };
-
-function validateArea({ topLeft, bottomRight }: Rectangle) {
-  if (topLeft.lat <= bottomRight.lat) {
-    throw new Error(
-      `Top left latitude of the area should be greater than bottom right latitude.`,
-    );
-  }
-  if (topLeft.lng >= bottomRight.lng) {
-    throw new Error(
-      `Top left longitude of the area should be lower than bottom right longitude.`,
-    );
-  }
-}

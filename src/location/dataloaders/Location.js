@@ -55,4 +55,16 @@ export default class LocationDataLoader {
     });
     return processResponse(locations)[0];
   }
+
+  async loadBySlug(slug: string): Promise<Location> {
+    try {
+      const locations = await this.dataLoader.load({
+        type: 'slug',
+        term: slug,
+      });
+      return processResponse(locations)[0];
+    } catch (e) {
+      throw new Error(`Location not found. Slug: ${slug}`);
+    }
+  }
 }
