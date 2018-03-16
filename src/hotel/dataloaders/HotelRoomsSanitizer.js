@@ -17,6 +17,8 @@ export default (rooms: Object, hotelId: number): HotelRoomType[] => {
       },
     ],
     photos: sanitizePhotos(room.room_photos),
-    roomSize: room.room_info.room_size.metre_square,
+    // Some hotels return metre_square: 0, we change this to null instead
+    // so we can handle this as an error on frontend.
+    roomSize: room.room_info.room_size.metre_square || null,
   }));
 };
