@@ -18,35 +18,35 @@ export default class LocationDataLoader {
   dataLoader: DataLoader<SearchInput, HotelCity[]>;
 
   constructor() {
+    this.dataLoader = new DataLoader(this.batchLoadCities, {
+      cacheKeyFn: key => stringify(key),
+    });
+  }
+
+  async batchLoadCities(inputs: $ReadOnlyArray<SearchInput>) {
     const algolia = Algolia(
       process.env.ALGOLIA_APP_ID,
       process.env.ALGOLIA_API_KEY,
     );
     const citiesIndex = algolia.initIndex('cities');
 
-    this.dataLoader = new DataLoader(
-      async (inputs: $ReadOnlyArray<SearchInput>) => {
-        const responses = await Promise.all(
-          inputs.map(input => {
-            if (input.type === 'prefix')
-              return citiesIndex.search(input.prefix);
-            if (input.type === 'latLng') {
-              return citiesIndex.search({
-                aroundLatLng: `${input.lat}, ${input.lng}`,
-              });
-            }
-          }),
-        );
-
-        return responses.map(response => {
-          const cities = idx(response, _ => _.hits) || [];
-          return sanitizeHotelCities(cities);
-        });
-      },
-      {
-        cacheKeyFn: key => stringify(key),
-      },
+    const responses = await Promise.all(
+      inputs.map(input => {
+        if (input.type === 'prefix') {
+          return citiesIndex.search(input.prefix);
+        }
+        if (input.type === 'latLng') {
+          return citiesIndex.search({
+            aroundLatLng: `${input.lat}, ${input.lng}`,
+          });
+        }
+      }),
     );
+
+    return responses.map(response => {
+      const cities = idx(response, _ => _.hits) || [];
+      return sanitizeHotelCities(cities);
+    });
   }
 
   loadByPrefix(prefix: string): Promise<HotelCity[]> {
