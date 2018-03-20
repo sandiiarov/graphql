@@ -10,4 +10,7 @@ export type HotelRoomAvailabilityType = {|
   incrementalPrice: Price[],
   isRefundable: boolean,
   isBreakfastIncluded: boolean,
+  args: {
+    language: string,
+  },
 |};

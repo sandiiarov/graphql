@@ -29,8 +29,10 @@ export default new OptimisticDataloader(
     const hotels = hotelIds.map(id => {
       const hotelData = response.result.find(h => h.hotel_id == id);
 
-      if (!hotelData) return new Error('Requested hotel does not exist.');
-      return sanitizeHotel(hotelData);
+      if (!hotelData) {
+        return new Error('Requested hotel does not exist.');
+      }
+      return sanitizeHotel(hotelData, language);
     });
 
     return hotels;
@@ -52,7 +54,7 @@ function createUrl(hotelIds: $ReadOnlyArray<number>, language: ?string) {
   );
 }
 
-function sanitizeHotel(hotelData): HotelExtendedType {
+function sanitizeHotel(hotelData, language: ?string): HotelExtendedType {
   const { hotel_data: hotel, hotel_id, room_data: rooms } = hotelData;
   return {
     id: hotel_id,
@@ -81,6 +83,9 @@ function sanitizeHotel(hotelData): HotelExtendedType {
       latitude: hotel.location.latitude,
     },
     rooms: sanitizeHotelRooms(rooms, hotel_id),
+    args: {
+      language,
+    },
   };
 }
 

@@ -74,5 +74,8 @@ function sanitizeHotels(hotels, searchParameters): HotelType[] {
       city: hotel.city,
       zip: hotel.postcode,
     },
+    args: {
+      language: searchParameters.language,
+    },
   }));
 }

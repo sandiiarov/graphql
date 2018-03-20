@@ -61,6 +61,7 @@ export default new GraphQLObjectType({
         const room = await dataLoader.hotel.room.load(
           ancestor.hotelId,
           ancestor.roomId,
+          ancestor.args.language,
         );
         return room || null;
       },
