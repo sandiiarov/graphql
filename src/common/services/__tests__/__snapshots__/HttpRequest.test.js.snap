@@ -3,6 +3,9 @@
 exports[`GET request in production resolves URL with token 1`] = `
 Object {
   "options": Object {
+    "headers": Object {
+      "User-Agent": "graphql",
+    },
     "method": "GET",
   },
   "url": "https://path/to/api?token=t%2Fok%22en",
@@ -12,6 +15,9 @@ Object {
 exports[`GET request in production resolves URL without token 1`] = `
 Object {
   "options": Object {
+    "headers": Object {
+      "User-Agent": "graphql",
+    },
     "method": "GET",
   },
   "url": "https://path/to/api",
@@ -24,6 +30,7 @@ Object {
     "body": "{}",
     "headers": Object {
       "Content-Type": "application/json",
+      "User-Agent": "graphql",
     },
     "method": "POST",
   },
@@ -37,6 +44,7 @@ Object {
     "body": "{\\"email\\":\\"john@example.com\\",\\"password\\":123456}",
     "headers": Object {
       "Content-Type": "application/json",
+      "User-Agent": "graphql",
     },
     "method": "POST",
   },
@@ -50,6 +58,7 @@ Object {
     "body": "{}",
     "headers": Object {
       "Content-Type": "application/soap+xml",
+      "User-Agent": "graphql",
     },
     "method": "POST",
   },
@@ -63,6 +72,7 @@ Object {
     "body": "{}",
     "headers": Object {
       "Content-Type": "application/soap+xml",
+      "User-Agent": "graphql",
       "X-Custom-A": "Value A",
       "X-Custom-B": "Value B",
     },
