@@ -49,6 +49,11 @@ describe('GET request in production', () => {
       );
     }
   });
+
+  it('contains proper user agent header', async () => {
+    const resp = await get('https://path/to/api');
+    expect(resp.options.headers['User-Agent']).toEqual('graphql');
+  });
 });
 
 describe('POST request', () => {
@@ -113,5 +118,10 @@ describe('POST request in production', () => {
         password: 123456,
       }),
     ).toMatchSnapshot();
+  });
+
+  it('contains proper user agent header', async () => {
+    const resp = await get('https://path/to/api');
+    expect(resp.options.headers['User-Agent']).toEqual('graphql');
   });
 });

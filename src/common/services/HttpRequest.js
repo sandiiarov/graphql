@@ -14,8 +14,11 @@ export async function get(
     }
     urlObject.query.token = token;
   }
+  const headers = {
+    'User-Agent': 'graphql',
+  };
 
-  return fetchJson(url.format(urlObject));
+  return fetchJson(url.format(urlObject), 'GET', { headers });
 }
 
 export async function post(
@@ -26,6 +29,7 @@ export async function post(
   const body = JSON.stringify(payload);
   const headers = {
     'Content-Type': 'application/json',
+    'User-Agent': 'graphql',
     ...requestHeaders,
   };
 
