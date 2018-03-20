@@ -1,6 +1,6 @@
 // @flow
 
 export type RoomBeddingType = {|
-  amount: string,
+  amount: number,
   type: string,
 |};

@@ -1,6 +1,6 @@
 // @flow
 
-import _ from 'lodash';
+import idx from 'idx';
 import { DateTime } from 'luxon';
 
 import type { DepartureArrival } from '../Flight';
@@ -9,8 +9,8 @@ export default function getFlightDurationInMinutes(
   departure: DepartureArrival,
   arrival: DepartureArrival,
 ): ?number {
-  const departureTime = _.get(departure, 'when.utc');
-  const arrivalTime = _.get(arrival, 'when.utc');
+  const departureTime = idx(departure, _ => _.when.utc);
+  const arrivalTime = idx(arrival, _ => _.when.utc);
   return getDurationInMinutes(departureTime, arrivalTime);
 }
 

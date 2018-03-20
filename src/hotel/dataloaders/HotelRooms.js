@@ -1,7 +1,7 @@
 // @flow
 
 import Dataloader from 'dataloader';
-import _ from 'lodash';
+import idx from 'idx';
 
 import { get } from '../services/BookingComRequest';
 import { queryWithParameters } from '../../../config/application';
@@ -66,7 +66,7 @@ export default class HotelRoomBlocksDataloader {
     return urlParameters.map((p, pIndex) => {
       const hotelIds = p.hotel_ids.split(',').map(id => Number(id));
       const hotelRooms = hotelIds.map(hotelId => {
-        const results = _.get(responses[pIndex], 'result', []);
+        const results = idx(responses[pIndex], _ => _.result) || [];
         const rooms = results.find(r => r.hotel_id === hotelId);
         if (!rooms) {
           return [];

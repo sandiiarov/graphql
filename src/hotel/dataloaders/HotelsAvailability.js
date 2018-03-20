@@ -1,6 +1,5 @@
 // @flow
 
-import _ from 'lodash';
 import DataLoader from 'dataloader';
 
 import { get } from '../services/BookingComRequest';
@@ -65,11 +64,7 @@ function sanitizeHotels(hotels, searchParameters): HotelType[] {
     id: hotel.hotel_id,
     name: hotel.hotel_name,
     rating: Math.round(hotel.stars),
-    currencyCode: _.get(
-      searchParameters,
-      'currency',
-      hotel.hotel_currency_code,
-    ),
+    currencyCode: searchParameters.currency || hotel.hotel_currency_code,
     price: hotel.price,
     whitelabelUrl: hotel.url,
     cityName: hotel.city,

@@ -3,20 +3,6 @@
 import type { Flight, Leg } from '../Flight';
 import { sanitizeRoute } from './RouteSanitizer';
 
-const arrivalPropsMap = {
-  utc: 'aTimeUTC',
-  local: 'aTime',
-  code: 'flyTo',
-  cityName: 'cityTo',
-};
-
-const departurePropsMap = {
-  utc: 'dTimeUTC',
-  local: 'dTime',
-  code: 'flyFrom',
-  cityName: 'cityFrom',
-};
-
 export function sanitizeApiResponse(
   flight: Object,
   currency: string,
@@ -25,14 +11,34 @@ export function sanitizeApiResponse(
   return {
     id: flight.id,
     airlines: flight.airlines,
-    arrival: sanitizeRoute(flight, arrivalPropsMap),
-    departure: sanitizeRoute(flight, departurePropsMap),
+    arrival: sanitizeRoute({
+      utc: flight.aTimeUTC,
+      local: flight.aTime,
+      code: flight.flyTo,
+      cityName: flight.cityTo,
+    }),
+    departure: sanitizeRoute({
+      utc: flight.dTimeUTC,
+      local: flight.dTime,
+      code: flight.flyFrom,
+      cityName: flight.cityFrom,
+    }),
     legs: flight.route.map((leg): Leg => ({
       id: leg.id,
       recheckRequired: leg.bags_recheck_required,
       flightNo: leg.flight_no,
-      departure: sanitizeRoute(leg, departurePropsMap),
-      arrival: sanitizeRoute(leg, arrivalPropsMap),
+      departure: sanitizeRoute({
+        utc: leg.dTimeUTC,
+        local: leg.dTime,
+        code: leg.flyFrom,
+        cityName: leg.cityFrom,
+      }),
+      arrival: sanitizeRoute({
+        utc: leg.aTimeUTC,
+        local: leg.aTime,
+        code: leg.flyTo,
+        cityName: leg.cityTo,
+      }),
       airlineCode: leg.airline,
     })),
     price: {
