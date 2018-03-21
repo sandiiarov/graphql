@@ -1,29 +1,26 @@
 // @flow
 
-import _ from 'lodash';
 import type { DepartureArrival } from '../Flight';
 
-type propsMap = {
-  utc: string,
-  local: string,
-  code: string,
-  cityName: string,
-};
+export function sanitizeRoute(data: {|
+  utc: ?number,
+  local: ?number,
+  code: ?string,
+  cityName: ?string,
+|}): DepartureArrival {
+  let whenObject = null;
+  if (data.utc && data.local) {
+    whenObject = {
+      utc: new Date(data.utc * 1000),
+      local: new Date(data.local * 1000),
+    };
+  }
 
-export function sanitizeRoute(
-  data: Object,
-  propsMap: propsMap,
-): DepartureArrival {
-  const utc = _.get(data, propsMap.utc);
-  const local = _.get(data, propsMap.local);
   return {
-    when: {
-      utc: new Date(utc * 1000),
-      local: new Date(local * 1000),
-    },
+    when: whenObject,
     where: {
-      code: _.get(data, propsMap.code),
-      cityName: _.get(data, propsMap.cityName),
+      code: data.code || '',
+      cityName: data.cityName || '',
     },
   };
 }

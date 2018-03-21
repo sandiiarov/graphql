@@ -1,6 +1,6 @@
 // @flow
 
-import _ from 'lodash';
+import idx from 'idx';
 
 import type { LocationArea, Location } from '../Location';
 
@@ -11,8 +11,8 @@ export function sanitizeApiResponse(location: Object): Location {
     slug: location.slug,
     timezone: location.timezone,
     location: {
-      lat: _.get(location, 'location.lat', null),
-      lng: _.get(location, 'location.lon', null),
+      lat: idx(location, _ => _.location.lat) || 0,
+      lng: idx(location, _ => _.location.lon) || 0,
     },
     type: location.type,
     city: sanitizeLocationArea(location.city),

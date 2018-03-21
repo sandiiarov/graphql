@@ -1,6 +1,6 @@
 // @flow
 
-import _ from 'lodash';
+import idx from 'idx';
 import { get } from '../services/BookingComRequest';
 import OptimisticDataloader from '../../common/services/OptimisticDataloader';
 
@@ -20,7 +20,7 @@ type input = {
 export default new OptimisticDataloader(
   async (
     inputs: $ReadOnlyArray<input>,
-  ): Promise<Array<RoomBeddingType | Error>> => {
+  ): Promise<Array<RoomBeddingType[] | Error>> => {
     const hotelIds = Array.from(new Set(inputs.map(i => i.hotelId))).join(',');
     const response = await get(
       `https://distribution-xml.booking.com/json/bookings.getRooms?hotel_ids=${hotelIds}`,
@@ -30,8 +30,11 @@ export default new OptimisticDataloader(
       const room = response.find(
         r => r.hotel_id == hotelId && r.room_id == roomId,
       );
-      if (!room) return new Error('Requested room does not exist.');
-      return _.get(room, 'bedding.beds', []).map(b => ({
+      if (!room) {
+        return new Error('Requested room does not exist.');
+      }
+      const beds = idx(room, _ => _.bedding.beds) || [];
+      return beds.map(b => ({
         amount: Number(b.amount),
         type: b.type,
       }));

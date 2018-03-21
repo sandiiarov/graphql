@@ -1,16 +1,10 @@
 // @flow
 
-import { sanitizeRoute } from '../../flight/dataloaders/RouteSanitizer';
+import idx from 'idx';
 
+import { sanitizeRoute } from '../../flight/dataloaders/RouteSanitizer';
 import type { BookingsItem, Booking } from '../Booking';
 import type { Leg } from '../../flight/Flight';
-
-const routePropsMap = {
-  utc: 'when.utc',
-  local: 'when.local',
-  code: 'where.code',
-  cityName: 'where.name',
-};
 
 /**
  * Implementation details (weirdnesses) explained:
@@ -25,14 +19,34 @@ export function sanitizeListItem(apiData: Object): BookingsItem {
 
   return {
     id: parseInt(apiData.bid),
-    arrival: sanitizeRoute(lastLeg.arrival, routePropsMap),
-    departure: sanitizeRoute(firstLeg.departure, routePropsMap),
+    arrival: sanitizeRoute({
+      utc: idx(lastLeg.arrival, _ => _.when.utc),
+      local: idx(lastLeg.arrival, _ => _.when.local),
+      code: idx(lastLeg.arrival, _ => _.where.code),
+      cityName: idx(lastLeg.arrival, _ => _.where.name),
+    }),
+    departure: sanitizeRoute({
+      utc: idx(firstLeg.departure, _ => _.when.utc),
+      local: idx(firstLeg.departure, _ => _.when.local),
+      code: idx(firstLeg.departure, _ => _.where.code),
+      cityName: idx(firstLeg.departure, _ => _.where.name),
+    }),
     legs: legs.map((flight): Leg => ({
       id: flight.id,
       recheckRequired: flight.bags_recheck_required,
       flightNo: flight.flight_no,
-      departure: sanitizeRoute(flight.departure, routePropsMap),
-      arrival: sanitizeRoute(flight.arrival, routePropsMap),
+      departure: sanitizeRoute({
+        utc: idx(flight.departure, _ => _.when.utc),
+        local: idx(flight.departure, _ => _.when.local),
+        code: idx(flight.departure, _ => _.where.code),
+        cityName: idx(flight.departure, _ => _.where.name),
+      }),
+      arrival: sanitizeRoute({
+        utc: idx(flight.arrival, _ => _.when.utc),
+        local: idx(flight.arrival, _ => _.when.local),
+        code: idx(flight.arrival, _ => _.where.code),
+        cityName: idx(flight.arrival, _ => _.where.name),
+      }),
       airlineCode: flight.airline.iata,
     })),
     price: {

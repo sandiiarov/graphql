@@ -9,7 +9,7 @@ import {
 
 import type { GraphQLResolveInfo } from 'graphql';
 
-import _ from 'lodash';
+import idx from 'idx';
 import GraphQLFlight from '../types/outputs/Flight';
 import FlightsSearchInput from '../types/inputs/FlightsSearchInput';
 import FlightsOptionsInput from '../types/inputs/FlightsOptionsInput';
@@ -51,9 +51,10 @@ export default {
       context.options.setOptions(path.key, args.options);
     }
 
-    const currency = _.get(args, 'options.currency');
-    const locale = _.get(args, 'options.locale');
-    const adults = _.get(args, 'search.passengers.adults');
+    const currency = idx(args, _ => _.options.currency);
+    const locale = idx(args, _ => _.options.locale);
+    const adults = idx(args, _ => _.search.passengers.adults);
+    const maxStopovers = idx(args, _ => _.filters.maxStopovers);
 
     const allFlights = await context.dataLoader.flight.load({
       from,
@@ -69,12 +70,15 @@ export default {
       adults: adults ? adults : null,
       locale: locale ? locale : null,
       filters: {
-        maxStopovers: _.get(args, 'filters.maxStopovers'),
+        maxStopovers: Number.isInteger(maxStopovers)
+          ? Number(maxStopovers)
+          : null,
         duration: {
-          maxFlightDuration: _.get(args, 'filters.duration.maxFlightDuration'),
+          maxFlightDuration:
+            idx(args, _ => _.filters.duration.maxFlightDuration) || null,
           stopovers: {
-            from: _.get(args, 'filters.duration.stopovers.from'),
-            to: _.get(args, 'filters.duration.stopovers.to'),
+            from: idx(args, _ => _.filters.duration.stopovers.from),
+            to: idx(args, _ => _.filters.duration.stopovers.to),
           },
         },
       },
