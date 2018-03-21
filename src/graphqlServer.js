@@ -34,7 +34,7 @@ app.use('/', (request: $Request, response: $Response) => {
 
   const token = request.header('authorization') || null;
   const context = createContext(token);
-  if (process.env.NODE_ENV !== 'test') {
+  if (process.env.NODE_ENV !== 'test' && !process.env.IS_LAMBDA) {
     const traceCollector = new TraceCollector();
     traceCollector.requestDidStart();
     context._traceCollector = traceCollector;
@@ -67,8 +67,7 @@ function createGraphqlServer(schema, context) {
     },
     extensions: () => {
       const traceCollector = context._traceCollector;
-      if (true || !traceCollector) return {}; // eslint-disable-line no-constant-condition
-      // Quick hack, remove 'true ||' once we can handle huge tracing output
+      if (!traceCollector) return {};
       traceCollector.requestDidEnd();
       return {
         tracing: formatTraceData(traceCollector),

@@ -18,6 +18,7 @@ module.exports = () => ({
   plugins: [
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('production'),
+      'process.env.IS_LAMBDA': JSON.stringify('true'),
     }),
     new webpack.optimize.ModuleConcatenationPlugin(),
   ],
