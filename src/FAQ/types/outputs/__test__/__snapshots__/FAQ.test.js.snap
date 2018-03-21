@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`allFAQs type should have valid fields 1`] = `
+Object {
+  "results": Object {
+    "args": Array [],
+    "description": "Results of allFAQs search",
+    "isDeprecated": false,
+    "name": "results",
+    "resolve": [Function],
+    "type": "Results",
+  },
+}
+`;

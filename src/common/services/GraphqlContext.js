@@ -6,6 +6,7 @@ import IdentityDataloader from '../../identity/dataloaders/Identity';
 import createBookingLoader from '../../booking/dataloaders/Booking';
 import createAirlineLoader from '../../flight/dataloaders/Airline';
 import createRatesLoader from '../dataloaders/Rates';
+import createFAQLoader from '../../FAQ/dataloaders/FAQ';
 import BookingsLoader from '../../booking/dataloaders/Bookings';
 import LocationSuggestionsLoader from '../../location/dataloaders/LocationSuggestions';
 import LocationLoader from '../../location/dataloaders/Location';
@@ -25,6 +26,8 @@ import type { Booking } from '../../booking/Booking';
 import type { Airline } from '../../flight/Flight';
 import type { HotelType } from '../../hotel/dataloaders/flow/HotelType';
 import type { City } from '../../hotel/dataloaders/flow/City';
+import type { Args as FAQArgs } from '../../FAQ/dataloaders/FAQ';
+import type { FAQType } from '../../FAQ/types/outputs/FAQ';
 
 /**
  * FIXME:
@@ -57,6 +60,7 @@ export type GraphqlContextType = {|
         number,
       >,
     },
+    FAQ: DataLoader<FAQArgs, FAQType[]>,
   |},
   options: OptionsStorage,
   _traceCollector?: Object,
@@ -90,6 +94,7 @@ export function createContext(token: ?string): GraphqlContextType {
         roomBedding: HotelRoomBeddingLoader,
         priceStats: PriceStatsLoader,
       },
+      FAQ: createFAQLoader(),
     },
     options: new OptionsStorage(),
   };
