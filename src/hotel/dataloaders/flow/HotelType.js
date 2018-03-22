@@ -18,6 +18,6 @@ export type HotelType = {|
   address: Address,
   summary: string,
   args?: {
-    language?: string,
+    language?: ?string,
   },
 |};

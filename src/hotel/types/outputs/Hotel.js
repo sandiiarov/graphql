@@ -7,6 +7,7 @@ import {
   connectionFromArray,
 } from 'graphql-relay';
 import distance from 'gps-distance';
+import idx from 'idx';
 
 import { globalIdField } from '../../../common/services/OpaqueIdentifier';
 import GraphQLHotelFacility from './HotelFacility';
@@ -77,6 +78,7 @@ export default new GraphQLObjectType({
       ) => {
         const { location } = await dataLoader.hotel.byID.load({
           hotelId: ancestor.id,
+          language: idx(ancestor, _ => _.args.language),
         });
         return {
           lat: location.latitude,
@@ -120,12 +122,13 @@ export default new GraphQLObjectType({
       }).connectionType,
       args: connectionArgs,
       resolve: async (
-        { id }: HotelExtendedType,
+        ancestor: HotelExtendedType,
         args: Object,
         { dataLoader }: GraphqlContextType,
       ) => {
         const { facilities } = await dataLoader.hotel.byID.load({
-          hotelId: id,
+          hotelId: ancestor.id,
+          language: idx(ancestor, _ => _.args.language),
         });
         return connectionFromArray(facilities, args);
       },
@@ -157,12 +160,13 @@ export default new GraphQLObjectType({
       description: 'Hotel distance from the center in Km.',
       type: GraphQLFloat,
       resolve: async (
-        { id }: HotelExtendedType,
+        ancestor: HotelExtendedType,
         args: Object,
         { dataLoader }: GraphqlContextType,
       ) => {
         const { location, cityId } = await dataLoader.hotel.byID.load({
-          hotelId: id,
+          hotelId: ancestor.id,
+          language: idx(ancestor, _ => _.args.language),
         });
         const city = await dataLoader.city.load(cityId);
         if (location && city && city.location) {

@@ -11,6 +11,7 @@ import type { HotelRoomType } from './flow/HotelRoomType';
 
 type UrlParameters = {|
   hotel_ids: string,
+  language: string,
 |};
 
 /**
@@ -34,17 +35,25 @@ export default class HotelRoomBlocksDataloader {
   /**
    * This method will load one specific room in one hotel.
    */
-  async load(hotelId: string, roomId: string): Promise<HotelRoomType | null> {
-    const rooms = await this.loadAll([hotelId]);
+  async load(
+    hotelId: string,
+    roomId: string,
+    language: string,
+  ): Promise<HotelRoomType | null> {
+    const rooms = await this.loadAll([hotelId], language);
     return rooms.find(room => room.id === roomId) || null;
   }
 
   /**
    * This method will load all rooms in the hotels.
    */
-  async loadAll(hotelIds: string[]): Promise<HotelRoomType[]> {
+  async loadAll(
+    hotelIds: string[],
+    language: string,
+  ): Promise<HotelRoomType[]> {
     return this.dataLoader.load({
       hotel_ids: hotelIds.join(','),
+      language,
     });
   }
 

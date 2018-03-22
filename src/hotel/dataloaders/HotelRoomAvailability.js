@@ -14,6 +14,7 @@ type UrlParameters = {|
   checkin: string,
   checkout: string,
   hotel_ids: string,
+  language: string,
 |};
 
 /**
@@ -42,6 +43,7 @@ export default class HotelRoomAvailabilityLoader {
     arrivalDate: Date,
     departureDate: Date,
     currency: string,
+    language: string,
   ): Promise<HotelRoomAvailabilityType[]> {
     const availableRooms = await this.dataLoader.load({
       checkin: DateTime.fromJSDate(arrivalDate, {
@@ -52,6 +54,7 @@ export default class HotelRoomAvailabilityLoader {
       }).toISODate(),
       hotel_ids: hotelIds.join(','),
       currency,
+      language,
     });
 
     // flatten all room blocks
@@ -72,10 +75,11 @@ export default class HotelRoomAvailabilityLoader {
       ),
     );
 
+    const language = idx(urlParameters, _ => _[0].language) || '';
     return roomBlocks.map(roomBlock =>
       roomBlock.result.map(room => {
         return room.block.map(block =>
-          this.sanitizeHotelRoomAvailability(block, room.hotel_id),
+          this.sanitizeHotelRoomAvailability(block, room.hotel_id, language),
         );
       }),
     );
@@ -84,6 +88,7 @@ export default class HotelRoomAvailabilityLoader {
   sanitizeHotelRoomAvailability(
     block: Block,
     hotelId: string,
+    language: string,
   ): HotelRoomAvailabilityType {
     return {
       id: block.block_id,
@@ -104,6 +109,9 @@ export default class HotelRoomAvailabilityLoader {
       })),
       isRefundable: block.refundable,
       isBreakfastIncluded: block.breakfast_included,
+      args: {
+        language,
+      },
     };
   }
 }
