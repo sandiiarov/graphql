@@ -21,13 +21,12 @@ import type { Location } from '../Location';
 export async function batchGetLocations(
   urlParameters: $ReadOnlyArray<Object>,
 ): Promise<Array<Location[]>> {
-  const promisesStack = [];
+  const responseArray = await Promise.all(
+    urlParameters.map(parameters =>
+      get(config.restApiEndpoint.allLocations(parameters)),
+    ),
+  );
 
-  urlParameters.forEach(parameters => {
-    promisesStack.push(get(config.restApiEndpoint.allLocations(parameters)));
-  });
-
-  const responseArray = await Promise.all(promisesStack);
   return responseArray.map(response => {
     return response.locations.map((location): Location =>
       sanitizeApiResponse(location),
