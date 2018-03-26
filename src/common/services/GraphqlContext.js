@@ -6,7 +6,9 @@ import IdentityDataloader from '../../identity/dataloaders/Identity';
 import createBookingLoader from '../../booking/dataloaders/Booking';
 import createAirlineLoader from '../../flight/dataloaders/Airline';
 import createRatesLoader from '../dataloaders/Rates';
-import createFAQLoader from '../../FAQ/dataloaders/FAQ';
+import createFAQLoader from '../../FAQ/dataloaders/searchFAQ';
+import createFAQCategoryLoader from '../../FAQ/dataloaders/getFAQCategory';
+import createFAQArticleLoader from '../../FAQ/dataloaders/getFAQArticle';
 import BookingsLoader from '../../booking/dataloaders/Bookings';
 import LocationSuggestionsLoader from '../../location/dataloaders/LocationSuggestions';
 import LocationLoader from '../../location/dataloaders/Location';
@@ -26,8 +28,12 @@ import type { Booking } from '../../booking/Booking';
 import type { Airline } from '../../flight/Flight';
 import type { HotelType } from '../../hotel/dataloaders/flow/HotelType';
 import type { City } from '../../hotel/dataloaders/flow/City';
-import type { Args as FAQArgs } from '../../FAQ/dataloaders/FAQ';
+import type { Args as FAQArgs } from '../../FAQ/dataloaders/searchFAQ';
 import type { FAQType } from '../../FAQ/types/outputs/FAQ';
+import type { Args as FAQCategoryArgs } from '../../FAQ/dataloaders/getFAQCategory';
+import type { FAQCategoryType } from '../../FAQ/types/outputs/FAQCategory';
+import type { Args as FAQCArticleArgs } from '../../FAQ/dataloaders/getFAQArticle';
+import type { FAQArticleDetail } from '../../FAQ/types/FAQArticle';
 
 /**
  * FIXME:
@@ -61,6 +67,8 @@ export type GraphqlContextType = {|
       >,
     },
     FAQ: DataLoader<FAQArgs, FAQType[]>,
+    FAQCategories: DataLoader<FAQCategoryArgs, FAQCategoryType[]>,
+    FAQArticle: DataLoader<FAQCArticleArgs, FAQArticleDetail>,
   |},
   options: OptionsStorage,
   _traceCollector?: Object,
@@ -95,6 +103,8 @@ export function createContext(token: ?string): GraphqlContextType {
         priceStats: PriceStatsLoader,
       },
       FAQ: createFAQLoader(),
+      FAQCategories: createFAQCategoryLoader(),
+      FAQArticle: createFAQArticleLoader(),
     },
     options: new OptionsStorage(),
   };

@@ -32,6 +32,14 @@ export default {
         'https://api.skypicker.com/knowledgebase/api/v1/search',
         queryParameters,
       ),
+    allFAQCategories: (faqCategoryId: ?number) => {
+      const categoryId = faqCategoryId ? `/${faqCategoryId}` : '';
+
+      return `https://api.skypicker.com/knowledgebase/api/v1/categories${categoryId}`;
+    },
+    FAQArticle: (faqArticleId: string) => {
+      return `https://api.skypicker.com/knowledgebase/api/v1/articles/${faqArticleId}`;
+    },
   },
   auth: {
     basicToken: String(process.env.AUTH_BASIC_TOKEN),

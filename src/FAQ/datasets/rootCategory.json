@@ -1,0 +1,12 @@
+[
+  {
+    "tree_id": 1,
+    "title": "menu",
+    "url": "https://api.skypicker.com/knowledgebase/api/v1/categories/1"
+  },
+  {
+    "tree_id": 2,
+    "title": "related",
+    "url": "https://api.skypicker.com/knowledgebase/api/v1/categories/2"
+  }
+]

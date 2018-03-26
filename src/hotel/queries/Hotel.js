@@ -4,7 +4,7 @@ import { GraphQLID, GraphQLNonNull } from 'graphql';
 import { fromGlobalId } from 'graphql-relay';
 
 import GraphQLHotel from '../types/outputs/Hotel';
-import LanguageInput from '../types/inputs/LanguageInput';
+import LanguageInput from '../../common/types/inputs/LanguageInput';
 
 import type { GraphqlContextType } from '../../common/services/GraphqlContext';
 
