@@ -8,7 +8,7 @@ import {
 } from 'graphql-relay';
 
 import GraphQLFAQ from '../types/outputs/FAQ';
-import LanguageInput from '../../hotel/types/inputs/LanguageInput';
+import LanguageInput from '../../common/types/inputs/LanguageInput';
 
 import type { GraphqlContextType } from '../../common/services/GraphqlContext';
 

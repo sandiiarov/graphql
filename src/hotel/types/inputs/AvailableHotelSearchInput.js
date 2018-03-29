@@ -9,7 +9,7 @@ import {
 import { GraphQLDate } from 'graphql-iso-date';
 
 import HotelRoomsConfiguration from './HotelRoomsConfiguration';
-import LanguageInput from './LanguageInput';
+import LanguageInput from './../../../common/types/inputs/LanguageInput';
 
 export default new GraphQLInputObjectType({
   name: 'AvailableHotelSearchInput',
