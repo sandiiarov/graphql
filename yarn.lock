@@ -2859,9 +2859,9 @@ graphql-iso-date@^3.2.0:
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/graphql-iso-date/-/graphql-iso-date-3.3.0.tgz#cbe434b41e035e806338121b1b2b509a0f72bb80"
 
-graphql-relay@^0.5.2:
-  version "0.5.3"
-  resolved "https://registry.yarnpkg.com/graphql-relay/-/graphql-relay-0.5.3.tgz#56a78ac07c87d89795a34db6b8e9681b827be5b5"
+graphql-relay@^0.5.5:
+  version "0.5.5"
+  resolved "https://registry.yarnpkg.com/graphql-relay/-/graphql-relay-0.5.5.tgz#d6815e6edd618e878d5d921c13fc66033ec867e2"
 
 graphql-subscriptions@^0.5.6:
   version "0.5.6"
