@@ -1,8 +1,9 @@
 // @flow
 
 import { GraphQLString } from 'graphql';
-import { connectionArgs, connectionFromArray } from 'graphql-relay';
+import { connectionArgs } from 'graphql-relay';
 
+import { connectionFromArray } from '../../common/services/ArrayConnection';
 import GraphQLRadius from '../types/inputs/RadiusInput';
 import GraphQLArea from '../types/inputs/AreaInput';
 import LocationsOptionsInput from '../types/inputs/LocationsOptions';
