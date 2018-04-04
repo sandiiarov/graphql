@@ -773,7 +773,44 @@
             ],
             "type": {
               "kind": "OBJECT",
-              "name": "AllFAQCategoriesConnection",
+              "name": "FAQCategoryConnection",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "FAQCategory",
+            "description": "Retrieve specific FAQ category and its subcategories & articles.",
+            "args": [
+              {
+                "name": "id",
+                "description": "ID of FAQ category to retrieve.",
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "SCALAR",
+                    "name": "ID",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "language",
+                "description": "Language in which the titles and perexes of FAQ categories are returned.",
+                "type": {
+                  "kind": "ENUM",
+                  "name": "Language",
+                  "ofType": null
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "OBJECT",
+              "name": "FAQCategory",
               "ofType": null
             },
             "isDeprecated": false,
@@ -6853,7 +6890,7 @@
       },
       {
         "kind": "OBJECT",
-        "name": "AllFAQCategoriesConnection",
+        "name": "FAQCategoryConnection",
         "description": "A connection to a list of items.",
         "fields": [
           {
@@ -6881,7 +6918,7 @@
               "name": null,
               "ofType": {
                 "kind": "OBJECT",
-                "name": "AllFAQCategoriesEdge",
+                "name": "FAQCategoryEdge",
                 "ofType": null
               }
             },
@@ -6896,7 +6933,7 @@
       },
       {
         "kind": "OBJECT",
-        "name": "AllFAQCategoriesEdge",
+        "name": "FAQCategoryEdge",
         "description": "An edge in a connection.",
         "fields": [
           {
@@ -6905,7 +6942,7 @@
             "args": [],
             "type": {
               "kind": "OBJECT",
-              "name": "AllFAQCategories",
+              "name": "FAQCategory",
               "ofType": null
             },
             "isDeprecated": false,
@@ -6935,7 +6972,7 @@
       },
       {
         "kind": "OBJECT",
-        "name": "AllFAQCategories",
+        "name": "FAQCategory",
         "description": null,
         "fields": [
           {
@@ -6975,7 +7012,7 @@
               "name": null,
               "ofType": {
                 "kind": "OBJECT",
-                "name": "AllFAQCategories",
+                "name": "FAQCategory",
                 "ofType": null
               }
             },

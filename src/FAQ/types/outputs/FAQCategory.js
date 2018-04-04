@@ -12,7 +12,7 @@ export type FAQCategoryType = {|
 |};
 
 const FAQCategory = new GraphQLObjectType({
-  name: 'AllFAQCategories',
+  name: 'FAQCategory',
   fields: () => ({
     id: globalIdField('FAQCategory', ({ id }: FAQCategoryType) => String(id)),
     title: {
