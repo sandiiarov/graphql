@@ -1,7 +1,7 @@
 // @flow
 
 import type { DepartureArrival, Leg } from '../flight/Flight';
-import type { Price } from '../common/Price';
+import type { Price } from '../common/types/Price';
 import type { AllowedBaggage } from './Baggage';
 
 /**

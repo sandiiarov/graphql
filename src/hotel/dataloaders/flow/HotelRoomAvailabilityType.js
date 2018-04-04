@@ -1,6 +1,6 @@
 // @flow
 
-import type { Price } from '../../../common/Price';
+import type { Price } from '../../../common/types/Price';
 
 export type HotelRoomAvailabilityType = {|
   id: string,

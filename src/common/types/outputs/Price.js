@@ -2,7 +2,7 @@
 
 import { GraphQLObjectType, GraphQLString, GraphQLFloat } from 'graphql';
 
-import type { Price } from '../../Price';
+import type { Price } from '../Price';
 
 export default new GraphQLObjectType({
   name: 'Price',

@@ -19,7 +19,7 @@ import FlightDurationInMinutes from '../../resolvers/FlightDuration';
 import { buildBookingUrl } from '../../dataloaders/BookingUrlBuilder';
 
 import type { GraphqlContextType } from '../../../common/services/GraphqlContext';
-import type { Price } from '../../../common/Price';
+import type { Price } from '../../../common/types/Price';
 import type { DepartureArrival, Flight, Leg, Airline } from '../../Flight';
 
 export default new GraphQLObjectType({
