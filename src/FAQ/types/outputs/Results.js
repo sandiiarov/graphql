@@ -6,6 +6,7 @@ import {
   GraphQLInt,
   GraphQLList,
 } from 'graphql';
+import { globalIdField } from '../../../common/services/OpaqueIdentifier';
 import type { FAQType } from './FAQ';
 
 export type ItemsType = {|
@@ -76,6 +77,7 @@ export default new GraphQLObjectType({
       description: 'Id of the article',
       resolve: ({ id }: FAQType): number => id,
     },
+    articleId: globalIdField('FAQArticle', ({ id }: FAQType) => String(id)),
     title: {
       type: GraphQLString,
       description: 'Title of the article',
