@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`allFAQCategories should return error for non-existing category 1`] = `
+Object {
+  "data": Object {
+    "FAQCategory": null,
+  },
+  "errors": Array [
+    [GraphQLError: No FAQ category found with ID RkFRQ2F0ZWdvcnk6NjY2],
+  ],
+}
+`;
+
+exports[`allFAQCategories should return single FAQ category 1`] = `
+Object {
+  "data": Object {
+    "FAQCategory": Object {
+      "FAQs": Array [
+        Object {
+          "id": "RkFRQXJ0aWNsZToxMzI=",
+          "title": "How do I Refer a Friend?",
+        },
+        Object {
+          "id": "RkFRQXJ0aWNsZTozOQ==",
+          "title": "How do I know which terminals I will be using?",
+        },
+      ],
+      "id": "RkFRQ2F0ZWdvcnk6NDc=",
+      "subcategories": Array [
+        Object {
+          "id": "RkFRQ2F0ZWdvcnk6Mzc=",
+        },
+        Object {
+          "id": "RkFRQ2F0ZWdvcnk6NDA=",
+        },
+        Object {
+          "id": "RkFRQ2F0ZWdvcnk6MzU=",
+        },
+        Object {
+          "id": "RkFRQ2F0ZWdvcnk6MzY=",
+        },
+        Object {
+          "id": "RkFRQ2F0ZWdvcnk6MjY=",
+        },
+        Object {
+          "id": "RkFRQ2F0ZWdvcnk6MzE=",
+        },
+        Object {
+          "id": "RkFRQ2F0ZWdvcnk6NDI=",
+        },
+      ],
+      "title": "Before the flight",
+    },
+  },
+}
+`;
