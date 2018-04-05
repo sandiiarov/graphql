@@ -4,7 +4,7 @@ import { GraphQLObjectType, GraphQLInt } from 'graphql';
 import GraphQLPrice from '../../../common/types/outputs/Price';
 
 import type { AdditionalBaggageInfo } from '../../Baggage';
-import type { Price } from '../../../common/Price';
+import type { Price } from '../../../common/types/Price';
 
 export default new GraphQLObjectType({
   name: 'AdditionalBaggage',

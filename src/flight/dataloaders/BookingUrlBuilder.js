@@ -2,7 +2,7 @@
 
 import querystring from 'querystring';
 import DataLoader from 'dataloader';
-import type { Price } from '../../common/Price';
+import type { Price } from '../../common/types/Price';
 import LocaleMap from '../../common/types/enums/LocaleMap';
 
 export async function buildBookingUrl(
