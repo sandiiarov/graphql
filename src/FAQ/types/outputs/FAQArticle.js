@@ -1,9 +1,14 @@
 // @flow
 
 import { GraphQLInt, GraphQLString, GraphQLObjectType } from 'graphql';
-import type { GraphqlContextType } from '../../../common/services/GraphqlContext';
-import type { FAQArticleResponse } from './../FAQArticle';
+
 import { globalIdField } from '../../../common/services/OpaqueIdentifier';
+import type { GraphqlContextType } from '../../../common/services/GraphqlContext';
+import type { FAQArticleDetail } from '../../dataloaders/getFAQArticle';
+import type { FAQArticleItem } from '../../dataloaders/getFAQCategory';
+import type { ArticleFromSearch } from '../../dataloaders/searchFAQ';
+
+type FAQArticleResponse = FAQArticleItem | FAQArticleDetail | ArticleFromSearch;
 
 export type FAQArticleType = {|
   id: number,
@@ -17,7 +22,9 @@ export type FAQArticleType = {|
 export default new GraphQLObjectType({
   name: 'FAQArticle',
   fields: {
-    id: globalIdField('FAQArticle', ({ id }: FAQArticleResponse) => id),
+    id: globalIdField('FAQArticle', (response: FAQArticleResponse) =>
+      String(response.id),
+    ),
     title: {
       type: GraphQLString,
       description: 'Title of the article',
@@ -32,13 +39,13 @@ export default new GraphQLObjectType({
       type: GraphQLString,
       description: 'Content of the article',
       resolve: async (
-        { language, id }: FAQArticleResponse,
+        response: FAQArticleResponse,
         args: Object,
         { dataLoader }: GraphqlContextType,
       ): Promise<string> => {
         const article = await dataLoader.FAQArticle.load({
-          originalId: id,
-          language,
+          originalId: String(response.id),
+          language: response.language,
         });
         return article.content;
       },

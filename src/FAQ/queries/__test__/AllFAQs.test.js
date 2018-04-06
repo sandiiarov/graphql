@@ -3,34 +3,22 @@ import priceFAQDataset from '../../datasets/FAQ-price.json';
 
 beforeEach(() => {
   RestApiMock.onGet(
-    'https://api.skypicker.com/knowledgebase/api/v1/search?q=price',
+    'https://api.skypicker.com/knowledgebase/api/v1/search?q=price&autocomplete=true',
   ).replyWithData(priceFAQDataset);
 });
 
 describe('search query', () => {
   it('should return valid results field', async () => {
     const resultsQuery = `{
-      allFAQs(search:"price", language: en){
+      allFAQs(search: "price", language: en){
         edges{
           node{
-            results {
-              id
-              title
-              content
-              upvotes
-              downvotes
-              categories {
-                id
-                name
-                items {
-                  id
-                  title
-                  style
-                  icon
-                }
-              }
-            }
-          } 
+            id
+            title
+            perex
+            upvotes
+            downvotes
+          }
         }
       }
     }`;

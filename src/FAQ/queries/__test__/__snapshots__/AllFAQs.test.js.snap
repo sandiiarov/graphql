@@ -7,161 +7,272 @@ Object {
       "edges": Array [
         Object {
           "node": Object {
-            "results": Object {
-              "categories": Array [
-                Object {
-                  "id": 1,
-                  "items": Array [
-                    Object {
-                      "icon": "card",
-                      "id": 46,
-                      "style": "orange",
-                      "title": "Booking",
-                    },
-                    Object {
-                      "icon": "ticket",
-                      "id": 27,
-                      "style": "orange",
-                      "title": "Booking a Flight",
-                    },
-                  ],
-                  "name": "menu",
-                },
-                Object {
-                  "id": 2,
-                  "items": Array [
-                    Object {
-                      "icon": "",
-                      "id": 3,
-                      "style": "",
-                      "title": "booking",
-                    },
-                    Object {
-                      "icon": "card",
-                      "id": 6,
-                      "style": "orange",
-                      "title": "booking",
-                    },
-                  ],
-                  "name": "related",
-                },
-                Object {
-                  "id": 2,
-                  "items": Array [
-                    Object {
-                      "icon": "",
-                      "id": 4,
-                      "style": "",
-                      "title": "search",
-                    },
-                  ],
-                  "name": "related",
-                },
-              ],
-              "content": "<em>Price</em> Alerts are by far the best travel tool for saving time and money on your trip…",
-              "downvotes": 39,
-              "id": 84,
-              "title": "How can Price Alerts save me time and money?",
-              "upvotes": 61,
-            },
+            "downvotes": 41,
+            "id": "RkFRQXJ0aWNsZTo4NA==",
+            "perex": "Price Alerts are by far the best travel tool for saving time and money on your trip…",
+            "title": "How can Price Alerts save me time and money?",
+            "upvotes": 59,
           },
         },
         Object {
           "node": Object {
-            "results": Object {
-              "categories": Array [
-                Object {
-                  "id": 1,
-                  "items": Array [
-                    Object {
-                      "icon": "card",
-                      "id": 46,
-                      "style": "orange",
-                      "title": "Booking",
-                    },
-                    Object {
-                      "icon": "ticket",
-                      "id": 27,
-                      "style": "orange",
-                      "title": "Booking a Flight",
-                    },
-                  ],
-                  "name": "menu",
-                },
-                Object {
-                  "id": 2,
-                  "items": Array [
-                    Object {
-                      "icon": "",
-                      "id": 3,
-                      "style": "",
-                      "title": "booking",
-                    },
-                    Object {
-                      "icon": "card",
-                      "id": 6,
-                      "style": "orange",
-                      "title": "booking",
-                    },
-                  ],
-                  "name": "related",
-                },
-              ],
-              "content": "Some airlines provide discounted <em>prices</em> for children but in most cases, the ticket <em>price</em> is the same as for adults. Please contact us before making your booking if you would like us to arrange a child fare for you…",
-              "downvotes": 62,
-              "id": 16,
-              "title": "How do I book a ticket for a child?",
-              "upvotes": 38,
-            },
+            "downvotes": 65,
+            "id": "RkFRQXJ0aWNsZToxMzE=",
+            "perex": "Budget airlines keep prices low by saving on the costs of baggage transfer. This FAQ is about the general process of transferring your own baggage during transit…",
+            "title": "How does the self-transfer process work?",
+            "upvotes": 35,
           },
         },
         Object {
           "node": Object {
-            "results": Object {
-              "categories": Array [
-                Object {
-                  "id": 1,
-                  "items": Array [
-                    Object {
-                      "icon": "list",
-                      "id": 50,
-                      "style": "grey",
-                      "title": "Other",
-                    },
-                    Object {
-                      "icon": "mobile",
-                      "id": 38,
-                      "style": "grey",
-                      "title": "Mobile App",
-                    },
-                  ],
-                  "name": "menu",
-                },
-                Object {
-                  "id": 2,
-                  "items": Array [
-                    Object {
-                      "icon": "",
-                      "id": 3,
-                      "style": "",
-                      "title": "booking",
-                    },
-                    Object {
-                      "icon": "tool",
-                      "id": 8,
-                      "style": "blue",
-                      "title": "manage",
-                    },
-                  ],
-                  "name": "related",
-                },
-              ],
-              "content": "<em>Price</em> Alerts By adding <em>Price</em> Alerts, you'll be able to: Receive notifications whenever the <em>price</em> drops below your chosen level. Find the flight again easily. To add a <em>Price</em> Alert, search for a flight, then tap one of the offered destinations to view the options. Under the 4th option, tap the yellow button ‘Add <em>Price</em> Alert’ and set the maximum <em>price</em> that you want to pay. To find these again, simply tap the list icon in the top right corner of……",
-              "downvotes": 74,
-              "id": 112,
-              "title": "How do I manage flights with the mobile app?",
-              "upvotes": 26,
-            },
+            "downvotes": 62,
+            "id": "RkFRQXJ0aWNsZToxNg==",
+            "perex": "Each airline has their own policy for children…",
+            "title": "Child fares",
+            "upvotes": 38,
+          },
+        },
+        Object {
+          "node": Object {
+            "downvotes": 34,
+            "id": "RkFRQXJ0aWNsZToyMw==",
+            "perex": "If your payment is declined, we'll ask you for more information to help us prove that it’s a secure transaction…",
+            "title": "How does the payment verification process work?",
+            "upvotes": 66,
+          },
+        },
+        Object {
+          "node": Object {
+            "downvotes": 61,
+            "id": "RkFRQXJ0aWNsZToyNw==",
+            "perex": "It is best to contact the insurance company directly to process your claim…",
+            "title": "What if I have insurance and I cannot fly?",
+            "upvotes": 39,
+          },
+        },
+        Object {
+          "node": Object {
+            "downvotes": 59,
+            "id": "RkFRQXJ0aWNsZTozNw==",
+            "perex": "Please login to Manage My Booking and click the button \\"Change flights\\" next to your itinerary…",
+            "title": "How do I change my flight?",
+            "upvotes": 41,
+          },
+        },
+        Object {
+          "node": Object {
+            "downvotes": 42,
+            "id": "RkFRQXJ0aWNsZToxMzY=",
+            "perex": "Throwaway ticketing refers to the practice of deliberately using only the first leg of a cheaper round-trip itinerary to save money…",
+            "title": "What if I just use one part of a roundtrip ticket?",
+            "upvotes": 58,
+          },
+        },
+        Object {
+          "node": Object {
+            "downvotes": 75,
+            "id": "RkFRQXJ0aWNsZToxMTI=",
+            "perex": "Tap the list icon on the right of the page to manage your booking, download tickets, view all notifications, get help, adjust your preferences, view Favourite flights, or rate the application…",
+            "title": "How do I manage flights with the mobile app?",
+            "upvotes": 25,
+          },
+        },
+        Object {
+          "node": Object {
+            "downvotes": 73,
+            "id": "RkFRQXJ0aWNsZTo0NA==",
+            "perex": "On the booking page, e-ticket, and Manage My Booking…",
+            "title": "How can I find the maximum dimensions of the baggage that I am allowed?",
+            "upvotes": 27,
+          },
+        },
+        Object {
+          "node": Object {
+            "downvotes": 33,
+            "id": "RkFRQXJ0aWNsZTo1Ng==",
+            "perex": "The 24h Grace Period rule applies exclusively with regards to U.S. inbound, outbound or domestic flights…",
+            "title": "Is my flight eligible for the U.S. 24h grace period rule?",
+            "upvotes": 67,
+          },
+        },
+        Object {
+          "node": Object {
+            "downvotes": 14,
+            "id": "RkFRQXJ0aWNsZToxMjc=",
+            "perex": "Train and bus journeys provide huge cost savings for our travellers. There are also not too many differences to worry about compared with air travel…",
+            "title": "What do I need to know about trains and buses?",
+            "upvotes": 86,
+          },
+        },
+        Object {
+          "node": Object {
+            "downvotes": 56,
+            "id": "RkFRQXJ0aWNsZTo2Nw==",
+            "perex": "Terms and conditions can be long and confusing, which is why we have provided a brief summary of ours here…",
+            "title": "Can I have a summary of the terms and conditions?",
+            "upvotes": 44,
+          },
+        },
+        Object {
+          "node": Object {
+            "downvotes": 68,
+            "id": "RkFRQXJ0aWNsZTo4OQ==",
+            "perex": "You should upload them using our Refund application form. Just sign in to Manage my Booking and click the button at the bottom left of the page…",
+            "title": "Where do I send my receipts for a refund?",
+            "upvotes": 32,
+          },
+        },
+        Object {
+          "node": Object {
+            "downvotes": 36,
+            "id": "RkFRQXJ0aWNsZTo5NA==",
+            "perex": "Our search features are the most powerful in the travel industry, allowing travellers to get the most out of their budgets…",
+            "title": "How do I find the best flights for my budget?",
+            "upvotes": 64,
+          },
+        },
+        Object {
+          "node": Object {
+            "downvotes": 59,
+            "id": "RkFRQXJ0aWNsZToxMTE=",
+            "perex": "You may alter the currency in the top right-hand corner, or in preferences. In the top left, you can choose whether you need one way, return or Multi-City flights…",
+            "title": "How do I use the mobile app?",
+            "upvotes": 41,
+          },
+        },
+        Object {
+          "node": Object {
+            "downvotes": 40,
+            "id": "RkFRQXJ0aWNsZTo1",
+            "perex": "Enter Manage My Booking and click “Additional Services”, then select “Sports Equipment” or \\"Musical Equipment\\" and fill in as much detail as you can, including weight and dimensions…",
+            "title": "How do I add music or sports equipment to my booking?",
+            "upvotes": 60,
+          },
+        },
+        Object {
+          "node": Object {
+            "downvotes": 52,
+            "id": "RkFRQXJ0aWNsZToz",
+            "perex": "Call our Customer Support Team…",
+            "title": "How do I pre-book my meals?",
+            "upvotes": 48,
+          },
+        },
+        Object {
+          "node": Object {
+            "downvotes": 25,
+            "id": "RkFRQXJ0aWNsZToxMjg=",
+            "perex": "Fast Track, Wi-Fi, vouchers and much more…",
+            "title": "What benefits do I get with the ViaMilan card?",
+            "upvotes": 75,
+          },
+        },
+        Object {
+          "node": Object {
+            "downvotes": 74,
+            "id": "RkFRQXJ0aWNsZTozNA==",
+            "perex": "With your email address, booking number, departure date and airport…",
+            "title": "How do I login to Manage My Booking?",
+            "upvotes": 26,
+          },
+        },
+        Object {
+          "node": Object {
+            "downvotes": 43,
+            "id": "RkFRQXJ0aWNsZTox",
+            "perex": "Sign in to Manage My Booking, click Seat selection and make your choice…",
+            "title": "How do I select a seat?",
+            "upvotes": 57,
+          },
+        },
+        Object {
+          "node": Object {
+            "downvotes": 80,
+            "id": "RkFRQXJ0aWNsZToxMjE=",
+            "perex": "During the booking process, you can enter the company or personal billing details that you want to have on your invoice…",
+            "title": "How do I add my billing details?",
+            "upvotes": 20,
+          },
+        },
+        Object {
+          "node": Object {
+            "downvotes": 61,
+            "id": "RkFRQXJ0aWNsZTozMg==",
+            "perex": "If you think your e-ticket might be delayed, hang tight. We've begun processing your booking…",
+            "title": "Delayed e-ticket",
+            "upvotes": 39,
+          },
+        },
+        Object {
+          "node": Object {
+            "downvotes": 59,
+            "id": "RkFRQXJ0aWNsZTo1OA==",
+            "perex": "Please read your e-ticket carefully for instructions about the check-in process for each of your flights and the date when your boarding pass will be available…",
+            "title": "How do I know if online check-in is available for my flight?",
+            "upvotes": 41,
+          },
+        },
+        Object {
+          "node": Object {
+            "downvotes": 28,
+            "id": "RkFRQXJ0aWNsZToxMzU=",
+            "perex": "This is a savvy way of saving money on air travel. All flights belong to you, just use the ones you need…",
+            "title": "Travel hack: buy additional tickets to save money",
+            "upvotes": 72,
+          },
+        },
+        Object {
+          "node": Object {
+            "downvotes": 71,
+            "id": "RkFRQXJ0aWNsZToxMTA=",
+            "perex": "Unfortunately, it's not possible to book a flight over the phone…",
+            "title": "Unable to book a flight over the phone",
+            "upvotes": 29,
+          },
+        },
+        Object {
+          "node": Object {
+            "downvotes": 49,
+            "id": "RkFRQXJ0aWNsZTo1Nw==",
+            "perex": "Sometimes you may need to check in at the airport with a printed copy of your e-ticket…",
+            "title": "What is airport check-in?",
+            "upvotes": 51,
+          },
+        },
+        Object {
+          "node": Object {
+            "downvotes": 27,
+            "id": "RkFRQXJ0aWNsZTo4Nw==",
+            "perex": "It is the 3 or 4 digit number on your payment card that helps to ensure the security of your payment…",
+            "title": "What is a security code?",
+            "upvotes": 73,
+          },
+        },
+        Object {
+          "node": Object {
+            "downvotes": 53,
+            "id": "RkFRQXJ0aWNsZToxMDg=",
+            "perex": "Online check-in is mostly used by budget airlines so that the passengers select their seats, download and print their own boarding passes…",
+            "title": "What is online check-in?",
+            "upvotes": 47,
+          },
+        },
+        Object {
+          "node": Object {
+            "downvotes": 41,
+            "id": "RkFRQXJ0aWNsZTo0Nw==",
+            "perex": "If you have a connecting flight then you need to recheck your baggage at each airport, even if your connecting flight is with the same airline…",
+            "title": "Do I have to recheck my baggage?",
+            "upvotes": 59,
+          },
+        },
+        Object {
+          "node": Object {
+            "downvotes": 44,
+            "id": "RkFRQXJ0aWNsZToxNQ==",
+            "perex": "Add an infant to your flight on our search or booking pages…",
+            "title": "Book a ticket for an infant",
+            "upvotes": 56,
           },
         },
       ],
