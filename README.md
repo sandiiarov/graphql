@@ -2,6 +2,8 @@
 
 Production URL: https://graphql.kiwi.com/
 
+[Join our chat over at Discord](https://discord.gg/Pq2q5a5) to get in touch with the community and Kiwi.com engineers.
+
 This GraphQL API proxy is written for serverless infrastructure. This assumption is especially important in case of dataloaders. For more information please read: https://github.com/facebook/dataloader#caching-per-request
 
 # Run GraphQL API server
