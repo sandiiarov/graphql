@@ -29,11 +29,15 @@ import type { Airline } from '../../flight/Flight';
 import type { HotelType } from '../../hotel/dataloaders/flow/HotelType';
 import type { City } from '../../hotel/dataloaders/flow/City';
 import type { Args as FAQArgs } from '../../FAQ/dataloaders/searchFAQ';
-import type { FAQType } from '../../FAQ/types/outputs/FAQ';
-import type { Args as FAQCategoryArgs } from '../../FAQ/dataloaders/getFAQCategory';
+import type {
+  Args as FAQCategoryArgs,
+  FAQArticleItem,
+} from '../../FAQ/dataloaders/getFAQCategory';
+import type {
+  Args as FAQCArticleArgs,
+  FAQArticleDetail,
+} from '../../FAQ/dataloaders/getFAQArticle';
 import type { FAQCategoryType } from '../../FAQ/types/outputs/FAQCategory';
-import type { Args as FAQCArticleArgs } from '../../FAQ/dataloaders/getFAQArticle';
-import type { FAQArticleDetail } from '../../FAQ/types/FAQArticle';
 
 /**
  * FIXME:
@@ -66,7 +70,7 @@ export type GraphqlContextType = {|
         number,
       >,
     },
-    FAQ: DataLoader<FAQArgs, FAQType[]>,
+    FAQ: DataLoader<FAQArgs, FAQArticleItem[]>,
     FAQCategories: DataLoader<FAQCategoryArgs, FAQCategoryType[]>,
     FAQArticle: DataLoader<FAQCArticleArgs, FAQArticleDetail>,
   |},

@@ -7,13 +7,13 @@ import {
   connectionDefinitions,
 } from 'graphql-relay';
 
-import GraphQLFAQ from '../types/outputs/FAQ';
+import FAQArticle from '../types/outputs/FAQArticle';
 import LanguageInput from '../../common/types/inputs/LanguageInput';
 
 import type { GraphqlContextType } from '../../common/services/GraphqlContext';
 
 const { connectionType: FaqConnection } = connectionDefinitions({
-  nodeType: GraphQLFAQ,
+  nodeType: FAQArticle,
 });
 
 export default {

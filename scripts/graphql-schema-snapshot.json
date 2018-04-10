@@ -710,7 +710,7 @@
             ],
             "type": {
               "kind": "OBJECT",
-              "name": "AllFAQsConnection",
+              "name": "FAQArticleConnection",
               "ofType": null
             },
             "isDeprecated": false,
@@ -6588,7 +6588,7 @@
       },
       {
         "kind": "OBJECT",
-        "name": "AllFAQsConnection",
+        "name": "FAQArticleConnection",
         "description": "A connection to a list of items.",
         "fields": [
           {
@@ -6616,7 +6616,7 @@
               "name": null,
               "ofType": {
                 "kind": "OBJECT",
-                "name": "AllFAQsEdge",
+                "name": "FAQArticleEdge",
                 "ofType": null
               }
             },
@@ -6631,7 +6631,7 @@
       },
       {
         "kind": "OBJECT",
-        "name": "AllFAQsEdge",
+        "name": "FAQArticleEdge",
         "description": "An edge in a connection.",
         "fields": [
           {
@@ -6640,7 +6640,7 @@
             "args": [],
             "type": {
               "kind": "OBJECT",
-              "name": "AllFAQs",
+              "name": "FAQArticle",
               "ofType": null
             },
             "isDeprecated": false,
@@ -6670,46 +6670,11 @@
       },
       {
         "kind": "OBJECT",
-        "name": "AllFAQs",
-        "description": null,
-        "fields": [
-          {
-            "name": "results",
-            "description": "Results of allFAQs search",
-            "args": [],
-            "type": {
-              "kind": "OBJECT",
-              "name": "Results",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          }
-        ],
-        "inputFields": null,
-        "interfaces": [],
-        "enumValues": null,
-        "possibleTypes": null
-      },
-      {
-        "kind": "OBJECT",
-        "name": "Results",
+        "name": "FAQArticle",
         "description": null,
         "fields": [
           {
             "name": "id",
-            "description": "Id of the article",
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "Int",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "articleId",
             "description": "The ID of an object",
             "args": [],
             "type": {
@@ -6727,6 +6692,18 @@
           {
             "name": "title",
             "description": "Title of the article",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "perex",
+            "description": "Perex of the article",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -6767,132 +6744,6 @@
             "type": {
               "kind": "SCALAR",
               "name": "Int",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "categories",
-            "description": "Category to which the article belongs",
-            "args": [],
-            "type": {
-              "kind": "LIST",
-              "name": null,
-              "ofType": {
-                "kind": "OBJECT",
-                "name": "Categories",
-                "ofType": null
-              }
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          }
-        ],
-        "inputFields": null,
-        "interfaces": [],
-        "enumValues": null,
-        "possibleTypes": null
-      },
-      {
-        "kind": "OBJECT",
-        "name": "Categories",
-        "description": null,
-        "fields": [
-          {
-            "name": "id",
-            "description": "Id of the category",
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "Int",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "name",
-            "description": "Name of the category",
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "items",
-            "description": "Items that belong to the category",
-            "args": [],
-            "type": {
-              "kind": "LIST",
-              "name": null,
-              "ofType": {
-                "kind": "OBJECT",
-                "name": "Items",
-                "ofType": null
-              }
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          }
-        ],
-        "inputFields": null,
-        "interfaces": [],
-        "enumValues": null,
-        "possibleTypes": null
-      },
-      {
-        "kind": "OBJECT",
-        "name": "Items",
-        "description": null,
-        "fields": [
-          {
-            "name": "id",
-            "description": "Id of the item",
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "Int",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "title",
-            "description": "Title of the item",
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "icon",
-            "description": "Icon type of the item",
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "style",
-            "description": "Color of the item",
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "String",
               "ofType": null
             },
             "isDeprecated": false,
@@ -7047,93 +6898,6 @@
                 "name": "FAQArticle",
                 "ofType": null
               }
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          }
-        ],
-        "inputFields": null,
-        "interfaces": [],
-        "enumValues": null,
-        "possibleTypes": null
-      },
-      {
-        "kind": "OBJECT",
-        "name": "FAQArticle",
-        "description": null,
-        "fields": [
-          {
-            "name": "id",
-            "description": "The ID of an object",
-            "args": [],
-            "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "SCALAR",
-                "name": "ID",
-                "ofType": null
-              }
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "title",
-            "description": "Title of the article",
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "perex",
-            "description": "Perex of the article",
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "content",
-            "description": "Content of the article",
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "upvotes",
-            "description": "Upvotes about the utility of the article",
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "Int",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "downvotes",
-            "description": "Downvotes about the utility of the article",
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "Int",
-              "ofType": null
             },
             "isDeprecated": false,
             "deprecationReason": null

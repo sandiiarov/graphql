@@ -4,14 +4,23 @@ import Dataloader from 'dataloader';
 import Config from '../../../config/application';
 import { get } from '../../common/services/HttpRequest';
 import type { FAQCategoryType } from '../types/outputs/FAQCategory';
-import type {
-  RawFAQArticleItem,
-  SanitizedFAQArticleItem,
-} from '../types/FAQArticle';
 
-export type Args = {
+type RawFAQArticleItem = {
+  url: string,
+  title: string,
+  perex: string,
+  upvotes: number,
+  downvotes: number,
+};
+
+export type FAQArticleItem = RawFAQArticleItem & {
+  id: string,
   language: string,
 };
+
+export type Args = {|
+  language: string,
+|};
 
 const FAQ_MENU_CATEGORY = 'menu';
 
@@ -61,7 +70,7 @@ const sanitizeCategory = (language: string) => category => ({
 });
 
 const sanitizeArticle = (language: string) => {
-  return (article: RawFAQArticleItem): SanitizedFAQArticleItem => {
+  return (article: RawFAQArticleItem): FAQArticleItem => {
     // Currently "id" field itself is missing in "/categories/:id" endpoint, necessary to get out of an url
     let id = null;
 

@@ -27,10 +27,10 @@ export default {
         queryParameters,
       ),
     rates: 'https://api.skypicker.com/rates',
-    allFAQ: (queryParameters: ?Object = null) =>
+    allFAQ: (search: string) =>
       queryWithParameters(
         'https://api.skypicker.com/knowledgebase/api/v1/search',
-        queryParameters,
+        { q: search, autocomplete: true },
       ),
     allFAQCategories: (faqCategoryId: ?number) => {
       const categoryId = faqCategoryId ? `/${faqCategoryId}` : '';
