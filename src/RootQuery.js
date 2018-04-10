@@ -15,7 +15,8 @@ import Hotel from './hotel/queries/Hotel';
 import HotelCities from './hotel/queries/HotelCities';
 import AllFAQs from './FAQ/queries/AllFAQs';
 import AllFAQCategories from './FAQ/queries/AllFAQCategories';
-import FAQCategories from './FAQ/queries/FAQCategory';
+import FAQCategory from './FAQ/queries/FAQCategory';
+import FAQArticle from './FAQ/queries/FAQArticle';
 
 export default new GraphQLObjectType({
   name: 'RootQuery',
@@ -34,6 +35,7 @@ export default new GraphQLObjectType({
     hotelCities: HotelCities,
     allFAQs: AllFAQs,
     allFAQCategories: AllFAQCategories,
-    FAQCategory: FAQCategories,
+    FAQCategory: FAQCategory,
+    FAQArticle: FAQArticle,
   },
 });

@@ -43,6 +43,7 @@ export default new GraphQLObjectType({
         args: Object,
         { dataLoader }: GraphqlContextType,
       ): Promise<string> => {
+        // "content" is present only for FAQArticleDetail
         const article = await dataLoader.FAQArticle.load({
           originalId: String(response.id),
           language: response.language,
