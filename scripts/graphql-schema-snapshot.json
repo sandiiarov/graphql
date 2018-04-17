@@ -6996,6 +6996,22 @@
             "deprecationReason": null
           },
           {
+            "name": "ancestors",
+            "description": "List of ancestor categories in the tree from the root.",
+            "args": [],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "FAQCategory",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "FAQs",
             "description": "List of FAQ articles",
             "args": [],

@@ -15,13 +15,36 @@ describe('allFAQCategories', () => {
   });
 
   it('should return single FAQ category', async () => {
-    const id = 'RkFRQ2F0ZWdvcnk6NDc=';
+    const id = 'RkFRQ2F0ZWdvcnk6NDc='; // "Before the flight"
     const resultsQuery = `query FAQSubcategories($id: ID!) { 
       FAQCategory(language: en, id: $id) {
         id
         title
         subcategories {
           id
+        }
+        FAQs {
+          id
+          title
+        }  
+      }      
+    }`;
+    expect(await graphql(resultsQuery, { id })).toMatchSnapshot();
+  });
+
+  it('should return ancestors for FAQ category', async () => {
+    const id = 'RkFRQ2F0ZWdvcnk6NDM='; // "Searching for flights"
+    const resultsQuery = `query FAQSubcategories($id: ID!) { 
+      FAQCategory(language: en, id: $id) {
+        id
+        title
+        ancestors {
+          id
+          title
+          subcategories {
+            id
+            title
+          }
         }
         FAQs {
           id

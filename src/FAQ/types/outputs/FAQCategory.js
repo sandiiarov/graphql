@@ -8,6 +8,7 @@ export type FAQCategoryType = {|
   id: number,
   title: string,
   subcategories: FAQCategoryType[],
+  ancestors: FAQCategoryType[],
   FAQs: FAQArticleType[],
 |};
 
@@ -24,6 +25,11 @@ const FAQCategory = new GraphQLObjectType({
       type: new GraphQLList(FAQCategory),
       description: 'List of subcategories',
       resolve: ({ subcategories }: FAQCategoryType) => subcategories,
+    },
+    ancestors: {
+      type: new GraphQLList(FAQCategory),
+      description: 'List of ancestor categories in the tree from the root.',
+      resolve: ({ ancestors }: FAQCategoryType) => ancestors,
     },
     FAQs: {
       type: new GraphQLList(FAQArticle),

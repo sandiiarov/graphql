@@ -49,7 +49,9 @@ const listFAQ = async (language: string): Promise<FAQCategoryType[]> => {
     },
   );
 
-  return categories.map(sanitizeCategory(language));
+  return categories
+    .map(sanitizeCategory(language))
+    .map(category => addAncestors(category));
 };
 
 const batchLoad = async (categories: $ReadOnlyArray<Args>) => {
@@ -67,7 +69,20 @@ const sanitizeCategory = (language: string) => category => ({
   FAQs: category.articles
     ? category.articles.map(sanitizeArticle(language))
     : [],
+  ancestors: [],
 });
+
+const addAncestors = (category, ancestor = null) => {
+  return {
+    ...category,
+    ancestors: ancestor
+      ? category.ancestors.concat([ancestor])
+      : category.ancestors,
+    subcategories: category.subcategories.map(subcategory =>
+      addAncestors(subcategory, category),
+    ),
+  };
+};
 
 const sanitizeArticle = (language: string) => {
   return (article: RawFAQArticleItem): FAQArticleItem => {
