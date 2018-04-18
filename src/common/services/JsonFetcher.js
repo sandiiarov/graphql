@@ -8,7 +8,7 @@ export async function fetchJson(
   url: string,
   method: string = 'GET',
   options?: Object = {},
-): Promise<Object | Array<Object>> {
+): Promise<any> {
   if (process.env.NODE_ENV === 'test') {
     throw new Error(
       `HttpRequest should never be called in test environment. Have you forgotten to mock "${url}" with fake data response?`,

@@ -154,6 +154,33 @@
             "deprecationReason": null
           },
           {
+            "name": "geoIP",
+            "description": "Geography info by an IP address",
+            "args": [
+              {
+                "name": "ip",
+                "description": null,
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "SCALAR",
+                    "name": "IP",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "OBJECT",
+              "name": "GeoIP",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "allAvailableHotels",
             "description": "Search for all available hotels in one location. It's necessary to send checkin and checkout dates as well as rooms configuration to get availability info.",
             "args": [
@@ -3978,6 +4005,51 @@
             "type": {
               "kind": "SCALAR",
               "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "SCALAR",
+        "name": "IP",
+        "description": null,
+        "fields": null,
+        "inputFields": null,
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "GeoIP",
+        "description": null,
+        "fields": [
+          {
+            "name": "isoCountryCode",
+            "description": "ISO country code",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "coordinates",
+            "description": "Coordinates",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "Coordinates",
               "ofType": null
             },
             "isDeprecated": false,
