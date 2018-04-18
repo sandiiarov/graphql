@@ -56,7 +56,7 @@ src
 └── common (contains shared services)
 ```
 
-Motivations: there is point in time in every application where doing groups by generic "outputs" or "inputs" is not enough and it's becoming mess. For this reason it's better to group application parts by responsibilities. With this structure the project is less flat and more deep.
+Motivations: there is point in time in every application where doing groups by generic "outputs" or "inputs" is not enough and it's becoming a mess. For this reason it's better to group application parts by responsibilities. With this structure the project is less flat and more deep.
 
 # Design Style Guides
 
