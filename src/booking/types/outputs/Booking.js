@@ -21,8 +21,8 @@ export default new GraphQLObjectType({
 
     databaseId: {
       type: GraphQLInt,
-      description: 'Internal database ID.',
-      deprecationReason: 'Use id field instead.',
+      description:
+        'Unique number identifying the booking in communication with support.',
       resolve: ({ id }: Booking): number => id,
     },
 

@@ -26,9 +26,8 @@ Object {
   },
   "databaseId": Object {
     "args": Array [],
-    "deprecationReason": "Use id field instead.",
-    "description": "Internal database ID.",
-    "isDeprecated": true,
+    "description": "Unique number identifying the booking in communication with support.",
+    "isDeprecated": false,
     "name": "databaseId",
     "resolve": [Function],
     "type": "Int",
