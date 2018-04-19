@@ -1,3 +1,5 @@
+/* eslint-disable flowtype/require-valid-file-annotation */
+
 process.env.NODE_ENV = 'production';
 
 /**
