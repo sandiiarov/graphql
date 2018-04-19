@@ -56,7 +56,7 @@
     "promise/avoid-new": "off",
     "promise/prefer-await-to-then": "error",
     "promise/prefer-await-to-callbacks": "off",
-    "flowtype/require-valid-file-annotation": "error",
+    "flowtype/require-valid-file-annotation": ["error", "always"],
     "flowtype/generic-spacing": "off", # in conflict with Prettier
     "eol-last": "error"
   }

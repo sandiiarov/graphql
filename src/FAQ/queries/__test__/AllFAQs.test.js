@@ -1,3 +1,5 @@
+// @flow
+
 import { graphql, RestApiMock } from '../../../common/services/TestingTools';
 import priceFAQDataset from '../../datasets/FAQ-price.json';
 
