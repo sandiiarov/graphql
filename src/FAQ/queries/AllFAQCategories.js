@@ -1,14 +1,11 @@
 // @flow
 
-import {
-  connectionArgs,
-  connectionFromArray,
-  connectionDefinitions,
-} from 'graphql-relay';
+import { connectionArgs, connectionDefinitions } from 'graphql-relay';
 
 import type { GraphqlContextType } from '../../common/services/GraphqlContext';
 import FAQCategory from './../types/outputs/FAQCategory';
 import LanguageInput from '../../common/types/inputs/LanguageInput';
+import { connectionFromArray } from '../../common/services/ArrayConnection';
 
 const { connectionType: FaqCategoriesConnection } = connectionDefinitions({
   nodeType: FAQCategory,

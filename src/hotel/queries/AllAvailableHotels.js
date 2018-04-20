@@ -4,7 +4,6 @@ import { GraphQLNonNull, GraphQLInt } from 'graphql';
 import {
   connectionArgs,
   connectionDefinitions,
-  connectionFromArray,
   cursorToOffset,
   toGlobalId,
 } from 'graphql-relay';
@@ -15,6 +14,7 @@ import GraphQLHotelsFilterInput from '../types/inputs/AllAvailableHotelsFilterIn
 import GraphQLAvailableHotelOptionsInput from '../types/inputs/AvailableHotelOptionsInput';
 import GraphQLHotelAvailability from '../types/outputs/HotelAvailability';
 import GraphQLHotelAvailabilityStats from '../types/outputs/HotelAvailabilityStats';
+import { connectionFromArray } from '../../common/services/ArrayConnection';
 
 import type { GraphqlContextType } from '../../common/services/GraphqlContext';
 

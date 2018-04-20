@@ -1,11 +1,7 @@
 // @flow
 
 import { GraphQLNonNull } from 'graphql';
-import {
-  connectionArgs,
-  connectionDefinitions,
-  connectionFromArray,
-} from 'graphql-relay';
+import { connectionArgs, connectionDefinitions } from 'graphql-relay';
 
 import type { GraphQLResolveInfo } from 'graphql';
 
@@ -16,6 +12,7 @@ import FlightsOptionsInput from '../types/inputs/FlightsOptionsInput';
 import FlightsFiltersInput from '../types/inputs/FlightsFiltersInput';
 import { sanitizeApiResponse } from '../dataloaders/ApiSanitizer';
 import { validateDates } from '../resolvers/FlightDatesValidator';
+import { connectionFromArray } from '../../common/services/ArrayConnection';
 
 import type { GraphqlContextType } from '../../common/services/GraphqlContext';
 

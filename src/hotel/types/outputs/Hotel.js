@@ -1,11 +1,7 @@
 // @flow
 
 import { GraphQLObjectType, GraphQLString, GraphQLFloat } from 'graphql';
-import {
-  connectionArgs,
-  connectionDefinitions,
-  connectionFromArray,
-} from 'graphql-relay';
+import { connectionArgs, connectionDefinitions } from 'graphql-relay';
 import distance from 'gps-distance';
 import idx from 'idx';
 
@@ -17,6 +13,7 @@ import GraphQLHotelRating from './HotelRating';
 import GraphQLHotelReview, { type HotelReviewType } from './HotelReview';
 import GraphQLCoordinates from '../../../location/types/outputs/Coordinates';
 import GraphQLAddress from '../../../common/types/outputs/Address';
+import { connectionFromArray } from '../../../common/services/ArrayConnection';
 
 import type { HotelExtendedType } from '../../dataloaders/flow/HotelExtendedType';
 import type { GraphqlContextType } from '../../../common/services/GraphqlContext';

@@ -58,6 +58,20 @@
     "promise/prefer-await-to-callbacks": "off",
     "flowtype/require-valid-file-annotation": ["error", "always"],
     "flowtype/generic-spacing": "off", # in conflict with Prettier
-    "eol-last": "error"
+    "eol-last": "error",
+    "no-restricted-imports": [
+      "error",
+      {
+        "paths": [
+          {
+            "name": "graphql-relay",
+            "importNames": [
+              "connectionFromArray"
+            ],
+            "message": "please import { connectionFromArray } from '/src/common/services/ArrayConnection'  instead"
+          }
+        ]
+      }
+    ]
   }
 }

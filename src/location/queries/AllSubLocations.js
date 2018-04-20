@@ -1,10 +1,11 @@
 // @flow
 
 import { GraphQLString, GraphQLNonNull } from 'graphql';
-import { connectionArgs, connectionFromArray } from 'graphql-relay';
+import { connectionArgs } from 'graphql-relay';
 
 import GraphQLLocationConnection from '../types/outputs/LocationConnection';
 import LocationsOptionsInput from '../types/inputs/LocationsOptions';
+import { connectionFromArray } from '../../common/services/ArrayConnection';
 
 import type { GraphqlContextType } from '../../common/services/GraphqlContext';
 

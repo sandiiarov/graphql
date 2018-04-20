@@ -7,16 +7,13 @@ import {
   GraphQLList,
   GraphQLFloat,
 } from 'graphql';
-import {
-  connectionArgs,
-  connectionDefinitions,
-  connectionFromArray,
-} from 'graphql-relay';
+import { connectionArgs, connectionDefinitions } from 'graphql-relay';
 
 import { globalIdField } from '../../../common/services/OpaqueIdentifier';
 import GraphQLHotelRoomBedding from './HotelRoomBedding';
 import GraphQLHotelRoomDescription from './HotelRoomDescription';
 import GraphQLHotelPhoto from './HotelPhoto';
+import { connectionFromArray } from '../../../common/services/ArrayConnection';
 
 import type { HotelRoomType } from '../../dataloaders/flow/HotelRoomType';
 import type { GraphqlContextType } from '../../../common/services/GraphqlContext';

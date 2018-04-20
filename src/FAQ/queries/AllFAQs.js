@@ -1,14 +1,11 @@
 // @flow
 
 import { GraphQLString } from 'graphql';
-import {
-  connectionArgs,
-  connectionFromArray,
-  connectionDefinitions,
-} from 'graphql-relay';
+import { connectionArgs, connectionDefinitions } from 'graphql-relay';
 
 import FAQArticle from '../types/outputs/FAQArticle';
 import LanguageInput from '../../common/types/inputs/LanguageInput';
+import { connectionFromArray } from '../../common/services/ArrayConnection';
 
 import type { GraphqlContextType } from '../../common/services/GraphqlContext';
 
