@@ -1,5 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`GET request in production resolves URL with query string and token 1`] = `
+Object {
+  "options": Object {
+    "headers": Object {
+      "Content-Type": "application/json",
+      "User-Agent": "graphql",
+    },
+    "method": "GET",
+  },
+  "url": "https://path/to/api?locale=en&token=randomToken",
+}
+`;
+
 exports[`GET request in production resolves URL with token 1`] = `
 Object {
   "options": Object {

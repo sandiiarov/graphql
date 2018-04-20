@@ -33,6 +33,12 @@ describe('GET request in production', () => {
     expect(await get('https://path/to/api')).toMatchSnapshot();
   });
 
+  it('resolves URL with query string and token', async () => {
+    expect(
+      await get('https://path/to/api?locale=en', 'randomToken'),
+    ).toMatchSnapshot();
+  });
+
   it('throws exception during invalid return status code', async () => {
     expect.assertions(4);
 
