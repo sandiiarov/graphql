@@ -3,6 +3,7 @@
 import { sanitizeDetail, sanitizeListItem } from '../ApiSanitizer';
 import bookingDetail from './__datasets__/booking.detail.json';
 import bookingsItem from './__datasets__/bookings.item.json';
+import bookingItemWithReturn from './__datasets__/booking.withReturn.json';
 
 describe('Sanitize list item', () => {
   it('should work', async () => {
@@ -13,5 +14,9 @@ describe('Sanitize list item', () => {
 describe('Sanitize detail', () => {
   it('should work', async () => {
     expect(sanitizeListItem(bookingsItem)).toMatchSnapshot();
+  });
+
+  it('should work with return flight', () => {
+    expect(sanitizeListItem(bookingItemWithReturn)).toMatchSnapshot();
   });
 });

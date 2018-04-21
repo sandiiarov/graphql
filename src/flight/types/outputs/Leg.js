@@ -52,5 +52,11 @@ export default new GraphQLObjectType({
       type: GraphQLBoolean,
       resolve: ({ recheckRequired }): boolean => recheckRequired,
     },
+
+    isReturn: {
+      type: GraphQLBoolean,
+      description: 'Determines whether Leg is related to return flight.',
+      resolve: ({ isReturn }): boolean => isReturn,
+    },
   },
 });

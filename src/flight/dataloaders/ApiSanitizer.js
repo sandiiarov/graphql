@@ -26,6 +26,7 @@ export function sanitizeApiResponse(
     legs: flight.route.map((leg): Leg => ({
       id: leg.id,
       recheckRequired: leg.bags_recheck_required,
+      isReturn: flight.return === 1,
       flightNo: leg.flight_no,
       departure: sanitizeRoute({
         utc: leg.dTimeUTC,

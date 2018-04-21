@@ -46,6 +46,14 @@ Object {
     "resolve": [Function],
     "type": "ID!",
   },
+  "isReturn": Object {
+    "args": Array [],
+    "description": "Determines whether Leg is related to return flight.",
+    "isDeprecated": false,
+    "name": "isReturn",
+    "resolve": [Function],
+    "type": "Boolean",
+  },
   "recheckRequired": Object {
     "args": Array [],
     "isDeprecated": false,

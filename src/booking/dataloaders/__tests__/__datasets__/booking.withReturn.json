@@ -1,0 +1,326 @@
+{
+  "arrival": {
+    "when": 0,
+    "where": {
+      "code": "NRT",
+      "name": "Tokyo"
+    }
+  },
+  "auth_token": "random_auth_token",
+  "bag_params": {},
+  "bags": 1,
+  "bags_restrictions": {
+    "hands": {},
+    "holds": {
+      "1": {
+        "height": 81,
+        "length": 119,
+        "weight": 23,
+        "width": 119
+      }
+    }
+  },
+  "bid": 3222550,
+  "booked_at": "skypicker",
+  "booking_token": "randomToken",
+  "brand": "kiwicom",
+  "cancel_requested": null,
+  "card_payment": 1468.01,
+  "contact": {
+    "email": "joe.doe@gmail.com",
+    "phone": "+420 111111111",
+    "pid": 4882156
+  },
+  "created": 1496478817,
+  "credits_payment": 0,
+  "currency": "EUR",
+  "departure": {
+    "when": 0,
+    "where": {
+      "code": "PRG",
+      "name": "Prague"
+    }
+  },
+  "disabled_bags_in_mmb": false,
+  "flight_ids": [
+    "SP1244683_1864798",
+    "SP1244683_1864799",
+    "SP1244683_1864800",
+    "SP1244683_1864801"
+  ],
+  "flights": [
+    {
+      "airline": {
+        "checkin": 0,
+        "doing_online_checkin": null,
+        "iata": "AZ",
+        "name": "Alitalia",
+        "payment_card_copy_eticket_requirement": true
+      },
+      "arrival": {
+        "when": {
+          "local": 1498658400,
+          "utc": 1498651200
+        },
+        "where": {
+          "city_id": "rome_it",
+          "code": "FCO",
+          "country": "IT",
+          "name": "Rome",
+          "station": "Leonardo da Vinci–Fiumicino Airport"
+        }
+      },
+      "bags_recheck_disclaimer": "",
+      "bags_recheck_required": false,
+      "departure": {
+        "when": {
+          "local": 1498651500,
+          "utc": 1498644300
+        },
+        "where": {
+          "city_id": "prague_cz",
+          "code": "PRG",
+          "country": "CZ",
+          "name": "Prague",
+          "station": "Václav Havel Airport Prague"
+        }
+      },
+      "extras": "OK",
+      "flight_no": 7545,
+      "guarantee": false,
+      "guarantee_disclaimer": "",
+      "id": "SP1244683_1864798",
+      "reservation_number": "Q1VI1L",
+      "return": 0
+    },
+    {
+      "airline": {
+        "checkin": 0,
+        "doing_online_checkin": null,
+        "iata": "AZ",
+        "name": "Alitalia",
+        "payment_card_copy_eticket_requirement": true
+      },
+      "arrival": {
+        "when": {
+          "local": 1498732200,
+          "utc": 1498699800
+        },
+        "where": {
+          "city_id": "tokyo_jp",
+          "code": "NRT",
+          "country": "JP",
+          "name": "Tokyo",
+          "station": "Narita International"
+        }
+      },
+      "bags_recheck_disclaimer": "",
+      "bags_recheck_required": false,
+      "departure": {
+        "when": {
+          "local": 1498662900,
+          "utc": 1498655700
+        },
+        "where": {
+          "city_id": "rome_it",
+          "code": "FCO",
+          "country": "IT",
+          "name": "Rome",
+          "station": "Leonardo da Vinci–Fiumicino Airport"
+        }
+      },
+      "extras": "AZ",
+      "flight_no": 784,
+      "guarantee": false,
+      "guarantee_disclaimer": "",
+      "id": "SP1244683_1864799",
+      "reservation_number": "Q1VI1L",
+      "return": 0
+    },
+    {
+      "airline": {
+        "checkin": 0,
+        "doing_online_checkin": null,
+        "iata": "AZ",
+        "name": "Alitalia",
+        "payment_card_copy_eticket_requirement": true
+      },
+      "arrival": {
+        "when": {
+          "local": 1499625000,
+          "utc": 1499617800
+        },
+        "where": {
+          "city_id": "milan_it",
+          "code": "MXP",
+          "country": "IT",
+          "name": "Milan",
+          "station": "Milan–Malpensa"
+        }
+      },
+      "bags_recheck_disclaimer": "",
+      "bags_recheck_required": false,
+      "departure": {
+        "when": {
+          "local": 1499604300,
+          "utc": 1499571900
+        },
+        "where": {
+          "city_id": "tokyo_jp",
+          "code": "NRT",
+          "country": "JP",
+          "name": "Tokyo",
+          "station": "Narita International"
+        }
+      },
+      "extras": "AZ",
+      "flight_no": 787,
+      "guarantee": false,
+      "guarantee_disclaimer": "",
+      "id": "SP1244683_1864800",
+      "reservation_number": "Q1VI1L",
+      "return": 1
+    },
+    {
+      "airline": {
+        "checkin": 0,
+        "doing_online_checkin": null,
+        "iata": "AZ",
+        "name": "Alitalia",
+        "payment_card_copy_eticket_requirement": true
+      },
+      "arrival": {
+        "when": {
+          "local": 1499635200,
+          "utc": 1499628000
+        },
+        "where": {
+          "city_id": "prague_cz",
+          "code": "PRG",
+          "country": "CZ",
+          "name": "Prague",
+          "station": "Václav Havel Airport Prague"
+        }
+      },
+      "bags_recheck_disclaimer": "",
+      "bags_recheck_required": false,
+      "departure": {
+        "when": {
+          "local": 1499629800,
+          "utc": 1499622600
+        },
+        "where": {
+          "city_id": "milan_it",
+          "code": "MXP",
+          "country": "IT",
+          "name": "Milan",
+          "station": "Milan–Malpensa"
+        }
+      },
+      "extras": "OK",
+      "flight_no": 7544,
+      "guarantee": false,
+      "guarantee_disclaimer": "",
+      "id": "SP1244683_1864801",
+      "reservation_number": "Q1VI1L",
+      "return": 1
+    }
+  ],
+  "grace_period_fee": null,
+  "grade": {
+    "id": "D",
+    "time": 240
+  },
+  "max_bags": null,
+  "netverify_requested": null,
+  "original_currency": "CZK",
+  "original_flight_price": null,
+  "original_price": 38867,
+  "paid_over": "zooz",
+  "passenger_ids": [
+    4882155,
+    4882156
+  ],
+  "passengers": [
+    {
+      "bags": 0,
+      "birthday": "1994-01-24",
+      "category": "adults",
+      "contact_passenger": false,
+      "firstname": "Joe",
+      "hand_bags": {},
+      "id": 4882155,
+      "insurance_price": null,
+      "insurance_type": "none",
+      "lastname": "Doe",
+      "nationality": "cz",
+      "priority_boarding": {
+        "SP1244683_1864798": {
+          "is_ordered": false
+        },
+        "SP1244683_1864799": {
+          "is_ordered": false
+        },
+        "SP1244683_1864800": {
+          "is_ordered": false
+        },
+        "SP1244683_1864801": {
+          "is_ordered": false
+        }
+      },
+      "title": "ms",
+      "travel_document": {
+        "cardno": "007007007",
+        "expiration": 1786838400
+      }
+    },
+    {
+      "bags": 1,
+      "birthday": "1989-03-13",
+      "category": "adults",
+      "contact_passenger": true,
+      "firstname": "John",
+      "hand_bags": {},
+      "id": 4882156,
+      "insurance_price": null,
+      "insurance_type": "none",
+      "lastname": "Smith",
+      "nationality": "cz",
+      "priority_boarding": {
+        "SP1244683_1864798": {
+          "is_ordered": false
+        },
+        "SP1244683_1864799": {
+          "is_ordered": false
+        },
+        "SP1244683_1864800": {
+          "is_ordered": false
+        },
+        "SP1244683_1864801": {
+          "is_ordered": false
+        }
+      },
+      "title": "mr",
+      "travel_document": {
+        "cardno": "111111111",
+        "expiration": 1793500000
+      }
+    }
+  ],
+  "podio_status": 32,
+  "price": 1468.01,
+  "prices": [
+    "163.1",
+    "163.1",
+    "163.1",
+    "163.1"
+  ],
+  "route": [
+    "PRG",
+    "NRT"
+  ],
+  "sandbox": 0,
+  "segments": null,
+  "status": "confirmed",
+  "transfer_ids": []
+}

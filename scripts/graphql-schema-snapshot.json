@@ -1088,15 +1088,15 @@
           },
           {
             "name": "databaseId",
-            "description": "Internal database ID.",
+            "description": "Unique number identifying the booking in communication with support.",
             "args": [],
             "type": {
               "kind": "SCALAR",
               "name": "Int",
               "ofType": null
             },
-            "isDeprecated": true,
-            "deprecationReason": "Use id field instead."
+            "isDeprecated": false,
+            "deprecationReason": null
           },
           {
             "name": "allowedBaggage",
@@ -1853,6 +1853,18 @@
           {
             "name": "recheckRequired",
             "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "isReturn",
+            "description": "Determines whether Leg is related to return flight.",
             "args": [],
             "type": {
               "kind": "SCALAR",

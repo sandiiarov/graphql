@@ -28,6 +28,7 @@ export type Flight = {|
 export type Leg = {|
   id: string,
   recheckRequired: boolean,
+  isReturn: boolean,
   flightNo: number,
   departure: DepartureArrival,
   arrival: DepartureArrival,

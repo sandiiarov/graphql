@@ -34,6 +34,7 @@ export function sanitizeListItem(apiData: Object): BookingsItem {
     legs: legs.map((flight): Leg => ({
       id: flight.id,
       recheckRequired: flight.bags_recheck_required,
+      isReturn: flight.return === 1,
       flightNo: flight.flight_no,
       departure: sanitizeRoute({
         utc: idx(flight.departure, _ => _.when.utc),

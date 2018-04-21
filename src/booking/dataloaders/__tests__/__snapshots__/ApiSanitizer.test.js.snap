@@ -49,6 +49,7 @@ Object {
       },
       "flightNo": 3806,
       "id": "SP1123103_1678073",
+      "isReturn": false,
       "recheckRequired": false,
     },
     Object {
@@ -75,11 +76,154 @@ Object {
       },
       "flightNo": 3835,
       "id": "SP1123103_1678074",
+      "isReturn": false,
       "recheckRequired": false,
     },
   ],
   "price": Object {
     "amount": 1082,
+    "currency": "CZK",
+  },
+  "status": "confirmed",
+}
+`;
+
+exports[`Sanitize detail should work with return flight 1`] = `
+Object {
+  "arrival": Object {
+    "when": Object {
+      "local": 2017-07-09T21:20:00.000Z,
+      "utc": 2017-07-09T19:20:00.000Z,
+    },
+    "where": Object {
+      "cityName": "Prague",
+      "code": "PRG",
+    },
+  },
+  "authToken": "random_auth_token",
+  "departure": Object {
+    "when": Object {
+      "local": 2017-06-28T12:05:00.000Z,
+      "utc": 2017-06-28T10:05:00.000Z,
+    },
+    "where": Object {
+      "cityName": "Prague",
+      "code": "PRG",
+    },
+  },
+  "id": 3222550,
+  "legs": Array [
+    Object {
+      "airlineCode": "AZ",
+      "arrival": Object {
+        "when": Object {
+          "local": 2017-06-28T14:00:00.000Z,
+          "utc": 2017-06-28T12:00:00.000Z,
+        },
+        "where": Object {
+          "cityName": "Rome",
+          "code": "FCO",
+        },
+      },
+      "departure": Object {
+        "when": Object {
+          "local": 2017-06-28T12:05:00.000Z,
+          "utc": 2017-06-28T10:05:00.000Z,
+        },
+        "where": Object {
+          "cityName": "Prague",
+          "code": "PRG",
+        },
+      },
+      "flightNo": 7545,
+      "id": "SP1244683_1864798",
+      "isReturn": false,
+      "recheckRequired": false,
+    },
+    Object {
+      "airlineCode": "AZ",
+      "arrival": Object {
+        "when": Object {
+          "local": 2017-06-29T10:30:00.000Z,
+          "utc": 2017-06-29T01:30:00.000Z,
+        },
+        "where": Object {
+          "cityName": "Tokyo",
+          "code": "NRT",
+        },
+      },
+      "departure": Object {
+        "when": Object {
+          "local": 2017-06-28T15:15:00.000Z,
+          "utc": 2017-06-28T13:15:00.000Z,
+        },
+        "where": Object {
+          "cityName": "Rome",
+          "code": "FCO",
+        },
+      },
+      "flightNo": 784,
+      "id": "SP1244683_1864799",
+      "isReturn": false,
+      "recheckRequired": false,
+    },
+    Object {
+      "airlineCode": "AZ",
+      "arrival": Object {
+        "when": Object {
+          "local": 2017-07-09T18:30:00.000Z,
+          "utc": 2017-07-09T16:30:00.000Z,
+        },
+        "where": Object {
+          "cityName": "Milan",
+          "code": "MXP",
+        },
+      },
+      "departure": Object {
+        "when": Object {
+          "local": 2017-07-09T12:45:00.000Z,
+          "utc": 2017-07-09T03:45:00.000Z,
+        },
+        "where": Object {
+          "cityName": "Tokyo",
+          "code": "NRT",
+        },
+      },
+      "flightNo": 787,
+      "id": "SP1244683_1864800",
+      "isReturn": true,
+      "recheckRequired": false,
+    },
+    Object {
+      "airlineCode": "AZ",
+      "arrival": Object {
+        "when": Object {
+          "local": 2017-07-09T21:20:00.000Z,
+          "utc": 2017-07-09T19:20:00.000Z,
+        },
+        "where": Object {
+          "cityName": "Prague",
+          "code": "PRG",
+        },
+      },
+      "departure": Object {
+        "when": Object {
+          "local": 2017-07-09T19:50:00.000Z,
+          "utc": 2017-07-09T17:50:00.000Z,
+        },
+        "where": Object {
+          "cityName": "Milan",
+          "code": "MXP",
+        },
+      },
+      "flightNo": 7544,
+      "id": "SP1244683_1864801",
+      "isReturn": true,
+      "recheckRequired": false,
+    },
+  ],
+  "price": Object {
+    "amount": 38867,
     "currency": "CZK",
   },
   "status": "confirmed",
@@ -167,6 +311,7 @@ Object {
       },
       "flightNo": 3806,
       "id": "SP1123103_1678073",
+      "isReturn": false,
       "recheckRequired": false,
     },
     Object {
@@ -193,6 +338,7 @@ Object {
       },
       "flightNo": 3835,
       "id": "SP1123103_1678074",
+      "isReturn": false,
       "recheckRequired": false,
     },
   ],
