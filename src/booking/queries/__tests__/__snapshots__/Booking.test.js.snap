@@ -44,3 +44,14 @@ Object {
   },
 }
 `;
+
+exports[`single booking query should work with opaque Booking id 1`] = `
+Object {
+  "data": Object {
+    "booking": Object {
+      "databaseId": 2707251,
+      "id": "Qm9va2luZzoyNzA3MjUx",
+    },
+  },
+}
+`;

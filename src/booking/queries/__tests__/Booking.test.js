@@ -54,4 +54,14 @@ describe('single booking query', () => {
     }`;
     expect(await graphql(arrivalQuery)).toMatchSnapshot();
   });
+
+  it('should work with opaque Booking id', async () => {
+    const query = `{
+      booking(id: "Qm9va2luZzoyNzA3MjUx") {
+        id
+        databaseId
+      }
+    }`;
+    expect(await graphql(query)).toMatchSnapshot();
+  });
 });
