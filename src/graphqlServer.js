@@ -3,6 +3,8 @@
 import express from 'express';
 import graphqlHTTP from 'express-graphql';
 import cors from 'cors';
+import compression from 'compression';
+
 import type { $Request, $Response } from 'express';
 import {
   TraceCollector,
@@ -23,6 +25,7 @@ process.on('unhandledRejection', reason => {
 
 const app = express();
 app.use(cors({ methods: ['GET', 'POST'] }));
+app.use(compression());
 
 app.use('/', (request: $Request, response: $Response) => {
   if (process.env.NODE_ENV === 'production' && request.method === 'GET') {
