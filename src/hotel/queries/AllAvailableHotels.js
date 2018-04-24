@@ -1,12 +1,13 @@
 // @flow
 
-import { GraphQLNonNull, GraphQLInt } from 'graphql';
+import { GraphQLNonNull, GraphQLInt, GraphQLString } from 'graphql';
 import {
   connectionArgs,
   connectionDefinitions,
   cursorToOffset,
   toGlobalId,
 } from 'graphql-relay';
+import idx from 'idx';
 
 import { processInputArguments } from '../services/ParametersFormatter';
 import GraphQLHotelsSearchInput from '../types/inputs/AllAvailableHotelsSearchInput';
@@ -23,6 +24,27 @@ const { connectionType: AllHotelsConnection } = connectionDefinitions({
     stats: {
       type: GraphQLHotelAvailabilityStats,
       resolve: ancestor => ({ searchParams: ancestor.searchParams }),
+    },
+    cityName: {
+      type: GraphQLString,
+      description:
+        'Name of the closest city when quering with latitude & longitude',
+      resolve: async (
+        ancestor: Object,
+        args: Object,
+        { dataLoader }: GraphqlContextType,
+      ) => {
+        const { latitude, longitude } = ancestor.searchParams;
+
+        if (latitude !== undefined && longitude !== undefined) {
+          const hotelCities = await dataLoader.hotel.cities.loadByLatLng(
+            latitude,
+            longitude,
+          );
+          return idx(hotelCities, _ => _[0].name);
+        }
+        throw new Error('Cannot query cityName without latitude longitude.');
+      },
     },
   },
   nodeType: GraphQLHotelAvailability,
