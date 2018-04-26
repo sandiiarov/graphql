@@ -4,6 +4,8 @@ import { GraphQLObjectType } from 'graphql';
 
 import AllBookings from './booking/queries/AllBookings';
 import AllFlights from './flight/queries/AllFlights';
+import Currency from './currency/queries/Currency';
+import Currencies from './currency/queries/Currencies';
 import GeoIP from './geoip/queries/geoIP';
 import AllAvailableHotels from './hotel/queries/AllAvailableHotels';
 import AvailableHotel from './hotel/queries/AvailableHotel';
@@ -18,13 +20,17 @@ import AllFAQs from './FAQ/queries/AllFAQs';
 import AllFAQCategories from './FAQ/queries/AllFAQCategories';
 import FAQCategory from './FAQ/queries/FAQCategory';
 import FAQArticle from './FAQ/queries/FAQArticle';
+import { nodeField } from './node/node';
 
 export default new GraphQLObjectType({
   name: 'RootQuery',
   description: 'Root Query',
   fields: {
+    node: nodeField,
     allBookings: AllBookings,
     allFlights: AllFlights,
+    currency: Currency,
+    currencies: Currencies,
     geoIP: GeoIP,
     allAvailableHotels: AllAvailableHotels,
     availableHotel: AvailableHotel,
