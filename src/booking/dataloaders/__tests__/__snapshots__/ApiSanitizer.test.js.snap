@@ -84,7 +84,9 @@ Object {
     "amount": 1082,
     "currency": "CZK",
   },
+  "segments": null,
   "status": "confirmed",
+  "type": "BookingOneWay",
 }
 `;
 
@@ -226,7 +228,9 @@ Object {
     "amount": 38867,
     "currency": "CZK",
   },
+  "segments": null,
   "status": "confirmed",
+  "type": "BookingReturn",
 }
 `;
 
@@ -346,6 +350,8 @@ Object {
     "amount": 1082,
     "currency": "CZK",
   },
+  "segments": null,
   "status": "confirmed",
+  "type": "BookingOneWay",
 }
 `;

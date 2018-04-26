@@ -2,12 +2,14 @@
 
 import type { DepartureArrival } from '../Flight';
 
-export function sanitizeRoute(data: {|
+type RouteData = {|
   utc: ?number,
   local: ?number,
   code: ?string,
   cityName: ?string,
-|}): DepartureArrival {
+|};
+
+export function sanitizeRoute(data: RouteData): DepartureArrival {
   let whenObject = null;
   if (data.utc && data.local) {
     whenObject = {

@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`single booking query with multicity should return multicity details 1`] = `
+Object {
+  "data": Object {
+    "booking": Object {
+      "multicity": Object {
+        "trips": Array [
+          Object {
+            "arrival": Object {
+              "localTime": "2017-12-15T21:00:00.000Z",
+            },
+            "departure": Object {
+              "localTime": "2017-12-15T13:15:00.000Z",
+            },
+            "legs": Array [
+              Object {
+                "arrival": Object {
+                  "localTime": "2017-12-15T15:50:00.000Z",
+                },
+                "departure": Object {
+                  "localTime": "2017-12-15T13:15:00.000Z",
+                },
+              },
+              Object {
+                "arrival": Object {
+                  "localTime": "2017-12-15T21:00:00.000Z",
+                },
+                "departure": Object {
+                  "localTime": "2017-12-15T18:20:00.000Z",
+                },
+              },
+            ],
+          },
+          Object {
+            "arrival": Object {
+              "localTime": "2018-01-07T22:50:00.000Z",
+            },
+            "departure": Object {
+              "localTime": "2018-01-07T11:20:00.000Z",
+            },
+            "legs": Array [
+              Object {
+                "arrival": Object {
+                  "localTime": "2018-01-07T22:50:00.000Z",
+                },
+                "departure": Object {
+                  "localTime": "2018-01-07T11:20:00.000Z",
+                },
+              },
+            ],
+          },
+          Object {
+            "arrival": Object {
+              "localTime": "2018-01-11T18:30:00.000Z",
+            },
+            "departure": Object {
+              "localTime": "2018-01-11T07:50:00.000Z",
+            },
+            "legs": Array [
+              Object {
+                "arrival": Object {
+                  "localTime": "2018-01-11T10:15:00.000Z",
+                },
+                "departure": Object {
+                  "localTime": "2018-01-11T07:50:00.000Z",
+                },
+              },
+              Object {
+                "arrival": Object {
+                  "localTime": "2018-01-11T18:30:00.000Z",
+                },
+                "departure": Object {
+                  "localTime": "2018-01-11T13:10:00.000Z",
+                },
+              },
+            ],
+          },
+        ],
+      },
+      "oneWay": null,
+      "return": null,
+      "type": "MULTICITY",
+    },
+  },
+}
+`;

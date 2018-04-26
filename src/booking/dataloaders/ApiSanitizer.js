@@ -3,7 +3,7 @@
 import idx from 'idx';
 
 import { sanitizeRoute } from '../../flight/dataloaders/RouteSanitizer';
-import type { BookingsItem, Booking } from '../Booking';
+import type { BookingsItem, Booking, BookingType } from '../Booking';
 import type { Leg } from '../../flight/Flight';
 
 /**
@@ -13,49 +13,41 @@ import type { Leg } from '../../flight/Flight';
  * departure: computed from the first flight leg because API returns "0" for times
  */
 export function sanitizeListItem(apiData: Object): BookingsItem {
-  const legs = apiData.flights;
+  const legs = apiData.flights.map((flight): Leg => ({
+    id: flight.id,
+    recheckRequired: flight.bags_recheck_required,
+    isReturn: flight.return === 1,
+    flightNo: flight.flight_no,
+    departure: sanitizeRoute({
+      utc: idx(flight.departure, _ => _.when.utc),
+      local: idx(flight.departure, _ => _.when.local),
+      code: idx(flight.departure, _ => _.where.code),
+      cityName: idx(flight.departure, _ => _.where.name),
+    }),
+    arrival: sanitizeRoute({
+      utc: idx(flight.arrival, _ => _.when.utc),
+      local: idx(flight.arrival, _ => _.when.local),
+      code: idx(flight.arrival, _ => _.where.code),
+      cityName: idx(flight.arrival, _ => _.where.name),
+    }),
+    airlineCode: flight.airline.iata,
+  }));
   const lastLeg = legs[legs.length - 1];
   const firstLeg = legs[0];
 
   return {
     id: parseInt(apiData.bid),
-    arrival: sanitizeRoute({
-      utc: idx(lastLeg.arrival, _ => _.when.utc),
-      local: idx(lastLeg.arrival, _ => _.when.local),
-      code: idx(lastLeg.arrival, _ => _.where.code),
-      cityName: idx(lastLeg.arrival, _ => _.where.name),
-    }),
-    departure: sanitizeRoute({
-      utc: idx(firstLeg.departure, _ => _.when.utc),
-      local: idx(firstLeg.departure, _ => _.when.local),
-      code: idx(firstLeg.departure, _ => _.where.code),
-      cityName: idx(firstLeg.departure, _ => _.where.name),
-    }),
-    legs: legs.map((flight): Leg => ({
-      id: flight.id,
-      recheckRequired: flight.bags_recheck_required,
-      isReturn: flight.return === 1,
-      flightNo: flight.flight_no,
-      departure: sanitizeRoute({
-        utc: idx(flight.departure, _ => _.when.utc),
-        local: idx(flight.departure, _ => _.when.local),
-        code: idx(flight.departure, _ => _.where.code),
-        cityName: idx(flight.departure, _ => _.where.name),
-      }),
-      arrival: sanitizeRoute({
-        utc: idx(flight.arrival, _ => _.when.utc),
-        local: idx(flight.arrival, _ => _.when.local),
-        code: idx(flight.arrival, _ => _.where.code),
-        cityName: idx(flight.arrival, _ => _.where.name),
-      }),
-      airlineCode: flight.airline.iata,
-    })),
+    departure: firstLeg.departure,
+    arrival: lastLeg.arrival,
+    legs,
     price: {
       amount: apiData.original_price,
       currency: apiData.original_currency,
     },
     authToken: apiData.auth_token,
     status: apiData.status,
+    type: detectType(apiData),
+    segments: apiData.segments,
   };
 }
 
@@ -117,4 +109,20 @@ function parseAdditionalBaggage(
     });
   }
   return additionalBaggage;
+}
+
+function detectType(apiData): BookingType {
+  if (Array.isArray(apiData.flights)) {
+    const returnFlight = apiData.flights.find(flight => flight.return === 1);
+
+    if (returnFlight) {
+      return 'BookingReturn';
+    }
+  }
+
+  if (Array.isArray(apiData.segments) && apiData.segments.length) {
+    return 'BookingMulticity';
+  }
+
+  return 'BookingOneWay';
 }

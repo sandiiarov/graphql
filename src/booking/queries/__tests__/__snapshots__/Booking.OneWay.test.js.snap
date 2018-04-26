@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`single booking query with one way trip should return details just about one way trip 1`] = `
+Object {
+  "data": Object {
+    "booking": Object {
+      "multicity": null,
+      "oneWay": Object {
+        "trip": Object {
+          "arrival": Object {
+            "localTime": "2017-09-09T23:30:00.000Z",
+          },
+          "departure": Object {
+            "localTime": "2017-09-09T21:10:00.000Z",
+          },
+          "legs": Array [
+            Object {
+              "duration": 80,
+            },
+          ],
+        },
+      },
+      "return": null,
+      "type": "ONE_WAY",
+    },
+  },
+}
+`;

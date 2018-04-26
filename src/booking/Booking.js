@@ -7,6 +7,11 @@ import type { AllowedBaggage } from './Baggage';
 /**
  * This is fetched from 'bookings' endpoint.
  */
+export type BookingType =
+  | 'BookingOneWay'
+  | 'BookingReturn'
+  | 'BookingMulticity';
+
 export type BookingsItem = {
   id: number,
   arrival: DepartureArrival,
@@ -15,6 +20,8 @@ export type BookingsItem = {
   price: Price,
   authToken: string,
   status: string,
+  type: BookingType,
+  segments: string[] | null,
 };
 
 /**

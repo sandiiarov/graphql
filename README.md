@@ -68,6 +68,40 @@ Send `Accept-Language` HTTP header with ISO locale string in format `language_te
 
 Some queries relies on input argument `Locale`, but soon we realized we would end-up with every query accepting locale. Therefore we opted for `Accept-Language` HTTP header and all `Locale` and `Language` inputs are deprecated.
 
+## Booking type
+
+There are currently three different types of bookings:
+- ONE_WAY is simply the trip from one place to another, A -> B -> C, e.g. flying from Prague to Barcelona, with possible stopovers
+- RETURN is the trip to somewhere and back A <-> B, e.g. from Prague to Barcelona on July 1, and then back from Barcelona to Prague on July 14
+- MULTICITY - is set of trips you will do over time from one place to another, booked at once. Basically it's array of ONE_WAY
+
+As each type requires different shape of data to display such booking info optimally, `Booking` has three fields `oneWay`, `return` & `multicity` and for each booking, all but one fields will be null. So if the booking has `type` equal to `RETURN`, `oneWay` and `multicity` will be null but `return` will contain relevant information.
+
+So the possible query using fragments could look like this:
+
+```
+{
+  allBookings {
+    edges {
+      node {
+        type
+        oneWay { 
+          ...OneWayBooking
+        }
+        return {
+          ...ReturnBooking
+        }
+        multicity {
+          ...MulticityBooking 
+        }
+      }
+    }
+  }
+}
+```
+
+And then, based on `type`, you decide what fragment to use.
+
 ## Output Types
 
 Every output type should provide relevant fields. This is basically why we are writing this proxy. It's good idea to write descriptions to every field because even though it may be obvious for you - it may significantly help others.

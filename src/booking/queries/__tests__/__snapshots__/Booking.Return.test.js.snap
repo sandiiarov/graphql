@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`single booking query with return flight should return details about both outbound & inbound trips 1`] = `
+Object {
+  "data": Object {
+    "booking": Object {
+      "multicity": null,
+      "oneWay": null,
+      "return": Object {
+        "inbound": Object {
+          "arrival": Object {
+            "localTime": "2017-07-09T21:20:00.000Z",
+          },
+          "departure": Object {
+            "localTime": "2017-07-09T12:45:00.000Z",
+          },
+        },
+        "outbound": Object {
+          "arrival": Object {
+            "localTime": "2017-06-29T10:30:00.000Z",
+          },
+          "departure": Object {
+            "localTime": "2017-06-28T12:05:00.000Z",
+          },
+        },
+      },
+      "type": "RETURN",
+    },
+  },
+}
+`;

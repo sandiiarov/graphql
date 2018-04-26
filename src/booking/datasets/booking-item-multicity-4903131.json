@@ -1,0 +1,345 @@
+{
+  "arrival": {
+    "when": 0,
+    "where": {
+      "code": "VKO",
+      "name": "Moscow"
+    }
+  },
+  "auth_token": "random-token",
+  "bag_params": {},
+  "bags": 1,
+  "bags_restrictions": {
+    "hands": {},
+    "holds": {
+      "1": {
+        "height": 81,
+        "length": 119,
+        "weight": 20,
+        "width": 119
+      }
+    }
+  },
+  "bid": 4903131,
+  "booked_at": "skypicker",
+  "booking_token": "random-booking-token",
+  "brand": "kiwicom",
+  "cancel_requested": null,
+  "card_payment": 875.62,
+  "contact": {
+    "email": "test@kiwi.com",
+    "phone": "+39 111222333444",
+    "pid": 7439711
+  },
+  "created": 1512123109,
+  "credits_payment": 0,
+  "currency": "EUR",
+  "departure": {
+    "when": 0,
+    "where": {
+      "code": "SXF",
+      "name": "Berlin"
+    }
+  },
+  "disabled_bags_in_mmb": false,
+  "flight_ids": [
+    "328502375",
+    "326338105",
+    "324338339",
+    "327772382",
+    "SP1704733_2569432"
+  ],
+  "flights": [
+    {
+      "airline": {
+        "checkin": 4,
+        "doing_online_checkin": 1,
+        "iata": "FR",
+        "name": "Ryanair",
+        "payment_card_copy_eticket_requirement": false
+      },
+      "arrival": {
+        "when": {
+          "local": 1513353000,
+          "utc": 1513349400
+        },
+        "where": {
+          "city_id": "barcelona_es",
+          "code": "BCN",
+          "country": "ES",
+          "name": "Barcelona",
+          "station": "Barcelona–El Prat"
+        }
+      },
+      "bags_recheck_disclaimer": "",
+      "bags_recheck_required": false,
+      "departure": {
+        "when": {
+          "local": 1513343700,
+          "utc": 1513340100
+        },
+        "where": {
+          "city_id": "berlin_de",
+          "code": "SXF",
+          "country": "DE",
+          "name": "Berlin",
+          "station": "Berlin Schönefeld"
+        }
+      },
+      "extras": "FR",
+      "flight_no": 132,
+      "guarantee": false,
+      "guarantee_disclaimer": "",
+      "id": "324338339",
+      "reservation_number": null,
+      "return": 0
+    },
+    {
+      "airline": {
+        "checkin": 1,
+        "doing_online_checkin": 1,
+        "iata": "DY",
+        "name": "Norwegian",
+        "payment_card_copy_eticket_requirement": false
+      },
+      "arrival": {
+        "when": {
+          "local": 1513371600,
+          "utc": 1513389600
+        },
+        "where": {
+          "city_id": "new-york-city_ny_us",
+          "code": "EWR",
+          "country": "US",
+          "name": "New York",
+          "station": "Newark Liberty International"
+        }
+      },
+      "bags_recheck_disclaimer": "",
+      "bags_recheck_required": true,
+      "departure": {
+        "when": {
+          "local": 1513362000,
+          "utc": 1513358400
+        },
+        "where": {
+          "city_id": "barcelona_es",
+          "code": "BCN",
+          "country": "ES",
+          "name": "Barcelona",
+          "station": "Barcelona–El Prat"
+        }
+      },
+      "extras": "DY",
+      "flight_no": 7196,
+      "guarantee": true,
+      "guarantee_disclaimer": "",
+      "id": "326338105",
+      "reservation_number": null,
+      "return": 0
+    },
+    {
+      "airline": {
+        "checkin": 1,
+        "doing_online_checkin": 1,
+        "iata": "DY",
+        "name": "Norwegian",
+        "payment_card_copy_eticket_requirement": false
+      },
+      "arrival": {
+        "when": {
+          "local": 1515365400,
+          "utc": 1515365400
+        },
+        "where": {
+          "city_id": "london_gb",
+          "code": "LGW",
+          "country": "GB",
+          "name": "London",
+          "station": "Gatwick"
+        }
+      },
+      "bags_recheck_disclaimer": "",
+      "bags_recheck_required": false,
+      "departure": {
+        "when": {
+          "local": 1515324000,
+          "utc": 1515342000
+        },
+        "where": {
+          "city_id": "new-york-city_ny_us",
+          "code": "JFK",
+          "country": "US",
+          "name": "New York",
+          "station": "John F. Kennedy International"
+        }
+      },
+      "extras": "DY",
+      "flight_no": 7014,
+      "guarantee": true,
+      "guarantee_disclaimer": "",
+      "id": "328502375",
+      "reservation_number": null,
+      "return": 0
+    },
+    {
+      "airline": {
+        "checkin": 4,
+        "doing_online_checkin": 1,
+        "iata": "FR",
+        "name": "Ryanair",
+        "payment_card_copy_eticket_requirement": false
+      },
+      "arrival": {
+        "when": {
+          "local": 1515665700,
+          "utc": 1515662100
+        },
+        "where": {
+          "city_id": "karlsruhe_de",
+          "code": "FKB",
+          "country": "DE",
+          "name": "Baden-Baden",
+          "station": "Karlsruhe/Baden-Baden"
+        }
+      },
+      "bags_recheck_disclaimer": "",
+      "bags_recheck_required": false,
+      "departure": {
+        "when": {
+          "local": 1515657000,
+          "utc": 1515657000
+        },
+        "where": {
+          "city_id": "london_gb",
+          "code": "STN",
+          "country": "GB",
+          "name": "London",
+          "station": "London Stansted"
+        }
+      },
+      "extras": "FR",
+      "flight_no": 9772,
+      "guarantee": true,
+      "guarantee_disclaimer": "",
+      "id": "327772382",
+      "reservation_number": null,
+      "return": 0
+    },
+    {
+      "airline": {
+        "checkin": 0,
+        "doing_online_checkin": null,
+        "iata": "DP",
+        "name": "Pobeda",
+        "payment_card_copy_eticket_requirement": false
+      },
+      "arrival": {
+        "when": {
+          "local": 1515695400,
+          "utc": 1515684600
+        },
+        "where": {
+          "city_id": "moscow_ru",
+          "code": "VKO",
+          "country": "RU",
+          "name": "Moscow",
+          "station": "Vnukovo International"
+        }
+      },
+      "bags_recheck_disclaimer": "",
+      "bags_recheck_required": true,
+      "departure": {
+        "when": {
+          "local": 1515676200,
+          "utc": 1515672600
+        },
+        "where": {
+          "city_id": "karlsruhe_de",
+          "code": "FKB",
+          "country": "DE",
+          "name": "Baden-Baden",
+          "station": "Karlsruhe/Baden-Baden"
+        }
+      },
+      "extras": null,
+      "flight_no": 816,
+      "guarantee": true,
+      "guarantee_disclaimer": "",
+      "id": "SP1704733_2569432",
+      "reservation_number": null,
+      "return": 0
+    }
+  ],
+  "grace_period_fee": 35,
+  "grade": {
+    "id": "A",
+    "time": 30
+  },
+  "max_bags": 1,
+  "netverify_requested": true,
+  "original_currency": "CZK",
+  "original_flight_price": 637.83,
+  "original_price": 22446,
+  "paid_over": "zooz",
+  "passenger_ids": [
+    7439711
+  ],
+  "passengers": [
+    {
+      "bags": 1,
+      "birthday": "1900-01-01",
+      "category": "adult",
+      "contact_passenger": true,
+      "firstname": "TEST",
+      "hand_bags": {},
+      "id": 7439711,
+      "insurance_price": 58.13,
+      "insurance_type": "skysilver",
+      "lastname": "TEST",
+      "nationality": "jp",
+      "priority_boarding": {
+        "324338339": {
+          "is_ordered": false
+        },
+        "326338105": {
+          "is_ordered": false
+        },
+        "327772382": {
+          "is_ordered": false
+        },
+        "328502375": {
+          "is_ordered": false
+        },
+        "SP1704733_2569432": {
+          "is_ordered": false
+        }
+      },
+      "title": "mr",
+      "travel_document": {
+        "cardno": "111ASDFG111",
+        "expiration": 4124131200
+      }
+    }
+  ],
+  "podio_status": null,
+  "price": 875.62,
+  "prices": [
+    "37.5",
+    "179.0",
+    "274.0",
+    "11.0",
+    "76.01"
+  ],
+  "route": [
+    "SXF",
+    "VKO"
+  ],
+  "sandbox": 1,
+  "segments": [
+    "2",
+    "3"
+  ],
+  "status": "closed",
+  "transfer_ids": []
+}
