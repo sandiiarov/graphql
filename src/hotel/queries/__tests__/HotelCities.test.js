@@ -26,7 +26,7 @@ const matchingCities = [
 
 describe('hotel cities query', () => {
   it('works with empty string prefix', async () => {
-    AlgoliaMock.setMatchedCities(matchingCities);
+    AlgoliaMock.setMatchedByPrefix(matchingCities);
     expect(
       await graphql(
         `
@@ -45,7 +45,7 @@ describe('hotel cities query', () => {
   });
 
   it('works for normal request', async () => {
-    AlgoliaMock.setMatchedCities(matchingCities, 'abc');
+    AlgoliaMock.setMatchedByPrefix(matchingCities, 'abc');
     expect(
       await graphql(
         `
@@ -70,7 +70,7 @@ describe('hotel cities query', () => {
   });
 
   it('works with empty response', async () => {
-    AlgoliaMock.setMatchedCities([], 'abcd');
+    AlgoliaMock.setMatchedByPrefix([], 'abcd');
     expect(
       await graphql(
         `

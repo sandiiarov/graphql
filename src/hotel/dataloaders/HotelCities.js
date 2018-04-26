@@ -12,7 +12,8 @@ type SearchInput =
       type: 'prefix',
       prefix: string,
     |}
-  | {| type: 'latLng', lat: number, lng: number |};
+  | {| type: 'latLng', lat: number, lng: number |}
+  | {| type: 'cityId', cityId: number |};
 
 export default class LocationDataLoader {
   dataLoader: DataLoader<SearchInput, HotelCity[]>;
@@ -33,11 +34,20 @@ export default class LocationDataLoader {
     const responses = await Promise.all(
       inputs.map(input => {
         if (input.type === 'prefix') {
-          return citiesIndex.search(input.prefix);
+          return citiesIndex.search({
+            query: input.prefix,
+            restrictSearchableAttributes: ['name'],
+          });
         }
         if (input.type === 'latLng') {
           return citiesIndex.search({
             aroundLatLng: `${input.lat}, ${input.lng}`,
+          });
+        }
+        if (input.type === 'cityId') {
+          return citiesIndex.search({
+            query: input.cityId,
+            restrictSearchableAttributes: ['city_id'],
           });
         }
       }),
@@ -55,6 +65,10 @@ export default class LocationDataLoader {
 
   loadByLatLng(lat: number, lng: number): Promise<HotelCity[]> {
     return this.dataLoader.load({ type: 'latLng', lat, lng });
+  }
+
+  loadByCityId(cityId: number): Promise<HotelCity[]> {
+    return this.dataLoader.load({ type: 'cityId', cityId });
   }
 }
 

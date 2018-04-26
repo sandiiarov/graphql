@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`All hotels query cityName should return cityName 1`] = `
+exports[`All hotels query cityName should return cityName when querying with cityId 1`] = `
 Object {
   "data": Object {
     "allAvailableHotels": Object {
@@ -10,7 +10,17 @@ Object {
 }
 `;
 
-exports[`All hotels query cityName should throw an error if you query without latitude and longitude 1`] = `
+exports[`All hotels query cityName should return cityName when querying with lat lng 1`] = `
+Object {
+  "data": Object {
+    "allAvailableHotels": Object {
+      "cityName": "Abcoude",
+    },
+  },
+}
+`;
+
+exports[`All hotels query cityName should throw an error if you query without cityId or without latitude and longitude 1`] = `
 Object {
   "data": Object {
     "allAvailableHotels": Object {
@@ -18,7 +28,7 @@ Object {
     },
   },
   "errors": Array [
-    [GraphQLError: Cannot query cityName without latitude longitude.],
+    [GraphQLError: Cannot query cityName without latitude longitude or cityId.],
   ],
 }
 `;

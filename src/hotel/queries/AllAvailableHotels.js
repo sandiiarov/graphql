@@ -27,14 +27,13 @@ const { connectionType: AllHotelsConnection } = connectionDefinitions({
     },
     cityName: {
       type: GraphQLString,
-      description:
-        'Name of the closest city when quering with latitude & longitude',
+      description: 'Name of the closest city',
       resolve: async (
         ancestor: Object,
         args: Object,
         { dataLoader }: GraphqlContextType,
       ) => {
-        const { latitude, longitude } = ancestor.searchParams;
+        const { latitude, longitude, cityId } = ancestor.searchParams;
 
         if (latitude !== undefined && longitude !== undefined) {
           const hotelCities = await dataLoader.hotel.cities.loadByLatLng(
@@ -43,7 +42,15 @@ const { connectionType: AllHotelsConnection } = connectionDefinitions({
           );
           return idx(hotelCities, _ => _[0].name);
         }
-        throw new Error('Cannot query cityName without latitude longitude.');
+        if (cityId) {
+          const hotelCities = await dataLoader.hotel.cities.loadByCityId(
+            cityId,
+          );
+          return idx(hotelCities, _ => _[0].name);
+        }
+        throw new Error(
+          'Cannot query cityName without latitude longitude or cityId.',
+        );
       },
     },
   },

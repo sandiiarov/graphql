@@ -16,8 +16,19 @@ module.exports = () => ({
   }),
 });
 
-module.exports.setMatchedCities = (cities: Object[], prefix?: string) => {
-  const key = prefix || 'undefined';
+module.exports.setMatchedByPrefix = (cities: Object[], prefix?: string) => {
+  const key = stringify({
+    query: prefix ? prefix : '',
+    restrictSearchableAttributes: ['name'],
+  });
+  mockResponses[key] = cities;
+};
+
+module.exports.setMatchedByCityId = (cities: Object[], cityId: string) => {
+  const key = stringify({
+    query: cityId,
+    restrictSearchableAttributes: ['city_id'],
+  });
   mockResponses[key] = cities;
 };
 
