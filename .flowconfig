@@ -1,6 +1,7 @@
 [ignore]
 <PROJECT_ROOT>/node_modules/config-chain/test/broken.json
 <PROJECT_ROOT>/node_modules/protobufjs-no-cli/.*
+<PROJECT_ROOT>/node_modules/graphql-relay/lib/node/node.js.flow
 
 [include]
 
