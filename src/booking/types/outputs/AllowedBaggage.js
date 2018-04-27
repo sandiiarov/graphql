@@ -1,6 +1,6 @@
 // @flow
 
-import _ from 'lodash';
+import * as R from 'ramda';
 import { GraphQLObjectType, GraphQLList } from 'graphql';
 import GraphQLBaggage from './Baggage';
 import GraphQLAdditionalBaggage from './AdditionalBaggage';
@@ -26,7 +26,7 @@ export default new GraphQLObjectType({
       type: new GraphQLList(GraphQLBaggage), // carry-on
       description: 'Small carry-on luggage.',
       resolve: ({ cabin }: AllowedBaggage): Array<Baggage> => {
-        return cabin.filter(bag => isNotCompletelyNullable(bag));
+        return cabin.filter(isNotCompletelyNullable);
       },
     },
 
@@ -34,12 +34,14 @@ export default new GraphQLObjectType({
       type: new GraphQLList(GraphQLBaggage),
       description: 'Baggage checked online.',
       resolve: ({ checked }: AllowedBaggage): Array<Baggage> => {
-        return checked.filter(bag => isNotCompletelyNullable(bag));
+        return checked.filter(isNotCompletelyNullable);
       },
     },
   },
 });
 
-function isNotCompletelyNullable(object): boolean {
-  return !_.isEmpty(_.omitBy(object, _.isNull));
-}
+const isNotCompletelyNullable = R.compose(
+  R.not,
+  R.isEmpty,
+  R.reject(R.equals(null)),
+);

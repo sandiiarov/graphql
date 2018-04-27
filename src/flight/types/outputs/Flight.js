@@ -1,6 +1,6 @@
 // @flow
 
-import _ from 'lodash';
+import * as R from 'ramda';
 import {
   GraphQLInt,
   GraphQLList,
@@ -35,7 +35,7 @@ export default new GraphQLObjectType({
         args: Object,
         { dataLoader }: GraphqlContextType,
       ): Promise<Array<?Airline>> =>
-        _.uniq(airlines).map(airlineCode =>
+        R.uniq(airlines).map(airlineCode =>
           dataLoader.airline.load(airlineCode),
         ),
     },

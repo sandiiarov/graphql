@@ -2,7 +2,6 @@
 
 import DataLoader from 'dataloader';
 import { DateTime } from 'luxon';
-import _ from 'lodash';
 
 import { get } from '../../common/services/HttpRequest';
 import config from '../../../config/application';
@@ -189,9 +188,9 @@ export default class FlightDataloader {
   }
 
   _stringifyRadius({ radius }: RadiusLocation): string {
-    const lat = _.round(radius.lat, 2);
-    const lng = _.round(radius.lng, 2);
-    const distance = _.round(radius.radius, 0);
+    const lat = Math.round(radius.lat * 100) / 100;
+    const lng = Math.round(radius.lng * 100) / 100;
+    const distance = Math.round(radius.radius);
     return `${lat}-${lng}-${distance}km`;
   }
 }

@@ -1,6 +1,6 @@
 // @flow
 
-import _ from 'lodash';
+import * as R from 'ramda';
 import { DateTime } from 'luxon';
 import { fromGlobalId } from 'graphql-relay';
 import idx from 'idx';
@@ -193,5 +193,5 @@ function sanitizeHotelFacilities(params: HotelFacilities): string | null {
       hotelFacilities.push(facilitiesList[key]);
     }
   });
-  return _.uniq(hotelFacilities).join(',') || null;
+  return R.uniq(hotelFacilities).join(',') || null;
 }
