@@ -40,7 +40,7 @@ import type {
   FAQArticleDetail,
 } from '../../FAQ/dataloaders/getFAQArticle';
 import type { FAQCategoryType } from '../../FAQ/types/outputs/FAQCategory';
-import LocaleMap from '../types/enums/LocaleMap';
+import { ISOLocalesToObsolete } from '../types/enums/LocaleValues';
 
 /**
  * FIXME:
@@ -88,7 +88,7 @@ export function createContext(
   acceptLanguage: ?string,
 ): GraphqlContextType {
   const locale =
-    acceptLanguage && LocaleMap.hasOwnProperty(acceptLanguage)
+    acceptLanguage && ISOLocalesToObsolete.hasOwnProperty(acceptLanguage)
       ? acceptLanguage
       : 'en_US';
   const bookings = new BookingsLoader(token);

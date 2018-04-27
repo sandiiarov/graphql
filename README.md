@@ -64,9 +64,9 @@ These style guides are not applied in this project correctly and it's wrong. How
 
 ## Localisation
 
-Some queries relies on input argument `Locale`, but soon we realized we would end-up with every query accepting locale. Therefore we opted for `Accept-Language` HTTP header.
+Send `Accept-Language` HTTP header with ISO locale string in format `language_territory` to get localised data, e.g. `en_US`, `cs_CZ`.
 
-Always use just `locale` property from GraphQL context for localisation. `Locale` is deprecated.
+Some queries relies on input argument `Locale`, but soon we realized we would end-up with every query accepting locale. Therefore we opted for `Accept-Language` HTTP header and all `Locale` and `Language` inputs are deprecated.
 
 ## Output Types
 

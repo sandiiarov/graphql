@@ -10,6 +10,7 @@ RestApiMock.onGet(
     lat: 50,
     lon: 14,
     radius: 50,
+    locale: 'en-US',
   }),
 ).replyWithData(PragueDataset);
 

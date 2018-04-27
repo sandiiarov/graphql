@@ -8,6 +8,7 @@ RestApiMock.onGet(
   config.restApiEndpoint.allLocations({
     type: 'slug',
     term: 'prague-czech-republic',
+    locale: 'en-US',
   }),
 ).replyWithData(PragueDataset);
 
@@ -17,6 +18,7 @@ RestApiMock.onGet(
     lat: 50.0755381,
     lon: 14.4378005,
     radius: 160,
+    locale: 'en-US',
   }),
 ).replyWithData(PragueDataset);
 

@@ -16,13 +16,19 @@ export default {
     },
     locale: {
       type: GraphQLLocale,
+      description:
+        'DEPRECATED - use "Accept-Language" HTTP header to specify locale.' +
+        'Language tag in the format of the RFC 5646.',
     },
   },
   resolve: async (
     ancestor: mixed,
-    { id, locale }: Object,
-    { dataLoader }: GraphqlContextType,
+    { id, locale: deprecatedLocale }: Object,
+    { dataLoader, locale }: GraphqlContextType,
   ) => {
-    return dataLoader.location.loadById(id, locale);
+    // Deprecated locale takes precedence to keep backward compatibility
+    const useLocale = deprecatedLocale ? deprecatedLocale : locale;
+
+    return dataLoader.location.loadById(id, useLocale);
   },
 };

@@ -6,7 +6,7 @@ import AllLocations from '../AllLocations';
 import PragueDataset from '../../datasets/prague.json';
 
 RestApiMock.onGet(
-  config.restApiEndpoint.allLocations({ term: 'PRG' }),
+  config.restApiEndpoint.allLocations({ term: 'PRG', locale: 'en-US' }),
 ).replyWithData(PragueDataset);
 
 describe('all locations query', () => {

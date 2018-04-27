@@ -11,6 +11,7 @@ RestApiMock.onGet(
     low_lon: 14,
     low_lat: 49.5,
     high_lon: 14.5,
+    locale: 'en-US',
   }),
 ).replyWithData(PragueDataset);
 

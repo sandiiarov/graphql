@@ -534,7 +534,7 @@
               },
               {
                 "name": "locale",
-                "description": null,
+                "description": "DEPRECATED - use \"Accept-Language\" HTTP header to specify locale.Language tag in the format of the RFC 5646.",
                 "type": {
                   "kind": "ENUM",
                   "name": "Locale",
@@ -4532,7 +4532,7 @@
       {
         "kind": "ENUM",
         "name": "Language",
-        "description": null,
+        "description": "Use \"Accept-Language\" HTTP header to specify locale.",
         "fields": null,
         "inputFields": null,
         "interfaces": null,
@@ -4540,278 +4540,278 @@
           {
             "name": "ar",
             "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
+            "isDeprecated": true,
+            "deprecationReason": "Use \"Accept-Language\" HTTP header to specify locale."
           },
           {
             "name": "bg",
             "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
+            "isDeprecated": true,
+            "deprecationReason": "Use \"Accept-Language\" HTTP header to specify locale."
           },
           {
             "name": "ca",
             "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
+            "isDeprecated": true,
+            "deprecationReason": "Use \"Accept-Language\" HTTP header to specify locale."
           },
           {
             "name": "cs",
             "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
+            "isDeprecated": true,
+            "deprecationReason": "Use \"Accept-Language\" HTTP header to specify locale."
           },
           {
             "name": "da",
             "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
+            "isDeprecated": true,
+            "deprecationReason": "Use \"Accept-Language\" HTTP header to specify locale."
           },
           {
             "name": "de",
             "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
+            "isDeprecated": true,
+            "deprecationReason": "Use \"Accept-Language\" HTTP header to specify locale."
           },
           {
             "name": "el",
             "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
+            "isDeprecated": true,
+            "deprecationReason": "Use \"Accept-Language\" HTTP header to specify locale."
           },
           {
             "name": "en",
             "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
+            "isDeprecated": true,
+            "deprecationReason": "Use \"Accept-Language\" HTTP header to specify locale."
           },
           {
             "name": "engb",
             "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
+            "isDeprecated": true,
+            "deprecationReason": "Use \"Accept-Language\" HTTP header to specify locale."
           },
           {
             "name": "enus",
             "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
+            "isDeprecated": true,
+            "deprecationReason": "Use \"Accept-Language\" HTTP header to specify locale."
           },
           {
             "name": "es",
             "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
+            "isDeprecated": true,
+            "deprecationReason": "Use \"Accept-Language\" HTTP header to specify locale."
           },
           {
             "name": "esar",
             "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
+            "isDeprecated": true,
+            "deprecationReason": "Use \"Accept-Language\" HTTP header to specify locale."
           },
           {
             "name": "et",
             "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
+            "isDeprecated": true,
+            "deprecationReason": "Use \"Accept-Language\" HTTP header to specify locale."
           },
           {
             "name": "fi",
             "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
+            "isDeprecated": true,
+            "deprecationReason": "Use \"Accept-Language\" HTTP header to specify locale."
           },
           {
             "name": "fr",
             "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
+            "isDeprecated": true,
+            "deprecationReason": "Use \"Accept-Language\" HTTP header to specify locale."
           },
           {
             "name": "he",
             "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
+            "isDeprecated": true,
+            "deprecationReason": "Use \"Accept-Language\" HTTP header to specify locale."
           },
           {
             "name": "hr",
             "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
+            "isDeprecated": true,
+            "deprecationReason": "Use \"Accept-Language\" HTTP header to specify locale."
           },
           {
             "name": "hu",
             "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
+            "isDeprecated": true,
+            "deprecationReason": "Use \"Accept-Language\" HTTP header to specify locale."
           },
           {
             "name": "id",
             "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
+            "isDeprecated": true,
+            "deprecationReason": "Use \"Accept-Language\" HTTP header to specify locale."
           },
           {
             "name": "is",
             "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
+            "isDeprecated": true,
+            "deprecationReason": "Use \"Accept-Language\" HTTP header to specify locale."
           },
           {
             "name": "it",
             "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
+            "isDeprecated": true,
+            "deprecationReason": "Use \"Accept-Language\" HTTP header to specify locale."
           },
           {
             "name": "ja",
             "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
+            "isDeprecated": true,
+            "deprecationReason": "Use \"Accept-Language\" HTTP header to specify locale."
           },
           {
             "name": "ko",
             "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
+            "isDeprecated": true,
+            "deprecationReason": "Use \"Accept-Language\" HTTP header to specify locale."
           },
           {
             "name": "lt",
             "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
+            "isDeprecated": true,
+            "deprecationReason": "Use \"Accept-Language\" HTTP header to specify locale."
           },
           {
             "name": "lv",
             "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
+            "isDeprecated": true,
+            "deprecationReason": "Use \"Accept-Language\" HTTP header to specify locale."
           },
           {
             "name": "ms",
             "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
+            "isDeprecated": true,
+            "deprecationReason": "Use \"Accept-Language\" HTTP header to specify locale."
           },
           {
             "name": "nl",
             "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
+            "isDeprecated": true,
+            "deprecationReason": "Use \"Accept-Language\" HTTP header to specify locale."
           },
           {
             "name": "no",
             "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
+            "isDeprecated": true,
+            "deprecationReason": "Use \"Accept-Language\" HTTP header to specify locale."
           },
           {
             "name": "pl",
             "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
+            "isDeprecated": true,
+            "deprecationReason": "Use \"Accept-Language\" HTTP header to specify locale."
           },
           {
             "name": "pt",
             "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
+            "isDeprecated": true,
+            "deprecationReason": "Use \"Accept-Language\" HTTP header to specify locale."
           },
           {
             "name": "ptbr",
             "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
+            "isDeprecated": true,
+            "deprecationReason": "Use \"Accept-Language\" HTTP header to specify locale."
           },
           {
             "name": "ptpt",
             "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
+            "isDeprecated": true,
+            "deprecationReason": "Use \"Accept-Language\" HTTP header to specify locale."
           },
           {
             "name": "ro",
             "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
+            "isDeprecated": true,
+            "deprecationReason": "Use \"Accept-Language\" HTTP header to specify locale."
           },
           {
             "name": "ru",
             "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
+            "isDeprecated": true,
+            "deprecationReason": "Use \"Accept-Language\" HTTP header to specify locale."
           },
           {
             "name": "sk",
             "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
+            "isDeprecated": true,
+            "deprecationReason": "Use \"Accept-Language\" HTTP header to specify locale."
           },
           {
             "name": "sl",
             "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
+            "isDeprecated": true,
+            "deprecationReason": "Use \"Accept-Language\" HTTP header to specify locale."
           },
           {
             "name": "sr",
             "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
+            "isDeprecated": true,
+            "deprecationReason": "Use \"Accept-Language\" HTTP header to specify locale."
           },
           {
             "name": "sv",
             "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
+            "isDeprecated": true,
+            "deprecationReason": "Use \"Accept-Language\" HTTP header to specify locale."
           },
           {
             "name": "th",
             "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
+            "isDeprecated": true,
+            "deprecationReason": "Use \"Accept-Language\" HTTP header to specify locale."
           },
           {
             "name": "tl",
             "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
+            "isDeprecated": true,
+            "deprecationReason": "Use \"Accept-Language\" HTTP header to specify locale."
           },
           {
             "name": "tr",
             "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
+            "isDeprecated": true,
+            "deprecationReason": "Use \"Accept-Language\" HTTP header to specify locale."
           },
           {
             "name": "uk",
             "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
+            "isDeprecated": true,
+            "deprecationReason": "Use \"Accept-Language\" HTTP header to specify locale."
           },
           {
             "name": "vi",
             "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
+            "isDeprecated": true,
+            "deprecationReason": "Use \"Accept-Language\" HTTP header to specify locale."
           },
           {
             "name": "zh",
             "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
+            "isDeprecated": true,
+            "deprecationReason": "Use \"Accept-Language\" HTTP header to specify locale."
           },
           {
             "name": "zhcn",
             "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
+            "isDeprecated": true,
+            "deprecationReason": "Use \"Accept-Language\" HTTP header to specify locale."
           },
           {
             "name": "zhtw",
             "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
+            "isDeprecated": true,
+            "deprecationReason": "Use \"Accept-Language\" HTTP header to specify locale."
           }
         ],
         "possibleTypes": null
@@ -6666,7 +6666,7 @@
         "inputFields": [
           {
             "name": "locale",
-            "description": "Language tag in the format of the RFC 5646.",
+            "description": "DEPRECATED - use \"Accept-Language\" HTTP header to specify locale.Language tag in the format of the RFC 5646.",
             "type": {
               "kind": "ENUM",
               "name": "Locale",

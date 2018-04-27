@@ -5,7 +5,7 @@ import config from '../../../../config/application';
 import Locations from './__datasets__/locations-autonomousTerritory.json';
 
 RestApiMock.onGet(
-  config.restApiEndpoint.allLocations({ term: 'America' }),
+  config.restApiEndpoint.allLocations({ term: 'America', locale: 'en-US' }),
 ).replyWithData(Locations);
 
 describe('all locations query', () => {

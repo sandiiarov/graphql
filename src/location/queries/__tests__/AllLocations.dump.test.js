@@ -7,7 +7,11 @@ import PragueDataset from '../../datasets/prague.json';
 // this mock returns data for Prague just to make it more simple since the
 // true 'dump' dataset has the same structure
 RestApiMock.onGet(
-  config.restApiEndpoint.allLocations({ type: 'dump', limit: 9999 }),
+  config.restApiEndpoint.allLocations({
+    type: 'dump',
+    limit: 9999,
+    locale: 'en-US',
+  }),
 ).replyWithData(PragueDataset);
 RestApiMock.onGet(
   config.restApiEndpoint.allLocations({

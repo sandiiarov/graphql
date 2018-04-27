@@ -14,3 +14,11 @@ function createLocaleValues(localeMap) {
   }
   return localeValues;
 }
+
+export const ISOLocalesToObsolete = Object.keys(
+  LocaleMap,
+).reduce((memo, locale) => {
+  memo[locale.replace('-', '_')] = locale;
+
+  return memo;
+}, {});

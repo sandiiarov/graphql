@@ -9,7 +9,9 @@ export default new GraphQLInputObjectType({
   fields: {
     locale: {
       type: GraphQLLocale,
-      description: 'Language tag in the format of the RFC 5646.',
+      description:
+        'DEPRECATED - use "Accept-Language" HTTP header to specify locale.' +
+        'Language tag in the format of the RFC 5646.',
     },
     locationType: {
       type: GraphQLLocationType,

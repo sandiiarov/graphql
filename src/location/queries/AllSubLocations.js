@@ -26,11 +26,12 @@ export default {
   resolve: async (
     ancestor: mixed,
     { id, options, ...pagination }: Object,
-    { dataLoader }: GraphqlContextType,
+    { dataLoader, locale }: GraphqlContextType,
   ) => {
+    const locationOptions = { locale, ...(options || {}) };
     const locations = await dataLoader.locationSuggestions.loadSubLocations(
       id,
-      options,
+      locationOptions,
     );
     return connectionFromArray(locations, pagination);
   },

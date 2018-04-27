@@ -11,21 +11,24 @@ export async function getLocations(
   context: GraphqlContextType,
 ) {
   let response;
+  const { locale } = context;
+  const options = { locale, ...(args.options || {}) };
+
   if (args.search) {
     response = await context.dataLoader.locationSuggestions.loadByKey(
       args.search,
-      args.options,
+      options,
     );
   } else if (args.radius) {
     response = await context.dataLoader.locationSuggestions.loadByRadius(
       args.radius,
-      args.options,
+      options,
     );
   } else if (args.area) {
     validateArea(args.area);
     response = await context.dataLoader.locationSuggestions.loadByArea(
       args.area,
-      args.options,
+      options,
     );
   } else if (args.slugRadius) {
     const { radius, ...parsed } = parseSlugRadius(args.slugRadius);
@@ -33,6 +36,7 @@ export async function getLocations(
     if (parsed.slug) {
       const { location } = await context.dataLoader.location.loadBySlug(
         parsed.slug,
+        options.locale,
       );
       radiusGps = { ...radiusGps, ...location };
     } else if (parsed.gps) {
@@ -41,10 +45,10 @@ export async function getLocations(
 
     response = await context.dataLoader.locationSuggestions.loadByRadius(
       radiusGps,
-      args.options,
+      options,
     );
   } else {
-    response = await context.dataLoader.locationSuggestions.load(args.options);
+    response = await context.dataLoader.locationSuggestions.load(options);
   }
   return response;
 }

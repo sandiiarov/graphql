@@ -6,11 +6,14 @@ import PragueDataset from '../../datasets/prague.json';
 import UnknownLocationDataset from '../../datasets/unknown.json';
 
 RestApiMock.onGet(
-  config.restApiEndpoint.allLocations({ term: 'unknown place' }),
+  config.restApiEndpoint.allLocations({
+    term: 'unknown place',
+    locale: 'en-US',
+  }),
 ).replyWithData(UnknownLocationDataset);
 
 RestApiMock.onGet(
-  config.restApiEndpoint.allLocations({ term: 'Prague' }),
+  config.restApiEndpoint.allLocations({ term: 'Prague', locale: 'en-US' }),
 ).replyWithData(PragueDataset);
 
 describe('all locations query', () => {

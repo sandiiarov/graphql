@@ -5,7 +5,10 @@ import config from '../../../../config/application';
 import UnknownLocationDataset from '../../datasets/unknown.json';
 
 RestApiMock.onGet(
-  config.restApiEndpoint.allLocations({ term: 'unknown place' }),
+  config.restApiEndpoint.allLocations({
+    term: 'unknown place',
+    locale: 'en-US',
+  }),
 ).replyWithData(UnknownLocationDataset);
 
 describe('all locations query', () => {

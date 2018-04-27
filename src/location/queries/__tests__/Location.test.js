@@ -8,7 +8,11 @@ import PragueCzDataset from '../../datasets/prague-cs-CZ.json';
 import UnknownDataset from '../../datasets/unknown.json';
 
 RestApiMock.onGet(
-  config.restApiEndpoint.allLocations({ type: 'id', id: 'PRG' }),
+  config.restApiEndpoint.allLocations({
+    type: 'id',
+    id: 'PRG',
+    locale: 'en-US',
+  }),
 ).replyWithData(PragueDataset);
 
 RestApiMock.onGet(
@@ -20,7 +24,11 @@ RestApiMock.onGet(
 ).replyWithData(PragueCzDataset);
 
 RestApiMock.onGet(
-  config.restApiEndpoint.allLocations({ type: 'id', id: 'unknown_id' }),
+  config.restApiEndpoint.allLocations({
+    type: 'id',
+    id: 'unknown_id',
+    locale: 'en-US',
+  }),
 ).replyWithData(UnknownDataset);
 
 describe('location query', () => {
