@@ -1,4 +1,5 @@
 // @flow
+
 import { graphql } from '../../../common/services/TestingTools';
 
 describe('all hotels query', () => {

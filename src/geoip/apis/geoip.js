@@ -1,4 +1,5 @@
 // @flow
+
 import { fetchJson } from '../../common/services/JsonFetcher';
 import type { GeoIP } from '../types/outputs/GeoIPType';
 

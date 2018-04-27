@@ -1,4 +1,5 @@
 // @flow
+
 import { GraphQLObjectType, GraphQLString } from 'graphql';
 
 import Coordinates from '../../../location/types/outputs/Coordinates';

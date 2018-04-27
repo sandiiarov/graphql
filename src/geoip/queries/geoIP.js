@@ -1,4 +1,5 @@
 // @flow
+
 import { GraphQLNonNull } from 'graphql';
 
 import GraphQLIP from '../../common/types/scalars/IP';

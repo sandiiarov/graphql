@@ -1,4 +1,5 @@
 // @flow
+
 import idx from 'idx';
 import stringify from 'json-stable-stringify';
 

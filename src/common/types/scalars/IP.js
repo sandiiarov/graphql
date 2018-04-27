@@ -1,4 +1,5 @@
 // @flow
+
 import { GraphQLScalarType, Kind } from 'graphql';
 import isIP from 'validator/lib/isIP';
 

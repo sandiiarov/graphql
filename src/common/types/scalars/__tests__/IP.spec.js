@@ -1,4 +1,5 @@
 // @flow
+
 import { maybeIP4 } from '../IP';
 
 describe('#IP', () => {
