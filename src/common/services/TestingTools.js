@@ -1,6 +1,10 @@
 // @flow
 
-import { graphql as graphqlNodeLibrary } from 'graphql';
+import {
+  graphql as originalGraphQL,
+  validate as originalValidate,
+  parse,
+} from 'graphql';
 import schema from '../../Schema';
 import { createContext } from './GraphqlContext';
 
@@ -62,13 +66,16 @@ export const graphql = async (
   query: string,
   variables: ?Object,
 ): Promise<Object> =>
-  graphqlNodeLibrary(
+  originalGraphQL(schema, query, null, createContext('test_token'), variables);
+
+export const validate = (query: string) => {
+  return originalValidate(
     schema,
-    query,
-    null,
-    createContext('test_token'),
-    variables,
+    parse(query, {
+      noLocation: true,
+    }),
   );
+};
 
 export const evaluateResolver = (field: mixed, testValue: mixed) => {
   // $FlowAllowNextLineInThisTest (fields are possibly undefined but we assume it's fine)
