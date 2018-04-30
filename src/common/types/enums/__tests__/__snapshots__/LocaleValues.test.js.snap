@@ -194,9 +194,17 @@ Object {
     "deprecationReason": "Use \\"Accept-Language\\" HTTP header to specify locale.",
     "value": "lt-LT",
   },
+  "nb_NO": Object {
+    "deprecationReason": "Use \\"Accept-Language\\" HTTP header to specify locale.",
+    "value": "nb-NO",
+  },
   "nl_NL": Object {
     "deprecationReason": "Use \\"Accept-Language\\" HTTP header to specify locale.",
     "value": "nl-NL",
+  },
+  "nn_NO": Object {
+    "deprecationReason": "Use \\"Accept-Language\\" HTTP header to specify locale.",
+    "value": "nn-NO",
   },
   "no_NO": Object {
     "deprecationReason": "Use \\"Accept-Language\\" HTTP header to specify locale.",

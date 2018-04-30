@@ -1,6 +1,7 @@
 // @flow
 
 import LocaleMap from './LocaleMap';
+import BookingComLanguageMap from './BookingComLanguageMap';
 
 export default createLocaleValues(LocaleMap);
 
@@ -22,3 +23,8 @@ export const ISOLocalesToObsolete = Object.keys(
 
   return memo;
 }, {});
+
+export const localeToBookingComLanguage = (locale: string): ?string => {
+  // It is ok if it returns undefined, booking.com will fallback to en-us.
+  return BookingComLanguageMap[locale.replace('_', '-')];
+};

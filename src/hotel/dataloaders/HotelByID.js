@@ -8,6 +8,7 @@ import { queryWithParameters } from '../../../config/application';
 import OptimisticDataloader from '../../common/services/OptimisticDataloader';
 import sanitizePhotos from './PhotoSanitizer';
 import sanitizeHotelRooms from './HotelRoomsSanitizer';
+import { localeToBookingComLanguage } from '../../common/types/enums/LocaleValues';
 
 import type { HotelExtendedType } from './flow/HotelExtendedType';
 import type { HotelFacilityType } from './flow/HotelFacilityType';
@@ -18,28 +19,31 @@ import type { HotelByIDType } from './flow/HotelById';
  *
  * @see https://distribution-xml.booking.com/2.0/json/hotels?hotel_ids=25215&extras=hotel_info,hotel_photos,hotel_description,hotel_facilities,payment_details,room_info,room_photos,room_description,room_facilities
  */
-export default new OptimisticDataloader(
-  async (
-    keys: $ReadOnlyArray<HotelByIDType>,
-  ): Promise<Array<HotelExtendedType | Error>> => {
-    const hotelIds = keys.map(key => key.hotelId);
+export default function createHotelByIdLoader(locale: string) {
+  return new OptimisticDataloader(
+    async (
+      keys: $ReadOnlyArray<HotelByIDType>,
+    ): Promise<Array<HotelExtendedType | Error>> => {
+      const hotelIds = keys.map(key => key.hotelId);
 
-    const language = idx(keys, _ => _[0].language);
-    const response = await get(createUrl(hotelIds, language));
+      const language =
+        localeToBookingComLanguage(locale) || idx(keys, _ => _[0].language);
+      const response = await get(createUrl(hotelIds, language));
 
-    const hotels = hotelIds.map(id => {
-      const hotelData = response.result.find(h => h.hotel_id == id);
+      const hotels = hotelIds.map(id => {
+        const hotelData = response.result.find(h => h.hotel_id == id);
 
-      if (!hotelData) {
-        return new Error('Requested hotel does not exist.');
-      }
-      return sanitizeHotel(hotelData, language);
-    });
+        if (!hotelData) {
+          return new Error('Requested hotel does not exist.');
+        }
+        return sanitizeHotel(hotelData, language);
+      });
 
-    return hotels;
-  },
-  { cacheKeyFn: key => stringify(key) },
-);
+      return hotels;
+    },
+    { cacheKeyFn: key => stringify(key) },
+  );
+}
 
 function createUrl(hotelIds: $ReadOnlyArray<number>, language: ?string) {
   const params = {

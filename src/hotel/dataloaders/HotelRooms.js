@@ -6,6 +6,7 @@ import idx from 'idx';
 import { get } from '../services/BookingComRequest';
 import { queryWithParameters } from '../../../config/application';
 import sanitizeHotelRooms from './HotelRoomsSanitizer';
+import { localeToBookingComLanguage } from '../../common/types/enums/LocaleValues';
 
 import type { HotelRoomType } from './flow/HotelRoomType';
 
@@ -20,8 +21,9 @@ type UrlParameters = {|
  */
 export default class HotelRoomBlocksDataloader {
   dataLoader: Dataloader<Object, HotelRoomType[]>;
-
-  constructor() {
+  language: ?string;
+  constructor(locale: string) {
+    this.language = localeToBookingComLanguage(locale);
     this.dataLoader = new Dataloader(
       (urlParameters: $ReadOnlyArray<UrlParameters>) => {
         return this.batchLoad(urlParameters);
@@ -67,11 +69,11 @@ export default class HotelRoomBlocksDataloader {
           extras:
             'hotel_info,hotel_photos,hotel_description,hotel_facilities,payment_details,room_info,room_photos,room_description,room_facilities',
           ...parameter,
+          language: this.language || parameter.language,
         },
       ),
     );
     const responses = await Promise.all(urls.map(url => get(url)));
-
     return urlParameters.map((p, pIndex) => {
       const hotelIds = p.hotel_ids.split(',').map(id => Number(id));
       const hotelRooms = hotelIds.map(hotelId => {

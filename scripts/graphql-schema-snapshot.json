@@ -3722,6 +3722,18 @@
             "deprecationReason": "Use \"Accept-Language\" HTTP header to specify locale."
           },
           {
+            "name": "nb_NO",
+            "description": null,
+            "isDeprecated": true,
+            "deprecationReason": "Use \"Accept-Language\" HTTP header to specify locale."
+          },
+          {
+            "name": "nn_NO",
+            "description": null,
+            "isDeprecated": true,
+            "deprecationReason": "Use \"Accept-Language\" HTTP header to specify locale."
+          },
+          {
             "name": "pl_PL",
             "description": null,
             "isDeprecated": true,

@@ -11,7 +11,7 @@ import SingleHotelBeddingsDataset from '../../datasets/25215Bedding.json';
 
 it('works with full query', async () => {
   BookingComApiMock.onGet(
-    'https://distribution-xml.booking.com/2.0/json/hotels?extras=hotel_info%2Chotel_photos%2Chotel_description%2Chotel_facilities%2Cpayment_details%2Croom_info%2Croom_photos%2Croom_description%2Croom_facilities&hotel_ids=25215',
+    'https://distribution-xml.booking.com/2.0/json/hotels?extras=hotel_info%2Chotel_photos%2Chotel_description%2Chotel_facilities%2Cpayment_details%2Croom_info%2Croom_photos%2Croom_description%2Croom_facilities&hotel_ids=25215&language=en-us',
   ).replyWithData(SingleHotelDataset);
   BookingComApiMock.onGet(
     'https://distribution-xml.booking.com/json/bookings.getRooms?hotel_ids=25215',

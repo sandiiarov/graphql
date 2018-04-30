@@ -13,7 +13,7 @@ beforeEach(() => {
     'https://distribution-xml.booking.com/2.0/json/hotelAvailability?extras=hotel_details&order_by=popularity&hotel_ids=25215&checkin=2018-01-22&checkout=2018-01-28&currency=CZK&room1=A',
   ).replyWithData(AllHotelsDataset);
   BookingComApiMock.onGet(
-    'https://distribution-xml.booking.com/2.0/json/hotels?extras=hotel_info%2Chotel_photos%2Chotel_description%2Chotel_facilities%2Cpayment_details%2Croom_info%2Croom_photos%2Croom_description%2Croom_facilities&hotel_ids=25215',
+    'https://distribution-xml.booking.com/2.0/json/hotels?extras=hotel_info%2Chotel_photos%2Chotel_description%2Chotel_facilities%2Cpayment_details%2Croom_info%2Croom_photos%2Croom_description%2Croom_facilities&hotel_ids=25215&language=en-us',
   ).replyWithData(HotelDataset);
   BookingComApiMock.onGet(
     'https://distribution-xml.booking.com/2.0/json/blockAvailability?detail_level=1&checkin=2018-01-22&checkout=2018-01-28&hotel_ids=25215&currency=CZK',

@@ -15,7 +15,7 @@ beforeEach(() => {
     'https://distribution-xml.booking.com/2.0/json/hotelAvailability?extras=hotel_details&order_by=popularity&radius=50&latitude=45.4654&longitude=9.1859&checkin=2017-11-16&checkout=2017-11-23&rows=50&room1=A%2CA%2C4%2C6&room2=A%2C2',
   ).replyWithData(AllHotelsDataset);
   BookingComApiMock.onGet(
-    'https://distribution-xml.booking.com/2.0/json/hotels?extras=hotel_info%2Chotel_photos%2Chotel_description%2Chotel_facilities%2Cpayment_details%2Croom_info%2Croom_photos%2Croom_description%2Croom_facilities&hotel_ids=25215%2C248539',
+    'https://distribution-xml.booking.com/2.0/json/hotels?extras=hotel_info%2Chotel_photos%2Chotel_description%2Chotel_facilities%2Cpayment_details%2Croom_info%2Croom_photos%2Croom_description%2Croom_facilities&hotel_ids=25215%2C248539&language=en-us',
   ).replyWithData({
     result: FirstHotelDataset.result.concat(SecondHotelDataset.result),
   });
@@ -27,10 +27,10 @@ beforeEach(() => {
     'https://distribution-xml.booking.com/2.0/json/blockAvailability?detail_level=1&checkin=2017-11-16&checkout=2017-11-23&hotel_ids=248539&currency=EUR',
   ).replyWithData(RoomBlocksDataset);
   BookingComApiMock.onGet(
-    'https://distribution-xml.booking.com/2.0/json/hotels?extras=hotel_info%2Chotel_photos%2Chotel_description%2Chotel_facilities%2Cpayment_details%2Croom_info%2Croom_photos%2Croom_description%2Croom_facilities&hotel_ids=25215',
+    'https://distribution-xml.booking.com/2.0/json/hotels?extras=hotel_info%2Chotel_photos%2Chotel_description%2Chotel_facilities%2Cpayment_details%2Croom_info%2Croom_photos%2Croom_description%2Croom_facilities&hotel_ids=25215&language=en-us',
   ).replyWithData(RoomDetailsDataset);
   BookingComApiMock.onGet(
-    'https://distribution-xml.booking.com/2.0/json/hotels?extras=hotel_info%2Chotel_photos%2Chotel_description%2Chotel_facilities%2Cpayment_details%2Croom_info%2Croom_photos%2Croom_description%2Croom_facilities&hotel_ids=248539',
+    'https://distribution-xml.booking.com/2.0/json/hotels?extras=hotel_info%2Chotel_photos%2Chotel_description%2Chotel_facilities%2Cpayment_details%2Croom_info%2Croom_photos%2Croom_description%2Croom_facilities&hotel_ids=248539&language=en-us',
   ).replyWithData([]); // Booking.com failure
 });
 

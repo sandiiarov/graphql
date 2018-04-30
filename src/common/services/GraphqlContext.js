@@ -17,7 +17,7 @@ import FlightLoader from '../../flight/dataloaders/Flight';
 import OptionsStorage from './context/OptionsStorage';
 import HotelsAvailability from '../../hotel/dataloaders/HotelsAvailability';
 import { type SearchParameters as HotelKey } from '../../hotel/dataloaders/flow/SearchParameters';
-import HotelByID from '../../hotel/dataloaders/HotelByID';
+import createHotelByIdLoader from '../../hotel/dataloaders/HotelByID';
 import HotelCities from '../../hotel/dataloaders/HotelCities';
 import CitiesByID from '../../hotel/dataloaders/CitiesByID';
 import HotelRoomsLoader from '../../hotel/dataloaders/HotelRooms';
@@ -65,7 +65,7 @@ export type GraphqlContextType = {|
     hotel: {
       availabilityByLocation: DataLoader<HotelKey, HotelType[]>,
       availabilityByID: DataLoader<HotelKey, HotelType[]>,
-      byID: typeof HotelByID,
+      byID: DataLoader<$FlowFixMe, $FlowFixMe>,
       cities: HotelCities,
       room: HotelRoomsLoader,
       roomAvailability: HotelRoomAvailabilityLoader,
@@ -113,9 +113,9 @@ export function createContext(
       hotel: {
         availabilityByLocation: HotelsAvailability,
         availabilityByID: HotelsAvailability,
-        byID: HotelByID,
+        byID: createHotelByIdLoader(locale),
         cities: hotelCities,
-        room: new HotelRoomsLoader(),
+        room: new HotelRoomsLoader(locale),
         roomAvailability: new HotelRoomAvailabilityLoader(),
         roomBedding: HotelRoomBeddingLoader,
         priceStats: PriceStatsLoader,

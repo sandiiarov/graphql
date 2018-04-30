@@ -47,6 +47,8 @@ export default {
   'hu-HU': 'hu', // Hungarian
   'nl-NL': 'nl', // Dutch
   'no-NO': 'no', // Norwegian
+  'nb-NO': 'no', // Norwegian
+  'nn-NO': 'no', // Norwegian
   'pl-PL': 'pl', // Polish
   'pt-PT': 'pt', // Portuguese
   'pt-BR': 'br', // Brazil
