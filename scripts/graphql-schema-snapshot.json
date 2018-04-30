@@ -7359,6 +7359,18 @@
             "deprecationReason": null
           },
           {
+            "name": "perex",
+            "description": "Perex of the FAQ category",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "subcategories",
             "description": "List of subcategories",
             "args": [],

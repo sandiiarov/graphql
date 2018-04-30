@@ -63,6 +63,7 @@ const batchLoad = async (categories: $ReadOnlyArray<Args>) => {
 const sanitizeCategory = (language: string) => category => ({
   id: category.id,
   title: category.title,
+  perex: category.perex,
   subcategories: category.childrens
     ? category.childrens.map(sanitizeCategory(language))
     : [],

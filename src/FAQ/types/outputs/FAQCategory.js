@@ -7,6 +7,7 @@ import { globalIdField } from '../../../common/services/OpaqueIdentifier';
 export type FAQCategoryType = {|
   id: number,
   title: string,
+  perex: string,
   subcategories: FAQCategoryType[],
   ancestors: FAQCategoryType[],
   FAQs: FAQArticleType[],
@@ -20,6 +21,11 @@ const FAQCategory = new GraphQLObjectType({
       type: GraphQLString,
       description: 'Title of the FAQ category',
       resolve: ({ title }: FAQCategoryType) => title,
+    },
+    perex: {
+      type: GraphQLString,
+      description: 'Perex of the FAQ category',
+      resolve: ({ perex }: FAQCategoryType) => perex,
     },
     subcategories: {
       type: new GraphQLList(FAQCategory),
