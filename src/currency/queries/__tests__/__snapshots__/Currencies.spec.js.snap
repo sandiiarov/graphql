@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Currencies getting all currencies 1`] = `
+Object {
+  "data": Object {
+    "currencies": Object {
+      "edges": Array [
+        Object {
+          "node": Object {
+            "code": "aed",
+            "enabledOnAffilId": Array [],
+            "fallback": "",
+            "format": "__price__ د.إ",
+            "id": "Q3VycmVuY3lEZXRhaWw6YWVk",
+            "name": "United Arab Emirates Dirham",
+            "rate": 0.224668,
+            "round": 0,
+            "uncertainFormat": false,
+          },
+        },
+        Object {
+          "node": Object {
+            "code": "amd",
+            "enabledOnAffilId": Array [],
+            "fallback": "",
+            "format": "AMD __price__",
+            "id": "Q3VycmVuY3lEZXRhaWw6YW1k",
+            "name": "Armenian Dram",
+            "rate": 0.00170754,
+            "round": 0,
+            "uncertainFormat": false,
+          },
+        },
+        Object {
+          "node": Object {
+            "code": "ars",
+            "enabledOnAffilId": Array [],
+            "fallback": "eur",
+            "format": "__price__ ARS",
+            "id": "Q3VycmVuY3lEZXRhaWw6YXJz",
+            "name": "Argentina Peso",
+            "rate": 0.0401946,
+            "round": 0,
+            "uncertainFormat": false,
+          },
+        },
+        Object {
+          "node": Object {
+            "code": "aud",
+            "enabledOnAffilId": Array [
+              "kek",
+              "bur",
+            ],
+            "fallback": "",
+            "format": "$ __price__",
+            "id": "Q3VycmVuY3lEZXRhaWw6YXVk",
+            "name": "Australian Dollar",
+            "rate": 0.623531,
+            "round": 2,
+            "uncertainFormat": true,
+          },
+        },
+      ],
+    },
+  },
+}
+`;

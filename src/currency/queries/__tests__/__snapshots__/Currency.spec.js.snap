@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Currency getting a currency 1`] = `
+Object {
+  "data": Object {
+    "currency": Object {
+      "code": "amd",
+      "enabledOnAffilId": Array [],
+      "fallback": "",
+      "format": "AMD __price__",
+      "id": "Q3VycmVuY3lEZXRhaWw6YW1k",
+      "name": "Armenian Dram",
+      "rate": 0.00170754,
+      "round": 0,
+      "uncertainFormat": false,
+    },
+  },
+}
+`;
+
+exports[`Currency getting a non-existent currency 1`] = `
+Object {
+  "data": Object {
+    "currency": null,
+  },
+  "errors": Array [
+    [GraphQLError: Currency with code "kek" not found],
+  ],
+}
+`;

@@ -14,8 +14,14 @@ const currencyQuery = {
       description: 'The currency code used on Kiwi.com frontend',
     },
   },
-  resolve: (_: any, args: any, ctx: GraphqlContextType) =>
-    ctx.dataLoader.currency.load(args.code),
+  resolve: async (_: any, args: any, ctx: GraphqlContextType) => {
+    const data = await ctx.dataLoader.currency.load(args.code);
+    if (!data) {
+      throw new Error(`Currency with code "${args.code}" not found`);
+    }
+
+    return data;
+  },
 };
 
 export default currencyQuery;

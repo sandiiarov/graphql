@@ -1,0 +1,45 @@
+{
+  "aed": {
+    "id": "aed",
+    "name": "United Arab Emirates Dirham",
+    "format": "__price__ د.إ",
+    "uncertainFormat": false,
+    "round": "0",
+    "enabledOnAffilId": "",
+    "fallback": "",
+    "rate": 0.224668
+  },
+  "amd": {
+    "id": "amd",
+    "name": "Armenian Dram",
+    "format": "AMD __price__",
+    "uncertainFormat": false,
+    "round": "0",
+    "enabledOnAffilId": "",
+    "fallback": "",
+    "rate": 0.00170754
+  },
+  "ars": {
+    "id": "ars",
+    "name": "Argentina Peso",
+    "format": "__price__ ARS",
+    "uncertainFormat": false,
+    "round": "0",
+    "enabledOnAffilId": "",
+    "fallback": "eur",
+    "rate": 0.0401946
+  },
+  "aud": {
+    "id": "aud",
+    "name": "Australian Dollar",
+    "format": "$ __price__",
+    "uncertainFormat": true,
+    "round": "2",
+    "enabledOnAffilId": [
+      "kek",
+      "bur"
+    ],
+    "fallback": "",
+    "rate": 0.623531
+  }
+}
