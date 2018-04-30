@@ -4,6 +4,7 @@ import Dataloader from 'dataloader';
 import Config from '../../../config/application';
 import { get } from '../../common/services/HttpRequest';
 import type { FAQCategoryType } from '../types/outputs/FAQCategory';
+import ISOLocalesToLanguage from '../../common/types/enums/ISOLocalesToLanguage';
 
 type RawFAQArticleItem = {
   url: string,
@@ -15,16 +16,15 @@ type RawFAQArticleItem = {
 
 export type FAQArticleItem = RawFAQArticleItem & {
   id: string,
-  language: string,
 };
 
-export type Args = {|
-  language: string,
-|};
+export type Args = {||};
 
 const FAQ_MENU_CATEGORY = 'menu';
 
-const listFAQ = async (language: string): Promise<FAQCategoryType[]> => {
+const listFAQ = async (
+  language: $Values<typeof ISOLocalesToLanguage>,
+): Promise<FAQCategoryType[]> => {
   const rootCategories = await get(
     Config.restApiEndpoint.allFAQCategories(),
     null,
@@ -50,26 +50,27 @@ const listFAQ = async (language: string): Promise<FAQCategoryType[]> => {
   );
 
   return categories
-    .map(sanitizeCategory(language))
+    .map(sanitizeCategory)
     .map(category => addAncestors(category));
 };
 
-const batchLoad = async (categories: $ReadOnlyArray<Args>) => {
-  const promises = categories.map(({ language }: Args) => listFAQ(language));
+const batchLoad = async (
+  categories: $ReadOnlyArray<Args>,
+  language: $Values<typeof ISOLocalesToLanguage>,
+) => {
+  const promises = categories.map(() => listFAQ(language));
 
   return Promise.all(promises);
 };
 
-const sanitizeCategory = (language: string) => category => ({
+const sanitizeCategory = category => ({
   id: category.id,
   title: category.title,
   perex: category.perex,
   subcategories: category.childrens
-    ? category.childrens.map(sanitizeCategory(language))
+    ? category.childrens.map(sanitizeCategory)
     : [],
-  FAQs: category.articles
-    ? category.articles.map(sanitizeArticle(language))
-    : [],
+  FAQs: category.articles ? category.articles.map(sanitizeArticle) : [],
   ancestors: [],
 });
 
@@ -85,28 +86,27 @@ const addAncestors = (category, ancestor = null) => {
   };
 };
 
-const sanitizeArticle = (language: string) => {
-  return (article: RawFAQArticleItem): FAQArticleItem => {
-    // Currently "id" field itself is missing in "/categories/:id" endpoint, necessary to get out of an url
-    let id = null;
+const sanitizeArticle = (article: RawFAQArticleItem): FAQArticleItem => {
+  // Currently "id" field itself is missing in "/categories/:id" endpoint, necessary to get out of an url
+  let id = null;
 
-    const matches = article.url && article.url.match(/(\d+)$/);
-    if (matches && matches[0] && typeof matches[0] === 'string') {
-      id = matches[0];
-    }
+  const matches = article.url && article.url.match(/(\d+)$/);
+  if (matches && matches[0] && typeof matches[0] === 'string') {
+    id = matches[0];
+  }
 
-    if (!id) {
-      throw new Error('Error: id field not extracted from url');
-    }
+  if (!id) {
+    throw new Error('Error: id field not extracted from url');
+  }
 
-    return {
-      id,
-      language,
-      ...article,
-    };
+  return {
+    id,
+    ...article,
   };
 };
 
-export default function createFAQLoader() {
-  return new Dataloader(queries => batchLoad(queries));
+export default function createFAQLoader(
+  language: $Values<typeof ISOLocalesToLanguage>,
+) {
+  return new Dataloader(queries => batchLoad(queries, language));
 }

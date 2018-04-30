@@ -40,7 +40,8 @@ import type {
   FAQArticleDetail,
 } from '../../FAQ/dataloaders/getFAQArticle';
 import type { FAQCategoryType } from '../../FAQ/types/outputs/FAQCategory';
-import { ISOLocalesToObsolete } from '../types/enums/LocaleValues';
+import ISOLocalesToObsolete from '../types/enums/ISOLocalesToObsolete';
+import ISOLocalesToLanguage from '../types/enums/ISOLocalesToLanguage';
 
 /**
  * FIXME:
@@ -49,7 +50,7 @@ import { ISOLocalesToObsolete } from '../types/enums/LocaleValues';
  */
 export type GraphqlContextType = {|
   // DataLoader<K, V>
-  locale: string,
+  locale: $Keys<typeof ISOLocalesToObsolete>,
   apiToken: ?string,
   dataLoader: {|
     airline: DataLoader<string, ?Airline>,
@@ -87,10 +88,16 @@ export function createContext(
   token: ?string,
   acceptLanguage: ?string,
 ): GraphqlContextType {
-  const locale =
-    acceptLanguage && ISOLocalesToObsolete.hasOwnProperty(acceptLanguage)
+  const locale: $Keys<typeof ISOLocalesToObsolete> = // $FlowIssue: https://github.com/facebook/flow/issues/6230
+    typeof acceptLanguage === 'string' &&
+    ISOLocalesToObsolete.hasOwnProperty(acceptLanguage)
       ? acceptLanguage
       : 'en_US';
+  const language: $Values<typeof ISOLocalesToLanguage> = ISOLocalesToLanguage[
+    locale
+  ]
+    ? ISOLocalesToLanguage[locale]
+    : 'en';
   const bookings = new BookingsLoader(token);
   const locationSuggestions = new LocationSuggestionsLoader();
   const location = new LocationLoader(locationSuggestions);
@@ -120,9 +127,9 @@ export function createContext(
         roomBedding: HotelRoomBeddingLoader,
         priceStats: PriceStatsLoader,
       },
-      FAQ: createFAQLoader(),
-      FAQCategories: createFAQCategoryLoader(),
-      FAQArticle: createFAQArticleLoader(),
+      FAQ: createFAQLoader(language),
+      FAQCategories: createFAQCategoryLoader(language),
+      FAQArticle: createFAQArticleLoader(language),
     },
     options: new OptionsStorage(),
   };

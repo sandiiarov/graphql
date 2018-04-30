@@ -8,7 +8,7 @@ import config from '../../../config/application';
 import { ProxiedError } from '../../common/services/errors/ProxiedError';
 import FAQArticle from '../types/outputs/FAQArticle';
 import FAQCommentType from '../types/inputs/FAQCommentType';
-import LocaleMap from '../../common/types/enums/LocaleMap';
+import ISOLocalesToLanguage from '../../common/types/enums/ISOLocalesToLanguage';
 import type { FAQArticleDetail as FAQArticleType } from '../dataloaders/getFAQArticle';
 import type { GraphqlContextType } from '../../common/services/GraphqlContext';
 
@@ -47,8 +47,8 @@ export default {
           `Please use opaque ID of the FAQArticle.`,
       );
     }
-    const language = LocaleMap.hasOwnProperty(locale)
-      ? LocaleMap[locale]
+    const language = ISOLocalesToLanguage.hasOwnProperty(locale)
+      ? ISOLocalesToLanguage[locale]
       : 'en';
     const commentUrl = config.restApiEndpoint.FAQArticleComment(originalId);
     const response = await post(commentUrl, payload, {
@@ -62,9 +62,6 @@ export default {
       );
     }
 
-    return dataLoader.FAQArticle.load({
-      originalId,
-      language: language,
-    });
+    return dataLoader.FAQArticle.load({ originalId });
   },
 };

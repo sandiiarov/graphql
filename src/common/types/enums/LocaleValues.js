@@ -16,14 +16,6 @@ function createLocaleValues(localeMap) {
   return localeValues;
 }
 
-export const ISOLocalesToObsolete = Object.keys(
-  LocaleMap,
-).reduce((memo, locale) => {
-  memo[locale.replace('-', '_')] = locale;
-
-  return memo;
-}, {});
-
 export const localeToBookingComLanguage = (locale: string): ?string => {
   // It is ok if it returns undefined, booking.com will fallback to en-us.
   return BookingComLanguageMap[locale.replace('_', '-')];

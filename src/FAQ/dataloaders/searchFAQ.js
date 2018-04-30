@@ -3,11 +3,11 @@
 import Dataloader from 'dataloader';
 import { get } from '../../common/services/HttpRequest';
 import Config from '../../../config/application';
+import ISOLocalesToLanguage from '../../common/types/enums/ISOLocalesToLanguage';
 
-export type Args = {
+export type Args = {|
   search: string,
-  language: string,
-};
+|};
 
 type RawArticle = {|
   id: number,
@@ -52,14 +52,19 @@ async function fetchFAQ(search: string, language: string) {
   return articles.map(sanitizeArticle(language));
 }
 
-async function batchLoad(searches: $ReadOnlyArray<Args>) {
-  const promises = searches.map(({ search, language }: Args) =>
+async function batchLoad(
+  searches: $ReadOnlyArray<Args>,
+  language: $Values<typeof ISOLocalesToLanguage>,
+) {
+  const promises = searches.map(({ search }: Args) =>
     fetchFAQ(search, language),
   );
 
   return Promise.all(promises);
 }
 
-export default function createFAQLoader() {
-  return new Dataloader(queries => batchLoad(queries));
+export default function createFAQLoader(
+  language: $Values<typeof ISOLocalesToLanguage>,
+) {
+  return new Dataloader(queries => batchLoad(queries, language));
 }

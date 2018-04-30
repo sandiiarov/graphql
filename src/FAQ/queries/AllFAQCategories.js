@@ -27,9 +27,7 @@ export default {
     { language, ...args }: Object,
     { dataLoader }: GraphqlContextType,
   ) => {
-    const results = await dataLoader.FAQCategories.load({
-      language,
-    });
+    const results = await dataLoader.FAQCategories.load({});
     return connectionFromArray(results, args);
   },
 };

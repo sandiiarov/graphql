@@ -22,7 +22,7 @@ export default {
   },
   resolve: async (
     ancestor: mixed,
-    { language, id }: Object,
+    { id }: Object,
     { dataLoader }: GraphqlContextType,
   ) => {
     const { id: originalId, type } = fromGlobalId(id);
@@ -37,7 +37,6 @@ export default {
 
     return dataLoader.FAQArticle.load({
       originalId,
-      language,
     });
   },
 };

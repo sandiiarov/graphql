@@ -30,12 +30,11 @@ export default {
   },
   resolve: async (
     ancestor: mixed,
-    { search, language, ...args }: Object,
+    { search, ...args }: Object,
     { dataLoader }: GraphqlContextType,
   ) => {
     const results = await dataLoader.FAQ.load({
       search,
-      language,
     });
     return connectionFromArray(results, args);
   },

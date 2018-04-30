@@ -3,6 +3,7 @@
 import Dataloader from 'dataloader/index';
 import { get } from '../../common/services/HttpRequest';
 import Config from '../../../config/application';
+import ISOLocalesToLanguage from '../../common/types/enums/ISOLocalesToLanguage';
 
 type NotFound = {|
   detail: string,
@@ -18,17 +19,16 @@ type ValidResponse = {
 type APIResponse = NotFound | ValidResponse;
 
 export type FAQArticleDetail = ValidResponse & {
-  language: string,
+  language: $Values<typeof ISOLocalesToLanguage>,
 };
 
 export type Args = {|
-  language: string,
   originalId: string,
 |};
 
 const getFAQArticle = async (
   originalId: string,
-  language: string,
+  language: $Values<typeof ISOLocalesToLanguage>,
 ): Promise<FAQArticleDetail> => {
   const url = Config.restApiEndpoint.FAQArticle(originalId);
   const article: APIResponse = await get(url, null, {
@@ -47,14 +47,17 @@ const getFAQArticle = async (
 
 const batchLoad = async (
   inputs: $ReadOnlyArray<Args>,
+  language: $Values<typeof ISOLocalesToLanguage>,
 ): Promise<Array<FAQArticleDetail>> => {
-  const promises = inputs.map(({ originalId, language }: Args) =>
+  const promises = inputs.map(({ originalId }: Args) =>
     getFAQArticle(originalId, language),
   );
 
   return Promise.all(promises);
 };
 
-export default function createFAQLoader() {
-  return new Dataloader(queries => batchLoad(queries));
+export default function createFAQLoader(
+  language: $Values<typeof ISOLocalesToLanguage>,
+) {
+  return new Dataloader(queries => batchLoad(queries, language));
 }

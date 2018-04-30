@@ -48,13 +48,11 @@ export default {
   },
   resolve: async (
     ancestor: mixed,
-    { language, id }: Object,
+    { id }: Object,
     { dataLoader }: GraphqlContextType,
   ) => {
     const categoryId = Number(fromGlobalId(id).id);
-    const categories = await dataLoader.FAQCategories.load({
-      language,
-    });
+    const categories = await dataLoader.FAQCategories.load({});
 
     const category = findCategory(categories, categoryId);
 
