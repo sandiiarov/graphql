@@ -90,6 +90,15 @@ export default {
       );
     }
 
+    if (
+      args.search.latitude !== undefined &&
+      args.search.longitude !== undefined &&
+      args.search.cityId !== undefined
+    ) {
+      throw new Error(
+        'You cannot query using latitude, longitude and cityId, please query with latitude & longitude, or just cityId.',
+      );
+    }
     const { search: searchArgs } = args;
     const offset = args.after ? cursorToOffset(args.after) + 1 : 0;
     const searchParams = processInputArguments({ ...args, offset });
