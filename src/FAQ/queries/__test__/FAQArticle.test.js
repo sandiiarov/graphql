@@ -24,4 +24,18 @@ describe('FAQArticle', () => {
     `;
     expect(await graphql(query, { id })).toMatchSnapshot();
   });
+  it('should return wrong response', async () => {
+    const id = '43453';
+    const query = `
+        query FAQArticle($id: ID!) {
+          FAQArticle(id: $id, language: en) {
+            id
+            title,
+            perex
+            content
+          }
+        }
+        `;
+    expect(await graphql(query, { id })).toMatchSnapshot();
+  });
 });

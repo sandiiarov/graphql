@@ -12,3 +12,14 @@ Object {
   },
 }
 `;
+
+exports[`FAQArticle should return wrong response 1`] = `
+Object {
+  "data": Object {
+    "FAQArticle": null,
+  },
+  "errors": Array [
+    [GraphQLError: FAQArticle ID mishmash. You cannot query FAQ with ID '43453' because this ID is not ID of the FAQArticle. Please use opaque ID of the FAQArticle.],
+  ],
+}
+`;

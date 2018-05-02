@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FAQArticleComment mutation should comment successfully with "other" type 1`] = `
+Object {
+  "data": Object {
+    "addFAQArticleComment": Object {
+      "id": "RkFRQXJ0aWNsZTozOQ==",
+    },
+  },
+}
+`;
+
+exports[`FAQArticleComment mutation should return WRONG comment type 1`] = `
+Object {
+  "errors": Array [
+    [GraphQLError: Variable "$type" got invalid value "wrongType"; Expected type FAQCommentType.],
+  ],
+}
+`;
