@@ -5156,7 +5156,7 @@
           },
           {
             "name": "cityName",
-            "description": "Name of the closest city when quering with latitude & longitude",
+            "description": "Name of the closest city",
             "args": [],
             "type": {
               "kind": "SCALAR",
