@@ -38,25 +38,37 @@ Install & use desktop GraphiQL app for more convenient communication with the se
 
 # Directory structure
 
+Tests should be close to the source code. We use this convention:
+
+```
+queries
+├── __tests__
+│    └── AllBookings.legs.test.js
+│    └── AllBookings.test.js
+└── AllBookings.js
+```
+
+It allows us to keep the test files close as well as not to bloat the source code folder with a lot of test files (one src file may have many test files). The `*.test.js` suffix is used only to distinguish between source and test quickly while using search in your editor.
+
+Overall picture of this project:
+
 ```
 src
 ├── booking
-│    ├── queries
+│    ├── queries                          # queries exposed to the client
 │    │    ├── AllBookings.js
 │    │    └── SingleBooking.js
-│    ├── mutations (if exists)
-│    ├── dataloaders + API sanitizers
+│    ├── mutations (if exists)            # similar to queries
+│    ├── dataloaders + API sanitizers     # classes to load data efficiently using Dataloader
 │    ├── types
-│    │    ├── outputs
-│    │    ├── inputs
+│    │    ├── outputs                     # definition of OUTPUT types exposed to the client
+│    │    ├── inputs                      # definition of INPUT types exposed to the client
 │    │    └── enums
-│    ├── resolvers (if exists)
-│    └── datasets
+│    ├── resolvers (if exists)            # more complicated resolvers and their logic
+│    └── datasets                         # demo data used for testing purposes
 ├── flight
 │    └── ditto
-├── hotel
-├── location
-├── identity
+├── ...
 └── common (contains shared services)
 ```
 
@@ -75,27 +87,27 @@ Some queries relies on input argument `Locale`, but soon we realized we would en
 ## Booking type
 
 There are currently three different types of bookings:
-- ONE_WAY is simply the trip from one place to another, A -> B -> C, e.g. flying from Prague to Barcelona, with possible stopovers
-- RETURN is the trip to somewhere and back A <-> B, e.g. from Prague to Barcelona on July 1, and then back from Barcelona to Prague on July 14
-- MULTICITY - is set of trips you will do over time from one place to another, booked at once. Basically it's array of ONE_WAY
 
-As each type requires different shape of data to display such booking info optimally, `Booking` has three fields `oneWay`, `return` & `multicity` and for each booking, all but one fields will be null. So if the booking has `type` equal to `RETURN`, `oneWay` and `multicity` will be null but `return` will contain relevant information.
+- "One way" is simply the trip from one place to another, A -> B -> C, e.g. flying from Prague to Barcelona, with possible stopovers
+- "Return" is the trip to somewhere and back A <-> B, e.g. from Prague to Barcelona on July 1, and then back from Barcelona to Prague on July 14
+- "Multicity" - is set of trips you will do over time from one place to another, booked at once. Basically it's array of "One way" bookings
 
-So the possible query using fragments could look like this:
+As each type requires different shape of data to display such booking info optimally. Possible query using fragments could look like this:
 
 ```
-{
-  allBookings {
+query ManageMyBooking {
+  customerBookings {
     edges {
       node {
-        type
-        oneWay { 
+        id
+        __typename
+        ... on BookingOneWay {
           ...OneWayBooking
         }
-        return {
+        ... on BookingReturn {
           ...ReturnBooking
         }
-        multicity {
+        ... on BookingMulticity {
           ...MulticityBooking 
         }
       }
@@ -104,7 +116,7 @@ So the possible query using fragments could look like this:
 }
 ```
 
-And then, based on `type`, you decide what fragment to use.
+And then, based on `__typename`, you decide what fragment to use. Not familiar with this "inline fragments" syntax in GraphQL? [Check this...](https://graphql.org/learn/queries/#inline-fragments)
 
 ## Output Types
 
@@ -114,7 +126,7 @@ Because we are using Flow for type checking you should write these Flow types ne
 
 ```js
 export type HotelCity = {|
-  name: string,
+  +name: string,
 |};
 
 export default new GraphQLObjectType({
@@ -131,11 +143,11 @@ export default new GraphQLObjectType({
 });
 ```
 
-Why you may ask? It's because in this case the Flow type defines the interface of the GraphQL type so no matter who is the ancestor of this type - the interface is clear and defined here. It's very good idea ty write resolve functions even though they may seem useless (like in this case). It's because Flow is not clever enough in this case and you may get into troubles: Let's say you want to return object for another GraphQL type (not string). In this case Flow is not able to check if the returned type from resolve function is correct unless you specify what are you actually returning. It's like checking if inputs and outputs of the resolve function are correct. This is the only way how to write GraphQL types safely. Example:
+Why you may ask? It's because in this case the Flow type defines the interface of the GraphQL type so no matter who is the ancestor of this type - the interface is clear and defined here. It's very good idea to write resolve functions even though they may seem useless (like in this case). It's because Flow is not clever enough and you may get into troubles: Let's say you want to return object for another GraphQL type (not string). In this case Flow is not able to check if the returned type from resolve function is correct unless you specify what are you actually returning. It's like checking if inputs and outputs of the resolve function are correct. This is the only way how to write GraphQL types safely. Example:
 
 ```js
 export type HotelCity = {|
-  name: string,
+  +name: string,
 |};
 
 export default new GraphQLObjectType({
@@ -167,30 +179,73 @@ Typing data loaders may by very complicated. They basically have input + output 
 ```js
 type ApiResponse = ValidResponse | ErrorResponse | NoResultResponse;
 
-type ValidResponse = Array<{|
-  translations: Array<{|
-    language: string,
-    name: string,
+type ValidResponse = $ReadOnlyArray<{|
+  +translations: $ReadOnlyArray<{|
+    +language: string,
+    +name: string,
   |}>,
-  location: {|
-    latitude: string,
-    longitude: string,
+  +location: {|
+    +latitude: string,
+    +longitude: string,
   |},
-  name: string,
-  country: string,
-  nr_hotels: number,
-  city_id: number,
+  +name: string,
+  +country: string,
+  +nr_hotels: number,
+  +city_id: number,
 |}>;
+
 type NoResultResponse = [];
+
 type ErrorResponse = {|
-  error: string,
+  +error: string,
 |};
 ```
 
 Sometimes it's convenient to use Flow types from GraphQL output type to annotate data loader result. It's not clean nor perfect but we allow this for now.
+
+### Data Loaders Gotchas
+
+Writing data loaders properly can be sometimes tricky. It's actually very easy to write data loader that doesn't work at all (and therefore it's good idea to write tests for every data loader). For example this is normal data loader implementation:
+
+```js
+const userLoader = new DataLoader(
+  (keys: $ReadOnlyArray<strings>) => myBatchGetUsers(keys)
+);
+```
+
+Nothing tricky or special here. But it gets complicated when we want to use object instead of scalars for the keys:
+
+```js
+const userLoader = new DataLoader(
+  (keys: $ReadOnlyArray<{|
+    +id: string,
+    +additionalParameter: number,
+  |}>) => myBatchGetUsers(keys)
+);
+```
+
+This data loader won't work. It will always call a new URL because the object reference changed (even though the parameters are still the same). This will fix it:
+
+```js
+import stringify from 'json-stable-stringify';
+
+const userLoader = new DataLoader(
+  (keys: $ReadOnlyArray<{|
+    +id: string,
+    +additionalParameter: number,
+  |}>) => myBatchGetUsers(keys),
+  {
+    cacheKeyFn: key => stringify(key),
+  }
+);
+```
+
+Implementation of the `cacheKeyFn` depends on the use-case. It's important to note that we do not use simple JSON stringify here because different object props order would generate different key even though the values are still the same.
 
 # Requirements of a Relay-compliant GraphQL server
 
 - [Cursor Connections Specification](https://facebook.github.io/relay/graphql/connections.htm)
 - [Global Object Identification Specification](https://facebook.github.io/relay/graphql/objectidentification.htm)
 - [Input Object Mutations Specification](https://facebook.github.io/relay/graphql/mutations.htm)
+
+_Note: you don't have to use Relay as a client. We just like these design patterns but it's still client agnostic._
