@@ -16,8 +16,10 @@ export default new OptimisticDataloader(
     const response = await get(createUrl(cityIds));
 
     return cityIds.map(id => {
-      const cityData = response.result.find(c => c.city_id == id);
-      if (!cityData) return new Error('Requested city does not exist.');
+      const cityData = response.result.find(c => c.city_id === id);
+      if (!cityData) {
+        return new Error('Requested city does not exist.');
+      }
       return sanitizeCity(cityData);
     });
   },

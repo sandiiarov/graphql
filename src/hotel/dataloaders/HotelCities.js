@@ -53,6 +53,7 @@ export default class LocationDataLoader {
       }),
     );
 
+    // $FlowIssue: https://github.com/facebook/flow/issues/6151
     return responses.map(response => {
       const cities = idx(response, _ => _.hits) || [];
       return sanitizeHotelCities(cities);
