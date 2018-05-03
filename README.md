@@ -32,6 +32,10 @@ yarn test
 yarn test-ci
 ```
 
+# GraphiQL
+
+Install & use desktop GraphiQL app for more convenient communication with the server during the development: https://github.com/skevy/graphiql-app
+
 # Directory structure
 
 ```
