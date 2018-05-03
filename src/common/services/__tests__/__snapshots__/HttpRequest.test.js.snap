@@ -5,7 +5,7 @@ Object {
   "options": Object {
     "headers": Object {
       "Content-Type": "application/json",
-      "User-Agent": "graphql",
+      "X-Client": "graphql",
     },
     "method": "GET",
   },
@@ -18,7 +18,7 @@ Object {
   "options": Object {
     "headers": Object {
       "Content-Type": "application/json",
-      "User-Agent": "graphql",
+      "X-Client": "graphql",
     },
     "method": "GET",
   },
@@ -31,7 +31,7 @@ Object {
   "options": Object {
     "headers": Object {
       "Content-Type": "application/json",
-      "User-Agent": "graphql",
+      "X-Client": "graphql",
     },
     "method": "GET",
   },
@@ -45,7 +45,7 @@ Object {
     "body": "{}",
     "headers": Object {
       "Content-Type": "application/json",
-      "User-Agent": "graphql",
+      "X-Client": "graphql",
     },
     "method": "POST",
   },
@@ -59,7 +59,7 @@ Object {
     "body": "{\\"email\\":\\"john@example.com\\",\\"password\\":123456}",
     "headers": Object {
       "Content-Type": "application/json",
-      "User-Agent": "graphql",
+      "X-Client": "graphql",
     },
     "method": "POST",
   },
@@ -73,7 +73,7 @@ Object {
     "body": "{}",
     "headers": Object {
       "Content-Type": "application/soap+xml",
-      "User-Agent": "graphql",
+      "X-Client": "graphql",
     },
     "method": "POST",
   },
@@ -87,7 +87,7 @@ Object {
     "body": "{}",
     "headers": Object {
       "Content-Type": "application/soap+xml",
-      "User-Agent": "graphql",
+      "X-Client": "graphql",
       "X-Custom-A": "Value A",
       "X-Custom-B": "Value B",
     },

@@ -14,7 +14,7 @@ export async function get(
     urlObject.searchParams.append('token', token);
   }
   const headers = {
-    'User-Agent': 'graphql',
+    'X-Client': 'graphql',
     'Content-Type': 'application/json',
     ...requestHeaders,
   };
@@ -30,7 +30,7 @@ export async function post(
   const body = JSON.stringify(payload);
   const headers = {
     'Content-Type': 'application/json',
-    'User-Agent': 'graphql',
+    'X-Client': 'graphql',
     ...requestHeaders,
   };
 

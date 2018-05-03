@@ -58,7 +58,7 @@ describe('GET request in production', () => {
 
   it('contains proper user agent header', async () => {
     const resp = await get('https://path/to/api');
-    expect(resp.options.headers['User-Agent']).toEqual('graphql');
+    expect(resp.options.headers['X-Client']).toEqual('graphql');
   });
 });
 
@@ -128,6 +128,6 @@ describe('POST request in production', () => {
 
   it('contains proper user agent header', async () => {
     const resp = await get('https://path/to/api');
-    expect(resp.options.headers['User-Agent']).toEqual('graphql');
+    expect(resp.options.headers['X-Client']).toEqual('graphql');
   });
 });
