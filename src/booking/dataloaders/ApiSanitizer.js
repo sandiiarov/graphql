@@ -23,12 +23,14 @@ export function sanitizeListItem(apiData: Object): BookingsItem {
       local: idx(flight.departure, _ => _.when.local),
       code: idx(flight.departure, _ => _.where.code),
       cityName: idx(flight.departure, _ => _.where.name),
+      cityId: idx(flight.departure, _ => _.where.city_id),
     }),
     arrival: sanitizeRoute({
       utc: idx(flight.arrival, _ => _.when.utc),
       local: idx(flight.arrival, _ => _.when.local),
       code: idx(flight.arrival, _ => _.where.code),
       cityName: idx(flight.arrival, _ => _.where.name),
+      cityId: idx(flight.arrival, _ => _.where.city_id),
     }),
     airlineCode: flight.airline.iata,
   }));

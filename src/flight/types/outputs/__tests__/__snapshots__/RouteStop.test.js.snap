@@ -9,6 +9,14 @@ Object {
     "resolve": [Function],
     "type": "Location",
   },
+  "cityId": Object {
+    "args": Array [],
+    "description": "City id of the route stop",
+    "isDeprecated": false,
+    "name": "cityId",
+    "resolve": [Function],
+    "type": "String",
+  },
   "localTime": Object {
     "args": Array [],
     "isDeprecated": false,

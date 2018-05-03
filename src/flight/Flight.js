@@ -11,6 +11,7 @@ export type DepartureArrival = {|
   where: {|
     code: string,
     cityName: string,
+    cityId: string,
   |},
 |};
 

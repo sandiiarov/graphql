@@ -15,6 +15,7 @@ beforeEach(() => {
     where: {
       code: 'string',
       cityName: 'string',
+      cityId: 'string',
     },
   };
 
@@ -28,6 +29,7 @@ beforeEach(() => {
     where: {
       code: 'string',
       cityName: 'string',
+      cityId: 'string',
     },
   };
 
@@ -39,6 +41,7 @@ beforeEach(() => {
     where: {
       code: 'string',
       cityName: 'string',
+      cityId: 'string',
     },
   };
 });

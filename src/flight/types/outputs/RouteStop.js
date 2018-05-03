@@ -1,6 +1,6 @@
 // @flow
 
-import { GraphQLObjectType } from 'graphql';
+import { GraphQLObjectType, GraphQLString } from 'graphql';
 import type { GraphQLResolveInfo } from 'graphql';
 import { GraphQLDateTime } from 'graphql-iso-date';
 import Location from '../../../location/types/outputs/Location';
@@ -40,6 +40,11 @@ export default new GraphQLObjectType({
       type: GraphQLDateTime,
       resolve: ({ when }: DepartureArrival): ?Date =>
         when == null ? null : when.local, // intentional ==, can be null or undefined
+    },
+    cityId: {
+      type: GraphQLString,
+      description: 'City id of the route stop',
+      resolve: ({ where }: DepartureArrival): string => where.cityId,
     },
   },
 });

@@ -7,6 +7,7 @@ type RouteData = {|
   local: ?number,
   code: ?string,
   cityName: ?string,
+  cityId: ?string,
 |};
 
 export function sanitizeRoute(data: RouteData): DepartureArrival {
@@ -23,6 +24,7 @@ export function sanitizeRoute(data: RouteData): DepartureArrival {
     where: {
       code: data.code || '',
       cityName: data.cityName || '',
+      cityId: data.cityId || '',
     },
   };
 }
