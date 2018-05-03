@@ -45,6 +45,16 @@
             "description": "Search for your flight bookings.",
             "args": [
               {
+                "name": "only",
+                "description": "Allows to filter only future bookings or only past bookings but not both. You can skip this argument to fetch all bookings (future and past).",
+                "type": {
+                  "kind": "ENUM",
+                  "name": "AllBookingsOnlyEnum",
+                  "ofType": null
+                },
+                "defaultValue": null
+              },
+              {
                 "name": "after",
                 "description": null,
                 "type": {
@@ -1035,6 +1045,29 @@
             "ofType": null
           }
         ]
+      },
+      {
+        "kind": "ENUM",
+        "name": "AllBookingsOnlyEnum",
+        "description": null,
+        "fields": null,
+        "inputFields": null,
+        "interfaces": null,
+        "enumValues": [
+          {
+            "name": "FUTURE",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "PAST",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "possibleTypes": null
       },
       {
         "kind": "SCALAR",

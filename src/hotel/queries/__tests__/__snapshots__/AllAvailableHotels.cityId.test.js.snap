@@ -1,5 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`all hotels query should throw error if queried with latitude and longitude 1`] = `
+Object {
+  "data": Object {
+    "allAvailableHotels": null,
+  },
+  "errors": Array [
+    [GraphQLError: You cannot query using latitude, longitude and cityId, please query with latitude & longitude, or just cityId.],
+  ],
+}
+`;
+
 exports[`all hotels query should work for full query 1`] = `
 Object {
   "data": Object {

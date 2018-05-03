@@ -36,4 +36,30 @@ describe('all hotels query', () => {
       `),
     ).toMatchSnapshot();
   });
+
+  it('should throw error if queried with latitude and longitude', async () => {
+    expect(
+      await graphql(`
+        {
+          allAvailableHotels(
+            search: {
+              cityId: "aG90ZWxDaXR5Oi0yMTQwMjA1" # hotelCity:-2140205
+              longitude: 23
+              latitude: 0
+              checkin: "2017-11-16"
+              checkout: "2017-11-23"
+              roomsConfiguration: [{ adultsCount: 1 }]
+            }
+            first: 2
+          ) {
+            edges {
+              node {
+                id
+              }
+            }
+          }
+        }
+      `),
+    ).toMatchSnapshot();
+  });
 });
