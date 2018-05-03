@@ -9,7 +9,7 @@ Object {
           "node": Object {
             "code": "aed",
             "enabledOnAffilId": Array [],
-            "fallback": "",
+            "fallback": null,
             "format": "__price__ د.إ",
             "id": "Q3VycmVuY3lEZXRhaWw6YWVk",
             "name": "United Arab Emirates Dirham",
@@ -22,7 +22,7 @@ Object {
           "node": Object {
             "code": "amd",
             "enabledOnAffilId": Array [],
-            "fallback": "",
+            "fallback": null,
             "format": "AMD __price__",
             "id": "Q3VycmVuY3lEZXRhaWw6YW1k",
             "name": "Armenian Dram",
@@ -51,7 +51,7 @@ Object {
               "kek",
               "bur",
             ],
-            "fallback": "",
+            "fallback": null,
             "format": "$ __price__",
             "id": "Q3VycmVuY3lEZXRhaWw6YXVk",
             "name": "Australian Dollar",

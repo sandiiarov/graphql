@@ -6,7 +6,7 @@
     "uncertainFormat": false,
     "round": "0",
     "enabledOnAffilId": "",
-    "fallback": "",
+    "fallback": null,
     "rate": 0.224668
   },
   "amd": {
@@ -16,7 +16,7 @@
     "uncertainFormat": false,
     "round": "0",
     "enabledOnAffilId": "",
-    "fallback": "",
+    "fallback": null,
     "rate": 0.00170754
   },
   "ars": {
@@ -39,7 +39,7 @@
       "kek",
       "bur"
     ],
-    "fallback": "",
+    "fallback": null,
     "rate": 0.623531
   }
 }

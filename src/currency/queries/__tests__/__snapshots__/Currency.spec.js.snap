@@ -6,7 +6,7 @@ Object {
     "currency": Object {
       "code": "amd",
       "enabledOnAffilId": Array [],
-      "fallback": "",
+      "fallback": null,
       "format": "AMD __price__",
       "id": "Q3VycmVuY3lEZXRhaWw6YW1k",
       "name": "Armenian Dram",
