@@ -61,7 +61,7 @@ export type GraphqlContextType = {|
     location: LocationLoader,
     locationSuggestions: LocationSuggestionsLoader,
     rates: DataLoader<string, ?number>,
-    city: DataLoader<string, City[]>,
+    city: DataLoader<string, City>,
     hotel: {
       availabilityByLocation: DataLoader<HotelKey, HotelType[]>,
       availabilityByID: DataLoader<HotelKey, HotelType[]>,

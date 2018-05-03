@@ -93,7 +93,7 @@ export default class FlightDataloader {
       filters,
     } = searchParameters;
 
-    const parameters = {
+    const parameters: Object = {
       flyFrom: this._normalizeLocations(from),
       to: this._normalizeLocations(to),
       dateFrom: this._formatDateForApi(dateFrom),
