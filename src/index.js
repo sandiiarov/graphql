@@ -1,10 +1,9 @@
 // @flow
 
+import 'dotenv/config';
 import http from 'http';
 import { ApolloEngine } from 'apollo-engine';
 import app from './graphqlServer';
-
-require('dotenv').config();
 
 const port = process.env.PORT || 3000;
 

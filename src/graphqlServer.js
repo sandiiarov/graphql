@@ -1,5 +1,6 @@
 // @flow
 
+import 'dotenv/config';
 import express from 'express';
 import graphqlHTTP from 'express-graphql';
 import cors from 'cors';
@@ -16,8 +17,6 @@ import Schema from './Schema';
 import { createContext } from './common/services/GraphqlContext';
 import Logger from './common/services/Logger';
 import { ProxiedError } from './common/services/errors/ProxiedError';
-
-require('dotenv').config();
 
 process.on('unhandledRejection', reason => {
   Logger.error(reason);
