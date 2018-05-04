@@ -44,6 +44,21 @@ Object {
     "resolve": [Function],
     "type": "RouteStop",
   },
+  "destinationImageUrl": Object {
+    "args": Array [
+      Object {
+        "astNode": undefined,
+        "defaultValue": undefined,
+        "description": null,
+        "name": "dimensions",
+        "type": "BookingDestinationImageDimensions",
+      },
+    ],
+    "isDeprecated": false,
+    "name": "destinationImageUrl",
+    "resolve": [Function],
+    "type": "String",
+  },
   "id": Object {
     "args": Array [],
     "deprecationReason": "Use \\"oneWay\\", \\"return\\" & \\"multicity\\"  fields to retrieve booking info.",
