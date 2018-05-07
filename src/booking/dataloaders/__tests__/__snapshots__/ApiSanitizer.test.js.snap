@@ -86,6 +86,7 @@ Object {
       "recheckRequired": false,
     },
   ],
+  "passengerCount": 1,
   "price": Object {
     "amount": 1082,
     "currency": "CZK",
@@ -240,6 +241,7 @@ Object {
       "recheckRequired": false,
     },
   ],
+  "passengerCount": 2,
   "price": Object {
     "amount": 38867,
     "currency": "CZK",
@@ -368,6 +370,7 @@ Object {
       "recheckRequired": false,
     },
   ],
+  "passengerCount": 1,
   "price": Object {
     "amount": 1082,
     "currency": "CZK",

@@ -1,6 +1,11 @@
 // @flow
 
-import { GraphQLEnumType, GraphQLObjectType, GraphQLString } from 'graphql';
+import {
+  GraphQLEnumType,
+  GraphQLObjectType,
+  GraphQLString,
+  GraphQLInt,
+} from 'graphql';
 
 import type { Booking } from '../../Booking';
 import BookingOneWay, { type BookingOneWayData } from './BookingOneWay';
@@ -91,6 +96,10 @@ export default new GraphQLObjectType({
         },
       },
       resolve: BookingDestinationImageURL,
+    },
+    passengerCount: {
+      type: GraphQLInt,
+      resolve: (booking: Booking) => booking.passengerCount,
     },
   },
 });

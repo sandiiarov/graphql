@@ -91,6 +91,13 @@ Object {
     "resolve": [Function],
     "type": "BookingOneWay",
   },
+  "passengerCount": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "passengerCount",
+    "resolve": [Function],
+    "type": "Int",
+  },
   "return": Object {
     "args": Array [],
     "isDeprecated": false,

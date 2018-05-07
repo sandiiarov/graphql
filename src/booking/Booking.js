@@ -22,6 +22,7 @@ export type BookingsItem = {
   status: string,
   type: BookingType,
   segments: string[] | null,
+  passengerCount: number,
 };
 
 /**

@@ -50,6 +50,7 @@ export function sanitizeListItem(apiData: Object): BookingsItem {
     status: apiData.status,
     type: detectType(apiData),
     segments: apiData.segments,
+    passengerCount: apiData.passengers.length,
   };
 }
 
