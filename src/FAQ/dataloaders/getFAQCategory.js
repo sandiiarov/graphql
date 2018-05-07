@@ -6,16 +6,13 @@ import { get } from '../../common/services/HttpRequest';
 import type { FAQCategoryType } from '../types/outputs/FAQCategory';
 import ISOLocalesToLanguage from '../../common/types/enums/ISOLocalesToLanguage';
 
-type RawFAQArticleItem = {
+export type FAQArticleItem = {
+  id: string,
   url: string,
   title: string,
   perex: string,
   upvotes: number,
   downvotes: number,
-};
-
-export type FAQArticleItem = RawFAQArticleItem & {
-  id: string,
 };
 
 export type Args = {||};
@@ -70,7 +67,7 @@ const sanitizeCategory = category => ({
   subcategories: category.childrens
     ? category.childrens.map(sanitizeCategory)
     : [],
-  FAQs: category.articles ? category.articles.map(sanitizeArticle) : [],
+  FAQs: category.articles || [],
   ancestors: [],
 });
 
@@ -83,25 +80,6 @@ const addAncestors = (category, ancestor = null) => {
     subcategories: category.subcategories.map(subcategory =>
       addAncestors(subcategory, category),
     ),
-  };
-};
-
-const sanitizeArticle = (article: RawFAQArticleItem): FAQArticleItem => {
-  // Currently "id" field itself is missing in "/categories/:id" endpoint, necessary to get out of an url
-  let id = null;
-
-  const matches = article.url && article.url.match(/(\d+)$/);
-  if (matches && matches[0] && typeof matches[0] === 'string') {
-    id = matches[0];
-  }
-
-  if (!id) {
-    throw new Error('Error: id field not extracted from url');
-  }
-
-  return {
-    id,
-    ...article,
   };
 };
 

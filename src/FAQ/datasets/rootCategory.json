@@ -2,11 +2,19 @@
   {
     "tree_id": 1,
     "title": "menu",
+    "perex": "",
     "url": "https://api.skypicker.com/knowledgebase/api/v1/categories/1"
   },
   {
     "tree_id": 2,
     "title": "related",
+    "perex": "",
     "url": "https://api.skypicker.com/knowledgebase/api/v1/categories/2"
+  },
+  {
+    "tree_id": 3,
+    "title": "smartfaqs",
+    "perex": "Tailor made FAQs with specific answers",
+    "url": "https://api.skypicker.com/knowledgebase/api/v1/categories/3"
   }
 ]

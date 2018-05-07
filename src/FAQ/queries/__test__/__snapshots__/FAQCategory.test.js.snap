@@ -6,20 +6,20 @@ Object {
     "FAQCategory": Object {
       "FAQs": Array [
         Object {
-          "id": "RkFRQXJ0aWNsZTo5NQ==",
-          "title": "What languages do you support?",
-        },
-        Object {
           "id": "RkFRQXJ0aWNsZTo5Mw==",
           "title": "What's the difference between low-cost and legacy airline carriers?",
+        },
+        Object {
+          "id": "RkFRQXJ0aWNsZToxMTE=",
+          "title": "How do I use the mobile app?",
         },
         Object {
           "id": "RkFRQXJ0aWNsZTo5NA==",
           "title": "How do I find the best flights for my budget?",
         },
         Object {
-          "id": "RkFRQXJ0aWNsZToxMTE=",
-          "title": "How do I use the mobile app?",
+          "id": "RkFRQXJ0aWNsZTo5NQ==",
+          "title": "Supported languages",
         },
       ],
       "ancestors": Array [
@@ -76,6 +76,10 @@ Object {
         Object {
           "id": "RkFRQXJ0aWNsZToxMzI=",
           "title": "How do I Refer a Friend?",
+        },
+        Object {
+          "id": "RkFRQXJ0aWNsZToxMzk=",
+          "title": "Why was I redirected to another website?",
         },
         Object {
           "id": "RkFRQXJ0aWNsZTozOQ==",

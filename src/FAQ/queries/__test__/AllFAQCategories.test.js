@@ -6,6 +6,7 @@ import categories from '../../datasets/categories.json';
 import FAQArticle39 from '../../datasets/FAQArticle-39.json';
 import FAQArticle132 from '../../datasets/FAQArticle-132.json';
 import FAQArticle136 from '../../datasets/FAQArticle-136.json';
+import FAQArticle139 from '../../datasets/FAQArticle-139.json';
 
 describe('allFAQCategories', () => {
   beforeEach(() => {
@@ -16,14 +17,17 @@ describe('allFAQCategories', () => {
       'https://api.skypicker.com/knowledgebase/api/v1/categories/1',
     ).replyWithData(categories);
     RestApiMock.onGet(
-      'https://api.skypicker.com/knowledgebase/api/v1/articles/136',
-    ).replyWithData(FAQArticle136);
+      'https://api.skypicker.com/knowledgebase/api/v1/articles/39',
+    ).replyWithData(FAQArticle39);
     RestApiMock.onGet(
       'https://api.skypicker.com/knowledgebase/api/v1/articles/132',
     ).replyWithData(FAQArticle132);
     RestApiMock.onGet(
-      'https://api.skypicker.com/knowledgebase/api/v1/articles/39',
-    ).replyWithData(FAQArticle39);
+      'https://api.skypicker.com/knowledgebase/api/v1/articles/136',
+    ).replyWithData(FAQArticle136);
+    RestApiMock.onGet(
+      'https://api.skypicker.com/knowledgebase/api/v1/articles/139',
+    ).replyWithData(FAQArticle139);
   });
 
   it('should return list of categories with subcategories and related FAQs', async () => {
