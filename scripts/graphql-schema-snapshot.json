@@ -2377,6 +2377,29 @@
             "deprecationReason": null
           },
           {
+            "name": "directAccessURL",
+            "description": "You can use this link to access one particular booking directly WITHOUT PASSWORD. Use it carefully.",
+            "args": [
+              {
+                "name": "deeplinkTo",
+                "description": null,
+                "type": {
+                  "kind": "ENUM",
+                  "name": "DirectAccessURLValues",
+                  "ofType": null
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "trip",
             "description": null,
             "args": [],
@@ -2480,6 +2503,29 @@
             },
             "isDeprecated": false,
             "deprecationReason": null
+          },
+          {
+            "name": "directAccessURL",
+            "description": "You can use this link to access one particular booking directly WITHOUT PASSWORD. Use it carefully.",
+            "args": [
+              {
+                "name": "deeplinkTo",
+                "description": null,
+                "type": {
+                  "kind": "ENUM",
+                  "name": "DirectAccessURLValues",
+                  "ofType": null
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
           }
         ],
         "inputFields": null,
@@ -2502,6 +2548,119 @@
             "ofType": null
           }
         ]
+      },
+      {
+        "kind": "ENUM",
+        "name": "DirectAccessURLValues",
+        "description": null,
+        "fields": null,
+        "inputFields": null,
+        "interfaces": null,
+        "enumValues": [
+          {
+            "name": "CHANGE_TRIP",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "INSURANCE",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "SEATING",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "PETS",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "ASSISTANCE",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "SPORT_EQUIPMENT",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "MUSICAL_EQUIPMENT",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "HOTELS",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "CAR_RENTS",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "REFUND",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "BAGS",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "EDIT_PASSENGERS",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "CANCEL",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "PENDING_SERVICES",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "VALIDATE_PAYMENT",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "TRAVEL_DOCUMENTS",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "PAYMENT",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "possibleTypes": null
       },
       {
         "kind": "OBJECT",
@@ -2636,6 +2795,29 @@
             "deprecationReason": null
           },
           {
+            "name": "directAccessURL",
+            "description": "You can use this link to access one particular booking directly WITHOUT PASSWORD. Use it carefully.",
+            "args": [
+              {
+                "name": "deeplinkTo",
+                "description": null,
+                "type": {
+                  "kind": "ENUM",
+                  "name": "DirectAccessURLValues",
+                  "ofType": null
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "outbound",
             "description": "Trip from origin to destination.",
             "args": [],
@@ -2747,6 +2929,29 @@
             "type": {
               "kind": "OBJECT",
               "name": "BookingAssets",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "directAccessURL",
+            "description": "You can use this link to access one particular booking directly WITHOUT PASSWORD. Use it carefully.",
+            "args": [
+              {
+                "name": "deeplinkTo",
+                "description": null,
+                "type": {
+                  "kind": "ENUM",
+                  "name": "DirectAccessURLValues",
+                  "ofType": null
+                },
+                "defaultValue": null
+              }
+            ],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
               "ofType": null
             },
             "isDeprecated": false,

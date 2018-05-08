@@ -16,6 +16,7 @@ describe('single booking query with multicity', () => {
       booking(id: 4903131) {
         type
         multicity {
+          directAccessURL(deeplinkTo: TRAVEL_DOCUMENTS)
           trips {
             departure {
               localTime

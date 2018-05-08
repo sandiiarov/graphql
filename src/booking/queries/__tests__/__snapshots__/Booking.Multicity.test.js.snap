@@ -5,6 +5,7 @@ Object {
   "data": Object {
     "booking": Object {
       "multicity": Object {
+        "directAccessURL": "https://kiwi.com/content/manage/4903131/random-token?deeplink=completion",
         "trips": Array [
           Object {
             "arrival": Object {

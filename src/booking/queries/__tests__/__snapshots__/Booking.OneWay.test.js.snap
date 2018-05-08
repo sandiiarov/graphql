@@ -6,6 +6,7 @@ Object {
     "booking": Object {
       "multicity": null,
       "oneWay": Object {
+        "directAccessURL": "https://kiwi.com/content/manage/2707251/b206db64-718f-4608-babb-0b8abe6e1b9d?deeplink=refund-application",
         "trip": Object {
           "arrival": Object {
             "localTime": "2017-09-09T23:30:00.000Z",
