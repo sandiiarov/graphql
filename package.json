@@ -61,7 +61,8 @@
     "build": "webpack --config config/webpack.production.js",
     "lint": "eslint .",
     "test": "jest --setupTestFrameworkScriptFile=./config/setupTests.js",
-    "test-ci": "yarn run typecheck && yarn run lint && TZ='Asia/Tokyo' yarn run test -- --ci --color --logHeapUsage --maxWorkers=4 --config=jest.json && yarn babel-node scripts/CheckBackwardCompatibility.js",
+    "test-ci": "yarn run typecheck && yarn run lint && TZ='Asia/Tokyo' yarn run test -- --ci --color --logHeapUsage --maxWorkers=4 --config=jest.json && yarn run test-bc",
+    "test-bc": "yarn babel-node scripts/CheckBackwardCompatibility.js",
     "typecheck": "flow check --color=always"
   },
   "resolutions": {

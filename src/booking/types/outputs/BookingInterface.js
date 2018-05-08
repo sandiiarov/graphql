@@ -64,6 +64,11 @@ export const commonFields = {
     },
   },
 
+  passengerCount: {
+    type: GraphQLInt,
+    resolve: (booking: BookingInterfaceData): number => booking.passengerCount,
+  },
+
   directAccessURL: {
     type: GraphQLString,
     description:

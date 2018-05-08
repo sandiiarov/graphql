@@ -1,13 +1,7 @@
 // @flow
 
-import {
-  GraphQLEnumType,
-  GraphQLObjectType,
-  GraphQLString,
-  GraphQLInt,
-} from 'graphql';
+import { GraphQLEnumType, GraphQLObjectType, GraphQLString } from 'graphql';
 
-import type { Booking } from '../../Booking';
 import BookingOneWay, { type BookingOneWayData } from './BookingOneWay';
 import BookingType from '../enums/BookingType';
 import BookingReturn, {
@@ -20,9 +14,16 @@ import BookingMulticity, {
 } from './BookingMulticity';
 import BookingDestinationImageURL from '../../resolvers/BookingDestinationImageURL';
 import DeprecatedField from './Booking.deprecated';
+import { commonFields } from './BookingInterface';
+import type { Booking } from '../../Booking';
 
 export default new GraphQLObjectType({
   name: 'Booking',
+  description:
+    'You can fetch here almost every information related to the booking itself. ' +
+    'However when you want to fetch legs you have to use "oneWay", "return" and ' +
+    '"multicity" fields because they highly depend on the booking type.',
+
   fields: {
     ...DeprecatedField,
 
@@ -97,9 +98,7 @@ export default new GraphQLObjectType({
       },
       resolve: BookingDestinationImageURL,
     },
-    passengerCount: {
-      type: GraphQLInt,
-      resolve: (booking: Booking) => booking.passengerCount,
-    },
+
+    ...commonFields,
   },
 });
