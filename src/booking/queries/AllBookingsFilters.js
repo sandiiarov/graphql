@@ -4,11 +4,8 @@ import { DateTime } from 'luxon';
 
 import type { BookingsItem } from '../Booking';
 
-export function filterOnlyBookings(
-  timeFrame: 'future' | 'past',
-  bookings: $ReadOnlyArray<BookingsItem>,
-) {
-  const bookingGroups = bookings.reduce(
+export function groupBookings(bookings: $ReadOnlyArray<BookingsItem>) {
+  return bookings.reduce(
     (acc, curVal) => {
       if (isPastBooking(curVal) === true) {
         acc.past.push(curVal);
@@ -22,6 +19,13 @@ export function filterOnlyBookings(
       past: [],
     },
   );
+}
+
+export function filterOnlyBookings(
+  timeFrame: 'future' | 'past',
+  bookings: $ReadOnlyArray<BookingsItem>,
+) {
+  const bookingGroups = groupBookings(bookings);
 
   if (timeFrame === 'future') {
     return bookingGroups.future;

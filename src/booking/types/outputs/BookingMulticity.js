@@ -11,9 +11,7 @@ import RouteStop from '../../../flight/types/outputs/RouteStop';
 import type { TripData } from './Trip';
 import type { DepartureArrival } from '../../../flight/Flight';
 
-export type BookingMulticityData = BookingInterfaceData & {
-  departure: DepartureArrival,
-  arrival: DepartureArrival,
+type BookingMulticityData = BookingInterfaceData & {
   trips: TripData[],
 };
 
@@ -36,7 +34,7 @@ export default new GraphQLObjectType({
     trips: {
       type: new GraphQLList(Trip),
       description: 'List of trips in each multicity segment.',
-      resolve: ({ trips }: BookingMulticityData): TripData[] => trips,
+      resolve: ({ trips }: BookingMulticityData): ?(TripData[]) => trips,
     },
   },
 });

@@ -3,6 +3,7 @@
 import { GraphQLObjectType } from 'graphql';
 
 import AllBookings from './booking/queries/AllBookings';
+import NearestBooking from './booking/queries/NearestBooking';
 import AllFlights from './flight/queries/AllFlights';
 import Currency from './currency/queries/Currency';
 import Currencies from './currency/queries/Currencies';
@@ -28,6 +29,7 @@ export default new GraphQLObjectType({
   fields: {
     node: nodeField,
     allBookings: AllBookings,
+    nearestBooking: NearestBooking,
     allFlights: AllFlights,
     currency: Currency,
     currencies: Currencies,

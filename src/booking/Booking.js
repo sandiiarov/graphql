@@ -3,6 +3,7 @@
 import type { DepartureArrival, Leg } from '../flight/Flight';
 import type { Price } from '../common/types/Price';
 import type { AllowedBaggage } from './Baggage';
+import type { TripData } from './types/outputs/Trip';
 
 /**
  * This is fetched from 'bookings' endpoint.
@@ -21,8 +22,10 @@ export type BookingsItem = {
   authToken: string,
   status: string,
   type: BookingType,
-  segments: string[] | null,
   passengerCount: number,
+  trips?: TripData[],
+  inbound?: TripData,
+  outbound?: TripData,
 };
 
 export type BookedService = {|
