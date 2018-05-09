@@ -37,6 +37,8 @@ describe('single booking query', () => {
   it('should return valid fields', async () => {
     const arrivalQuery = `{
       booking(id: 2707251) {
+        destinationImageUrl
+        directAccessURL
         arrival {
           airport { city { name }, locationId }
         }

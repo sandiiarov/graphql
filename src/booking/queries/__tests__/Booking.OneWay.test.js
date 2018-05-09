@@ -16,6 +16,7 @@ describe('single booking query with one way trip', () => {
       booking(id: 2707251) {
         type
         oneWay {
+          destinationImageUrl(dimensions: _1280x720)
           directAccessURL(deeplinkTo: REFUND)
           trip {
             departure {

@@ -1,20 +1,16 @@
 // @flow
 
-import { GraphQLEnumType, GraphQLObjectType, GraphQLString } from 'graphql';
+import { GraphQLObjectType } from 'graphql';
 
 import BookingOneWay, { type BookingOneWayData } from './BookingOneWay';
 import BookingType from '../enums/BookingType';
-import BookingReturn, {
-  type BookingReturnData,
-  splitLegs,
-} from './BookingReturn';
+import BookingReturn, { type BookingReturnData } from './BookingReturn';
 import BookingMulticity, {
   type BookingMulticityData,
-  createTrips,
 } from './BookingMulticity';
-import BookingDestinationImageURL from '../../resolvers/BookingDestinationImageURL';
 import DeprecatedField from './Booking.deprecated';
 import { commonFields } from './BookingInterface';
+import { createTrips, splitLegs } from '../../BookingHelpers';
 import type { Booking } from '../../Booking';
 
 export default new GraphQLObjectType({
@@ -26,6 +22,7 @@ export default new GraphQLObjectType({
 
   fields: {
     ...DeprecatedField,
+    ...commonFields,
 
     type: {
       type: BookingType,
@@ -74,31 +71,5 @@ export default new GraphQLObjectType({
         return { ...booking, trips };
       },
     },
-
-    destinationImageUrl: {
-      type: GraphQLString,
-      args: {
-        dimensions: {
-          type: new GraphQLEnumType({
-            name: 'BookingDestinationImageDimensions',
-            values: {
-              _1200x628: { value: '1200x628' },
-              _1280x720: { value: '1280x720' },
-              _220x165: { value: '220x165' },
-              _275x250: { value: '275x250' },
-              _300x165: { value: '300x165' },
-              _375x165: { value: '375x165' },
-              _600x330: { value: '600x330' },
-              _600x600: { value: '600x600' },
-              _610x251: { value: '610x251' },
-            },
-            defaultValue: '600x600',
-          }),
-        },
-      },
-      resolve: BookingDestinationImageURL,
-    },
-
-    ...commonFields,
   },
 });

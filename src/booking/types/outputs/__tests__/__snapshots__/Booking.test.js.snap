@@ -45,7 +45,7 @@ Object {
     "args": Array [
       Object {
         "astNode": undefined,
-        "defaultValue": undefined,
+        "defaultValue": "600x600",
         "description": null,
         "name": "dimensions",
         "type": "BookingDestinationImageDimensions",

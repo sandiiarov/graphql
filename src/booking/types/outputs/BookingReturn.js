@@ -7,7 +7,6 @@ import BookingInterface, {
   type BookingInterfaceData,
 } from './BookingInterface';
 import Trip, { type TripData } from './Trip';
-import type { Leg } from '../../../flight/Flight';
 
 type InboundOutboundData = {
   inbound: TripData,
@@ -34,34 +33,3 @@ export default new GraphQLObjectType({
     },
   },
 });
-
-export function splitLegs(legs: Leg[]): InboundOutboundData {
-  const inboundLegs = [];
-  const outboundLegs = [];
-
-  legs.forEach(leg => {
-    if (leg.isReturn) {
-      inboundLegs.push(leg);
-      return;
-    }
-
-    outboundLegs.push(leg);
-  });
-
-  if (!inboundLegs.length || !outboundLegs.length) {
-    throw new Error('Unexpected - these are not Legs with return trip.');
-  }
-
-  return {
-    inbound: {
-      departure: inboundLegs[0].departure,
-      arrival: inboundLegs[inboundLegs.length - 1].arrival,
-      legs: inboundLegs,
-    },
-    outbound: {
-      departure: outboundLegs[0].departure,
-      arrival: outboundLegs[outboundLegs.length - 1].arrival,
-      legs: outboundLegs,
-    },
-  };
-}

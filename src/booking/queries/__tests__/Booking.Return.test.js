@@ -16,6 +16,7 @@ describe('single booking query with return flight', () => {
       booking(id: 3222550) {
         type
         return {
+          destinationImageUrl
           directAccessURL
           outbound {
             departure {

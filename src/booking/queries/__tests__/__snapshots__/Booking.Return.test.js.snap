@@ -7,6 +7,7 @@ Object {
       "multicity": null,
       "oneWay": null,
       "return": Object {
+        "destinationImageUrl": "https://images.kiwi.com/photos/600x600/tokyo_jp.jpg",
         "directAccessURL": "https://kiwi.com/content/manage/3222550/random_auth_token",
         "inbound": Object {
           "arrival": Object {

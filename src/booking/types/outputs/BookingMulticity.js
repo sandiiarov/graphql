@@ -9,7 +9,7 @@ import BookingInterface, {
 import Trip from './Trip';
 import RouteStop from '../../../flight/types/outputs/RouteStop';
 import type { TripData } from './Trip';
-import type { DepartureArrival, Leg } from '../../../flight/Flight';
+import type { DepartureArrival } from '../../../flight/Flight';
 
 export type BookingMulticityData = BookingInterfaceData & {
   departure: DepartureArrival,
@@ -40,22 +40,3 @@ export default new GraphQLObjectType({
     },
   },
 });
-
-export function createTrips(segments: string[], legs: Leg[]): TripData[] {
-  const trips = [];
-
-  const lastIndex = segments.reduce((lastIndex: number, segment: string) => {
-    const indexOfNewSegment = parseInt(segment);
-    const trip = legs.slice(lastIndex, indexOfNewSegment);
-    trips.push(trip);
-
-    return indexOfNewSegment;
-  }, 0);
-  trips.push(legs.slice(lastIndex));
-
-  return trips.map(trip => ({
-    departure: trip[0].departure,
-    arrival: trip[trip.length - 1].arrival,
-    legs: trip,
-  }));
-}

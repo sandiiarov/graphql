@@ -1,7 +1,6 @@
 // @flow
 
-import { splitLegs } from '../types/outputs/BookingReturn';
-import { createTrips } from '../types/outputs/BookingMulticity';
+import { createTrips, splitLegs } from '../BookingHelpers';
 import type { Booking } from '../Booking';
 
 export function getCityId(legs: Object[]) {

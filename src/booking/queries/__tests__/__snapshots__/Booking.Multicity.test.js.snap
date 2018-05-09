@@ -5,6 +5,7 @@ Object {
   "data": Object {
     "booking": Object {
       "multicity": Object {
+        "destinationImageUrl": "https://images.kiwi.com/photos/610x251/moscow_ru.jpg",
         "directAccessURL": "https://kiwi.com/content/manage/4903131/random-token?deeplink=completion",
         "trips": Array [
           Object {
