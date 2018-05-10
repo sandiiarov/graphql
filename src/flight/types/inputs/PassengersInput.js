@@ -8,5 +8,8 @@ export default new GraphQLInputObjectType({
     adults: {
       type: new GraphQLNonNull(GraphQLInt),
     },
+    infants: {
+      type: GraphQLInt,
+    },
   },
 });

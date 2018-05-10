@@ -6,5 +6,9 @@ Object {
     "name": "adults",
     "type": "Int!",
   },
+  "infants": Object {
+    "name": "infants",
+    "type": "Int",
+  },
 }
 `;

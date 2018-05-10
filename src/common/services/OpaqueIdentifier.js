@@ -22,7 +22,8 @@ type AvailableOpaqueTypes =
   | 'hotelCity'
   | 'identity'
   | 'FAQArticle'
-  | 'FAQCategory';
+  | 'FAQCategory'
+  | 'dynamicPackage';
 
 export const globalIdField = (
   typeName?: ?AvailableOpaqueTypes,

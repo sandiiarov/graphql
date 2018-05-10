@@ -24,6 +24,7 @@ import HotelRoomsLoader from '../../hotel/dataloaders/HotelRooms';
 import HotelRoomAvailabilityLoader from '../../hotel/dataloaders/HotelRoomAvailability';
 import HotelRoomBeddingLoader from '../../hotel/dataloaders/RoomBedding';
 import PriceStatsLoader from '../../hotel/dataloaders/PriceStats';
+import DynamicPackagesLoader from '../../dynamicPackage/dataloaders/DynamicPackages';
 
 import type { Booking } from '../../booking/Booking';
 import type { Airline } from '../../flight/Flight';
@@ -42,6 +43,8 @@ import type {
 import type { FAQCategoryType } from '../../FAQ/types/outputs/FAQCategory';
 import ISOLocalesToObsolete from '../types/enums/ISOLocalesToObsolete';
 import ISOLocalesToLanguage from '../types/enums/ISOLocalesToLanguage';
+import type { SearchParameters as DynamicPackagesSearchParams } from '../../dynamicPackage/dataloaders/DynamicPackages';
+import type { DynamicPackage } from '../../dynamicPackage/dataloaders/DynamicPackageType';
 
 /**
  * FIXME:
@@ -79,6 +82,7 @@ export type GraphqlContextType = {|
     FAQ: DataLoader<FAQArgs, FAQArticleItem[]>,
     FAQCategories: DataLoader<FAQCategoryArgs, FAQCategoryType[]>,
     FAQArticle: DataLoader<FAQCArticleArgs, FAQArticleDetail>,
+    dynamicPackages: DataLoader<DynamicPackagesSearchParams, DynamicPackage[]>,
   |},
   options: OptionsStorage,
   _traceCollector?: Object,
@@ -130,6 +134,7 @@ export function createContext(
       FAQ: createFAQLoader(language),
       FAQCategories: createFAQCategoryLoader(language),
       FAQArticle: createFAQArticleLoader(language),
+      dynamicPackages: DynamicPackagesLoader,
     },
     options: new OptionsStorage(),
   };

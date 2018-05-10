@@ -21,6 +21,7 @@ import AllFAQs from './FAQ/queries/AllFAQs';
 import AllFAQCategories from './FAQ/queries/AllFAQCategories';
 import FAQCategory from './FAQ/queries/FAQCategory';
 import FAQArticle from './FAQ/queries/FAQArticle';
+import AllDynamicPackages from './dynamicPackage/queries/AllDynamicPackages';
 import { nodeField } from './node/node';
 import AvailableWhitelabeledServices from './services/queries/AvailableWhitelabeledServices';
 
@@ -49,5 +50,6 @@ export default new GraphQLObjectType({
     FAQCategory: FAQCategory,
     FAQArticle: FAQArticle,
     availableWhitelabeledServices: AvailableWhitelabeledServices,
+    allDynamicPackages: AllDynamicPackages,
   },
 });
