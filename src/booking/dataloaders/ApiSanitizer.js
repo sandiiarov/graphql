@@ -57,6 +57,7 @@ export function sanitizeListItem(apiData: Object): BookingsItem {
 export function sanitizeDetail(apiData: Object): Booking {
   const common = sanitizeListItem(apiData);
   const { bag_params } = apiData;
+
   return {
     ...common,
     allowedBaggage: {
@@ -94,7 +95,17 @@ export function sanitizeDetail(apiData: Object): Booking {
       ticketUrl: apiData.assets.eticket,
       invoiceUrl: apiData.assets.invoice,
     },
+    bookedServices: sanitizeAdditionalBookings(
+      apiData.additional_bookings.details,
+    ),
   };
+}
+
+function sanitizeAdditionalBookings(additionalBookings: Array<Object>) {
+  return additionalBookings.map(item => ({
+    category: item.category,
+    status: item.final_status,
+  }));
 }
 
 function parseAdditionalBaggage(

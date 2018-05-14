@@ -25,6 +25,13 @@ Object {
     "resolve": [Function],
     "type": "BookingAssets",
   },
+  "bookedServices": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "bookedServices",
+    "resolve": [Function],
+    "type": "[BookedService]",
+  },
   "databaseId": Object {
     "args": Array [],
     "description": "Unique number identifying the booking in communication with support.",

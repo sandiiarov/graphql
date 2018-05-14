@@ -25,12 +25,18 @@ export type BookingsItem = {
   passengerCount: number,
 };
 
+export type BookedService = {|
+  category: string,
+  status: string,
+|};
+
 /**
  * This is additionally fetched from 'booking/12..' endpoint if needed.
  */
 export type Booking = BookingsItem & {
   allowedBaggage: AllowedBaggage,
   assets: BookingAssets,
+  bookedServices: BookedService[],
 };
 
 export type BookingAssets = {

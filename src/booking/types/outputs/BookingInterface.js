@@ -5,6 +5,7 @@ import {
   GraphQLInt,
   GraphQLString,
   GraphQLEnumType,
+  GraphQLList,
 } from 'graphql';
 
 import { globalIdField } from '../../../common/services/OpaqueIdentifier';
@@ -16,6 +17,7 @@ import GraphQLBookingAssets from './BookingAssets';
 import GraphQLBookingStatus from '../enums/BookingStatus';
 import Price from '../../../common/types/outputs/Price';
 import BookingDestinationImageURL from '../../resolvers/BookingDestinationImageURL';
+import GraphQLBookedServices from './BookedService';
 
 export type BookingInterfaceData = BookingsItem;
 
@@ -134,6 +136,18 @@ export const commonFields = {
         return baseURL + '?deeplink=' + args.deeplinkTo;
       }
       return baseURL;
+    },
+  },
+
+  bookedServices: {
+    type: new GraphQLList(GraphQLBookedServices),
+    resolve: async (
+      { id }: BookingInterfaceData,
+      args: Object,
+      { dataLoader }: GraphqlContextType,
+    ) => {
+      const { bookedServices } = await dataLoader.booking.load(id);
+      return bookedServices;
     },
   },
 };
