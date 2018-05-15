@@ -22,7 +22,7 @@ import GraphQLBookedServices from './BookedService';
 export type BookingInterfaceData = BookingsItem;
 
 export const commonFields = {
-  id: globalIdField(),
+  id: globalIdField('Booking'),
 
   databaseId: {
     type: GraphQLInt,
