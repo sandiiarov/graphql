@@ -37,6 +37,7 @@ const StatusEnum = new GraphQLEnumType({
     CONFIRMED: { value: 'confirmed' },
     CLOSED: { value: 'closed' },
     PENDING: { value: 'pending' },
+    OPEN: { value: 'open' },
   },
 });
 
