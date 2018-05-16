@@ -60,6 +60,7 @@ export function sanitizeListItem(apiData: Object): BookingsItem {
     status: apiData.status,
     type,
     passengerCount: apiData.passengers.length,
+    passengers: sanitizePassengers(apiData.passengers),
     ...additionalFields,
   };
 }
@@ -109,6 +110,22 @@ export function sanitizeDetail(apiData: Object): Booking {
       apiData.additional_bookings.details,
     ),
   };
+}
+
+function sanitizePassengers(passengers: Object[]) {
+  return passengers.map(passenger => ({
+    id: passenger.id,
+    firstname: passenger.firstname,
+    lastname: passenger.lastname,
+    insuranceType: passenger.insurance_type,
+    title: passenger.title,
+    birthday: passenger.birthday,
+    nationality: passenger.nationality,
+    travelDocument: {
+      idNumber: passenger.travel_document.cardno,
+      expiration: passenger.travel_document.expiration,
+    },
+  }));
 }
 
 function sanitizeAdditionalBookings(additionalBookings: Array<Object>) {

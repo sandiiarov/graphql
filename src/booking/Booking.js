@@ -26,7 +26,24 @@ export type BookingsItem = {
   trips?: TripData[],
   inbound?: TripData,
   outbound?: TripData,
+  passengers: Passenger[],
 };
+
+export type TravelDocument = {|
+  idNumber: string,
+  expiration: number,
+|};
+
+export type Passenger = {|
+  id: number,
+  firstname: string,
+  lastname: string,
+  insuranceType: string,
+  title: string,
+  birthday: string,
+  nationality: string,
+  travelDocument: TravelDocument,
+|};
 
 export type BookedService = {|
   category: string,

@@ -1,5 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`single booking query should map skysilver and skygold to travel_basic/plus 1`] = `
+Object {
+  "data": Object {
+    "booking": Object {
+      "passengers": Array [
+        Object {
+          "insuranceType": "TRAVEL_BASIC",
+        },
+        Object {
+          "insuranceType": "TRAVEL_PLUS",
+        },
+      ],
+    },
+  },
+}
+`;
+
 exports[`single booking query should return valid fields 1`] = `
 Object {
   "data": Object {

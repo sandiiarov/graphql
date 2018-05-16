@@ -117,6 +117,13 @@ Object {
     "resolve": [Function],
     "type": "Int",
   },
+  "passengers": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "passengers",
+    "resolve": [Function],
+    "type": "[Passenger]",
+  },
   "price": Object {
     "args": Array [],
     "description": "Total price of the whole booking.",

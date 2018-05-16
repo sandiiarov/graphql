@@ -19,6 +19,7 @@ import Price from '../../../common/types/outputs/Price';
 import BookingDestinationImageURL from '../../resolvers/BookingDestinationImageURL';
 import GraphQLBookedServices from './BookedService';
 import BookingType from '../enums/BookingType';
+import Passenger from './Passenger';
 
 export type BookingInterfaceData = BookingsItem;
 
@@ -70,6 +71,18 @@ export const commonFields = {
     ): Promise<BookingAssets> => {
       const { assets } = await dataLoader.booking.load(id);
       return assets;
+    },
+  },
+
+  passengers: {
+    type: new GraphQLList(Passenger),
+    resolve: async (
+      { id }: BookingInterfaceData,
+      args: Object,
+      { dataLoader }: GraphqlContextType,
+    ) => {
+      const { passengers } = await dataLoader.booking.load(id);
+      return passengers;
     },
   },
 

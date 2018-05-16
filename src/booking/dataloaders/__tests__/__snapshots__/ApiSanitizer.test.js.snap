@@ -125,6 +125,21 @@ Object {
     },
   ],
   "passengerCount": 1,
+  "passengers": Array [
+    Object {
+      "birthday": "1985-01-01",
+      "firstname": "TEST",
+      "id": 4492972,
+      "insuranceType": "none",
+      "lastname": "TEST",
+      "nationality": "us",
+      "title": "mr",
+      "travelDocument": Object {
+        "expiration": 1608768000,
+        "idNumber": "12345678XY",
+      },
+    },
+  ],
   "price": Object {
     "amount": 1082,
     "currency": "CZK",
@@ -221,6 +236,21 @@ Object {
     },
   ],
   "passengerCount": 1,
+  "passengers": Array [
+    Object {
+      "birthday": "1985-01-01",
+      "firstname": "TEST",
+      "id": 4492972,
+      "insuranceType": "none",
+      "lastname": "TEST",
+      "nationality": "us",
+      "title": "mr",
+      "travelDocument": Object {
+        "expiration": 1608768000,
+        "idNumber": "12345678XY",
+      },
+    },
+  ],
   "price": Object {
     "amount": 1082,
     "currency": "CZK",
@@ -543,6 +573,34 @@ Object {
     ],
   },
   "passengerCount": 2,
+  "passengers": Array [
+    Object {
+      "birthday": "1994-01-24",
+      "firstname": "Joe",
+      "id": 4882155,
+      "insuranceType": "none",
+      "lastname": "Doe",
+      "nationality": "cz",
+      "title": "ms",
+      "travelDocument": Object {
+        "expiration": 1786838400,
+        "idNumber": "007007007",
+      },
+    },
+    Object {
+      "birthday": "1989-03-13",
+      "firstname": "John",
+      "id": 4882156,
+      "insuranceType": "none",
+      "lastname": "Smith",
+      "nationality": "cz",
+      "title": "mr",
+      "travelDocument": Object {
+        "expiration": 1793500000,
+        "idNumber": "111111111",
+      },
+    },
+  ],
   "price": Object {
     "amount": 38867,
     "currency": "CZK",
