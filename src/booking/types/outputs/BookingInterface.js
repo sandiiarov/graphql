@@ -23,7 +23,7 @@ import BookingType from '../enums/BookingType';
 export type BookingInterfaceData = BookingsItem;
 
 export const commonFields = {
-  id: globalIdField('Booking'),
+  id: globalIdField(),
 
   databaseId: {
     type: GraphQLInt,
