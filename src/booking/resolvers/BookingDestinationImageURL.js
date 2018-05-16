@@ -1,6 +1,5 @@
 // @flow
 
-import { createTrips, splitLegs } from '../BookingHelpers';
 import type { Booking } from '../Booking';
 
 export function getCityId(legs: Object[]) {
@@ -17,12 +16,13 @@ export default (booking: Booking, args: {| dimensions: string |}): string => {
     return castURL(args.dimensions, getCityId(booking.legs));
   } else if (booking.type === 'BookingReturn') {
     // destination of the last outbound leg
-    const { outbound } = splitLegs(booking.legs);
-    return castURL(args.dimensions, getCityId(outbound.legs));
+    const legs = booking.outbound ? booking.outbound.legs : [];
+
+    return castURL(args.dimensions, getCityId(legs));
   } else if (booking.type === 'BookingMulticity') {
     // destination of the last leg of the last trip
-    const trips = createTrips(booking.segments || [], booking.legs);
-    const legs = trips[trips.length - 1].legs;
+    const trips = booking.trips;
+    const legs = trips && trips.length ? trips[trips.length - 1].legs : [];
     return castURL(args.dimensions, getCityId(legs));
   }
 

@@ -8,7 +8,7 @@ import BookingInterface, {
 } from './BookingInterface';
 import Trip, { type TripData } from './Trip';
 
-type InboundOutboundData = {
+export type InboundOutboundData = {
   inbound: TripData,
   outbound: TripData,
 };
@@ -24,12 +24,12 @@ export default new GraphQLObjectType({
     outbound: {
       type: Trip,
       description: 'Trip from origin to destination.',
-      resolve: ({ outbound }: BookingReturnData): TripData => outbound,
+      resolve: ({ outbound }: BookingReturnData): ?TripData => outbound,
     },
     inbound: {
       type: Trip,
       description: 'Return trip back from destination to origin.',
-      resolve: ({ inbound }: BookingReturnData): TripData => inbound,
+      resolve: ({ inbound }: BookingReturnData): ?TripData => inbound,
     },
   },
 });

@@ -2,15 +2,11 @@
 
 import { GraphQLObjectType } from 'graphql';
 
-import BookingOneWay, { type BookingOneWayData } from './BookingOneWay';
-import BookingType from '../enums/BookingType';
-import BookingReturn, { type BookingReturnData } from './BookingReturn';
-import BookingMulticity, {
-  type BookingMulticityData,
-} from './BookingMulticity';
+import BookingOneWay from './BookingOneWay';
+import BookingReturn from './BookingReturn';
+import BookingMulticity from './BookingMulticity';
 import DeprecatedField from './Booking.deprecated';
 import { commonFields } from './BookingInterface';
-import { createTrips, splitLegs } from '../../BookingHelpers';
 import type { Booking } from '../../Booking';
 
 export default new GraphQLObjectType({
@@ -24,14 +20,9 @@ export default new GraphQLObjectType({
     ...DeprecatedField,
     ...commonFields,
 
-    type: {
-      type: BookingType,
-      resolve: ({ type }: Booking) => type,
-    },
-
     oneWay: {
       type: BookingOneWay,
-      resolve: (booking: Booking): ?BookingOneWayData => {
+      resolve: (booking: Booking) => {
         if (booking.type !== 'BookingOneWay') {
           return null;
         }
@@ -42,33 +33,23 @@ export default new GraphQLObjectType({
 
     return: {
       type: BookingReturn,
-      resolve: (booking: Booking): ?BookingReturnData => {
+      resolve: (booking: Booking) => {
         if (booking.type !== 'BookingReturn') {
           return null;
         }
 
-        const { inbound, outbound } = splitLegs(booking.legs);
-
-        return { ...booking, inbound, outbound };
+        return booking;
       },
     },
 
     multicity: {
       type: BookingMulticity,
-      resolve: (booking: Booking): ?BookingMulticityData => {
+      resolve: (booking: Booking) => {
         if (booking.type !== 'BookingMulticity') {
           return null;
         }
 
-        if (!Array.isArray(booking.segments)) {
-          throw new Error(
-            'Unexpected - booking is of type "BookingMulticity" but segments are missing.',
-          );
-        }
-
-        const trips = createTrips(booking.segments, booking.legs);
-
-        return { ...booking, trips };
+        return booking;
       },
     },
   },

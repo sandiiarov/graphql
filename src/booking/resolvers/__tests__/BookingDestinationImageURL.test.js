@@ -28,11 +28,15 @@ describe('resolver', () => {
         // $FlowExpectedError: full Booking object is not needed for this test
         {
           type: 'BookingReturn',
-          legs: [
-            { arrival: { where: { cityId: 'AAA' } } },
-            { arrival: { where: { cityId: 'BBB' } } },
-            { arrival: { where: { cityId: 'CCC' } }, isReturn: true },
-          ],
+          outbound: {
+            legs: [
+              { arrival: { where: { cityId: 'AAA' } } },
+              { arrival: { where: { cityId: 'BBB' } } },
+            ],
+          },
+          inbound: {
+            legs: [{ arrival: { where: { cityId: 'CCC' } }, isReturn: true }],
+          },
         },
         {
           dimensions: '22x33',
@@ -48,10 +52,14 @@ describe('resolver', () => {
         {
           type: 'BookingMulticity',
           segments: [],
-          legs: [
-            { arrival: { where: { cityId: 'AAA' } } },
-            { arrival: { where: { cityId: 'BBB' } } },
-            { arrival: { where: { cityId: 'CCC' } } },
+          trips: [
+            {
+              legs: [
+                { arrival: { where: { cityId: 'AAA' } } },
+                { arrival: { where: { cityId: 'BBB' } } },
+                { arrival: { where: { cityId: 'CCC' } } },
+              ],
+            },
           ],
         },
         {

@@ -18,6 +18,7 @@ import GraphQLBookingStatus from '../enums/BookingStatus';
 import Price from '../../../common/types/outputs/Price';
 import BookingDestinationImageURL from '../../resolvers/BookingDestinationImageURL';
 import GraphQLBookedServices from './BookedService';
+import BookingType from '../enums/BookingType';
 
 export type BookingInterfaceData = BookingsItem;
 
@@ -29,6 +30,11 @@ export const commonFields = {
     description:
       'Unique number identifying the booking in communication with support.',
     resolve: ({ id }: BookingInterfaceData): number => id,
+  },
+
+  type: {
+    type: BookingType,
+    resolve: ({ type }: BookingInterfaceData) => type,
   },
 
   status: {
