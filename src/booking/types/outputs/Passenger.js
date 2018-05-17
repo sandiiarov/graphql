@@ -49,6 +49,11 @@ export default new GraphQLObjectType({
     lastname: {
       type: GraphQLString,
     },
+    fullName: {
+      type: GraphQLString,
+      resolve: ({ firstname, lastname }: Passenger) =>
+        `${firstname} ${lastname}`,
+    },
     insuranceType: {
       type: InsuranceTypeEnum,
       resolve: ({ insuranceType }: Passenger) => {
