@@ -52,4 +52,22 @@ describe('Field "fullName"', () => {
       }),
     ).toBe('First');
   });
+
+  it('returns lastName if firstName is undefined', () => {
+    expect(
+      evaluateResolver(fields.fullName, {
+        ...identity,
+        firstName: undefined,
+      }),
+    ).toBe('Last');
+  });
+
+  it('returns firstName if lastName is undefined', () => {
+    expect(
+      evaluateResolver(fields.fullName, {
+        ...identity,
+        lastName: undefined,
+      }),
+    ).toBe('First');
+  });
 });

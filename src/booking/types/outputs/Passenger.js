@@ -52,7 +52,7 @@ export default new GraphQLObjectType({
     fullName: {
       type: GraphQLString,
       resolve: ({ firstname, lastname }: Passenger) =>
-        `${firstname} ${lastname}`,
+        [firstname, lastname].filter(word => word != null).join(' '),
     },
     insuranceType: {
       type: InsuranceTypeEnum,
