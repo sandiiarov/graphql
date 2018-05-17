@@ -44,10 +44,10 @@ export default new GraphQLObjectType({
       description:
         'Concatenation of first and last name with fallback to the login field.',
       resolve: ({ firstName, lastName, login }: Identity): string => {
-        if (firstName === null && lastName === null) {
+        if (firstName == null && lastName == null) {
           return login;
         }
-        return [firstName, lastName].filter(word => word !== null).join(' ');
+        return [firstName, lastName].filter(word => word != null).join(' ');
       },
     },
 
