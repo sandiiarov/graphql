@@ -3342,6 +3342,18 @@
             "deprecationReason": null
           },
           {
+            "name": "duration",
+            "description": "Trip duration in minutes.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "legs",
             "description": null,
             "args": [],

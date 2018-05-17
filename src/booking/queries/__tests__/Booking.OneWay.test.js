@@ -20,11 +20,12 @@ describe('single booking query with one way trip', () => {
           directAccessURL(deeplinkTo: REFUND)
           trip {
             departure {
-              localTime
+              time
             }
             arrival {
-              localTime
+              time
             }
+            duration
             legs {
               duration
             }

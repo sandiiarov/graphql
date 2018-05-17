@@ -20,18 +20,20 @@ describe('single booking query with multicity', () => {
           directAccessURL(deeplinkTo: TRAVEL_DOCUMENTS)
           trips {
             departure {
-              localTime
+              time
             }
             arrival {
-              localTime
+              time
             }
+            duration
             legs {
               departure {
-                localTime
+                time
               }
               arrival {
-                localTime
+                time
               }
+              duration
             }
           }
         }

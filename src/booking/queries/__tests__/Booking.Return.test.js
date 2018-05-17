@@ -20,19 +20,21 @@ describe('single booking query with return flight', () => {
           directAccessURL
           outbound {
             departure {
-              localTime
+              time
             }
             arrival {
-              localTime
+              time
             }
+            duration
           }
           inbound {
             departure {
-              localTime
+              time
             }
             arrival {
-              localTime
+              time
             }
+            duration
           }
         }
         oneWay {
