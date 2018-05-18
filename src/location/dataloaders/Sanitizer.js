@@ -11,13 +11,16 @@ export function sanitizeApiResponse(location: Object): Location {
     slug: location.slug,
     timezone: location.timezone,
     location: {
-      lat: idx(location, _ => _.location.lat) || 0,
-      lng: idx(location, _ => _.location.lon) || 0,
+      lat: idx(location, _ => _.location.lat) || 0, // this is wrong - cannot change it to 0 and assume that "0" lat doesn't exist
+      lng: idx(location, _ => _.location.lon) || 0, // this is wrong - cannot change it to 0 and assume that "0" lng doesn't exist
     },
-    type: location.type,
+    type: location.type, // continent, region, city, station, airport
     city: sanitizeLocationArea(location.city),
     subdivision: sanitizeLocationArea(location.subdivision),
-    country: sanitizeLocationArea(location.country),
+    country:
+      location.type === 'airport'
+        ? sanitizeLocationArea(location.city.country)
+        : sanitizeLocationArea(location.country),
     isActive: location.active,
     stationsCount: location.stations,
     airportsCount: location.airports,

@@ -2,51 +2,265 @@
   "locations": [
     {
       "id": "prague_cz",
+      "active": true,
       "name": "Prague",
-      "slug": "prague-czech-republic",
+      "slug": "prague-czechia",
       "code": "PRG",
       "alternative_names": [],
-      "rank": 1,
-      "timezone": "Europe\/Prague",
-      "population": null,
-      "airports": 2,
+      "rank": 7,
+      "timezone": "Europe/Prague",
+      "population": 1165581,
+      "airports": 1,
+      "stations": 1,
+      "bus_stations": 1,
       "subdivision": null,
       "autonomous_territory": null,
       "country": {
         "id": "CZ",
-        "name": "Czech Republic",
-        "slug": "czech-republic"
+        "name": "Czechia",
+        "slug": "czechia",
+        "code": "CZ"
+      },
+      "region": {
+        "id": "central-europe",
+        "name": "Central Europe",
+        "slug": "central-europe"
+      },
+      "continent": {
+        "id": "europe",
+        "name": "Europe",
+        "slug": "europe",
+        "code": "EU"
       },
       "location": {
-        "lat": 50.0755381,
-        "lon": 14.4378005
+        "lat": 50.075538,
+        "lon": 14.4378
       },
+      "tags": [
+        {
+          "tag": "nightlife",
+          "month_to": -1,
+          "month_from": -1
+        },
+        {
+          "tag": "sightseeing&culture",
+          "month_to": -1,
+          "month_from": -1
+        }
+      ],
       "type": "city"
     },
     {
       "id": "PRG",
-      "name": "V\u00e1clav Havel Airport Prague",
-      "slug": "vaclav-havel-airport-prague-prague-czech-republic",
+      "int_id": 5212,
+      "active": true,
+      "code": "PRG",
+      "name": "Václav Havel Airport Prague",
+      "slug": "vaclav-havel-airport-prague-prague-czechia",
       "alternative_names": [],
-      "rank": 0,
-      "timezone": "Europe\/Prague",
+      "rank": 2,
+      "timezone": "Europe/Prague",
       "city": {
         "id": "prague_cz",
         "name": "Prague",
-        "slug": "prague-czech-republic",
+        "code": "PRG",
+        "slug": "prague-czechia",
         "subdivision": null,
         "autonomous_territory": null,
         "country": {
           "id": "CZ",
-          "name": "Czech Republic",
-          "slug": "czech-republic"
+          "name": "Czechia",
+          "slug": "czechia",
+          "code": "CZ"
+        },
+        "region": {
+          "id": "central-europe",
+          "name": "Central Europe",
+          "slug": "central-europe"
+        },
+        "continent": {
+          "id": "europe",
+          "name": "Europe",
+          "slug": "europe",
+          "code": "EU"
         }
       },
+      "special": [
+        {
+          "id": "zwinger_poi",
+          "name": "Zwinger",
+          "slug": "zwinger"
+        },
+        {
+          "id": "sedlec-ossuary_poi",
+          "name": "Sedlec Ossuary",
+          "slug": "sedlec-ossuary"
+        },
+        {
+          "id": "charles-bridge_poi",
+          "name": "Charles Bridge",
+          "slug": "charles-bridge"
+        },
+        {
+          "id": "old-town-square-prague_poi",
+          "name": "Old Town Square, Prague",
+          "slug": "old-town-square"
+        },
+        {
+          "id": "karlstejn-castle_poi",
+          "name": "Karlstejn Castle",
+          "slug": "karlstejn-castle"
+        },
+        {
+          "id": "prague-castle_poi",
+          "name": "Prague Castle",
+          "slug": "prague-castle"
+        },
+        {
+          "id": "melk_poi",
+          "name": "Melk",
+          "slug": "melk"
+        }
+      ],
       "location": {
-        "lat": 50.1008333,
+        "lat": 50.100833,
         "lon": 14.26
       },
+      "alternative_departure_points": [
+        {
+          "id": "ZDN",
+          "distance": 229.96,
+          "duration": 9288
+        },
+        {
+          "id": "BRQ",
+          "distance": 234.04,
+          "duration": 9792
+        },
+        {
+          "id": "WRO",
+          "distance": 351.15,
+          "duration": 15192
+        },
+        {
+          "id": "DRS",
+          "distance": 182.19,
+          "duration": 7992
+        },
+        {
+          "id": "XIR",
+          "distance": 161.51,
+          "duration": 7560
+        },
+        {
+          "id": "PFL",
+          "distance": 18.74,
+          "duration": 2844
+        },
+        {
+          "id": "XHI",
+          "distance": 306.38,
+          "duration": 10476
+        },
+        {
+          "id": "KLV",
+          "distance": 113.55,
+          "duration": 6048
+        },
+        {
+          "id": "ZIK",
+          "distance": 117.77,
+          "duration": 6120
+        },
+        {
+          "id": "XIT",
+          "distance": 265.96,
+          "duration": 10800
+        },
+        {
+          "id": "LEJ",
+          "distance": 282.25,
+          "duration": 12492
+        },
+        {
+          "id": "LNZ",
+          "distance": 274.36,
+          "duration": 13572
+        },
+        {
+          "id": "LZS",
+          "distance": 263.59,
+          "duration": 12672
+        },
+        {
+          "id": "NUE",
+          "distance": 300.16,
+          "duration": 10224
+        },
+        {
+          "id": "ZAQ",
+          "distance": 285.94,
+          "duration": 10080
+        },
+        {
+          "id": "PED",
+          "distance": 145.73,
+          "duration": 6588
+        },
+        {
+          "id": "ZPF",
+          "distance": 228.12,
+          "duration": 11808
+        },
+        {
+          "id": "XYG",
+          "distance": 21.14,
+          "duration": 3096
+        },
+        {
+          "id": "ZPM",
+          "distance": 260.41,
+          "duration": 9252
+        }
+      ],
+      "tags": [
+        {
+          "tag": "sightseeing&culture",
+          "month_to": -1,
+          "month_from": -1
+        },
+        {
+          "tag": "nightlife",
+          "month_to": -1,
+          "month_from": -1
+        }
+      ],
       "type": "airport"
+    },
+    {
+      "id": "central-europe",
+      "active": true,
+      "name": "Central Europe",
+      "slug": "central-europe",
+      "alternative_names": [],
+      "rank": 127,
+      "continent": {
+        "id": "europe",
+        "code": "EU",
+        "name": "Europe",
+        "slug": "europe"
+      },
+      "type": "region"
+    },
+    {
+      "id": "europe",
+      "active": true,
+      "name": "Europe",
+      "code": "EU",
+      "slug": "europe",
+      "alternative_names": [],
+      "rank": 127,
+      "type": "continent"
     }
   ],
   "meta": {

@@ -16,6 +16,16 @@ Object {
             "name": "Václav Havel Airport Prague",
           },
         },
+        Object {
+          "node": Object {
+            "name": "Central Europe",
+          },
+        },
+        Object {
+          "node": Object {
+            "name": "Europe",
+          },
+        },
       ],
     },
   },
@@ -38,6 +48,16 @@ Object {
         Object {
           "node": Object {
             "name": "Václav Havel Airport Prague",
+          },
+        },
+        Object {
+          "node": Object {
+            "name": "Central Europe",
+          },
+        },
+        Object {
+          "node": Object {
+            "name": "Europe",
           },
         },
       ],

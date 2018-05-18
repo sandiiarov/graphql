@@ -11,7 +11,11 @@ Array [
       "name": "Prague",
       "slug": "prague-czechia",
     },
-    "country": null,
+    "country": Object {
+      "locationId": "CZ",
+      "name": "Czechia",
+      "slug": "czechia",
+    },
     "isActive": true,
     "location": Object {
       "lat": 50.100833,
@@ -35,7 +39,11 @@ Array [
       "name": "Brno",
       "slug": "brno-czechia",
     },
-    "country": null,
+    "country": Object {
+      "locationId": "CZ",
+      "name": "Czechia",
+      "slug": "czechia",
+    },
     "isActive": true,
     "location": Object {
       "lat": 49.151389,
@@ -63,7 +71,11 @@ Object {
     "name": "Prague",
     "slug": "prague-czechia",
   },
-  "country": null,
+  "country": Object {
+    "locationId": "CZ",
+    "name": "Czechia",
+    "slug": "czechia",
+  },
   "isActive": true,
   "location": Object {
     "lat": 50.100833,

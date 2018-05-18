@@ -12,7 +12,11 @@ Array [
         "name": "Prague",
         "slug": "prague-czechia",
       },
-      "country": null,
+      "country": Object {
+        "locationId": "CZ",
+        "name": "Czechia",
+        "slug": "czechia",
+      },
       "isActive": true,
       "location": Object {
         "lat": 50.100833,
@@ -60,7 +64,11 @@ Array [
         "name": "Medina",
         "slug": "medina-saudi-arabia",
       },
-      "country": null,
+      "country": Object {
+        "locationId": "SA",
+        "name": "Saudi Arabia",
+        "slug": "saudi-arabia",
+      },
       "isActive": true,
       "location": Object {
         "lat": 24.553333,
@@ -84,7 +92,11 @@ Array [
         "name": "Pristina",
         "slug": "pristina-kosovo",
       },
-      "country": null,
+      "country": Object {
+        "locationId": "XK",
+        "name": "Kosovo",
+        "slug": "kosovo",
+      },
       "isActive": true,
       "location": Object {
         "lat": 42.572778,
@@ -108,7 +120,11 @@ Array [
         "name": "Al-Qassim Region",
         "slug": "al-qassim-region-saudi-arabia",
       },
-      "country": null,
+      "country": Object {
+        "locationId": "SA",
+        "name": "Saudi Arabia",
+        "slug": "saudi-arabia",
+      },
       "isActive": true,
       "location": Object {
         "lat": 26.302778,
@@ -132,7 +148,11 @@ Array [
         "name": "Barcelona",
         "slug": "barcelona-spain",
       },
-      "country": null,
+      "country": Object {
+        "locationId": "ES",
+        "name": "Spain",
+        "slug": "spain",
+      },
       "isActive": true,
       "location": Object {
         "lat": 41.296944,
@@ -158,7 +178,11 @@ Array [
         "name": "Brno",
         "slug": "brno-czechia",
       },
-      "country": null,
+      "country": Object {
+        "locationId": "CZ",
+        "name": "Czechia",
+        "slug": "czechia",
+      },
       "isActive": true,
       "location": Object {
         "lat": 49.151389,
@@ -206,7 +230,11 @@ Array [
         "name": "City of Brussels",
         "slug": "city-of-brussels-belgium",
       },
-      "country": null,
+      "country": Object {
+        "locationId": "BE",
+        "name": "Belgium",
+        "slug": "belgium",
+      },
       "isActive": true,
       "location": Object {
         "lat": 50.901389,
@@ -230,7 +258,11 @@ Array [
         "name": "Brisbane",
         "slug": "brisbane-queensland-australia",
       },
-      "country": null,
+      "country": Object {
+        "locationId": "AU",
+        "name": "Australia",
+        "slug": "australia",
+      },
       "isActive": true,
       "location": Object {
         "lat": -27.384167,
@@ -282,7 +314,11 @@ Array [
         "name": "Bremen",
         "slug": "bremen-germany",
       },
-      "country": null,
+      "country": Object {
+        "locationId": "DE",
+        "name": "Germany",
+        "slug": "germany",
+      },
       "isActive": true,
       "location": Object {
         "lat": 53.0475,
@@ -312,7 +348,11 @@ Array [
       "name": "Prague",
       "slug": "prague-czechia",
     },
-    "country": null,
+    "country": Object {
+      "locationId": "CZ",
+      "name": "Czechia",
+      "slug": "czechia",
+    },
     "isActive": true,
     "location": Object {
       "lat": 50.100833,
@@ -360,7 +400,11 @@ Array [
       "name": "Medina",
       "slug": "medina-saudi-arabia",
     },
-    "country": null,
+    "country": Object {
+      "locationId": "SA",
+      "name": "Saudi Arabia",
+      "slug": "saudi-arabia",
+    },
     "isActive": true,
     "location": Object {
       "lat": 24.553333,
@@ -384,7 +428,11 @@ Array [
       "name": "Pristina",
       "slug": "pristina-kosovo",
     },
-    "country": null,
+    "country": Object {
+      "locationId": "XK",
+      "name": "Kosovo",
+      "slug": "kosovo",
+    },
     "isActive": true,
     "location": Object {
       "lat": 42.572778,
@@ -408,7 +456,11 @@ Array [
       "name": "Al-Qassim Region",
       "slug": "al-qassim-region-saudi-arabia",
     },
-    "country": null,
+    "country": Object {
+      "locationId": "SA",
+      "name": "Saudi Arabia",
+      "slug": "saudi-arabia",
+    },
     "isActive": true,
     "location": Object {
       "lat": 26.302778,
@@ -432,7 +484,11 @@ Array [
       "name": "Barcelona",
       "slug": "barcelona-spain",
     },
-    "country": null,
+    "country": Object {
+      "locationId": "ES",
+      "name": "Spain",
+      "slug": "spain",
+    },
     "isActive": true,
     "location": Object {
       "lat": 41.296944,
@@ -485,7 +541,11 @@ Array [
       "name": "Praha",
       "slug": "praha-ceska-republika",
     },
-    "country": null,
+    "country": Object {
+      "locationId": "CZ",
+      "name": "Česká republika",
+      "slug": "ceska-republika",
+    },
     "isActive": undefined,
     "location": Object {
       "lat": 50.1008333,
@@ -533,7 +593,11 @@ Array [
       "name": "Luang Prabang",
       "slug": "luang-prabang-laos",
     },
-    "country": null,
+    "country": Object {
+      "locationId": "LA",
+      "name": "Laos",
+      "slug": "laos",
+    },
     "isActive": undefined,
     "location": Object {
       "lat": 19.8977778,
@@ -605,7 +669,11 @@ Array [
       "name": "Patna",
       "slug": "patna-indie",
     },
-    "country": null,
+    "country": Object {
+      "locationId": "IN",
+      "name": "Indie",
+      "slug": "indie",
+    },
     "isActive": undefined,
     "location": Object {
       "lat": 25.5913889,
@@ -659,7 +727,11 @@ Array [
         "name": "Praha",
         "slug": "praha-ceska-republika",
       },
-      "country": null,
+      "country": Object {
+        "locationId": "CZ",
+        "name": "Česká republika",
+        "slug": "ceska-republika",
+      },
       "isActive": undefined,
       "location": Object {
         "lat": 50.1008333,
@@ -707,7 +779,11 @@ Array [
         "name": "Luang Prabang",
         "slug": "luang-prabang-laos",
       },
-      "country": null,
+      "country": Object {
+        "locationId": "LA",
+        "name": "Laos",
+        "slug": "laos",
+      },
       "isActive": undefined,
       "location": Object {
         "lat": 19.8977778,
@@ -779,7 +855,11 @@ Array [
         "name": "Patna",
         "slug": "patna-indie",
       },
-      "country": null,
+      "country": Object {
+        "locationId": "IN",
+        "name": "Indie",
+        "slug": "indie",
+      },
       "isActive": undefined,
       "location": Object {
         "lat": 25.5913889,
@@ -829,7 +909,11 @@ Array [
         "name": "Praha",
         "slug": "praha-ceska-republika",
       },
-      "country": null,
+      "country": Object {
+        "locationId": "CZ",
+        "name": "Česká republika",
+        "slug": "ceska-republika",
+      },
       "isActive": undefined,
       "location": Object {
         "lat": 50.1008333,
@@ -877,7 +961,11 @@ Array [
         "name": "Luang Prabang",
         "slug": "luang-prabang-laos",
       },
-      "country": null,
+      "country": Object {
+        "locationId": "LA",
+        "name": "Laos",
+        "slug": "laos",
+      },
       "isActive": undefined,
       "location": Object {
         "lat": 19.8977778,
@@ -949,7 +1037,11 @@ Array [
         "name": "Patna",
         "slug": "patna-indie",
       },
-      "country": null,
+      "country": Object {
+        "locationId": "IN",
+        "name": "Indie",
+        "slug": "indie",
+      },
       "isActive": undefined,
       "location": Object {
         "lat": 25.5913889,

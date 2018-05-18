@@ -16,7 +16,7 @@ describe('all locations query', () => {
 
   it('should return locations', async () => {
     const query = `{
-      allLocations(search: "PRG", first: 1) {
+      allLocations(search: "PRG", first: 20) {
         edges {
           node {
             locationId

@@ -39,6 +39,18 @@ Object {
             "name": "Václav Havel Airport Prague",
           },
         },
+        Object {
+          "node": Object {
+            "locationId": "central-europe",
+            "name": "Central Europe",
+          },
+        },
+        Object {
+          "node": Object {
+            "locationId": "europe",
+            "name": "Europe",
+          },
+        },
       ],
     },
   },
