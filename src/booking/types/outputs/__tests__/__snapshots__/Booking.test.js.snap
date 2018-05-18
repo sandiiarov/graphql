@@ -32,6 +32,14 @@ Object {
     "resolve": [Function],
     "type": "[BookedService]",
   },
+  "bookingDate": Object {
+    "args": Array [],
+    "description": "Date of the booking creation",
+    "isDeprecated": false,
+    "name": "bookingDate",
+    "resolve": [Function],
+    "type": "Date",
+  },
   "contactDetails": Object {
     "args": Array [],
     "isDeprecated": false,

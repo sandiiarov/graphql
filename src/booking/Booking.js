@@ -19,6 +19,7 @@ export type BookingsItem = {
   departure: DepartureArrival,
   legs: Array<Leg>,
   price: Price,
+  created: Date,
   authToken: string,
   status: string,
   type: BookingType,

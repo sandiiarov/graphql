@@ -7,6 +7,8 @@ import {
   GraphQLEnumType,
   GraphQLList,
 } from 'graphql';
+import { GraphQLDate } from 'graphql-iso-date';
+import { DateTime } from 'luxon';
 
 import { globalIdField } from '../../../common/services/OpaqueIdentifier';
 import type { GraphqlContextType } from '../../../common/services/GraphqlContext';
@@ -46,8 +48,15 @@ export const commonFields = {
 
   price: {
     type: Price,
-    resolve: ({ price }: BookingInterfaceData) => price,
     description: 'Total price of the whole booking.',
+    resolve: ({ price }: BookingInterfaceData) => price,
+  },
+
+  bookingDate: {
+    type: GraphQLDate,
+    description: 'Date of the booking creation',
+    resolve: ({ created }: BookingInterfaceData): Date =>
+      DateTime.fromJSDate(created, { zone: 'UTC' }).toISODate(),
   },
 
   allowedBaggage: {

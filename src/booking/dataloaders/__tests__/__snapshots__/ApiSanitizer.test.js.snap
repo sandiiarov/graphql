@@ -56,6 +56,7 @@ Object {
     "email": "tony@kiwi.com",
     "phone": "+1 000",
   },
+  "created": 2017-05-03T18:41:59.000Z,
   "departure": Object {
     "when": Object {
       "local": 2017-09-11T09:05:00.000Z,
@@ -167,6 +168,7 @@ Object {
     },
   },
   "authToken": "b9cb406d-f797-434c-bc21-a0612b92f201",
+  "created": 2017-05-03T18:41:59.000Z,
   "departure": Object {
     "when": Object {
       "local": 2017-09-11T09:05:00.000Z,
@@ -278,6 +280,7 @@ Object {
     },
   },
   "authToken": "random_auth_token",
+  "created": 2017-06-03T08:33:37.000Z,
   "departure": Object {
     "when": Object {
       "local": 2017-06-28T12:05:00.000Z,

@@ -56,6 +56,7 @@ export function sanitizeListItem(apiData: Object): BookingsItem {
       amount: apiData.original_price,
       currency: apiData.original_currency,
     },
+    created: new Date(apiData.created * 1000),
     authToken: apiData.auth_token,
     status: apiData.status,
     type,
