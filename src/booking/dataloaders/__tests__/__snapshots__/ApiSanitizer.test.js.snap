@@ -52,6 +52,10 @@ Object {
       "status": "closed",
     },
   ],
+  "contactDetails": Object {
+    "email": "tony@kiwi.com",
+    "phone": "+1 000",
+  },
   "departure": Object {
     "when": Object {
       "local": 2017-09-11T09:05:00.000Z,

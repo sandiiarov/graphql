@@ -50,6 +50,11 @@ export type BookedService = {|
   status: string,
 |};
 
+export type ContactDetails = {|
+  phone: string,
+  email: string,
+|};
+
 /**
  * This is additionally fetched from 'booking/12..' endpoint if needed.
  */
@@ -57,6 +62,7 @@ export type Booking = BookingsItem & {
   allowedBaggage: AllowedBaggage,
   assets: BookingAssets,
   bookedServices: BookedService[],
+  contactDetails: ContactDetails,
 };
 
 export type BookingAssets = {

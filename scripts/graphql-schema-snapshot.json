@@ -1484,6 +1484,18 @@
             "deprecationReason": null
           },
           {
+            "name": "contactDetails",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "BookingContactDetails",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "oneWay",
             "description": null,
             "args": [],
@@ -2902,6 +2914,41 @@
       },
       {
         "kind": "OBJECT",
+        "name": "BookingContactDetails",
+        "description": "Contact details related to the booking",
+        "fields": [
+          {
+            "name": "phone",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "email",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
         "name": "BookingOneWay",
         "description": "Booking with simple trip from origin to destination, with possible stopovers.",
         "fields": [
@@ -3079,6 +3126,18 @@
                 "name": "BookedService",
                 "ofType": null
               }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "contactDetails",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "BookingContactDetails",
+              "ofType": null
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -3286,6 +3345,18 @@
                 "name": "BookedService",
                 "ofType": null
               }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "contactDetails",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "BookingContactDetails",
+              "ofType": null
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -3559,6 +3630,18 @@
             "deprecationReason": null
           },
           {
+            "name": "contactDetails",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "BookingContactDetails",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "outbound",
             "description": "Trip from origin to destination.",
             "args": [],
@@ -3773,6 +3856,18 @@
                 "name": "BookedService",
                 "ofType": null
               }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "contactDetails",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "BookingContactDetails",
+              "ofType": null
             },
             "isDeprecated": false,
             "deprecationReason": null

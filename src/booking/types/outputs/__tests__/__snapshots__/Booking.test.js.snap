@@ -32,6 +32,13 @@ Object {
     "resolve": [Function],
     "type": "[BookedService]",
   },
+  "contactDetails": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "contactDetails",
+    "resolve": [Function],
+    "type": "BookingContactDetails",
+  },
   "databaseId": Object {
     "args": Array [],
     "description": "Unique number identifying the booking in communication with support.",

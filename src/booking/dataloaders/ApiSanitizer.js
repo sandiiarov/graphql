@@ -109,6 +109,14 @@ export function sanitizeDetail(apiData: Object): Booking {
     bookedServices: sanitizeAdditionalBookings(
       apiData.additional_bookings.details,
     ),
+    contactDetails: sanitizeContactDetails(apiData.contact),
+  };
+}
+
+function sanitizeContactDetails(contactDetails: Object) {
+  return {
+    phone: contactDetails.phone,
+    email: contactDetails.email,
   };
 }
 

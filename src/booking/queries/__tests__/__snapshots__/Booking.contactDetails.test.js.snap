@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should return contact details 1`] = `
+Object {
+  "data": Object {
+    "booking": Object {
+      "contactDetails": Object {
+        "email": "kiwicomtester@gmail.com",
+        "phone": "+44 000",
+      },
+    },
+  },
+}
+`;

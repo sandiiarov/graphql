@@ -20,6 +20,7 @@ import BookingDestinationImageURL from '../../resolvers/BookingDestinationImageU
 import GraphQLBookedServices from './BookedService';
 import BookingType from '../enums/BookingType';
 import Passenger from './Passenger';
+import GraphQLContactDetails from './BookingContactDetails';
 
 export type BookingInterfaceData = BookingsItem;
 
@@ -167,6 +168,18 @@ export const commonFields = {
     ) => {
       const { bookedServices } = await dataLoader.booking.load(id);
       return bookedServices;
+    },
+  },
+
+  contactDetails: {
+    type: GraphQLContactDetails,
+    resolve: async (
+      { id }: BookingInterfaceData,
+      args: Object,
+      { dataLoader }: GraphqlContextType,
+    ) => {
+      const { contactDetails } = await dataLoader.booking.load(id);
+      return contactDetails;
     },
   },
 };
