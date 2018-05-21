@@ -26,6 +26,8 @@ export type Flight = {|
   passengers: number,
 |};
 
+export type VehicleType = 'BUS' | 'TRAIN' | 'AIRCRAFT';
+
 export type Leg = {|
   id: string,
   recheckRequired: boolean,
@@ -34,6 +36,8 @@ export type Leg = {|
   departure: DepartureArrival,
   arrival: DepartureArrival,
   airlineCode: string,
+  vehicleType: ?VehicleType,
+  bookingId?: number,
 |};
 
 export type Airline = {|

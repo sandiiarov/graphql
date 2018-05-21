@@ -130,6 +130,7 @@
           "latTo": 59.9127,
           "dTime": 1504130100,
           "found_on": null,
+          "vehicle_type": "aircraft",
           "airline": "DY",
           "cityFrom": "Prague",
           "aTime": 1504137300
@@ -155,6 +156,7 @@
           "latTo": 28.5383,
           "dTime": 1504200600,
           "found_on": null,
+          "vehicle_type": "aircraft",
           "airline": "DY",
           "cityFrom": "Oslo",
           "aTime": 1504213500
@@ -180,6 +182,7 @@
           "latTo": 29.6856666701,
           "dTime": 1504248600,
           "found_on": "amadeus_mpis",
+          "vehicle_type": "aircraft",
           "airline": "UA",
           "cityFrom": "Orlando",
           "aTime": 1504253640
@@ -205,6 +208,7 @@
           "latTo": 19.4285,
           "dTime": 1504294500,
           "found_on": "amadeus_mpis",
+          "vehicle_type": "aircraft",
           "airline": "UA",
           "cityFrom": "Houston",
           "aTime": 1504302600
@@ -288,6 +292,7 @@
           "latTo": 59.3326,
           "dTime": 1504698000,
           "found_on": "amadeus_mpis",
+          "vehicle_type": "aircraft",
           "airline": "OK",
           "cityFrom": "Prague",
           "aTime": 1504705200
@@ -313,6 +318,7 @@
           "latTo": 34.0699824882,
           "dTime": 1504784700,
           "found_on": null,
+          "vehicle_type": "aircraft",
           "airline": "DY",
           "cityFrom": "Stockholm",
           "aTime": 1504791900
@@ -338,6 +344,7 @@
           "latTo": 19.4285,
           "dTime": 1504865100,
           "found_on": null,
+          "vehicle_type": "aircraft",
           "airline": "4O",
           "cityFrom": "Los Angeles",
           "aTime": 1504886700
@@ -421,6 +428,7 @@
           "latTo": 59.3326,
           "dTime": 1504700700,
           "found_on": null,
+          "vehicle_type": "aircraft",
           "airline": "DY",
           "cityFrom": "Prague",
           "aTime": 1504707600
@@ -446,6 +454,7 @@
           "latTo": 34.0699824882,
           "dTime": 1504784700,
           "found_on": null,
+          "vehicle_type": "aircraft",
           "airline": "DY",
           "cityFrom": "Stockholm",
           "aTime": 1504791900
@@ -471,6 +480,7 @@
           "latTo": 19.4285,
           "dTime": 1504865100,
           "found_on": null,
+          "vehicle_type": "aircraft",
           "airline": "4O",
           "cityFrom": "Los Angeles",
           "aTime": 1504886700

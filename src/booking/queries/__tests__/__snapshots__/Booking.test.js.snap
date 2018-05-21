@@ -64,6 +64,20 @@ Object {
 }
 `;
 
+exports[`single booking query should return vehicle type for each Leg 1`] = `
+Object {
+  "data": Object {
+    "booking": Object {
+      "legs": Array [
+        Object {
+          "type": "AIRCRAFT",
+        },
+      ],
+    },
+  },
+}
+`;
+
 exports[`single booking query should work with opaque Booking id 1`] = `
 Object {
   "data": Object {

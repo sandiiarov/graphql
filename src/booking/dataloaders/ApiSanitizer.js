@@ -15,8 +15,10 @@ import type { InboundOutboundData } from '../types/outputs/BookingReturn';
  * departure: computed from the first flight leg because API returns "0" for times
  */
 export function sanitizeListItem(apiData: Object): BookingsItem {
+  const bid = parseInt(apiData.bid);
   const legs = apiData.flights.map((flight): Leg => ({
     id: flight.id,
+    bookingId: bid,
     recheckRequired: flight.bags_recheck_required,
     isReturn: flight.return === 1,
     flightNo: flight.flight_no,
@@ -35,6 +37,7 @@ export function sanitizeListItem(apiData: Object): BookingsItem {
       cityId: idx(flight.arrival, _ => _.where.city_id),
     }),
     airlineCode: flight.airline.iata,
+    vehicleType: idx(flight, _ => _.vehicle.type),
   }));
   const lastLeg = legs[legs.length - 1];
   const firstLeg = legs[0];
@@ -48,7 +51,7 @@ export function sanitizeListItem(apiData: Object): BookingsItem {
   }
 
   return {
-    id: parseInt(apiData.bid),
+    id: bid,
     departure: firstLeg.departure,
     arrival: lastLeg.arrival,
     legs,

@@ -61,5 +61,12 @@ Object {
     "resolve": [Function],
     "type": "Boolean",
   },
+  "type": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "type",
+    "resolve": [Function],
+    "type": "VehicleType",
+  },
 }
 `;

@@ -1,6 +1,11 @@
 // @flow
 
-import { GraphQLObjectType, GraphQLBoolean, GraphQLInt } from 'graphql';
+import {
+  GraphQLObjectType,
+  GraphQLBoolean,
+  GraphQLInt,
+  GraphQLEnumType,
+} from 'graphql';
 import { globalIdField } from '../../../common/services/OpaqueIdentifier';
 
 import GraphQLRouteStop from './RouteStop';
@@ -8,7 +13,16 @@ import GraphQLAirline from './Airline';
 import FlightDurationInMinutes from '../../resolvers/FlightDuration';
 
 import type { GraphqlContextType } from '../../../common/services/GraphqlContext';
-import type { DepartureArrival, Leg } from '../../Flight';
+import type { DepartureArrival, Leg, VehicleType } from '../../Flight';
+
+const VehicleTypes = new GraphQLEnumType({
+  name: 'VehicleType',
+  values: {
+    BUS: { value: 'bus' },
+    TRAIN: { value: 'train' },
+    AIRCRAFT: { value: 'aircraft' },
+  },
+});
 
 export default new GraphQLObjectType({
   name: 'Leg',
@@ -57,6 +71,32 @@ export default new GraphQLObjectType({
       type: GraphQLBoolean,
       description: 'Determines whether Leg is related to return flight.',
       resolve: ({ isReturn }): boolean => isReturn,
+    },
+
+    type: {
+      type: VehicleTypes,
+      resolve: async (
+        { id, vehicleType, bookingId }: Leg,
+        args: Object,
+        { dataLoader }: GraphqlContextType,
+      ): Promise<?VehicleType> => {
+        if (vehicleType) {
+          return vehicleType;
+        }
+
+        if (bookingId) {
+          // needs to be fetched for booking loaded via "dataLoader.bookings.load"
+          const booking = await dataLoader.booking.load(bookingId);
+
+          if (booking && Array.isArray(booking.legs)) {
+            const leg = booking.legs.find(leg => leg.id === id);
+
+            return leg ? leg.vehicleType : null;
+          }
+        }
+
+        return null;
+      },
     },
   },
 });

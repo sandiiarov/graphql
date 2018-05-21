@@ -51,11 +51,11 @@
       "name": "LOT Polish Airlines"
     },
     "vehicle": {
-      "model": "DHC-8-400 Dash 8Q",
-      "seats": 78,
-      "type": "DH4",
-      "meal": [],
-      "manufacturer": "De Havilland Canada"
+      "manufacturer": null,
+      "meal": null,
+      "model": null,
+      "seats": null,
+      "type": "aircraft"
     },
     "operating_airline": {
       "iata": "LO",
@@ -102,11 +102,11 @@
       "name": "LOT Polish Airlines"
     },
     "vehicle": {
-      "model": "DHC-8-400 Dash 8Q",
-      "seats": 78,
-      "type": "DH4",
-      "meal": [],
-      "manufacturer": "De Havilland Canada"
+      "manufacturer": null,
+      "meal": null,
+      "model": null,
+      "seats": null,
+      "type": "aircraft"
     },
     "operating_airline": {
       "iata": "LO",

@@ -45,6 +45,7 @@ export function sanitizeApiResponse(
         cityId: flight.cityId,
       }),
       airlineCode: leg.airline,
+      vehicleType: leg.vehicle_type,
     })),
     price: {
       amount: flight.price,

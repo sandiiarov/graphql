@@ -83,6 +83,7 @@ Object {
           "code": "WAW",
         },
       },
+      "bookingId": 2968389,
       "departure": Object {
         "when": Object {
           "local": 2017-09-11T09:05:00.000Z,
@@ -98,6 +99,7 @@ Object {
       "id": "SP1123103_1678073",
       "isReturn": false,
       "recheckRequired": false,
+      "vehicleType": "aircraft",
     },
     Object {
       "airlineCode": "LO",
@@ -112,6 +114,7 @@ Object {
           "code": "GDN",
         },
       },
+      "bookingId": 2968389,
       "departure": Object {
         "when": Object {
           "local": 2017-09-11T10:45:00.000Z,
@@ -127,6 +130,7 @@ Object {
       "id": "SP1123103_1678074",
       "isReturn": false,
       "recheckRequired": false,
+      "vehicleType": "aircraft",
     },
   ],
   "passengerCount": 1,
@@ -195,6 +199,7 @@ Object {
           "code": "WAW",
         },
       },
+      "bookingId": 2968389,
       "departure": Object {
         "when": Object {
           "local": 2017-09-11T09:05:00.000Z,
@@ -210,6 +215,7 @@ Object {
       "id": "SP1123103_1678073",
       "isReturn": false,
       "recheckRequired": false,
+      "vehicleType": undefined,
     },
     Object {
       "airlineCode": "LO",
@@ -224,6 +230,7 @@ Object {
           "code": "GDN",
         },
       },
+      "bookingId": 2968389,
       "departure": Object {
         "when": Object {
           "local": 2017-09-11T10:45:00.000Z,
@@ -239,6 +246,7 @@ Object {
       "id": "SP1123103_1678074",
       "isReturn": false,
       "recheckRequired": false,
+      "vehicleType": undefined,
     },
   ],
   "passengerCount": 1,
@@ -330,6 +338,7 @@ Object {
             "code": "MXP",
           },
         },
+        "bookingId": 3222550,
         "departure": Object {
           "when": Object {
             "local": 2017-07-09T12:45:00.000Z,
@@ -345,6 +354,7 @@ Object {
         "id": "SP1244683_1864800",
         "isReturn": true,
         "recheckRequired": false,
+        "vehicleType": undefined,
       },
       Object {
         "airlineCode": "AZ",
@@ -359,6 +369,7 @@ Object {
             "code": "PRG",
           },
         },
+        "bookingId": 3222550,
         "departure": Object {
           "when": Object {
             "local": 2017-07-09T19:50:00.000Z,
@@ -374,6 +385,7 @@ Object {
         "id": "SP1244683_1864801",
         "isReturn": true,
         "recheckRequired": false,
+        "vehicleType": undefined,
       },
     ],
   },
@@ -391,6 +403,7 @@ Object {
           "code": "FCO",
         },
       },
+      "bookingId": 3222550,
       "departure": Object {
         "when": Object {
           "local": 2017-06-28T12:05:00.000Z,
@@ -406,6 +419,7 @@ Object {
       "id": "SP1244683_1864798",
       "isReturn": false,
       "recheckRequired": false,
+      "vehicleType": undefined,
     },
     Object {
       "airlineCode": "AZ",
@@ -420,6 +434,7 @@ Object {
           "code": "NRT",
         },
       },
+      "bookingId": 3222550,
       "departure": Object {
         "when": Object {
           "local": 2017-06-28T15:15:00.000Z,
@@ -435,6 +450,7 @@ Object {
       "id": "SP1244683_1864799",
       "isReturn": false,
       "recheckRequired": false,
+      "vehicleType": undefined,
     },
     Object {
       "airlineCode": "AZ",
@@ -449,6 +465,7 @@ Object {
           "code": "MXP",
         },
       },
+      "bookingId": 3222550,
       "departure": Object {
         "when": Object {
           "local": 2017-07-09T12:45:00.000Z,
@@ -464,6 +481,7 @@ Object {
       "id": "SP1244683_1864800",
       "isReturn": true,
       "recheckRequired": false,
+      "vehicleType": undefined,
     },
     Object {
       "airlineCode": "AZ",
@@ -478,6 +496,7 @@ Object {
           "code": "PRG",
         },
       },
+      "bookingId": 3222550,
       "departure": Object {
         "when": Object {
           "local": 2017-07-09T19:50:00.000Z,
@@ -493,6 +512,7 @@ Object {
       "id": "SP1244683_1864801",
       "isReturn": true,
       "recheckRequired": false,
+      "vehicleType": undefined,
     },
   ],
   "outbound": Object {
@@ -532,6 +552,7 @@ Object {
             "code": "FCO",
           },
         },
+        "bookingId": 3222550,
         "departure": Object {
           "when": Object {
             "local": 2017-06-28T12:05:00.000Z,
@@ -547,6 +568,7 @@ Object {
         "id": "SP1244683_1864798",
         "isReturn": false,
         "recheckRequired": false,
+        "vehicleType": undefined,
       },
       Object {
         "airlineCode": "AZ",
@@ -561,6 +583,7 @@ Object {
             "code": "NRT",
           },
         },
+        "bookingId": 3222550,
         "departure": Object {
           "when": Object {
             "local": 2017-06-28T15:15:00.000Z,
@@ -576,6 +599,7 @@ Object {
         "id": "SP1244683_1864799",
         "isReturn": false,
         "recheckRequired": false,
+        "vehicleType": undefined,
       },
     ],
   },

@@ -33,6 +33,7 @@ Object {
                 "flightNumber": 1505,
                 "id": "TGVnOjMxMzIyNTIxMA==",
                 "recheckRequired": false,
+                "type": "AIRCRAFT",
               },
               Object {
                 "arrival": Object {
@@ -59,6 +60,7 @@ Object {
                 "flightNumber": 7051,
                 "id": "TGVnOjMxMzM1NzM5Ng==",
                 "recheckRequired": true,
+                "type": "AIRCRAFT",
               },
               Object {
                 "arrival": Object {
@@ -85,6 +87,7 @@ Object {
                 "flightNumber": 1768,
                 "id": "TGVnOkVKMjkyODU2MjA4OV80MjE4MDIzODg=",
                 "recheckRequired": true,
+                "type": "AIRCRAFT",
               },
               Object {
                 "arrival": Object {
@@ -111,6 +114,7 @@ Object {
                 "flightNumber": 429,
                 "id": "TGVnOkVKMjkyODU2MjA4OV8zNTk1MTM3NjU=",
                 "recheckRequired": false,
+                "type": "AIRCRAFT",
               },
             ],
           },
@@ -143,6 +147,7 @@ Object {
                 "flightNumber": 490,
                 "id": "TGVnOkVKMTU3NDYxODM1M18zMDc5MzkyNjQ=",
                 "recheckRequired": false,
+                "type": "AIRCRAFT",
               },
               Object {
                 "arrival": Object {
@@ -169,6 +174,7 @@ Object {
                 "flightNumber": 7087,
                 "id": "TGVnOjMxNDMxNjI0MA==",
                 "recheckRequired": true,
+                "type": "AIRCRAFT",
               },
               Object {
                 "arrival": Object {
@@ -195,6 +201,7 @@ Object {
                 "flightNumber": 2971,
                 "id": "TGVnOjMxNjMyODg2OA==",
                 "recheckRequired": true,
+                "type": "AIRCRAFT",
               },
             ],
           },
@@ -227,6 +234,7 @@ Object {
                 "flightNumber": 4572,
                 "id": "TGVnOjMyMTMzNzkwMw==",
                 "recheckRequired": false,
+                "type": "AIRCRAFT",
               },
               Object {
                 "arrival": Object {
@@ -253,6 +261,7 @@ Object {
                 "flightNumber": 7087,
                 "id": "TGVnOjMxNDMxNjI0MA==",
                 "recheckRequired": true,
+                "type": "AIRCRAFT",
               },
               Object {
                 "arrival": Object {
@@ -279,6 +288,7 @@ Object {
                 "flightNumber": 2971,
                 "id": "TGVnOjMxNjMyODg2OA==",
                 "recheckRequired": true,
+                "type": "AIRCRAFT",
               },
             ],
           },

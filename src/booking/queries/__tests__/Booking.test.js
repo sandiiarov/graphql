@@ -4,7 +4,8 @@ import { graphql, RestApiMock } from '../../../common/services/TestingTools';
 import config from '../../../../config/application';
 import Booking from '../Booking';
 import AllBookingsDataset from '../../datasets/AllBookings.json';
-import SingleBooking from '../../datasets/booking-2707251.json';
+import Booking2707251 from '../../datasets/booking-2707251.json';
+import Booking2707224 from '../../datasets/booking-2707224.json';
 
 beforeEach(() => {
   RestApiMock.onGet(config.restApiEndpoint.allBookings).replyWithData(
@@ -73,7 +74,7 @@ describe('single booking query', () => {
     RestApiMock.onGet(
       'https://booking-api.skypicker.com/api/v0.1/users/self/bookings/2707251?simple_token=b206db64-718f-4608-babb-0b8abe6e1b9d',
     ).replyWithData({
-      ...SingleBooking,
+      ...Booking2707251,
       passengers: [
         {
           category: 'adults',
@@ -119,6 +120,22 @@ describe('single booking query', () => {
       booking(id: 2707251) {
         passengers {
           insuranceType
+        }
+      }
+    }`;
+    expect(await graphql(query)).toMatchSnapshot();
+  });
+
+  it('should return vehicle type for each Leg', async () => {
+    RestApiMock.onGet(
+      `${config.restApiEndpoint
+        .allBookings}/2707224\\?simple_token=[0-9a-f-]{36}`,
+    ).replyWithData(Booking2707224);
+
+    const query = `{
+      booking(id: 2707224) {
+        legs {
+          type
         }
       }
     }`;

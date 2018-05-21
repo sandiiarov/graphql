@@ -57,6 +57,7 @@ describe('all flights query with legs', () => {
               duration
               flightNumber
               recheckRequired
+              type
             }
           }
         }
