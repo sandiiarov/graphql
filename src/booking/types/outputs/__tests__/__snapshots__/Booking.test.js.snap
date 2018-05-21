@@ -40,6 +40,14 @@ Object {
     "resolve": [Function],
     "type": "Date",
   },
+  "carriers": Object {
+    "args": Array [],
+    "description": "List of carriers involved in the booking.",
+    "isDeprecated": false,
+    "name": "carriers",
+    "resolve": [Function],
+    "type": "[Carrier]",
+  },
   "contactDetails": Object {
     "args": Array [],
     "isDeprecated": false,

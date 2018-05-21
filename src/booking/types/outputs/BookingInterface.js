@@ -20,6 +20,7 @@ import GraphQLBookingStatus from '../enums/BookingStatus';
 import Price from '../../../common/types/outputs/Price';
 import BookingDestinationImageURL from '../../resolvers/BookingDestinationImageURL';
 import GraphQLBookedServices from './BookedService';
+import Carrier, { getUniqueCarriers, type CarrierData } from './Carrier';
 import BookingType from '../enums/BookingType';
 import Passenger from './Passenger';
 import GraphQLContactDetails from './BookingContactDetails';
@@ -123,6 +124,22 @@ export const commonFields = {
       },
     },
     resolve: BookingDestinationImageURL,
+  },
+
+  carriers: {
+    type: new GraphQLList(Carrier),
+    description: 'List of carriers involved in the booking.',
+    resolve: async (
+      { legs }: BookingInterfaceData,
+      args: Object,
+      { dataLoader }: GraphqlContextType,
+    ): Promise<Iterator<CarrierData>> => {
+      const carriers = await Promise.all(
+        legs.map(({ airlineCode }) => dataLoader.airline.load(airlineCode)),
+      );
+
+      return getUniqueCarriers(carriers);
+    },
   },
 
   directAccessURL: {

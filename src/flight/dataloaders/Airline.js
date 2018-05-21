@@ -37,7 +37,7 @@ async function fetchAirlines() {
       // eslint-disable-next-line promise/prefer-await-to-then
       .then(airlines => {
         const cache: { [key: string]: Airline } = {};
-        airlines.map((a: Airline) => (cache[a.id] = a));
+        airlines.forEach((a: Airline) => (cache[a.id] = a));
         return cache;
       });
   }
