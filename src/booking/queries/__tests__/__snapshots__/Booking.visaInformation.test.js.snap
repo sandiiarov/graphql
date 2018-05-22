@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should return baggage parameters 1`] = `
+Object {
+  "data": Object {
+    "booking": Object {
+      "passengers": Array [
+        Object {
+          "visaInformation": Object {
+            "okIn": Array [],
+            "requiredIn": Array [
+              Object {
+                "name": "France",
+              },
+            ],
+            "warningIn": Array [],
+          },
+        },
+        Object {
+          "visaInformation": Object {
+            "okIn": Array [],
+            "requiredIn": Array [
+              Object {
+                "name": "France",
+              },
+            ],
+            "warningIn": Array [],
+          },
+        },
+      ],
+    },
+  },
+}
+`;
