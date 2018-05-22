@@ -35,6 +35,18 @@ export type TravelDocument = {|
   expiration: number,
 |};
 
+export type Visa = {|
+  info: string,
+  status: string,
+  timestamp: number,
+  country: string,
+|};
+
+// This type could be expanded with health and passport information
+export type TravelInfo = {|
+  visa: Visa[],
+|};
+
 export type Passenger = {|
   id: number,
   firstname: string,
@@ -44,6 +56,7 @@ export type Passenger = {|
   birthday: string,
   nationality: string,
   travelDocument: TravelDocument,
+  travelInfo: TravelInfo[],
 |};
 
 export type BookedService = {|

@@ -147,6 +147,34 @@ Object {
         "expiration": 1608768000,
         "idNumber": "12345678XY",
       },
+      "travelInfo": Array [
+        Object {
+          "visa": Array [
+            Object {
+              "country": "PL",
+              "info": "<div class=\\"content\\"><p>
+Visa required.  
+</p>
+<h3>The following are exempt from holding a visa:</h3>
+<p>
+Nationals of USA for a maximum stay of 90 days.  
+</p><p>
+The max. stay is granted within 180 days.
+</p>
+
+</div>",
+              "status": "critical",
+              "timestamp": 1447264497,
+            },
+            Object {
+              "country": "PL",
+              "info": "<div class=\\"content\\"><p><b>The passenger is arriving on a domestic or common border area flight and no immigration regulations apply for this segment.  See Entry Requirements for previous segment.</b></p></div>",
+              "status": "ok",
+              "timestamp": 1447264497,
+            },
+          ],
+        },
+      ],
     },
   ],
   "price": Object {
@@ -263,6 +291,7 @@ Object {
         "expiration": 1608768000,
         "idNumber": "12345678XY",
       },
+      "travelInfo": Array [],
     },
   ],
   "price": Object {
@@ -617,6 +646,7 @@ Object {
         "expiration": 1786838400,
         "idNumber": "007007007",
       },
+      "travelInfo": Array [],
     },
     Object {
       "birthday": "1989-03-13",
@@ -630,6 +660,7 @@ Object {
         "expiration": 1793500000,
         "idNumber": "111111111",
       },
+      "travelInfo": Array [],
     },
   ],
   "price": Object {

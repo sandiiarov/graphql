@@ -7,8 +7,10 @@ import {
   GraphQLInt,
 } from 'graphql';
 import { GraphQLDateTime } from 'graphql-iso-date';
+import { uniq } from 'ramda';
 
 import type { Passenger } from '../../Booking';
+import GraphQLVisa from './Visa';
 
 const InsuranceTypeEnum = new GraphQLEnumType({
   name: 'InsuranceType',
@@ -79,6 +81,40 @@ export default new GraphQLObjectType({
     },
     travelDocument: {
       type: TravelDocumentType,
+    },
+    visaInformation: {
+      type: GraphQLVisa,
+      description: 'Visa information for the passenger',
+      resolve: ({ travelInfo }: Passenger) => {
+        const requiredIn = [];
+        const warningIn = [];
+        const okIn = [];
+
+        // Split visainformation into the 3 possible categories
+        travelInfo.forEach(item => {
+          item.visa.forEach(visaItem => {
+            switch (visaItem.status) {
+              case 'critical':
+                requiredIn.push(visaItem.country);
+                break;
+              case 'notice':
+                warningIn.push(visaItem.country);
+                break;
+              case 'ok':
+                okIn.push(visaItem.country);
+                break;
+              default:
+                break;
+            }
+          });
+        });
+
+        return {
+          requiredIn: uniq(requiredIn),
+          warningIn: uniq(warningIn),
+          okIn: uniq(okIn),
+        };
+      },
     },
   },
 });

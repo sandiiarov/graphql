@@ -64,7 +64,7 @@ export function sanitizeListItem(apiData: Object): BookingsItem {
     status: apiData.status,
     type,
     passengerCount: apiData.passengers.length,
-    passengers: sanitizePassengers(apiData.passengers),
+    passengers: sanitizePassengers(apiData.passengers, apiData.travel_info),
     ...additionalFields,
   };
 }
@@ -124,7 +124,7 @@ function sanitizeContactDetails(contactDetails: Object) {
   };
 }
 
-function sanitizePassengers(passengers: Object[]) {
+function sanitizePassengers(passengers: Object[], travelInfo: Object) {
   return passengers.map(passenger => ({
     id: passenger.id,
     firstname: passenger.firstname,
@@ -137,7 +137,23 @@ function sanitizePassengers(passengers: Object[]) {
       idNumber: passenger.travel_document.cardno,
       expiration: passenger.travel_document.expiration,
     },
+    travelInfo: sanitizeVisaStatus(travelInfo, passenger.id),
   }));
+}
+
+function sanitizeVisaStatus(travelInfo: Object, passengerId: number) {
+  const outData = [];
+
+  // TravelInfo object contains keys which are passenger ids
+  // Return only data for the current passenger
+  if (travelInfo != null && travelInfo.hasOwnProperty(passengerId.toString())) {
+    const passengerTravelInfo = travelInfo[passengerId];
+    Object.keys(passengerTravelInfo).forEach(item => {
+      outData.push({ visa: passengerTravelInfo[item].visa });
+    });
+  }
+
+  return outData;
 }
 
 function sanitizeAdditionalBookings(additionalBookings: Array<Object>) {

@@ -53,3 +53,45 @@ it('handles lastname equal undefined', () => {
     }),
   ).toBe('First');
 });
+
+it('splits visaInformation into groups and removes duplicates', () => {
+  const travelInfo = [
+    {
+      visa: [
+        {
+          status: 'critical',
+          country: 'RU',
+        },
+        {
+          status: 'critical',
+          country: 'RU',
+        },
+        {
+          status: 'notice',
+          country: 'RU',
+        },
+        {
+          status: 'notice',
+          country: 'CZ',
+        },
+        {
+          status: 'ok',
+          country: 'RU',
+        },
+        {
+          status: 'ok',
+          country: 'NO',
+        },
+      ],
+    },
+  ];
+  expect(
+    evaluateResolver(fields.visaInformation, {
+      travelInfo,
+    }),
+  ).toEqual({
+    requiredIn: ['RU'],
+    warningIn: ['RU', 'CZ'],
+    okIn: ['RU', 'NO'],
+  });
+});
