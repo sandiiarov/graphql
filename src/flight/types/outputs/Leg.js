@@ -12,6 +12,7 @@ import GraphQLRouteStop from './RouteStop';
 import GraphQLAirline from './Airline';
 import FlightDurationInMinutes from '../../resolvers/FlightDuration';
 
+import { GraphQLCoveredBy, CoveredBy } from '../enums/CoveredBy';
 import type { GraphqlContextType } from '../../../common/services/GraphqlContext';
 import type { DepartureArrival, Leg, VehicleType } from '../../Flight';
 
@@ -97,6 +98,13 @@ export default new GraphQLObjectType({
 
         return null;
       },
+    },
+
+    guarantee: {
+      type: GraphQLCoveredBy,
+      description: 'Information about who covers the transfer',
+      resolve: ({ guarantee }: Leg) =>
+        guarantee ? CoveredBy.KIWICOM : CoveredBy.CARRIER,
     },
   },
 });

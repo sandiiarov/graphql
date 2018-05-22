@@ -38,6 +38,14 @@ Object {
     "resolve": [Function],
     "type": "Int",
   },
+  "guarantee": Object {
+    "args": Array [],
+    "description": "Information about who covers the transfer",
+    "isDeprecated": false,
+    "name": "guarantee",
+    "resolve": [Function],
+    "type": "CoveredBy",
+  },
   "id": Object {
     "args": Array [],
     "description": "The ID of an object",

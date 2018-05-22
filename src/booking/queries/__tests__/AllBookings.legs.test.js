@@ -49,6 +49,7 @@ describe('flights query with legs', () => {
                 }
                 time, localTime
               }
+              guarantee
             }
           }
         }

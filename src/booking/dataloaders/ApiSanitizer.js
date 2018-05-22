@@ -38,6 +38,7 @@ export function sanitizeListItem(apiData: Object): BookingsItem {
     }),
     airlineCode: flight.airline.iata,
     vehicleType: idx(flight, _ => _.vehicle.type),
+    guarantee: flight.guarantee,
   }));
   const lastLeg = legs[legs.length - 1];
   const firstLeg = legs[0];

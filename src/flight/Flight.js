@@ -38,6 +38,7 @@ export type Leg = {|
   airlineCode: string,
   vehicleType: ?VehicleType,
   bookingId?: number,
+  guarantee: boolean,
 |};
 
 export type Airline = {|
