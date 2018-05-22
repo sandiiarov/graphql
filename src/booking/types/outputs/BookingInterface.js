@@ -20,6 +20,7 @@ import GraphQLBookingStatus from '../enums/BookingStatus';
 import Price from '../../../common/types/outputs/Price';
 import BookingDestinationImageURL from '../../resolvers/BookingDestinationImageURL';
 import GraphQLBookedServices from './BookedService';
+
 import Carrier, { getUniqueCarriers, type CarrierData } from './Carrier';
 import BookingType from '../enums/BookingType';
 import Passenger from './Passenger';

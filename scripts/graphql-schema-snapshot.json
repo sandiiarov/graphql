@@ -2037,6 +2037,18 @@
             },
             "isDeprecated": false,
             "deprecationReason": null
+          },
+          {
+            "name": "guarantee",
+            "description": "Information about who covers the transfer",
+            "args": [],
+            "type": {
+              "kind": "ENUM",
+              "name": "CoveredBy",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
           }
         ],
         "inputFields": null,
@@ -2125,6 +2137,29 @@
           },
           {
             "name": "AIRCRAFT",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "possibleTypes": null
+      },
+      {
+        "kind": "ENUM",
+        "name": "CoveredBy",
+        "description": null,
+        "fields": null,
+        "inputFields": null,
+        "interfaces": null,
+        "enumValues": [
+          {
+            "name": "KIWICOM",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "CARRIER",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null

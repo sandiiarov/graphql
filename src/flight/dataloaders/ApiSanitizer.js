@@ -46,6 +46,7 @@ export function sanitizeApiResponse(
       }),
       airlineCode: leg.airline,
       vehicleType: leg.vehicle_type,
+      guarantee: leg.guarantee,
     })),
     price: {
       amount: flight.price,
