@@ -2,6 +2,7 @@
 
 exports[`GET request in production sets authorization header 1`] = `
 Object {
+  "hint": "this is a mocked response",
   "options": Object {
     "headers": Object {
       "authorization": "booking_com_token",

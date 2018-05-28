@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`loads lounges correctly 1`] = `
+Array [
+  Array [
+    Object {
+      "airport": "Vaclav Havel",
+      "iata": "PRG",
+      "loungeCode": "PRGAHAR",
+      "loungeName": "Menzies Aviation Lounge",
+      "provider": "collinsons",
+      "terminal": "Terminal 1",
+    },
+  ],
+  Array [
+    Object {
+      "airport": "Heathrow",
+      "iata": "LHR",
+      "loungeCode": "LHR2EXP",
+      "loungeName": "Plaza Premium Lounge (3-6hr stay)",
+      "provider": "collinsons",
+      "terminal": "Terminal 2",
+    },
+    Object {
+      "airport": "London Heathrow",
+      "iata": "LHR",
+      "loungeCode": "null",
+      "loungeName": "No. 1 Heathrow",
+      "provider": "loungebuddy",
+      "terminal": "Terminal 3",
+    },
+  ],
+  Array [],
+]
+`;
+
+exports[`loads lounges correctly 2`] = `
+Array [
+  Object {
+    "airport": "Vaclav Havel",
+    "iata": "PRG",
+    "loungeCode": "PRGAHAR",
+    "loungeName": "Menzies Aviation Lounge",
+    "provider": "collinsons",
+    "terminal": "Terminal 1",
+  },
+]
+`;
+
+exports[`loads lounges correctly 3`] = `
+Array [
+  Object {
+    "airport": "Heathrow",
+    "iata": "LHR",
+    "loungeCode": "LHR2EXP",
+    "loungeName": "Plaza Premium Lounge (3-6hr stay)",
+    "provider": "collinsons",
+    "terminal": "Terminal 2",
+  },
+  Object {
+    "airport": "London Heathrow",
+    "iata": "LHR",
+    "loungeCode": "null",
+    "loungeName": "No. 1 Heathrow",
+    "provider": "loungebuddy",
+    "terminal": "Terminal 3",
+  },
+]
+`;

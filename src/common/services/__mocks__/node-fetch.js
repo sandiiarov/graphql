@@ -11,6 +11,7 @@ export default function(
     status: parsedUrl.query.status || 200,
     statusText: 'Status Text',
     json: () => ({
+      hint: 'this is a mocked response',
       url: absoluteUrl,
       options,
     }),

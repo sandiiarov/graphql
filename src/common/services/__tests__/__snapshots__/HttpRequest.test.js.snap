@@ -2,6 +2,7 @@
 
 exports[`GET request in production resolves URL with query string and token 1`] = `
 Object {
+  "hint": "this is a mocked response",
   "options": Object {
     "headers": Object {
       "Content-Type": "application/json",
@@ -15,6 +16,7 @@ Object {
 
 exports[`GET request in production resolves URL with token 1`] = `
 Object {
+  "hint": "this is a mocked response",
   "options": Object {
     "headers": Object {
       "Content-Type": "application/json",
@@ -28,6 +30,7 @@ Object {
 
 exports[`GET request in production resolves URL without token 1`] = `
 Object {
+  "hint": "this is a mocked response",
   "options": Object {
     "headers": Object {
       "Content-Type": "application/json",
@@ -41,6 +44,7 @@ Object {
 
 exports[`POST request in production adds default content type header 1`] = `
 Object {
+  "hint": "this is a mocked response",
   "options": Object {
     "body": "{}",
     "headers": Object {
@@ -55,6 +59,7 @@ Object {
 
 exports[`POST request in production stringify payload 1`] = `
 Object {
+  "hint": "this is a mocked response",
   "options": Object {
     "body": "{\\"email\\":\\"john@example.com\\",\\"password\\":123456}",
     "headers": Object {
@@ -69,6 +74,7 @@ Object {
 
 exports[`POST request in production supports custom content type header 1`] = `
 Object {
+  "hint": "this is a mocked response",
   "options": Object {
     "body": "{}",
     "headers": Object {
@@ -83,6 +89,7 @@ Object {
 
 exports[`POST request in production supports custom headers 1`] = `
 Object {
+  "hint": "this is a mocked response",
   "options": Object {
     "body": "{}",
     "headers": Object {
