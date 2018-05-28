@@ -1524,6 +1524,18 @@
             "deprecationReason": null
           },
           {
+            "name": "isPastBooking",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "oneWay",
             "description": null,
             "args": [],
@@ -3419,6 +3431,18 @@
             "deprecationReason": null
           },
           {
+            "name": "isPastBooking",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "trip",
             "description": null,
             "args": [],
@@ -3660,6 +3684,18 @@
             "type": {
               "kind": "OBJECT",
               "name": "BookingContactDetails",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "isPastBooking",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
               "ofType": null
             },
             "isDeprecated": false,
@@ -3974,6 +4010,18 @@
             "deprecationReason": null
           },
           {
+            "name": "isPastBooking",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "outbound",
             "description": "Trip from origin to destination.",
             "args": [],
@@ -4227,6 +4275,18 @@
             "type": {
               "kind": "OBJECT",
               "name": "BookingContactDetails",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "isPastBooking",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
               "ofType": null
             },
             "isDeprecated": false,

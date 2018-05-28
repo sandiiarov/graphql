@@ -6,6 +6,7 @@ import {
   GraphQLString,
   GraphQLEnumType,
   GraphQLList,
+  GraphQLBoolean,
 } from 'graphql';
 import { GraphQLDate } from 'graphql-iso-date';
 import { DateTime } from 'luxon';
@@ -25,6 +26,7 @@ import Carrier, { getUniqueCarriers, type CarrierData } from './Carrier';
 import BookingType from '../enums/BookingType';
 import Passenger from './Passenger';
 import GraphQLContactDetails from './BookingContactDetails';
+import { isPastBooking } from '../../queries/AllBookingsFilters';
 
 export type BookingInterfaceData = BookingsItem;
 
@@ -208,6 +210,11 @@ export const commonFields = {
       const { contactDetails } = await dataLoader.booking.load(id);
       return contactDetails;
     },
+  },
+
+  isPastBooking: {
+    type: GraphQLBoolean,
+    resolve: (data: BookingInterfaceData) => isPastBooking(data),
   },
 };
 

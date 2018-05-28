@@ -110,6 +110,13 @@ Object {
     "resolve": [Function],
     "type": "ID!",
   },
+  "isPastBooking": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "isPastBooking",
+    "resolve": [Function],
+    "type": "Boolean",
+  },
   "legs": Object {
     "args": Array [],
     "deprecationReason": "Use \\"oneWay\\", \\"return\\" & \\"multicity\\"  fields to retrieve booking info.",
