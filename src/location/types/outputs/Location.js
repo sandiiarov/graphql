@@ -63,6 +63,18 @@ export default new GraphQLObjectType({
       resolve: ({ country }: Location): ?LocationArea => country,
     },
 
+    countryFlagURL: {
+      type: GraphQLString,
+      resolve: ({ country }: Location): string => {
+        if (country) {
+          const countryCode = country.locationId.toLowerCase();
+          return `https://images.kiwi.com/flags/32x32/${countryCode}.png`;
+        } else {
+          return 'https://images.kiwi.com/flags/32x32/anywhere.png';
+        }
+      },
+    },
+
     isActive: {
       type: GraphQLBoolean,
       resolve: ({ isActive }: Location): boolean => isActive,

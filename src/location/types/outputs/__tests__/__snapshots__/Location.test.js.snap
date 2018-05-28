@@ -37,6 +37,13 @@ Object {
     "resolve": [Function],
     "type": "LocationArea",
   },
+  "countryFlagURL": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "countryFlagURL",
+    "resolve": [Function],
+    "type": "String",
+  },
   "isActive": Object {
     "args": Array [],
     "isDeprecated": false,
