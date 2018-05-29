@@ -11,21 +11,14 @@ Object {
               "additionalBaggage": Array [
                 Object {
                   "price": Object {
-                    "amount": 23.65,
+                    "amount": 27.5,
                     "currency": "EUR",
                   },
                   "quantity": 1,
                 },
-                Object {
-                  "price": Object {
-                    "amount": 47.3,
-                    "currency": "EUR",
-                  },
-                  "quantity": 2,
-                },
               ],
             },
-            "databaseId": 2707251,
+            "databaseId": 2707224,
           },
         },
         Object {
@@ -50,14 +43,21 @@ Object {
               "additionalBaggage": Array [
                 Object {
                   "price": Object {
-                    "amount": 27.5,
+                    "amount": 23.65,
                     "currency": "EUR",
                   },
                   "quantity": 1,
                 },
+                Object {
+                  "price": Object {
+                    "amount": 47.3,
+                    "currency": "EUR",
+                  },
+                  "quantity": 2,
+                },
               ],
             },
-            "databaseId": 2707224,
+            "databaseId": 2707251,
           },
         },
       ],

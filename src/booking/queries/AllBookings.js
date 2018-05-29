@@ -7,6 +7,7 @@ import { connectionFromArray } from '../../common/services/ArrayConnection';
 import GraphQLBooking from '../types/outputs/Booking';
 import type { GraphqlContextType } from '../../common/services/GraphqlContext';
 import { filterOnlyBookings } from './AllBookingsFilters';
+import { sortBookingsByDate } from './AllBookingsSort';
 
 const { connectionType: AllBookingsConnection } = connectionDefinitions({
   nodeType: GraphQLBooking,
@@ -46,6 +47,8 @@ export default {
       // argument "only" is optional
       bookings = filterOnlyBookings(args.only, bookings);
     }
+
+    bookings = sortBookingsByDate(bookings);
 
     return connectionFromArray(bookings, args);
   },

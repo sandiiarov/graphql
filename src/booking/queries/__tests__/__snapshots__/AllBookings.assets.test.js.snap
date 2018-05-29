@@ -8,10 +8,10 @@ Object {
         Object {
           "node": Object {
             "assets": Object {
-              "invoiceUrl": null,
-              "ticketUrl": "https://skypicker-mailing.s3.amazonaws.com/2707/1490859068_E-ticket_passenger_and_1_more_e826fc3275a65a5db8808279d8fc7f8f.pdf?v=1490859069",
+              "invoiceUrl": "https://booking.skypicker.com/api/v0.1/get_file/2707224?file_id=317024120&simple_token=c3f29dd0-18a7-4062-9162-b58f4022fc70",
+              "ticketUrl": "https://skypicker-mailing.s3.amazonaws.com/2707/1490858789_E-ticket_passenger_02a172055788d052b0cc7870905b9701.pdf?v=1490858789",
             },
-            "databaseId": 2707251,
+            "databaseId": 2707224,
           },
         },
         Object {
@@ -26,10 +26,10 @@ Object {
         Object {
           "node": Object {
             "assets": Object {
-              "invoiceUrl": "https://booking.skypicker.com/api/v0.1/get_file/2707224?file_id=317024120&simple_token=c3f29dd0-18a7-4062-9162-b58f4022fc70",
-              "ticketUrl": "https://skypicker-mailing.s3.amazonaws.com/2707/1490858789_E-ticket_passenger_02a172055788d052b0cc7870905b9701.pdf?v=1490858789",
+              "invoiceUrl": null,
+              "ticketUrl": "https://skypicker-mailing.s3.amazonaws.com/2707/1490859068_E-ticket_passenger_and_1_more_e826fc3275a65a5db8808279d8fc7f8f.pdf?v=1490859069",
             },
-            "databaseId": 2707224,
+            "databaseId": 2707251,
           },
         },
       ],

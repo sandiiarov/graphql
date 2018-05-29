@@ -10,24 +10,24 @@ Object {
             "allowedBaggage": Object {
               "cabin": Array [
                 Object {
-                  "height": 20,
+                  "height": 25,
                   "length": 55,
                   "note": null,
-                  "weight": 10,
-                  "width": 40,
+                  "weight": 8,
+                  "width": 45,
                 },
               ],
               "checked": Array [
                 Object {
-                  "height": 79,
-                  "length": 250,
-                  "note": "max 180cm (length + width + height)",
+                  "height": 40,
+                  "length": 100,
+                  "note": null,
                   "weight": 23,
-                  "width": 112,
+                  "width": 59,
                 },
               ],
             },
-            "databaseId": 2707251,
+            "databaseId": 2707224,
           },
         },
         Object {
@@ -60,24 +60,24 @@ Object {
             "allowedBaggage": Object {
               "cabin": Array [
                 Object {
-                  "height": 25,
+                  "height": 20,
                   "length": 55,
                   "note": null,
-                  "weight": 8,
-                  "width": 45,
+                  "weight": 10,
+                  "width": 40,
                 },
               ],
               "checked": Array [
                 Object {
-                  "height": 40,
-                  "length": 100,
-                  "note": null,
+                  "height": 79,
+                  "length": 250,
+                  "note": "max 180cm (length + width + height)",
                   "weight": 23,
-                  "width": 59,
+                  "width": 112,
                 },
               ],
             },
-            "databaseId": 2707224,
+            "databaseId": 2707251,
           },
         },
       ],
