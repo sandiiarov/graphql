@@ -79,10 +79,11 @@ function createPackage(
   flightData: FlightApiResponse,
   hotelData: HotelApiResponse,
 ) {
+  const id = hotelData.Code.toString(10);
   const flight = createFlight(flightData);
   const hotel = createHotel(hotelData);
   const whitelabelUrl = hotelData.DeepLink;
-  return { flight, hotel, whitelabelUrl };
+  return { id, flight, hotel, whitelabelUrl };
 }
 
 function createHotel(

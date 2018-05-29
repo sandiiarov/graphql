@@ -4,6 +4,7 @@ import type { Price } from '../../common/types/Price';
 import type { PhotoType } from '../../hotel/dataloaders/flow/PhotoType';
 
 export type DynamicPackage = {|
+  id: string,
   hotel: Hotel,
   flight: Flight,
   price: Price,
