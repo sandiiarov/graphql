@@ -77,7 +77,11 @@ export const validate = (query: string) => {
   );
 };
 
-export const evaluateResolver = (field: mixed, testValue: mixed) => {
+export const evaluateResolver = (
+  field: mixed,
+  testValue: mixed,
+  contextValue?: Object,
+) => {
   // $FlowAllowNextLineInThisTest (fields are possibly undefined but we assume it's fine)
-  return field.resolve(testValue);
+  return field.resolve(testValue, undefined, contextValue);
 };

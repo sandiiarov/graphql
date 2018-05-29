@@ -4,6 +4,8 @@ import { GraphQLObjectType, GraphQLNonNull } from 'graphql';
 import { GraphQLDateTime } from 'graphql-iso-date';
 
 import LoungeService from './LoungeService';
+import ParkingService from './ParkingService';
+import ParkingServiceAvailability from './ParkingServiceAvailability.json';
 import LoungeWhiteLabelURLResolver from '../../resolvers/LoungeWhitelabelURL';
 
 type AncestorType = {|
@@ -27,6 +29,28 @@ export default new GraphQLObjectType({
         );
 
         return whitelabelURL === null ? null : { whitelabelURL };
+      },
+    },
+
+    parking: {
+      type: ParkingService,
+      args: {
+        fromDate: {
+          type: GraphQLNonNull(GraphQLDateTime),
+        },
+        toDate: {
+          type: GraphQLNonNull(GraphQLDateTime),
+        },
+      },
+      resolve: (ancestor: AncestorType, args) => {
+        if (ParkingServiceAvailability[ancestor.iataCode] === true) {
+          return {
+            iataCode: ancestor.iataCode,
+            fromDate: args.fromDate,
+            toDate: args.toDate,
+          };
+        }
+        return null;
       },
     },
   },

@@ -9,6 +9,9 @@ it('works without errors', async () => {
         lounge(departureTime: "2007-12-03T10:15:30Z") {
           whitelabelURL
         }
+        parking(fromDate: "2007-12-03T10:15:30Z", toDate: "2007-12-24T10:15:30Z") {
+          whitelabelURL
+        }
       }
     }`),
   ).toEqual([]);
