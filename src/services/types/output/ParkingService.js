@@ -3,7 +3,7 @@
 import { GraphQLObjectType, GraphQLString } from 'graphql';
 import { DateTime } from 'luxon';
 
-import ParkingServiceAvailability from './ParkingServiceAvailability.json';
+import ParkingServiceAvailability from './ParkingServiceAvailability';
 
 const SupportedLanguages = {
   'cs-CZ': true,

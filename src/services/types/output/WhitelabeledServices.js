@@ -5,7 +5,7 @@ import { GraphQLDateTime } from 'graphql-iso-date';
 
 import LoungeService from './LoungeService';
 import ParkingService from './ParkingService';
-import ParkingServiceAvailability from './ParkingServiceAvailability.json';
+import ParkingServiceAvailability from './ParkingServiceAvailability';
 import LoungeWhiteLabelURLResolver from '../../resolvers/LoungeWhitelabelURL';
 
 type AncestorType = {|
