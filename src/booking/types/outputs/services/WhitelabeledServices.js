@@ -6,7 +6,7 @@ import { GraphQLDateTime } from 'graphql-iso-date';
 import LoungeService from './LoungeService';
 import ParkingService from './ParkingService';
 import ParkingServiceAvailability from './ParkingServiceAvailability';
-import LoungesDataloader from '../../../dataloaders/Lounges';
+import AvailableLoungesDataloader from '../../../dataloaders/AvailableLounges';
 import type { BookingsItem } from '../../../Booking';
 
 type AncestorType = {|
@@ -31,25 +31,20 @@ export default new GraphQLObjectType({
           iataSet.add(arrival.where.code);
         });
 
-        // let's try to load all lounges by IATA codes to see where is the lounge actually available
-        const iataCodes = Array.from(iataSet);
-        let loungesByIata = await LoungesDataloader.loadMany(iataCodes);
-        loungesByIata = loungesByIata.filter(lounges => lounges.length > 0);
-
-        // no relevant airports - lounges are not available on this trip
-        if (loungesByIata.length === 0) {
-          return null;
-        }
-
-        const relevantIataCodes = new Set();
-        loungesByIata.map(lounges =>
-          lounges.map(lounge => relevantIataCodes.add(lounge.iata)),
+        // let's try to load all lounges by IATA codes to see where is the
+        // lounge actually available
+        const loungesByIata = await AvailableLoungesDataloader.loadMany(
+          Array.from(iataSet).map(iataCode => ({
+            iataCode,
+            departureTime: args.departureTime,
+          })),
         );
 
-        return {
-          iataCodes: Array.from(relevantIataCodes),
-          departureTime: args.departureTime,
-        };
+        const relevantLounges = loungesByIata.filter(Boolean);
+        if (relevantLounges.length === 0) {
+          return null;
+        }
+        return relevantLounges;
       },
     },
 

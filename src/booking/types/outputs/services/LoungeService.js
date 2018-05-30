@@ -2,18 +2,7 @@
 
 import { GraphQLObjectType, GraphQLString, GraphQLList } from 'graphql';
 import Location from '../../../../location/types/outputs/Location';
-import LoungeWhiteLabelURLResolver from '../../../resolvers/LoungeWhitelabelURL';
 import type { GraphqlContextType } from '../../../../common/services/GraphqlContext';
-
-type LoungeServiceInput = {|
-  +iataCodes: Set<string>,
-  +departureTime: Date,
-|};
-
-type LoungeServiceOutput = {|
-  +iataCode: string,
-  +departureTime: Date,
-|};
 
 export default new GraphQLObjectType({
   name: 'LoungeService',
@@ -25,36 +14,27 @@ export default new GraphQLObjectType({
           fields: {
             whitelabelURL: {
               type: GraphQLString,
-              resolve: async ({
-                iataCode,
-                departureTime,
-              }: LoungeServiceOutput) => {
-                return LoungeWhiteLabelURLResolver(iataCode, departureTime);
+              resolve: async ({ provider, iata: iataCode }) => {
+                if (provider === 'collinsons') {
+                  return `https://www.loungepass.com/tp/kiwi/?airport=${iataCode}`;
+                } else if (provider === 'loungebuddy') {
+                  return `https://www.loungebuddy.com/${iataCode}`;
+                }
+
+                return null;
               },
             },
 
             location: {
               type: Location,
-              resolve: (
-                { iataCode }: LoungeServiceOutput,
-                args: void,
-                context: GraphqlContextType,
-              ) => {
-                return context.dataLoader.location.load(iataCode);
+              resolve: (lounge, args: void, context: GraphqlContextType) => {
+                return context.dataLoader.location.load(lounge.iata);
               },
             },
           },
         }),
       ),
-      resolve: ({
-        iataCodes,
-        departureTime,
-      }: LoungeServiceInput): $ReadOnlyArray<LoungeServiceOutput> => {
-        return Array.from(iataCodes).map(iataCode => ({
-          iataCode,
-          departureTime,
-        }));
-      },
+      resolve: arrayOfLounges => arrayOfLounges,
     },
   },
 });

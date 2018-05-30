@@ -5,8 +5,16 @@ import { evaluateResolver } from '../../../../../common/services/TestingTools';
 
 const fields = WhitelabeledServices.getFields();
 
-jest.mock('../../../../dataloaders/Lounges', () => ({
-  loadMany: () => Promise.resolve([[{ iata: 'PRG' }], []]), // lounge is available only in PRG
+jest.mock('../../../../dataloaders/AvailableLounges', () => ({
+  loadMany: () =>
+    // lounge is available only in PRG
+    Promise.resolve([
+      {
+        iata: 'PRG',
+        additionalInfo: 'oh yes',
+      },
+      null,
+    ]),
 }));
 
 it('only the relevant airports', async () => {
@@ -25,8 +33,10 @@ it('only the relevant airports', async () => {
       },
       { departureTime: new Date(1) },
     ),
-  ).resolves.toEqual({
-    departureTime: new Date(1),
-    iataCodes: ['PRG'],
-  });
+  ).resolves.toEqual([
+    {
+      additionalInfo: 'oh yes',
+      iata: 'PRG',
+    },
+  ]);
 });
