@@ -27,6 +27,7 @@ import BookingType from '../enums/BookingType';
 import Passenger from './Passenger';
 import GraphQLContactDetails from './BookingContactDetails';
 import { isPastBooking } from '../../queries/AllBookingsFilters';
+import WhitelabeledServices from './services/WhitelabeledServices';
 
 export type BookingInterfaceData = BookingsItem;
 
@@ -215,6 +216,13 @@ export const commonFields = {
   isPastBooking: {
     type: GraphQLBoolean,
     resolve: (data: BookingInterfaceData) => isPastBooking(data),
+  },
+
+  availableWhitelabeledServices: {
+    type: WhitelabeledServices,
+    resolve: (booking: BookingInterfaceData) => ({
+      booking,
+    }),
   },
 };
 

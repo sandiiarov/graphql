@@ -80,8 +80,9 @@ export const validate = (query: string) => {
 export const evaluateResolver = (
   field: mixed,
   testValue: mixed,
+  argsValue?: Object,
   contextValue?: Object,
 ) => {
   // $FlowAllowNextLineInThisTest (fields are possibly undefined but we assume it's fine)
-  return field.resolve(testValue, undefined, contextValue);
+  return field.resolve(testValue, argsValue, contextValue);
 };

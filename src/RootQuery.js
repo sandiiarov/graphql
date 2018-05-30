@@ -23,7 +23,6 @@ import FAQCategory from './FAQ/queries/FAQCategory';
 import FAQArticle from './FAQ/queries/FAQArticle';
 import AllDynamicPackages from './dynamicPackage/queries/AllDynamicPackages';
 import { nodeField } from './node/node';
-import AvailableWhitelabeledServices from './services/queries/AvailableWhitelabeledServices';
 
 export default new GraphQLObjectType({
   name: 'RootQuery',
@@ -49,7 +48,6 @@ export default new GraphQLObjectType({
     allFAQCategories: AllFAQCategories,
     FAQCategory: FAQCategory,
     FAQArticle: FAQArticle,
-    availableWhitelabeledServices: AvailableWhitelabeledServices,
     allDynamicPackages: AllDynamicPackages,
   },
 });

@@ -4,6 +4,7 @@ import { GraphQLObjectType, GraphQLString } from 'graphql';
 import { DateTime } from 'luxon';
 
 import ParkingServiceAvailability from './ParkingServiceAvailability';
+import type { GraphqlContextType } from '../../../../common/services/GraphqlContext';
 
 const SupportedLanguages = {
   'cs-CZ': true,
@@ -36,7 +37,7 @@ export default new GraphQLObjectType({
       resolve: (
         { iataCode, fromDate, toDate }: AncestorType,
         args: void,
-        context,
+        context: GraphqlContextType,
       ): string | null => {
         if (ParkingServiceAvailability[iataCode] !== true) {
           return null;

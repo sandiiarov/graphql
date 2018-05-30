@@ -25,6 +25,13 @@ Object {
     "resolve": [Function],
     "type": "BookingAssets",
   },
+  "availableWhitelabeledServices": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "availableWhitelabeledServices",
+    "resolve": [Function],
+    "type": "WhitelabeledServices",
+  },
   "bookedServices": Object {
     "args": Array [],
     "isDeprecated": false,

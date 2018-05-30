@@ -1,7 +1,7 @@
 // @flow
 
 import ParkingService from '../ParkingService';
-import { evaluateResolver } from '../../../../common/services/TestingTools';
+import { evaluateResolver } from '../../../../../common/services/TestingTools';
 
 const fields = ParkingService.getFields();
 
@@ -14,6 +14,7 @@ it('resolves to the correct URL', () => {
         fromDate: new Date('2018-12-24T12:00:00Z'),
         toDate: new Date('2018-12-30T09:00:00Z'),
       },
+      undefined,
       {
         locale: 'cs_CZ',
       },
@@ -32,6 +33,7 @@ it('handles unknown locales', () => {
         fromDate: new Date('2018-12-24T12:00:00Z'),
         toDate: new Date('2018-12-30T09:00:00Z'),
       },
+      undefined,
       {
         locale: 'unknown',
       },
@@ -50,6 +52,7 @@ it('handles unknown IATA', () => {
         fromDate: new Date('2018-12-24T12:00:00Z'),
         toDate: new Date('2018-12-30T09:00:00Z'),
       },
+      undefined,
       {
         locale: 'unknown',
       },
