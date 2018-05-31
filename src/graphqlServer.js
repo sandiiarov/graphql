@@ -26,7 +26,7 @@ const app = express();
 app.use(cors({ methods: ['GET', 'POST'] }));
 app.use(compression());
 
-app.use('/', (request: $Request, response: $Response) => {
+app.all('/', (request: $Request, response: $Response) => {
   if (process.env.NODE_ENV === 'production' && request.method === 'GET') {
     return response.status(405).json({
       message: 'Use POST for GraphQL request.',
