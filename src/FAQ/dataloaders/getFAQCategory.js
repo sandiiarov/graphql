@@ -17,29 +17,11 @@ export type FAQArticleItem = {
 
 export type Args = {||};
 
-const FAQ_MENU_CATEGORY = 'menu';
-
 const listFAQ = async (
   language: $Values<typeof ISOLocalesToLanguage>,
 ): Promise<FAQCategoryType[]> => {
-  const rootCategories = await get(
-    Config.restApiEndpoint.allFAQCategories(),
-    null,
-    {
-      'Accept-Language': language,
-    },
-  );
-  const rootCategory = (rootCategories || []).find(
-    c => c.title === FAQ_MENU_CATEGORY,
-  );
-  const rootCategoryId = rootCategory && rootCategory.tree_id;
-
-  if (!rootCategoryId) {
-    return [];
-  }
-
   const categories = await get(
-    Config.restApiEndpoint.allFAQCategories(rootCategoryId),
+    Config.restApiEndpoint.allFAQCategories(),
     null,
     {
       'Accept-Language': language,

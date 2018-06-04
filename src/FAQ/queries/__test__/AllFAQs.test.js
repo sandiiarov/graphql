@@ -5,7 +5,7 @@ import priceFAQDataset from '../../datasets/FAQ-price.json';
 
 beforeEach(() => {
   RestApiMock.onGet(
-    'https://api.skypicker.com/knowledgebase/api/v1/search?q=price&autocomplete=true',
+    'https://api.skypicker.com/knowledgebase/api/v1/search?q=price&autocomplete=true&tree_ids=3',
   ).replyWithData(priceFAQDataset);
 });
 

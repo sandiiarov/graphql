@@ -1,16 +1,12 @@
 // @flow
 
 import { graphql, RestApiMock } from '../../../common/services/TestingTools';
-import rootCategory from '../../datasets/rootCategory.json';
 import categories from '../../datasets/categories.json';
 
 describe('allFAQCategories', () => {
   beforeEach(() => {
     RestApiMock.onGet(
-      'https://api.skypicker.com/knowledgebase/api/v1/categories',
-    ).replyWithData(rootCategory);
-    RestApiMock.onGet(
-      'https://api.skypicker.com/knowledgebase/api/v1/categories/1',
+      'https://api.skypicker.com/knowledgebase/api/v1/categories/3',
     ).replyWithData(categories);
   });
 

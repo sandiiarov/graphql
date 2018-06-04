@@ -2,6 +2,12 @@
 
 import url from 'url';
 
+/**
+ * Although API contains several FAQ trees, this is currently the only relevant tree.
+ * Others may include testing data or the ones not intended for displaying
+ */
+const FAQ_CATEGORY_ID = '3';
+
 export default {
   restApiEndpoint: {
     allBookings:
@@ -30,13 +36,10 @@ export default {
     allFAQ: (search: string) =>
       queryWithParameters(
         'https://api.skypicker.com/knowledgebase/api/v1/search',
-        { q: search, autocomplete: true },
+        { q: search, autocomplete: true, tree_ids: FAQ_CATEGORY_ID },
       ),
-    allFAQCategories: (faqCategoryId: ?number) => {
-      const categoryId = faqCategoryId ? `/${faqCategoryId}` : '';
-
-      return `https://api.skypicker.com/knowledgebase/api/v1/categories${categoryId}`;
-    },
+    allFAQCategories: () =>
+      `https://api.skypicker.com/knowledgebase/api/v1/categories/${FAQ_CATEGORY_ID}`,
     FAQArticle: (faqArticleId: string) => {
       return `https://api.skypicker.com/knowledgebase/api/v1/articles/${faqArticleId}`;
     },
