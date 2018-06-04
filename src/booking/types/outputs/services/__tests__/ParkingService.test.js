@@ -20,7 +20,7 @@ it('resolves to the correct URL', () => {
       },
     ),
   ).toBe(
-    'http://kiwi.parkcloud.com/cs-CZ/Search/LHR/201812241200/201812300900',
+    'https://kiwi.parkcloud.com/cs-CZ/Search/LHR/201812241200/201812300900',
   );
 });
 
@@ -39,7 +39,7 @@ it('handles unknown locales', () => {
       },
     ),
   ).toBe(
-    'http://kiwi.parkcloud.com/en-GB/Search/LHR/201812241200/201812300900',
+    'https://kiwi.parkcloud.com/en-GB/Search/LHR/201812241200/201812300900',
   );
 });
 

@@ -58,7 +58,7 @@ export default new GraphQLObjectType({
           zone: 'utc',
         }).toFormat(DATES_FORMAT);
 
-        return `http://kiwi.parkcloud.com/${language}/Search/${iataCode}/${fromString}/${toString}`;
+        return `https://kiwi.parkcloud.com/${language}/Search/${iataCode}/${fromString}/${toString}`;
       },
     },
   },
