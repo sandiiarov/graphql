@@ -4,22 +4,19 @@ import Dataloader from 'dataloader';
 import Config from '../../../config/application';
 import { get } from '../../common/services/HttpRequest';
 import type { FAQCategoryType } from '../types/outputs/FAQCategory';
-import ISOLocalesToLanguage from '../../common/types/enums/ISOLocalesToLanguage';
 
-export type FAQArticleItem = {
+export type FAQArticleItem = $ReadOnly<{|
   id: string,
   url: string,
   title: string,
   perex: string,
   upvotes: number,
   downvotes: number,
-};
+|}>;
 
 export type Args = {||};
 
-const listFAQ = async (
-  language: $Values<typeof ISOLocalesToLanguage>,
-): Promise<FAQCategoryType[]> => {
+const listFAQ = async (language: string): Promise<FAQCategoryType[]> => {
   const categories = await get(
     Config.restApiEndpoint.allFAQCategories(),
     null,
@@ -35,7 +32,7 @@ const listFAQ = async (
 
 const batchLoad = async (
   categories: $ReadOnlyArray<Args>,
-  language: $Values<typeof ISOLocalesToLanguage>,
+  language: string,
 ) => {
   const promises = categories.map(() => listFAQ(language));
 
@@ -65,8 +62,6 @@ const addAncestors = (category, ancestor = null) => {
   };
 };
 
-export default function createFAQLoader(
-  language: $Values<typeof ISOLocalesToLanguage>,
-) {
+export default function createFAQLoader(language: string) {
   return new Dataloader(queries => batchLoad(queries, language));
 }

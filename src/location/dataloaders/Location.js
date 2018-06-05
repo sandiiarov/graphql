@@ -7,6 +7,9 @@ import { batchGetLocations, processResponse } from './Fetcher';
 
 import type { Location } from '../Location';
 
+/**
+ * Always returns a single location.
+ */
 export default class LocationDataLoader {
   dataLoader: DataLoader<Object, Location[]>;
 

@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`resolves to the correct URL 1`] = `
+Array [
+  "http://cars.kiwi.com/SearchLoaderRC.do?preflang=cs",
+  "affiliateCode=skypicker",
+  "driversAge=21",
+  "from=PRG",
+  "puDay=24",
+  "puMonth=12",
+  "puYear=2018",
+  "puHour=12",
+  "puMinute=34",
+  "doDay=30",
+  "doMonth=12",
+  "doYear=2018",
+  "doHour=12",
+  "doMinute=34",
+]
+`;
+
+exports[`works with unexpected locale 1`] = `
+Array [
+  "http://cars.kiwi.com/SearchLoaderRC.do?preflang=en",
+  "affiliateCode=skypicker",
+  "driversAge=21",
+  "from=PRG",
+  "puDay=24",
+  "puMonth=12",
+  "puYear=2018",
+  "puHour=12",
+  "puMinute=34",
+  "doDay=30",
+  "doMonth=12",
+  "doYear=2018",
+  "doHour=12",
+  "doMinute=34",
+]
+`;

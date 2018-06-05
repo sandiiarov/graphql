@@ -112,11 +112,11 @@ Motivations: there is point in time in every application where doing groups by g
 
 These style guides are not applied in this project correctly and it's wrong. However, this guide should help to integrate them and to improve overall design of this proxy.
 
-## Localisation
+## Localization
 
 Send `Accept-Language` HTTP header with ISO locale string in format `language_territory` to get localised data, e.g. `en_US`, `cs_CZ`.
 
-Some queries relies on input argument `Locale`, but soon we realized we would end-up with every query accepting locale. Therefore we opted for `Accept-Language` HTTP header and all `Locale` and `Language` inputs are deprecated.
+Some queries relies on input argument `Locale` or `Language`. There input parameters are now deprecated.
 
 ## Booking type
 

@@ -41,8 +41,6 @@ import type {
   FAQArticleDetail,
 } from '../../FAQ/dataloaders/getFAQArticle';
 import type { FAQCategoryType } from '../../FAQ/types/outputs/FAQCategory';
-import ISOLocalesToObsolete from '../types/enums/ISOLocalesToObsolete';
-import ISOLocalesToLanguage from '../types/enums/ISOLocalesToLanguage';
 import type { SearchParameters as DynamicPackagesSearchParams } from '../../dynamicPackage/dataloaders/DynamicPackages';
 import type { DynamicPackage } from '../../dynamicPackage/dataloaders/DynamicPackageType';
 
@@ -53,7 +51,14 @@ import type { DynamicPackage } from '../../dynamicPackage/dataloaders/DynamicPac
  */
 export type GraphqlContextType = {|
   // DataLoader<K, V>
-  locale: $Keys<typeof ISOLocalesToObsolete>,
+  locale: {|
+    +language: string, // cs
+    +territory: string, // CZ
+    +format: {|
+      +underscored: string, // cs_CZ
+      +dashed: string, // cs-CZ
+    |},
+  |},
   apiToken: ?string,
   dataLoader: {|
     airline: DataLoader<string, ?Airline>,
@@ -92,20 +97,21 @@ export function createContext(
   token: ?string,
   acceptLanguage: ?string,
 ): GraphqlContextType {
-  const locale: $Keys<typeof ISOLocalesToObsolete> = // $FlowIssue: https://github.com/facebook/flow/issues/6230
-    typeof acceptLanguage === 'string' &&
-    ISOLocalesToObsolete.hasOwnProperty(acceptLanguage)
-      ? acceptLanguage
-      : 'en_US';
-  const language: $Values<typeof ISOLocalesToLanguage> = ISOLocalesToLanguage[
-    locale
-  ]
-    ? ISOLocalesToLanguage[locale]
-    : 'en';
   const bookings = new BookingsLoader(token);
   const locations = new LocationsLoader();
   const location = new LocationLoader();
   const hotelCities = new HotelCities();
+
+  const acceptedLanguage = acceptLanguage ? acceptLanguage : 'en_US';
+  const [language, territory] = acceptedLanguage.split('_');
+  const locale = {
+    language,
+    territory,
+    format: {
+      underscored: language + '_' + territory,
+      dashed: language + '-' + territory,
+    },
+  };
 
   return {
     locale,
@@ -124,16 +130,16 @@ export function createContext(
       hotel: {
         availabilityByLocation: HotelsAvailability,
         availabilityByID: HotelsAvailability,
-        byID: createHotelByIdLoader(locale),
+        byID: createHotelByIdLoader(locale.format.underscored),
         cities: hotelCities,
-        room: new HotelRoomsLoader(locale),
+        room: new HotelRoomsLoader(locale.format.underscored),
         roomAvailability: new HotelRoomAvailabilityLoader(),
         roomBedding: HotelRoomBeddingLoader,
         priceStats: PriceStatsLoader,
       },
-      FAQ: createFAQLoader(language),
-      FAQCategories: createFAQCategoryLoader(language),
-      FAQArticle: createFAQArticleLoader(language),
+      FAQ: createFAQLoader(locale.language),
+      FAQCategories: createFAQCategoryLoader(locale.language),
+      FAQArticle: createFAQArticleLoader(locale.language),
       dynamicPackages: DynamicPackagesLoader,
     },
     options: new OptionsStorage(),

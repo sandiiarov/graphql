@@ -16,7 +16,11 @@ it('resolves to the correct URL', () => {
       },
       undefined,
       {
-        locale: 'cs_CZ',
+        locale: {
+          format: {
+            dashed: 'cs-CZ',
+          },
+        },
       },
     ),
   ).toBe(
@@ -35,7 +39,11 @@ it('handles unknown locales', () => {
       },
       undefined,
       {
-        locale: 'unknown',
+        locale: {
+          format: {
+            dashed: 'unknown',
+          },
+        },
       },
     ),
   ).toBe(
@@ -54,7 +62,11 @@ it('handles unknown IATA', () => {
       },
       undefined,
       {
-        locale: 'unknown',
+        locale: {
+          format: {
+            dashed: 'unknown',
+          },
+        },
       },
     ),
   ).toBeNull();

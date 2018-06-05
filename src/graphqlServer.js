@@ -36,6 +36,7 @@ app.all('/', (request: $Request, response: $Response) => {
 
   const token = request.header('authorization') || null;
   const acceptLanguage = request.header('Accept-Language');
+  // TODO: Accept-Language format validation
   const context = createContext(token, acceptLanguage);
   if (process.env.NODE_ENV !== 'test' && !process.env.IS_LAMBDA) {
     const traceCollector = new TraceCollector();

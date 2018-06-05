@@ -21,7 +21,7 @@ export default new GraphQLObjectType({
         { path }: GraphQLResolveInfo,
       ): Promise<LocationType> => {
         const queryOptions = options.getOptions(path) || {};
-        const selectedLocale = queryOptions.locale || locale;
+        const selectedLocale = queryOptions.locale || locale.format.dashed;
         return dataLoader.location.loadById(where.code, selectedLocale);
       },
     },
