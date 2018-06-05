@@ -25,8 +25,17 @@ Object {
     "resolve": [Function],
     "type": "BookingAssets",
   },
+  "availableServices": Object {
+    "args": Array [],
+    "description": "All services provided directly by Kiwi.com.",
+    "isDeprecated": false,
+    "name": "availableServices",
+    "resolve": [Function],
+    "type": "Services",
+  },
   "availableWhitelabeledServices": Object {
     "args": Array [],
+    "description": "All services provided via whitelabels.",
     "isDeprecated": false,
     "name": "availableWhitelabeledServices",
     "resolve": [Function],

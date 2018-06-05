@@ -1613,8 +1613,20 @@
             "deprecationReason": null
           },
           {
+            "name": "availableServices",
+            "description": "All services provided directly by Kiwi.com.",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "Services",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "availableWhitelabeledServices",
-            "description": null,
+            "description": "All services provided via whitelabels.",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -3310,6 +3322,56 @@
       },
       {
         "kind": "OBJECT",
+        "name": "Services",
+        "description": null,
+        "fields": [
+          {
+            "name": "insurance",
+            "description": "Travel insurance - returns \"null\" if not available.",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "InsuranceService",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "InsuranceService",
+        "description": null,
+        "fields": [
+          {
+            "name": "passengers",
+            "description": "Returns passengers allowed to buy a travel insurance.",
+            "args": [],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "Passenger",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
         "name": "WhitelabeledServices",
         "description": null,
         "fields": [
@@ -3708,8 +3770,20 @@
             "deprecationReason": null
           },
           {
+            "name": "availableServices",
+            "description": "All services provided directly by Kiwi.com.",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "Services",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "availableWhitelabeledServices",
-            "description": null,
+            "description": "All services provided via whitelabels.",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -3979,8 +4053,20 @@
             "deprecationReason": null
           },
           {
+            "name": "availableServices",
+            "description": "All services provided directly by Kiwi.com.",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "Services",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "availableWhitelabeledServices",
-            "description": null,
+            "description": "All services provided via whitelabels.",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -4311,8 +4397,20 @@
             "deprecationReason": null
           },
           {
+            "name": "availableServices",
+            "description": "All services provided directly by Kiwi.com.",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "Services",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "availableWhitelabeledServices",
-            "description": null,
+            "description": "All services provided via whitelabels.",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -4594,8 +4692,20 @@
             "deprecationReason": null
           },
           {
+            "name": "availableServices",
+            "description": "All services provided directly by Kiwi.com.",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "Services",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "availableWhitelabeledServices",
-            "description": null,
+            "description": "All services provided via whitelabels.",
             "args": [],
             "type": {
               "kind": "OBJECT",

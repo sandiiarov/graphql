@@ -27,6 +27,7 @@ import BookingType from '../enums/BookingType';
 import Passenger from './Passenger';
 import GraphQLContactDetails from './BookingContactDetails';
 import { isPastBooking } from '../../queries/AllBookingsFilters';
+import Services from './services/Services';
 import WhitelabeledServices from './services/WhitelabeledServices';
 
 export type BookingInterfaceData = BookingsItem;
@@ -218,8 +219,17 @@ export const commonFields = {
     resolve: (data: BookingInterfaceData) => isPastBooking(data),
   },
 
+  availableServices: {
+    type: Services,
+    description: 'All services provided directly by Kiwi.com.',
+    resolve: (booking: BookingInterfaceData) => ({
+      booking,
+    }),
+  },
+
   availableWhitelabeledServices: {
     type: WhitelabeledServices,
+    description: 'All services provided via whitelabels.',
     resolve: (booking: BookingInterfaceData) => ({
       booking,
     }),

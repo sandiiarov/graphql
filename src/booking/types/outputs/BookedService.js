@@ -3,8 +3,8 @@
 import { GraphQLObjectType, GraphQLEnumType } from 'graphql';
 
 type BookedServiceType = {|
-  category: string,
-  status: string,
+  +category: string,
+  +status: string,
 |};
 
 // from https://confluence.kiwi.com/display/MOB/Manage+my+booking+specification#Managemybookingspecification-Flightservices
