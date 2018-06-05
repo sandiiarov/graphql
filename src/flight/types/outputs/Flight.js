@@ -80,17 +80,17 @@ export default new GraphQLObjectType({
       ): Promise<string> => {
         const queryOptions = options.getOptions(path);
         const oldWayLocale = queryOptions ? queryOptions.locale : null;
-        let useLocale = oldWayLocale;
+        let selectedLocale = oldWayLocale;
 
         if (!oldWayLocale) {
-          useLocale = locale;
+          selectedLocale = locale;
         }
 
         return await buildBookingUrl(
           passengers,
           price,
           bookingToken,
-          useLocale,
+          selectedLocale,
           dataLoader.rates,
         );
       },

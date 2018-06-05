@@ -2,10 +2,10 @@
 
 import Flight from '../Flight';
 import LocationDataloader from '../../../location/dataloaders/Location';
-import LocationSuggestionsDataloader from '../../../location/dataloaders/LocationSuggestions';
+import LocationsDataloader from '../../../location/dataloaders/Locations';
 
 jest.mock('../../../location/dataloaders/Location');
-jest.mock('../../../location/dataloaders/LocationSuggestions');
+jest.mock('../../../location/dataloaders/Locations');
 
 const mockCalledEndpoints = [];
 
@@ -22,7 +22,8 @@ jest.mock('../../../common/services/HttpRequest', () => {
 
 it('calls the same URL only once', async () => {
   const dataloader = new Flight(
-    new LocationDataloader(new LocationSuggestionsDataloader()),
+    new LocationDataloader(),
+    new LocationsDataloader(),
   );
 
   // first call

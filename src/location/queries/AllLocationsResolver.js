@@ -15,18 +15,18 @@ export async function getLocations(
   const options = { locale, ...(args.options || {}) };
 
   if (args.search) {
-    response = await context.dataLoader.locationSuggestions.loadByKey(
+    response = await context.dataLoader.locations.loadByTerm(
       args.search,
       options,
     );
   } else if (args.radius) {
-    response = await context.dataLoader.locationSuggestions.loadByRadius(
+    response = await context.dataLoader.locations.loadByRadius(
       args.radius,
       options,
     );
   } else if (args.area) {
     validateArea(args.area);
-    response = await context.dataLoader.locationSuggestions.loadByArea(
+    response = await context.dataLoader.locations.loadByArea(
       args.area,
       options,
     );
@@ -43,12 +43,12 @@ export async function getLocations(
       radiusGps = { ...radiusGps, ...parsed.gps };
     }
 
-    response = await context.dataLoader.locationSuggestions.loadByRadius(
+    response = await context.dataLoader.locations.loadByRadius(
       radiusGps,
       options,
     );
   } else {
-    response = await context.dataLoader.locationSuggestions.load(options);
+    response = await context.dataLoader.locations.loadAll(options);
   }
   return response;
 }

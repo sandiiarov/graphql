@@ -34,3 +34,49 @@ Object {
   },
 }
 `;
+
+exports[`location query with opaque ID should return error on invalid type 1`] = `
+Object {
+  "data": Object {
+    "location": null,
+  },
+  "errors": Array [
+    [GraphQLError: Provided id consist of "hotel" type instead of location.],
+  ],
+}
+`;
+
+exports[`location query with opaque ID should return error on unknown location 1`] = `
+Object {
+  "data": Object {
+    "location": null,
+  },
+  "errors": Array [
+    [GraphQLError: Location has not been found.],
+  ],
+}
+`;
+
+exports[`location query with opaque ID should return location 1`] = `
+Object {
+  "data": Object {
+    "location": Object {
+      "locationId": "prague_cz",
+      "name": "Prague",
+      "slug": "prague-czechia",
+    },
+  },
+}
+`;
+
+exports[`location query with opaque ID should return location in Czech 1`] = `
+Object {
+  "data": Object {
+    "location": Object {
+      "locationId": "prague_cz",
+      "name": "Praha",
+      "slug": "praha-ceska-republika",
+    },
+  },
+}
+`;

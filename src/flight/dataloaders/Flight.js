@@ -6,6 +6,7 @@ import { DateTime } from 'luxon';
 import { get } from '../../common/services/HttpRequest';
 import config from '../../../config/application';
 import LocationDataLoader from '../../location/dataloaders/Location';
+import LocationsDataLoader from '../../location/dataloaders/Locations';
 import LocaleMap from '../../common/types/enums/LocaleMap';
 
 import type { Flight } from '../Flight';
@@ -43,8 +44,13 @@ type BackendAPIResponse = {|
 export default class FlightDataloader {
   flightDataLoader: DataLoader<QueryParameters, BackendAPIResponse>;
   locationDataLoader: LocationDataLoader;
+  locationsDataLoader: LocationsDataLoader;
 
-  constructor(locationDataLoader: LocationDataLoader) {
+  constructor(
+    locationDataLoader: LocationDataLoader,
+    locationsDataLoader: LocationsDataLoader,
+  ) {
+    this.locationsDataLoader = locationsDataLoader;
     this.flightDataLoader = new DataLoader(
       (searchParameters: $ReadOnlyArray<QueryParameters>) => {
         return this.batchGetLocations(searchParameters);
@@ -180,9 +186,9 @@ export default class FlightDataloader {
         return Promise.resolve(this._stringifyRadius(location));
       }
       // adjust exact location using backend location API
-      return this.locationDataLoader
-        .load(location.location, options)
-        .then(newLocation => newLocation.locationId); // eslint-disable-line promise/prefer-await-to-then
+      return this.locationsDataLoader
+        .loadByTerm(location.location, options)
+        .then(possibleValues => possibleValues[0].locationId); // eslint-disable-line promise/prefer-await-to-then
     });
     return Promise.all(normalizedLocations);
   }

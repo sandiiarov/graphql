@@ -20,13 +20,9 @@ export default new GraphQLObjectType({
         { dataLoader, options, locale }: GraphqlContextType,
         { path }: GraphQLResolveInfo,
       ): Promise<LocationType> => {
-        let queryOptions = options.getOptions(path) || {};
-
-        if (!queryOptions.locale) {
-          queryOptions = { ...queryOptions, locale };
-        }
-
-        return dataLoader.location.load(where.code, queryOptions);
+        const queryOptions = options.getOptions(path) || {};
+        const selectedLocale = queryOptions.locale || locale;
+        return dataLoader.location.loadById(where.code, selectedLocale);
       },
     },
 

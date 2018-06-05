@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`all flights query should return flight in czech language 1`] = `
+exports[`all flights query should return flight in czech language with location fallback 1`] = `
 Object {
   "data": Object {
     "allFlights": Object {

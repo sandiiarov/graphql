@@ -16,6 +16,7 @@ import type { GraphQLFieldConfig, GraphQLResolveInfo } from 'graphql';
 
 type AvailableOpaqueTypes =
   | 'hotel'
+  | 'location'
   | 'hotelFacility'
   | 'hotelRoom'
   | 'hotelPhoto'

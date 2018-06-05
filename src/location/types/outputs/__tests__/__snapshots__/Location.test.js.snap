@@ -44,6 +44,14 @@ Object {
     "resolve": [Function],
     "type": "String",
   },
+  "id": Object {
+    "args": Array [],
+    "description": "The ID of an object",
+    "isDeprecated": false,
+    "name": "id",
+    "resolve": [Function],
+    "type": "ID!",
+  },
   "isActive": Object {
     "args": Array [],
     "isDeprecated": false,

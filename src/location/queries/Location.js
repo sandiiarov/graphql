@@ -1,6 +1,7 @@
 // @flow
 
 import { GraphQLString, GraphQLNonNull } from 'graphql';
+import { fromGlobalId } from 'graphql-relay';
 
 import GraphQLLocation from '../types/outputs/Location';
 import GraphQLLocale from '../../common/types/enums/Locale';
@@ -26,9 +27,16 @@ export default {
     { id, locale: deprecatedLocale }: Object,
     { dataLoader, locale }: GraphqlContextType,
   ) => {
+    const idObject = fromGlobalId(id); // id is opaque
+    if (idObject.type && idObject.type !== 'location') {
+      throw new Error(
+        `Provided id consist of "${idObject.type}" type instead of location.`,
+      );
+    }
+    const locationId = idObject.type ? idObject.id : id;
     // Deprecated locale takes precedence to keep backward compatibility
-    const useLocale = deprecatedLocale ? deprecatedLocale : locale;
+    const selectedLocale = deprecatedLocale ? deprecatedLocale : locale;
 
-    return dataLoader.location.loadById(id, useLocale);
+    return dataLoader.location.loadById(locationId, selectedLocale);
   },
 };

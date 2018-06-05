@@ -76,7 +76,8 @@ beforeEach(() => {
   ].forEach(iata => {
     RestApiMock.onGet(
       config.restApiEndpoint.allLocations({
-        term: iata,
+        type: 'id',
+        id: iata,
         locale: 'en-US',
       }),
     ).replyWithData({

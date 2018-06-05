@@ -23,7 +23,7 @@ export default new GraphQLObjectType({
         args: Object,
         { dataLoader }: GraphqlContextType,
       ) => {
-        return await dataLoader.location.loadMany(requiredIn);
+        return requiredIn.map(id => dataLoader.location.loadById(id));
       },
     },
     warningIn: {
@@ -34,7 +34,7 @@ export default new GraphQLObjectType({
         args: Object,
         { dataLoader }: GraphqlContextType,
       ) => {
-        return await dataLoader.location.loadMany(warningIn);
+        return warningIn.map(id => dataLoader.location.loadById(id));
       },
     },
     okIn: {
@@ -45,7 +45,7 @@ export default new GraphQLObjectType({
         args: Object,
         { dataLoader }: GraphqlContextType,
       ) => {
-        return await dataLoader.location.loadMany(okIn);
+        return okIn.map(id => dataLoader.location.loadById(id));
       },
     },
   },

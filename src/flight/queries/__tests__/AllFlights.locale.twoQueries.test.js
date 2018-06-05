@@ -31,11 +31,19 @@ beforeEach(() => {
   ).replyWithData(PrgMexCsCzDataset);
 
   RestApiMock.onGet(
-    config.restApiEndpoint.allLocations({ term: 'PRG', locale: 'de-DE' }),
+    config.restApiEndpoint.allLocations({
+      type: 'id',
+      id: 'PRG',
+      locale: 'de-DE',
+    }),
   ).replyWithData(PragueDataset);
 
   RestApiMock.onGet(
-    config.restApiEndpoint.allLocations({ term: 'PRG', locale: 'es-ES' }),
+    config.restApiEndpoint.allLocations({
+      type: 'id',
+      id: 'PRG',
+      locale: 'es-ES',
+    }),
   ).replyWithData(MexicoDataset);
 });
 

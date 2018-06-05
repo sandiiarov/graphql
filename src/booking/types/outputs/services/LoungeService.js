@@ -28,7 +28,7 @@ export default new GraphQLObjectType({
             location: {
               type: Location,
               resolve: (lounge, args: void, context: GraphqlContextType) => {
-                return context.dataLoader.location.load(lounge.iata);
+                return context.dataLoader.location.loadById(lounge.iata);
               },
             },
           },

@@ -2,17 +2,15 @@
 
 import Flight from '../Flight';
 import LocationDataloader from '../../../location/dataloaders/Location';
-import LocationSuggestionsDataloader from '../../../location/dataloaders/LocationSuggestions';
+import LocationsDataloader from '../../../location/dataloaders/Locations';
 
 jest.mock('../../../location/dataloaders/Location');
-jest.mock('../../../location/dataloaders/LocationSuggestions');
+jest.mock('../../../location/dataloaders/Locations');
 
 let dataloader;
 
 beforeEach(() => {
-  dataloader = new Flight(
-    new LocationDataloader(new LocationSuggestionsDataloader()),
-  );
+  dataloader = new Flight(new LocationDataloader(), new LocationsDataloader());
 });
 
 describe('normalize locations', () => {

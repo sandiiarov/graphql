@@ -11,7 +11,7 @@ import createFAQLoader from '../../FAQ/dataloaders/searchFAQ';
 import createFAQCategoryLoader from '../../FAQ/dataloaders/getFAQCategory';
 import createFAQArticleLoader from '../../FAQ/dataloaders/getFAQArticle';
 import BookingsLoader from '../../booking/dataloaders/Bookings';
-import LocationSuggestionsLoader from '../../location/dataloaders/LocationSuggestions';
+import LocationsLoader from '../../location/dataloaders/Locations';
 import LocationLoader from '../../location/dataloaders/Location';
 import FlightLoader from '../../flight/dataloaders/Flight';
 import OptionsStorage from './context/OptionsStorage';
@@ -63,7 +63,7 @@ export type GraphqlContextType = {|
     flight: FlightLoader,
     identity: IdentityDataloader,
     location: LocationLoader,
-    locationSuggestions: LocationSuggestionsLoader,
+    locations: LocationsLoader,
     rates: DataLoader<string, ?number>,
     city: DataLoader<string, City>,
     hotel: {
@@ -103,8 +103,8 @@ export function createContext(
     ? ISOLocalesToLanguage[locale]
     : 'en';
   const bookings = new BookingsLoader(token);
-  const locationSuggestions = new LocationSuggestionsLoader();
-  const location = new LocationLoader(locationSuggestions);
+  const locations = new LocationsLoader();
+  const location = new LocationLoader();
   const hotelCities = new HotelCities();
 
   return {
@@ -115,10 +115,10 @@ export function createContext(
       booking: createBookingLoader(token, bookings),
       bookings: bookings,
       currency: createCurrencyLoader(),
-      flight: new FlightLoader(location),
+      flight: new FlightLoader(location, locations),
       identity: new IdentityDataloader(token),
       location: location,
-      locationSuggestions: locationSuggestions,
+      locations: locations,
       rates: createRatesLoader(),
       city: CitiesByID,
       hotel: {

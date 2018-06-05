@@ -16,7 +16,7 @@ beforeEach(() => {
     `${allBookings}/2707251\\?simple_token=[0-9a-f-]{36}`,
   ).replyWithData(Booking2707251Dataset);
   RestApiMock.onGet(
-    'https://api.skypicker.com/locations?term=FR',
+    'https://api.skypicker.com/locations?type=id&id=FR',
   ).replyWithData(FranceLocation);
 });
 

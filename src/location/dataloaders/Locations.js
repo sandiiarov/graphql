@@ -7,7 +7,7 @@ import { batchGetLocations, processResponse } from './Fetcher';
 
 import type { Radius, Rectangle, Location, Options } from '../Location';
 
-export default class LocationSuggestionsDataloader {
+export default class LocationsDataloader {
   dataLoader: DataLoader<Object, Location[]>;
 
   constructor() {
@@ -21,7 +21,7 @@ export default class LocationSuggestionsDataloader {
     );
   }
 
-  async load(options: ?Options): Promise<Location[]> {
+  async loadAll(options: ?Options): Promise<Location[]> {
     const locations = await this.dataLoader.load({
       type: 'dump',
       limit: 9999,
@@ -35,9 +35,9 @@ export default class LocationSuggestionsDataloader {
    * If you need to load only one (the first) location for location key
    * you have to use 'LocationDataLoader.load' function.
    */
-  async loadByKey(locationKey: string, options: ?Options): Promise<Location[]> {
+  async loadByTerm(term: string, options: ?Options): Promise<Location[]> {
     const locations = await this.dataLoader.load({
-      term: locationKey,
+      term: term,
       ...sanitizeOptions(options),
     });
     return processResponse(locations);
@@ -79,12 +79,12 @@ export default class LocationSuggestionsDataloader {
    * Returns set of suggestions for multiple places (array of arrays of
    * possible locations related to the keys).
    */
-  async loadMany(
-    locationKeys: string[],
+  async loadByTerms(
+    terms: string[],
     options: ?Options,
   ): Promise<Array<Location[]>> {
     const locations = await this.dataLoader.loadMany(
-      locationKeys.map(location => ({
+      terms.map(location => ({
         term: location,
         ...sanitizeOptions(options),
       })),

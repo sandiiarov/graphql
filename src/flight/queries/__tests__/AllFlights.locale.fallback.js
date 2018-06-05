@@ -3,13 +3,24 @@
 import { graphql, RestApiMock } from '../../../common/services/TestingTools';
 import config from '../../../../config/application';
 import PrgMexCsCzDataset from '../../datasets/prg-mex-cs-CZ.json';
+import NoFlightsDataset from '../../datasets/no-results.json';
 import PragueCsCzDataset from '../../../location/datasets/prague-cs-CZ.json';
 import MexCsCzDataset from '../../../location/datasets/mex-cs-CZ.json';
 
 beforeEach(() => {
   RestApiMock.onGet(
     config.restApiEndpoint.allFlights({
-      flyFrom: 'PRG',
+      flyFrom: 'Praha',
+      to: 'MEX',
+      dateFrom: '08/08/2017',
+      dateTo: '08/09/2017',
+      locale: 'cz',
+    }),
+  ).replyWithData(NoFlightsDataset);
+
+  RestApiMock.onGet(
+    config.restApiEndpoint.allFlights({
+      flyFrom: 'prague_cz',
       to: 'MEX',
       dateFrom: '08/08/2017',
       dateTo: '08/09/2017',
@@ -32,10 +43,24 @@ beforeEach(() => {
       locale: 'cs-CZ',
     }),
   ).replyWithData(MexCsCzDataset);
+
+  RestApiMock.onGet(
+    config.restApiEndpoint.allLocations({
+      term: 'Praha',
+      locale: 'cs-CZ',
+    }),
+  ).replyWithData(PragueCsCzDataset);
+
+  RestApiMock.onGet(
+    config.restApiEndpoint.allLocations({
+      term: 'MEX',
+      locale: 'cs-CZ',
+    }),
+  ).replyWithData(MexCsCzDataset);
 });
 
 describe('all flights query', () => {
-  it('should return flight in czech language', async () => {
+  it('should return flight in czech language with location fallback', async () => {
     const allFlightsSearchQuery = `
     query ($input: FlightsSearchInput!, $options: FlightsOptionsInput) {
       allFlights(search: $input, options: $options) {
@@ -50,7 +75,7 @@ describe('all flights query', () => {
     const variables = {
       input: {
         from: {
-          location: 'PRG',
+          location: 'Praha',
         },
         to: {
           location: 'MEX',

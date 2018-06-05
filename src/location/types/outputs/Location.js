@@ -10,12 +10,17 @@ import {
 
 import GraphQLCoordinates from './Coordinates';
 import GraphQLLocationArea from './LocationArea';
+import { globalIdField } from '../../../common/services/OpaqueIdentifier';
 
 import type { LocationArea, Location, Coordinates } from '../../Location';
 
 export default new GraphQLObjectType({
   name: 'Location',
   fields: {
+    id: globalIdField(
+      'location',
+      ({ locationId }: Location): string => locationId,
+    ),
     locationId: {
       type: GraphQLString,
       description: '3-letter IATA code of airport or internal city code.',

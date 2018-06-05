@@ -29,7 +29,7 @@ export default {
     { dataLoader, locale }: GraphqlContextType,
   ) => {
     const locationOptions = { locale, ...(options || {}) };
-    const locations = await dataLoader.locationSuggestions.loadSubLocations(
+    const locations = await dataLoader.locations.loadSubLocations(
       id,
       locationOptions,
     );
