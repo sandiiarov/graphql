@@ -23,6 +23,7 @@ import FAQCategory from './FAQ/queries/FAQCategory';
 import FAQArticle from './FAQ/queries/FAQArticle';
 import AllDynamicPackages from './dynamicPackage/queries/AllDynamicPackages';
 import { nodeField } from './node/node';
+import CustomerSupport from './support/queries/CustomerSupport';
 
 export default new GraphQLObjectType({
   name: 'RootQuery',
@@ -49,5 +50,6 @@ export default new GraphQLObjectType({
     FAQCategory: FAQCategory,
     FAQArticle: FAQArticle,
     allDynamicPackages: AllDynamicPackages,
+    customerSupport: CustomerSupport,
   },
 });
