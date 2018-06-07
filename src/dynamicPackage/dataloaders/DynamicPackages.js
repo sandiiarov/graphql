@@ -95,6 +95,7 @@ function createHotel(
   review: { score: number },
   photos: PhotoType[],
   price: number,
+  summary: string,
 |} {
   return {
     id: data.Code.toString(),
@@ -112,6 +113,7 @@ function createHotel(
         thumbnail: data.Image,
       },
     ],
+    summary: data.Description,
   };
 }
 
