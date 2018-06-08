@@ -3106,9 +3106,9 @@ graphql-anywhere@^3.0.1:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/graphql-anywhere/-/graphql-anywhere-3.1.0.tgz#3ea0d8e8646b5cee68035016a9a7557c15c21e96"
 
-graphql-iso-date@^3.2.0:
-  version "3.3.0"
-  resolved "https://registry.yarnpkg.com/graphql-iso-date/-/graphql-iso-date-3.3.0.tgz#cbe434b41e035e806338121b1b2b509a0f72bb80"
+graphql-iso-date@^3.5.0:
+  version "3.5.0"
+  resolved "https://registry.yarnpkg.com/graphql-iso-date/-/graphql-iso-date-3.5.0.tgz#55a1be0efa8d28c1453afd2eb5ce1d052189a513"
 
 graphql-relay@^0.5.5:
   version "0.5.5"
