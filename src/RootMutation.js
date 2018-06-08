@@ -10,8 +10,8 @@ export default new GraphQLObjectType({
   name: 'RootMutation',
   description: 'Root Mutation.',
   fields: {
+    addFAQArticleComment,
     login: Login,
     resetPassword: ResetPassword,
-    addFAQArticleComment,
   },
 });
