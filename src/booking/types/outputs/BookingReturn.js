@@ -7,6 +7,8 @@ import BookingInterface, {
   type BookingInterfaceData,
 } from './BookingInterface';
 import Trip, { type TripData } from './Trip';
+import { nodeInterface } from '../../../node/node';
+import { register } from '../../../node/typeStore';
 
 export type InboundOutboundData = {
   inbound: TripData,
@@ -15,10 +17,10 @@ export type InboundOutboundData = {
 
 export type BookingReturnData = BookingInterfaceData & InboundOutboundData;
 
-export default new GraphQLObjectType({
+const BookingReturn = new GraphQLObjectType({
   name: 'BookingReturn',
   description: 'Booking with return trip. A <-> B',
-  interfaces: [BookingInterface],
+  interfaces: [BookingInterface, nodeInterface],
   fields: {
     ...commonFields,
     outbound: {
@@ -33,3 +35,7 @@ export default new GraphQLObjectType({
     },
   },
 });
+
+register('BookingReturn', BookingReturn);
+
+export default BookingReturn;

@@ -10,6 +10,7 @@ import type { BookingsItem } from '../Booking';
 export default {
   type: GraphQLBooking, // may be null (doesn't exist)
   description: 'Find booking by its id or databaseId.',
+  deprecationReason: 'Use "node" query instead.',
   args: {
     id: {
       type: new GraphQLNonNull(GraphQLID),

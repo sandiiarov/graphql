@@ -4,13 +4,13 @@ import { connectionArgs, connectionDefinitions } from 'graphql-relay';
 import { GraphQLEnumType } from 'graphql';
 
 import { connectionFromArray } from '../../common/services/ArrayConnection';
-import GraphQLBooking from '../types/outputs/Booking';
+import GraphQLBookingInterface from '../types/outputs/BookingInterface';
 import type { GraphqlContextType } from '../../common/services/GraphqlContext';
 import { filterOnlyBookings } from './AllBookingsFilters';
 import { sortBookingsByDate } from './AllBookingsSort';
 
 const { connectionType: AllBookingsConnection } = connectionDefinitions({
-  nodeType: GraphQLBooking,
+  nodeType: GraphQLBookingInterface,
 });
 
 const OnlyEnumValues = {
@@ -19,15 +19,13 @@ const OnlyEnumValues = {
 };
 
 const OnlyEnum = new GraphQLEnumType({
-  name: 'AllBookingsOnlyEnum',
+  name: 'CustomerBookingsOnlyEnum',
   values: OnlyEnumValues,
 });
 
 export default {
   type: AllBookingsConnection,
   description: 'Search for your flight bookings.',
-  deprecationReason: 'Use "customerBookings" query instead.',
-
   args: {
     only: {
       type: OnlyEnum,

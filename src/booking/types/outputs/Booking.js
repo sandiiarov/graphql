@@ -15,6 +15,9 @@ export default new GraphQLObjectType({
     'You can fetch here almost every information related to the booking itself. ' +
     'However when you want to fetch legs you have to use "oneWay", "return" and ' +
     '"multicity" fields because they highly depend on the booking type.',
+  deprecationReason:
+    'Use "customerBookings" query instead. That query will return interface ' +
+    "instead so you don't have to work with this generic type.",
 
   fields: {
     ...DeprecatedField,

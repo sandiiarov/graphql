@@ -7,14 +7,16 @@ import BookingInterface, {
   type BookingInterfaceData,
 } from './BookingInterface';
 import Trip, { type TripData } from './Trip';
+import { nodeInterface } from '../../../node/node';
+import { register } from '../../../node/typeStore';
 
 export type BookingOneWayData = BookingInterfaceData & {};
 
-export default new GraphQLObjectType({
+const BookingOneWay = new GraphQLObjectType({
   name: 'BookingOneWay',
   description:
     'Booking with simple trip from origin to destination, with possible stopovers.',
-  interfaces: [BookingInterface],
+  interfaces: [BookingInterface, nodeInterface],
   fields: {
     ...commonFields,
     trip: {
@@ -27,3 +29,7 @@ export default new GraphQLObjectType({
     },
   },
 });
+
+register('BookingOneWay', BookingOneWay);
+
+export default BookingOneWay;

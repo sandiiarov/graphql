@@ -11,6 +11,10 @@ export function loadType(globalId: string, ctx: GraphqlContextType) {
   switch (type) {
     case 'CurrencyDetail':
       return ctx.dataLoader.currency.load(id);
+    case 'BookingOneWay':
+    case 'BookingReturn':
+    case 'BookingMulticity':
+      return ctx.dataLoader.booking.load(id);
     default:
       return null;
   }
@@ -19,6 +23,14 @@ export function loadType(globalId: string, ctx: GraphqlContextType) {
 export function detectType(obj: any) {
   if (typeof obj.rate === 'number') {
     return getType('CurrencyDetail');
+  }
+
+  if (
+    obj.type === 'BookingOneWay' ||
+    obj.type === 'BookingReturn' ||
+    obj.type === 'BookingMulticity'
+  ) {
+    return getType(obj.type);
   }
 
   return null;

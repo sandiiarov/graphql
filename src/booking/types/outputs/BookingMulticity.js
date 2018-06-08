@@ -8,16 +8,18 @@ import BookingInterface, {
 } from './BookingInterface';
 import Trip from './Trip';
 import RouteStop from '../../../flight/types/outputs/RouteStop';
+import { nodeInterface } from '../../../node/node';
 import type { TripData } from './Trip';
 import type { DepartureArrival } from '../../../flight/Flight';
+import { register } from '../../../node/typeStore';
 
 type BookingMulticityData = BookingInterfaceData & {
   trips: TripData[],
 };
 
-export default new GraphQLObjectType({
+const BookingMulticity = new GraphQLObjectType({
   name: 'BookingMulticity',
-  interfaces: [BookingInterface],
+  interfaces: [BookingInterface, nodeInterface],
   fields: {
     ...commonFields,
     start: {
@@ -38,3 +40,7 @@ export default new GraphQLObjectType({
     },
   },
 });
+
+register('BookingMulticity', BookingMulticity);
+
+export default BookingMulticity;

@@ -194,7 +194,8 @@ Object {
   },
   "type": Object {
     "args": Array [],
-    "isDeprecated": false,
+    "deprecationReason": "Manual type is not necessary. Use \\"__typename\\" instead.",
+    "isDeprecated": true,
     "name": "type",
     "resolve": [Function],
     "type": "BookingType",

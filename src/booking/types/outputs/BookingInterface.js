@@ -44,6 +44,8 @@ export const commonFields = {
 
   type: {
     type: BookingType,
+    deprecationReason:
+      'Manual type is not necessary. Use "__typename" instead.',
     resolve: ({ type }: BookingInterfaceData) => type,
   },
 
