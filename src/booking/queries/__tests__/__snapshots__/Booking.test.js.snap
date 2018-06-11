@@ -37,7 +37,7 @@ Object {
           "locationId": "MOCKED",
         },
       },
-      "destinationImageUrl": "https://images.kiwi.com/photos/600x600/paris_fr.jpg",
+      "destinationImageUrl": "https://images.kiwi.com/photos/600x600/paris_fr.grayscale.jpg",
       "directAccessURL": "https://kiwi.com/content/manage/2707251/b206db64-718f-4608-babb-0b8abe6e1b9d",
       "legs": Array [
         Object {
