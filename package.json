@@ -3,7 +3,6 @@
     "algoliasearch": "^3.24.9",
     "apollo-engine": "^1.1.1",
     "apollo-tracing": "^0.0.9",
-    "aws-serverless-express": "^3.0.2",
     "chalk": "^2.0.1",
     "compression": "^1.7.2",
     "cors": "^2.8.4",
@@ -48,22 +47,16 @@
     "mockdate": "^2.0.2",
     "nodemon": "^1.14.12",
     "prettier": "^1.5.2",
-    "serverless": "^1.26.0",
-    "serverless-content-encoding": "^1.0.20",
-    "start-server-webpack-plugin": "^2.2.0",
-    "supertest": "^3.0.0",
-    "webpack": "^3.0.0",
-    "webpack-node-externals": "^1.6.0"
+    "supertest": "^3.0.0"
   },
   "main": "dist/endpoint.js",
   "scripts": {
     "start": "yarn run nodemon --verbose --ignore __tests__/ --ignore __mocks__/ --exec yarn run babel-node src/index.js",
-    "build": "webpack --config config/webpack.production.js",
     "lint": "eslint .",
     "test": "jest --setupTestFrameworkScriptFile=./config/setupTests.js",
     "test-ci": "yarn run typecheck && yarn run lint && TZ='Asia/Tokyo' yarn run test -- --ci --color --logHeapUsage --maxWorkers=4 --config=jest.json && yarn run test-bc",
     "test-bc": "yarn babel-node scripts/CheckBackwardCompatibility.js",
-    "typecheck": "flow check --color=always"
+    "typecheck": "flow check --color=always --include-warnings"
   },
   "resolutions": {
     "graphql": "0.12.3"

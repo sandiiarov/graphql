@@ -1,3 +1,4 @@
+# check .circleci/config.yml version
 FROM node:9.5.0
 
 WORKDIR /graphql

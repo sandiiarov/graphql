@@ -4,8 +4,6 @@ Production URL: https://graphql.kiwi.com/
 
 [Join our chat over at Discord](https://discord.gg/Pq2q5a5) to get in touch with the community and Kiwi.com engineers.
 
-This GraphQL API proxy is written for serverless infrastructure. This assumption is especially important in case of dataloaders. For more information please read: https://github.com/facebook/dataloader#caching-per-request
-
 # Run GraphQL API server
 
 Using this command you can run GraphQL API server with HMR (Hot Module Replacement).
@@ -31,6 +29,41 @@ on localhost you'll need to fill in the `ENGINE_KEY` environmental variable.
 yarn test
 yarn test-ci
 ```
+
+# Deployment
+
+```
+CircleCI <--- triggers ---> VPN ---> production
+   ^                         ^
+   |                         |
+   |                         |
+   v                         |
+ GitHub - - - - - - - - - - -`
+```
+
+We consider `master` branch to be stable and all green commits are being immediately deployed to the production. This is how it works:
+
+1. CircleCI triggers deployment script in VPN
+2. this script downloads tested commit and starts building it (see `scripts/build.sh`)
+3. this build is added to the Docker image (see `Dockerfile` in this repo)
+4. this new build is deployed using [kiwicom/crate](https://github.com/kiwicom/crane)
+
+Detailed overview:
+
+1. private deployer clones the repo and builds it like this:
+
+```
+git clone https://github.com/kiwicom/graphql.git .cache/graphql
+cd .cache/graphql
+git reset --hard $COMMIT_HASH
+yarn install
+sh ./scripts/build.sh
+```
+
+_TODO: we should run tests there as well, we should also test the build!_
+
+2. build script will build the app into `.build` directory
+3. this directory and `node_modules` are packed together into the Docker image and executed in production
 
 # GraphiQL
 
