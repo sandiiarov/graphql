@@ -1,36 +1,36 @@
 // @flow
 
+import Dataloader from 'dataloader';
 import { get } from '../../common/services/HttpRequest';
 import Config from '../../../config/application';
 import { sanitizeListItem } from './ApiSanitizer';
 
-import type { BookingsItem } from '../Booking';
+import { type BookingsItem } from '../Booking';
 
-// This is only "semi-dataloader" that will probably not be needed once there
-// will be batch API endpoint for Booking details.
-// It's response is to provide list of bookings and access to data
-// (booking access token) in Booking dataloader.
-
+/**
+ * This is only "semi-dataloader" that will probably not be needed once there
+ * will be batch API endpoint for Booking details. It's responsibility is to
+ * provide list of bookings and access to data (booking access token)
+ * in Booking dataloader.
+ */
 export default class DataLoader {
   accessToken: ?string;
-  bookings: ?Array<BookingsItem>;
+  dataloader: Dataloader<string, BookingsItem[]>;
 
   constructor(accessToken: ?string) {
     this.accessToken = accessToken;
-    this.bookings = null;
+    this.dataloader = new Dataloader(this.batchFetch);
   }
 
-  async load(): Promise<BookingsItem[]> {
+  load = async (): Promise<BookingsItem[]> => {
     if (typeof this.accessToken !== 'string') {
       throw new Error('Undefined access token');
     }
-    if (!Array.isArray(this.bookings)) {
-      this.bookings = await fetch(this.accessToken);
-    }
-    return Promise.resolve(this.bookings);
-  }
 
-  async loadItem(id: number | string): Promise<BookingsItem> {
+    return this.dataloader.load(this.accessToken);
+  };
+
+  loadItem = async (id: number | string): Promise<BookingsItem> => {
     const bid = parseInt(id);
     const bookings = await this.load();
     const booking = bookings.find(b => b.id === bid);
@@ -38,11 +38,18 @@ export default class DataLoader {
       throw new Error(`Booking not found. id: ${bid}`);
     }
     return booking;
-  }
-}
+  };
 
-async function fetch(accessToken: string): Promise<BookingsItem[]> {
-  const response = await get(Config.restApiEndpoint.allBookings, accessToken);
-
-  return response.map(booking => sanitizeListItem(booking));
+  batchFetch = async (
+    accessTokens: $ReadOnlyArray<string>,
+  ): Promise<$ReadOnlyArray<BookingsItem[]>> => {
+    return Promise.all(
+      accessTokens.map(accessToken =>
+        get(Config.restApiEndpoint.allBookings, accessToken),
+      ),
+      // eslint-disable-next-line promise/prefer-await-to-then
+    ).then(bookingsByToken => {
+      return bookingsByToken.map(bookings => bookings.map(sanitizeListItem));
+    });
+  };
 }
