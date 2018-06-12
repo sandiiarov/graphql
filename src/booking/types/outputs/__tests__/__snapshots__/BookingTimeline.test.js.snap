@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BookingTimeline type should have valid fields 1`] = `
+Object {
+  "events": Object {
+    "args": Array [],
+    "description": "List of events of the Bookingtimeline",
+    "isDeprecated": false,
+    "name": "events",
+    "resolve": [Function],
+    "type": "[TimelineEvent]",
+  },
+}
+`;

@@ -23,6 +23,7 @@ import Hotel from './hotel/queries/Hotel';
 import HotelCities from './hotel/queries/HotelCities';
 import Location from './location/queries/Location';
 import NearestBooking from './booking/queries/NearestBooking';
+import BookingTimeline from './booking/queries/BookingTimeline';
 import { nodeField } from './node/node';
 
 export default new GraphQLObjectType({
@@ -50,6 +51,7 @@ export default new GraphQLObjectType({
     hotelCities: HotelCities,
     location: Location,
     nearestBooking: NearestBooking,
+    bookingTimeline: BookingTimeline,
     node: nodeField,
   },
 });

@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`single booking timeline query should not accept database id 1`] = `
+Object {
+  "data": Object {
+    "bookingTimeline": null,
+  },
+  "errors": Array [
+    [GraphQLError: Booking ID mishmash. You cannot query Booking with ID '2707251' because this ID is not ID of the Booking. Please use opaque ID of the Booking.],
+  ],
+}
+`;
+
+exports[`single booking timeline query should work with opaque Booking id 1`] = `
+Object {
+  "data": Object {
+    "bookingTimeline": Object {
+      "events": Array [
+        Object {
+          "timestamp": "2017-03-30T07:28:55.000Z",
+          "type": "BOOKED_FLIGHT",
+        },
+        Object {
+          "timestamp": "2017-03-30T07:28:55.000Z",
+          "type": "BOOKING_CONFIRMED",
+        },
+        Object {
+          "timestamp": "2017-03-30T07:28:55.000Z",
+          "type": "PAYMENT_CONFIRMED",
+        },
+        Object {
+          "timestamp": "2017-03-30T07:28:55.000Z",
+          "type": "DOWNLOAD_RECEIPT",
+        },
+        Object {
+          "timestamp": "2017-03-30T07:28:55.000Z",
+          "type": "DOWNLOAD_ETICKET",
+        },
+        Object {
+          "timestamp": "2017-09-09T17:10:00.000Z",
+          "type": "LEAVE_FOR_AIRPORT",
+        },
+        Object {
+          "timestamp": "2017-09-09T19:10:00.000Z",
+          "type": "AIRPORT_ARRIVAL",
+        },
+        Object {
+          "timestamp": "2017-09-09T20:40:00.000Z",
+          "type": "BOARDING",
+        },
+        Object {
+          "timestamp": "2017-09-09T21:10:00.000Z",
+          "type": "DEPARTURE",
+        },
+        Object {
+          "timestamp": "2017-09-09T23:30:00.000Z",
+          "type": "ARRIVAL",
+        },
+        Object {
+          "timestamp": "2017-09-09T23:45:00.000Z",
+          "type": "TRANSPORT_FROM_AIRPORT",
+        },
+      ],
+    },
+  },
+}
+`;
