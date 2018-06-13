@@ -16,7 +16,6 @@ import Currencies from './currency/queries/Currencies';
 import Currency from './currency/queries/Currency';
 import CurrentUser from './identity/queries/CurrentUser';
 import CustomerBookings from './booking/queries/CustomerBookings';
-import CustomerSupport from './support/queries/CustomerSupport';
 import FAQArticle from './FAQ/queries/FAQArticle';
 import FAQCategory from './FAQ/queries/FAQCategory';
 import GeoIP from './geoip/queries/geoIP';
@@ -44,7 +43,6 @@ export default new GraphQLObjectType({
     currency: Currency,
     currentUser: CurrentUser,
     customerBookings: CustomerBookings,
-    customerSupport: CustomerSupport,
     FAQArticle: FAQArticle,
     FAQCategory: FAQCategory,
     geoIP: GeoIP,
