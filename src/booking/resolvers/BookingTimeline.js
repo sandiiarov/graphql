@@ -3,7 +3,20 @@
 import idx from 'idx';
 import { DateTime } from 'luxon';
 
-import type { BookingTimelineEvent } from '../BookingTimeline';
+import type {
+  BookingTimelineEvent,
+  BookedFlight,
+  BookingConfirmed,
+  PaymentConfirmed,
+  DownloadReceipt,
+  DownloadETicket,
+  LeaveForAirport,
+  AirportArrival,
+  Boarding,
+  Departure,
+  Arrival,
+  TransportFromAirport,
+} from '../BookingTimeline';
 import type { Booking } from '../Booking';
 import type { Leg } from '../../flight/Flight';
 
@@ -47,9 +60,7 @@ export default function generateEventsFrom(
   return events;
 }
 
-export function generateBookedFlightEvent(
-  booking: Booking,
-): BookingTimelineEvent {
+export function generateBookedFlightEvent(booking: Booking): BookedFlight {
   return {
     timestamp: booking.created,
     type: 'BookedFlight',
@@ -58,51 +69,53 @@ export function generateBookedFlightEvent(
 
 export function generateBookingConfirmedEvent(
   booking: Booking,
-): ?BookingTimelineEvent {
-  if (booking.status === 'confirmed')
+): ?BookingConfirmed {
+  if (booking.status === 'confirmed') {
     return {
       timestamp: booking.created,
       type: 'BookingConfirmed',
     };
+  }
   return null;
 }
 
 export function generatePaymentConfirmedEvent(
   booking: Booking,
-): ?BookingTimelineEvent {
-  if (booking.status)
+): ?PaymentConfirmed {
+  if (booking.status) {
     return {
       timestamp: booking.created,
       type: 'PaymentConfirmed',
     };
+  }
   return null;
 }
 
 export function generateDownloadReceiptEvent(
   booking: Booking,
-): ?BookingTimelineEvent {
+): ?DownloadReceipt {
   const invoiceUrl = idx(booking.assets, _ => _.invoiceUrl) || '';
   return {
     timestamp: booking.created,
     type: 'DownloadReceipt',
-    data: invoiceUrl,
+    receiptUrl: invoiceUrl,
   };
 }
 
 export function generateDownloadETicketEvent(
   booking: Booking,
-): ?BookingTimelineEvent {
+): ?DownloadETicket {
   const ticketUrl = idx(booking.assets, _ => _.ticketUrl) || '';
   return {
     timestamp: booking.created,
     type: 'DownloadETicket',
-    data: ticketUrl,
+    ticketUrl: ticketUrl,
   };
 }
 
 export function generateLeaveForAirportEvent(
   booking: Booking,
-): ?BookingTimelineEvent {
+): ?LeaveForAirport {
   const localDepartureTime = idx(booking.departure, _ => _.when.local);
   if (localDepartureTime) {
     const leaveForAiportTime = DateTime.fromJSDate(localDepartureTime, {
@@ -120,12 +133,9 @@ export function generateLeaveForAirportEvent(
   return null;
 }
 
-export function generateAirportArrivalEvent(
-  booking: Booking,
-): ?BookingTimelineEvent {
+export function generateAirportArrivalEvent(booking: Booking): ?AirportArrival {
   const localDepartureTime = idx(booking.departure, _ => _.when.local);
   if (localDepartureTime) {
-    const cityName = idx(booking.departure, _ => _.where.cityName) || '';
     const AiportArrivalTime = DateTime.fromJSDate(localDepartureTime, {
       zone: 'UTC',
     })
@@ -136,13 +146,13 @@ export function generateAirportArrivalEvent(
     return {
       timestamp: AiportArrivalTime,
       type: 'AirportArrival',
-      data: cityName,
+      departure: booking.departure,
     };
   }
   return null;
 }
 
-export function generateBoardingEvent(leg: Leg): ?BookingTimelineEvent {
+export function generateBoardingEvent(leg: Leg): ?Boarding {
   const localDepartureTime = idx(leg, _ => _.departure.when.local);
   if (localDepartureTime) {
     const BoardingTime = DateTime.fromJSDate(localDepartureTime, {
@@ -155,33 +165,31 @@ export function generateBoardingEvent(leg: Leg): ?BookingTimelineEvent {
     return {
       timestamp: BoardingTime,
       type: 'Boarding',
-      data: 'gate number', // @TODO Gate Number does not seem available for now...
+      gate: 'gate number', // @TODO Gate Number does not seem available for now...
     };
   }
   return null;
 }
 
-export function generateDepartureEvent(leg: Leg): ?BookingTimelineEvent {
+export function generateDepartureEvent(leg: Leg): ?Departure {
   const departureTime = idx(leg, _ => _.departure.when.local);
   if (departureTime) {
-    const cityName = idx(leg, _ => _.departure.where.cityName) || '';
     return {
       timestamp: departureTime,
       type: 'Departure',
-      data: cityName,
+      departure: leg.departure,
     };
   }
   return null;
 }
 
-export function generateArrivalEvent(leg: Leg): ?BookingTimelineEvent {
+export function generateArrivalEvent(leg: Leg): ?Arrival {
   const arrivalTime = idx(leg, _ => _.arrival.when.local);
   if (arrivalTime) {
-    const cityName = idx(leg, _ => _.arrival.where.cityName) || '';
     return {
       timestamp: arrivalTime,
       type: 'Arrival',
-      data: cityName,
+      arrival: leg.arrival,
     };
   }
   return null;
@@ -189,7 +197,7 @@ export function generateArrivalEvent(leg: Leg): ?BookingTimelineEvent {
 
 export function generateTransportFromAirportEvent(
   booking: Booking,
-): ?BookingTimelineEvent {
+): ?TransportFromAirport {
   const arrivalTime = idx(booking.arrival, _ => _.when.local);
   if (arrivalTime) {
     const transportFromAirportTime = DateTime.fromJSDate(arrivalTime, {

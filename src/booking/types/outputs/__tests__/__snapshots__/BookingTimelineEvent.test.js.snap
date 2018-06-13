@@ -1,11 +1,50 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`BookingTimelineEvent type should have valid fields 1`] = `
+exports[`AirportArrival type should have valid fields 1`] = `
 Object {
-  "data": Object {
+  "location": Object {
+    "args": Array [],
+    "description": "Location of departure",
+    "isDeprecated": false,
+    "name": "location",
+    "resolve": [Function],
+    "type": "RouteStop",
+  },
+  "timestamp": Object {
     "args": Array [],
     "isDeprecated": false,
-    "name": "data",
+    "name": "timestamp",
+    "type": "DateTime",
+  },
+}
+`;
+
+exports[`Arrival type should have valid fields 1`] = `
+Object {
+  "location": Object {
+    "args": Array [],
+    "description": "Location of arrival",
+    "isDeprecated": false,
+    "name": "location",
+    "resolve": [Function],
+    "type": "RouteStop",
+  },
+  "timestamp": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "timestamp",
+    "type": "DateTime",
+  },
+}
+`;
+
+exports[`Boarding type should have valid fields 1`] = `
+Object {
+  "gate": Object {
+    "args": Array [],
+    "description": "Gate at which boarding is done",
+    "isDeprecated": false,
+    "name": "gate",
     "type": "String",
   },
   "timestamp": Object {
@@ -14,11 +53,127 @@ Object {
     "name": "timestamp",
     "type": "DateTime",
   },
-  "type": Object {
+}
+`;
+
+exports[`BookedFlight type should have valid fields 1`] = `
+Object {
+  "timestamp": Object {
+    "args": Array [],
+    "description": "Time of booking creation",
+    "isDeprecated": false,
+    "name": "timestamp",
+    "type": "DateTime",
+  },
+}
+`;
+
+exports[`BookingConfirmed type should have valid fields 1`] = `
+Object {
+  "timestamp": Object {
     "args": Array [],
     "isDeprecated": false,
-    "name": "type",
-    "type": "TimelineEventTypeEnum",
+    "name": "timestamp",
+    "type": "DateTime",
+  },
+}
+`;
+
+exports[`Departure type should have valid fields 1`] = `
+Object {
+  "location": Object {
+    "args": Array [],
+    "description": "Location of departure",
+    "isDeprecated": false,
+    "name": "location",
+    "resolve": [Function],
+    "type": "RouteStop",
+  },
+  "timestamp": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "timestamp",
+    "type": "DateTime",
+  },
+}
+`;
+
+exports[`DownloadBoardingPass type should have valid fields 1`] = `
+Object {
+  "timestamp": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "timestamp",
+    "type": "DateTime",
+  },
+}
+`;
+
+exports[`DownloadETicket type should have valid fields 1`] = `
+Object {
+  "ticketUrl": Object {
+    "args": Array [],
+    "description": "URL of the eTicket",
+    "isDeprecated": false,
+    "name": "ticketUrl",
+    "type": "String",
+  },
+  "timestamp": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "timestamp",
+    "type": "DateTime",
+  },
+}
+`;
+
+exports[`DownloadReceipt type should have valid fields 1`] = `
+Object {
+  "receiptUrl": Object {
+    "args": Array [],
+    "description": "URL of the receipt/invoice",
+    "isDeprecated": false,
+    "name": "receiptUrl",
+    "type": "String",
+  },
+  "timestamp": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "timestamp",
+    "type": "DateTime",
+  },
+}
+`;
+
+exports[`LeaveForAirport type should have valid fields 1`] = `
+Object {
+  "timestamp": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "timestamp",
+    "type": "DateTime",
+  },
+}
+`;
+
+exports[`PaymentConfirmed type should have valid fields 1`] = `
+Object {
+  "timestamp": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "timestamp",
+    "type": "DateTime",
+  },
+}
+`;
+
+exports[`TransportFromAirport type should have valid fields 1`] = `
+Object {
+  "timestamp": Object {
+    "args": Array [],
+    "isDeprecated": false,
+    "name": "timestamp",
+    "type": "DateTime",
   },
 }
 `;

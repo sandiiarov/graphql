@@ -17,48 +17,78 @@ Object {
     "bookingTimeline": Object {
       "events": Array [
         Object {
+          "__typename": "BookedFlight",
           "timestamp": "2017-03-30T07:28:55.000Z",
-          "type": "BOOKED_FLIGHT",
         },
         Object {
+          "__typename": "BookingConfirmed",
           "timestamp": "2017-03-30T07:28:55.000Z",
-          "type": "BOOKING_CONFIRMED",
         },
         Object {
+          "__typename": "PaymentConfirmed",
           "timestamp": "2017-03-30T07:28:55.000Z",
-          "type": "PAYMENT_CONFIRMED",
         },
         Object {
+          "__typename": "DownloadReceipt",
+          "receiptUrl": "",
           "timestamp": "2017-03-30T07:28:55.000Z",
-          "type": "DOWNLOAD_RECEIPT",
         },
         Object {
+          "__typename": "DownloadETicket",
+          "ticketUrl": "https://skypicker-mailing.s3.amazonaws.com/2707/1490859068_E-ticket_passenger_and_1_more_e826fc3275a65a5db8808279d8fc7f8f.pdf?v=1490859069",
           "timestamp": "2017-03-30T07:28:55.000Z",
-          "type": "DOWNLOAD_ETICKET",
         },
         Object {
+          "__typename": "LeaveForAirport",
           "timestamp": "2017-09-09T17:10:00.000Z",
-          "type": "LEAVE_FOR_AIRPORT",
         },
         Object {
+          "__typename": "AirportArrival",
+          "location": Object {
+            "airport": Object {
+              "city": Object {
+                "locationId": null,
+                "name": "Mocked City Name",
+                "slug": null,
+              },
+            },
+          },
           "timestamp": "2017-09-09T19:10:00.000Z",
-          "type": "AIRPORT_ARRIVAL",
         },
         Object {
+          "__typename": "Boarding",
+          "gate": "gate number",
           "timestamp": "2017-09-09T20:40:00.000Z",
-          "type": "BOARDING",
         },
         Object {
+          "__typename": "Departure",
+          "location": Object {
+            "airport": Object {
+              "city": Object {
+                "locationId": null,
+                "name": "Mocked City Name",
+                "slug": null,
+              },
+            },
+          },
           "timestamp": "2017-09-09T21:10:00.000Z",
-          "type": "DEPARTURE",
         },
         Object {
+          "__typename": "Arrival",
+          "location": Object {
+            "airport": Object {
+              "city": Object {
+                "locationId": null,
+                "name": "Mocked City Name",
+                "slug": null,
+              },
+            },
+          },
           "timestamp": "2017-09-09T23:30:00.000Z",
-          "type": "ARRIVAL",
         },
         Object {
+          "__typename": "TransportFromAirport",
           "timestamp": "2017-09-09T23:45:00.000Z",
-          "type": "TRANSPORT_FROM_AIRPORT",
         },
       ],
     },

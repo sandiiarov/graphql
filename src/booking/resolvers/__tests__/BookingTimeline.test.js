@@ -165,7 +165,7 @@ describe('generateDownloadReceiptEvent', () => {
     ).toEqual({
       timestamp: date,
       type: 'DownloadReceipt',
-      data: '',
+      receiptUrl: '',
     });
     expect(
       // $FlowExpectedError: full Booking object is not needed for this test
@@ -178,7 +178,7 @@ describe('generateDownloadReceiptEvent', () => {
     ).toEqual({
       timestamp: date,
       type: 'DownloadReceipt',
-      data: 'http://somecoolurl',
+      receiptUrl: 'http://somecoolurl',
     });
   });
 });
@@ -194,7 +194,7 @@ describe('generateDownloadETicketEvent', () => {
     ).toEqual({
       timestamp: date,
       type: 'DownloadETicket',
-      data: '',
+      ticketUrl: '',
     });
     expect(
       // $FlowExpectedError: full Booking object is not needed for this test
@@ -207,7 +207,7 @@ describe('generateDownloadETicketEvent', () => {
     ).toEqual({
       timestamp: new Date('2018-05-03T14:10:57.000Z'),
       type: 'DownloadETicket',
-      data: 'http://somecoolurl',
+      ticketUrl: 'http://somecoolurl',
     });
   });
 });
@@ -254,7 +254,11 @@ describe('generateAirportArrivalEvent', () => {
     ).toEqual({
       timestamp: airportArrivalDate,
       type: 'AirportArrival',
-      data: '',
+      departure: {
+        when: {
+          local: date,
+        },
+      },
     });
   });
   it('returns null if departure.when.local is not set', () => {
@@ -280,7 +284,14 @@ describe('generateAirportArrivalEvent', () => {
     ).toEqual({
       timestamp: airportArrivalDate,
       type: 'AirportArrival',
-      data: 'Prague',
+      departure: {
+        when: {
+          local: date,
+        },
+        where: {
+          cityName: 'Prague',
+        },
+      },
     });
   });
 });
@@ -301,7 +312,7 @@ describe('generateBoardingEvent', () => {
     ).toEqual({
       timestamp: boardingDate,
       type: 'Boarding',
-      data: 'gate number',
+      gate: 'gate number',
     });
   });
   it('returns null if departure.when.local is not set', () => {
@@ -328,7 +339,11 @@ describe('generateDepartureEvent', () => {
     ).toEqual({
       timestamp: departureDate,
       type: 'Departure',
-      data: '',
+      departure: {
+        when: {
+          local: date,
+        },
+      },
     });
   });
   it('returns null if departure.when.local is not set', () => {
@@ -354,7 +369,14 @@ describe('generateDepartureEvent', () => {
     ).toEqual({
       timestamp: departureDate,
       type: 'Departure',
-      data: 'Prague',
+      departure: {
+        when: {
+          local: date,
+        },
+        where: {
+          cityName: 'Prague',
+        },
+      },
     });
   });
 });
@@ -375,7 +397,11 @@ describe('generateArrivalEvent', () => {
     ).toEqual({
       timestamp: arrivalDate,
       type: 'Arrival',
-      data: '',
+      arrival: {
+        when: {
+          local: date,
+        },
+      },
     });
   });
   it('returns null if arrival.when.local is not set', () => {
@@ -401,7 +427,14 @@ describe('generateArrivalEvent', () => {
     ).toEqual({
       timestamp: arrivalDate,
       type: 'Arrival',
-      data: 'Prague',
+      arrival: {
+        when: {
+          local: date,
+        },
+        where: {
+          cityName: 'Prague',
+        },
+      },
     });
   });
 });
