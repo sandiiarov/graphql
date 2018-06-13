@@ -56,7 +56,8 @@ function stripCoordinate(slug: string): {| value: number, slug: string |} {
 function stripRadius(slugRadius: string, radius: number): string {
   const r = `-${radius}km`;
   const slug = slugRadius.substr(0, slugRadius.length - r.length);
-  if (!slug.length)
+  if (!slug.length) {
     throw new Error(`Error parsing radius. Input: ${slugRadius}`);
+  }
   return slug;
 }
