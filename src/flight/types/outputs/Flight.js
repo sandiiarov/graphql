@@ -83,7 +83,7 @@ export default new GraphQLObjectType({
         let selectedLocale = oldWayLocale;
 
         if (!oldWayLocale) {
-          selectedLocale = locale;
+          selectedLocale = locale.format.underscored;
         }
 
         return await buildBookingUrl(

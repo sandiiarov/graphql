@@ -3,6 +3,9 @@
 import { GraphQLObjectType, GraphQLNonNull } from 'graphql';
 import { GraphQLDateTime } from 'graphql-iso-date';
 
+import CarRentalService, {
+  type CarRentalServiceType,
+} from './CarRentalService';
 import LoungeService from './LoungeService';
 import ParkingService from './ParkingService';
 import ParkingServiceAvailability from './ParkingServiceAvailability';
@@ -70,6 +73,50 @@ export default new GraphQLObjectType({
           };
         }
         return null;
+      },
+    },
+
+    carRental: {
+      type: CarRentalService,
+      args: {
+        pickup: {
+          type: GraphQLNonNull(GraphQLDateTime),
+        },
+        dropoff: {
+          type: GraphQLNonNull(GraphQLDateTime),
+        },
+      },
+      resolve: async (
+        { booking }: AncestorType,
+        args,
+      ): Promise<CarRentalServiceType> => {
+        // we are interested in the IATAs at the end of the trips (arrivals only, no transfers)
+
+        const lastLocationCode = array => {
+          return array[array.length - 1].arrival.where.code;
+        };
+
+        const locationCodes = new Set();
+
+        if (booking.type === 'BookingOneWay') {
+          locationCodes.add(lastLocationCode(booking.legs));
+        } else if (booking.type === 'BookingReturn') {
+          const outboundLegs = booking.outbound ? booking.outbound.legs : [];
+          const inboundLegs = booking.inbound ? booking.inbound.legs : [];
+
+          locationCodes.add(lastLocationCode(outboundLegs));
+          locationCodes.add(lastLocationCode(inboundLegs));
+        } else if (booking.type === 'BookingMulticity') {
+          // destination of the last leg of the last trip
+          const trips = booking.trips || [];
+          trips.forEach(trip => locationCodes.add(lastLocationCode(trip.legs)));
+        }
+
+        return {
+          locationCodes: Array.from(locationCodes),
+          pickup: args.pickup,
+          dropoff: args.dropoff,
+        };
       },
     },
   },

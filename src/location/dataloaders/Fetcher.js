@@ -35,6 +35,9 @@ export async function batchGetLocations(
 }
 
 export function processResponse(locations: Location[]) {
-  if (!locations.length) throw new Error(`Location has not been found.`);
+  if (!locations.length) {
+    throw new Error(`Location has not been found.`);
+  }
+
   return locations;
 }

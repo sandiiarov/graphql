@@ -14,7 +14,9 @@ export default {
   args: {
     id: {
       type: new GraphQLNonNull(GraphQLID),
-      description: 'Both Booking id & databaseId can be used as ID.',
+      description:
+        'Database ID (human readable ID) of the booking. ' +
+        'You should use "node" query if you want to use opaque ID.',
     },
   },
   resolve: async (
@@ -26,6 +28,8 @@ export default {
 
     if (typeof id === 'string' && id.match(/^\d+$/) === null) {
       // ID correspond to Booking ID, not databaseId
+      // Note: this branch is deprecated and should not be used
+
       const { id: originalId, type } = fromGlobalId(id);
 
       if (type !== 'Booking') {

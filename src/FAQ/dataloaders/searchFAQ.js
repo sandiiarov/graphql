@@ -3,7 +3,6 @@
 import Dataloader from 'dataloader';
 import { get } from '../../common/services/HttpRequest';
 import Config from '../../../config/application';
-import ISOLocalesToLanguage from '../../common/types/enums/ISOLocalesToLanguage';
 
 export type Args = {|
   search: string,
@@ -52,10 +51,7 @@ async function fetchFAQ(search: string, language: string) {
   return articles.map(sanitizeArticle(language));
 }
 
-async function batchLoad(
-  searches: $ReadOnlyArray<Args>,
-  language: $Values<typeof ISOLocalesToLanguage>,
-) {
+async function batchLoad(searches: $ReadOnlyArray<Args>, language: string) {
   const promises = searches.map(({ search }: Args) =>
     fetchFAQ(search, language),
   );
@@ -63,8 +59,6 @@ async function batchLoad(
   return Promise.all(promises);
 }
 
-export default function createFAQLoader(
-  language: $Values<typeof ISOLocalesToLanguage>,
-) {
+export default function createFAQLoader(language: string) {
   return new Dataloader(queries => batchLoad(queries, language));
 }

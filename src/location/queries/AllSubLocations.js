@@ -28,7 +28,10 @@ export default {
     { id, options, ...pagination }: Object,
     { dataLoader, locale }: GraphqlContextType,
   ) => {
-    const locationOptions = { locale, ...(options || {}) };
+    const locationOptions = {
+      locale: locale.format.underscored,
+      ...(options || {}),
+    };
     const locations = await dataLoader.locations.loadSubLocations(
       id,
       locationOptions,

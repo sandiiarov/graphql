@@ -3,7 +3,6 @@
 import Dataloader from 'dataloader/index';
 import { get } from '../../common/services/HttpRequest';
 import Config from '../../../config/application';
-import ISOLocalesToLanguage from '../../common/types/enums/ISOLocalesToLanguage';
 
 type NotFound = {|
   detail: string,
@@ -19,7 +18,7 @@ type ValidResponse = {
 type APIResponse = NotFound | ValidResponse;
 
 export type FAQArticleDetail = ValidResponse & {
-  language: $Values<typeof ISOLocalesToLanguage>,
+  language: string,
 };
 
 export type Args = {|
@@ -28,7 +27,7 @@ export type Args = {|
 
 const getFAQArticle = async (
   originalId: string,
-  language: $Values<typeof ISOLocalesToLanguage>,
+  language: string,
 ): Promise<FAQArticleDetail> => {
   const url = Config.restApiEndpoint.FAQArticle(originalId);
   const article: APIResponse = await get(url, null, {
@@ -47,7 +46,7 @@ const getFAQArticle = async (
 
 const batchLoad = async (
   inputs: $ReadOnlyArray<Args>,
-  language: $Values<typeof ISOLocalesToLanguage>,
+  language: string,
 ): Promise<Array<FAQArticleDetail>> => {
   const promises = inputs.map(({ originalId }: Args) =>
     getFAQArticle(originalId, language),
@@ -56,8 +55,6 @@ const batchLoad = async (
   return Promise.all(promises);
 };
 
-export default function createFAQLoader(
-  language: $Values<typeof ISOLocalesToLanguage>,
-) {
+export default function createFAQLoader(language: string) {
   return new Dataloader(queries => batchLoad(queries, language));
 }

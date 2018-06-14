@@ -36,14 +36,14 @@ export default new GraphQLObjectType({
       type: GraphQLString,
       resolve: (
         { iataCode, fromDate, toDate }: AncestorType,
-        args: void,
+        args: {||},
         context: GraphqlContextType,
       ): string | null => {
         if (ParkingServiceAvailability[iataCode] !== true) {
           return null;
         }
 
-        let language = context.locale.replace('_', '-');
+        let language = context.locale.format.dashed;
         if (SupportedLanguages[language] !== true) {
           language = 'en-GB';
         }

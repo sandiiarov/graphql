@@ -8,11 +8,48 @@ import config from '../../../config/application';
 import { ProxiedError } from '../../common/services/errors/ProxiedError';
 import FAQArticle from '../types/outputs/FAQArticle';
 import FAQCommentType from '../types/inputs/FAQCommentType';
-import ISOLocalesToLanguage from '../../common/types/enums/ISOLocalesToLanguage';
 import type { FAQArticleDetail as FAQArticleType } from '../dataloaders/getFAQArticle';
 import type { GraphqlContextType } from '../../common/services/GraphqlContext';
 
 const successfulResponse = { message: 'yummy indeed' };
+
+const SupportedLanguages = {
+  bg: true,
+  ca: true,
+  cs: true,
+  da: true,
+  de: true,
+  el: true,
+  en: true,
+  es: true,
+  fr: true,
+  hr: true,
+  id: true,
+  is: true,
+  it: true,
+  ja: true,
+  lt: true,
+  he: true,
+  hu: true,
+  nl: true,
+  no: true,
+  pl: true,
+  pt: true,
+  ro: true,
+  ru: true,
+  sk: true,
+  sr: true,
+  fi: true,
+  sv: true,
+  th: true,
+  tr: true,
+  vi: true,
+  uk: true,
+  ar: true,
+  ko: true,
+  zh: true,
+};
+
 export default {
   type: FAQArticle,
   args: {
@@ -47,9 +84,12 @@ export default {
           `Please use opaque ID of the FAQArticle.`,
       );
     }
-    const language = ISOLocalesToLanguage.hasOwnProperty(locale)
-      ? ISOLocalesToLanguage[locale]
-      : 'en';
+
+    let language = locale.language;
+    if (SupportedLanguages[language] !== true) {
+      language = 'en';
+    }
+
     const commentUrl = config.restApiEndpoint.FAQArticleComment(originalId);
     const response = await post(commentUrl, payload, {
       'Accept-Language': language,

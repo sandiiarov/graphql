@@ -52,8 +52,6 @@ async function fetchAllHotels(
       );
 
       const response = await get(absoluteUrl);
-
-      // $FlowIssue: https://github.com/facebook/flow/issues/4936
       return sanitizeHotels(response.result, searchParameters);
     }),
   );

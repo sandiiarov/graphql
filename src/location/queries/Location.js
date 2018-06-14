@@ -35,7 +35,9 @@ export default {
     }
     const locationId = idObject.type ? idObject.id : id;
     // Deprecated locale takes precedence to keep backward compatibility
-    const selectedLocale = deprecatedLocale ? deprecatedLocale : locale;
+    const selectedLocale = deprecatedLocale
+      ? deprecatedLocale
+      : locale.format.dashed;
 
     return dataLoader.location.loadById(locationId, selectedLocale);
   },

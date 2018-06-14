@@ -7,6 +7,9 @@ import { batchGetLocations, processResponse } from './Fetcher';
 
 import type { Radius, Rectangle, Location, Options } from '../Location';
 
+/**
+ * Always returns list of many locations.
+ */
 export default class LocationsDataloader {
   dataLoader: DataLoader<Object, Location[]>;
 

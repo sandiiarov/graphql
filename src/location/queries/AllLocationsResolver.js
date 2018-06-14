@@ -12,7 +12,10 @@ export async function getLocations(
 ) {
   let response;
   const { locale } = context;
-  const options = { locale, ...(args.options || {}) };
+  const options = {
+    locale: locale.format.underscored,
+    ...(args.options || {}),
+  };
 
   if (args.search) {
     response = await context.dataLoader.locations.loadByTerm(
