@@ -5,17 +5,17 @@ import { DateTime } from 'luxon';
 
 import type {
   BookingTimelineEvent,
-  BookedFlight,
-  BookingConfirmed,
-  PaymentConfirmed,
-  DownloadReceipt,
-  DownloadETicket,
-  LeaveForAirport,
-  AirportArrival,
-  Boarding,
-  Departure,
-  Arrival,
-  TransportFromAirport,
+  BookedFlightTimelineEvent as BookedFlightType,
+  BookingConfirmedTimelineEvent as BookingConfirmedType,
+  PaymentConfirmedTimelineEvent as PaymentConfirmedType,
+  DownloadReceiptTimelineEvent as DownloadReceiptType,
+  DownloadETicketTimelineEvent as DownloadETicketType,
+  LeaveForAirportTimelineEvent as LeaveForAirportType,
+  AirportArrivalTimelineEvent as AirportArrivalType,
+  BoardingTimelineEvent as BoardingType,
+  DepartureTimelineEvent as DepartureType,
+  ArrivalTimelineEvent as ArrivalType,
+  TransportFromAirportTimelineEvent as TransportFromAirportType,
 } from '../BookingTimeline';
 import type { Booking } from '../Booking';
 import type { Leg } from '../../flight/Flight';
@@ -60,20 +60,20 @@ export default function generateEventsFrom(
   return events;
 }
 
-export function generateBookedFlightEvent(booking: Booking): BookedFlight {
+export function generateBookedFlightEvent(booking: Booking): BookedFlightType {
   return {
     timestamp: booking.created,
-    type: 'BookedFlight',
+    type: 'BookedFlightTimelineEvent',
   };
 }
 
 export function generateBookingConfirmedEvent(
   booking: Booking,
-): ?BookingConfirmed {
+): ?BookingConfirmedType {
   if (booking.status === 'confirmed') {
     return {
       timestamp: booking.created,
-      type: 'BookingConfirmed',
+      type: 'BookingConfirmedTimelineEvent',
     };
   }
   return null;
@@ -81,11 +81,11 @@ export function generateBookingConfirmedEvent(
 
 export function generatePaymentConfirmedEvent(
   booking: Booking,
-): ?PaymentConfirmed {
+): ?PaymentConfirmedType {
   if (booking.status) {
     return {
       timestamp: booking.created,
-      type: 'PaymentConfirmed',
+      type: 'PaymentConfirmedTimelineEvent',
     };
   }
   return null;
@@ -93,29 +93,29 @@ export function generatePaymentConfirmedEvent(
 
 export function generateDownloadReceiptEvent(
   booking: Booking,
-): ?DownloadReceipt {
-  const invoiceUrl = idx(booking.assets, _ => _.invoiceUrl) || '';
+): ?DownloadReceiptType {
+  const invoiceUrl = idx(booking.assets, _ => _.invoiceUrl) || null;
   return {
     timestamp: booking.created,
-    type: 'DownloadReceipt',
+    type: 'DownloadReceiptTimelineEvent',
     receiptUrl: invoiceUrl,
   };
 }
 
 export function generateDownloadETicketEvent(
   booking: Booking,
-): ?DownloadETicket {
-  const ticketUrl = idx(booking.assets, _ => _.ticketUrl) || '';
+): ?DownloadETicketType {
+  const ticketUrl = idx(booking.assets, _ => _.ticketUrl) || null;
   return {
     timestamp: booking.created,
-    type: 'DownloadETicket',
+    type: 'DownloadETicketTimelineEvent',
     ticketUrl: ticketUrl,
   };
 }
 
 export function generateLeaveForAirportEvent(
   booking: Booking,
-): ?LeaveForAirport {
+): ?LeaveForAirportType {
   const localDepartureTime = idx(booking.departure, _ => _.when.local);
   if (localDepartureTime) {
     const leaveForAiportTime = DateTime.fromJSDate(localDepartureTime, {
@@ -127,13 +127,15 @@ export function generateLeaveForAirportEvent(
       .toJSDate();
     return {
       timestamp: leaveForAiportTime,
-      type: 'LeaveForAirport',
+      type: 'LeaveForAirportTimelineEvent',
     };
   }
   return null;
 }
 
-export function generateAirportArrivalEvent(booking: Booking): ?AirportArrival {
+export function generateAirportArrivalEvent(
+  booking: Booking,
+): ?AirportArrivalType {
   const localDepartureTime = idx(booking.departure, _ => _.when.local);
   if (localDepartureTime) {
     const AiportArrivalTime = DateTime.fromJSDate(localDepartureTime, {
@@ -145,14 +147,14 @@ export function generateAirportArrivalEvent(booking: Booking): ?AirportArrival {
       .toJSDate();
     return {
       timestamp: AiportArrivalTime,
-      type: 'AirportArrival',
+      type: 'AirportArrivalTimelineEvent',
       departure: booking.departure,
     };
   }
   return null;
 }
 
-export function generateBoardingEvent(leg: Leg): ?Boarding {
+export function generateBoardingEvent(leg: Leg): ?BoardingType {
   const localDepartureTime = idx(leg, _ => _.departure.when.local);
   if (localDepartureTime) {
     const BoardingTime = DateTime.fromJSDate(localDepartureTime, {
@@ -164,31 +166,31 @@ export function generateBoardingEvent(leg: Leg): ?Boarding {
       .toJSDate();
     return {
       timestamp: BoardingTime,
-      type: 'Boarding',
+      type: 'BoardingTimelineEvent',
       gate: 'gate number', // @TODO Gate Number does not seem available for now...
     };
   }
   return null;
 }
 
-export function generateDepartureEvent(leg: Leg): ?Departure {
+export function generateDepartureEvent(leg: Leg): ?DepartureType {
   const departureTime = idx(leg, _ => _.departure.when.local);
   if (departureTime) {
     return {
       timestamp: departureTime,
-      type: 'Departure',
+      type: 'DepartureTimelineEvent',
       departure: leg.departure,
     };
   }
   return null;
 }
 
-export function generateArrivalEvent(leg: Leg): ?Arrival {
+export function generateArrivalEvent(leg: Leg): ?ArrivalType {
   const arrivalTime = idx(leg, _ => _.arrival.when.local);
   if (arrivalTime) {
     return {
       timestamp: arrivalTime,
-      type: 'Arrival',
+      type: 'ArrivalTimelineEvent',
       arrival: leg.arrival,
     };
   }
@@ -197,7 +199,7 @@ export function generateArrivalEvent(leg: Leg): ?Arrival {
 
 export function generateTransportFromAirportEvent(
   booking: Booking,
-): ?TransportFromAirport {
+): ?TransportFromAirportType {
   const arrivalTime = idx(booking.arrival, _ => _.when.local);
   if (arrivalTime) {
     const transportFromAirportTime = DateTime.fromJSDate(arrivalTime, {
@@ -207,7 +209,7 @@ export function generateTransportFromAirportEvent(
       .toJSDate();
     return {
       timestamp: transportFromAirportTime,
-      type: 'TransportFromAirport',
+      type: 'TransportFromAirportTimelineEvent',
     };
   }
   return null;

@@ -10601,7 +10601,7 @@
               "kind": "LIST",
               "name": null,
               "ofType": {
-                "kind": "UNION",
+                "kind": "INTERFACE",
                 "name": "TimelineEvent",
                 "ofType": null
               }
@@ -10616,423 +10616,88 @@
         "possibleTypes": null
       },
       {
-        "kind": "UNION",
+        "kind": "INTERFACE",
         "name": "TimelineEvent",
         "description": null,
-        "fields": null,
+        "fields": [
+          {
+            "name": "timestamp",
+            "description": "Time of appearance in the timeline.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "DateTime",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
         "inputFields": null,
         "interfaces": null,
         "enumValues": null,
         "possibleTypes": [
           {
             "kind": "OBJECT",
-            "name": "BookedFlight",
+            "name": "BookedFlightTimelineEvent",
             "ofType": null
           },
           {
             "kind": "OBJECT",
-            "name": "BookingConfirmed",
+            "name": "BookingConfirmedTimelineEvent",
             "ofType": null
           },
           {
             "kind": "OBJECT",
-            "name": "PaymentConfirmed",
+            "name": "PaymentConfirmedTimelineEvent",
             "ofType": null
           },
           {
             "kind": "OBJECT",
-            "name": "DownloadReceipt",
+            "name": "DownloadReceiptTimelineEvent",
             "ofType": null
           },
           {
             "kind": "OBJECT",
-            "name": "DownloadETicket",
+            "name": "DownloadETicketTimelineEvent",
             "ofType": null
           },
           {
             "kind": "OBJECT",
-            "name": "DownloadBoardingPass",
+            "name": "DownloadBoardingPassTimelineEvent",
             "ofType": null
           },
           {
             "kind": "OBJECT",
-            "name": "LeaveForAirport",
+            "name": "LeaveForAirportTimelineEvent",
             "ofType": null
           },
           {
             "kind": "OBJECT",
-            "name": "AirportArrival",
+            "name": "AirportArrivalTimelineEvent",
             "ofType": null
           },
           {
             "kind": "OBJECT",
-            "name": "Boarding",
+            "name": "BoardingTimelineEvent",
             "ofType": null
           },
           {
             "kind": "OBJECT",
-            "name": "Departure",
+            "name": "DepartureTimelineEvent",
             "ofType": null
           },
           {
             "kind": "OBJECT",
-            "name": "Arrival",
+            "name": "ArrivalTimelineEvent",
             "ofType": null
           },
           {
             "kind": "OBJECT",
-            "name": "TransportFromAirport",
+            "name": "TransportFromAirportTimelineEvent",
             "ofType": null
           }
         ]
-      },
-      {
-        "kind": "OBJECT",
-        "name": "BookedFlight",
-        "description": null,
-        "fields": [
-          {
-            "name": "timestamp",
-            "description": "Time of booking creation",
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "DateTime",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          }
-        ],
-        "inputFields": null,
-        "interfaces": [],
-        "enumValues": null,
-        "possibleTypes": null
-      },
-      {
-        "kind": "OBJECT",
-        "name": "BookingConfirmed",
-        "description": null,
-        "fields": [
-          {
-            "name": "timestamp",
-            "description": null,
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "DateTime",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          }
-        ],
-        "inputFields": null,
-        "interfaces": [],
-        "enumValues": null,
-        "possibleTypes": null
-      },
-      {
-        "kind": "OBJECT",
-        "name": "PaymentConfirmed",
-        "description": null,
-        "fields": [
-          {
-            "name": "timestamp",
-            "description": null,
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "DateTime",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          }
-        ],
-        "inputFields": null,
-        "interfaces": [],
-        "enumValues": null,
-        "possibleTypes": null
-      },
-      {
-        "kind": "OBJECT",
-        "name": "DownloadReceipt",
-        "description": null,
-        "fields": [
-          {
-            "name": "timestamp",
-            "description": null,
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "DateTime",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "receiptUrl",
-            "description": "URL of the receipt/invoice",
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          }
-        ],
-        "inputFields": null,
-        "interfaces": [],
-        "enumValues": null,
-        "possibleTypes": null
-      },
-      {
-        "kind": "OBJECT",
-        "name": "DownloadETicket",
-        "description": null,
-        "fields": [
-          {
-            "name": "timestamp",
-            "description": null,
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "DateTime",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "ticketUrl",
-            "description": "URL of the eTicket",
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          }
-        ],
-        "inputFields": null,
-        "interfaces": [],
-        "enumValues": null,
-        "possibleTypes": null
-      },
-      {
-        "kind": "OBJECT",
-        "name": "DownloadBoardingPass",
-        "description": null,
-        "fields": [
-          {
-            "name": "timestamp",
-            "description": null,
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "DateTime",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          }
-        ],
-        "inputFields": null,
-        "interfaces": [],
-        "enumValues": null,
-        "possibleTypes": null
-      },
-      {
-        "kind": "OBJECT",
-        "name": "LeaveForAirport",
-        "description": null,
-        "fields": [
-          {
-            "name": "timestamp",
-            "description": null,
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "DateTime",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          }
-        ],
-        "inputFields": null,
-        "interfaces": [],
-        "enumValues": null,
-        "possibleTypes": null
-      },
-      {
-        "kind": "OBJECT",
-        "name": "AirportArrival",
-        "description": null,
-        "fields": [
-          {
-            "name": "timestamp",
-            "description": null,
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "DateTime",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "location",
-            "description": "Location of departure",
-            "args": [],
-            "type": {
-              "kind": "OBJECT",
-              "name": "RouteStop",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          }
-        ],
-        "inputFields": null,
-        "interfaces": [],
-        "enumValues": null,
-        "possibleTypes": null
-      },
-      {
-        "kind": "OBJECT",
-        "name": "Boarding",
-        "description": null,
-        "fields": [
-          {
-            "name": "timestamp",
-            "description": null,
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "DateTime",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "gate",
-            "description": "Gate at which boarding is done",
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          }
-        ],
-        "inputFields": null,
-        "interfaces": [],
-        "enumValues": null,
-        "possibleTypes": null
-      },
-      {
-        "kind": "OBJECT",
-        "name": "Departure",
-        "description": null,
-        "fields": [
-          {
-            "name": "timestamp",
-            "description": null,
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "DateTime",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "location",
-            "description": "Location of departure",
-            "args": [],
-            "type": {
-              "kind": "OBJECT",
-              "name": "RouteStop",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          }
-        ],
-        "inputFields": null,
-        "interfaces": [],
-        "enumValues": null,
-        "possibleTypes": null
-      },
-      {
-        "kind": "OBJECT",
-        "name": "Arrival",
-        "description": null,
-        "fields": [
-          {
-            "name": "timestamp",
-            "description": null,
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "DateTime",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "location",
-            "description": "Location of arrival",
-            "args": [],
-            "type": {
-              "kind": "OBJECT",
-              "name": "RouteStop",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          }
-        ],
-        "inputFields": null,
-        "interfaces": [],
-        "enumValues": null,
-        "possibleTypes": null
-      },
-      {
-        "kind": "OBJECT",
-        "name": "TransportFromAirport",
-        "description": null,
-        "fields": [
-          {
-            "name": "timestamp",
-            "description": null,
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "DateTime",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          }
-        ],
-        "inputFields": null,
-        "interfaces": [],
-        "enumValues": null,
-        "possibleTypes": null
       },
       {
         "kind": "OBJECT",
@@ -12115,6 +11780,426 @@
             "deprecationReason": null
           }
         ],
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "BookedFlightTimelineEvent",
+        "description": null,
+        "fields": [
+          {
+            "name": "timestamp",
+            "description": "Time of appearance in the timeline.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "DateTime",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [
+          {
+            "kind": "INTERFACE",
+            "name": "TimelineEvent",
+            "ofType": null
+          }
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "BookingConfirmedTimelineEvent",
+        "description": null,
+        "fields": [
+          {
+            "name": "timestamp",
+            "description": "Time of appearance in the timeline.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "DateTime",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [
+          {
+            "kind": "INTERFACE",
+            "name": "TimelineEvent",
+            "ofType": null
+          }
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "PaymentConfirmedTimelineEvent",
+        "description": null,
+        "fields": [
+          {
+            "name": "timestamp",
+            "description": "Time of appearance in the timeline.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "DateTime",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [
+          {
+            "kind": "INTERFACE",
+            "name": "TimelineEvent",
+            "ofType": null
+          }
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "DownloadReceiptTimelineEvent",
+        "description": null,
+        "fields": [
+          {
+            "name": "timestamp",
+            "description": "Time of appearance in the timeline.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "DateTime",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "receiptUrl",
+            "description": "URL of the receipt/invoice",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [
+          {
+            "kind": "INTERFACE",
+            "name": "TimelineEvent",
+            "ofType": null
+          }
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "DownloadETicketTimelineEvent",
+        "description": null,
+        "fields": [
+          {
+            "name": "timestamp",
+            "description": "Time of appearance in the timeline.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "DateTime",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "ticketUrl",
+            "description": "URL of the eTicket",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [
+          {
+            "kind": "INTERFACE",
+            "name": "TimelineEvent",
+            "ofType": null
+          }
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "DownloadBoardingPassTimelineEvent",
+        "description": null,
+        "fields": [
+          {
+            "name": "timestamp",
+            "description": "Time of appearance in the timeline.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "DateTime",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [
+          {
+            "kind": "INTERFACE",
+            "name": "TimelineEvent",
+            "ofType": null
+          }
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "LeaveForAirportTimelineEvent",
+        "description": null,
+        "fields": [
+          {
+            "name": "timestamp",
+            "description": "Time of appearance in the timeline.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "DateTime",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [
+          {
+            "kind": "INTERFACE",
+            "name": "TimelineEvent",
+            "ofType": null
+          }
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "AirportArrivalTimelineEvent",
+        "description": null,
+        "fields": [
+          {
+            "name": "timestamp",
+            "description": "Time of appearance in the timeline.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "DateTime",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "location",
+            "description": "Location of departure",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "RouteStop",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [
+          {
+            "kind": "INTERFACE",
+            "name": "TimelineEvent",
+            "ofType": null
+          }
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "BoardingTimelineEvent",
+        "description": null,
+        "fields": [
+          {
+            "name": "timestamp",
+            "description": "Time of appearance in the timeline.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "DateTime",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "gate",
+            "description": "Gate at which boarding is done",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [
+          {
+            "kind": "INTERFACE",
+            "name": "TimelineEvent",
+            "ofType": null
+          }
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "DepartureTimelineEvent",
+        "description": null,
+        "fields": [
+          {
+            "name": "timestamp",
+            "description": "Time of appearance in the timeline.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "DateTime",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "location",
+            "description": "Location of departure",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "RouteStop",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [
+          {
+            "kind": "INTERFACE",
+            "name": "TimelineEvent",
+            "ofType": null
+          }
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "ArrivalTimelineEvent",
+        "description": null,
+        "fields": [
+          {
+            "name": "timestamp",
+            "description": "Time of appearance in the timeline.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "DateTime",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "location",
+            "description": "Location of arrival",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "RouteStop",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [
+          {
+            "kind": "INTERFACE",
+            "name": "TimelineEvent",
+            "ofType": null
+          }
+        ],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "TransportFromAirportTimelineEvent",
+        "description": null,
+        "fields": [
+          {
+            "name": "timestamp",
+            "description": "Time of appearance in the timeline.",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "DateTime",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [
+          {
+            "kind": "INTERFACE",
+            "name": "TimelineEvent",
+            "ofType": null
+          }
+        ],
+        "enumValues": null,
         "possibleTypes": null
       }
     ],

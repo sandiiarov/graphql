@@ -1,174 +1,155 @@
 // @flow
 
-import { GraphQLString, GraphQLObjectType, GraphQLUnionType } from 'graphql';
+import {
+  GraphQLString,
+  GraphQLObjectType,
+  GraphQLInterfaceType,
+} from 'graphql';
 
 import { GraphQLDateTime } from 'graphql-iso-date';
 
 import RouteStop from '../../../flight/types/outputs/RouteStop';
 import type { DepartureArrival } from '../../../flight/Flight';
+import type {
+  AirportArrivalTimelineEvent as AirportArrivalType,
+  DepartureTimelineEvent as DepartureType,
+  ArrivalTimelineEvent as ArrivalType,
+} from '../../BookingTimeline';
 
-export default new GraphQLUnionType({
+const commonFields = {
+  timestamp: {
+    type: GraphQLDateTime,
+    description: 'Time of appearance in the timeline.',
+  },
+};
+
+const TimelineEvent = new GraphQLInterfaceType({
   name: 'TimelineEvent',
-  types: () => [
-    BookedFlight,
-    BookingConfirmed,
-    PaymentConfirmed,
-    DownloadReceipt,
-    DownloadETicket,
-    DownloadBoardingPass,
-    LeaveForAirport,
-    AirportArrival,
-    Boarding,
-    Departure,
-    Arrival,
-    TransportFromAirport,
-  ],
+  fields: commonFields,
 });
 
-export const BookedFlight = new GraphQLObjectType({
-  name: 'BookedFlight',
-  fields: {
-    timestamp: {
-      type: GraphQLDateTime,
-      description: 'Time of booking creation',
-    },
-  },
-  isTypeOf: value => value.type === 'BookedFlight',
+export default TimelineEvent;
+
+export const BookedFlightTimelineEvent = new GraphQLObjectType({
+  name: 'BookedFlightTimelineEvent',
+  fields: commonFields,
+  isTypeOf: value => value.type === 'BookedFlightTimelineEvent',
+  interfaces: [TimelineEvent],
 });
 
-export const BookingConfirmed = new GraphQLObjectType({
-  name: 'BookingConfirmed',
-  fields: {
-    timestamp: {
-      type: GraphQLDateTime,
-    },
-  },
-  isTypeOf: value => value.type === 'BookingConfirmed',
+export const BookingConfirmedTimelineEvent = new GraphQLObjectType({
+  name: 'BookingConfirmedTimelineEvent',
+  fields: commonFields,
+  isTypeOf: value => value.type === 'BookingConfirmedTimelineEvent',
+  interfaces: [TimelineEvent],
 });
 
-export const PaymentConfirmed = new GraphQLObjectType({
-  name: 'PaymentConfirmed',
-  fields: {
-    timestamp: {
-      type: GraphQLDateTime,
-    },
-  },
-  isTypeOf: value => value.type === 'PaymentConfirmed',
+export const PaymentConfirmedTimelineEvent = new GraphQLObjectType({
+  name: 'PaymentConfirmedTimelineEvent',
+  fields: commonFields,
+  isTypeOf: value => value.type === 'PaymentConfirmedTimelineEvent',
+  interfaces: [TimelineEvent],
 });
 
-export const DownloadReceipt = new GraphQLObjectType({
-  name: 'DownloadReceipt',
+export const DownloadReceiptTimelineEvent = new GraphQLObjectType({
+  name: 'DownloadReceiptTimelineEvent',
   fields: {
-    timestamp: {
-      type: GraphQLDateTime,
-    },
+    ...commonFields,
     receiptUrl: {
       type: GraphQLString,
       description: 'URL of the receipt/invoice',
     },
   },
-  isTypeOf: value => value.type === 'DownloadReceipt',
+  isTypeOf: value => value.type === 'DownloadReceiptTimelineEvent',
+  interfaces: [TimelineEvent],
 });
 
-export const DownloadETicket = new GraphQLObjectType({
-  name: 'DownloadETicket',
+export const DownloadETicketTimelineEvent = new GraphQLObjectType({
+  name: 'DownloadETicketTimelineEvent',
   fields: {
-    timestamp: {
-      type: GraphQLDateTime,
-    },
+    ...commonFields,
     ticketUrl: {
       type: GraphQLString,
       description: 'URL of the eTicket',
     },
   },
-  isTypeOf: value => value.type === 'DownloadETicket',
+  isTypeOf: value => value.type === 'DownloadETicketTimelineEvent',
+  interfaces: [TimelineEvent],
 });
 
-export const DownloadBoardingPass = new GraphQLObjectType({
-  name: 'DownloadBoardingPass',
-  fields: {
-    timestamp: {
-      type: GraphQLDateTime,
-    },
-  },
-  isTypeOf: value => value.type === 'DownloadBoardingPass',
+export const DownloadBoardingPassTimelineEvent = new GraphQLObjectType({
+  name: 'DownloadBoardingPassTimelineEvent',
+  fields: commonFields,
+  isTypeOf: value => value.type === 'DownloadBoardingPassTimelineEvent',
+  interfaces: [TimelineEvent],
 });
 
-export const LeaveForAirport = new GraphQLObjectType({
-  name: 'LeaveForAirport',
-  fields: {
-    timestamp: {
-      type: GraphQLDateTime,
-    },
-  },
-  isTypeOf: value => value.type === 'LeaveForAirport',
+export const LeaveForAirportTimelineEvent = new GraphQLObjectType({
+  name: 'LeaveForAirportTimelineEvent',
+  fields: commonFields,
+  isTypeOf: value => value.type === 'LeaveForAirportTimelineEvent',
+  interfaces: [TimelineEvent],
 });
 
-export const AirportArrival = new GraphQLObjectType({
-  name: 'AirportArrival',
+export const AirportArrivalTimelineEvent = new GraphQLObjectType({
+  name: 'AirportArrivalTimelineEvent',
   fields: {
-    timestamp: {
-      type: GraphQLDateTime,
-    },
+    ...commonFields,
     location: {
       type: RouteStop,
       description: 'Location of departure',
-      resolve: ({ departure }: AirportArrival): DepartureArrival => departure,
+      resolve: ({ departure }: AirportArrivalType): DepartureArrival =>
+        departure,
     },
   },
-  isTypeOf: value => value.type === 'AirportArrival',
+  isTypeOf: value => value.type === 'AirportArrivalTimelineEvent',
+  interfaces: [TimelineEvent],
 });
 
-export const Boarding = new GraphQLObjectType({
-  name: 'Boarding',
+export const BoardingTimelineEvent = new GraphQLObjectType({
+  name: 'BoardingTimelineEvent',
   fields: {
-    timestamp: {
-      type: GraphQLDateTime,
-    },
+    ...commonFields,
     gate: {
       type: GraphQLString,
       description: 'Gate at which boarding is done',
     },
   },
-  isTypeOf: value => value.type === 'Boarding',
+  isTypeOf: value => value.type === 'BoardingTimelineEvent',
+  interfaces: [TimelineEvent],
 });
 
-export const Departure = new GraphQLObjectType({
-  name: 'Departure',
+export const DepartureTimelineEvent = new GraphQLObjectType({
+  name: 'DepartureTimelineEvent',
   fields: {
-    timestamp: {
-      type: GraphQLDateTime,
-    },
+    ...commonFields,
     location: {
       type: RouteStop,
       description: 'Location of departure',
-      resolve: ({ departure }: Departure): DepartureArrival => departure,
+      resolve: ({ departure }: DepartureType): DepartureArrival => departure,
     },
   },
-  isTypeOf: value => value.type === 'Departure',
+  isTypeOf: value => value.type === 'DepartureTimelineEvent',
+  interfaces: [TimelineEvent],
 });
 
-export const Arrival = new GraphQLObjectType({
-  name: 'Arrival',
+export const ArrivalTimelineEvent = new GraphQLObjectType({
+  name: 'ArrivalTimelineEvent',
   fields: {
-    timestamp: {
-      type: GraphQLDateTime,
-    },
+    ...commonFields,
     location: {
       type: RouteStop,
       description: 'Location of arrival',
-      resolve: ({ arrival }: Arrival): DepartureArrival => arrival,
+      resolve: ({ arrival }: ArrivalType): DepartureArrival => arrival,
     },
   },
-  isTypeOf: value => value.type === 'Arrival',
+  isTypeOf: value => value.type === 'ArrivalTimelineEvent',
+  interfaces: [TimelineEvent],
 });
 
-export const TransportFromAirport = new GraphQLObjectType({
-  name: 'TransportFromAirport',
-  fields: {
-    timestamp: {
-      type: GraphQLDateTime,
-    },
-  },
-  isTypeOf: value => value.type === 'TransportFromAirport',
+export const TransportFromAirportTimelineEvent = new GraphQLObjectType({
+  name: 'TransportFromAirportTimelineEvent',
+  fields: commonFields,
+  isTypeOf: value => value.type === 'TransportFromAirportTimelineEvent',
+  interfaces: [TimelineEvent],
 });

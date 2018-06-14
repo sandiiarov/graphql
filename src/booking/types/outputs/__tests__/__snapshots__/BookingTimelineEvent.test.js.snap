@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AirportArrival type should have valid fields 1`] = `
+exports[`AirportArrivalTimelineEvent type should have valid fields 1`] = `
 Object {
   "location": Object {
     "args": Array [],
@@ -12,6 +12,7 @@ Object {
   },
   "timestamp": Object {
     "args": Array [],
+    "description": "Time of appearance in the timeline.",
     "isDeprecated": false,
     "name": "timestamp",
     "type": "DateTime",
@@ -19,7 +20,7 @@ Object {
 }
 `;
 
-exports[`Arrival type should have valid fields 1`] = `
+exports[`ArrivalTimelineEvent type should have valid fields 1`] = `
 Object {
   "location": Object {
     "args": Array [],
@@ -31,6 +32,7 @@ Object {
   },
   "timestamp": Object {
     "args": Array [],
+    "description": "Time of appearance in the timeline.",
     "isDeprecated": false,
     "name": "timestamp",
     "type": "DateTime",
@@ -38,7 +40,7 @@ Object {
 }
 `;
 
-exports[`Boarding type should have valid fields 1`] = `
+exports[`BoardingTimelineEvent type should have valid fields 1`] = `
 Object {
   "gate": Object {
     "args": Array [],
@@ -49,6 +51,7 @@ Object {
   },
   "timestamp": Object {
     "args": Array [],
+    "description": "Time of appearance in the timeline.",
     "isDeprecated": false,
     "name": "timestamp",
     "type": "DateTime",
@@ -56,11 +59,11 @@ Object {
 }
 `;
 
-exports[`BookedFlight type should have valid fields 1`] = `
+exports[`BookedFlightTimelineEvent type should have valid fields 1`] = `
 Object {
   "timestamp": Object {
     "args": Array [],
-    "description": "Time of booking creation",
+    "description": "Time of appearance in the timeline.",
     "isDeprecated": false,
     "name": "timestamp",
     "type": "DateTime",
@@ -68,10 +71,11 @@ Object {
 }
 `;
 
-exports[`BookingConfirmed type should have valid fields 1`] = `
+exports[`BookingConfirmedTimelineEvent type should have valid fields 1`] = `
 Object {
   "timestamp": Object {
     "args": Array [],
+    "description": "Time of appearance in the timeline.",
     "isDeprecated": false,
     "name": "timestamp",
     "type": "DateTime",
@@ -79,7 +83,7 @@ Object {
 }
 `;
 
-exports[`Departure type should have valid fields 1`] = `
+exports[`DepartureTimelineEvent type should have valid fields 1`] = `
 Object {
   "location": Object {
     "args": Array [],
@@ -91,6 +95,7 @@ Object {
   },
   "timestamp": Object {
     "args": Array [],
+    "description": "Time of appearance in the timeline.",
     "isDeprecated": false,
     "name": "timestamp",
     "type": "DateTime",
@@ -98,10 +103,11 @@ Object {
 }
 `;
 
-exports[`DownloadBoardingPass type should have valid fields 1`] = `
+exports[`DownloadBoardingPassTimelineEvent type should have valid fields 1`] = `
 Object {
   "timestamp": Object {
     "args": Array [],
+    "description": "Time of appearance in the timeline.",
     "isDeprecated": false,
     "name": "timestamp",
     "type": "DateTime",
@@ -109,7 +115,7 @@ Object {
 }
 `;
 
-exports[`DownloadETicket type should have valid fields 1`] = `
+exports[`DownloadETicketTimelineEvent type should have valid fields 1`] = `
 Object {
   "ticketUrl": Object {
     "args": Array [],
@@ -120,6 +126,7 @@ Object {
   },
   "timestamp": Object {
     "args": Array [],
+    "description": "Time of appearance in the timeline.",
     "isDeprecated": false,
     "name": "timestamp",
     "type": "DateTime",
@@ -127,7 +134,7 @@ Object {
 }
 `;
 
-exports[`DownloadReceipt type should have valid fields 1`] = `
+exports[`DownloadReceiptTimelineEvent type should have valid fields 1`] = `
 Object {
   "receiptUrl": Object {
     "args": Array [],
@@ -138,6 +145,7 @@ Object {
   },
   "timestamp": Object {
     "args": Array [],
+    "description": "Time of appearance in the timeline.",
     "isDeprecated": false,
     "name": "timestamp",
     "type": "DateTime",
@@ -145,10 +153,11 @@ Object {
 }
 `;
 
-exports[`LeaveForAirport type should have valid fields 1`] = `
+exports[`LeaveForAirportTimelineEvent type should have valid fields 1`] = `
 Object {
   "timestamp": Object {
     "args": Array [],
+    "description": "Time of appearance in the timeline.",
     "isDeprecated": false,
     "name": "timestamp",
     "type": "DateTime",
@@ -156,10 +165,11 @@ Object {
 }
 `;
 
-exports[`PaymentConfirmed type should have valid fields 1`] = `
+exports[`PaymentConfirmedTimelineEvent type should have valid fields 1`] = `
 Object {
   "timestamp": Object {
     "args": Array [],
+    "description": "Time of appearance in the timeline.",
     "isDeprecated": false,
     "name": "timestamp",
     "type": "DateTime",
@@ -167,10 +177,11 @@ Object {
 }
 `;
 
-exports[`TransportFromAirport type should have valid fields 1`] = `
+exports[`TransportFromAirportTimelineEvent type should have valid fields 1`] = `
 Object {
   "timestamp": Object {
     "args": Array [],
+    "description": "Time of appearance in the timeline.",
     "isDeprecated": false,
     "name": "timestamp",
     "type": "DateTime",

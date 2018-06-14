@@ -17,33 +17,33 @@ Object {
     "bookingTimeline": Object {
       "events": Array [
         Object {
-          "__typename": "BookedFlight",
+          "__typename": "BookedFlightTimelineEvent",
           "timestamp": "2017-03-30T07:28:55.000Z",
         },
         Object {
-          "__typename": "BookingConfirmed",
+          "__typename": "BookingConfirmedTimelineEvent",
           "timestamp": "2017-03-30T07:28:55.000Z",
         },
         Object {
-          "__typename": "PaymentConfirmed",
+          "__typename": "PaymentConfirmedTimelineEvent",
           "timestamp": "2017-03-30T07:28:55.000Z",
         },
         Object {
-          "__typename": "DownloadReceipt",
-          "receiptUrl": "",
+          "__typename": "DownloadReceiptTimelineEvent",
+          "receiptUrl": null,
           "timestamp": "2017-03-30T07:28:55.000Z",
         },
         Object {
-          "__typename": "DownloadETicket",
+          "__typename": "DownloadETicketTimelineEvent",
           "ticketUrl": "https://skypicker-mailing.s3.amazonaws.com/2707/1490859068_E-ticket_passenger_and_1_more_e826fc3275a65a5db8808279d8fc7f8f.pdf?v=1490859069",
           "timestamp": "2017-03-30T07:28:55.000Z",
         },
         Object {
-          "__typename": "LeaveForAirport",
+          "__typename": "LeaveForAirportTimelineEvent",
           "timestamp": "2017-09-09T17:10:00.000Z",
         },
         Object {
-          "__typename": "AirportArrival",
+          "__typename": "AirportArrivalTimelineEvent",
           "location": Object {
             "airport": Object {
               "city": Object {
@@ -56,12 +56,12 @@ Object {
           "timestamp": "2017-09-09T19:10:00.000Z",
         },
         Object {
-          "__typename": "Boarding",
+          "__typename": "BoardingTimelineEvent",
           "gate": "gate number",
           "timestamp": "2017-09-09T20:40:00.000Z",
         },
         Object {
-          "__typename": "Departure",
+          "__typename": "DepartureTimelineEvent",
           "location": Object {
             "airport": Object {
               "city": Object {
@@ -74,7 +74,7 @@ Object {
           "timestamp": "2017-09-09T21:10:00.000Z",
         },
         Object {
-          "__typename": "Arrival",
+          "__typename": "ArrivalTimelineEvent",
           "location": Object {
             "airport": Object {
               "city": Object {
@@ -87,7 +87,7 @@ Object {
           "timestamp": "2017-09-09T23:30:00.000Z",
         },
         Object {
-          "__typename": "TransportFromAirport",
+          "__typename": "TransportFromAirportTimelineEvent",
           "timestamp": "2017-09-09T23:45:00.000Z",
         },
       ],

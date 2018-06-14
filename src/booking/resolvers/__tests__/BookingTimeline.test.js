@@ -26,7 +26,7 @@ describe('resolver', () => {
       ),
     ).toContainEqual({
       timestamp: date,
-      type: 'BookedFlight',
+      type: 'BookedFlightTimelineEvent',
     });
   });
   it('generates only BookedFlight and PaymentConfirmed event if status is not confirmed', () => {
@@ -39,15 +39,15 @@ describe('resolver', () => {
     );
     expect(res).toContainEqual({
       timestamp: date,
-      type: 'BookedFlight',
+      type: 'BookedFlightTimelineEvent',
     });
     expect(res).toContainEqual({
       timestamp: date,
-      type: 'PaymentConfirmed',
+      type: 'PaymentConfirmedTimelineEvent',
     });
     expect(res).not.toContainEqual({
       timestamp: date,
-      type: 'BookingConfirmed',
+      type: 'BookingConfirmedTimelineEvent',
     });
   });
 
@@ -61,11 +61,11 @@ describe('resolver', () => {
     );
     expect(res).toContainEqual({
       timestamp: date,
-      type: 'BookedFlight',
+      type: 'BookedFlightTimelineEvent',
     });
     expect(res).toContainEqual({
       timestamp: date,
-      type: 'BookingConfirmed',
+      type: 'BookingConfirmedTimelineEvent',
     });
   });
 });
@@ -80,7 +80,7 @@ describe('generateBookedFlightEvent', () => {
       }),
     ).toEqual({
       timestamp: date,
-      type: 'BookedFlight',
+      type: 'BookedFlightTimelineEvent',
     });
   });
 });
@@ -96,7 +96,7 @@ describe('generateBookingConfirmedEvent', () => {
       }),
     ).toEqual({
       timestamp: date,
-      type: 'BookingConfirmed',
+      type: 'BookingConfirmedTimelineEvent',
     });
     expect(
       // $FlowExpectedError: full Booking object is not needed for this test
@@ -119,7 +119,7 @@ describe('generatePaymentConfirmedEvent', () => {
       }),
     ).toEqual({
       timestamp: date,
-      type: 'PaymentConfirmed',
+      type: 'PaymentConfirmedTimelineEvent',
     });
     expect(
       // $FlowExpectedError: full Booking object is not needed for this test
@@ -129,7 +129,7 @@ describe('generatePaymentConfirmedEvent', () => {
       }),
     ).toEqual({
       timestamp: date,
-      type: 'PaymentConfirmed',
+      type: 'PaymentConfirmedTimelineEvent',
     });
     expect(
       // $FlowExpectedError: full Booking object is not needed for this test
@@ -164,8 +164,8 @@ describe('generateDownloadReceiptEvent', () => {
       }),
     ).toEqual({
       timestamp: date,
-      type: 'DownloadReceipt',
-      receiptUrl: '',
+      type: 'DownloadReceiptTimelineEvent',
+      receiptUrl: null,
     });
     expect(
       // $FlowExpectedError: full Booking object is not needed for this test
@@ -177,7 +177,7 @@ describe('generateDownloadReceiptEvent', () => {
       }),
     ).toEqual({
       timestamp: date,
-      type: 'DownloadReceipt',
+      type: 'DownloadReceiptTimelineEvent',
       receiptUrl: 'http://somecoolurl',
     });
   });
@@ -193,8 +193,8 @@ describe('generateDownloadETicketEvent', () => {
       }),
     ).toEqual({
       timestamp: date,
-      type: 'DownloadETicket',
-      ticketUrl: '',
+      type: 'DownloadETicketTimelineEvent',
+      ticketUrl: null,
     });
     expect(
       // $FlowExpectedError: full Booking object is not needed for this test
@@ -206,7 +206,7 @@ describe('generateDownloadETicketEvent', () => {
       }),
     ).toEqual({
       timestamp: new Date('2018-05-03T14:10:57.000Z'),
-      type: 'DownloadETicket',
+      type: 'DownloadETicketTimelineEvent',
       ticketUrl: 'http://somecoolurl',
     });
   });
@@ -227,7 +227,7 @@ describe('generateLeaveForAirportEvent', () => {
       }),
     ).toEqual({
       timestamp: leaveForAirportDate,
-      type: 'LeaveForAirport',
+      type: 'LeaveForAirportTimelineEvent',
     });
   });
   it('returns null if departure.when.local is not set', () => {
@@ -253,7 +253,7 @@ describe('generateAirportArrivalEvent', () => {
       }),
     ).toEqual({
       timestamp: airportArrivalDate,
-      type: 'AirportArrival',
+      type: 'AirportArrivalTimelineEvent',
       departure: {
         when: {
           local: date,
@@ -283,7 +283,7 @@ describe('generateAirportArrivalEvent', () => {
       }),
     ).toEqual({
       timestamp: airportArrivalDate,
-      type: 'AirportArrival',
+      type: 'AirportArrivalTimelineEvent',
       departure: {
         when: {
           local: date,
@@ -311,7 +311,7 @@ describe('generateBoardingEvent', () => {
       }),
     ).toEqual({
       timestamp: boardingDate,
-      type: 'Boarding',
+      type: 'BoardingTimelineEvent',
       gate: 'gate number',
     });
   });
@@ -338,7 +338,7 @@ describe('generateDepartureEvent', () => {
       }),
     ).toEqual({
       timestamp: departureDate,
-      type: 'Departure',
+      type: 'DepartureTimelineEvent',
       departure: {
         when: {
           local: date,
@@ -368,7 +368,7 @@ describe('generateDepartureEvent', () => {
       }),
     ).toEqual({
       timestamp: departureDate,
-      type: 'Departure',
+      type: 'DepartureTimelineEvent',
       departure: {
         when: {
           local: date,
@@ -396,7 +396,7 @@ describe('generateArrivalEvent', () => {
       }),
     ).toEqual({
       timestamp: arrivalDate,
-      type: 'Arrival',
+      type: 'ArrivalTimelineEvent',
       arrival: {
         when: {
           local: date,
@@ -426,7 +426,7 @@ describe('generateArrivalEvent', () => {
       }),
     ).toEqual({
       timestamp: arrivalDate,
-      type: 'Arrival',
+      type: 'ArrivalTimelineEvent',
       arrival: {
         when: {
           local: date,
@@ -454,7 +454,7 @@ describe('generateTransportFromAirportEvent', () => {
       }),
     ).toEqual({
       timestamp: arrivalDate,
-      type: 'TransportFromAirport',
+      type: 'TransportFromAirportTimelineEvent',
     });
   });
   it('returns null if arrival.when.local is not set', () => {

@@ -3,85 +3,85 @@
 import type { DepartureArrival } from '../flight/Flight';
 
 export type BookingTimelineEvent =
-  | BookedFlight
-  | BookingConfirmed
-  | PaymentConfirmed
-  | DownloadReceipt
-  | DownloadETicket
-  | DownloadBoardingPass
-  | LeaveForAirport
-  | AirportArrival
-  | Boarding
-  | Departure
-  | Arrival
-  | TransportFromAirport;
+  | BookedFlightTimelineEvent
+  | BookingConfirmedTimelineEvent
+  | PaymentConfirmedTimelineEvent
+  | DownloadReceiptTimelineEvent
+  | DownloadETicketTimelineEvent
+  | DownloadBoardingPassTimelineEvent
+  | LeaveForAirportTimelineEvent
+  | AirportArrivalTimelineEvent
+  | BoardingTimelineEvent
+  | DepartureTimelineEvent
+  | ArrivalTimelineEvent
+  | TransportFromAirportTimelineEvent;
 
 export type BookingTimelineData = {|
   events: $ReadOnlyArray<BookingTimelineEvent>,
 |};
 
-export type BookedFlight = {|
+export type BookedFlightTimelineEvent = {|
   +timestamp: Date,
-  +type: 'BookedFlight',
+  +type: 'BookedFlightTimelineEvent',
 |};
 
-export type BookingConfirmed = {|
+export type BookingConfirmedTimelineEvent = {|
   +timestamp: Date,
-  +type: 'BookingConfirmed',
+  +type: 'BookingConfirmedTimelineEvent',
 |};
 
-export type PaymentConfirmed = {|
+export type PaymentConfirmedTimelineEvent = {|
   +timestamp: Date,
-  +type: 'PaymentConfirmed',
+  +type: 'PaymentConfirmedTimelineEvent',
 |};
 
-export type DownloadReceipt = {|
+export type DownloadReceiptTimelineEvent = {|
   +timestamp: Date,
-  +type: 'DownloadReceipt',
-  +receiptUrl: string,
+  +type: 'DownloadReceiptTimelineEvent',
+  +receiptUrl: ?string,
 |};
 
-export type DownloadETicket = {|
+export type DownloadETicketTimelineEvent = {|
   +timestamp: Date,
-  +type: 'DownloadETicket',
-  +ticketUrl: string,
+  +type: 'DownloadETicketTimelineEvent',
+  +ticketUrl: ?string,
 |};
 
-export type DownloadBoardingPass = {|
+export type DownloadBoardingPassTimelineEvent = {|
   +timestamp: Date,
-  +type: 'DownloadBoardingPass',
+  +type: 'DownloadBoardingPassTimelineEvent',
 |};
 
-export type LeaveForAirport = {|
+export type LeaveForAirportTimelineEvent = {|
   +timestamp: Date,
-  +type: 'LeaveForAirport',
+  +type: 'LeaveForAirportTimelineEvent',
 |};
 
-export type AirportArrival = {|
+export type AirportArrivalTimelineEvent = {|
   +timestamp: Date,
-  +type: 'AirportArrival',
+  +type: 'AirportArrivalTimelineEvent',
   +departure: DepartureArrival,
 |};
 
-export type Boarding = {|
+export type BoardingTimelineEvent = {|
   +timestamp: Date,
-  +type: 'Boarding',
-  +gate: string,
+  +type: 'BoardingTimelineEvent',
+  +gate: ?string,
 |};
 
-export type Departure = {|
+export type DepartureTimelineEvent = {|
   +timestamp: Date,
-  +type: 'Departure',
+  +type: 'DepartureTimelineEvent',
   +departure: DepartureArrival,
 |};
 
-export type Arrival = {|
+export type ArrivalTimelineEvent = {|
   +timestamp: Date,
-  +type: 'Arrival',
+  +type: 'ArrivalTimelineEvent',
   +arrival: DepartureArrival,
 |};
 
-export type TransportFromAirport = {|
+export type TransportFromAirportTimelineEvent = {|
   +timestamp: Date,
-  +type: 'TransportFromAirport',
+  +type: 'TransportFromAirportTimelineEvent',
 |};

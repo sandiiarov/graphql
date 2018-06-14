@@ -53,28 +53,14 @@ describe('single booking timeline query', () => {
       bookingTimeline(id: "Qm9va2luZzoyNzA3MjUx") {
         events {
           __typename
-          ... on BookedFlight{
             timestamp
-          }
-          ... on BookingConfirmed{
-            timestamp
-          }
-          ... on PaymentConfirmed {
-            timestamp
-          }
-          ... on  DownloadReceipt{
-            timestamp
+          ... on DownloadReceiptTimelineEvent{
             receiptUrl
           }
-          ... on  DownloadETicket{
-            timestamp
+          ... on  DownloadETicketTimelineEvent {
             ticketUrl
           }
-          ... on   LeaveForAirport{
-            timestamp
-          }
-          ... on  AirportArrival{
-            timestamp
+          ... on  AirportArrivalTimelineEvent {
             location {
               airport {
                 city {
@@ -85,12 +71,10 @@ describe('single booking timeline query', () => {
               }
             }
           }
-          ... on Boarding{
-            timestamp
+          ... on BoardingTimelineEvent {
             gate
           }
-          ... on  Departure{
-            timestamp
+          ... on  DepartureTimelineEvent {
             location {
               airport {
                 city {
@@ -101,8 +85,7 @@ describe('single booking timeline query', () => {
               }
             }
           }
-          ... on  Arrival{
-            timestamp
+          ... on  ArrivalTimelineEvent {
             location {
               airport {
                 city {
@@ -112,9 +95,6 @@ describe('single booking timeline query', () => {
                 }
               }
             }
-          }
-          ... on  TransportFromAirport{
-            timestamp
           }
         }
       }
