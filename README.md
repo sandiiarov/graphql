@@ -26,8 +26,9 @@ on localhost you'll need to fill in the `ENGINE_KEY` environmental variable.
 # Run tests
 
 ```
-yarn test
-yarn test-ci
+yarn test         # unit and integration tests
+yarn test-bc      # backward compatibility
+yarn test-ci      # everything above + lints and typechecks (runs on the CI server)
 ```
 
 # Deployment
@@ -274,6 +275,48 @@ const userLoader = new DataLoader(
 ```
 
 Implementation of the `cacheKeyFn` depends on the use-case. It's important to note that we do not use simple JSON stringify here because different object props order would generate different key even though the values are still the same.
+
+# FAQ
+
+## How can I distinguish between `null` as a value and `null` as a result of the error?
+
+Common problem is to say whether this is an error or just a valid value returned from the API:
+
+```json
+{
+  "data": {
+    "currency": {
+      "code": "usd",
+      "format": null    // error? value?
+    }
+  }
+}
+```
+
+It can be confusing because we allow `null` values everywhere and therefore you cannot rely on it. But there are valid cases where you need to work with this information in you application. Luckily, there are `errors` in the response:
+
+```json
+{
+  "errors": [
+    {
+      "message": "My lovely error message for developers to fix it...",
+      "locations": [{ "line": 4, "column": 5 }],
+      "path": [
+        "currency",
+        "format"
+      ]
+    }
+  ],
+  "data": {
+    "currency": {
+      "code": "usd",
+      "format": null
+    }
+  }
+}
+```
+
+Do you see the `path`? That's your key. If you can find this among all the errors then you can be sure that the field actually failed. You can read more about it [in the specification](http://facebook.github.io/graphql/draft/#sec-Errors). Note that you cannot rely on the `errors` key itself. There may be many things going wrong so you always have to verify your path in the response.
 
 # Requirements of a Relay-compliant GraphQL server
 
